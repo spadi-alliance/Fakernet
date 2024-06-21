@@ -22,6 +22,8 @@ File list
 
 `HUL`: Example firmware of the Hadron Universal Logic module (Kintex-7). Using LAN8810-AKZE PHY. The firmware is made for 1G.
 
+`SAMIDARE`: Example firmware of the SAMIDARE. Using GTH with pcs/pma IPcore, 1000Base-X.
+
 For the file downloaded from the Fakernet's original webpage, there are also the exmaples of Arty A7-35 board and Alinx AX516 board.
 
 
