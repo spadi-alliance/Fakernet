@@ -1,0 +1,3 @@
+mmcm_cdcm_clk_wiz.v,verilog,mylib,../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+mmcm_cdcm.v,verilog,mylib,../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+glbl.v,Verilog,mylib,glbl.v

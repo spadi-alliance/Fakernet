@@ -1,0 +1,7 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+xpm_fifo.sv,systemverilog,xpm,../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+xpm_memory.sv,systemverilog,xpm,../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+mmcm_cdcm_clk_wiz.v,verilog,mylib,../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+mmcm_cdcm.v,verilog,mylib,../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm"
+glbl.v,Verilog,mylib,glbl.v

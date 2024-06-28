@@ -1,0 +1,7 @@
+verilog mylib  \
+"../../../../../../../amaneq-skeleton.gen/sources_1/ip/RbcpCdc_SysToLink/sim/RbcpCdc_SysToLink.v" \
+
+verilog mylib "glbl.v"
+
+# Do not sort compile order
+nosort

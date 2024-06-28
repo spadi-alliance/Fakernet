@@ -1,0 +1,8 @@
+verilog mylib --include "../../../../../../../amaneq-skeleton.gen/sources_1/ip/clk_wiz_sys" \
+"../../../../../../../amaneq-skeleton.gen/sources_1/ip/clk_wiz_sys/clk_wiz_sys_clk_wiz.v" \
+"../../../../../../../amaneq-skeleton.gen/sources_1/ip/clk_wiz_sys/clk_wiz_sys.v" \
+
+verilog mylib "glbl.v"
+
+# Do not sort compile order
+nosort

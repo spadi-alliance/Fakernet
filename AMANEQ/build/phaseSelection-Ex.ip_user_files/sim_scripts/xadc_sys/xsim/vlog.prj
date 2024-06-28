@@ -1,0 +1,5 @@
+
+verilog mylib "glbl.v"
+
+# Do not sort compile order
+nosort

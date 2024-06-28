@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log +acc=npr -suppress 10016  -L xpm -L fifo_generator_v13_2_8 -L mylib -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib mylib.fmp_rd_fifo mylib.glbl -o fmp_rd_fifo_opt

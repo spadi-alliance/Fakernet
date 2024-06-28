@@ -1,0 +1,2 @@
+RbcpCdc_SysToLink.v,verilog,mylib,../../../../../../../amaneq-skeleton.gen/sources_1/ip/RbcpCdc_SysToLink/sim/RbcpCdc_SysToLink.v,
+glbl.v,Verilog,mylib,glbl.v

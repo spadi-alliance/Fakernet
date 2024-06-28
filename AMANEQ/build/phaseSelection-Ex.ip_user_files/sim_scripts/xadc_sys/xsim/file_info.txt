@@ -1,0 +1,2 @@
+xadc_sys.vhd,vhdl,mylib,../../../../../../../amaneq-skeleton.gen/sources_1/ip/xadc_sys/xadc_sys.vhd,
+glbl.v,Verilog,mylib,glbl.v

@@ -1,0 +1,2 @@
+fmp_wd_fifo.v,verilog,mylib,../../../../../../../amaneq-skeleton.gen/sources_1/ip/fmp_wd_fifo/sim/fmp_wd_fifo.v,
+glbl.v,Verilog,mylib,glbl.v

@@ -1,0 +1,8 @@
+verilog mylib --include "../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm" \
+"../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm_clk_wiz.v" \
+"../../../../../../../LaccpSecondary-Ex.gen/sources_1/ip/mmcm_cdcm/mmcm_cdcm.v" \
+
+verilog mylib "glbl.v"
+
+# Do not sort compile order
+nosort

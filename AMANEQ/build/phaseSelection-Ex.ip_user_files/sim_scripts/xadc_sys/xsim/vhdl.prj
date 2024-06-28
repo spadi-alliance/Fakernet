@@ -1,0 +1,5 @@
+vhdl mylib  \
+"../../../../../../../amaneq-skeleton.gen/sources_1/ip/xadc_sys/xadc_sys.vhd" \
+
+# Do not sort compile order
+nosort

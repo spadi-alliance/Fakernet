@@ -1,0 +1,2 @@
+sem_controller.v,verilog,mylib,../../../../../../../amaneq-skeleton.gen/sources_1/ip/sem_controller/sim/sem_controller.v,
+glbl.v,Verilog,mylib,glbl.v

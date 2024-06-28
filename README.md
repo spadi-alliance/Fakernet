@@ -24,6 +24,8 @@ File list
 
 `SAMIDARE`: Example firmware of the SAMIDARE. Using GTH with pcs/pma IPcore, 1000Base-X.
 
+`AMANEQ`: Example firmware of the AMANEQ. Using GTX with pcs/pma IPcore, 1000Base-X.
+
 For the file downloaded from the Fakernet's original webpage, there are also the exmaples of Arty A7-35 board and Alinx AX516 board.
 
 

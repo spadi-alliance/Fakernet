@@ -1,0 +1,7 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,
+xpm_fifo.sv,systemverilog,xpm,../../../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,
+xpm_memory.sv,systemverilog,xpm,../../../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,
+sem_v4_1_vl_rfs.v,verilog,sem_v4_1_13,../../../ipstatic/hdl/sem_v4_1_vl_rfs.v,
+sem_controller.v,verilog,mylib,../../../../../../../amaneq-skeleton.gen/sources_1/ip/sem_controller/sim/sem_controller.v,
+glbl.v,Verilog,mylib,glbl.v

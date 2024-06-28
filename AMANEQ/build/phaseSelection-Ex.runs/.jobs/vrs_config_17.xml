@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="RbcpCdc_LinkToSys_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/RbcpCdc_LinkToSys_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="RbcpCdc_SysToLink_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/RbcpCdc_SysToLink_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="clk_wiz_sys_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/clk_wiz_sys_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fmp_rd_fifo_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/fmp_rd_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fmp_wd_fifo_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/fmp_wd_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sem_controller_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/sem_controller_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xadc_sys_synth_1" LaunchDir="/mnt/c/Documents/github/saz12341/phaseSelection-Ex/build/phaseSelection-Ex.runs/xadc_sys_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

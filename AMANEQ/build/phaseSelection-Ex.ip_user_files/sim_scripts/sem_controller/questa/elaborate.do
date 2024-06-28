@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log +acc=npr -suppress 10016  -L xpm -L sem_v4_1_13 -L mylib -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib mylib.sem_controller mylib.glbl -o sem_controller_opt

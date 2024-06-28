@@ -1,0 +1,17 @@
+vhdl mylib  \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_cpll_railing.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_gtwizard.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_gtwizard_multi_gt.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_gtwizard_gt.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_gtwizard_init.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_tx_startup_fsm.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_rx_startup_fsm.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/gig_ethernet_pcs_pma_reset_sync.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/gig_ethernet_pcs_pma_sync_block.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_reset_wtd_timer.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/transceiver/gig_ethernet_pcs_pma_transceiver.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/gig_ethernet_pcs_pma_block.vhd" \
+"../../../../phaseSelection-Ex.gen/sources_1/ip/gig_ethernet_pcs_pma/synth/gig_ethernet_pcs_pma.vhd" \
+
+# Do not sort compile order
+nosort
