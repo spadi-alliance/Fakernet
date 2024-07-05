@@ -1,0 +1,1079 @@
+
+*** Running vivado
+    with args -log top_block_fakernet_top_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_fakernet_top_0_0.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_block_fakernet_top_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_fakernet_top_0_0
+Command: synth_design -top top_block_fakernet_top_0_0 -part xcau15p-sbvb484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1327740
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2148.281 ; gain = 364.695 ; free physical = 18735 ; free virtual = 42902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1419.240; parent = 1263.954; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3120.758; parent = 2152.254; children = 968.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_block_fakernet_top_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0/synth/top_block_fakernet_top_0_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'fakernet_top' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'efnet_gmii_mii_rx' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_gmii_mii_rx.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'efnet_rx_speed_sense' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_rx_speed_sense.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'efnet_rx_speed_sense' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_rx_speed_sense.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'efnet_octet_to_word' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_octet_to_word.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'efnet_octet_to_word' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_octet_to_word.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'efnet_word_in_fifo' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_in_fifo.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'fnet_async_fifo' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_async_fifo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'fnet_async_fifo' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_async_fifo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'efnet_word_in_fifo' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_in_fifo.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'efnet_gmii_mii_rx' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_gmii_mii_rx.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'efnet_gmii_mii_tx' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_gmii_mii_tx.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'efnet_word_out_fifo' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_out_fifo.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'fnet_async_fifo__parameterized0' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_async_fifo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'fnet_async_fifo__parameterized0' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_async_fifo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'efnet_word_out_fifo' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_out_fifo.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'efnet_word_to_octet' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_to_octet.vhd:51]
+INFO: [Synth 8-226] default block is never used [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_to_octet.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'efnet_word_to_octet' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_word_to_octet.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'efnet_hw_oddr' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/ddr/efnet_xilinx_oddr_by_oddr2.vhd:43]
+	Parameter DDR_ALIGNMENT bound to: C0 - type: string 
+	Parameter SRTYPE bound to: ASYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'o' to cell 'ODDR2' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/ddr/efnet_xilinx_oddr_by_oddr2.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'efnet_hw_oddr' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/ddr/efnet_xilinx_oddr_by_oddr2.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'efnet_gmii_mii_tx' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_gmii_mii_tx.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'efb_common_top' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'efb_xilinx_dna_port' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_xilinx_dna_port.vhd:50]
+INFO: [Synth 8-113] binding component instance 'dna_prim' to cell 'DNA_PORTE2' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_xilinx_dna_port.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'efb_xilinx_dna_port' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_xilinx_dna_port.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'efnet_data_array_inject' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_data_array_inject.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'efnet_data_array_inject' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_data_array_inject.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'efnet_reg_counters' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_reg_counters.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'efnet_reg_counters' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_reg_counters.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'efb_sim_events' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_sim_events.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'efb_sim_events' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_sim_events.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'efb_lmd_buffer_events' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_lmd_buffer_events.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'fnet_ram_block_data' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_data.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'fnet_ram_block_data' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_data.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'efb_lmd_format_events' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_lmd_format_events.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'efb_lmd_format_events' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_lmd_format_events.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'efb_lmd_buffer_events' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_lmd_buffer_events.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'fakernet_module' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'fnet_in_state' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'fnet_crc32' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_crc32.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'fnet_crc32' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_crc32.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'fnet_in_state' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'fnet_dyn_control' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_dyn_control.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'fnet_dyn_control' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_dyn_control.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'fnet_ntp_query_control' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ntp_query_control.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'fnet_ntp_query_control' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ntp_query_control.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'fnet_mon_pkt_control' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mon_pkt_control.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'fnet_mon_pkt_control' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mon_pkt_control.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'fnet_packet_gen' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_packet_gen.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'fnet_packet_gen' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_packet_gen.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'fnet_out_state' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_out_state.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'fnet_out_state' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_out_state.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'fnet_out_pipeline' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_out_pipeline.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'fnet_out_pipeline' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_out_pipeline.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'fnet_regaccess' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regaccess.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'fnet_regaccess' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regaccess.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'fnet_local_reg' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_local_reg.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'ram_block_a11d16' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_a11d16.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'ram_block_a11d16' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_a11d16.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'fnet_local_reg' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_local_reg.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'fnet_tcp_state' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_state.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'fnet_tcp_state' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_state.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'fnet_tcp_control' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_control.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'fnet_tcp_control' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_control.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'fnet_tcp_prepare' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'fnet_tcp_prepare' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'fnet_tcp_buffer' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_buffer.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'fnet_tcp_buffer' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_buffer.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'fnet_test_datagen' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_test_datagen.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'fnet_test_datagen' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_test_datagen.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'fnet_ram_block_data__parameterized0' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_data.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'fnet_ram_block_data__parameterized0' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_data.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'fnet_ram_block_stat' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_stat.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'fnet_ram_block_stat' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_ram_block_stat.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'fnet_regacc_aux_stat' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regacc_aux_stat.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'fnet_regacc_aux_stat' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regacc_aux_stat.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'fnet_mdio' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mdio.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'fnet_mdio' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mdio.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'fakernet_module' (0#1) [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'efb_common_top' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:159]
+INFO: [Synth 8-256] done synthesizing module 'fakernet_top' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:131]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_fakernet_top_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0/synth/top_block_fakernet_top_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element data_commit_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/extra_vhdl/efnet_data_array_inject.vhd:123]
+WARNING: [Synth 8-6014] Unused sequential element cur_ev_cnt_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/common/efb_lmd_format_events.vhd:359]
+WARNING: [Synth 8-6014] Unused sequential element s_reg[dyn_offer_ip_port][portno] was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2058]
+WARNING: [Synth 8-6014] Unused sequential element ram_prod_udp_regacc_reg[set_broadcast] was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2025]
+WARNING: [Synth 8-6014] Unused sequential element ram_prod_udp_regacc_reg[set_drop_dly] was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2025]
+WARNING: [Synth 8-6014] Unused sequential element ram_prod_tcp_template_reg[set_broadcast] was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2029]
+WARNING: [Synth 8-6014] Unused sequential element ram_prod_tcp_template_reg[set_drop_dly] was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2029]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_minus_6_reg' and it is trimmed from '16' to '11' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2414]
+WARNING: [Synth 8-6014] Unused sequential element ntpr_got_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_in_state.vhd:2054]
+WARNING: [Synth 8-3936] Found unconnected internal register 'cmd_p2_reg' and it is trimmed from '32' to '8' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_packet_gen.vhd:696]
+WARNING: [Synth 8-6014] Unused sequential element regacc_int_addr_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regaccess.vhd:466]
+WARNING: [Synth 8-6014] Unused sequential element regacc_int_data_wr_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regaccess.vhd:467]
+WARNING: [Synth 8-6014] Unused sequential element regacc_int_cnt_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_regaccess.vhd:470]
+WARNING: [Synth 8-6014] Unused sequential element testctrl_pulse_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_local_reg.vhd:180]
+WARNING: [Synth 8-6014] Unused sequential element off_stored_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:744]
+WARNING: [Synth 8-3936] Found unconnected internal register 'already_sent_reg' and it is trimmed from '17' to '11' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:788]
+WARNING: [Synth 8-3936] Found unconnected internal register 'window_left_reg' and it is trimmed from '17' to '11' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:795]
+WARNING: [Synth 8-3936] Found unconnected internal register 'fresh_avail_reg' and it is trimmed from '32' to '11' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:791]
+WARNING: [Synth 8-3848] Net ram_cons_tcp_template[clear_hasdata] in module/entity fnet_tcp_prepare does not have driver. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element lcl_datagen_free_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_buffer.vhd:227]
+WARNING: [Synth 8-3848] Net ram_udp_regidp[prod2][set_again] in module/entity fakernet_module does not have driver. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:146]
+WARNING: [Synth 8-3848] Net ram_tcp_template[prod2][set_again] in module/entity fakernet_module does not have driver. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:148]
+WARNING: [Synth 8-3848] Net ram_tcp_prep2[0][prod2][set_again] in module/entity fakernet_module does not have driver. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:149]
+WARNING: [Synth 8-3848] Net ram_tcp_prep2[1][prod2][set_again] in module/entity fakernet_module does not have driver. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fakernet_module.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element infoc_tx_data_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:1154]
+WARNING: [Synth 8-6014] Unused sequential element infoc_tx_has_data_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:1155]
+WARNING: [Synth 8-6014] Unused sequential element infoc_cycle_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:1387]
+WARNING: [Synth 8-6014] Unused sequential element infoc_pending_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:1389]
+WARNING: [Synth 8-3848] Net eth_ref_clk in module/entity efb_common_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:85]
+WARNING: [Synth 8-3848] Net pmod_gps_tx in module/entity efb_common_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:117]
+WARNING: [Synth 8-3848] Net sw_latch in module/entity efb_common_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:251]
+WARNING: [Synth 8-3848] Net ev_counters in module/entity efb_common_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/efb_common_top.vhd:499]
+WARNING: [Synth 8-3848] Net eth_ref_clk in module/entity fakernet_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:74]
+WARNING: [Synth 8-3848] Net jd1 in module/entity fakernet_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:101]
+WARNING: [Synth 8-3848] Net jd3 in module/entity fakernet_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:104]
+WARNING: [Synth 8-3848] Net pmod_gps_pps_samples_hist in module/entity fakernet_top does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/fakernet_top.vhd:194]
+WARNING: [Synth 8-7129] Port porto_b[wdata][15] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][14] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][13] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][12] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][11] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][10] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][9] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][8] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][7] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][6] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][5] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][4] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][3] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][2] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][1] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port porto_b[wdata][0] in module ram_block_a11d16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tc_lcl_datagen_len_mask[15] in module fnet_test_datagen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tc_lcl_datagen_len_mask[14] in module fnet_test_datagen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][15] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][14] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][13] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][12] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][11] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][10] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][9] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][8] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][7] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][6] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][5] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][4] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][3] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][2] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][1] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[base_seqno_hi_plus_1][0] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][15] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][14] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][13] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][12] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][11] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][10] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][9] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][8] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][7] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][6] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][5] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][4] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][3] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][2] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][1] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[cur_off][0] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][31] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][30] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][29] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][28] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][27] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][26] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][25] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][24] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][23] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][22] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][21] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][20] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][19] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][18] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][17] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][16] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][15] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][14] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][13] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][12] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][11] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][10] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][9] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][8] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][7] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][6] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][5] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][4] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][3] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][2] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][1] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[filled][0] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][31] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][30] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][29] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][28] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][27] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][26] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][25] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][24] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][23] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][22] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][21] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][20] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][19] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][18] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][17] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][16] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][15] in module fnet_tcp_buffer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_stat[unsent][14] in module fnet_tcp_buffer is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2333.188 ; gain = 549.602 ; free physical = 18703 ; free virtual = 42880
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1429.964; parent = 1274.809; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3301.695; parent = 2333.191; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2351.000 ; gain = 567.414 ; free physical = 18684 ; free virtual = 42863
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1430.981; parent = 1275.837; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3319.508; parent = 2351.004; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2351.000 ; gain = 567.414 ; free physical = 18684 ; free virtual = 42863
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1430.981; parent = 1275.837; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3319.508; parent = 2351.004; children = 968.504
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2356.938 ; gain = 0.000 ; free physical = 18682 ; free virtual = 42861
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'inst/tx/outddr_tx_clk/o' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'C1' that is connected to this pin will not be connected to the replacement instance.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.938 ; gain = 0.000 ; free physical = 18635 ; free virtual = 42814
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  ODDR2 => OSERDESE3: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2502.750 ; gain = 21.812 ; free physical = 18633 ; free virtual = 42812
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2502.750 ; gain = 719.164 ; free physical = 18710 ; free virtual = 42889
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1430.981; parent = 1275.837; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3439.242; parent = 2470.738; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-sbvb484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2502.750 ; gain = 719.164 ; free physical = 18710 ; free virtual = 42889
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1430.981; parent = 1275.837; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3439.242; parent = 2470.738; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2502.750 ; gain = 719.164 ; free physical = 18710 ; free virtual = 42889
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1430.981; parent = 1275.837; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3439.242; parent = 2470.738; children = 968.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'efb_xilinx_dna_port'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'efb_lmd_format_events'
+INFO: [Synth 8-802] inferred FSM for state register 's_reg[state]' in module 'fnet_in_state'
+INFO: [Synth 8-802] inferred FSM for state register 's_reg[state]' in module 'fnet_out_state'
+INFO: [Synth 8-802] inferred FSM for state register 's_reg[state]' in module 'fnet_regaccess'
+INFO: [Synth 8-802] inferred FSM for state register 's_stat_reg[conn_state]' in module 'fnet_tcp_control'
+INFO: [Synth 8-802] inferred FSM for state register 's_reg[state]' in module 'fnet_tcp_prepare'
+INFO: [Synth 8-802] inferred FSM for state register 's_reg[state]' in module 'fnet_mdio'
+INFO: [Synth 8-6904] The RAM "fnet_async_fifo:/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "fnet_async_fifo__parameterized0:/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'efb_xilinx_dna_port'
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "fnet_ram_block_data:/ram_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            prepare_open |                             1100 |                             0000
+        write_buf_header |                             0110 |                             1110
+            start_buffer |                             1011 |                             0001
+              wait_event |                             0111 |                             0010
+       read_event_header |                             0000 |                             0011
+           prepare_event |                             0001 |                             0101
+            accept_event |                             0010 |                             0100
+             read_ts_low |                             0011 |                             0110
+            read_ts_high |                             1101 |                             0111
+       prepare_ev_header |                             0100 |                             1000
+         write_ev_header |                             1110 |                             1001
+            copy_payload |                             1010 |                             1010
+             prepare_pad |                             1000 |                             1011
+               write_pad |                             1001 |                             1100
+      prepare_buf_header |                             0101 |                             1101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'efb_lmd_format_events'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                ism_ll_0 |                          0000000 |                          0000000
+                ism_ll_2 |                          0000001 |                          0000001
+                ism_ll_4 |                          0000010 |                          0000010
+                ism_ll_6 |                          0000011 |                          0000011
+                ism_ll_8 |                          0000100 |                          0000100
+               ism_ll_10 |                          0000101 |                          0000101
+               ism_ll_12 |                          0000110 |                          0000110
+              ism_arp_14 |                          0000111 |                          0000111
+              ism_arp_16 |                          0001000 |                          0001000
+              ism_arp_18 |                          0001001 |                          0001001
+              ism_arp_20 |                          0001010 |                          0001010
+              ism_arp_22 |                          0001011 |                          0001011
+              ism_arp_24 |                          0001100 |                          0001100
+              ism_arp_26 |                          0001101 |                          0001101
+              ism_arp_28 |                          0001110 |                          0001110
+              ism_arp_30 |                          0001111 |                          0001111
+              ism_arp_32 |                          0010000 |                          0010000
+              ism_arp_34 |                          0010001 |                          0010001
+              ism_arp_36 |                          0010010 |                          0010010
+             ism_rarp_38 |                          0010011 |                          0010101
+             ism_rarp_40 |                          0010100 |                          0010110
+              ism_arp_38 |                          0010101 |                          0010011
+              ism_arp_40 |                          0010110 |                          0010100
+           ism_arp_42_60 |                          0010111 |                          0010111
+              ism_arp_62 |                          0011000 |                          0011000
+             ism_ipv4_14 |                          0011001 |                          0011001
+             ism_ipv4_16 |                          0011010 |                          0011010
+             ism_ipv4_18 |                          0011011 |                          0011011
+             ism_ipv4_20 |                          0011100 |                          0011100
+             ism_ipv4_22 |                          0011101 |                          0011101
+             ism_ipv4_24 |                          0011110 |                          0011110
+             ism_ipv4_26 |                          0011111 |                          0011111
+             ism_ipv4_28 |                          0100000 |                          0100000
+             ism_ipv4_30 |                          0100001 |                          0100001
+             ism_ipv4_32 |                          0100010 |                          0100010
+              ism_udp_34 |                          0100011 |                          0101010
+              ism_udp_36 |                          0100100 |                          0101011
+              ism_udp_38 |                          0100101 |                          0101100
+              ism_udp_40 |                          0100110 |                          0101101
+              ism_ntp_42 |                          0100111 |                          1001101
+              ism_ntp_44 |                          0101000 |                          1001110
+              ism_ntp_46 |                          0101001 |                          1001111
+              ism_ntp_48 |                          0101010 |                          1010000
+              ism_ntp_50 |                          0101011 |                          1010001
+              ism_ntp_52 |                          0101100 |                          1010010
+              ism_ntp_54 |                          0101101 |                          1010011
+              ism_ntp_56 |                          0101110 |                          1010100
+              ism_ntp_58 |                          0101111 |                          1010101
+              ism_ntp_60 |                          0110000 |                          1010110
+              ism_ntp_62 |                          0110001 |                          1010111
+              ism_ntp_64 |                          0110010 |                          1011000
+              ism_ntp_66 |                          0110011 |                          1011001
+              ism_ntp_68 |                          0110100 |                          1011010
+              ism_ntp_70 |                          0110101 |                          1011011
+              ism_ntp_72 |                          0110110 |                          1011100
+              ism_ntp_74 |                          0110111 |                          1011101
+              ism_ntp_76 |                          0111000 |                          1011110
+              ism_ntp_78 |                          0111001 |                          1011111
+              ism_ntp_80 |                          0111010 |                          1100000
+              ism_ntp_82 |                          0111011 |                          1100001
+              ism_ntp_84 |                          0111100 |                          1100010
+              ism_ntp_86 |                          0111101 |                          1100011
+              ism_ntp_88 |                          0111110 |                          1100100
+             ism_ntp_ck1 |                          0111111 |                          1100101
+             ism_ntp_ck2 |                          1000000 |                          1100110
+            ism_bootp_42 |                          1000001 |                          0110111
+            ism_bootp_44 |                          1000010 |                          0111000
+            ism_bootp_46 |                          1000011 |                          0111001
+            ism_bootp_48 |                          1000100 |                          0111010
+            ism_bootp_50 |                          1000101 |                          0111011
+            ism_bootp_52 |                          1000110 |                          0111100
+            ism_bootp_54 |                          1000111 |                          0111101
+            ism_bootp_56 |                          1001000 |                          0111110
+            ism_bootp_58 |                          1001001 |                          0111111
+            ism_bootp_60 |                          1001010 |                          1000000
+            ism_bootp_62 |                          1001011 |                          1000001
+            ism_bootp_64 |                          1001100 |                          1000010
+            ism_bootp_66 |                          1001101 |                          1000011
+            ism_bootp_68 |                          1001110 |                          1000100
+            ism_bootp_70 |                          1001111 |                          1000101
+            ism_bootp_72 |                          1010000 |                          1000110
+            ism_bootp_74 |                          1010001 |                          1000111
+        ism_bootp_76_340 |                          1010010 |                          1001000
+            ism_dhcp_276 |                          1010011 |                          1001011
+            ism_dhcp_278 |                          1010100 |                          1001100
+           ism_bootp_ck1 |                          1010101 |                          1001001
+           ism_bootp_ck2 |                          1010110 |                          1001010
+         ism_udp_stat_42 |                          1010111 |                          0101110
+         ism_udp_stat_44 |                          1011000 |                          0101111
+           ism_udp_ra_46 |                          1011001 |                          0110000
+           ism_udp_ra_48 |                          1011010 |                          0110001
+        ism_udp_ra_data1 |                          1011011 |                          0110010
+        ism_udp_ra_data2 |                          1011100 |                          0110011
+          ism_udp_ra_pad |                          1011101 |                          0110100
+          ism_udp_ra_ck1 |                          1011110 |                          0110101
+          ism_udp_ra_ck2 |                          1011111 |                          0110110
+              ism_tcp_34 |                          1100000 |                          1100111
+              ism_tcp_36 |                          1100001 |                          1101000
+              ism_tcp_38 |                          1100010 |                          1101001
+              ism_tcp_40 |                          1100011 |                          1101010
+              ism_tcp_42 |                          1100100 |                          1101011
+              ism_tcp_44 |                          1100101 |                          1101100
+              ism_tcp_46 |                          1100110 |                          1101101
+              ism_tcp_48 |                          1100111 |                          1101110
+              ism_tcp_50 |                          1101000 |                          1101111
+              ism_tcp_52 |                          1101001 |                          1110000
+            ism_tcp_opt1 |                          1101010 |                          1110001
+            ism_tcp_opt2 |                          1101011 |                          1110010
+             ism_tcp_pad |                          1101100 |                          1110011
+             ism_tcp_ck1 |                          1101101 |                          1110100
+             ism_tcp_ck2 |                          1101110 |                          1110101
+             ism_icmp_34 |                          1101111 |                          0100011
+             ism_icmp_36 |                          1110000 |                          0100100
+          ism_icmp_data1 |                          1110001 |                          0100101
+          ism_icmp_data2 |                          1110010 |                          0100110
+            ism_icmp_pad |                          1110011 |                          0100111
+            ism_icmp_ck1 |                          1110100 |                          0101000
+            ism_icmp_ck2 |                          1110101 |                          0101001
+         ism_good_packet |                          1110110 |                          1110110
+         ism_done_packet |                          1110111 |                          1110111
+          ism_bad_packet |                          1111000 |                          1111000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_reg[state]' using encoding 'sequential' in module 'fnet_in_state'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                osm_idle |                     000000000001 |                             0000
+              osm_pre_01 |                     000000000010 |                             0001
+              osm_pre_23 |                     000000000100 |                             0010
+              osm_pre_45 |                     000000001000 |                             0011
+              osm_pre_67 |                     000000010000 |                             0100
+        osm_data_bcast_0 |                     000000100000 |                             0101
+        osm_data_bcast_2 |                     000001000000 |                             0110
+        osm_data_bcast_4 |                     000010000000 |                             0111
+                osm_data |                     000100000000 |                             1000
+                osm_crc1 |                     001000000000 |                             1001
+                osm_crc2 |                     010000000000 |                             1010
+                 osm_gap |                     100000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_reg[state]' using encoding 'one-hot' in module 'fnet_out_state'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                rsm_idle |                            00000 |                            00000
+               rsm_first |                            00001 |                            00001
+              rsm_header |                            00010 |                            00010
+         rsm_next_access |                            00011 |                            00011
+                 rsm_pad |                            00100 |                            10010
+                  rsm_ck |                            00101 |                            10011
+                rsm_done |                            00110 |                            10100
+             rsm_raddr_1 |                            00111 |                            00100
+             rsm_raddr_2 |                            01000 |                            00101
+       rsm_write_rdata_1 |                            01001 |                            00110
+       rsm_write_rdata_2 |                            01010 |                            00111
+          rsm_write_wait |                            01011 |                            01000
+       rsm_write_waddr_1 |                            01100 |                            01001
+       rsm_write_waddr_2 |                            01101 |                            01010
+       rsm_write_wdata_1 |                            01110 |                            01011
+       rsm_write_wdata_2 |                            01111 |                            01100
+           rsm_read_wait |                            10000 |                            01101
+        rsm_read_waddr_1 |                            10001 |                            01110
+        rsm_read_waddr_2 |                            10010 |                            01111
+        rsm_read_wdata_1 |                            10011 |                            10000
+        rsm_read_wdata_2 |                            10100 |                            10001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_reg[state]' using encoding 'sequential' in module 'fnet_regaccess'
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "ram_block_a11d16:/ram_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+*
+                 iSTATE0 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_stat_reg[conn_state]' using encoding 'sequential' in module 'fnet_tcp_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                psm_idle | 0000000000000000000000000000000000000000001 |                           000000
+               psm_first | 0000000000000000000000000000000000000000010 |                           000001
+            psm_header_0 | 0000000000000000000000000000000000000000100 |                           000010
+            psm_header_2 | 0000000000000000000000000000000000000001000 |                           000011
+            psm_header_4 | 0000000000000000000000000000000000000010000 |                           000100
+            psm_header_6 | 0000000000000000000000000000000000000100000 |                           000101
+            psm_header_8 | 0000000000000000000000000000000000001000000 |                           000110
+           psm_header_10 | 0000000000000000000000000000000000010000000 |                           000111
+           psm_header_12 | 0000000000000000000000000000000000100000000 |                           001000
+             psm_ipv4_14 | 0000000000000000000000000000000001000000000 |                           001001
+             psm_ipv4_16 | 0000000000000000000000000000000010000000000 |                           001010
+             psm_ipv4_18 | 0000000000000000000000000000000100000000000 |                           001011
+             psm_ipv4_20 | 0000000000000000000000000000001000000000000 |                           001100
+             psm_ipv4_22 | 0000000000000000000000000000010000000000000 |                           001101
+             psm_ipv4_24 | 0000000000000000000000000000100000000000000 |                           001110
+             psm_ipv4_26 | 0000000000000000000000000001000000000000000 |                           001111
+             psm_ipv4_28 | 0000000000000000000000000010000000000000000 |                           010000
+             psm_ipv4_30 | 0000000000000000000000000100000000000000000 |                           010001
+             psm_ipv4_32 | 0000000000000000000000001000000000000000000 |                           010010
+            psm_ipv4_ck1 | 0000000000000000000000010000000000000000000 |                           010011
+            psm_ipv4_ck2 | 0000000000000000000000100000000000000000000 |                           010100
+            psm_ipv4_ck3 | 0000000000000000000001000000000000000000000 |                           010101
+           psm_pstcp_len | 0000000000000000000010000000000000000000000 |                           010110
+            psm_pstcp_26 | 0000000000000000000100000000000000000000000 |                           010111
+            psm_pstcp_28 | 0000000000000000001000000000000000000000000 |                           011000
+            psm_pstcp_30 | 0000000000000000010000000000000000000000000 |                           011001
+            psm_pstcp_32 | 0000000000000000100000000000000000000000000 |                           011010
+              psm_tcp_34 | 0000000000000001000000000000000000000000000 |                           011011
+              psm_tcp_36 | 0000000000000010000000000000000000000000000 |                           011100
+              psm_tcp_38 | 0000000000000100000000000000000000000000000 |                           011101
+              psm_tcp_40 | 0000000000001000000000000000000000000000000 |                           011110
+              psm_tcp_42 | 0000000000010000000000000000000000000000000 |                           011111
+              psm_tcp_44 | 0000000000100000000000000000000000000000000 |                           100000
+              psm_tcp_46 | 0000000001000000000000000000000000000000000 |                           100001
+              psm_tcp_48 | 0000000010000000000000000000000000000000000 |                           100010
+              psm_tcp_50 | 0000000100000000000000000000000000000000000 |                           100011
+              psm_tcp_52 | 0000001000000000000000000000000000000000000 |                           100100
+                psm_data | 0000010000000000000000000000000000000000000 |                           100101
+                 psm_pad | 0000100000000000000000000000000000000000000 |                           100110
+                 psm_ck1 | 0001000000000000000000000000000000000000000 |                           100111
+                 psm_ck2 | 0010000000000000000000000000000000000000000 |                           101000
+                 psm_ck3 | 0100000000000000000000000000000000000000000 |                           101001
+                psm_done | 1000000000000000000000000000000000000000000 |                           101010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_reg[state]' using encoding 'one-hot' in module 'fnet_tcp_prepare'
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "fnet_ram_block_data__parameterized0:/ram_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 9 for RAM "fnet_ram_block_data__parameterized0:/ram_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 4 for RAM "fnet_ram_block_data__parameterized0:/ram_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 1 for RAM "fnet_ram_block_data__parameterized0:/ram_reg"
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                msm_idle |                              000 |                              000
+       msm_check_request |                              001 |                              001
+            msm_preamble |                              010 |                              010
+             msm_perform |                              011 |                              011
+        msm_perform_read |                              100 |                              100
+             msm_respond |                              101 |                              101
+                msm_wait |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_reg[state]' using encoding 'sequential' in module 'fnet_mdio'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2502.750 ; gain = 719.164 ; free physical = 18694 ; free virtual = 42866
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1441.329; parent = 1286.343; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3439.242; parent = 2470.738; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   31 Bit       Adders := 1     
+	   3 Input   22 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   3 Input   20 Bit       Adders := 1     
+	   3 Input   17 Bit       Adders := 5     
+	   2 Input   17 Bit       Adders := 11    
+	   2 Input   16 Bit       Adders := 7     
+	   3 Input   16 Bit       Adders := 1     
+	   3 Input   15 Bit       Adders := 1     
+	   4 Input   15 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 15    
+	   2 Input   10 Bit       Adders := 3     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 19    
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 7     
+	   3 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 9     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 6     
++---XORs : 
+	   2 Input     64 Bit         XORs := 3     
+	   2 Input     22 Bit         XORs := 1     
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 72    
+	   5 Input      1 Bit         XORs := 10    
+	   3 Input      1 Bit         XORs := 48    
+	   4 Input      1 Bit         XORs := 28    
+	   6 Input      1 Bit         XORs := 4     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               57 Bit    Registers := 1     
+	               48 Bit    Registers := 1     
+	               42 Bit    Registers := 1     
+	               32 Bit    Registers := 112   
+	               31 Bit    Registers := 1     
+	               25 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	               22 Bit    Registers := 2     
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	               17 Bit    Registers := 19    
+	               16 Bit    Registers := 64    
+	               15 Bit    Registers := 1     
+	               13 Bit    Registers := 3     
+	               12 Bit    Registers := 8     
+	               11 Bit    Registers := 32    
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 27    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 31    
+	                4 Bit    Registers := 22    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 400   
++---RAMs : 
+	             256K Bit	(8192 X 32 bit)          RAMs := 1     
+	              16K Bit	(1024 X 16 bit)          RAMs := 10    
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
+	              272 Bit	(16 X 17 bit)          RAMs := 2     
++---Muxes : 
+	  15 Input   64 Bit        Muxes := 2     
+	   2 Input   48 Bit        Muxes := 1     
+	  43 Input   43 Bit        Muxes := 1     
+	   2 Input   43 Bit        Muxes := 5     
+	  42 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 19    
+	 121 Input   32 Bit        Muxes := 1     
+	 257 Input   32 Bit        Muxes := 1     
+	  12 Input   32 Bit        Muxes := 1     
+	  21 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 2     
+	  64 Input   32 Bit        Muxes := 2     
+	  43 Input   32 Bit        Muxes := 2     
+	  16 Input   31 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   5 Input   25 Bit        Muxes := 2     
+	 121 Input   24 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 7     
+	   7 Input   20 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 6     
+	   2 Input   17 Bit        Muxes := 9     
+	  43 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 38    
+	 121 Input   16 Bit        Muxes := 2     
+	  12 Input   16 Bit        Muxes := 1     
+	  21 Input   16 Bit        Muxes := 1     
+	  43 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 2     
+	  12 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 9     
+	 121 Input   11 Bit        Muxes := 3     
+	   3 Input   11 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 8     
+	   4 Input   11 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	  43 Input   11 Bit        Muxes := 1     
+	  15 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 18    
+	  15 Input    8 Bit        Muxes := 1     
+	 121 Input    8 Bit        Muxes := 2     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 63    
+	   3 Input    7 Bit        Muxes := 10    
+	   5 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 2     
+	   4 Input    7 Bit        Muxes := 4     
+	  11 Input    7 Bit        Muxes := 2     
+	   8 Input    7 Bit        Muxes := 2     
+	 121 Input    7 Bit        Muxes := 2     
+	 210 Input    7 Bit        Muxes := 1     
+	  12 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 12    
+	   4 Input    6 Bit        Muxes := 4     
+	   3 Input    6 Bit        Muxes := 1     
+	  10 Input    5 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 14    
+	  15 Input    5 Bit        Muxes := 1     
+	  21 Input    5 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	  15 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 12    
+	   3 Input    3 Bit        Muxes := 1     
+	  21 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 44    
+	   4 Input    2 Bit        Muxes := 1     
+	  21 Input    2 Bit        Muxes := 1     
+	  43 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 282   
+	   4 Input    1 Bit        Muxes := 3     
+	  10 Input    1 Bit        Muxes := 4     
+	  15 Input    1 Bit        Muxes := 11    
+	  14 Input    1 Bit        Muxes := 3     
+	 121 Input    1 Bit        Muxes := 97    
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 2     
+	  12 Input    1 Bit        Muxes := 4     
+	  21 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 1     
+	  43 Input    1 Bit        Muxes := 8     
+	   7 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'state_no_reg' and it is trimmed from '32' to '4' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_out_state.vhd:433]
+WARNING: [Synth 8-3936] Found unconnected internal register 'state_no_reg' and it is trimmed from '32' to '6' bits. [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_tcp_prepare.vhd:835]
+INFO: [Synth 8-6904] The RAM "top_block_fakernet_top_0_0/inst/rx/rx_fifo/fifo/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "top_block_fakernet_top_0_0/inst/tx/tx_fifo/fifo/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3917] design top_block_fakernet_top_0_0 has port uart_tx driven by constant 1
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet /lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 18 for RAM "\inst/t/fakernet /dpdp_ram_data/ram_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 9 for RAM "\inst/t/fakernet /dpdp_ram_data/ram_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 4 for RAM "\inst/t/fakernet /dpdp_ram_data/ram_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 1 for RAM "\inst/t/fakernet /dpdp_ram_data/ram_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_arp_icmp/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_pkt_gen/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_udp_regacc/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_udp_regidp/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_tcp_template/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_tcp_prep0/ram_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 16 for RAM "\inst/t/fakernet/dpdp_ram_tcp_prep1/ram_reg "
+INFO: [Synth 8-6904] The RAM "top_block_fakernet_top_0_0/inst/rx/rx_fifo/fifo/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "top_block_fakernet_top_0_0/inst/tx/tx_fifo/fifo/ram_reg" of size (depth=16 x width=17) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3332] Sequential element (inst/t/dna_get/FSM_onehot_state_reg[3]) is unused and will be removed from module top_block_fakernet_top_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/t/lmd_format/fmt/FSM_sequential_state_reg[3]) is unused and will be removed from module top_block_fakernet_top_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/t/lmd_format/fmt/FSM_sequential_state_reg[2]) is unused and will be removed from module top_block_fakernet_top_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/t/lmd_format/fmt/FSM_sequential_state_reg[1]) is unused and will be removed from module top_block_fakernet_top_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/t/lmd_format/fmt/FSM_sequential_state_reg[0]) is unused and will be removed from module top_block_fakernet_top_0_0.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_s_reg[state][5]) is unused and will be removed from module fnet_out_state.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_s_reg[state][2]) is unused and will be removed from module fnet_mdio.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_s_reg[state][1]) is unused and will be removed from module fnet_mdio.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_s_reg[state][0]) is unused and will be removed from module fnet_mdio.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin O with 1st driver pin 'inst/t/fakernet/mdio/i_5/ticker_next_inferredi_0/O' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mdio.vhd:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin O with 2nd driver pin 'GND' [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mdio.vhd:117]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net O is connected to at least one constant driver which has been preserved, other driver is ignored [/home/nagafusa/work/spadi/Fakernet/lib/fakernet/vhdl/fnet_mdio.vhd:117]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2502.750 ; gain = 719.164 ; free physical = 18655 ; free virtual = 42845
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1491.925; parent = 1336.988; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3439.242; parent = 2470.738; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+--------------+---------------+----------------+
+|Module Name    | RTL Object   | Depth x Width | Implemented As | 
++---------------+--------------+---------------+----------------+
+|fnet_in_state  | state_no_reg | 128x9         | Block RAM      | 
+|fnet_regaccess | state_no0    | 32x6          | LUT            | 
+|fnet_in_state  | state_no_reg | 128x9         | Block RAM      | 
++---------------+--------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                     | RTL Object                                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|\inst/t/fakernet /lclreg        | if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet /dpdp_ram_data | ram_reg                                              | 8 K x 32(READ_FIRST)   | W | R | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      | 4,2,1,1         | 
+|\inst/t/fakernet                | dpdp_ram_arp_icmp/ram_reg                            | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_pkt_gen/ram_reg                             | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regacc/ram_reg                          | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regidp/ram_reg                          | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_template/ram_reg                        | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_prep0/ram_reg                           | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_prep1/ram_reg                           | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------------+------------------------------+-----------+----------------------+---------------+
+|Module Name                | RTL Object                   | Inference | Size (Depth x Width) | Primitives    | 
++---------------------------+------------------------------+-----------+----------------------+---------------+
+|top_block_fakernet_top_0_0 | inst/rx/rx_fifo/fifo/ram_reg | Implied   | 16 x 17              | RAM32M16 x 2  | 
+|top_block_fakernet_top_0_0 | inst/tx/tx_fifo/fifo/ram_reg | Implied   | 16 x 17              | RAM32M16 x 2  | 
++---------------------------+------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18461 ; free virtual = 42651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1679.233; parent = 1524.319; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18457 ; free virtual = 42647
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1683.323; parent = 1528.409; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                     | RTL Object                                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|\inst/t/fakernet /lclreg        | if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet /dpdp_ram_data | ram_reg                                              | 8 K x 32(READ_FIRST)   | W | R | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      | 4,2,1,1         | 
+|\inst/t/fakernet                | dpdp_ram_arp_icmp/ram_reg                            | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_pkt_gen/ram_reg                             | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regacc/ram_reg                          | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regidp/ram_reg                          | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram_reg | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_template/ram_reg                        | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_prep0/ram_reg                           | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
+|\inst/t/fakernet                | dpdp_ram_tcp_prep1/ram_reg                           | 1 K x 16(READ_FIRST)   | W | R | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 1               | 
++--------------------------------+------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+
+Distributed RAM: Final Mapping Report
++---------------------------+------------------------------+-----------+----------------------+---------------+
+|Module Name                | RTL Object                   | Inference | Size (Depth x Width) | Primitives    | 
++---------------------------+------------------------------+-----------+----------------------+---------------+
+|top_block_fakernet_top_0_0 | inst/rx/rx_fifo/fifo/ram_reg | Implied   | 16 x 17              | RAM32M16 x 2  | 
+|top_block_fakernet_top_0_0 | inst/tx/tx_fifo/fifo/ram_reg | Implied   | 16 x 17              | RAM32M16 x 2  | 
++---------------------------+------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_arp_icmp/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_pkt_gen/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_udp_regacc/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_udp_regidp/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_tcp_template/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_tcp_prep0/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/t/fakernet/dpdp_ram_tcp_prep1/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18442 ; free virtual = 42633
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1698.351; parent = 1543.437; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance '\inst/t/i_ ' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18437 ; free virtual = 42627
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1698.405; parent = 1543.491; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18437 ; free virtual = 42627
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1698.421; parent = 1543.507; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18435 ; free virtual = 42626
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1699.202; parent = 1544.288; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18435 ; free virtual = 42626
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1699.202; parent = 1544.288; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18435 ; free virtual = 42626
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1700.077; parent = 1545.163; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18435 ; free virtual = 42626
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1700.081; parent = 1545.167; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_block_fakernet_top_0_0 | inst/t/fakernet/in_sm/word_prev1_reg[15] | 3      | 15    | NO           | NO                 | YES               | 15     | 0       | 
+|top_block_fakernet_top_0_0 | inst/t/fakernet/dyn_ctrl/lfsr_reg[30]    | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top_block_fakernet_top_0_0 | inst/t/fakernet/regacc/regacc_write_reg  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top_block_fakernet_top_0_0 | inst/t/fakernet/regacc/regacc_read_reg   | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top_block_fakernet_top_0_0 | inst/t/dna_get/shift_reg_reg[41]         | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
++---------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY8     |   107|
+|2     |DNA_PORTE2 |     1|
+|3     |LUT1       |    87|
+|4     |LUT2       |   542|
+|5     |LUT3       |   466|
+|6     |LUT4       |   715|
+|7     |LUT5       |   547|
+|8     |LUT6       |  1585|
+|9     |MUXF7      |    54|
+|10    |MUXF8      |    15|
+|11    |ODDR2      |     1|
+|12    |RAM32M     |     2|
+|13    |RAM32M16   |     2|
+|14    |RAMB18E2   |    11|
+|16    |RAMB36E2   |     7|
+|22    |SRL16E     |    19|
+|23    |FDRE       |  3442|
+|24    |FDSE       |   131|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.492 ; gain = 765.906 ; free physical = 18435 ; free virtual = 42626
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1700.112; parent = 1545.198; children = 155.286
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3518.000; parent = 2549.496; children = 968.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 4 critical warnings and 1296 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2549.492 ; gain = 614.156 ; free physical = 18449 ; free virtual = 42639
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2549.500 ; gain = 765.906 ; free physical = 18449 ; free virtual = 42639
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2552.461 ; gain = 0.000 ; free physical = 18554 ; free virtual = 42744
+INFO: [Netlist 29-17] Analyzing 181 Unisim elements for replacement
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'inst/tx/outddr_tx_clk/o' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'C1' that is connected to this pin will not be connected to the replacement instance.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.316 ; gain = 0.000 ; free physical = 18527 ; free virtual = 42718
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  ODDR2 => OSERDESE3: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+
+Synth Design complete, checksum: f589a889
+INFO: [Common 17-83] Releasing license: Synthesis
+169 Infos, 145 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2593.316 ; gain = 1270.203 ; free physical = 18757 ; free virtual = 42948
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_fakernet_top_0_0_synth_1/top_block_fakernet_top_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 44 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_fakernet_top_0_0_synth_1/top_block_fakernet_top_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_block_fakernet_top_0_0_utilization_synth.rpt -pb top_block_fakernet_top_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  5 14:34:17 2024...

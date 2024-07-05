@@ -1,0 +1,180 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date             : Fri Jul  5 14:50:49 2024
+| Host             : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
+| Command          : report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
+| Design           : top_block_wrapper
+| Device           : xcau15p-sbvb484-1-i
+| Design State     : routed
+| Grade            : industrial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.602        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.339        |
+| Device Static (W)        | 0.263        |
+| Effective TJA (C/W)      | 2.7          |
+| Max Ambient (C)          | 98.4         |
+| Junction Temperature (C) | 26.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.028 |       12 |       --- |             --- |
+| CLB Logic                |     0.022 |    13089 |       --- |             --- |
+|   LUT as Logic           |     0.017 |     4601 |     77760 |            5.92 |
+|   LUT as Distributed RAM |     0.002 |       54 |     40320 |            0.13 |
+|   Register               |     0.002 |     6533 |    155520 |            4.20 |
+|   CARRY8                 |    <0.001 |      122 |      9720 |            1.26 |
+|   LUT as Shift Register  |    <0.001 |       31 |     40320 |            0.08 |
+|   Others                 |     0.000 |      438 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       69 |     77760 |            0.09 |
+| Signals                  |     0.015 |    10400 |       --- |             --- |
+| Block RAM                |     0.033 |     28.5 |       144 |           19.79 |
+| MMCM                     |     0.087 |        0 |       --- |             --- |
+| I/O                      |     0.006 |        5 |       204 |            2.45 |
+| GTH                      |     0.148 |        1 |        12 |            8.33 |
+| Static Power             |     0.263 |          |           |                 |
+| Total                    |     0.602 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       0.850 |     0.170 |       0.119 |      0.051 |       NA    | Unspecified | NA         |
+| Vccint_io |       0.850 |     0.027 |       0.001 |      0.027 |       NA    | Unspecified | NA         |
+| Vccbram   |       0.850 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.113 |       0.048 |      0.064 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.026 |       0.003 |      0.023 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10    |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       0.900 |     0.042 |       0.034 |      0.008 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.107 |       0.093 |      0.014 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 8.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                                                                         | Domain                                                                                                                                                                                                                                                                                                                                                         | Constraint (ns) |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| BASECLK                                                                                                                                                                                                                                                                                                                                                                       | BASECLK                                                                                                                                                                                                                                                                                                                                                        |            25.0 |
+| SFP_CLK_P                                                                                                                                                                                                                                                                                                                                                                     | SFP_CLK_P                                                                                                                                                                                                                                                                                                                                                      |             6.4 |
+| clk_out3_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                | top_block_i/clk_wiz_0/inst/clk_out3_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                      |            40.0 |
+| clk_out4_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                | top_block_i/clk_wiz_0/inst/clk_out4_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                      |            20.0 |
+| clk_out5_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                | top_block_i/clk_wiz_0/inst/clk_out5_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                      |             8.0 |
+| core_clocking_i_n_2                                                                                                                                                                                                                                                                                                                                                           | top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/core_clocking_i/userclk                                                                                                                                                                                                                                                                        |            16.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                                                                                                                                                                                                                                                    | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK                                                                                                                                                                                                                                                                                              |            33.0 |
+| rxoutclkpcs_out[0]                                                                                                                                                                                                                                                                                                                                                            | top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.gig_ethernet_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/rxoutclkpcs_out[0]                                                               |            16.0 |
+| top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.gig_ethernet_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_14_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_14_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.gig_ethernet_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_14_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_14_gthe4_cpll_cal_tx_i/txoutclkmon |            16.0 |
+| txoutclk_out[0]                                                                                                                                                                                                                                                                                                                                                               | top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.gig_ethernet_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[2].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/txoutclk_out[0]                                                                  |             8.0 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------+-----------+
+| Name                         | Power (W) |
++------------------------------+-----------+
+| top_block_wrapper            |     0.339 |
+|   dbg_hub                    |     0.003 |
+|     inst                     |     0.003 |
+|       BSCANID.u_xsdbm_id     |     0.003 |
+|   top_block_i                |     0.335 |
+|     axi_mem_intercon         |     0.002 |
+|     blk_mem_gen_0            |     0.019 |
+|       U0                     |     0.019 |
+|     clk_wiz_0                |     0.087 |
+|       inst                   |     0.087 |
+|     fakernet                 |     0.221 |
+|       fakernet_top_0         |     0.058 |
+|       gig_ethernet_pcs_pma_0 |     0.163 |
+|     vio_0                    |     0.001 |
+|       inst                   |     0.001 |
+|     vio_1                    |     0.001 |
+|       inst                   |     0.001 |
++------------------------------+-----------+
+
+

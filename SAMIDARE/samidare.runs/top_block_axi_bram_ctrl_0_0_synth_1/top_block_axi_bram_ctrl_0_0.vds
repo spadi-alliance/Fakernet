@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jul  5 11:52:36 2024
+# Process ID: 937566
+# Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1
+# Command line: vivado -log top_block_axi_bram_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_axi_bram_ctrl_0_0.tcl
+# Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0.vds
+# Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/vivado.jou
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 5699.714 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+#-----------------------------------------------------------
+source top_block_axi_bram_ctrl_0_0.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_axi_bram_ctrl_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry a0b435d57df9a541 to dir: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/a/0/a0b435d57df9a541/top_block_axi_bram_ctrl_1_0_stub.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/a/0/a0b435d57df9a541/top_block_axi_bram_ctrl_1_0_sim_netlist.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/a/0/a0b435d57df9a541/top_block_axi_bram_ctrl_1_0_stub.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/a/0/a0b435d57df9a541/top_block_axi_bram_ctrl_1_0.dcp to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/a/0/a0b435d57df9a541/top_block_axi_bram_ctrl_1_0_sim_netlist.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_axi_bram_ctrl_0_0_synth_1/top_block_axi_bram_ctrl_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP top_block_axi_bram_ctrl_0_0, cache-ID = a0b435d57df9a541.
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  5 11:52:40 2024...

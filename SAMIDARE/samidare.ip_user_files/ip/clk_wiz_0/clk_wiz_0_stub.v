@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Jun 21 15:01:32 2024
-// Host        : bytpc running 64-bit Ubuntu 16.04.7 LTS
+// Date        : Fri Jul  5 14:15:05 2024
+// Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /home/ytlai/svn/fakernet/fakernet-0.9.5/boards/git/samidare/samidare.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
 // Design      : clk_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i
