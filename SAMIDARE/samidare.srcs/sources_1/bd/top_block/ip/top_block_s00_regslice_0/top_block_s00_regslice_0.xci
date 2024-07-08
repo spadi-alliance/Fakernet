@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_s00_regslice_0",
-    "cell_name": "axi_mem_intercon/s00_couplers/s00_regslice",
+    "cell_name": "intercon_wrapper/axi_mem_intercon/s00_couplers/s00_regslice",
     "component_reference": "xilinx.com:ip:axi_register_slice:2.1",
     "ip_revision": "27",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_s00_regslice_0",

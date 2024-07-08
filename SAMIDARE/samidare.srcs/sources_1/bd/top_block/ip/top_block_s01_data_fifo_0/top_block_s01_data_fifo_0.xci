@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_s01_data_fifo_0",
-    "cell_name": "axi_mem_intercon/s01_couplers/s01_data_fifo",
+    "cell_name": "intercon_wrapper/axi_mem_intercon/s01_couplers/s01_data_fifo",
     "component_reference": "xilinx.com:ip:axi_data_fifo:2.1",
     "ip_revision": "26",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0",

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="top_block_axi_bram_ctrl_0_0_synth_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1720147924">
-  <File Type="RDS-DCP" Name="top_block_axi_bram_ctrl_0_0.dcp"/>
   <File Type="PA-TCL" Name="top_block_axi_bram_ctrl_0_0.tcl"/>
   <File Type="REPORTS-TCL" Name="top_block_axi_bram_ctrl_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_block_axi_bram_ctrl_0_0.vds"/>
+  <File Type="RDS-DCP" Name="top_block_axi_bram_ctrl_0_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_block_axi_bram_ctrl_0_0">
     <File Path="$PSRCDIR/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_0_0/top_block_axi_bram_ctrl_0_0.xci">
       <FileInfo>

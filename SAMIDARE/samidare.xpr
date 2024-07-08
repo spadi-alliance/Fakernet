@@ -465,6 +465,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_vector_logic_2_1/top_block_util_vector_logic_2_1.xci">
+          <Proxy FileSetName="top_block_util_vector_logic_2_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_vector_logic_3_0/top_block_util_vector_logic_3_0.xci">
+          <Proxy FileSetName="top_block_util_vector_logic_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_gen_user_0_0/top_block_data_gen_user_0_0.xci">
+          <Proxy FileSetName="top_block_data_gen_user_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_RESET_INST_0_0/top_block_RESET_INST_0_0.xci">
           <Proxy FileSetName="top_block_RESET_INST_0_0"/>
         </CompFileExtendedInfo>
@@ -488,6 +497,12 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_LED_REG_READ_SEPARAT_1_0/top_block_LED_REG_READ_SEPARAT_1_0.xci">
           <Proxy FileSetName="top_block_LED_REG_READ_SEPARAT_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.xci">
+          <Proxy FileSetName="top_block_u_led_inst_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xci">
+          <Proxy FileSetName="top_block_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_axi_bram_ctrl_0_0/top_block_axi_bram_ctrl_0_0.xci">
           <Proxy FileSetName="top_block_axi_bram_ctrl_0_0"/>
@@ -521,21 +536,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_vector_logic_1_2/top_block_util_vector_logic_1_2.xci">
           <Proxy FileSetName="top_block_util_vector_logic_1_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_vector_logic_2_1/top_block_util_vector_logic_2_1.xci">
-          <Proxy FileSetName="top_block_util_vector_logic_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_vector_logic_3_0/top_block_util_vector_logic_3_0.xci">
-          <Proxy FileSetName="top_block_util_vector_logic_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_gen_user_0_0/top_block_data_gen_user_0_0.xci">
-          <Proxy FileSetName="top_block_data_gen_user_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.xci">
-          <Proxy FileSetName="top_block_u_led_inst_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xci">
-          <Proxy FileSetName="top_block_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/top_block/hdl/top_block_wrapper.v">
@@ -1186,9 +1186,7 @@
     </Run>
     <Run Id="top_block_fakernet_top_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_fakernet_top_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fakernet_top_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fakernet_top_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1658,9 +1656,7 @@
     </Run>
     <Run Id="top_block_fakernet_top_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fakernet_top_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fakernet_top_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

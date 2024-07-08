@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_util_vector_logic_0_2",
-    "cell_name": "util_vector_logic_0",
+    "cell_name": "led_module/util_vector_logic_0",
     "component_reference": "xilinx.com:ip:util_vector_logic:2.0",
     "ip_revision": "2",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_2",

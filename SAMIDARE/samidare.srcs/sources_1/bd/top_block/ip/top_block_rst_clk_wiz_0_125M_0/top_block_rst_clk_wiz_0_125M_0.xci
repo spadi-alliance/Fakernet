@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_rst_clk_wiz_0_125M_0",
-    "cell_name": "rst_clk_wiz_0_125M",
+    "cell_name": "vio/rst_clk_wiz_0_125M",
     "component_reference": "xilinx.com:ip:proc_sys_reset:5.0",
     "ip_revision": "13",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0",

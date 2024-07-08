@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_axi_bram_ctrl_0_0",
-    "cell_name": "axi_bram_ctrl_0",
+    "cell_name": "reg_bram/axi_bram_ctrl_0",
     "component_reference": "xilinx.com:ip:axi_bram_ctrl:4.1",
     "ip_revision": "7",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_0_0",
