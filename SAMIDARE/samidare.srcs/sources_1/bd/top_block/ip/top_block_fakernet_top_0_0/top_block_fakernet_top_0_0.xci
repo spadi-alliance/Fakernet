@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_fakernet_top_0_0",
-    "cell_name": "fakernet_top_0",
+    "cell_name": "fakernet/fakernet_top_0",
     "component_reference": "xilinx.com:module_ref:fakernet_top:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0",

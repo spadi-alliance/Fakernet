@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_LED_REG_READ_SEPARAT_1_0",
-    "cell_name": "LED_REG_READ_SEPARAT_1",
+    "cell_name": "led_module/LED_REG_READ_SEPARAT_1",
     "component_reference": "xilinx.com:module_ref:LED_REG_READ_SEPARATE_v1_0:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_1_0",

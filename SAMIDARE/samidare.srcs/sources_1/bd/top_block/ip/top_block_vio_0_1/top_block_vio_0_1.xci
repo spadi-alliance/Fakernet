@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_vio_0_1",
-    "cell_name": "vio_1",
+    "cell_name": "vio/vio_1",
     "component_reference": "xilinx.com:ip:vio:3.0",
     "ip_revision": "23",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1",
