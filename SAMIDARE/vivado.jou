@@ -1,0 +1,268 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Aug  2 14:03:16 2024
+# Process ID: 1008518
+# Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE
+# Command line: vivado
+# Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.log
+# Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.jou
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd}
+create_peripheral user.org user start_i2c_write 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:start_i2c_write:1.0]
+add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:start_i2c_write:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:start_i2c_write:1.0]
+write_peripheral [ipx::find_open_core user.org:user:start_i2c_write:1.0]
+set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_start_i2c_write_v1_0 -directory /home/nagafusa/work/spadi/Fakernet/ip_repo /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0/component.xml
+current_project samidare
+current_project edit_start_i2c_write_v1_0
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/data/start_i2c_write.mdd -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/data/start_i2c_write.tcl -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/Makefile -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write.h -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write.c -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write_selftest.c -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files xgui/start_i2c_write_v1_0.tcl -of_objects [ipx::get_file_groups xilinx_xpgui -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files bd/bd.tcl -of_objects [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project
+add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_S00_AXI.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_M00_AXI.v}
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference I2C_controller_v1_0 I2C_controller_v1_0_0
+connect_bd_intf_net [get_bd_intf_pins I2C_controller_v1_0_0/m00_axi] [get_bd_intf_pins SAMPA_I2C_wrapper/axi_iic_0/S_AXI]
+move_bd_cells [get_bd_cells SAMPA_I2C_wrapper] [get_bd_cells I2C_controller_v1_0_0]
+delete_bd_objs [get_bd_intf_nets S_AXI1_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/intercon_wrapper/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi} ddr_seg {Auto} intc_ip {/intercon_wrapper/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi]
+endgroup
+undo
+delete_bd_objs [get_bd_intf_nets SAMPA_I2C_wrapper/I2C_controller_v1_0_0_m00_axi] [get_bd_cells SAMPA_I2C_wrapper/I2C_controller_v1_0_0]
+create_peripheral user.org user I2C_Controller 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo
+add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:I2C_Controller:1.0]
+add_peripheral_interface M01_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:I2C_Controller:1.0]
+generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:I2C_Controller:1.0]
+write_peripheral [ipx::find_open_core user.org:user:I2C_Controller:1.0]
+set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_I2C_Controller_v1_0 -directory /home/nagafusa/work/spadi/Fakernet/ip_repo /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project samidare
+add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v}
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference I2C_Controller_v1_0 SAMPA_I2C_wrapper/I2C_Controller_v1_0_0
+connect_bd_intf_net [get_bd_intf_pins SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi] [get_bd_intf_pins SAMPA_I2C_wrapper/axi_iic_0/S_AXI]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk]
+endgroup
+undo
+move_bd_cells [get_bd_cells /] [get_bd_cells SAMPA_I2C_wrapper/I2C_Controller_v1_0_0]
+set_property location {5.5 1716 551} [get_bd_cells I2C_Controller_v1_0_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins I2C_Controller_v1_0_0/m01_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]
+endgroup
+regenerate_bd_layout
+undo
+delete_bd_objs [get_bd_intf_nets led_module_m00_axi] [get_bd_intf_nets led_module_m00_axi1] [get_bd_cells intercon_wrapper]
+undo
+undo
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets led_module_m00_axi] [get_bd_intf_nets led_module_m00_axi1] [get_bd_cells intercon_wrapper]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins I2C_Controller_v1_0_0/m01_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins led_module/LED_REG_READ_SEPARAT_0/m00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_1/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins led_module/LED_REG_READ_SEPARAT_1/m00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_40M/ext_reset_in]
+endgroup
+regenerate_bd_layout
+move_bd_cells [get_bd_cells SAMPA_I2C_wrapper] [get_bd_cells I2C_Controller_v1_0_0]
+regenerate_bd_layout
+regenerate_bd_layout
+move_bd_cells [get_bd_cells /] [get_bd_cells SAMPA_I2C_wrapper/I2C_iobuf]
+undo
+regenerate_bd_layout
+close [ open /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v w ]
+add_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference reg_switch fakernet/reg_switch_0
+set_property location {6 2195 560} [get_bd_cells fakernet/native_to_axi_lite_v_0]
+set_property location {6.5 2664 504} [get_bd_cells fakernet/native_to_axi_lite_v_0]
+delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_addr_o]
+connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_addr_o] [get_bd_pins fakernet/reg_switch_0/regacc_addr_i]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_addr_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_addr]
+delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_data_wr_o]
+connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_write_o] [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_i]
+undo
+connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_data_wr_o] [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_i]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_data_wr]
+delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_write_o]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_i] [get_bd_pins fakernet/fakernet_top_0/regacc_write_o]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_write]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/m00_axi_init_axi_txn]
+delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_read_o]
+connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_read_o] [get_bd_pins fakernet/reg_switch_0/regacc_read_i]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_read_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_read]
+delete_bd_objs [get_bd_nets fakernet/native_to_axi_lite_v_0_regacc_data_rd]
+startgroup
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_rd_o] [get_bd_pins fakernet/fakernet_top_0/regacc_data_rd_i]
+endgroup
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_rd_i] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_data_rd]
+delete_bd_objs [get_bd_nets fakernet/native_to_axi_lite_v_0_regacc_done]
+connect_bd_net [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_done] [get_bd_pins fakernet/reg_switch_0/regacc_done_i]
+connect_bd_net [get_bd_pins fakernet/regacc_done] [get_bd_pins fakernet/reg_switch_0/regacc_done_o]
+connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_done_o] [get_bd_pins fakernet/fakernet_top_0/regacc_done_i]
+startgroup
+make_bd_pins_external  [get_bd_pins fakernet/reg_switch_0/start_i2c_write]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fakernet/reg_switch_0/axi_aclk]
+undo
+connect_bd_net [get_bd_pins fakernet/clk_in_0] [get_bd_pins fakernet/reg_switch_0/axi_aclk]
+connect_bd_net [get_bd_pins fakernet/m00_axi_aresetn] [get_bd_pins fakernet/reg_switch_0/axi_aresetn]
+regenerate_bd_layout -hierarchy [get_bd_cells fakernet]
+regenerate_bd_layout
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets fakernet_start_i2c_write_0] [get_bd_ports start_i2c_write_0]
+connect_bd_net [get_bd_pins fakernet/start_i2c_write_0] [get_bd_pins SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn]
+regenerate_bd_layout
+regenerate_bd_layout
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 SAMPA_I2C
+set_property location {1978 581} [get_bd_intf_ports SAMPA_I2C]
+set_property location {1964 815} [get_bd_intf_ports SAMPA_I2C]
+delete_bd_objs [get_bd_intf_ports SAMPA_I2C]
+startgroup
+create_bd_port -dir I -type rst RST
+endgroup
+set_property location {2 409 246} [get_bd_cells vio]
+set_property name reset [get_bd_cells vio]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xpm_cdc_gen:1.0 xpm_cdc_gen_0
+endgroup
+set_property location {2 397 -27} [get_bd_cells xpm_cdc_gen_0]
+set_property CONFIG.CDC_TYPE {xpm_cdc_async_rst} [get_bd_cells xpm_cdc_gen_0]
+delete_bd_objs [get_bd_nets reset/reset_rtl_0_1] [get_bd_cells reset/vio_1]
+set_property location {23 153} [get_bd_ports RST]
+connect_bd_net [get_bd_ports RST] [get_bd_pins xpm_cdc_gen_0/src_arst]
+move_bd_cells [get_bd_cells reset] [get_bd_cells xpm_cdc_gen_0]
+connect_bd_net [get_bd_pins reset/slowest_sync_clk] [get_bd_pins reset/xpm_cdc_gen_0/dest_clk]
+connect_bd_net [get_bd_pins reset/xpm_cdc_gen_0/dest_arst] [get_bd_pins reset/rst_clk_wiz_0_125M/ext_reset_in]
+undo
+undo
+undo
+undo
+undo
+undo
+redo
+redo
+redo
+redo
+redo
+redo
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+create_bd_port -dir I -from 10 -to 0 -type data SO
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M01_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon]
+set_property name SOP [get_bd_ports SO]
+create_bd_port -dir I -from 10 -to 0 -type data SON
+set_property name SO1P [get_bd_ports SOP]
+set_property name SO1N [get_bd_ports SON]
+create_bd_port -dir I -from 10 -to 0 -type data SO0N
+create_bd_port -dir I -from 10 -to 0 -type data SO0P
+create_bd_port -dir I -from 10 -to 0 -type data SO2N
+create_bd_port -dir I -from 10 -to 0 -type data SO2P
+create_bd_port -dir I -from 10 -to 0 -type data SO3N
+create_bd_port -dir I -from 10 -to 0 -type data SO3P
+set_property location {-32 58} [get_bd_ports SO1N]
+set_property location {-23 82} [get_bd_ports SO0P]
+set_property location {-21 47} [get_bd_ports SO1N]
+set_property location {-25 46} [get_bd_ports SO1N]
+set_property location {-21 42} [get_bd_ports SO1N]
+set_property location {-23 65} [get_bd_ports SO1P]
+set_property location {-31 23} [get_bd_ports SO0P]
+set_property location {-23 81} [get_bd_ports SO2N]
+set_property location {-21 127} [get_bd_ports SO3N]
+set_property location {-22 105} [get_bd_ports SO2P]
+set_property location {-21 122} [get_bd_ports SO3N]
+set_property location {-22 144} [get_bd_ports SO3P]
+save_bd_design
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xpm_cdc_gen:1.0 xpm_cdc_gen_0
+endgroup
+delete_bd_objs [get_bd_cells xpm_cdc_gen_0]
+create_bd_port -dir O HB_TRG_P
+create_bd_port -dir O HB_TRG_N
+create_bd_port -dir O TRG_P0
+create_bd_port -dir O TRG_N0
+create_bd_port -dir O TRG_P1
+create_bd_port -dir O TRG_N1
+create_bd_port -dir O TRG_P2
+create_bd_port -dir I TRG_N2
+delete_bd_objs [get_bd_ports TRG_N1] [get_bd_ports TRG_N0] [get_bd_ports TRG_P2] [get_bd_ports TRG_P0] [get_bd_ports TRG_P1]
+create_bd_port -dir O -from 3 -to 0 TRG_P
+delete_bd_objs [get_bd_ports TRG_N2]
+create_bd_port -dir O -from 3 -to 0 TRG_N
+set_property location {2714 1148} [get_bd_ports TRG_N]
+set_property location {2710 1139} [get_bd_ports TRG_N]
+create_bd_port -dir O -from 3 -to 0 HRSTB_P
+create_bd_port -dir O -from 3 -to 0 HRSTB_N
+regenerate_bd_layout
+create_bd_port -dir O -from 3 -to 0 CLKSOIN_P
+create_bd_port -dir O -from 3 -to 0 CLKSOIN_N
+regenerate_bd_layout
+create_bd_port -dir O BX_SYNC_TRG_P
+create_bd_port -dir I BX_SYNC_TRG_N
+delete_bd_objs [get_bd_ports BX_SYNC_TRG_N]
+create_bd_port -dir O BX_SYNC_TRG_N
+set_property location {2630 360} [get_bd_ports BX_SYNC_TRG_N]
+regenerate_bd_layout
+regenerate_bd_layout
+create_bd_port -dir I -from 3 -to 0 DIP_SW

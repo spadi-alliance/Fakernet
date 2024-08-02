@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1720403091" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="top_block_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_block_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_block_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="top_block_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_block_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="top_block_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="top_block_wrapper_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="top_block_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="top_block_wrapper.tcl"/>
+  <File Type="RDS-UTIL" Name="top_block_wrapper_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_block_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_block_wrapper.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/u_led_inst.v">
@@ -503,29 +500,29 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_RESET_INST_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_2_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_fakernet_top_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_rst_clk_wiz_0_125M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_vio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_vio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_data_gen_user_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_u_led_inst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="gig_ethernet_pcs_pma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_rst_clk_wiz_0_125M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_LED_REG_READ_SEPARAT_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_axi_bram_ctrl_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_native_to_axi_lite_v_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_util_vector_logic_2_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_RESET_INST_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_blk_mem_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_LED_REG_READ_SEPARAT_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_mii_initializer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_LED_REG_READ_SEPARAT_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_data_gen_user_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_u_led_inst_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="gig_ethernet_pcs_pma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_LED_REG_READ_SEPARAT_1_0"/>
 </GenRun>

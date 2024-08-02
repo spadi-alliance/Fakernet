@@ -1,56 +1,96 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.622995",
-   "Default View_TopLeft":"-127,-3",
-   "ExpandedHierarchyInLayout":"",
+   "Default View_ScaleFactor":"0.848162",
+   "Default View_TopLeft":"-424,-222",
+   "ExpandedHierarchyInLayout":"/SAMPA_I2C_wrapper",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_SFP0RXN -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
-preplace port port-id_SFP0TXP -pg 1 -lvl 6 -x 1630 -y 370 -defaultsOSRD
-preplace port port-id_SFP_CLK_P -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
-preplace port port-id_SFP_CLK_N -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
-preplace port port-id_SFP0TXN -pg 1 -lvl 6 -x 1630 -y 390 -defaultsOSRD
-preplace port port-id_SFP0RXP -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
-preplace port port-id_BASECLK -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
-preplace portBus LED -pg 1 -lvl 6 -x 1630 -y 250 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 410 -defaultsOSRD
-preplace inst fakernet -pg 1 -lvl 4 -x 1200 -y 400 -defaultsOSRD
-preplace inst led_module -pg 1 -lvl 3 -x 770 -y 90 -defaultsOSRD
-preplace inst vio -pg 1 -lvl 2 -x 390 -y 200 -defaultsOSRD
-preplace inst reg_bram -pg 1 -lvl 5 -x 1510 -y 170 -defaultsOSRD
-preplace inst intercon_wrapper -pg 1 -lvl 4 -x 1200 -y 100 -defaultsOSRD
-preplace inst data_gen_user_0 -pg 1 -lvl 3 -x 770 -y 690 -defaultsOSRD
-preplace netloc CLK_0_1 1 0 1 NJ 410
-preplace netloc clk_in_0_1 1 1 4 220 260 570 170 1010 200 NJ
-preplace netloc clk_wiz_0_clk_out3 1 1 3 NJ 410 NJ 410 960
-preplace netloc clk_wiz_0_clk_out4 1 1 3 NJ 430 NJ 430 950
-preplace netloc fakernet_txn_0 1 4 2 NJ 390 NJ
-preplace netloc fakernet_txp_0 1 4 2 NJ 370 NJ
-preplace netloc gtrefclk_n_0_1 1 0 4 NJ 310 NJ 310 NJ 310 NJ
-preplace netloc gtrefclk_p_0_1 1 0 4 NJ 290 NJ 290 NJ 290 NJ
-preplace netloc native_to_axi_lite_v_0_regacc_done 1 2 3 590 180 NJ 180 1380
-preplace netloc rst_clk_wiz_0_125M_peripheral_aresetn 1 2 3 580 210 1000 190 1410J
-preplace netloc rxn_0_1 1 0 4 NJ 270 NJ 270 NJ 270 NJ
-preplace netloc rxp_0_1 1 0 4 NJ 510 NJ 510 NJ 510 970J
-preplace netloc vio_0_probe_out0 1 2 2 560 200 980
-preplace netloc led_module_LED 1 3 3 950J 210 1390J 250 NJ
-preplace netloc data_gen_user_0_event_word 1 3 1 980 450n
-preplace netloc data_gen_user_0_event_offset 1 3 1 990 470n
-preplace netloc data_gen_user_0_event_write 1 3 1 1000 490n
-preplace netloc data_gen_user_0_event_commit_len 1 3 1 1010 510n
-preplace netloc data_gen_user_0_event_commit 1 3 1 1020 530n
-preplace netloc fakernet_user_data_free 1 2 3 580 580 NJ 580 1400
-preplace netloc fakernet_user_data_reset 1 2 3 590 590 NJ 590 1380
-preplace netloc fakernet_m00_axi 1 4 1 1400 140n
-preplace netloc S_AXI1_1 1 4 1 1410 100n
-preplace netloc led_module_m00_axi 1 3 1 N 70
-preplace netloc led_module_m00_axi1 1 3 1 N 90
-levelinfo -pg 1 0 120 390 770 1200 1510 1630
-pagesize -pg 1 -db -bbox -sgen -130 0 1750 790
+preplace port port-id_SFP0RXN -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
+preplace port port-id_SFP0TXP -pg 1 -lvl 6 -x 2630 -y 420 -defaultsOSRD
+preplace port port-id_SFP_CLK_P -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port port-id_SFP_CLK_N -pg 1 -lvl 0 -x -10 -y 380 -defaultsOSRD
+preplace port port-id_SFP0TXN -pg 1 -lvl 6 -x 2630 -y 440 -defaultsOSRD
+preplace port port-id_SFP0RXP -pg 1 -lvl 0 -x -10 -y 600 -defaultsOSRD
+preplace port port-id_BASECLK -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
+preplace port port-id_SAMPA_I2C_SDA -pg 1 -lvl 6 -x 2630 -y 870 -defaultsOSRD
+preplace port port-id_SAMPA_I2C_SCL -pg 1 -lvl 6 -x 2630 -y 850 -defaultsOSRD
+preplace port port-id_RST -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 6 -x 2630 -y 360 -defaultsOSRD
+preplace portBus SO1P -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace portBus SO1N -pg 1 -lvl 0 -x -10 -y 40 -defaultsOSRD
+preplace portBus SO0N -pg 1 -lvl 0 -x -10 -y 0 -defaultsOSRD
+preplace portBus SO0P -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace portBus SO2N -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace portBus SO2P -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace portBus SO3N -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace portBus SO3P -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 480 -defaultsOSRD
+preplace inst fakernet -pg 1 -lvl 4 -x 2164 -y 560 -defaultsOSRD
+preplace inst led_module -pg 1 -lvl 3 -x 980 -y 100 -defaultsOSRD
+preplace inst reset -pg 1 -lvl 2 -x 440 -y 350 -defaultsOSRD
+preplace inst reg_bram -pg 1 -lvl 5 -x 2510 -y 530 -defaultsOSRD
+preplace inst data_gen_user_0 -pg 1 -lvl 3 -x 980 -y 640 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper -pg 1 -lvl 3 -x 980 -y 852 -defaultsOSRD
+preplace inst rst_clk_wiz_0_40M -pg 1 -lvl 2 -x 440 -y 790 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 2164 -y 180 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper|axi_iic_0 -pg 1 -lvl 2 -x 1470 -y 1132 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper|I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 1080 -y 1032 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper|I2C_iobuf -pg 1 -lvl 2 -x 1470 -y 872 -defaultsOSRD
+preplace netloc CLK_0_1 1 0 1 NJ 480
+preplace netloc clk_in_0_1 1 1 4 230 410 630 10 1940 360 2390J
+preplace netloc clk_wiz_0_clk_out3 1 1 3 NJ 480 NJ 480 1930
+preplace netloc clk_wiz_0_clk_out4 1 1 3 NJ 500 NJ 500 1910
+preplace netloc data_gen_user_0_event_commit 1 3 1 1890 680n
+preplace netloc data_gen_user_0_event_commit_len 1 3 1 1890 660n
+preplace netloc data_gen_user_0_event_offset 1 3 1 1890 620n
+preplace netloc data_gen_user_0_event_word 1 3 1 1940 600n
+preplace netloc data_gen_user_0_event_write 1 3 1 1890 640n
+preplace netloc fakernet_txn_0 1 4 2 2370J 440 NJ
+preplace netloc fakernet_txp_0 1 4 2 2400J 420 NJ
+preplace netloc fakernet_user_data_free 1 2 3 670 740 NJ 740 2400
+preplace netloc fakernet_user_data_reset 1 1 4 240 680 660 750 NJ 750 2380
+preplace netloc gtrefclk_n_0_1 1 0 4 10J 370 250J 470 NJ 470 NJ
+preplace netloc gtrefclk_p_0_1 1 0 4 NJ 280 NJ 280 NJ 280 1890J
+preplace netloc led_module_LED 1 3 3 1890J 0 NJ 0 2610J
+preplace netloc native_to_axi_lite_v_0_regacc_done 1 2 3 670 -10 NJ -10 2360
+preplace netloc rst_clk_wiz_0_125M_peripheral_aresetn 1 2 3 650 180 1950 370 2380J
+preplace netloc rxn_0_1 1 0 4 20J 380 240J 430 NJ 430 NJ
+preplace netloc rxp_0_1 1 0 4 NJ 600 NJ 600 640J 510 NJ
+preplace netloc vio_0_probe_out0 1 2 2 660 420 1920J
+preplace netloc clk_wiz_0_clk_out1 1 1 2 220 690 640
+preplace netloc rst_clk_wiz_0_40M_peripheral_aresetn 1 2 1 620 830n
+preplace netloc Net1 1 3 3 1920J 850 NJ 850 NJ
+preplace netloc Net 1 3 3 1940J 870 NJ 870 NJ
+preplace netloc fakernet_start_i2c_write_0 1 2 3 670 1292 NJ 1292 2360
+preplace netloc RST_1 1 0 2 NJ 360 NJ
+preplace netloc fakernet_m00_axi 1 4 1 N 500
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 2410 180n
+preplace netloc led_module_m00_axi 1 3 1 N 80
+preplace netloc led_module_m00_axi1 1 3 1 N 100
+preplace netloc S00_AXI_1 1 3 1 1900 60n
+preplace netloc SAMPA_I2C_wrapper|s_axi_aclk_1 1 0 2 870 1142 1280
+preplace netloc SAMPA_I2C_wrapper|s_axi_aresetn_1 1 0 2 860 1152 N
+preplace netloc SAMPA_I2C_wrapper|m00_axi_aresetn_1 1 0 1 N 1022
+preplace netloc SAMPA_I2C_wrapper|m00_axi_aclk_1 1 0 1 890 1002n
+preplace netloc SAMPA_I2C_wrapper|Net1 1 2 1 1700 902n
+preplace netloc SAMPA_I2C_wrapper|Net 1 2 1 1710 882n
+preplace netloc SAMPA_I2C_wrapper|I2C_iobuf_IOBUF_IO_O1 1 2 1 1690 862n
+preplace netloc SAMPA_I2C_wrapper|axi_iic_0_sda_o 1 1 2 1300 962 1680
+preplace netloc SAMPA_I2C_wrapper|I2C_iobuf_IOBUF_IO_O 1 2 1 1660 842n
+preplace netloc SAMPA_I2C_wrapper|axi_iic_0_sda_t 1 1 2 1280 972 1670
+preplace netloc SAMPA_I2C_wrapper|axi_iic_0_scl_o 1 1 2 1290 952 1650
+preplace netloc SAMPA_I2C_wrapper|axi_iic_0_scl_t 1 1 2 1270 992 1640
+preplace netloc SAMPA_I2C_wrapper|m00_axi_init_axi_txn_1 1 0 1 880 982n
+preplace netloc SAMPA_I2C_wrapper|I2C_Controller_v1_0_0_m01_axi 1 1 1 1290 1002n
+preplace netloc SAMPA_I2C_wrapper|Conn1 1 1 2 N 982 NJ
+levelinfo -pg 1 -10 120 440 980 2164 2510 2630
+levelinfo -hier SAMPA_I2C_wrapper * 1080 1470 *
+pagesize -pg 1 -db -bbox -sgen -150 -20 2800 1310
+pagesize -hier SAMPA_I2C_wrapper -db -bbox -sgen 830 782 1740 1272
 "
 }
 {
-   "da_axi4_cnt":"14",
-   "da_board_cnt":"2",
-   "da_clkrst_cnt":"5"
+   "da_axi4_cnt":"23",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"10"
 }

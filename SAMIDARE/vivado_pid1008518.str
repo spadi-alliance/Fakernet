@@ -1,0 +1,2874 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 1008518
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Aug 02 14:03:25 JST 2024
+Time zone: 	Japan Standard Time (Asia/Tokyo)
+
+OS: Ubuntu
+OS Version: 5.15.0-116-generic
+OS Architecture: amd64
+Available processors (cores): 32
+
+Display: e16fpga01:10.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	nagafusa
+User home directory: /home/nagafusa
+User working directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2022.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/nagafusa/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/nagafusa/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/nagafusa/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.log
+Vivado journal file: 	/home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1008518-e16fpga01
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /opt/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /opt/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@esys-tokai-ls.intra.j-parc.jp
+XILINX_DSP: /opt/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2022.2
+XILINX_VITIS: 
+XILINX_VIVADO: /opt/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,096 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,103 MB. GUI used memory: 58 MB. Current time: 8/2/24, 2:03:26 PM JST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr");
+// Opening Vivado Project: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 85 MB (+86372kb) [00:00:21]
+// [Engine Memory]: 1,188 MB (+1093925kb) [00:00:21]
+// [GUI Memory]: 93 MB (+3919kb) [00:00:21]
+// [Engine Memory]: 1,429 MB (+191061kb) [00:00:22]
+// [GUI Memory]: 103 MB (+6289kb) [00:00:22]
+// [GUI Memory]: 112 MB (+3467kb) [00:00:22]
+// [GUI Memory]: 120 MB (+2495kb) [00:00:22]
+// WARNING: HEventQueue.dispatchEvent() is taking  2173 ms.
+// [GUI Memory]: 132 MB (+5970kb) [00:00:23]
+// Tcl Message: open_project /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  2205 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,486 MB. GUI used memory: 79 MB. Current time: 8/2/24, 2:03:44 PM JST
+// WARNING: HEventQueue.dispatchEvent() is taking  2026 ms.
+// Project name: samidare; location: /home/nagafusa/work/spadi/Fakernet/SAMIDARE; part: xcau15p-sbvb484-1-i
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Open Project"); // bq
+// [Engine Memory]: 1,677 MB (+184501kb) [00:00:30]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 451ms to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,866 MB (+110460kb) [00:00:38]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 28 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: open_bd_design {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Reading block design file </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>... Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1054 ms.
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+// JavaFX intialization before: 1722575062326
+dismissDialog("Open Block Design"); // bq
+// JavaFX initialization after: 1722575063182
+// [GUI Memory]: 145 MB (+7003kb) [00:01:04]
+// WARNING: HTimer (Open addressing views timer) is taking 881ms to process. Increasing delay to 1300 ms.
+// [GUI Memory]: 155 MB (+2761kb) [00:01:05]
+// [GUI Memory]: 172 MB (+9902kb) [00:01:12]
+// Elapsed time: 33 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectButton("CANCEL", "Cancel"); // JButton
+// 'n' command handler elapsed time: 9 seconds
+dismissDialog("Create and Package New IP"); // x
+// Elapsed time: 52 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 432, 198, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // al
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 19 seconds
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "start_i2c_write", true); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceItoN.NewIpWizard_ADD_NEW_INTERFACE, (String) null); // j
+selectButton(PAResourceItoN.NewIpWizard_DELETE_SELECTED_INTERFACE, (String) null); // j
+// Elapsed time: 10 seconds
+selectButton(PAResourceItoN.NewIpWizard_ADD_NEW_INTERFACE, (String) null); // j
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Master", 0); // d
+// Elapsed time: 38 seconds
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_EDIT_IP, "Edit IP"); // a
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 90 seconds
+dismissDialog("Create and Package New IP"); // x
+// Tcl Message: create_peripheral user.org user start_i2c_write 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo 
+// Tcl Message: add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:start_i2c_write:1.0] 
+// Tcl Message: add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:start_i2c_write:1.0] 
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:start_i2c_write:1.0] 
+// Tcl Message: write_peripheral [ipx::find_open_core user.org:user:start_i2c_write:1.0] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 185 MB (+4799kb) [00:04:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  1373 ms.
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name edit_start_i2c_write_v1_0 -directory /home/nagafusa/work/spadi/Fakernet/ip_repo /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0/component.xml 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 1,960 MB (+487kb) [00:04:23]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  1032 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// [GUI Memory]: 199 MB (+5239kb) [00:04:25]
+dismissDialog("Create Peripheral IP"); // bq
+// Tcl Message: current_project samidare 
+// [Engine Memory]: 2,185 MB (+133626kb) [00:04:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,518 MB. GUI used memory: 135 MB. Current time: 8/2/24, 2:07:46 PM JST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: current_project edit_start_i2c_write_v1_0 
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 2,389 MB (+99040kb) [00:04:29]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 950ms to process. Increasing delay to 3000 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v)]", 1); // D
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 530, 100); // ac
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - start_i2c_write", 1); // o
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // T
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Advanced ;  ;  ; false ;  ; ", 1, (String) null, 3, true); // w - Node
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/data/start_i2c_write.mdd -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/data/start_i2c_write.tcl -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/Makefile -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write.h -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write.c -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files drivers/start_i2c_write_v1_0/src/start_i2c_write_selftest.c -of_objects [ipx::get_file_groups xilinx_softwaredriver -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files xgui/start_i2c_write_v1_0.tcl -of_objects [ipx::get_file_groups xilinx_xpgui -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files bd/bd.tcl -of_objects [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]] 
+editTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "true", 1, "Is Include", 3); // w
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceEtoH.FileGroupFacetTable_REFRESH, (String) null); // B
+selectButton(PAResourceEtoH.FileGroupFacetTable_REFRESH, (String) null); // B
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // g
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceOtoP.PackagerStepContentPanel_MESSAGES, "5"); // g
+// Elapsed time: 12 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // T
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // g
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. INFO: [IP_Flow 19-3164] Bus Interface 'M00_AXI': References existing address space 'M00_AXI'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // T
+selectButton((HResource) null, "Package IP_Group"); // v: FALSE
+selectButton((HResource) null, "Package IP_Group"); // v: TRUE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // T
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE, "IP has been modified."); // g
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // T
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - start_i2c_write", 1); // o
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Synthesis ;  ;  ; false ; start_i2c_write_v1_0 ; ", 2, "false", 4, true); // w - Node
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Synthesis ;  ;  ; false ; start_i2c_write_v1_0 ; ", 2, (String) null, 3, true); // w - Node
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogsynthesis -of_objects [ipx::current_core]]] 
+editTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "true", 2, "Is Include", 3); // w
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Simulation ;  ;  ; false ; start_i2c_write_v1_0 ; ", 3, (String) null, 3, true); // w - Node
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_M00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0_S00_AXI.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+// Tcl Message: set_property is_include true [ipx::get_files hdl/start_i2c_write_v1_0.v -of_objects [ipx::get_file_groups xilinx_verilogbehavioralsimulation -of_objects [ipx::current_core]]] 
+editTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "true", 3, "Is Include", 3); // w
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+// [GUI Memory]: 211 MB (+1732kb) [00:06:14]
+// WARNING: updateGUI() is taking  1183 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1184 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "start_i2c_write_v1_0.v", 2); // o
+// Elapsed time: 10 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 231, 423); // ac
+// Elapsed time: 24 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v), start_i2c_write_v1_0_S00_AXI_inst : start_i2c_write_v1_0_S00_AXI (start_i2c_write_v1_0_S00_AXI.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v), start_i2c_write_v1_0_S00_AXI_inst : start_i2c_write_v1_0_S00_AXI (start_i2c_write_v1_0_S00_AXI.v)]", 2, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("start_i2c_write_v1_0_S00_AXI.v", 86, 394); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0_S00_AXI.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "start_i2c_write_v1_0.v", 2); // o
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("start_i2c_write_v1_0.v", 28, 111); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'v'); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 219, 118); // ac
+// Elapsed time: 70 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 132, 323); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 213, 167); // ac
+// Elapsed time: 36 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 433, 128); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'c'); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 102, 234); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'v'); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 409, 185); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'c'); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 358, 83); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'v'); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 322, 95); // ac
+// Elapsed time: 30 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 234, 232); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 838, 295); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 887, 225); // ac
+// Elapsed time: 73 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 278, 444); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'c'); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 372, 396); // ac
+typeControlKey((HResource) null, "start_i2c_write_v1_0.v", 'v'); // ac
+// Elapsed time: 25 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 276, 391); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 285, 376); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 268, 387); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 121, 401); // ac
+selectCodeEditor("start_i2c_write_v1_0.v", 136, 322); // ac
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "start_i2c_write_v1_0_S00_AXI.v", 3); // o
+selectCodeEditor("start_i2c_write_v1_0_S00_AXI.v", 493, 223); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "start_i2c_write_v1_0.v", 2); // o
+// Elapsed time: 22 seconds
+selectCodeEditor("start_i2c_write_v1_0.v", 328, 433); // ac
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 34 seconds
+closeMainWindow("edit_start_i2c_write_v1_0 - [/home/nagafusa/work/spadi/Fakernet/ip_repo/edit_start_i2c_write_v1_0.xpr] - Vivado 2022.2"); // aK
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a
+// 'b' command handler elapsed time: 3 seconds
+dismissDialog("Save Project"); // W.d
+// WARNING: HEventQueue.dispatchEvent() is taking  1203 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - start_i2c_write", 1); // o
+selectButton(PAResourceEtoH.FileGroupFacetTable_REFRESH, (String) null); // B
+selectButton(PAResourceEtoH.FileGroupFacetTable_REFRESH, (String) null); // B
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // T
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // g
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. INFO: [IP_Flow 19-3164] Bus Interface 'M00_AXI': References existing address space 'M00_AXI'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // T
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE, "IP has been modified."); // g
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 107 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, start_i2c_write_v1_0 (start_i2c_write_v1_0.v)]", 1, true); // D - Node
+// Elapsed time: 47 seconds
+closeMainWindow("edit_start_i2c_write_v1_0 - [/home/nagafusa/work/spadi/Fakernet/ip_repo/edit_start_i2c_write_v1_0.xpr] - Vivado 2022.2"); // aK
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: PROJECT_CLOSE
+dismissDialog("Close Project"); // u
+// HMemoryUtils.trashcanNow. Engine heap size: 2,117 MB. GUI used memory: 139 MB. Current time: 8/2/24, 2:20:39 PM JST
+// 'b' command handler elapsed time: 3 seconds
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bq
+// Elapsed time: 55 seconds
+selectTab((HResource) null, (HResource) null, "Design", 1); // aa
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 487, 214, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", (String) null); // OverlayTextField
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Add Module"); // bY
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[top_block, reg_bram]", 9, true, false, false, false, true, false); // a - Popup Trigger - Node
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[top_block, Interface Connections]", 1, true); // a - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v)]", 4, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ao
+dismissFileChooser();
+// Elapsed time: 22 seconds
+selectButton("CANCEL", "Cancel"); // JButton
+// 'f' command handler elapsed time: 36 seconds
+dismissDialog("Add Sources"); // c
+// Elapsed time: 62 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 346, 436, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// Elapsed time: 12 seconds
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", (String) null); // OverlayTextField
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Add Module"); // bY
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+String[] filenames31467 = {"/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0.v", "/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_M00_AXI.v", "/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_S00_AXI.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 11 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_S00_AXI.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_M00_AXI.v} 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 472, 409, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// [Engine Memory]: 2,563 MB (+57532kb) [00:20:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,803 MB. GUI used memory: 134 MB. Current time: 8/2/24, 2:24:06 PM JST
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// HOptionPane Warning: 'Module references are still updating. Please try again after Sources | Hierarchy view is up-to-date. (Add Module)'
+// WARNING: HEventQueue.dispatchEvent() is taking  1101 ms.
+selectButton("OptionPane.button", "OK"); // JButton
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 481, 322, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+// Elapsed time: 204 seconds
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// HOptionPane Warning: 'Module references are still updating. Please try again after Sources | Hierarchy view is up-to-date. (Add Module)'
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_controller_v1_0 (I2C_controller_v1_0.v)]", 9, true); // D - Node
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 441, 385, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1188 ms.
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", "i2"); // OverlayTextField
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_controller_v1_0 (I2C_controller_v1_0.v)", 0); // cb
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_controller_v1_0_S00_AXI_inst : I2C_controller_v1_0_S00_AXI (I2C_controller_v1_0_S00_AXI.v)", 2, true, false, false, false, false); // cb - Shift Key
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_controller_v1_0_M00_AXI_inst : I2C_controller_v1_0_M00_AXI (I2C_controller_v1_0_M00_AXI.v)", 1); // cb
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_controller_v1_0 (I2C_controller_v1_0.v)", 0); // cb
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Add Module"); // bY
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: create_bd_cell -type module -reference I2C_controller_v1_0 I2C_controller_v1_0_0 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'. 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Add Module"); // bq
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins I2C_controller_v1_0_0/m00_axi] [get_bd_intf_pins SAMPA_I2C_wrapper/axi_iic_0/S_AXI] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: move_bd_cells [get_bd_cells SAMPA_I2C_wrapper] [get_bd_cells I2C_controller_v1_0_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets S_AXI1_1] 
+// Elapsed time: 26 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (4 out of 4 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// Tcl Message: startgroup 
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/intercon_wrapper/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI] 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk] 
+// Tcl Message: INFO: [BD 5-455] Automation on '/SAMPA_I2C_wrapper/I2C_controller_v1_0_0/m00_axi_aclk' will not be run, since it is obsolete due to previously run automations 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi} ddr_seg {Auto} intc_ip {/intercon_wrapper/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi/reg0' is being assigned into address space '/led_module/LED_REG_READ_SEPARAT_0/m00_axi' at <0x0000_0000 [ 4K ]>. Slave segment '/SAMPA_I2C_wrapper/I2C_controller_v1_0_0/s00_axi/reg0' is being assigned into address space '/led_module/LED_REG_READ_SEPARAT_1/m00_axi' at <0x0000_0000 [ 4K ]>. 
+// Tcl Message: endgroup 
+dismissDialog("Run Connection Automation"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 2,810 MB. GUI used memory: 136 MB. Current time: 8/2/24, 2:28:41 PM JST
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets SAMPA_I2C_wrapper/I2C_controller_v1_0_0_m00_axi] [get_bd_cells SAMPA_I2C_wrapper/I2C_controller_v1_0_0] 
+// WARNING: HEventQueue.dispatchEvent() is taking  1166 ms.
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 17 seconds
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "I2C_Controller"); // Q
+setText(PAResourceItoN.NewIpWizard_DISPLAY_NAME, "I2C_Controller_v1.0ls", true); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectButton("CANCEL", "Cancel"); // JButton
+// 'n' command handler elapsed time: 29 seconds
+dismissDialog("Create and Package New IP"); // x
+// Elapsed time: 21 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 12 seconds
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "I2C_Controller"); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceItoN.NewIpWizard_ADD_NEW_INTERFACE, (String) null); // j
+selectTree(PAResourceItoN.NewIpWizard_INTERFACES_TREE, "[Interfaces, S00_AXI]", 1, false); // X
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Master", 0); // d
+selectTree(PAResourceItoN.NewIpWizard_INTERFACES_TREE, "[Interfaces, S01_AXI]", 2, false); // X
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Slave", 1); // d
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_EDIT_IP, "Edit IP"); // a
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 33 seconds
+dismissDialog("Create and Package New IP"); // x
+// Tcl Message: create_peripheral user.org user I2C_Controller 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo 
+// Tcl Message: add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:I2C_Controller:1.0] 
+// Tcl Message: add_peripheral_interface M01_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:I2C_Controller:1.0] 
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:I2C_Controller:1.0] 
+// Tcl Message: write_peripheral [ipx::find_open_core user.org:user:I2C_Controller:1.0] 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name edit_I2C_Controller_v1_0 -directory /home/nagafusa/work/spadi/Fakernet/ip_repo /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  1087 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+dismissDialog("Create Peripheral IP"); // bq
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 774ms to process. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_Controller_v1_0 (I2C_Controller_v1_0.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_Controller_v1_0 (I2C_Controller_v1_0.v), I2C_Controller_v1_0_M00_AXI_inst : I2C_Controller_v1_0_M00_AXI (I2C_Controller_v1_0_M00_AXI.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_Controller_v1_0 (I2C_Controller_v1_0.v), I2C_Controller_v1_0_M01_AXI_inst : I2C_Controller_v1_0_M01_AXI (I2C_Controller_v1_0_M01_AXI.v)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_Controller_v1_0 (I2C_Controller_v1_0.v)]", 1, true); // D - Node
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 597, 360, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// WARNING: HEventQueue.dispatchEvent() is taking  1532 ms.
+// [GUI Memory]: 226 MB (+4587kb) [00:28:24]
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 8, true, false, false, false, true, false); // D - Popup Trigger - Node
+// Tcl Message: current_project samidare 
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+String[] filenames16706 = {"/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v", "/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v", "/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 10 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v} 
+// [GUI Memory]: 238 MB (+752kb) [00:28:41]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 48 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 287, 369, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", "i2c"); // OverlayTextField
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_Controller_v1_0 (I2C_Controller_v1_0.v)", 0); // cb
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_Controller_v1_0_M01_AXI_inst : I2C_Controller_v1_0_M01_AXI (I2C_Controller_v1_0_M01_AXI.v)", 2, true, false, false, false, false); // cb - Shift Key
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "I2C_Controller_v1_0 (I2C_Controller_v1_0.v)", 0, true, false, false, false, false); // cb - Shift Key
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Add Module"); // bY
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: create_bd_cell -type module -reference I2C_Controller_v1_0 SAMPA_I2C_wrapper/I2C_Controller_v1_0_0 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Add Module"); // bq
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi] [get_bd_intf_pins SAMPA_I2C_wrapper/axi_iic_0/S_AXI] 
+// Elapsed time: 35 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 3 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI] 
+// Tcl Message: Slave segment '/reg_bram/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi' at <0xC000_0000 [ 64K ]>. 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk] 
+// Tcl Message: INFO: [BD 5-455] Automation on '/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_aclk' will not be run, since it is obsolete due to previously run automations 
+// Tcl Message: endgroup 
+// [Engine Memory]: 2,882 MB (+199771kb) [00:30:29]
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 25 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk]' INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]' INFO: [Common 17-17] undo 'startgroup' 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Command: 'set_property location {5.5 1716 551} [get_bd_cells I2C_Controller_v1_0_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {5.5 1716 551} [get_bd_cells I2C_Controller_v1_0_0] 
+// Elapsed time: 11 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 3 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins I2C_Controller_v1_0_0/m01_axi_aclk] 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI] 
+// Tcl Message: Slave segment '/reg_bram/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/I2C_Controller_v1_0_0/m00_axi' at <0xC000_0000 [ 64K ]>. 
+// Tcl Message: INFO: [BD 5-455] Automation on '/SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk' will not be run, since it is obsolete due to previously run automations 
+// Tcl Message: endgroup 
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 729ms to process. Increasing delay to 4000 ms.
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 22 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_LAYOUT_STATE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'regenerate_bd_layout' 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets led_module_m00_axi] [get_bd_intf_nets led_module_m00_axi1] [get_bd_cells intercon_wrapper] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// HMemoryUtils.trashcanNow. Engine heap size: 2,882 MB. GUI used memory: 156 MB. Current time: 8/2/24, 2:35:06 PM JST
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets led_module_m00_axi] [get_bd_intf_nets led_module_m00_axi1] [get_bd_cells intercon_wrapper]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI]' INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins I2C_Controller_v1_0_0/m01_axi_aclk]' INFO: [Common 17-17] undo 'startgroup' 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets led_module_m00_axi] [get_bd_intf_nets led_module_m00_axi1] [get_bd_cells intercon_wrapper] 
+// WARNING: HEventQueue.dispatchEvent() is taking  1072 ms.
+// Elapsed time: 18 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 3 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins I2C_Controller_v1_0_0/m01_axi_aclk] 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {Auto} Master {/I2C_Controller_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins reg_bram/axi_bram_ctrl_1/S_AXI] 
+// Tcl Message: Slave segment '/reg_bram/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/I2C_Controller_v1_0_0/m00_axi' at <0xC000_0000 [ 64K ]>. 
+// Tcl Message: INFO: [BD 5-455] Automation on '/SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk' will not be run, since it is obsolete due to previously run automations 
+// Tcl Message: endgroup 
+// Elapsed time: 16 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (5 out of 5 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins led_module/LED_REG_READ_SEPARAT_0/m00_axi] 
+// Tcl Message: Slave segment '/SAMPA_I2C_wrapper/axi_iic_0/S_AXI/Reg' is being assigned into address space '/I2C_Controller_v1_0_0/m01_axi' at <0x4080_0000 [ 64K ]>. 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out5 (125 MHz)} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/led_module/LED_REG_READ_SEPARAT_1/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins led_module/LED_REG_READ_SEPARAT_1/m00_axi] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: INFO: [BD 5-455] Automation on '/led_module/m00_axi' will not be run, since it is obsolete due to previously run automations INFO: [BD 5-455] Automation on '/led_module/m00_axi1' will not be run, since it is obsolete due to previously run automations 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_40M/ext_reset_in] 
+// Tcl Message: endgroup 
+dismissDialog("Run Connection Automation"); // bq
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: move_bd_cells [get_bd_cells SAMPA_I2C_wrapper] [get_bd_cells I2C_Controller_v1_0_0] 
+// Elapsed time: 30 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: move_bd_cells [get_bd_cells /] [get_bd_cells SAMPA_I2C_wrapper/I2C_iobuf] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 182 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'move_bd_cells [get_bd_cells /] [get_bd_cells SAMPA_I2C_wrapper/I2C_iobuf]' 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 91 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+// Elapsed time: 50 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 863, 446, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_util_ds_buf_1_0 (top_block_util_ds_buf_1_0.xci)]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+// Elapsed time: 34 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "reg_switch"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 41 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v 
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, (String) null, 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 0, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 0, "Direction", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "false", 0, "Bus", 2); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 0, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 1, (String) null, -1); // x
+// Elapsed time: 12 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; false ; 0 ; 0", 0, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 0, "Direction", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 1, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; false ; 0 ; 0", 0, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 0 ; 0", 0, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr ; input ; false ; 0 ; 0", 1, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 1, "Bus", 2); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 0, "Bus", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr ; input ; true ; 0 ; 0", 1, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "31", 1, "MSB", 3); // x
+// Elapsed time: 905 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 2, (String) null, 0); // x
+// Elapsed time: 11 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write", 2, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 3, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 0, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 0, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i ; input ; true ; 31 ; 0", 1, (String) null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+// Elapsed time: 24 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk", 3, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk ; input ; false ; 0 ; 0", 3, "axi_aclk", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_i", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 0, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 24 ; 0", 0, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 24 ; 0", 0, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 24 ; 0", 0, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 24 ; 0", 0, (String) null, -1); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 3, (String) null, 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_axlk", 3, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_axlk", 3, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk", 3, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn", 4, "Port Name", 0); // x
+// [GUI Memory]: 263 MB (+13085kb) [00:57:11]
+// Elapsed time: 36 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 5, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 6, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 5, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 5, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn", 4, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn", 4, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 5, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 5, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o", 6, "Port Name", 0); // x
+// Elapsed time: 19 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o ; input ; false ; 0 ; 0", 5, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 5, "Direction", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 7, "Direction", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 5, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o ; input ; false ; 0 ; 0", 6, "input", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 6, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; input ; false ; 0 ; 0", 7, "input", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 7, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; output ; false ; 0 ; 0", 7, "regacc_addr_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o", 7, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 8, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; output ; false ; 0 ; 0", 7, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 7, "Bus", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; output ; true ; 0 ; 0", 7, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 8, (String) null, 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+// [GUI Memory]: 286 MB (+11022kb) [00:58:23]
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o", 7, "Port Name", 0); // x
+// Elapsed time: 13 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 8, "Port Name", 0); // x
+// [GUI Memory]: 314 MB (+14440kb) [00:58:37]
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 9, (String) null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; input ; false ; 0 ; 0", 8, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 8, "Direction", 1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "input", 9, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; input ; false ; 0 ; 0", 8, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; input ; true ; 0 ; 0", 8, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 8, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; output ; true ; 0 ; 0", 8, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 9, (String) null, 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 8, "Port Name", 0); // x
+// Elapsed time: 12 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o ; input ; false ; 0 ; 0", 9, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 9, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o ; output ; false ; 0 ; 0", 9, "false", 2); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 9, "Bus", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o ; output ; true ; 0 ; 0", 9, "true", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o ; output ; false ; 0 ; 0", 9, "regacc_write_o", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o", 9, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 10, (String) null, 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 10, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 10, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; output ; false ; 0 ; 0", 10, (String) null, 0); // x
+// [GUI Memory]: 359 MB (+30094kb) [00:59:10]
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o", 10, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 11, (String) null, 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i ; input ; false ; 0 ; 0", 2, "regacc_write_i", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_DOWN, "Move Down"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk", 2, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 11, (String) null, 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 2, "Port Name", 0); // x
+// [GUI Memory]: 389 MB (+13131kb) [00:59:34]
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o", 11, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+// [GUI Memory]: 443 MB (+35444kb) [01:00:02]
+// Elapsed time: 22 seconds
+selectTableHeader(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "Direction", 1); // x
+// Elapsed time: 29 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk ; input ; false ; 0 ; 0", 4, "axi_aclk", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aclk", 4, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn ; input ; false ; 0 ; 0", 5, "axi_aresetn", 0, false, true, false, false, false); // x - Control Key
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn", 5, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_i", 5, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i ; input ; true ; 24 ; 0", 2, "regacc_addr_i", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 2, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "axi_aresetn", 1, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_i", 2, "Port Name", 0); // x
+// Elapsed time: 10 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i ; input ; false ; 0 ; 0", 4, "regacc_write_i", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 4, "Port Name", 0); // x
+// [GUI Memory]: 499 MB (+35957kb) [01:00:53]
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o ; output ; false ; 0 ; 0", 10, "regacc_write_o", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 10, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o ; output ; false ; 0 ; 0", 11, "regacc_read_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o", 11, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_o", 5, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_i ; input ; false ; 0 ; 0", 7, "regacc_read_i", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_i", 7, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o", 6, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_read_o", 7, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; output ; true ; 24 ; 0", 10, "regacc_addr_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o", 10, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; output ; true ; 31 ; 0", 11, "regacc_data_wr_o", 0, true, false, false, false, false); // x - Shift Key
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 11, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o", 11, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+// [GUI Memory]: 545 MB (+21538kb) [01:01:14]
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o ; output ; true ; 24 ; 0", 5, "regacc_addr_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o", 5, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 6, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 5, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_DOWN, "Move Down"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; output ; true ; 31 ; 0", 6, "regacc_data_wr_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 6, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_addr_o", 3, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; output ; true ; 31 ; 0", 5, "regacc_data_wr_o", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_DOWN, "Move Down"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 5, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o ; output ; true ; 31 ; 0", 6, "regacc_data_wr_o", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_write_i", 6, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o ; output ; false ; 0 ; 0", 10, "regacc_data_rd_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 10, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_wr_o", 5, "Port Name", 0); // x
+// [GUI Memory]: 581 MB (+9443kb) [01:01:35]
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 10, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o ; output ; false ; 0 ; 0", 10, "regacc_data_rd_o", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 10, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 12, (String) null, 0); // x
+// HMemoryUtils.trashcanNow. Engine heap size: 2,915 MB. GUI used memory: 513 MB. Current time: 8/2/24, 3:05:11 PM JST
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_i ; input ; false ; 0 ; 0", 12, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_i ; input ; true ; 0 ; 0", 12, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o ; output ; false ; 0 ; 0", 10, "false", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 10, "Bus", 2); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "true", 12, "Bus", 2); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o ; output ; true ; 0 ; 0", 10, "0", 3); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_i ; input ; true ; 31 ; 0", 12, "regacc_data_rd_i", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_i", 12, "Port Name", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_o", 10, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o", 12, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o ; output ; false ; 0 ; 0", 12, "regacc_done_o", 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o", 12, "Port Name", 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_data_rd_i", 10, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 13, (String) null, 0); // x
+selectButton(RDIResource.AbstractCombinedPanel_MOVE_SELECTED_ELEMENT_UP, "Move Up"); // B
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_o", 13, "Port Name", 0); // x
+// [GUI Memory]: 616 MB (+6678kb) [01:02:22]
+// Elapsed time: 22 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 14, (String) null, 0); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "regacc_done_i", 12, "Port Name", 0); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 14, "input", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // x
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "output", 14, "Direction", 1); // x
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; output ; false ; 0 ; 0", 14, (String) null, 0); // x
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "start_i2c_write", 14, "Port Name", 0); // x
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// [Engine Memory]: 3,109 MB (+87023kb) [01:02:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,485 MB. GUI used memory: 565 MB. Current time: 8/2/24, 3:06:11 PM JST
+// [Engine Memory]: 3,643 MB (+397213kb) [01:02:53]
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 835, 148, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// HOptionPane Warning: 'Module references are still updating. Please try again after Sources | Hierarchy view is up-to-date. (Add Module)'
+// WARNING: HEventQueue.dispatchEvent() is taking  1192 ms.
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 723, 152, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// HOptionPane Warning: 'Module references are still updating. Please try again after Sources | Hierarchy view is up-to-date. (Add Module)'
+// WARNING: HEventQueue.dispatchEvent() is taking  1133 ms.
+selectButton("OptionPane.button", "OK"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 3,721 MB. GUI used memory: 562 MB. Current time: 8/2/24, 3:06:31 PM JST
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 624, 131, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+// Elapsed time: 70 seconds
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 684, 147, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 859, 60, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1239 ms.
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", "reg"); // OverlayTextField
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "reg_switch (reg_switch.v)", 7); // cb
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Add Module"); // bY
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: create_bd_cell -type module -reference reg_switch fakernet/reg_switch_0 
+// Tcl Message: INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-4728] Bus Interface 'axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'. INFO: [IP_Flow 19-4728] Bus Interface 'axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'axi_aresetn'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Add Module"); // bq
+// Tcl Command: 'set_property location {6 2195 560} [get_bd_cells fakernet/native_to_axi_lite_v_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {6 2195 560} [get_bd_cells fakernet/native_to_axi_lite_v_0] 
+// Tcl Command: 'set_property location {6.5 2664 504} [get_bd_cells fakernet/native_to_axi_lite_v_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {6.5 2664 504} [get_bd_cells fakernet/native_to_axi_lite_v_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_addr_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_addr_o] [get_bd_pins fakernet/reg_switch_0/regacc_addr_i] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_addr_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_addr] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_data_wr_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_write_o] [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_i] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 62 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_write_o] [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_i]' 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_data_wr_o] [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_i] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_wr_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_data_wr] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_write_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_i] [get_bd_pins fakernet/fakernet_top_0/regacc_write_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_write] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_write_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/m00_axi_init_axi_txn] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/fakernet_top_0_regacc_read_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/fakernet_top_0/regacc_read_o] [get_bd_pins fakernet/reg_switch_0/regacc_read_i] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_read_o] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_read] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/native_to_axi_lite_v_0_regacc_data_rd] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_rd_o] [get_bd_pins fakernet/fakernet_top_0/regacc_data_rd_i] 
+// Tcl Message: endgroup 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_data_rd_i] [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_data_rd] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet/native_to_axi_lite_v_0_regacc_done] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/native_to_axi_lite_v_0/regacc_done] [get_bd_pins fakernet/reg_switch_0/regacc_done_i] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/regacc_done] [get_bd_pins fakernet/reg_switch_0/regacc_done_o] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/reg_switch_0/regacc_done_o] [get_bd_pins fakernet/fakernet_top_0/regacc_done_i] 
+// Elapsed time: 197 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 548, 172, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ao
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins fakernet/reg_switch_0/start_i2c_write] 
+// Tcl Message: endgroup 
+// Elapsed time: 11 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fakernet/reg_switch_0/axi_aclk] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fakernet/reg_switch_0/axi_aclk]' 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/clk_in_0] [get_bd_pins fakernet/reg_switch_0/axi_aclk] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/m00_axi_aresetn] [get_bd_pins fakernet/reg_switch_0/axi_aresetn] 
+// Elapsed time: 55 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout -hierarchy [get_bd_cells fakernet]'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout -hierarchy [get_bd_cells fakernet] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 23 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets fakernet_start_i2c_write_0] [get_bd_ports start_i2c_write_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize Module Reference"); // m
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 257, 112, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 249, 111, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: connect_bd_net [get_bd_pins fakernet/start_i2c_write_0] [get_bd_pins SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn] 
+// Elapsed time: 24 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 528 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,834 MB. GUI used memory: 196 MB. Current time: 8/2/24, 3:36:31 PM JST
+// Elapsed time: 776 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 200, 144, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 224 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 46, 114, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_INTERFACE_PORT, "Create Interface Port..."); // ao
+setText(PAResourceAtoD.CreateRSBInterfaceDialog_INTERFACE_NAME, (String) null); // Q
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Create Interface Port"); // az
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 153, 140, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_INTERFACE_PORT, "Create Interface Port..."); // ao
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBInterfaceDialog_INTERFACE_NAME, "iic", true); // Q
+// HOptionPane Warning: 'Please select a valid VLNV for the new interface port (Vivado)'
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "OK"); // JButton
+setText(PAResourceAtoD.CreateRSBInterfaceDialog_INTERFACE_NAME, (String) null); // Q
+setText("PAResourceAtoD.CreateRSBInterfaceDialog_TABLE_SEARCH_FIELD", "iic"); // OverlayTextField
+selectTable(PAResourceAtoD.CreateRSBInterfaceDialog_TABLE, "xilinx.com:interface:iic_rtl:1.0 ; IIC Interface", 0, "xilinx.com:interface:iic_rtl:1.0", 0); // aD
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// HOptionPane Warning: 'Please enter a valid interface name (Vivado)'
+selectButton("OptionPane.button", "OK"); // JButton
+setText(PAResourceAtoD.CreateRSBInterfaceDialog_INTERFACE_NAME, "SAMPA_I2C", true); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Interface Port"); // az
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 SAMPA_I2C 
+dismissDialog("Create Interface Port"); // bq
+// Tcl Command: 'set_property location {1978 581} [get_bd_intf_ports SAMPA_I2C]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1978 581} [get_bd_intf_ports SAMPA_I2C] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Elapsed time: 18 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g
+// Tcl Command: 'set_property location {1964 815} [get_bd_intf_ports SAMPA_I2C]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1964 815} [get_bd_intf_ports SAMPA_I2C] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_ports SAMPA_I2C] 
+// Elapsed time: 19 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1002, 362, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_INTERFACE_PORT, "Create Interface Port..."); // ao
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Create Interface Port"); // az
+// Elapsed time: 108 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 236, 146, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "RST"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Reset", 1); // d
+// Elapsed time: 63 seconds
+selectRadioButton(PAResourceAtoD.CreateRSBPortDialog_ACTIVE_LOW, "Active Low"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I -type rst RST 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {2 409 246} [get_bd_cells vio]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 409 246} [get_bd_cells vio] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 290, 136, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 501, 100, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Sub-block Properties..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+setText(PAResourceQtoS.RSBBlockPropPanels_NAME, "reset", true); // Q
+// Tcl Command: 'set_property name reset [get_bd_cells vio]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name reset [get_bd_cells vio] 
+// Tcl Message: INFO: [BD 5-866] Updated PFM.CLOCK attribute on /clk_wiz_0, replaced old name /vio with new name /reset 
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 372, 352, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 139 seconds
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // al
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ao
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "xpm"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "xpm_cdc", 0, "xpm_cdc", 0, false); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "xpm_cdc", 0, "xpm_cdc", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xpm_cdc_gen:1.0 xpm_cdc_gen_0 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {2 397 -27} [get_bd_cells xpm_cdc_gen_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 397 -27} [get_bd_cells xpm_cdc_gen_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 25 seconds
+selectComboBox("CDC Type (CDC_TYPE)", "Asynchronous Reset synchronizer", 1); // D
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: set_property CONFIG.CDC_TYPE {xpm_cdc_async_rst} [get_bd_cells xpm_cdc_gen_0] 
+// Tcl Message: xpm_cdc_async_rst  *****  2 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// WARNING: HEventQueue.dispatchEvent() is taking  1102 ms.
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+dismissDialog("Customize IP"); // bq
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets reset/reset_rtl_0_1] [get_bd_cells reset/vio_1] 
+// Tcl Command: 'set_property location {23 153} [get_bd_ports RST]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {23 153} [get_bd_ports RST] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports RST] [get_bd_pins xpm_cdc_gen_0/src_arst] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: move_bd_cells [get_bd_cells reset] [get_bd_cells xpm_cdc_gen_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins reset/slowest_sync_clk] [get_bd_pins reset/xpm_cdc_gen_0/dest_clk] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins reset/xpm_cdc_gen_0/dest_arst] [get_bd_pins reset/rst_clk_wiz_0_125M/ext_reset_in] 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 31 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins reset/xpm_cdc_gen_0/dest_arst] [get_bd_pins reset/rst_clk_wiz_0_125M/ext_reset_in]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins reset/slowest_sync_clk] [get_bd_pins reset/xpm_cdc_gen_0/dest_clk]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'move_bd_cells [get_bd_cells reset] [get_bd_cells xpm_cdc_gen_0]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'connect_bd_net [get_bd_ports RST] [get_bd_pins xpm_cdc_gen_0/src_arst]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property location {23 153} [get_bd_ports RST]' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets reset/reset_rtl_0_1] [get_bd_cells reset/vio_1]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_nets reset/reset_rtl_0_1] [get_bd_cells reset/vio_1]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'set_property location {23 153} [get_bd_ports RST]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'connect_bd_net [get_bd_ports RST] [get_bd_pins xpm_cdc_gen_0/src_arst]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'move_bd_cells [get_bd_cells reset] [get_bd_cells xpm_cdc_gen_0]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'connect_bd_net [get_bd_pins reset/slowest_sync_clk] [get_bd_pins reset/xpm_cdc_gen_0/dest_clk]' 
+// Run Command: RDIResourceCommand.RDICommands_REDO
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: redo 
+// Tcl Message: INFO: [Common 17-16] redo 'connect_bd_net [get_bd_pins reset/xpm_cdc_gen_0/dest_arst] [get_bd_pins reset/rst_clk_wiz_0_125M/ext_reset_in]' 
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 39 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 16 seconds
+selectComboBox("CDC Type (CDC_TYPE)", "Bus Synchronizer with Full Handshake", 3); // D
+selectComboBox("CDC Type (CDC_TYPE)", "Pulse Transfer", 4); // D
+selectComboBox("CDC Type (CDC_TYPE)", "Synchronous Reset Synchronizer", 6); // D
+selectComboBox("CDC Type (CDC_TYPE)", "Single-bit Synchronizer", 5); // D
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+// Elapsed time: 11 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 723 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 337, 39, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 283, 78, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 292, 57, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 42 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 2,715 MB. GUI used memory: 160 MB. Current time: 8/2/24, 4:06:31 PM JST
+// Elapsed time: 916 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 341, 115, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1361 ms.
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Add Module"); // bY
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_axi_iic_0_0 (top_block_axi_iic_0_0.xci)]", 5, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("CANCEL", "Cancel"); // JButton
+// 'f' command handler elapsed time: 4 seconds
+dismissDialog("Add Sources"); // c
+// Elapsed time: 119 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 17); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 18); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 20, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 20, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Map", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTreeTableHeader(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "Enabled", 1); // g
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; false ;  ;  ; ", 1, "false", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "true", 1, "Enabled", 1); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, "true", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "false", 1, "Enabled", 1); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; false ;  ;  ; ", 1, "false", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "true", 1, "Enabled", 1); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, "true", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "false", 1, "Enabled", 1); // g
+collapseTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "axi_mem_intercon ;  ;  ;  ; ", 0); // g
+expandTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "axi_mem_intercon ;  ;  ;  ; ", 0); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "axi_mem_intercon ;  ;  ;  ; ", 0, "axi_mem_intercon", 0, true); // g - Node
+collapseTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "axi_mem_intercon ;  ;  ;  ; ", 0); // g
+expandTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "axi_mem_intercon ;  ;  ;  ; ", 0); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; false ;  ;  ; ", 1, "false", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "true", 1, "Enabled", 1); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, "M_AXI_GP", 2, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, (String) null, 3, false); // g
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, (String) null, 3, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, (String) null, 4, false); // g
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, "M_AXI_GP", 2, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "NONE", 1, "Memport", 2); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; NONE ;  ; ", 1, "NONE", 2, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "M_AXI_GP", 1, "Memport", 2); // g
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; true ; M_AXI_GP ;  ; ", 1, "S03_AXI", 0, false, false, false, false, true, false); // g - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_DISABLE, "Disable"); // ao
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {} [get_bd_cells /axi_mem_intercon] 
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "S03_AXI ; false ;  ;  ; ", 1, "S03_AXI", 0, false, false, false, false, true, false); // g - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ENABLE, "Enable"); // ao
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+selectTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "M01_AXI ; false ;  ;  ; ", 14, "false", 1, false); // g
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property PFM.AXI_PORT {S03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M01_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_mem_intercon] 
+editTreeTable(PAResourceOtoP.PlatformInterfacesTablePanel_PLATFORM_INTERFACES_TABLE, "true", 14, "Enabled", 1); // g
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Elapsed time: 18 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 62, 52, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "External Port Properties..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SOP", true); // Q
+// Tcl Command: 'set_property name SOP [get_bd_ports SO]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SOP [get_bd_ports SO] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 138, 56, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SON"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SON 
+// Elapsed time: 96 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Map", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main_io.xdc", 4); // o
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Elapsed time: 11 seconds
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SO1P"); // Q
+// Tcl Command: 'set_property name SO1P [get_bd_ports SOP]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SO1P [get_bd_ports SOP] 
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "SO1N", true); // Q
+// Tcl Command: 'set_property name SO1N [get_bd_ports SON]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name SO1N [get_bd_ports SON] 
+// Run Command: RDIResourceCommand.RDICommands_COPY
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 64, 78, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1023 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO0N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO0N 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 106, 90, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1168 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO0P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10", true); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO0P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 143, 72, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1142 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO2N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO2N 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 183, 98, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1277 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO2P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO2P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 228, 63, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1179 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO3N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO3N 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 176, 88, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+dismissDialog("Create Port"); // bq
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1239 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SO3P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_TYPE, "Data", 3); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "10", true); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 10 -to 0 -type data SO3P 
+// Tcl Command: 'set_property location {-32 58} [get_bd_ports SO1N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-32 58} [get_bd_ports SO1N] 
+// Tcl Command: 'set_property location {-23 82} [get_bd_ports SO0P]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-23 82} [get_bd_ports SO0P] 
+// Tcl Command: 'set_property location {-21 47} [get_bd_ports SO1N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-21 47} [get_bd_ports SO1N] 
+// Tcl Command: 'set_property location {-25 46} [get_bd_ports SO1N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-25 46} [get_bd_ports SO1N] 
+// Tcl Command: 'set_property location {-21 42} [get_bd_ports SO1N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-21 42} [get_bd_ports SO1N] 
+// Tcl Command: 'set_property location {-23 65} [get_bd_ports SO1P]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-23 65} [get_bd_ports SO1P] 
+// Tcl Command: 'set_property location {-31 23} [get_bd_ports SO0P]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-31 23} [get_bd_ports SO0P] 
+// Tcl Command: 'set_property location {-23 81} [get_bd_ports SO2N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-23 81} [get_bd_ports SO2N] 
+// Tcl Command: 'set_property location {-21 127} [get_bd_ports SO3N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-21 127} [get_bd_ports SO3N] 
+// Tcl Command: 'set_property location {-22 105} [get_bd_ports SO2P]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-22 105} [get_bd_ports SO2P] 
+// Tcl Command: 'set_property location {-21 122} [get_bd_ports SO3N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-21 122} [get_bd_ports SO3N] 
+// Tcl Command: 'set_property location {-22 144} [get_bd_ports SO3P]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {-22 144} [get_bd_ports SO3P] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 99 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "XPM"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "xpm_cdc", 0, "xpm_cdc", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "xpm_cdc", 0); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "xpm_cdc", 0, "xpm_cdc", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xpm_cdc_gen:1.0 xpm_cdc_gen_0 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 20 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 563, 133, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells xpm_cdc_gen_0] 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+// Elapsed time: 31 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "dif"); // OverlayTextField
+// Elapsed time: 14 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 974, 384, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// Elapsed time: 11 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "HB_TRG_P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O HB_TRG_P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1077, 376, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1158 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "HB_TRG_N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O HB_TRG_N 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1071, 426, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_P0"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O TRG_P0 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1102, 444, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_N0"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O TRG_N0 
+dismissDialog("Create Port"); // bq
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1106, 422, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// Elapsed time: 11 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_P1"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O TRG_P1 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1086, 425, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1133 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_N1"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O TRG_N1 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1109, 416, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+dismissDialog("Create Port"); // bq
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1022 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_P2"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O TRG_P2 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1102, 416, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_N2"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I TRG_N2 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1133, 413, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_ports TRG_N1] [get_bd_ports TRG_N0] [get_bd_ports TRG_P2] [get_bd_ports TRG_P0] [get_bd_ports TRG_P1] 
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main_io.xdc", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1104, 421, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 TRG_P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1078, 443, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports TRG_N2] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1111, 451, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1207 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "TRG_N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 TRG_N 
+// Tcl Command: 'set_property location {2714 1148} [get_bd_ports TRG_N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2714 1148} [get_bd_ports TRG_N] 
+// Tcl Command: 'set_property location {2710 1139} [get_bd_ports TRG_N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2710 1139} [get_bd_ports TRG_N] 
+// Elapsed time: 12 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1054, 392, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1175 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "HRSTB_P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 HRSTB_P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1088, 339, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "HRSTB_N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 HRSTB_N 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,822 MB. GUI used memory: 164 MB. Current time: 8/2/24, 4:36:31 PM JST
+// Elapsed time: 28 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1073, 243, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1027 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "CLKSOIN_P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 CLKSOIN_P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1101, 296, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1203 ms.
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "CLKSOIN_N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O -from 3 -to 0 CLKSOIN_N 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 12 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1132, 146, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  1196 ms.
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "BX_SYNC_TRG_P"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O BX_SYNC_TRG_P 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1116, 235, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "BX_SYNC_TRG_N"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I BX_SYNC_TRG_N 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 61, 238, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "External Port Properties..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// TclEventType: RSB_CANVAS_LOCATION
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "DIR ; I", 1, "I", 1, false); // k
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "DIR ; I", 1, "I", 1, false); // k
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "DIR ; I", 1); // k
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "DIR ; I", 1, "I", 1, false, false, false, false, false, true); // k - Double Click
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "DIR ; I", 1, "I", 1, false); // k
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: delete_bd_objs [get_bd_ports BX_SYNC_TRG_N] 
+// TclEventType: RSB_CANVAS_LOCATION
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1081, 254, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "BX_SYNC_TRG_N"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir O BX_SYNC_TRG_N 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Command: 'set_property location {2630 360} [get_bd_ports BX_SYNC_TRG_N]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2630 360} [get_bd_ports BX_SYNC_TRG_N] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// TclEventType: RSB_CANVAS_LOCATION
+// Elapsed time: 273 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 186 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 338, 179, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "DIP_SW"); // Q
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "3"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // aL
+// Tcl Message: create_bd_port -dir I -from 3 -to 0 DIP_SW 
+// TclEventType: RSB_CANVAS_LOCATION
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 82, 180, 1165, 530, false, false, false, true, false); // fK - Popup Trigger
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "TYPE ; undef", 8, "undef", 1, false); // k
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "TYPE ; undef", 8, "undef", 1, false, false, false, false, false, true); // k - Double Click
+selectView(PAResourceOtoP.PAViews_TCL_OBJECT_VIEW, "Tcl Object View", 75, 75, 410, 150, false, false, false, true, false); // t - Popup Trigger
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // g
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // g
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main_io.xdc", 4); // o
+// Elapsed time: 102 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Map", 3); // o
+// WARNING: HEventQueue.dispatchEvent() is taking  1112 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 2,823 MB. GUI used memory: 164 MB. Current time: 8/2/24, 5:06:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,825 MB. GUI used memory: 161 MB. Current time: 8/2/24, 5:36:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,818 MB. GUI used memory: 158 MB. Current time: 8/2/24, 6:06:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,818 MB. GUI used memory: 158 MB. Current time: 8/2/24, 6:36:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,818 MB. GUI used memory: 158 MB. Current time: 8/2/24, 7:06:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,823 MB. GUI used memory: 158 MB. Current time: 8/2/24, 7:36:31 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,823 MB. GUI used memory: 158 MB. Current time: 8/2/24, 8:06:31 PM JST
+// WARNING: HEventQueue.dispatchEvent() is taking  1096 ms.
