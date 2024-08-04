@@ -2,26 +2,42 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Jul  8 10:45:24 2024
-# Process ID: 3628259
+# Start of session at: Sun Aug  4 20:35:49 2024
+# Process ID: 2058430
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1
 # Command line: vivado -log top_block_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_block_wrapper.tcl -notrace
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.vdi
 # Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/vivado.jou
-# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 5743.410 MHz, CPU Physical cores: 32, Host memory: 66513 MB
 #-----------------------------------------------------------
 source top_block_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
 Command: link_design -top top_block_wrapper -part xcau15p-sbvb484-1-i
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.dcp' for cell 'top_block_i/clk_wiz_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_data_gen_user_0_0/top_block_data_gen_user_0_0.dcp' for cell 'top_block_i/data_gen_user_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.dcp' for cell 'top_block_i/rst_clk_wiz_0_40M'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_1/top_block_xbar_1.dcp' for cell 'top_block_i/axi_mem_intercon/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_RESET_INST_0_0/top_block_RESET_INST_0_0.dcp' for cell 'top_block_i/fakernet/RESET_INST_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.dcp' for cell 'top_block_i/fakernet/fakernet_top_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_gig_ethernet_pcs_pma_0_0/top_block_gig_ethernet_pcs_pma_0_0.dcp' for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.dcp' for cell 'top_block_i/fakernet/mii_initializer_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_native_to_axi_lite_v_0_0/top_block_native_to_axi_lite_v_0_0.dcp' for cell 'top_block_i/fakernet/native_to_axi_lite_v_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.dcp' for cell 'top_block_i/fakernet/reg_switch_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_0/top_block_util_vector_logic_0_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_1_0/top_block_util_vector_logic_1_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_2_0/top_block_util_vector_logic_2_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_2'
@@ -30,13 +46,6 @@ INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Faker
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_1_2/top_block_util_vector_logic_1_2.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_2_1/top_block_util_vector_logic_2_1.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_2'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_3_0/top_block_util_vector_logic_3_0.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_3'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_0/top_block_xbar_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/xbar'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_data_fifo_0/top_block_m00_data_fifo_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_data_fifo'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_regslice_0/top_block_m00_regslice_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_regslice'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_data_fifo_0/top_block_s00_data_fifo_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_data_fifo'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_regslice_0/top_block_s00_regslice_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_regslice'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0/top_block_s01_data_fifo_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_data_fifo'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_regslice_0/top_block_s01_regslice_0.dcp' for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_regslice'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_0_0/top_block_LED_REG_READ_SEPARAT_0_0.dcp' for cell 'top_block_i/led_module/LED_REG_READ_SEPARAT_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_1_0/top_block_LED_REG_READ_SEPARAT_1_0.dcp' for cell 'top_block_i/led_module/LED_REG_READ_SEPARAT_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.dcp' for cell 'top_block_i/led_module/u_led_inst_0'
@@ -44,12 +53,12 @@ INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Faker
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_0_0/top_block_axi_bram_ctrl_0_0.dcp' for cell 'top_block_i/reg_bram/axi_bram_ctrl_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_1_0/top_block_axi_bram_ctrl_1_0.dcp' for cell 'top_block_i/reg_bram/axi_bram_ctrl_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_blk_mem_gen_0_0/top_block_blk_mem_gen_0_0.dcp' for cell 'top_block_i/reg_bram/blk_mem_gen_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.dcp' for cell 'top_block_i/vio/rst_clk_wiz_0_125M'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.dcp' for cell 'top_block_i/vio/vio_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1.dcp' for cell 'top_block_i/vio/vio_1'
-INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/.Xil/Vivado-3628259-e16fpga01/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.dcp' for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i'
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1933.750 ; gain = 0.000 ; free physical = 18629 ; free virtual = 43510
-INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.dcp' for cell 'top_block_i/reset/rst_clk_wiz_0_125M'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.dcp' for cell 'top_block_i/reset/vio_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_0/top_block_xpm_cdc_gen_0_0.dcp' for cell 'top_block_i/reset/xpm_cdc_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/.Xil/Vivado-2058430-e16fpga01/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.dcp' for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i'
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1930.180 ; gain = 0.000 ; free physical = 43684 ; free virtual = 60636
+INFO: [Netlist 29-17] Analyzing 246 Unisim elements for replacement
 CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
 Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
 Convert at least one of them to synchronous signal, or get rid of at least one of those.
@@ -73,8 +82,7 @@ Often, the use of "initial" value will help you get rid of one of the asynchrono
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Chipscope 16-324] Core: top_block_i/vio/vio_0 UUID: 209d22e7-c060-5a0d-b782-fad813df5ffd 
-INFO: [Chipscope 16-324] Core: top_block_i/vio/vio_1 UUID: cf10a2f6-0d4b-5095-a764-2cfc7e0d677f 
+INFO: [Chipscope 16-324] Core: top_block_i/reset/vio_0 UUID: 499384b9-f309-5737-b91f-db55ccc11929 
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst'
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst'
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_board.xdc] for cell 'top_block_i/clk_wiz_0/inst'
@@ -83,14 +91,20 @@ Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sourc
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc:57]
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc] for cell 'top_block_i/clk_wiz_0/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/vio/vio_0'
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/vio/vio_0'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1.xdc] for cell 'top_block_i/vio/vio_1'
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1.xdc] for cell 'top_block_i/vio/vio_1'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/vio/rst_clk_wiz_0_125M/U0'
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/vio/rst_clk_wiz_0_125M/U0'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/vio/rst_clk_wiz_0_125M/U0'
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/vio/rst_clk_wiz_0_125M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/reset/vio_0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/reset/vio_0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_board.xdc] for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_board.xdc] for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0'
+CRITICAL WARNING: [Designutils 20-1275] Could not find cell 'U0' within module 'top_block_util_ds_buf_1_0' for instance 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1'. The XDC file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0_board.xdc will not be read for this cell.
+CRITICAL WARNING: [Designutils 20-1275] Could not find cell 'U0' within module 'top_block_util_ds_buf_0_0' for instance 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0'. The XDC file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0_board.xdc will not be read for this cell.
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3_board.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3_board.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0_board.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0_board.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0_clocks.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
@@ -99,334 +113,153 @@ Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/cons
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/GTH.xdc]
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc]
 WARNING: [Constraints 18-619] A clock with name 'BASECLK' already exists, overwriting the previous clock with the same name. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'SO0N[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:56]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:58]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:59]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:69]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:70]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:79]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:79]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:80]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:80]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:81]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:81]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:82]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:83]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:83]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:84]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:84]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:85]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:86]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:87]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:88]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:89]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:90]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:91]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:92]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:93]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:94]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:95]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:96]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:96]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:97]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:98]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:99]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:99]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:100]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:104]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:104]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:105]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:105]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:106]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:106]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:107]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:107]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:108]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:108]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:109]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:109]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:110]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:110]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:111]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:111]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:112]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:112]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:113]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:113]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:114]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:114]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:115]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:115]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:116]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:116]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:117]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:118]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[7]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:119]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:119]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:120]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:120]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[8]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:121]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:121]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:122]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:122]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[9]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:123]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:123]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:124]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:124]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[10]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:125]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:125]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0N[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:127]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:127]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO0P[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:128]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:128]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1N[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:129]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:129]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO1P[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:130]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:130]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2N[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:131]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:131]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO2P[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:132]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:132]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3N[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:133]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:133]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SO3P[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:134]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:134]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'HBTRG_N'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:139]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:139]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'HBTRG_P'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:140]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:140]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'BX_SYNC_TRG_N'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:141]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:141]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'BX_SYNC_TRG_P'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:142]
-INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:142]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'BX_SYNC_TRG_N'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:170]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'SFP1RXN[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1RXP[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1TXN[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1TXP[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1RXP[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:228]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:228]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1RXN[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:229]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:229]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1TXP[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SFP1TXN[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:231]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PUSH_SW'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PUSH_SW'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:242]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PROGBON'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:245]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:245]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PROGBON'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:246]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:246]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SAMPA_EN_D'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:250]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:250]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SAMPA_EN_A'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SAMPA_EN_*'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SAMPA_EN_A'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:253]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:253]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SAMPA_EN_D'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:254]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:254]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:265]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:265]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:266]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:266]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:267]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:267]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:268]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:268]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:269]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:269]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP0_CS'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP0_SK'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP0_DI'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:275]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:275]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP0_DO'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:276]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:276]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP0_*'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:277]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:277]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP1_SCL'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:280]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:280]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP1_SDA'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:281]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:281]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'EEP1_*'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:282]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:282]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'POL'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:295]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:295]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CTS'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:296]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:296]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:297]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:297]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:298]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:298]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[0]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:299]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:299]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[1]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:300]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:300]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[2]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:301]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:301]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[3]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:302]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:302]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[4]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:303]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:303]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[5]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:304]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:304]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[6]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:305]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:305]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'POL'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:306]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:306]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CTS'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:307]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:307]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:308]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:308]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK_CFG[*]'. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:309]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:309]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc]
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc]
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc]
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_regslice_0/top_block_s00_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_regslice/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_regslice_0/top_block_s00_regslice_0_clocks.xdc:10]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_regslice_0/top_block_s00_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_regslice/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_data_fifo_0/top_block_s00_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_data_fifo/inst'
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_data_fifo_0/top_block_s00_data_fifo_0_clocks.xdc:2]
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_data_fifo_0/top_block_s00_data_fifo_0_clocks.xdc:6]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s00_data_fifo_0/top_block_s00_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s00_couplers/s00_data_fifo/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_regslice_0/top_block_s01_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_regslice/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_regslice_0/top_block_s01_regslice_0_clocks.xdc:10]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_regslice_0/top_block_s01_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_regslice/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0/top_block_s01_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_data_fifo/inst'
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0/top_block_s01_data_fifo_0_clocks.xdc:2]
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0/top_block_s01_data_fifo_0_clocks.xdc:6]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_s01_data_fifo_0/top_block_s01_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/s01_couplers/s01_data_fifo/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_data_fifo_0/top_block_m00_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_data_fifo/inst'
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_data_fifo_0/top_block_m00_data_fifo_0_clocks.xdc:2]
-WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_data_fifo_0/top_block_m00_data_fifo_0_clocks.xdc:6]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_data_fifo_0/top_block_m00_data_fifo_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_data_fifo/inst'
-Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_regslice_0/top_block_m00_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_regslice/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_regslice_0/top_block_m00_regslice_0_clocks.xdc:10]
-Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_m00_regslice_0/top_block_m00_regslice_0_clocks.xdc] for cell 'top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_regslice/inst'
 Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
 Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
@@ -444,19 +277,19 @@ INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Project 1-1687] 40 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2416.988 ; gain = 0.000 ; free physical = 18395 ; free virtual = 43277
+INFO: [Project 1-1687] 22 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2415.355 ; gain = 0.000 ; free physical = 43452 ; free virtual = 60404
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 20 instances were transformed.
+  A total of 37 instances were transformed.
   FDCPE => FDCPE (FDCE, FDPE, LDCE, LUT3, VCC): 5 instances
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 18 instances
   RAM16X1D => RAM32X1D (RAMD32(x2)): 10 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
 
-63 Infos, 110 Warnings, 105 Critical Warnings and 0 Errors encountered.
+65 Infos, 51 Warnings, 54 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2416.988 ; gain = 738.785 ; free physical = 18395 ; free virtual = 43277
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2415.355 ; gain = 798.605 ; free physical = 43452 ; free virtual = 60404
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
@@ -464,40 +297,39 @@ Running DRC as a precondition to command opt_design
 
 Starting DRC Task
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-461] DRC finished with 0 Errors, 18 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2481.020 ; gain = 64.031 ; free physical = 18383 ; free virtual = 43264
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.61 . Memory (MB): peak = 2479.387 ; gain = 64.031 ; free physical = 43435 ; free virtual = 60386
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
-Ending Cache Timing Information Task | Checksum: 11d0246f0
+Ending Cache Timing Information Task | Checksum: 18ad4180c
 
-Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.2 . Memory (MB): peak = 2481.020 ; gain = 0.000 ; free physical = 18374 ; free virtual = 43256
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.69 . Memory (MB): peak = 2479.387 ; gain = 0.000 ; free physical = 43426 ; free virtual = 60378
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = dc724d836fe5364d.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2751.551 ; gain = 0.000 ; free physical = 18111 ; free virtual = 42996
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 10248994f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2751.012 ; gain = 0.000 ; free physical = 43131 ; free virtual = 60107
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 22ebb5203
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18111 ; free virtual = 42996
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43131 ; free virtual = 60107
 
 Phase 2 Retarget
 INFO: [Opt 31-1287] Pulled Inverter top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/in_sm/s[reg][1][seq_arm_reset_no][7]_i_2 into driver instance top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/in_sm/s[reg][1][seq_arm_reset_no][7]_i_3, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/out_sm/s[wr_onehot][6]_i_1 into driver instance top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/out_sm/s[wr_onehot][6]_i_2, which resulted in an inversion of 4 pins
 INFO: [Opt 31-1287] Pulled Inverter top_block_i/led_module/u_led_inst_0/inst/r3[0]_i_1 into driver instance top_block_i/led_module/u_led_inst_0/inst/axi_txn_i_3, which resulted in an inversion of 5 pins
-INFO: [Opt 31-138] Pushed 32 inverter(s) to 257 load pin(s).
+INFO: [Opt 31-138] Pushed 30 inverter(s) to 351 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: f17115e6
+Phase 2 Retarget | Checksum: d603334b
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18118 ; free virtual = 43003
-INFO: [Opt 31-389] Phase Retarget created 27 cells and removed 79 cells
-INFO: [Opt 31-1021] In phase Retarget, 57 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60116
+INFO: [Opt 31-389] Phase Retarget created 108 cells and removed 177 cells
+INFO: [Opt 31-1021] In phase Retarget, 58 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
@@ -520,40 +352,39 @@ CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/i
 Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
 Convert at least one of them to synchronous signal, or get rid of at least one of those.
 Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 3 Constant propagation | Checksum: 14fef0d06
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 32 load pin(s).
+Phase 3 Constant propagation | Checksum: b8b37056
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
-INFO: [Opt 31-389] Phase Constant propagation created 21 cells and removed 411 cells
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:53 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
+INFO: [Opt 31-389] Phase Constant propagation created 94 cells and removed 1084 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 46 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 9f3e6452
+Phase 4 Sweep | Checksum: 6be7124d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 567 cells
-INFO: [Opt 31-1021] In phase Sweep, 1134 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 901 cells
+INFO: [Opt 31-1021] In phase Sweep, 818 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
-Phase 5 BUFG optimization | Checksum: 9f3e6452
+Phase 5 BUFG optimization | Checksum: 6be7124d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 9f3e6452
+Phase 6 Shift Register Optimization | Checksum: 6be7124d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-INFO: [Opt 31-1287] Pulled Inverter top_block_i/intercon_wrapper/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_1 into driver instance top_block_i/intercon_wrapper/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_2, which resulted in an inversion of 1 pins
-Phase 7 Post Processing Netlist | Checksum: dec68706
+Phase 7 Post Processing Netlist | Checksum: 158720fa7
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 54 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
@@ -562,22 +393,22 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              27  |              79  |                                             57  |
-|  Constant propagation         |              21  |             411  |                                             46  |
-|  Sweep                        |               0  |             567  |                                           1134  |
+|  Retarget                     |             108  |             177  |                                             58  |
+|  Constant propagation         |              94  |            1084  |                                             46  |
+|  Sweep                        |               0  |             901  |                                            818  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               1  |                                             54  |
+|  Post Processing Netlist      |               0  |               0  |                                             54  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2751.551 ; gain = 0.000 ; free physical = 18117 ; free virtual = 43002
-Ending Logic Optimization Task | Checksum: 1efdd1c48
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2751.012 ; gain = 0.000 ; free physical = 43140 ; free virtual = 60115
+Ending Logic Optimization Task | Checksum: 88a911d2
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.551 ; gain = 20.812 ; free physical = 18117 ; free virtual = 43002
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 2751.012 ; gain = 19.844 ; free physical = 43140 ; free virtual = 60115
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -593,40 +424,40 @@ Finished Running Vector-less Activity Propagation
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 34 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 18 newly gated: 0 Total Ports: 68
-Ending PowerOpt Patch Enables Task | Checksum: 1dd7c2e1d
+Number of BRAM Ports augmented: 34 newly gated: 0 Total Ports: 68
+Ending PowerOpt Patch Enables Task | Checksum: 11fcfbd72
 
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17613 ; free virtual = 42498
-Ending Power Optimization Task | Checksum: 1dd7c2e1d
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42510 ; free virtual = 59621
+Ending Power Optimization Task | Checksum: 11fcfbd72
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3971.730 ; gain = 1220.180 ; free physical = 17635 ; free virtual = 42520
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3977.285 ; gain = 1226.273 ; free physical = 42532 ; free virtual = 59643
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 1a276770e
+Ending Logic Optimization Task | Checksum: 10178a4ef
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17641 ; free virtual = 42526
-Ending Final Cleanup Task | Checksum: 1a276770e
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.41 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42535 ; free virtual = 59647
+Ending Final Cleanup Task | Checksum: 10178a4ef
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17641 ; free virtual = 42526
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42535 ; free virtual = 59647
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17641 ; free virtual = 42526
-Ending Netlist Obfuscation Task | Checksum: 1a276770e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42535 ; free virtual = 59647
+Ending Netlist Obfuscation Task | Checksum: 10178a4ef
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17641 ; free virtual = 42526
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42535 ; free virtual = 59647
 INFO: [Common 17-83] Releasing license: Implementation
-103 Infos, 110 Warnings, 110 Critical Warnings and 0 Errors encountered.
+103 Infos, 51 Warnings, 59 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3971.730 ; gain = 1554.742 ; free physical = 17641 ; free virtual = 42526
+opt_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 3977.285 ; gain = 1561.930 ; free physical = 42535 ; free virtual = 59647
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3971.730 ; gain = 0.000 ; free physical = 17630 ; free virtual = 42518
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3977.285 ; gain = 0.000 ; free physical = 42517 ; free virtual = 59632
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
 Command: report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
@@ -652,29 +483,29 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17597 ; free virtual = 42486
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 10626adc4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42485 ; free virtual = 59601
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: aa76cbb5
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17597 ; free virtual = 42486
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17598 ; free virtual = 42486
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42485 ; free virtual = 59601
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42485 ; free virtual = 59601
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1d59b507b
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 117e465de
 
-Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17596 ; free virtual = 42484
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.6 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42475 ; free virtual = 59597
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 2b39d6f98
+Phase 1.3 Build Placer Netlist Model | Checksum: 14129c949
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17573 ; free virtual = 42461
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42452 ; free virtual = 59575
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 2b39d6f98
+Phase 1.4 Constrain Clocks/Macros | Checksum: 14129c949
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17573 ; free virtual = 42461
-Phase 1 Placer Initialization | Checksum: 2b39d6f98
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42452 ; free virtual = 59575
+Phase 1 Placer Initialization | Checksum: 14129c949
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17573 ; free virtual = 42461
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42452 ; free virtual = 59575
 
 Phase 2 Global Placement
 
@@ -683,61 +514,61 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 2c000d9f8
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1d6db4867
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17549 ; free virtual = 42438
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42431 ; free virtual = 59555
 
 Phase 2.1.1.2 PBP: Clock Region Placement
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 218ee8661
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 205389164
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3987.820 ; gain = 0.000 ; free physical = 17551 ; free virtual = 42439
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42427 ; free virtual = 59551
 
 Phase 2.1.1.3 PBP: Compute Congestion
-Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 218ee8661
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 205389164
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4002.168 ; gain = 14.348 ; free physical = 17536 ; free virtual = 42425
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 4009.383 ; gain = 0.000 ; free physical = 42366 ; free virtual = 59543
 
 Phase 2.1.1.4 PBP: UpdateTiming
-Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1cf97f333
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1ab46f5e8
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42371 ; free virtual = 59548
 
 Phase 2.1.1.5 PBP: Add part constraints
-Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1cf97f333
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1ab46f5e8
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
-Phase 2.1.1 Partition Driven Placement | Checksum: 1cf97f333
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42371 ; free virtual = 59548
+Phase 2.1.1 Partition Driven Placement | Checksum: 1ab46f5e8
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
-Phase 2.1 Floorplanning | Checksum: 1e31c736d
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42372 ; free virtual = 59549
+Phase 2.1 Floorplanning | Checksum: 1b6da76a6
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42372 ; free virtual = 59549
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e31c736d
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1b6da76a6
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42372 ; free virtual = 59549
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1e31c736d
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1b6da76a6
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4032.184 ; gain = 44.363 ; free physical = 17538 ; free virtual = 42427
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4037.738 ; gain = 28.355 ; free physical = 42372 ; free virtual = 59549
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 28a2d7083
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 147dad4a7
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:06 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17516 ; free virtual = 42405
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42356 ; free virtual = 59534
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 303 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 287 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 135 nets or LUTs. Breaked 0 LUT, combined 135 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 128 nets or LUTs. Breaked 0 LUT, combined 128 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-1030] Pass 1. Identified 6 candidate driver sets for equivalent driver rewiring.
 INFO: [Physopt 32-661] Optimized 6 nets.  Re-placed 16 instances.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 6 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 16 existing cells
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17516 ; free virtual = 42405
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42351 ; free virtual = 59531
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -748,7 +579,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17516 ; free virtual = 42405
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42351 ; free virtual = 59531
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -757,7 +588,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            135  |                   135  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            128  |                   128  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Equivalent Driver Rewiring                       |            0  |              0  |                     6  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -767,69 +598,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            135  |                   141  |           0  |           5  |  00:00:00  |
+|  Total                                            |            0  |            128  |                   134  |           0  |           5  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 2afc5a144
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 25fe72ef8
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17515 ; free virtual = 42404
-Phase 2.4 Global Placement Core | Checksum: 1dc646715
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42352 ; free virtual = 59532
+Phase 2.4 Global Placement Core | Checksum: 1987aa433
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17508 ; free virtual = 42397
-Phase 2 Global Placement | Checksum: 1dc646715
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42347 ; free virtual = 59527
+Phase 2 Global Placement | Checksum: 1987aa433
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17513 ; free virtual = 42402
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42353 ; free virtual = 59532
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 274c36b75
+Phase 3.1 Commit Multi Column Macros | Checksum: 1fbb5f148
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17514 ; free virtual = 42403
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42351 ; free virtual = 59531
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1fd591c18
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1417fcab5
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17514 ; free virtual = 42402
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42352 ; free virtual = 59532
 
 Phase 3.3 Small Shape DP
 
 Phase 3.3.1 Small Shape Clustering
-Phase 3.3.1 Small Shape Clustering | Checksum: 195a5aef3
+Phase 3.3.1 Small Shape Clustering | Checksum: 200cbe93f
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17509 ; free virtual = 42397
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42343 ; free virtual = 59523
 
 Phase 3.3.2 Flow Legalize Slice Clusters
-Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 1b879f94f
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 16585db04
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17508 ; free virtual = 42397
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42343 ; free virtual = 59523
 
 Phase 3.3.3 Slice Area Swap
 
 Phase 3.3.3.1 Slice Area Swap Initial
-Phase 3.3.3.1 Slice Area Swap Initial | Checksum: 1b9f2c3b7
+Phase 3.3.3.1 Slice Area Swap Initial | Checksum: 1e80534b0
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17501 ; free virtual = 42390
-Phase 3.3.3 Slice Area Swap | Checksum: 1b9f2c3b7
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42335 ; free virtual = 59515
+Phase 3.3.3 Slice Area Swap | Checksum: 1e80534b0
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17497 ; free virtual = 42386
-Phase 3.3 Small Shape DP | Checksum: 25e872319
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42335 ; free virtual = 59515
+Phase 3.3 Small Shape DP | Checksum: fe7425d0
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17504 ; free virtual = 42392
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42341 ; free virtual = 59521
 
 Phase 3.4 Re-assign LUT pins
-Phase 3.4 Re-assign LUT pins | Checksum: 1e4ec1998
+Phase 3.4 Re-assign LUT pins | Checksum: f71ba964
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17504 ; free virtual = 42392
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42341 ; free virtual = 59521
 
 Phase 3.5 Pipeline Register Optimization
-Phase 3.5 Pipeline Register Optimization | Checksum: 139682d1a
+Phase 3.5 Pipeline Register Optimization | Checksum: 1cde946ad
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17504 ; free virtual = 42392
-Phase 3 Detail Placement | Checksum: 139682d1a
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42342 ; free virtual = 59522
+Phase 3 Detail Placement | Checksum: 1cde946ad
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42342 ; free virtual = 59522
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -837,7 +668,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: a9209467
+Post Placement Optimization Initialization | Checksum: 171a18a9f
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -845,34 +676,34 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.782 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 969d2f58
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.866 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 12551a855
 
-Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42340 ; free virtual = 59520
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: bac40e3a
+Ending Physical Synthesis Task | Checksum: 1063d3afb
 
-Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17505 ; free virtual = 42394
-Phase 4.1.1.1 BUFG Insertion | Checksum: a9209467
+Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42340 ; free virtual = 59520
+Phase 4.1.1.1 BUFG Insertion | Checksum: 171a18a9f
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42340 ; free virtual = 59520
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=2.782. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: e2763ff4
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.866. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1b1d80bea
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42340 ; free virtual = 59520
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
-Phase 4.1 Post Commit Optimization | Checksum: e2763ff4
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42340 ; free virtual = 59520
+Phase 4.1 Post Commit Optimization | Checksum: 1b1d80bea
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17500 ; free virtual = 42389
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42340 ; free virtual = 59520
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42335 ; free virtual = 59515
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 14d7d20cb
+Phase 4.2 Post Placement Cleanup | Checksum: 27612b1b5
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42334 ; free virtual = 59514
 
 Phase 4.3 Placer Reporting
 
@@ -891,55 +722,55 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|                1x1|
 |___________|___________________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 14d7d20cb
+Phase 4.3.1 Print Estimated Congestion | Checksum: 27612b1b5
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
-Phase 4.3 Placer Reporting | Checksum: 14d7d20cb
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42338 ; free virtual = 59518
+Phase 4.3 Placer Reporting | Checksum: 27612b1b5
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42338 ; free virtual = 59518
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17505 ; free virtual = 42394
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42338 ; free virtual = 59518
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11bdd0762
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42338 ; free virtual = 59518
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 3199c8053
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17505 ; free virtual = 42394
-Ending Placer Task | Checksum: d22ba2f7
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42338 ; free virtual = 59518
+Ending Placer Task | Checksum: 23a5cdb20
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17506 ; free virtual = 42394
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42338 ; free virtual = 59518
 INFO: [Common 17-83] Releasing license: Implementation
-142 Infos, 110 Warnings, 110 Critical Warnings and 0 Errors encountered.
+142 Infos, 51 Warnings, 59 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:12 . Memory (MB): peak = 4048.191 ; gain = 60.371 ; free physical = 17553 ; free virtual = 42442
+place_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:16 . Memory (MB): peak = 4045.742 ; gain = 36.359 ; free physical = 42382 ; free virtual = 59562
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.39 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17541 ; free virtual = 42445
+Write XDEF Complete: Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.35 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42366 ; free virtual = 59560
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file top_block_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17528 ; free virtual = 42422
+report_io: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42362 ; free virtual = 59547
 INFO: [runtcl-4] Executing : report_utilization -file top_block_wrapper_utilization_placed.rpt -pb top_block_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_block_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17541 ; free virtual = 42434
+report_control_sets: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42372 ; free virtual = 59557
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.48 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17509 ; free virtual = 42403
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.52 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42342 ; free virtual = 59528
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-151 Infos, 110 Warnings, 110 Critical Warnings and 0 Errors encountered.
+151 Infos, 51 Warnings, 59 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.36 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17495 ; free virtual = 42403
+Write XDEF Complete: Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.37 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42327 ; free virtual = 59526
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
@@ -954,153 +785,156 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 348297c0 ConstDB: 0 ShapeSum: 32a22a60 RouteDB: 6b06e0d7
-Nodegraph reading from file.  Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17426 ; free virtual = 42325
-Post Restoration Checksum: NetGraph: 5e872eda NumContArr: f1cd7748 Constraints: f0a22015 Timing: 0
-Phase 1 Build RT Design | Checksum: 240f6c637
+Checksum: PlaceDB: 7ff4b68e ConstDB: 0 ShapeSum: f62d7ec7 RouteDB: c43aa5cb
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.33 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42249 ; free virtual = 59441
+Post Restoration Checksum: NetGraph: 2a7a3931 NumContArr: 4519a80b Constraints: 54505514 Timing: 0
+Phase 1 Build RT Design | Checksum: c3e43650
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17428 ; free virtual = 42327
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42244 ; free virtual = 59437
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 240f6c637
+Phase 2.1 Fix Topology Constraints | Checksum: c3e43650
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17390 ; free virtual = 42289
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42206 ; free virtual = 59398
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 240f6c637
+Phase 2.2 Pre Route Cleanup | Checksum: c3e43650
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17390 ; free virtual = 42289
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42206 ; free virtual = 59398
 
 Phase 2.3 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.3 Global Clock Net Routing | Checksum: 1552a19ff
+Phase 2.3 Global Clock Net Routing | Checksum: 17913fc3b
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17388 ; free virtual = 42287
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42197 ; free virtual = 59391
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 296aa0aa6
+Phase 2.4 Update Timing | Checksum: 22697d574
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17390 ; free virtual = 42288
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.959  | TNS=0.000  | WHS=-0.700 | THS=-38.006|
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42199 ; free virtual = 59393
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.035  | TNS=0.000  | WHS=-0.705 | THS=-36.940|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 22d536451
+Phase 2.5.1 Update Timing | Checksum: 22b315e1c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17380 ; free virtual = 42279
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.959  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42191 ; free virtual = 59385
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.035  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 2ee44201e
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1cb103f2f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17379 ; free virtual = 42278
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42191 ; free virtual = 59385
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0027316 %
-  Global Horizontal Routing Utilization  = 0.00217953 %
+  Global Vertical Routing Utilization    = 0.00295012 %
+  Global Horizontal Routing Utilization  = 0.00202922 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 10410
+  Number of Failed Nets               = 9958
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 8643
-  Number of Partially Routed Nets     = 1767
+  Number of Unrouted Nets             = 8259
+  Number of Partially Routed Nets     = 1699
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 224918543
+Phase 2 Router Initialization | Checksum: 261fac9fb
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17381 ; free virtual = 42280
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42194 ; free virtual = 59388
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 224918543
+Phase 3.1 Global Routing | Checksum: 261fac9fb
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17381 ; free virtual = 42280
-Phase 3 Initial Routing | Checksum: 1e18f712a
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42194 ; free virtual = 59388
+Phase 3 Initial Routing | Checksum: 1dc6f2bde
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17327 ; free virtual = 42226
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4045.742 ; gain = 0.000 ; free physical = 42168 ; free virtual = 59362
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1937
- Number of Nodes with overlaps = 153
- Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1921
+ Number of Nodes with overlaps = 129
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.718  | TNS=0.000  | WHS=-0.267 | THS=-6.524 |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.039  | TNS=0.000  | WHS=-0.271 | THS=-6.720 |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1c6146c34
+Phase 4.1 Global Iteration 0 | Checksum: 21902fcb5
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17263 ; free virtual = 42162
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:16 . Memory (MB): peak = 4062.723 ; gain = 16.980 ; free physical = 42047 ; free virtual = 59241
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 17
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 15
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.718  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.039  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1e0495572
+Phase 4.2 Global Iteration 1 | Checksum: 26c2f372d
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:12 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
-Phase 4 Rip-up And Reroute | Checksum: 1e0495572
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59259
+Phase 4 Rip-up And Reroute | Checksum: 26c2f372d
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:12 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59259
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 25741de2c
+Phase 5.1.1 Update Timing | Checksum: 15415322e
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17270 ; free virtual = 42169
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.718  | TNS=0.000  | WHS=-0.001 | THS=-0.001 |
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42065 ; free virtual = 59259
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.039  | TNS=0.000  | WHS=0.001  | THS=0.000  |
 
 
 Phase 5.1.2 Update Timing
-Phase 5.1.2 Update Timing | Checksum: 1c7fbbc6c
+Phase 5.1.2 Update Timing | Checksum: 1c76dc634
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.718  | TNS=0.000  | WHS=-0.001 | THS=-0.001 |
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59258
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.039  | TNS=0.000  | WHS=0.001  | THS=0.000  |
 
-Phase 5.1 Delay CleanUp | Checksum: 1cc630749
+Phase 5.1 Delay CleanUp | Checksum: 1d6235524
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59258
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1cc630749
+Phase 5.2 Clock Skew Optimization | Checksum: 1d6235524
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
-Phase 5 Delay and Skew Optimization | Checksum: 1cc630749
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59258
+Phase 5 Delay and Skew Optimization | Checksum: 1d6235524
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17269 ; free virtual = 42168
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59258
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1b2a3dabb
+Phase 6.1.1 Update Timing | Checksum: 1896cf2c5
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:13 . Memory (MB): peak = 4048.191 ; gain = 0.000 ; free physical = 17270 ; free virtual = 42169
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.718  | TNS=0.000  | WHS=-0.001 | THS=-0.001 |
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:24 . Memory (MB): peak = 4125.723 ; gain = 79.980 ; free physical = 42064 ; free virtual = 59258
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.039  | TNS=0.000  | WHS=0.001  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 2cb0c9f98
+Phase 6.1 Hold Fix Iter | Checksum: 15359f778
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4301.168 ; gain = 252.977 ; free physical = 17160 ; free virtual = 42059
-Phase 6 Post Hold Fix | Checksum: 27d3f3c6a
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 4221.723 ; gain = 175.980 ; free physical = 41999 ; free virtual = 59193
+Phase 6 Post Hold Fix | Checksum: 15359f778
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4301.168 ; gain = 252.977 ; free physical = 17160 ; free virtual = 42059
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 4221.723 ; gain = 175.980 ; free physical = 41999 ; free virtual = 59193
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.29969 %
-  Global Horizontal Routing Utilization  = 1.7195 %
+  Global Vertical Routing Utilization    = 1.30199 %
+  Global Horizontal Routing Utilization  = 1.6369 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1110,55 +944,53 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 2d739602d
+Phase 7 Route finalize | Checksum: 2084f2587
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4301.168 ; gain = 252.977 ; free physical = 17164 ; free virtual = 42063
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 4221.723 ; gain = 175.980 ; free physical = 42000 ; free virtual = 59194
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 2d739602d
+Phase 8 Verifying routed nets | Checksum: 2084f2587
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4301.168 ; gain = 252.977 ; free physical = 17163 ; free virtual = 42062
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:25 . Memory (MB): peak = 4221.723 ; gain = 175.980 ; free physical = 42000 ; free virtual = 59194
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 2d739602d
+Phase 9 Depositing Routes | Checksum: 2084f2587
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17162 ; free virtual = 42061
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:26 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 41999 ; free virtual = 59193
 
 Phase 10 Resolve XTalk
-Phase 10 Resolve XTalk | Checksum: 2d739602d
+Phase 10 Resolve XTalk | Checksum: 2084f2587
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:15 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17162 ; free virtual = 42061
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:26 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 41999 ; free virtual = 59193
 
 Phase 11 Post Router Timing
 
 Phase 11.1 Update Timing
-Phase 11.1 Update Timing | Checksum: 29a94e7ea
+Phase 11.1 Update Timing | Checksum: 1cbb0b737
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17163 ; free virtual = 42062
-INFO: [Route 35-57] Estimated Timing Summary | WNS=2.718  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:26 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 42001 ; free virtual = 59195
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.039  | TNS=0.000  | WHS=0.005  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 11 Post Router Timing | Checksum: 29a94e7ea
+Phase 11 Post Router Timing | Checksum: 1cbb0b737
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17163 ; free virtual = 42062
-Time taken to check if laguna hold fix is required (in secs): 0
-Skip PhysOpt in Router because non-negative WNS value: 2.71784e-09 .
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:26 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 42001 ; free virtual = 59195
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:16 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17410 ; free virtual = 42309
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:26 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 42232 ; free virtual = 59426
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-169 Infos, 110 Warnings, 110 Critical Warnings and 0 Errors encountered.
+169 Infos, 51 Warnings, 59 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:16 . Memory (MB): peak = 4333.184 ; gain = 284.992 ; free physical = 17410 ; free virtual = 42309
+route_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:27 . Memory (MB): peak = 4253.738 ; gain = 207.996 ; free physical = 42232 ; free virtual = 59426
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.41 . Memory (MB): peak = 4333.184 ; gain = 0.000 ; free physical = 17395 ; free virtual = 42310
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.39 . Memory (MB): peak = 4253.738 ; gain = 0.000 ; free physical = 42213 ; free virtual = 59422
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_block_wrapper_drc_routed.rpt -pb top_block_wrapper_drc_routed.pb -rpx top_block_wrapper_drc_routed.rpx
 Command: report_drc -file top_block_wrapper_drc_routed.rpt -pb top_block_wrapper_drc_routed.pb -rpx top_block_wrapper_drc_routed.rpx
@@ -1178,7 +1010,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-181 Infos, 110 Warnings, 110 Critical Warnings and 0 Errors encountered.
+181 Infos, 51 Warnings, 59 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file top_block_wrapper_route_status.rpt -pb top_block_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_block_wrapper_timing_summary_routed.rpt -pb top_block_wrapper_timing_summary_routed.pb -rpx top_block_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -1191,29 +1023,4 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file top_block_wrapper_cl
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_block_wrapper_bus_skew_routed.rpt -pb top_block_wrapper_bus_skew_routed.pb -rpx top_block_wrapper_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-Command: write_bitstream -force top_block_wrapper.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 8 threads
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A5*A2)+(A5*(~A2)*(~A3))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A5*A2)+(A5*(~A2)*(~A3))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC RTSTAT-10] No routable loads: 19 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i... and (the first 15 of 17 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 4 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./top_block_wrapper.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Common 17-83] Releasing license: Implementation
-11 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 4669.348 ; gain = 0.000 ; free physical = 17284 ; free virtual = 42209
-INFO: [Common 17-206] Exiting Vivado at Mon Jul  8 10:47:03 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  4 20:38:08 2024...

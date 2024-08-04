@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Jul  8 10:45:13 2024
+| Date         : Sun Aug  4 20:35:38 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
 | Design       : top_block_wrapper
@@ -95,7 +95,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    4 |     0 |          0 |       204 |  1.96 |
+| Bonded IOB |   49 |     0 |          0 |       204 | 24.02 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -153,6 +153,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| OBUFT    |   28 |                 I/O |
+| INBUF    |   17 |                 I/O |
+| IBUFCTRL |   17 |              Others |
 | OBUF     |    4 |                 I/O |
 +----------+------+---------------------+
 
@@ -163,8 +166,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------------------------------+------+
 |              Ref Name              | Used |
 +------------------------------------+------+
-| top_block_xbar_0                   |    1 |
-| top_block_vio_0_1                  |    1 |
+| top_block_xpm_cdc_gen_0_0          |    1 |
+| top_block_xbar_1                   |    1 |
 | top_block_vio_0_0                  |    1 |
 | top_block_util_vector_logic_3_0    |    1 |
 | top_block_util_vector_logic_2_1    |    1 |
@@ -175,26 +178,26 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_0_2    |    1 |
 | top_block_util_vector_logic_0_1    |    1 |
 | top_block_util_vector_logic_0_0    |    1 |
+| top_block_util_ds_buf_1_0          |    1 |
+| top_block_util_ds_buf_0_0          |    1 |
 | top_block_u_led_inst_0_0           |    1 |
-| top_block_s01_regslice_0           |    1 |
-| top_block_s01_data_fifo_0          |    1 |
-| top_block_s00_regslice_0           |    1 |
-| top_block_s00_data_fifo_0          |    1 |
+| top_block_rst_clk_wiz_0_40M_3      |    1 |
 | top_block_rst_clk_wiz_0_125M_0     |    1 |
+| top_block_reg_switch_0_0           |    1 |
 | top_block_native_to_axi_lite_v_0_0 |    1 |
 | top_block_mii_initializer_0_0      |    1 |
-| top_block_m00_regslice_0           |    1 |
-| top_block_m00_data_fifo_0          |    1 |
 | top_block_gig_ethernet_pcs_pma_0_0 |    1 |
 | top_block_fakernet_top_0_0         |    1 |
 | top_block_data_gen_user_0_0        |    1 |
 | top_block_clk_wiz_0_0              |    1 |
 | top_block_blk_mem_gen_0_0          |    1 |
+| top_block_axi_iic_0_0              |    1 |
 | top_block_axi_bram_ctrl_1_0        |    1 |
 | top_block_axi_bram_ctrl_0_0        |    1 |
 | top_block_RESET_INST_0_0           |    1 |
 | top_block_LED_REG_READ_SEPARAT_1_0 |    1 |
 | top_block_LED_REG_READ_SEPARAT_0_0 |    1 |
+| top_block_I2C_Controller_v1_0_0_1  |    1 |
 +------------------------------------+------+
 
 

@@ -111,8 +111,8 @@ void top_block_axi_bram_ctrl_1_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -218,8 +218,8 @@ void top_block_axi_bram_ctrl_1_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -325,8 +325,8 @@ void top_block_axi_bram_ctrl_1_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -421,8 +421,8 @@ top_block_axi_bram_ctrl_1_0::top_block_axi_bram_ctrl_1_0(const sc_core::sc_modul
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -529,8 +529,8 @@ top_block_axi_bram_ctrl_1_0::top_block_axi_bram_ctrl_1_0(const sc_core::sc_modul
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");

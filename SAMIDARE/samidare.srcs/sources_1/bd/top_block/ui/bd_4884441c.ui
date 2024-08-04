@@ -1,0 +1,46 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.877586",
+   "Default View_TopLeft":"-196,7",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port m00_axi -pg 1 -lvl 3 -x 850 -y 200 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x -10 -y 380 -defaultsOSRD
+preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace portBus SAMPA_I2C_SCL -pg 1 -lvl 3 -x 850 -y 110 -defaultsOSRD
+preplace portBus SAMPA_I2C_SDA -pg 1 -lvl 3 -x 850 -y 90 -defaultsOSRD
+preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 2 -x 610 -y 430 -defaultsOSRD
+preplace inst I2C_iobuf -pg 1 -lvl 2 -x 610 -y 80 -defaultsOSRD
+preplace inst I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 210 -y 280 -defaultsOSRD
+preplace netloc I2C_iobuf_IOBUF_IO_O 1 2 1 800 50n
+preplace netloc I2C_iobuf_IOBUF_IO_O1 1 2 1 820 70n
+preplace netloc Net 1 2 1 NJ 90
+preplace netloc Net1 1 2 1 NJ 110
+preplace netloc axi_iic_0_scl_o 1 1 2 420 210 790
+preplace netloc axi_iic_0_scl_t 1 1 2 410 220 780
+preplace netloc axi_iic_0_sda_o 1 1 2 440 170 810
+preplace netloc axi_iic_0_sda_t 1 1 2 430 160 830
+preplace netloc m00_axi_aclk_1 1 0 1 NJ 300
+preplace netloc m00_axi_aresetn_1 1 0 1 NJ 320
+preplace netloc s_axi_aclk_1 1 0 2 20 440 420J
+preplace netloc s_axi_aresetn_1 1 0 2 10 450 NJ
+preplace netloc start_i2c_read_1 1 0 1 NJ 180
+preplace netloc start_i2c_write_1 1 0 1 NJ 200
+preplace netloc start_i2c_write_all_1 1 0 1 NJ 220
+preplace netloc i2c_waddr_i_1 1 0 1 NJ 240
+preplace netloc i2c_raddr_i_1 1 0 1 NJ 260
+preplace netloc Conn1 1 1 2 NJ 200 NJ
+preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 400 220n
+levelinfo -pg 1 -10 210 610 850
+pagesize -pg 1 -db -bbox -sgen -190 -10 1060 570
+"
+}
+

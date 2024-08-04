@@ -21,10 +21,15 @@
 		parameter integer C_M_AXI_DATA_WIDTH	= 32,
 		// Transaction number is the number of write 
     // and read transactions the master will perform as a part of this example memory test.
-		parameter integer C_M_TRANSACTIONS_NUM	= 4
+		parameter integer C_M_TRANSACTIONS_NUM	= 1
 	)
 	(
 		// Users to add ports here
+		input wire  I2C_WR,
+		input wire  I2C_RD,
+		input wire [24:0]  WADDR,
+		input wire [24:0]  RADDR,
+		input wire [31:0]  WDATA,
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -180,7 +185,8 @@
 	// I/O Connections assignments
 
 	//Adding the offset address to the base addr of the slave
-	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_awaddr;
+//	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_awaddr;
+	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + WADDR;
 	//AXI 4 write data
 	assign M_AXI_WDATA	= axi_wdata;
 	assign M_AXI_AWPROT	= 3'b000;
@@ -447,7 +453,7 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
 	          begin                                                 
-	            axi_awaddr <= 0;                                    
+	            axi_awaddr <= WADDR;                                    
 	          end                                                   
 	          // Signals a new write address/ write data is         
 	          // available by user logic                            
@@ -463,13 +469,13 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0 || init_txn_pulse == 1'b1 )                                
 	          begin                                                 
-	            axi_wdata <= C_M_START_DATA_VALUE;                  
+	            axi_wdata <= WDATA;                  
 	          end                                                   
 	        // Signals a new write address/ write data is           
 	        // available by user logic                              
 	        else if (M_AXI_WREADY && axi_wvalid)                    
 	          begin                                                 
-	            axi_wdata <= C_M_START_DATA_VALUE + write_index;    
+	            axi_wdata <= WDATA;    
 	          end                                                   
 	        end          	                                       
 	                                                                
@@ -478,7 +484,7 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
 	          begin                                                 
-	            axi_araddr <= 0;                                    
+	            axi_araddr <= RADDR;                                    
 	          end                                                   
 	          // Signals a new write address/ write data is         
 	          // available by user logic                            
@@ -526,13 +532,18 @@
 	          IDLE:                                                             
 	          // This state is responsible to initiate 
 	          // AXI transaction when init_txn_pulse is asserted 
-	            if ( init_txn_pulse == 1'b1 )                                     
+	            if ( init_txn_pulse == 1'b1 && I2C_WR==1'b1)                                     
 	              begin                                                                 
 	                mst_exec_state  <= INIT_WRITE;                                      
 	                ERROR <= 1'b0;
 	                compare_done <= 1'b0;
-	              end                                                                   
-	            else                                                                    
+	              end else
+	            if ( init_txn_pulse == 1'b1 && I2C_RD==1'b1)                                     
+	              begin                                                                 
+	                mst_exec_state  <= INIT_READ;                                      
+	                ERROR <= 1'b0;
+	                compare_done <= 1'b0;
+	              end else                                                                
 	              begin                                                                 
 	                mst_exec_state  <= IDLE;                                    
 	              end                                                                   
@@ -544,7 +555,7 @@
 	            // write controller                                                     
 	            if (writes_done)                                                        
 	              begin                                                                 
-	                mst_exec_state <= INIT_READ;//                                      
+	                mst_exec_state <= IDLE;//                                      
 	              end                                                                   
 	            else                                                                    
 	              begin                                                                 
@@ -572,7 +583,7 @@
 	             // read controller                                                     
 	             if (reads_done)                                                        
 	               begin                                                                
-	                 mst_exec_state <= INIT_COMPARE;                                    
+	                 mst_exec_state <= IDLE;                                    
 	               end                                                                  
 	             else                                                                   
 	               begin                                                                
@@ -592,16 +603,7 @@
 	                     start_single_read <= 1'b0; //Negate to generate a pulse        
 	                   end                                                              
 	               end                                                                  
-	                                                                                    
-	           INIT_COMPARE:                                                            
-	             begin
-	                 // This state is responsible to issue the state of comparison          
-	                 // of written data with the read data. If no error flags are set,      
-	                 // compare_done signal will be asseted to indicate success.            
-	                 ERROR <= error_reg; 
-	                 mst_exec_state <= IDLE;                                    
-	                 compare_done <= 1'b1;                                              
-	             end                                                                  
+	                                                                                
 	           default :                                                                
 	             begin                                                                  
 	               mst_exec_state  <= IDLE;                                     

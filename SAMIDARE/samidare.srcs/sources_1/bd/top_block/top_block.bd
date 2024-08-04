@@ -1,14 +1,15 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x440D21ED97FF254B",
+      "boundary_crc": "0x496D01F249A92399",
       "device": "xcau15p-sbvb484-1-i",
       "gen_directory": "../../../../samidare.gen/sources_1/bd/top_block",
       "name": "top_block",
       "pfm_name": "vendor:lib:top_block:1.0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2"
+      "tool_version": "2022.2",
+      "validated": "true"
     },
     "design_tree": {
       "clk_wiz_0": "",
@@ -56,11 +57,11 @@
       "data_gen_user_0": "",
       "SAMPA_I2C_wrapper": {
         "axi_iic_0": "",
-        "I2C_Controller_v1_0_0": "",
         "I2C_iobuf": {
           "util_ds_buf_1": "",
           "util_ds_buf_0": ""
-        }
+        },
+        "I2C_Controller_v1_0_0": ""
       },
       "rst_clk_wiz_0_40M": "",
       "axi_mem_intercon": {
@@ -94,8 +95,24 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_block_BASECLK",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "40000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -112,54 +129,164 @@
       },
       "RST": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "SO1P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO1N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO0N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO0P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO2N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO2P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO3N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       },
       "SO3P": {
         "type": "data",
         "direction": "I",
         "left": "10",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "HBTRG_N": {
+        "direction": "O"
+      },
+      "HBTRG_P": {
+        "direction": "O"
+      },
+      "BX_SYNX_TRG_N": {
+        "direction": "O"
+      },
+      "BX_SYNC_TRG_P": {
+        "direction": "O"
+      },
+      "TRG_N": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "TRG_P": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "HRSTB_N": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "HRSTB_P": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "CLKSOIN_N": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "CLKSOIN_P": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "GPION": {
+        "direction": "IO",
+        "left": "7",
+        "right": "0"
+      },
+      "GPIOP": {
+        "direction": "IO",
+        "left": "7",
         "right": "0"
       }
     },
@@ -383,8 +510,24 @@
             "type": "rst",
             "direction": "O"
           },
-          "start_i2c_write_0": {
+          "start_i2c_read_o": {
             "direction": "O"
+          },
+          "start_i2c_write_o": {
+            "direction": "O"
+          },
+          "start_i2c_write_all_o": {
+            "direction": "O"
+          },
+          "i2c_waddr_o": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "i2c_raddr_o": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         },
         "components": {
@@ -1572,8 +1715,32 @@
               "regacc_done_o": {
                 "direction": "O"
               },
-              "start_i2c_write": {
+              "start_i2c_write_o": {
                 "direction": "O"
+              },
+              "start_i2c_write_all_o": {
+                "direction": "O"
+              },
+              "start_i2c_read_o": {
+                "direction": "O"
+              },
+              "i2c_raddr_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_waddr_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_rdata_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_done": {
+                "direction": "I"
               }
             }
           }
@@ -1782,6 +1949,18 @@
               "reg_switch_0/regacc_done_i"
             ]
           },
+          "reg_switch_0_i2c_raddr_o": {
+            "ports": [
+              "reg_switch_0/i2c_raddr_o",
+              "i2c_raddr_o"
+            ]
+          },
+          "reg_switch_0_i2c_waddr_o": {
+            "ports": [
+              "reg_switch_0/i2c_waddr_o",
+              "i2c_waddr_o"
+            ]
+          },
           "reg_switch_0_regacc_addr_o": {
             "ports": [
               "reg_switch_0/regacc_addr_o",
@@ -1820,10 +1999,22 @@
               "native_to_axi_lite_v_0/m00_axi_init_axi_txn"
             ]
           },
-          "reg_switch_0_start_i2c_write": {
+          "reg_switch_0_start_i2c_read_o": {
             "ports": [
-              "reg_switch_0/start_i2c_write",
-              "start_i2c_write_0"
+              "reg_switch_0/start_i2c_read_o",
+              "start_i2c_read_o"
+            ]
+          },
+          "reg_switch_0_start_i2c_write_all_o": {
+            "ports": [
+              "reg_switch_0/start_i2c_write_all_o",
+              "start_i2c_write_all_o"
+            ]
+          },
+          "reg_switch_0_start_i2c_write_o": {
+            "ports": [
+              "reg_switch_0/start_i2c_write_o",
+              "start_i2c_write_o"
             ]
           },
           "reset_vio_0_1": {
@@ -2976,8 +3167,24 @@
             "left": "0",
             "right": "0"
           },
-          "m00_axi_init_axi_txn": {
+          "start_i2c_read": {
             "direction": "I"
+          },
+          "start_i2c_write": {
+            "direction": "I"
+          },
+          "start_i2c_write_all": {
+            "direction": "I"
+          },
+          "i2c_waddr_i": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i2c_raddr_i": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
           }
         },
         "components": {
@@ -2986,6 +3193,128 @@
             "xci_name": "top_block_axi_iic_0_0",
             "xci_path": "ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0.xci",
             "inst_hier_path": "SAMPA_I2C_wrapper/axi_iic_0"
+          },
+          "I2C_iobuf": {
+            "ports": {
+              "IOBUF_IO_T": {
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "IOBUF_IO_I": {
+                "type": "clk",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "IOBUF_IO_T1": {
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "IOBUF_IO_O": {
+                "type": "clk",
+                "direction": "O",
+                "left": "0",
+                "right": "0"
+              },
+              "IOBUF_IO_I1": {
+                "type": "clk",
+                "direction": "I",
+                "left": "0",
+                "right": "0"
+              },
+              "IOBUF_IO_O1": {
+                "type": "clk",
+                "direction": "O",
+                "left": "0",
+                "right": "0"
+              },
+              "SAMPA_I2C_SDA": {
+                "direction": "IO",
+                "left": "0",
+                "right": "0"
+              },
+              "SAMPA_I2C_SCL": {
+                "direction": "IO",
+                "left": "0",
+                "right": "0"
+              }
+            },
+            "components": {
+              "util_ds_buf_1": {
+                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+                "xci_name": "top_block_util_ds_buf_1_0",
+                "xci_path": "ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0.xci",
+                "inst_hier_path": "SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1",
+                "parameters": {
+                  "C_BUF_TYPE": {
+                    "value": "IOBUF"
+                  }
+                }
+              },
+              "util_ds_buf_0": {
+                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+                "xci_name": "top_block_util_ds_buf_0_0",
+                "xci_path": "ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0.xci",
+                "inst_hier_path": "SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0",
+                "parameters": {
+                  "C_BUF_TYPE": {
+                    "value": "IOBUF"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "IOBUF_IO_I1_1": {
+                "ports": [
+                  "IOBUF_IO_I1",
+                  "util_ds_buf_1/IOBUF_IO_I"
+                ]
+              },
+              "IOBUF_IO_I_1": {
+                "ports": [
+                  "IOBUF_IO_I",
+                  "util_ds_buf_0/IOBUF_IO_I"
+                ]
+              },
+              "IOBUF_IO_T1_1": {
+                "ports": [
+                  "IOBUF_IO_T1",
+                  "util_ds_buf_1/IOBUF_IO_T"
+                ]
+              },
+              "IOBUF_IO_T_1": {
+                "ports": [
+                  "IOBUF_IO_T",
+                  "util_ds_buf_0/IOBUF_IO_T"
+                ]
+              },
+              "Net": {
+                "ports": [
+                  "SAMPA_I2C_SDA",
+                  "util_ds_buf_1/IOBUF_IO_IO"
+                ]
+              },
+              "Net1": {
+                "ports": [
+                  "SAMPA_I2C_SCL",
+                  "util_ds_buf_0/IOBUF_IO_IO"
+                ]
+              },
+              "util_ds_buf_0_IOBUF_IO_O": {
+                "ports": [
+                  "util_ds_buf_0/IOBUF_IO_O",
+                  "IOBUF_IO_O"
+                ]
+              },
+              "util_ds_buf_1_IOBUF_IO_O": {
+                "ports": [
+                  "util_ds_buf_1/IOBUF_IO_O",
+                  "IOBUF_IO_O1"
+                ]
+              }
+            }
           },
           "I2C_Controller_v1_0_0": {
             "vlnv": "xilinx.com:module_ref:I2C_Controller_v1_0:1.0",
@@ -3295,6 +3624,10 @@
                   "MAX_BURST_LENGTH": {
                     "value": "1",
                     "value_src": "auto"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_0_0_clk_out1",
+                    "value_src": "default_prop"
                   }
                 },
                 "address_space_ref": "m01_axi",
@@ -3402,6 +3735,36 @@
               }
             },
             "ports": {
+              "start_i2c_read": {
+                "direction": "I"
+              },
+              "start_i2c_write": {
+                "direction": "I"
+              },
+              "start_i2c_write_all": {
+                "direction": "I"
+              },
+              "i2c_waddr_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_raddr_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_rdata_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_done": {
+                "direction": "O"
+              },
+              "i2c_busy": {
+                "direction": "O"
+              },
               "m00_axi_init_axi_txn": {
                 "direction": "I"
               },
@@ -3455,6 +3818,10 @@
                   "ASSOCIATED_RESET": {
                     "value": "m01_axi_aresetn",
                     "value_src": "constant"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_0_0_clk_out1",
+                    "value_src": "default_prop"
                   }
                 }
               },
@@ -3479,128 +3846,6 @@
                   "range": "4G",
                   "width": "32"
                 }
-              }
-            }
-          },
-          "I2C_iobuf": {
-            "ports": {
-              "IOBUF_IO_T": {
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "IOBUF_IO_I": {
-                "type": "clk",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "IOBUF_IO_T1": {
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "IOBUF_IO_O": {
-                "type": "clk",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
-              },
-              "IOBUF_IO_I1": {
-                "type": "clk",
-                "direction": "I",
-                "left": "0",
-                "right": "0"
-              },
-              "IOBUF_IO_O1": {
-                "type": "clk",
-                "direction": "O",
-                "left": "0",
-                "right": "0"
-              },
-              "SAMPA_I2C_SDA": {
-                "direction": "IO",
-                "left": "0",
-                "right": "0"
-              },
-              "SAMPA_I2C_SCL": {
-                "direction": "IO",
-                "left": "0",
-                "right": "0"
-              }
-            },
-            "components": {
-              "util_ds_buf_1": {
-                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-                "xci_name": "top_block_util_ds_buf_1_0",
-                "xci_path": "ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0.xci",
-                "inst_hier_path": "SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1",
-                "parameters": {
-                  "C_BUF_TYPE": {
-                    "value": "IOBUF"
-                  }
-                }
-              },
-              "util_ds_buf_0": {
-                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-                "xci_name": "top_block_util_ds_buf_0_0",
-                "xci_path": "ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0.xci",
-                "inst_hier_path": "SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0",
-                "parameters": {
-                  "C_BUF_TYPE": {
-                    "value": "IOBUF"
-                  }
-                }
-              }
-            },
-            "nets": {
-              "IOBUF_IO_I1_1": {
-                "ports": [
-                  "IOBUF_IO_I1",
-                  "util_ds_buf_1/IOBUF_IO_I"
-                ]
-              },
-              "IOBUF_IO_I_1": {
-                "ports": [
-                  "IOBUF_IO_I",
-                  "util_ds_buf_0/IOBUF_IO_I"
-                ]
-              },
-              "IOBUF_IO_T1_1": {
-                "ports": [
-                  "IOBUF_IO_T1",
-                  "util_ds_buf_1/IOBUF_IO_T"
-                ]
-              },
-              "IOBUF_IO_T_1": {
-                "ports": [
-                  "IOBUF_IO_T",
-                  "util_ds_buf_0/IOBUF_IO_T"
-                ]
-              },
-              "Net": {
-                "ports": [
-                  "SAMPA_I2C_SDA",
-                  "util_ds_buf_1/IOBUF_IO_IO"
-                ]
-              },
-              "Net1": {
-                "ports": [
-                  "SAMPA_I2C_SCL",
-                  "util_ds_buf_0/IOBUF_IO_IO"
-                ]
-              },
-              "util_ds_buf_0_IOBUF_IO_O": {
-                "ports": [
-                  "util_ds_buf_0/IOBUF_IO_O",
-                  "IOBUF_IO_O"
-                ]
-              },
-              "util_ds_buf_1_IOBUF_IO_O": {
-                "ports": [
-                  "util_ds_buf_1/IOBUF_IO_O",
-                  "IOBUF_IO_O1"
-                ]
               }
             }
           }
@@ -3668,6 +3913,18 @@
               "I2C_iobuf/IOBUF_IO_T1"
             ]
           },
+          "i2c_raddr_i_1": {
+            "ports": [
+              "i2c_raddr_i",
+              "I2C_Controller_v1_0_0/i2c_raddr_i"
+            ]
+          },
+          "i2c_waddr_i_1": {
+            "ports": [
+              "i2c_waddr_i",
+              "I2C_Controller_v1_0_0/i2c_waddr_i"
+            ]
+          },
           "m00_axi_aclk_1": {
             "ports": [
               "m00_axi_aclk",
@@ -3678,12 +3935,6 @@
             "ports": [
               "m00_axi_aresetn",
               "I2C_Controller_v1_0_0/m00_axi_aresetn"
-            ]
-          },
-          "m00_axi_init_axi_txn_1": {
-            "ports": [
-              "m00_axi_init_axi_txn",
-              "I2C_Controller_v1_0_0/m00_axi_init_axi_txn"
             ]
           },
           "s_axi_aclk_1": {
@@ -3698,6 +3949,24 @@
               "s_axi_aresetn",
               "axi_iic_0/s_axi_aresetn",
               "I2C_Controller_v1_0_0/m01_axi_aresetn"
+            ]
+          },
+          "start_i2c_read_1": {
+            "ports": [
+              "start_i2c_read",
+              "I2C_Controller_v1_0_0/start_i2c_read"
+            ]
+          },
+          "start_i2c_write_1": {
+            "ports": [
+              "start_i2c_write",
+              "I2C_Controller_v1_0_0/start_i2c_write"
+            ]
+          },
+          "start_i2c_write_all_1": {
+            "ports": [
+              "start_i2c_write_all",
+              "I2C_Controller_v1_0_0/start_i2c_write_all"
             ]
           }
         }
@@ -4139,61 +4408,17 @@
           }
         },
         "nets": {
-          "M00_ACLK_1": {
-            "ports": [
-              "M00_ACLK",
-              "m00_couplers/M_ACLK"
-            ]
-          },
-          "M00_ARESETN_1": {
-            "ports": [
-              "M00_ARESETN",
-              "m00_couplers/M_ARESETN"
-            ]
-          },
-          "S00_ACLK_1": {
-            "ports": [
-              "S00_ACLK",
-              "s00_couplers/S_ACLK"
-            ]
-          },
-          "S00_ARESETN_1": {
-            "ports": [
-              "S00_ARESETN",
-              "s00_couplers/S_ARESETN"
-            ]
-          },
-          "S01_ACLK_1": {
-            "ports": [
-              "S01_ACLK",
-              "s01_couplers/S_ACLK"
-            ]
-          },
-          "S01_ARESETN_1": {
-            "ports": [
-              "S01_ARESETN",
-              "s01_couplers/S_ARESETN"
-            ]
-          },
-          "S02_ACLK_1": {
-            "ports": [
-              "S02_ACLK",
-              "s02_couplers/S_ACLK"
-            ]
-          },
-          "S02_ARESETN_1": {
-            "ports": [
-              "S02_ARESETN",
-              "s02_couplers/S_ARESETN"
-            ]
-          },
           "axi_mem_intercon_ACLK_net": {
             "ports": [
               "ACLK",
               "xbar/aclk",
+              "s00_couplers/S_ACLK",
+              "s01_couplers/S_ACLK",
+              "s02_couplers/S_ACLK",
               "s00_couplers/M_ACLK",
               "s01_couplers/M_ACLK",
               "s02_couplers/M_ACLK",
+              "m00_couplers/M_ACLK",
               "m00_couplers/S_ACLK"
             ]
           },
@@ -4201,9 +4426,13 @@
             "ports": [
               "ARESETN",
               "xbar/aresetn",
+              "s00_couplers/S_ARESETN",
+              "s01_couplers/S_ARESETN",
+              "s02_couplers/S_ARESETN",
               "s00_couplers/M_ARESETN",
               "s01_couplers/M_ARESETN",
               "s02_couplers/M_ARESETN",
+              "m00_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN"
             ]
           }
@@ -4335,10 +4564,28 @@
           "fakernet/user_data_write"
         ]
       },
-      "fakernet_start_i2c_write_0": {
+      "fakernet_i2c_waddr_o": {
         "ports": [
-          "fakernet/start_i2c_write_0",
-          "SAMPA_I2C_wrapper/m00_axi_init_axi_txn"
+          "fakernet/i2c_waddr_o",
+          "SAMPA_I2C_wrapper/i2c_waddr_i"
+        ]
+      },
+      "fakernet_start_i2c_read_o": {
+        "ports": [
+          "fakernet/start_i2c_read_o",
+          "SAMPA_I2C_wrapper/start_i2c_read"
+        ]
+      },
+      "fakernet_start_i2c_write_all_o": {
+        "ports": [
+          "fakernet/start_i2c_write_all_o",
+          "SAMPA_I2C_wrapper/start_i2c_write_all"
+        ]
+      },
+      "fakernet_start_i2c_write_o": {
+        "ports": [
+          "fakernet/start_i2c_write_o",
+          "SAMPA_I2C_wrapper/start_i2c_write"
         ]
       },
       "fakernet_txn_0": {
@@ -4376,6 +4623,12 @@
         "ports": [
           "SFP_CLK_P",
           "fakernet/gtrefclk_p_0"
+        ]
+      },
+      "i2c_raddr_i_1": {
+        "ports": [
+          "fakernet/i2c_raddr_o",
+          "SAMPA_I2C_wrapper/i2c_raddr_i"
         ]
       },
       "led_module_LED": {

@@ -21,11 +21,13 @@
 		parameter integer C_M_AXI_DATA_WIDTH	= 32,
 		// Transaction number is the number of write 
     // and read transactions the master will perform as a part of this example memory test.
-		parameter integer C_M_TRANSACTIONS_NUM	= 4
+//		parameter integer C_M_TRANSACTIONS_NUM	= 4
+		parameter integer C_M_TRANSACTIONS_NUM	= 1
 	)
 	(
 		// Users to add ports here
-
+        input wire [24:0] bram_addr,
+		input wire bram_txn,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -213,7 +215,8 @@
 	      end                                                                               
 	    else                                                                       
 	      begin  
-	        init_txn_ff <= INIT_AXI_TXN;
+//	        init_txn_ff <= INIT_AXI_TXN;
+	        init_txn_ff <= bram_txn;
 	        init_txn_ff2 <= init_txn_ff;                                                                 
 	      end                                                                      
 	  end     
@@ -478,13 +481,14 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
 	          begin                                                 
-	            axi_araddr <= 0;                                    
+	            axi_araddr <= bram_addr;                                    
 	          end                                                   
 	          // Signals a new write address/ write data is         
 	          // available by user logic                            
 	        else if (M_AXI_ARREADY && axi_arvalid)                  
 	          begin                                                 
-	            axi_araddr <= axi_araddr + 32'h00000004;            
+//	            axi_araddr <= axi_araddr + 32'h00000004;            
+	            axi_araddr <= axi_araddr;            
 	          end                                                   
 	      end                                                       
 	                                                                
@@ -526,9 +530,10 @@
 	          IDLE:                                                             
 	          // This state is responsible to initiate 
 	          // AXI transaction when init_txn_pulse is asserted 
-	            if ( init_txn_pulse == 1'b1 )                                     
+	            if ( init_txn_pulse == 1'b1)                                     
 	              begin                                                                 
-	                mst_exec_state  <= INIT_WRITE;                                      
+//	                mst_exec_state  <= INIT_WRITE;                                      
+	                mst_exec_state  <= INIT_READ;                                      
 	                ERROR <= 1'b0;
 	                compare_done <= 1'b0;
 	              end                                                                   
@@ -537,33 +542,33 @@
 	                mst_exec_state  <= IDLE;                                    
 	              end                                                                   
 	                                                                                    
-	          INIT_WRITE:                                                               
-	            // This state is responsible to issue start_single_write pulse to       
-	            // initiate a write transaction. Write transactions will be             
-	            // issued until last_write signal is asserted.                          
-	            // write controller                                                     
-	            if (writes_done)                                                        
-	              begin                                                                 
-	                mst_exec_state <= INIT_READ;//                                      
-	              end                                                                   
-	            else                                                                    
-	              begin                                                                 
-	                mst_exec_state  <= INIT_WRITE;                                      
+//	          INIT_WRITE:                                                               
+//	            // This state is responsible to issue start_single_write pulse to       
+//	            // initiate a write transaction. Write transactions will be             
+//	            // issued until last_write signal is asserted.                          
+//	            // write controller                                                     
+//	            if (writes_done)                                                        
+//	              begin                                                                 
+//	                mst_exec_state <= INIT_READ;//                                      
+//	              end                                                                   
+//	            else                                                                    
+//	              begin                                                                 
+//	                mst_exec_state  <= INIT_WRITE;                                      
 	                                                                                    
-	                  if (~axi_awvalid && ~axi_wvalid && ~M_AXI_BVALID && ~last_write && ~start_single_write && ~write_issued)
-	                    begin                                                           
-	                      start_single_write <= 1'b1;                                   
-	                      write_issued  <= 1'b1;                                        
-	                    end                                                             
-	                  else if (axi_bready)                                              
-	                    begin                                                           
-	                      write_issued  <= 1'b0;                                        
-	                    end                                                             
-	                  else                                                              
-	                    begin                                                           
-	                      start_single_write <= 1'b0; //Negate to generate a pulse      
-	                    end                                                             
-	              end                                                                   
+//	                  if (~axi_awvalid && ~axi_wvalid && ~M_AXI_BVALID && ~last_write && ~start_single_write && ~write_issued)
+//	                    begin                                                           
+//	                      start_single_write <= 1'b1;                                   
+//	                      write_issued  <= 1'b1;                                        
+//	                    end                                                             
+//	                  else if (axi_bready)                                              
+//	                    begin                                                           
+//	                      write_issued  <= 1'b0;                                        
+//	                    end                                                             
+//	                  else                                                              
+//	                    begin                                                           
+//	                      start_single_write <= 1'b0; //Negate to generate a pulse      
+//	                    end                                                             
+//	              end                                                                   
 	                                                                                    
 	          INIT_READ:                                                                
 	            // This state is responsible to issue start_single_read pulse to        
@@ -572,7 +577,8 @@
 	             // read controller                                                     
 	             if (reads_done)                                                        
 	               begin                                                                
-	                 mst_exec_state <= INIT_COMPARE;                                    
+//	                 mst_exec_state <= INIT_COMPARE;                                    
+	                 mst_exec_state <= IDLE;                                    
 	               end                                                                  
 	             else                                                                   
 	               begin                                                                
@@ -593,15 +599,15 @@
 	                   end                                                              
 	               end                                                                  
 	                                                                                    
-	           INIT_COMPARE:                                                            
-	             begin
-	                 // This state is responsible to issue the state of comparison          
-	                 // of written data with the read data. If no error flags are set,      
-	                 // compare_done signal will be asseted to indicate success.            
-	                 ERROR <= error_reg; 
-	                 mst_exec_state <= IDLE;                                    
-	                 compare_done <= 1'b1;                                              
-	             end                                                                  
+//	           INIT_COMPARE:                                                            
+//	             begin
+//	                 // This state is responsible to issue the state of comparison          
+//	                 // of written data with the read data. If no error flags are set,      
+//	                 // compare_done signal will be asseted to indicate success.            
+//	                 ERROR <= error_reg; 
+//	                 mst_exec_state <= IDLE;                                    
+//	                 compare_done <= 1'b1;                                              
+//	             end                                                                  
 	           default :                                                                
 	             begin                                                                  
 	               mst_exec_state  <= IDLE;                                     
