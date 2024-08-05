@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Aug  5 12:19:12 2024
+//Date        : Mon Aug  5 15:31:17 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -1984,7 +1984,7 @@ module s03_couplers_imp_17JAZQP
   assign s03_couplers_to_s03_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=55,numReposBlks=41,numNonXlnxBlks=0,numHierBlks=14,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=12,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=3,da_clkrst_cnt=10,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=65,numReposBlks=51,numNonXlnxBlks=0,numHierBlks=14,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=12,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=18,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_P,
@@ -1999,7 +1999,7 @@ module top_block
     HRSTB_N,
     HRSTB_P,
     LED,
-    RST,
+    PUSH_SW,
     SAMPA_EN_A,
     SAMPA_EN_D,
     SAMPA_I2C_SCL,
@@ -2021,19 +2021,19 @@ module top_block
     TRG_N,
     TRG_P);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.BASECLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.BASECLK, CLK_DOMAIN top_block_BASECLK, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input BASECLK;
-  output BX_SYNC_TRG_P;
-  output BX_SYNX_TRG_N;
-  output [0:0]CLKSOIN_N;
-  output [0:0]CLKSOIN_P;
+  output [0:0]BX_SYNC_TRG_P;
+  output [0:0]BX_SYNX_TRG_N;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_N, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_N;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_P, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
   inout [7:0]GPION;
   inout [7:0]GPIOP;
-  output HBTRG_N;
-  output HBTRG_P;
+  output [0:0]HBTRG_N;
+  output [0:0]HBTRG_P;
   output [3:0]HRSTB_N;
   output [3:0]HRSTB_P;
   output [3:0]LED;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input RST;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.PUSH_SW RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.PUSH_SW, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input PUSH_SW;
   output SAMPA_EN_A;
   output SAMPA_EN_D;
   inout SAMPA_I2C_SCL;
@@ -2055,10 +2055,10 @@ module top_block
   output [3:0]TRG_N;
   output [3:0]TRG_P;
 
-  wire CLK_0_1;
+  wire BASECLK_1;
   wire Net;
   wire Net1;
-  wire RST_1;
+  wire PUSH_SW_1;
   wire [31:0]S00_AXI_1_ARADDR;
   wire [2:0]S00_AXI_1_ARPROT;
   wire [0:0]S00_AXI_1_ARREADY;
@@ -2122,6 +2122,7 @@ module top_block
   wire clk_wiz_0_clk_out3;
   wire clk_wiz_0_clk_out4;
   wire clk_wiz_1_clk_out1;
+  wire clk_wiz_2_clk_out1;
   wire data_gen_user_0_event_commit;
   wire [10:0]data_gen_user_0_event_commit_len;
   wire [9:0]data_gen_user_0_event_offset;
@@ -2201,21 +2202,42 @@ module top_block
   wire [0:0]rst_clk_wiz_0_40M_peripheral_aresetn;
   wire rxn_0_1;
   wire rxp_0_1;
-  wire [0:0]util_ds_buf_0_OBUF_DS_N;
-  wire [0:0]util_ds_buf_0_OBUF_DS_P;
+  wire [3:0]util_ds_buf_0_OBUF_DS_N;
+  wire [3:0]util_ds_buf_0_OBUF_DS_P;
+  wire [3:0]util_ds_buf_1_OBUF_DS_N;
+  wire [3:0]util_ds_buf_1_OBUF_DS_P;
+  wire [3:0]util_ds_buf_2_OBUF_DS_N;
+  wire [3:0]util_ds_buf_2_OBUF_DS_P;
+  wire [0:0]util_ds_buf_3_OBUF_DS_N;
+  wire [0:0]util_ds_buf_3_OBUF_DS_P;
+  wire [0:0]util_ds_buf_4_OBUF_DS_N;
+  wire [0:0]util_ds_buf_4_OBUF_DS_P;
+  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]vio_0_probe_out0;
+  wire [3:0]xlconcat_0_dout;
+  wire [3:0]xlconcat_1_dout;
+  wire [3:0]xlconcat_2_dout;
   wire [6:0]xlconstant_0_dout;
+  wire [0:0]xlconstant_1_dout;
 
-  assign CLKSOIN_N[0] = util_ds_buf_0_OBUF_DS_N;
-  assign CLKSOIN_P[0] = util_ds_buf_0_OBUF_DS_P;
-  assign CLK_0_1 = BASECLK;
+  assign BASECLK_1 = BASECLK;
+  assign BX_SYNC_TRG_P[0] = util_ds_buf_4_OBUF_DS_P;
+  assign BX_SYNX_TRG_N[0] = util_ds_buf_4_OBUF_DS_N;
+  assign CLKSOIN_N[3:0] = util_ds_buf_0_OBUF_DS_N;
+  assign CLKSOIN_P[3:0] = util_ds_buf_0_OBUF_DS_P;
   assign CLK_CFG[6:0] = xlconstant_0_dout;
+  assign HBTRG_N[0] = util_ds_buf_3_OBUF_DS_N;
+  assign HBTRG_P[0] = util_ds_buf_3_OBUF_DS_P;
+  assign HRSTB_N[3:0] = util_ds_buf_2_OBUF_DS_N;
+  assign HRSTB_P[3:0] = util_ds_buf_2_OBUF_DS_P;
   assign LED[3:0] = led_module_LED;
-  assign RST_1 = RST;
+  assign PUSH_SW_1 = PUSH_SW;
   assign SAMPA_EN_A = SAMPA_PON_v1_0_0_sampa_power_on;
   assign SAMPA_EN_D = SAMPA_PON_v1_0_0_sampa_power_on;
   assign SFP0TXN = fakernet_txn_0;
   assign SFP0TXP = fakernet_txp_0;
+  assign TRG_N[3:0] = util_ds_buf_1_OBUF_DS_N;
+  assign TRG_P[3:0] = util_ds_buf_1_OBUF_DS_P;
   assign gtrefclk_n_0_1 = SFP_CLK_N;
   assign gtrefclk_p_0_1 = SFP_CLK_P;
   assign rxn_0_1 = SFP0RXN;
@@ -2384,15 +2406,19 @@ module top_block
         .S03_AXI_wstrb(SAMPA_PON_v1_0_0_m00_axi_WSTRB),
         .S03_AXI_wvalid(SAMPA_PON_v1_0_0_m00_axi_WVALID));
   top_block_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(CLK_0_1),
+       (.clk_in1(BASECLK_1),
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out3(clk_wiz_0_clk_out3),
         .clk_out4(clk_wiz_0_clk_out4),
         .clk_out5(clk_in_0_1));
   top_block_clk_wiz_1_0 clk_wiz_1
-       (.clk_in1(CLK_0_1),
+       (.clk_in1(clk_wiz_0_clk_out1),
         .clk_out1(clk_wiz_1_clk_out1),
-        .power_down(1'b0));
+        .power_down(util_vector_logic_0_Res));
+  top_block_clk_wiz_2_0 clk_wiz_2
+       (.clk_in1(clk_wiz_0_clk_out1),
+        .clk_out1(clk_wiz_2_clk_out1),
+        .power_down(xlconstant_1_dout));
   top_block_data_gen_user_0_0 data_gen_user_0
        (.clk(clk_in_0_1),
         .event_commit(data_gen_user_0_event_commit),
@@ -2532,7 +2558,7 @@ module top_block
         .s_axi_aclk(clk_in_0_1),
         .s_axi_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn));
   reset_imp_UQ2QSL reset
-       (.RST(RST_1),
+       (.RST(PUSH_SW_1),
         .peripheral_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
         .probe_out0(vio_0_probe_out0),
         .slowest_sync_clk(clk_in_0_1));
@@ -2546,9 +2572,48 @@ module top_block
   top_block_util_ds_buf_0_1 util_ds_buf_0
        (.OBUF_DS_N(util_ds_buf_0_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_0_OBUF_DS_P),
-        .OBUF_IN(clk_wiz_1_clk_out1));
+        .OBUF_IN(xlconcat_0_dout));
+  top_block_util_ds_buf_1_1 util_ds_buf_1
+       (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
+        .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),
+        .OBUF_IN(xlconcat_1_dout));
+  top_block_util_ds_buf_2_0 util_ds_buf_2
+       (.OBUF_DS_N(util_ds_buf_2_OBUF_DS_N),
+        .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
+        .OBUF_IN(xlconcat_2_dout));
+  top_block_util_ds_buf_3_0 util_ds_buf_3
+       (.OBUF_DS_N(util_ds_buf_3_OBUF_DS_N),
+        .OBUF_DS_P(util_ds_buf_3_OBUF_DS_P),
+        .OBUF_IN(clk_wiz_2_clk_out1));
+  top_block_util_ds_buf_4_0 util_ds_buf_4
+       (.OBUF_DS_N(util_ds_buf_4_OBUF_DS_N),
+        .OBUF_DS_P(util_ds_buf_4_OBUF_DS_P),
+        .OBUF_IN(clk_wiz_2_clk_out1));
+  top_block_util_vector_logic_0_3 util_vector_logic_0
+       (.Op1(SAMPA_PON_v1_0_0_sampa_power_on),
+        .Res(util_vector_logic_0_Res));
+  top_block_xlconcat_0_0 xlconcat_0
+       (.In0(clk_wiz_1_clk_out1),
+        .In1(clk_wiz_1_clk_out1),
+        .In2(clk_wiz_1_clk_out1),
+        .In3(clk_wiz_1_clk_out1),
+        .dout(xlconcat_0_dout));
+  top_block_xlconcat_1_0 xlconcat_1
+       (.In0(clk_wiz_2_clk_out1),
+        .In1(clk_wiz_2_clk_out1),
+        .In2(clk_wiz_2_clk_out1),
+        .In3(clk_wiz_2_clk_out1),
+        .dout(xlconcat_1_dout));
+  top_block_xlconcat_2_0 xlconcat_2
+       (.In0(clk_wiz_2_clk_out1),
+        .In1(clk_wiz_2_clk_out1),
+        .In2(clk_wiz_2_clk_out1),
+        .In3(clk_wiz_2_clk_out1),
+        .dout(xlconcat_2_dout));
   top_block_xlconstant_0_3 xlconstant_0
        (.dout(xlconstant_0_dout));
+  top_block_xlconstant_1_4 xlconstant_1
+       (.dout(xlconstant_1_dout));
 endmodule
 
 module top_block_axi_mem_intercon_3

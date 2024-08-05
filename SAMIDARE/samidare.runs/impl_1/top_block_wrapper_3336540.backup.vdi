@@ -1,0 +1,934 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Aug  5 15:17:32 2024
+# Process ID: 3336540
+# Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1
+# Command line: vivado -log top_block_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_block_wrapper.tcl -notrace
+# Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.vdi
+# Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/vivado.jou
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 5746.400 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+#-----------------------------------------------------------
+source top_block_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+Command: link_design -top top_block_wrapper -part xcau15p-sbvb484-1-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0/top_block_SAMPA_PON_v1_0_0_0.dcp' for cell 'top_block_i/SAMPA_PON_v1_0_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.dcp' for cell 'top_block_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0.dcp' for cell 'top_block_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.dcp' for cell 'top_block_i/clk_wiz_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_data_gen_user_0_0/top_block_data_gen_user_0_0.dcp' for cell 'top_block_i/data_gen_user_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.dcp' for cell 'top_block_i/rst_clk_wiz_0_40M'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1.dcp' for cell 'top_block_i/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1.dcp' for cell 'top_block_i/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0.dcp' for cell 'top_block_i/util_ds_buf_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_3_0/top_block_util_ds_buf_3_0.dcp' for cell 'top_block_i/util_ds_buf_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_0/top_block_util_ds_buf_4_0.dcp' for cell 'top_block_i/util_ds_buf_4'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3.dcp' for cell 'top_block_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0.dcp' for cell 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_1/top_block_xbar_1.dcp' for cell 'top_block_i/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_RESET_INST_0_0/top_block_RESET_INST_0_0.dcp' for cell 'top_block_i/fakernet/RESET_INST_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.dcp' for cell 'top_block_i/fakernet/fakernet_top_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_gig_ethernet_pcs_pma_0_0/top_block_gig_ethernet_pcs_pma_0_0.dcp' for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.dcp' for cell 'top_block_i/fakernet/mii_initializer_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_native_to_axi_lite_v_0_0/top_block_native_to_axi_lite_v_0_0.dcp' for cell 'top_block_i/fakernet/native_to_axi_lite_v_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.dcp' for cell 'top_block_i/fakernet/reg_switch_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_0/top_block_util_vector_logic_0_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_1_0/top_block_util_vector_logic_1_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_2_0/top_block_util_vector_logic_2_0.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_1_1/top_block_util_vector_logic_1_1.dcp' for cell 'top_block_i/fakernet/if_gate/util_vector_logic_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_1/top_block_util_vector_logic_0_1.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_1_2/top_block_util_vector_logic_1_2.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_2_1/top_block_util_vector_logic_2_1.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_3_0/top_block_util_vector_logic_3_0.dcp' for cell 'top_block_i/fakernet/if_gate1/util_vector_logic_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_0_0/top_block_LED_REG_READ_SEPARAT_0_0.dcp' for cell 'top_block_i/led_module/LED_REG_READ_SEPARAT_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_1_0/top_block_LED_REG_READ_SEPARAT_1_0.dcp' for cell 'top_block_i/led_module/LED_REG_READ_SEPARAT_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.dcp' for cell 'top_block_i/led_module/u_led_inst_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_2/top_block_util_vector_logic_0_2.dcp' for cell 'top_block_i/led_module/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_0_0/top_block_axi_bram_ctrl_0_0.dcp' for cell 'top_block_i/reg_bram/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_bram_ctrl_1_0/top_block_axi_bram_ctrl_1_0.dcp' for cell 'top_block_i/reg_bram/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_blk_mem_gen_0_0/top_block_blk_mem_gen_0_0.dcp' for cell 'top_block_i/reg_bram/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.dcp' for cell 'top_block_i/reset/rst_clk_wiz_0_125M'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.dcp' for cell 'top_block_i/reset/vio_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_0/top_block_xpm_cdc_gen_0_0.dcp' for cell 'top_block_i/reset/xpm_cdc_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/.Xil/Vivado-3336540-e16fpga01/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.dcp' for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i'
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1948.898 ; gain = 0.000 ; free physical = 40299 ; free virtual = 57695
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: top_block_i/util_ds_buf_4/U0/<const0>.
+WARNING: [Netlist 29-1115] Found multi-term driver net: top_block_i/util_ds_buf_3/U0/<const0>.
+WARNING: [Netlist 29-1115] Found multi-term driver net: top_block_i/util_ds_buf_2/U0/<const0>.
+WARNING: [Netlist 29-1115] Found multi-term driver net: top_block_i/util_ds_buf_1/U0/<const0>.
+WARNING: [Netlist 29-1115] Found multi-term driver net: top_block_i/util_ds_buf_0/U0/<const0>.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. top_block_i/clk_wiz_2/inst/clkin1_ibuf 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'top_block_i/clk_wiz_2/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_3/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_4/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Chipscope 16-324] Core: top_block_i/reset/vio_0 UUID: 499384b9-f309-5737-b91f-db55ccc11929 
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_board.xdc] for cell 'top_block_i/clk_wiz_1/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_board.xdc] for cell 'top_block_i/clk_wiz_1/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0_clocks.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0_clocks.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0_board.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0_board.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xdc] for cell 'top_block_i/clk_wiz_2/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xdc:57]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xdc] for cell 'top_block_i/clk_wiz_2/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_board.xdc] for cell 'top_block_i/clk_wiz_2/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_board.xdc] for cell 'top_block_i/clk_wiz_2/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_0/top_block_util_ds_buf_4_0_board.xdc] for cell 'top_block_i/util_ds_buf_4/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_0/top_block_util_ds_buf_4_0_board.xdc] for cell 'top_block_i/util_ds_buf_4/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_3_0/top_block_util_ds_buf_3_0_board.xdc] for cell 'top_block_i/util_ds_buf_3/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_3_0/top_block_util_ds_buf_3_0_board.xdc] for cell 'top_block_i/util_ds_buf_3/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0_board.xdc] for cell 'top_block_i/util_ds_buf_2/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0_board.xdc] for cell 'top_block_i/util_ds_buf_2/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_board.xdc] for cell 'top_block_i/util_ds_buf_1/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_board.xdc] for cell 'top_block_i/util_ds_buf_1/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1_board.xdc] for cell 'top_block_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1_board.xdc] for cell 'top_block_i/util_ds_buf_0/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0.xdc] for cell 'top_block_i/clk_wiz_1/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0.xdc] for cell 'top_block_i/clk_wiz_1/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3_board.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3_board.xdc] for cell 'top_block_i/rst_clk_wiz_0_40M/U0'
+CRITICAL WARNING: [Designutils 20-1275] Could not find cell 'U0' within module 'top_block_util_ds_buf_0_0' for instance 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0'. The XDC file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_0/top_block_util_ds_buf_0_0_board.xdc will not be read for this cell.
+CRITICAL WARNING: [Designutils 20-1275] Could not find cell 'U0' within module 'top_block_util_ds_buf_1_0' for instance 'top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1'. The XDC file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_0/top_block_util_ds_buf_1_0_board.xdc will not be read for this cell.
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_board.xdc] for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_board.xdc] for cell 'top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0_board.xdc] for cell 'top_block_i/reset/rst_clk_wiz_0_125M/U0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/reset/vio_0'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_0/top_block_vio_0_0.xdc] for cell 'top_block_i/reset/vio_0'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc] for cell 'top_block_i/clk_wiz_0/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc] for cell 'top_block_i/clk_wiz_0/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_board.xdc] for cell 'top_block_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_board.xdc] for cell 'top_block_i/clk_wiz_0/inst'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/GTH.xdc]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/GTH.xdc]
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc]
+WARNING: [Constraints 18-619] A clock with name 'BASECLK' already exists, overwriting the previous clock with the same name. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:23]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'TRG_N[1]' of a differential pair cannot be placed on a positive package pin 'T20' (IOBM). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:144]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'TRG_P[1]' of a differential pair cannot be placed on a negative package pin 'U20' (IOBS). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:145]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'TRG_N[2]' of a differential pair cannot be placed on a positive package pin 'T22' (IOBM). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:146]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'TRG_P[2]' of a differential pair cannot be placed on a negative package pin 'U22' (IOBS). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:147]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'HRSTB_N[1]' of a differential pair cannot be placed on a positive package pin 'V21' (IOBM). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:152]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'HRSTB_P[1]' of a differential pair cannot be placed on a negative package pin 'W21' (IOBS). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:153]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'HRSTB_N[2]' of a differential pair cannot be placed on a positive package pin 'V22' (IOBM). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:154]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'HRSTB_P[2]' of a differential pair cannot be placed on a negative package pin 'W22' (IOBS). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:155]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'HRSTB_N[3]' of a differential pair cannot be placed on a positive package pin 'D21' (IOBM). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:156]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'HRSTB_P[3]' of a differential pair cannot be placed on a negative package pin 'D22' (IOBS). [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc:157]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc]
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc]
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/synth/gig_ethernet_pcs_pma_0.xdc] for cell 'top_block_i/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/pcs_pma_i/inst'
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell top_block_i/reg_bram/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Project 1-1687] 22 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.418 ; gain = 0.000 ; free physical = 39972 ; free virtual = 57367
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 51 instances were transformed.
+  FDCPE => FDCPE (FDCE, FDPE, LDCE, LUT3, VCC): 5 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 18 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 14 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+
+76 Infos, 25 Warnings, 17 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2526.418 ; gain = 789.609 ; free physical = 39972 ; free virtual = 57367
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors, 18 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2590.449 ; gain = 64.031 ; free physical = 39957 ; free virtual = 57353
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: e8b5d2b2
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2590.449 ; gain = 0.000 ; free physical = 39952 ; free virtual = 57348
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = fb319b39867c4256.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2876.973 ; gain = 0.000 ; free physical = 39678 ; free virtual = 57076
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1ed4a24da
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39678 ; free virtual = 57076
+
+Phase 2 Retarget
+INFO: [Opt 31-1287] Pulled Inverter top_block_i/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_1 into driver instance top_block_i/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/in_sm/s[reg][1][seq_arm_reset_no][7]_i_2 into driver instance top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/in_sm/s[reg][1][seq_arm_reset_no][7]_i_3, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/out_sm/s[wr_onehot][6]_i_1 into driver instance top_block_i/fakernet/fakernet_top_0/inst/t/fakernet/out_sm/s[wr_onehot][6]_i_2, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter top_block_i/led_module/u_led_inst_0/inst/r3[0]_i_1 into driver instance top_block_i/led_module/u_led_inst_0/inst/axi_txn_i_3, which resulted in an inversion of 5 pins
+INFO: [Opt 31-138] Pushed 32 inverter(s) to 359 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 20d7e9ea3
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39683 ; free virtual = 57082
+INFO: [Opt 31-389] Phase Retarget created 111 cells and removed 187 cells
+INFO: [Opt 31-1021] In phase Retarget, 58 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 33 load pin(s).
+Phase 3 Constant propagation | Checksum: 230f2f9ac
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39683 ; free virtual = 57082
+INFO: [Opt 31-389] Phase Constant propagation created 95 cells and removed 1127 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 46 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 9dd0be6e
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39682 ; free virtual = 57081
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 899 cells
+INFO: [Opt 31-1021] In phase Sweep, 818 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 5 BUFG optimization | Checksum: 9dd0be6e
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39682 ; free virtual = 57081
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+INFO: [Opt 31-1021] In phase BUFG optimization, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 6 Shift Register Optimization | Checksum: 9dd0be6e
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39682 ; free virtual = 57081
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+INFO: [Opt 31-1287] Pulled Inverter top_block_i/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_2 into driver instance top_block_i/axi_mem_intercon/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[0]_i_4, which resulted in an inversion of 3 pins
+Phase 7 Post Processing Netlist | Checksum: 110609479
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39682 ; free virtual = 57081
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 54 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             111  |             187  |                                             58  |
+|  Constant propagation         |              95  |            1127  |                                             46  |
+|  Sweep                        |               0  |             899  |                                            818  |
+|  BUFG optimization            |               0  |               0  |                                              2  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                             54  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2876.973 ; gain = 0.000 ; free physical = 39682 ; free virtual = 57081
+Ending Logic Optimization Task | Checksum: 5336eb13
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2876.973 ; gain = 19.844 ; free physical = 39682 ; free virtual = 57081
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for dna_prim
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 34 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 34 newly gated: 0 Total Ports: 68
+Ending PowerOpt Patch Enables Task | Checksum: 788e32a9
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39293 ; free virtual = 56692
+Ending Power Optimization Task | Checksum: 788e32a9
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3996.168 ; gain = 1119.195 ; free physical = 39315 ; free virtual = 56714
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 183811e13
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39320 ; free virtual = 56719
+Ending Final Cleanup Task | Checksum: 183811e13
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39320 ; free virtual = 56719
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39320 ; free virtual = 56719
+Ending Netlist Obfuscation Task | Checksum: 183811e13
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39320 ; free virtual = 56719
+INFO: [Common 17-83] Releasing license: Implementation
+118 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 3996.168 ; gain = 1469.750 ; free physical = 39320 ; free virtual = 56719
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3996.168 ; gain = 0.000 ; free physical = 39303 ; free virtual = 56705
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
+Command: report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39277 ; free virtual = 56679
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8eec0a36
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39277 ; free virtual = 56679
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39277 ; free virtual = 56679
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 10a9a5d14
+
+Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.45 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39273 ; free virtual = 56675
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 134a76bc6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39250 ; free virtual = 56653
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 134a76bc6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39250 ; free virtual = 56653
+Phase 1 Placer Initialization | Checksum: 134a76bc6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39250 ; free virtual = 56653
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 13edeb4cb
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39227 ; free virtual = 56629
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: c02cb055
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39222 ; free virtual = 56624
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: c02cb055
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4028.266 ; gain = 0.000 ; free physical = 39214 ; free virtual = 56617
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: fcb9560f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39217 ; free virtual = 56620
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: fcb9560f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39217 ; free virtual = 56620
+Phase 2.1.1 Partition Driven Placement | Checksum: fcb9560f
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39218 ; free virtual = 56621
+Phase 2.1 Floorplanning | Checksum: f135d655
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39218 ; free virtual = 56621
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: f135d655
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39218 ; free virtual = 56621
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: f135d655
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4056.621 ; gain = 28.355 ; free physical = 39218 ; free virtual = 56621
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: fd98de58
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39202 ; free virtual = 56604
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 305 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 137 nets or LUTs. Breaked 0 LUT, combined 137 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 6 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 6 nets.  Re-placed 16 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 6 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 16 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39200 ; free virtual = 56603
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39201 ; free virtual = 56603
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            137  |                   137  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     6  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            137  |                   143  |           0  |           5  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 17be7fa0a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:08 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39201 ; free virtual = 56603
+Phase 2.4 Global Placement Core | Checksum: 13e1560df
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39195 ; free virtual = 56598
+Phase 2 Global Placement | Checksum: 13e1560df
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39200 ; free virtual = 56603
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: effc0cfb
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39201 ; free virtual = 56604
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a3cabfbc
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39200 ; free virtual = 56603
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 19f94b638
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39192 ; free virtual = 56595
+
+Phase 3.3.2 Flow Legalize Slice Clusters
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 12b0cd4fd
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39192 ; free virtual = 56595
+
+Phase 3.3.3 Slice Area Swap
+
+Phase 3.3.3.1 Slice Area Swap Initial
+Phase 3.3.3.1 Slice Area Swap Initial | Checksum: 1fa87564d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39189 ; free virtual = 56591
+Phase 3.3.3 Slice Area Swap | Checksum: 1fa87564d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39187 ; free virtual = 56590
+Phase 3.3 Small Shape DP | Checksum: 17f0ca6ba
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39195 ; free virtual = 56597
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 221cb01c6
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39195 ; free virtual = 56597
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: f0829dd0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39195 ; free virtual = 56597
+Phase 3 Detail Placement | Checksum: f0829dd0
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:10 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39195 ; free virtual = 56597
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 8ddfad3e
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.037 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 45fd5573
+
+Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39196 ; free virtual = 56598
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: af86e22a
+
+Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39196 ; free virtual = 56598
+Phase 4.1.1.1 BUFG Insertion | Checksum: 8ddfad3e
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39196 ; free virtual = 56598
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.037. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 13d55fc58
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39196 ; free virtual = 56598
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39196 ; free virtual = 56598
+Phase 4.1 Post Commit Optimization | Checksum: 13d55fc58
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39196 ; free virtual = 56598
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39193 ; free virtual = 56595
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1d681c02a
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39193 ; free virtual = 56596
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1d681c02a
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39197 ; free virtual = 56600
+Phase 4.3 Placer Reporting | Checksum: 1d681c02a
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39197 ; free virtual = 56600
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39197 ; free virtual = 56600
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39197 ; free virtual = 56600
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d618e4f0
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39197 ; free virtual = 56600
+Ending Placer Task | Checksum: 122daee94
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:12 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39197 ; free virtual = 56600
+INFO: [Common 17-83] Releasing license: Implementation
+157 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 44.363 ; free physical = 39242 ; free virtual = 56645
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.35 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39226 ; free virtual = 56643
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_block_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39221 ; free virtual = 56628
+INFO: [runtcl-4] Executing : report_utilization -file top_block_wrapper_utilization_placed.rpt -pb top_block_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_block_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39228 ; free virtual = 56635
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.55 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39200 ; free virtual = 56607
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+166 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.37 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39185 ; free virtual = 56607
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 6d5133f9 ConstDB: 0 ShapeSum: 1c5df6c9 RouteDB: 992bc3d2
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.22 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39106 ; free virtual = 56518
+Post Restoration Checksum: NetGraph: 782003d7 NumContArr: a81dd548 Constraints: 46bf7205 Timing: 0
+Phase 1 Build RT Design | Checksum: 166fd4b24
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39101 ; free virtual = 56514
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 166fd4b24
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39064 ; free virtual = 56476
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1612969df
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39064 ; free virtual = 56476
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 14db9dfee
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39066 ; free virtual = 56479
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 185cbc125
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39063 ; free virtual = 56475
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.273  | TNS=0.000  | WHS=-0.702 | THS=-35.002|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 16952fb17
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39056 ; free virtual = 56469
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.273  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1cc0b8f3c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39056 ; free virtual = 56469
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00211243 %
+  Global Horizontal Routing Utilization  = 0.00225469 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 10045
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 8352
+  Number of Partially Routed Nets     = 1693
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 17c9a6d16
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39060 ; free virtual = 56472
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 17c9a6d16
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39060 ; free virtual = 56472
+Phase 3 Initial Routing | Checksum: 2eeeba2f3
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39043 ; free virtual = 56455
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1901
+ Number of Nodes with overlaps = 134
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.780  | TNS=0.000  | WHS=-0.254 | THS=-6.228 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 21895c25c
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38937 ; free virtual = 56349
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.780  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1129f23a9
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56373
+Phase 4 Rip-up And Reroute | Checksum: 1129f23a9
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56373
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 13196fd47
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56373
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 13196fd47
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56373
+Phase 5 Delay and Skew Optimization | Checksum: 13196fd47
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56373
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 103eca353
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56374
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.780  | TNS=0.000  | WHS=0.001  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: b10b6924
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56374
+Phase 6 Post Hold Fix | Checksum: b10b6924
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56374
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.29969 %
+  Global Horizontal Routing Utilization  = 1.71454 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 146f11d30
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38961 ; free virtual = 56374
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 146f11d30
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38960 ; free virtual = 56372
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 146f11d30
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38958 ; free virtual = 56371
+
+Phase 10 Resolve XTalk
+Phase 10 Resolve XTalk | Checksum: 146f11d30
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38959 ; free virtual = 56371
+
+Phase 11 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.780  | TNS=0.000  | WHS=0.001  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 11 Post Router Timing | Checksum: 146f11d30
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 38959 ; free virtual = 56371
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39105 ; free virtual = 56517
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+182 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:15 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39105 ; free virtual = 56517
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.41 . Memory (MB): peak = 4072.629 ; gain = 0.000 ; free physical = 39087 ; free virtual = 56516
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_block_wrapper_drc_routed.rpt -pb top_block_wrapper_drc_routed.pb -rpx top_block_wrapper_drc_routed.rpx
+Command: report_drc -file top_block_wrapper_drc_routed.rpt -pb top_block_wrapper_drc_routed.pb -rpx top_block_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_block_wrapper_methodology_drc_routed.rpt -pb top_block_wrapper_methodology_drc_routed.pb -rpx top_block_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file top_block_wrapper_methodology_drc_routed.rpt -pb top_block_wrapper_methodology_drc_routed.pb -rpx top_block_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
+Command: report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+194 Infos, 25 Warnings, 22 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 4080.633 ; gain = 8.004 ; free physical = 39037 ; free virtual = 56461
+INFO: [runtcl-4] Executing : report_route_status -file top_block_wrapper_route_status.rpt -pb top_block_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_block_wrapper_timing_summary_routed.rpt -pb top_block_wrapper_timing_summary_routed.pb -rpx top_block_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_block_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_block_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_block_wrapper_bus_skew_routed.rpt -pb top_block_wrapper_bus_skew_routed.pb -rpx top_block_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  5 15:18:58 2024...

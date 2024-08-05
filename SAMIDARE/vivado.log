@@ -1552,3 +1552,1157 @@ Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/sa
 [Mon Aug  5 12:19:17 2024] Launched synth_1...
 Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
 launch_runs: Time (s): cpu = 00:00:40 ; elapsed = 00:00:13 . Memory (MB): peak = 21895.867 ; gain = 0.000 ; free physical = 42122 ; free virtual = 59502
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 12:24:18 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+delete_bd_objs [get_bd_nets CLK_0_1]
+connect_bd_net [get_bd_ports BASECLK] [get_bd_pins clk_wiz_0/clk_in1]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins clk_wiz_1/clk_in1]
+connect_bd_net [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on] [get_bd_pins clk_wiz_1/power_down]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 fakernet/util_vector_logic_0
+endgroup
+move_bd_cells [get_bd_cells /] [get_bd_cells fakernet/util_vector_logic_0]
+set_property -dict [list \
+  CONFIG.C_OPERATION {not} \
+  CONFIG.C_SIZE {1} \
+] [get_bd_cells util_vector_logic_0]
+delete_bd_objs [get_bd_nets SAMPA_PON_v1_0_0_sampa_power_on]
+connect_bd_net [get_bd_ports SAMPA_EN_A] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on]
+connect_bd_net [get_bd_ports SAMPA_EN_D] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on]
+connect_bd_net [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on] [get_bd_pins util_vector_logic_0/Op1]
+connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins clk_wiz_1/power_down]
+regenerate_bd_layout
+startgroup
+set_property CONFIG.PRIM_SOURCE {Global_buffer} [get_bd_cells clk_wiz_1]
+endgroup
+reset_run top_block_clk_wiz_1_0_synth_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_clk_wiz_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_vector_logic_0_3
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_clk_wiz_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_vector_logic_0_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 48b4526471ba726b to dir: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/4/8/48b4526471ba726b/top_block_util_vector_logic_0_1_sim_netlist.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/4/8/48b4526471ba726b/top_block_util_vector_logic_0_1_stub.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/4/8/48b4526471ba726b/top_block_util_vector_logic_0_1.dcp to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/4/8/48b4526471ba726b/top_block_util_vector_logic_0_1_sim_netlist.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/4/8/48b4526471ba726b/top_block_util_vector_logic_0_1_stub.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_block_util_vector_logic_0_3, cache-ID = 48b4526471ba726b; cache size = 225.711 MB.
+[Mon Aug  5 12:29:56 2024] Launched top_block_clk_wiz_1_0_synth_1, synth_1...
+Run output will be captured here:
+top_block_clk_wiz_1_0_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_clk_wiz_1_0_synth_1/runme.log
+synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 12:29:56 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:38 ; elapsed = 00:00:13 . Memory (MB): peak = 22095.812 ; gain = 180.824 ; free physical = 41910 ; free virtual = 59294
+regenerate_bd_layout
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 12:33:44 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 12:33:44 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 22095.812 ; gain = 0.000 ; free physical = 42185 ; free virtual = 59605
+INFO: [Netlist 29-17] Analyzing 225 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.45 . Memory (MB): peak = 22095.812 ; gain = 0.000 ; free physical = 42075 ; free virtual = 59495
+Restored from archive | CPU: 0.500000 secs | Memory: 12.413216 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.46 . Memory (MB): peak = 22095.812 ; gain = 0.000 ; free physical = 42075 ; free virtual = 59495
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 22095.812 ; gain = 0.000 ; free physical = 41882 ; free virtual = 59302
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+startgroup
+set_property CONFIG.C_SIZE {4} [get_bd_cells util_ds_buf_0]
+endgroup
+delete_bd_objs [get_bd_nets util_ds_buf_0_OBUF_DS_N]
+delete_bd_objs [get_bd_nets util_ds_buf_0_OBUF_DS_P]
+delete_bd_objs [get_bd_ports CLKSOIN_P]
+delete_bd_objs [get_bd_ports CLKSOIN_N]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_ports CLKSOIN_N]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_ports CLKSOIN_P]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets util_ds_buf_0_OBUF_DS_P]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_nets util_ds_buf_0_OBUF_DS_P]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_ports CLKSOIN_P]'
+redo
+INFO: [Common 17-16] redo 'delete_bd_objs [get_bd_ports CLKSOIN_N]'
+create_bd_port -dir O -from 3 -to 0 -type clk CLKSOIN_P
+create_bd_port -dir O -from 3 -to 0 -type clk CLKSOIN_N
+set_property location {2070 1256} [get_bd_ports CLKSOIN_P]
+startgroup
+connect_bd_net [get_bd_ports CLKSOIN_P] [get_bd_pins util_ds_buf_0/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_0/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_0_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports CLKSOIN_N] [get_bd_pins util_ds_buf_0/OBUF_DS_P]
+endgroup
+delete_bd_objs [get_bd_nets util_ds_buf_0_OBUF_DS_P]
+connect_bd_net [get_bd_ports CLKSOIN_P] [get_bd_pins util_ds_buf_0/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_0/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_0_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports CLKSOIN_N] [get_bd_pins util_ds_buf_0/OBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_0/OBUF_DS_N> is being overridden by the user with net <util_ds_buf_0_OBUF_DS_N>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+regenerate_bd_layout
+reset_run top_block_util_ds_buf_0_1_synth_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 .
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_0_1
+[Mon Aug  5 12:40:09 2024] Launched top_block_util_ds_buf_0_1_synth_1, synth_1...
+Run output will be captured here:
+top_block_util_ds_buf_0_1_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_util_ds_buf_0_1_synth_1/runme.log
+synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 12:40:09 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:33 ; elapsed = 00:00:12 . Memory (MB): peak = 22278.879 ; gain = 0.000 ; free physical = 41775 ; free virtual = 59159
+delete_bd_objs [get_bd_nets RST_1] [get_bd_ports RST]
+startgroup
+create_bd_port -dir I -type rst PUSH_SW
+endgroup
+connect_bd_net [get_bd_ports PUSH_SW] [get_bd_pins reset/RST]
+reset_run impl_1
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+[Mon Aug  5 12:41:40 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:50 ; elapsed = 00:00:11 . Memory (MB): peak = 22393.871 ; gain = 0.000 ; free physical = 41589 ; free virtual = 58975
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 12:45:24 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 12:45:24 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 22393.871 ; gain = 0.000 ; free physical = 41910 ; free virtual = 59330
+INFO: [Netlist 29-17] Analyzing 228 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.46 . Memory (MB): peak = 22393.871 ; gain = 0.000 ; free physical = 41817 ; free virtual = 59238
+Restored from archive | CPU: 0.500000 secs | Memory: 12.183487 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.46 . Memory (MB): peak = 22393.871 ; gain = 0.000 ; free physical = 41817 ; free virtual = 59238
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 22393.871 ; gain = 0.000 ; free physical = 41654 ; free virtual = 59075
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 12:52:40 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 12:52:40 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_1
+endgroup
+delete_bd_objs [get_bd_cells util_ds_buf_1]
+generate_target all [get_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41637 ; free virtual = 59059
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41833 ; free virtual = 59255
+INFO: [Netlist 29-17] Analyzing 228 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.53 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41486 ; free virtual = 58909
+Restored from archive | CPU: 0.570000 secs | Memory: 12.413277 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.54 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41478 ; free virtual = 58901
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41440 ; free virtual = 58862
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property is_loc_fixed true [get_ports [list  BX_SYNX_TRG_N]]
+set_property is_loc_fixed false [get_ports [list  BX_SYNX_TRG_N]]
+startgroup
+place_ports {CLKSOIN_P[3]} F21
+set_property is_loc_fixed true [get_ports [list  {CLKSOIN_P[3]}]]
+endgroup
+set_property is_loc_fixed true [get_ports [list  {CLKSOIN_P[0]}]]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+save_constraints -force
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 14:15:58 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 14:15:58 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41648 ; free virtual = 59071
+INFO: [Netlist 29-17] Analyzing 228 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.47 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41549 ; free virtual = 58972
+Restored from archive | CPU: 0.510000 secs | Memory: 19.695099 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.47 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41549 ; free virtual = 58972
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 22482.078 ; gain = 0.000 ; free physical = 41405 ; free virtual = 58828
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 14:23:35 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+set_property is_loc_fixed true [get_ports [list  BX_SYNX_TRG_N]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 14:28:35 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_1
+endgroup
+set_property location {6 2157 741} [get_bd_cells util_ds_buf_1]
+set_property location {6 2175 165} [get_bd_cells util_ds_buf_1]
+set_property CONFIG.C_SIZE {4} [get_bd_cells util_ds_buf_1]
+set_property location {6 2175 117} [get_bd_cells util_ds_buf_1]
+set_property CONFIG.C_BUF_TYPE {OBUFDS} [get_bd_cells util_ds_buf_1]
+connect_bd_net [get_bd_ports TRG_P] [get_bd_pins util_ds_buf_1/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_1/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_1_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports TRG_N] [get_bd_pins util_ds_buf_1/OBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_1/OBUF_DS_N> is being overridden by the user with net <util_ds_buf_1_OBUF_DS_N>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_2
+endgroup
+set_property location {6 2171 12} [get_bd_cells util_ds_buf_2]
+set_property -dict [list \
+  CONFIG.C_BUF_TYPE {OBUFDS} \
+  CONFIG.C_SIZE {4} \
+] [get_bd_cells util_ds_buf_2]
+connect_bd_net [get_bd_ports HRSTB_P] [get_bd_pins util_ds_buf_2/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_2/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_2_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports HRSTB_N] [get_bd_pins util_ds_buf_2/OBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_2/OBUF_DS_N> is being overridden by the user with net <util_ds_buf_2_OBUF_DS_N>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_3
+endgroup
+set_property location {5 1738 44} [get_bd_cells util_ds_buf_3]
+set_property CONFIG.C_BUF_TYPE {OBUFDS} [get_bd_cells util_ds_buf_3]
+connect_bd_net [get_bd_ports HBTRG_P] [get_bd_pins util_ds_buf_3/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_3/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_3_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports HBTRG_N] [get_bd_pins util_ds_buf_3/OBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_3/OBUF_DS_N> is being overridden by the user with net <util_ds_buf_3_OBUF_DS_N>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_4
+endgroup
+set_property location {5 1859 164} [get_bd_cells util_ds_buf_3]
+set_property location {5 1906 49} [get_bd_cells util_ds_buf_4]
+set_property CONFIG.C_BUF_TYPE {OBUFDS} [get_bd_cells util_ds_buf_4]
+connect_bd_net [get_bd_ports BX_SYNC_TRG_P] [get_bd_pins util_ds_buf_4/OBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_4/OBUF_DS_P> is being overridden by the user with net <util_ds_buf_4_OBUF_DS_P>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+connect_bd_net [get_bd_ports BX_SYNX_TRG_N] [get_bd_pins util_ds_buf_4/OBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin </util_ds_buf_4/OBUF_DS_N> is being overridden by the user with net <util_ds_buf_4_OBUF_DS_N>. This pin will not be connected as a part of interface connection <CLK_OUT_D3>.
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/util_ds_buf_1/OBUF_IN
+/util_ds_buf_2/OBUF_IN
+/util_ds_buf_3/OBUF_IN
+/util_ds_buf_4/OBUF_IN
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_4_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_4_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {4.5 1649 1476} [get_bd_cells xlconcat_0]
+set_property CONFIG.NUM_PORTS {4} [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_nets clk_wiz_1_clk_out1]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins xlconcat_0/In2]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins xlconcat_0/In3]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins util_ds_buf_0/OBUF_IN]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_1/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_2/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_3/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_4/OBUF_IN]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_4/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_3/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_2/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_1/OBUF_IN]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_2
+endgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_2]
+set_property -dict [list \
+  CONFIG.AUTO_PRIMITIVE {PLL} \
+  CONFIG.CLKOUT1_DRIVES {Buffer} \
+  CONFIG.CLKOUT1_JITTER {174.629} \
+  CONFIG.CLKOUT1_PHASE_ERROR {114.212} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40.000} \
+  CONFIG.CLKOUT2_DRIVES {Buffer} \
+  CONFIG.CLKOUT3_DRIVES {Buffer} \
+  CONFIG.CLKOUT4_DRIVES {Buffer} \
+  CONFIG.CLKOUT5_DRIVES {Buffer} \
+  CONFIG.CLKOUT6_DRIVES {Buffer} \
+  CONFIG.CLKOUT7_DRIVES {Buffer} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {8} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {20} \
+  CONFIG.MMCM_COMPENSATION {AUTO} \
+  CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {true} \
+  CONFIG.PRIMITIVE {Auto} \
+  CONFIG.USE_LOCKED {false} \
+  CONFIG.USE_POWER_DOWN {true} \
+  CONFIG.USE_RESET {false} \
+] [get_bd_cells clk_wiz_2]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port} Manual_Source {Auto}}  [get_bd_pins clk_wiz_2/clk_in1]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_1/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_2/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_3/OBUF_IN]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_4/OBUF_IN]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_4/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_3/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_2/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (40 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins util_ds_buf_1/OBUF_IN]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port} Manual_Source {Auto}}  [get_bd_pins clk_wiz_2/clk_in1]'
+INFO: [Common 17-17] undo 'startgroup'
+connect_bd_net [get_bd_pins clk_wiz_2/clk_in1] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_4/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_3/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_1/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_2/OBUF_IN]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {4.5 1218 1200} [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins clk_wiz_2/power_down]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_2 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_2/clk_in1(100000000) and /clk_wiz_0/clk_out1(40000000)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_4_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_4_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {144.719} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {8} \
+] [get_bd_cells clk_wiz_2]
+endgroup
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_2 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_2/clk_in1(100000000) and /clk_wiz_0/clk_out1(40000000)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_4_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_4_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC PROPAGATED] [get_bd_cells clk_wiz_2]
+endgroup
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_2 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_block_util_ds_buf_4_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_clk_wiz_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_1_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_3_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_util_ds_buf_4_0
+[Mon Aug  5 15:16:13 2024] Launched top_block_util_ds_buf_4_0_synth_1, top_block_util_ds_buf_2_0_synth_1, top_block_util_ds_buf_1_1_synth_1, top_block_util_ds_buf_3_0_synth_1, top_block_clk_wiz_2_0_synth_1, synth_1...
+Run output will be captured here:
+top_block_util_ds_buf_4_0_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_util_ds_buf_4_0_synth_1/runme.log
+top_block_util_ds_buf_2_0_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_util_ds_buf_2_0_synth_1/runme.log
+top_block_util_ds_buf_1_1_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_util_ds_buf_1_1_synth_1/runme.log
+top_block_util_ds_buf_3_0_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_util_ds_buf_3_0_synth_1/runme.log
+top_block_clk_wiz_2_0_synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_clk_wiz_2_0_synth_1/runme.log
+synth_1: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 15:16:13 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:52 ; elapsed = 00:00:15 . Memory (MB): peak = 22948.480 ; gain = 0.000 ; free physical = 41193 ; free virtual = 58587
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 15:19:44 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 22948.480 ; gain = 0.000 ; free physical = 41426 ; free virtual = 58856
+INFO: [Netlist 29-17] Analyzing 239 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'top_block_i/clk_wiz_2/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_3/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_4/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.45 . Memory (MB): peak = 22948.480 ; gain = 0.000 ; free physical = 41326 ; free virtual = 58757
+Restored from archive | CPU: 0.470000 secs | Memory: 11.827423 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.46 . Memory (MB): peak = 22948.480 ; gain = 0.000 ; free physical = 41326 ; free virtual = 58757
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 22948.480 ; gain = 0.000 ; free physical = 41187 ; free virtual = 58617
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property is_loc_fixed true [get_ports [list  {HRSTB_P[2]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 15:26:15 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1
+endgroup
+set_property CONFIG.NUM_PORTS {4} [get_bd_cells xlconcat_1]
+delete_bd_objs [get_bd_nets clk_wiz_2_clk_out1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_2
+endgroup
+set_property CONFIG.NUM_PORTS {4} [get_bd_cells xlconcat_2]
+connect_bd_net [get_bd_pins xlconcat_2/dout] [get_bd_pins util_ds_buf_2/OBUF_IN]
+connect_bd_net [get_bd_pins xlconcat_1/dout] [get_bd_pins util_ds_buf_1/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_3/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins util_ds_buf_4/OBUF_IN]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_1/In3]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_1/In2]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_1/In1]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_1/In0]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_2/In3]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_2/In2]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_2/In1]
+connect_bd_net [get_bd_pins clk_wiz_2/clk_out1] [get_bd_pins xlconcat_2/In0]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_2 clk_wiz propagate
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fakernet/fakernet_top_0/spi_sdi
+/fakernet/fakernet_top_0/sw
+/fakernet/fakernet_top_0/btn
+/fakernet/fakernet_top_0/ja0
+/fakernet/fakernet_top_0/ja2
+/fakernet/fakernet_top_0/ja3
+/fakernet/fakernet_top_0/jd0
+/fakernet/fakernet_top_0/jd2
+/fakernet/fakernet_top_0/uart_rx
+/fakernet/reg_switch_0/i2c_rdata_i
+/fakernet/reg_switch_0/i2c_done
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_2 .
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+[Mon Aug  5 15:31:22 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 15:31:22 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41180 ; free virtual = 58576
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41315 ; free virtual = 58747
+INFO: [Netlist 29-17] Analyzing 239 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'top_block_i/clk_wiz_2/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_3/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_4/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.47 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41228 ; free virtual = 58660
+Restored from archive | CPU: 0.510000 secs | Memory: 11.830994 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.47 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41228 ; free virtual = 58660
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41147 ; free virtual = 58579
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 16:05:01 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 16:05:01 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 16:12:23 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 16:12:23 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 16:15:26 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 16:15:26 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41151 ; free virtual = 58585
+INFO: [Netlist 29-17] Analyzing 239 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[23]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[24]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[25]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[26]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+CRITICAL WARNING: [Netlist 29-358] Reg 'top_block_i/fakernet/mii_initializer_0/inst/mdioData_reg[27]' of type 'FDCPE' cannot be timed accurately. Hardware behavior may be unpredictable. Use check_timing command for more information. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v:82]
+Resolution: Recode your design, so that you do not depend on both asynchronous set and reset for your desired functionality.
+Convert at least one of them to synchronous signal, or get rid of at least one of those.
+Often, the use of "initial" value will help you get rid of one of the asynchronous set/reset signals.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'top_block_i/clk_wiz_2/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_0/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_1/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[2]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_2/OBUF_IN[3]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_3/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'top_block_i/util_ds_buf_4/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.46 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41068 ; free virtual = 58501
+Restored from archive | CPU: 0.500000 secs | Memory: 11.834229 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.46 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 41068 ; free virtual = 58501
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 23299.012 ; gain = 0.000 ; free physical = 40927 ; free virtual = 58360
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property is_loc_fixed true [get_ports [list  {TRG_P[2]}]]
+set_property is_loc_fixed true [get_ports [list  {TRG_P[1]}]]
+set_property is_loc_fixed true [get_ports [list  {HRSTB_P[3]}]]
+set_property is_loc_fixed true [get_ports [list  {HRSTB_P[1]}]]
+save_constraints -force
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Mon Aug  5 16:20:15 2024] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+[Mon Aug  5 16:20:15 2024] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-08:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+set_property PROGRAM.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.bit} [get_hw_devices xcau15p_0]
+set_property PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property FULL_PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+current_hw_device [get_hw_devices xcau15p_0]
+refresh_hw_device [lindex [get_hw_devices xcau15p_0] 0]
+INFO: [Labtools 27-1435] Device xcau15p (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property FULL_PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property PROGRAM.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.bit} [get_hw_devices xcau15p_0]
+program_hw_devices [get_hw_devices xcau15p_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 24368.633 ; gain = 0.000 ; free physical = 38883 ; free virtual = 56392
+refresh_hw_device [lindex [get_hw_devices xcau15p_0] 0]
+INFO: [Labtools 27-2302] Device xcau15p (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+set_property PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property FULL_PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property PROGRAM.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.bit} [get_hw_devices xcau15p_0]
+program_hw_devices [get_hw_devices xcau15p_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 24402.508 ; gain = 0.000 ; free physical = 38849 ; free virtual = 56366
+refresh_hw_device [lindex [get_hw_devices xcau15p_0] 0]
+INFO: [Labtools 27-2302] Device xcau15p (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+regenerate_bd_layout -hierarchy [get_bd_cells fakernet]
+open_bd_design {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd}

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Mon Aug  5 12:13:49 2024
+-- Date        : Mon Aug  5 12:30:16 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_sim_netlist.vhdl
@@ -46,28 +46,25 @@ architecture STRUCTURE of top_block_clk_wiz_1_0_clk_wiz is
   signal NLW_mmcme4_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
-  attribute BOX_TYPE of clkin1_ibuf : label is "PRIMITIVE";
-  attribute CAPACITANCE : string;
-  attribute CAPACITANCE of clkin1_ibuf : label is "DONT_CARE";
-  attribute IBUF_DELAY_VALUE : string;
-  attribute IBUF_DELAY_VALUE of clkin1_ibuf : label is "0";
-  attribute IFD_DELAY_VALUE : string;
-  attribute IFD_DELAY_VALUE of clkin1_ibuf : label is "AUTO";
-  attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkin1_bufg : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of clkout1_buf : label is "BUFG";
+  attribute XILINX_LEGACY_PRIM of clkin1_bufg : label is "BUFG";
   attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of clkin1_bufg : label is "VCC:CE";
+  attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM of clkout1_buf : label is "BUFG";
   attribute XILINX_TRANSFORM_PINMAP of clkout1_buf : label is "VCC:CE";
   attribute BOX_TYPE of mmcme4_adv_inst : label is "PRIMITIVE";
   attribute OPT_MODIFIED : string;
   attribute OPT_MODIFIED of mmcme4_adv_inst : label is "MLO";
 begin
-clkin1_ibuf: unisim.vcomponents.IBUF
+clkin1_bufg: unisim.vcomponents.BUFGCE
     generic map(
-      CCIO_EN => "TRUE",
-      IOSTANDARD => "DEFAULT"
+      CE_TYPE => "ASYNC",
+      SIM_DEVICE => "ULTRASCALE_PLUS"
     )
         port map (
+      CE => '1',
       I => clk_in1,
       O => clk_in1_top_block_clk_wiz_1_0
     );

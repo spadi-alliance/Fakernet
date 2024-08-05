@@ -7,7 +7,7 @@ set_property PACKAGE_PIN E4 [get_ports SFP0TXP]
 set_property PACKAGE_PIN E3 [get_ports SFP0TXN]
 
 
-create_clock -name SFP_CLK_P -period 6.4 [get_ports SFP_CLK_P]
+create_clock -period 6.400 -name SFP_CLK_P [get_ports SFP_CLK_P]
 
 #set_property IOSTANDARD LVDS [get_ports SFP1RXP]
 #set_property IOSTANDARD LVDS [get_ports SFP1RXN]
@@ -19,6 +19,8 @@ create_clock -name SFP_CLK_P -period 6.4 [get_ports SFP_CLK_P]
 #set_property IOSTANDARD LVDS [get_ports {SFP0TXN SFP0TXP}]
 #set_property DIFF_TERM TRUE  [get_ports SFP0TXP]
 #set_property DIFF_TERM TRUE  [get_ports SFP1TX*]
+
+
 
 
 

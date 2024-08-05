@@ -131,6 +131,17 @@ set_property used_in_implementation false [get_files -all /home/nagafusa/work/sp
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_3_0/top_block_util_ds_buf_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_3_0/top_block_util_ds_buf_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_0/top_block_util_ds_buf_4_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_0/top_block_util_ds_buf_4_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/top_block_ooc.xdc]
 
 read_ip -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci

@@ -78,7 +78,7 @@ module top_block_clk_wiz_1_0_clk_wiz
   //------------------------------------
 wire clk_in1_top_block_clk_wiz_1_0;
 wire clk_in2_top_block_clk_wiz_1_0;
-  IBUF clkin1_ibuf
+  BUFG clkin1_bufg
    (.O (clk_in1_top_block_clk_wiz_1_0),
     .I (clk_in1));
 

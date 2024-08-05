@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Aug  5 12:13:49 2024
+// Date        : Mon Aug  5 12:30:16 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_sim_netlist.v
@@ -21,7 +21,7 @@ module top_block_clk_wiz_1_0
   input power_down;
   input clk_in1;
 
-  (* IBUF_LOW_PWR *) wire clk_in1;
+  wire clk_in1;
   wire clk_out1;
   wire power_down;
 
@@ -66,14 +66,14 @@ module top_block_clk_wiz_1_0_clk_wiz
   wire [15:0]NLW_mmcme4_adv_inst_DO_UNCONNECTED;
 
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* CAPACITANCE = "DONT_CARE" *) 
-  (* IBUF_DELAY_VALUE = "0" *) 
-  (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUF #(
-    .CCIO_EN("TRUE"),
-    .IOSTANDARD("DEFAULT")) 
-    clkin1_ibuf
-       (.I(clk_in1),
+  (* XILINX_LEGACY_PRIM = "BUFG" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
+  BUFGCE #(
+    .CE_TYPE("ASYNC"),
+    .SIM_DEVICE("ULTRASCALE_PLUS")) 
+    clkin1_bufg
+       (.CE(1'b1),
+        .I(clk_in1),
         .O(clk_in1_top_block_clk_wiz_1_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* XILINX_LEGACY_PRIM = "BUFG" *) 

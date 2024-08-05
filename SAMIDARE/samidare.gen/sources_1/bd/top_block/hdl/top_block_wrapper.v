@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Aug  5 12:19:12 2024
+//Date        : Mon Aug  5 15:31:17 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block_wrapper.bd
 //Design      : top_block_wrapper
@@ -23,7 +23,7 @@ module top_block_wrapper
     HRSTB_N,
     HRSTB_P,
     LED,
-    RST,
+    PUSH_SW,
     SAMPA_EN_A,
     SAMPA_EN_D,
     SAMPA_I2C_SCL,
@@ -45,19 +45,19 @@ module top_block_wrapper
     TRG_N,
     TRG_P);
   input BASECLK;
-  output BX_SYNC_TRG_P;
-  output BX_SYNX_TRG_N;
-  output [0:0]CLKSOIN_N;
-  output [0:0]CLKSOIN_P;
+  output [0:0]BX_SYNC_TRG_P;
+  output [0:0]BX_SYNX_TRG_N;
+  output [3:0]CLKSOIN_N;
+  output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
   inout [7:0]GPION;
   inout [7:0]GPIOP;
-  output HBTRG_N;
-  output HBTRG_P;
+  output [0:0]HBTRG_N;
+  output [0:0]HBTRG_P;
   output [3:0]HRSTB_N;
   output [3:0]HRSTB_P;
   output [3:0]LED;
-  input RST;
+  input PUSH_SW;
   output SAMPA_EN_A;
   output SAMPA_EN_D;
   inout SAMPA_I2C_SCL;
@@ -80,19 +80,19 @@ module top_block_wrapper
   output [3:0]TRG_P;
 
   wire BASECLK;
-  wire BX_SYNC_TRG_P;
-  wire BX_SYNX_TRG_N;
-  wire [0:0]CLKSOIN_N;
-  wire [0:0]CLKSOIN_P;
+  wire [0:0]BX_SYNC_TRG_P;
+  wire [0:0]BX_SYNX_TRG_N;
+  wire [3:0]CLKSOIN_N;
+  wire [3:0]CLKSOIN_P;
   wire [6:0]CLK_CFG;
   wire [7:0]GPION;
   wire [7:0]GPIOP;
-  wire HBTRG_N;
-  wire HBTRG_P;
+  wire [0:0]HBTRG_N;
+  wire [0:0]HBTRG_P;
   wire [3:0]HRSTB_N;
   wire [3:0]HRSTB_P;
   wire [3:0]LED;
-  wire RST;
+  wire PUSH_SW;
   wire SAMPA_EN_A;
   wire SAMPA_EN_D;
   wire SAMPA_I2C_SCL;
@@ -128,7 +128,7 @@ module top_block_wrapper
         .HRSTB_N(HRSTB_N),
         .HRSTB_P(HRSTB_P),
         .LED(LED),
-        .RST(RST),
+        .PUSH_SW(PUSH_SW),
         .SAMPA_EN_A(SAMPA_EN_A),
         .SAMPA_EN_D(SAMPA_EN_D),
         .SAMPA_I2C_SCL(SAMPA_I2C_SCL),
