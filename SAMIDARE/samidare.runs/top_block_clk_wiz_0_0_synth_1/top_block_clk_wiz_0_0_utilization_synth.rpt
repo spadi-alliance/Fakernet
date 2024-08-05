@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Jul  4 14:51:12 2024
+| Date         : Mon Aug  5 12:13:48 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_clk_wiz_0_0_utilization_synth.rpt -pb top_block_clk_wiz_0_0_utilization_synth.pb
 | Design       : top_block_clk_wiz_0_0
@@ -106,8 +106,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 |       Site Type      | Used | Fixed | Prohibited | Available | Util% |
 +----------------------+------+-------+------------+-----------+-------+
 | GLOBAL CLOCK BUFFERs |    5 |     0 |          0 |       192 |  2.60 |
-|   BUFGCE             |    5 |     0 |          0 |        84 |  5.95 |
-|   BUFGCE_DIV         |    0 |     0 |          0 |        12 |  0.00 |
+|   BUFGCE             |    4 |     0 |          0 |        84 |  4.76 |
+|   BUFGCE_DIV         |    1 |     0 |          0 |        12 |  8.33 |
 |   BUFG_GT            |    0 |     0 |          0 |        72 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |          0 |        24 |  0.00 |
 | PLL                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -153,10 +153,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| BUFGCE     |    5 |               Clock |
+| BUFGCE     |    4 |               Clock |
 | MMCME4_ADV |    1 |               Clock |
 | INBUF      |    1 |                 I/O |
 | IBUFCTRL   |    1 |              Others |
+| BUFGCE_DIV |    1 |               Clock |
 +------------+------+---------------------+
 
 

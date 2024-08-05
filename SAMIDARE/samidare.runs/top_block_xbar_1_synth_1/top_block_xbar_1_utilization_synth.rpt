@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sun Aug  4 20:20:50 2024
+| Date         : Mon Aug  5 12:13:53 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_xbar_1_utilization_synth.rpt -pb top_block_xbar_1_utilization_synth.pb
 | Design       : top_block_xbar_1
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  278 |     0 |          0 |     77760 |  0.36 |
-|   LUT as Logic          |  278 |     0 |          0 |     77760 |  0.36 |
+| CLB LUTs*               |  329 |     0 |          0 |     77760 |  0.42 |
+|   LUT as Logic          |  329 |     0 |          0 |     77760 |  0.42 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
-| CLB Registers           |  141 |     0 |          0 |    155520 |  0.09 |
-|   Register as Flip Flop |  141 |     0 |          0 |    155520 |  0.09 |
+| CLB Registers           |  147 |     0 |          0 |    155520 |  0.09 |
+|   Register as Flip Flop |  147 |     0 |          0 |    155520 |  0.09 |
 |   Register as Latch     |    0 |     0 |          0 |    155520 |  0.00 |
 | CARRY8                  |    0 |     0 |          0 |      9720 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     38880 |  0.00 |
@@ -62,7 +62,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 20    |          Yes |         Set |            - |
-| 121   |          Yes |       Reset |            - |
+| 127   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,14 +153,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT4     |  156 |                 CLB |
-| FDRE     |  121 |            Register |
-| LUT6     |   67 |                 CLB |
-| LUT5     |   44 |                 CLB |
-| LUT2     |   24 |                 CLB |
+| LUT4     |  188 |                 CLB |
+| FDRE     |  127 |            Register |
+| LUT6     |   99 |                 CLB |
+| LUT2     |   58 |                 CLB |
 | FDSE     |   20 |            Register |
-| LUT3     |    6 |                 CLB |
-| LUT1     |    1 |                 CLB |
+| LUT5     |   13 |                 CLB |
+| LUT3     |   11 |                 CLB |
+| LUT1     |    2 |                 CLB |
 +----------+------+---------------------+
 
 

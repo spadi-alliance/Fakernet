@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Sun Aug  4 20:20:45 2024
+// Date        : Mon Aug  5 12:13:46 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0_sim_netlist.v
@@ -765,12 +765,12 @@ module top_block_reg_switch_0_0_reg_switch
         .Q(regacc_data_wr_o[9]),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFFBF0080)) 
+    .INIT(32'hFBFF0800)) 
     regacc_done_i_1
        (.I0(regacc_done_i),
         .I1(axi_aresetn),
-        .I2(state_sw__0[1]),
-        .I3(state_sw__0[0]),
+        .I2(state_sw__0[0]),
+        .I3(state_sw__0[1]),
         .I4(regacc_done_o),
         .O(regacc_done_i_1_n_0));
   FDRE regacc_done_reg

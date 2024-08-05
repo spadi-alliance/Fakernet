@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1722771288" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp">
+<GenRun Id="synth_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1722827957" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="top_block_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top_block_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_block_wrapper_utilization_synth.pb"/>
@@ -400,6 +400,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/imports/SAMPA_PON_v1_0_M00_AXI.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/SAMPA_PON_v1_0.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/top_block/top_block.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -507,6 +521,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/SAMPA_POWER_ON.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top_block_wrapper"/>
@@ -563,6 +585,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_SAMPA_PON_v1_0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_ds_buf_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_util_ds_buf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_xbar_1"/>

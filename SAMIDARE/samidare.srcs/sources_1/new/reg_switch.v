@@ -21,9 +21,9 @@
 
 
 module reg_switch #(
-	parameter  C_ADDR_I2C_READ	       = 32'hAA000000,//should be fixed
-	parameter  C_ADDR_SAMPA_READ       = 32'hAA000000,//should be fixed
-	parameter  C_ADDR_I2C_WRITE_ALL	   = 32'hAA000000,//should be fixed
+	parameter  C_ADDR_I2C_READ	       = 32'hAA000004,//should be fixed
+	parameter  C_ADDR_SAMPA_READ       = 32'hAA000008,//should be fixed
+	parameter  C_ADDR_I2C_WRITE_ALL	   = 32'hAA00000C,//should be fixed
 	parameter  C_ADDR_I2C_WRITE	       = 32'hAA000000 //should be fixed
     )
     (
@@ -120,6 +120,7 @@ module reg_switch #(
 	                               state_sw <= STATE_SAMPA_READ;
 	                           end else
 	                       if(regacc_write_i==1'b1 || regacc_read_i==1'b1)
+	 
                                begin
                                    regacc_addr      <= regacc_addr_i;
                                    regacc_data_wr   <= regacc_data_wr_i;
@@ -130,6 +131,8 @@ module reg_switch #(
                                begin
                                    state_sw <= STATE_IDLE;
                                end
+                               
+                           
 	                   end
 	               STATE_REG:
 	                   begin
@@ -154,6 +157,7 @@ module reg_switch #(
                            if(i2c_done==1'b1)
                                begin
                                    state_sw <= STATE_IDLE;
+                                   regacc_done <= 1'b1;
                                end
 	                       
 	                   end
@@ -163,6 +167,7 @@ module reg_switch #(
                            start_i2c_write         <= 1'b0;
 	                       if(i2c_done==1'b1)
 	                           begin
+	                               state_sw <= STATE_IDLE;
 	                               sampa_rdata <= i2c_rdata_i;
 	                               regacc_done<=1'b1;	                               
 	                           end

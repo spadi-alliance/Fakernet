@@ -5914,3 +5914,1924 @@ dismissDialog("Methodology Violations"); // aO
 // [GUI Memory]: 305 MB (+233kb) [26:03:15]
 selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
 // Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 231 MB. Current time: 8/4/24, 9:08:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/4/24, 9:38:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/4/24, 10:08:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/4/24, 10:38:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/4/24, 11:08:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/4/24, 11:38:24 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/5/24, 12:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/5/24, 12:38:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 1:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 1:38:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 2:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 2:38:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 3:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 3:38:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 4:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/5/24, 4:38:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 5:08:24 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 5:38:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 6:08:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/5/24, 6:38:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 7:08:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 7:38:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 227 MB. Current time: 8/5/24, 8:08:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 228 MB. Current time: 8/5/24, 8:38:25 AM JST
+// Elapsed time: 44067 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0_M00_AXI.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_switch.v", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0_M01_AXI.v", 5); // o
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 14, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 15, true); // f - Node
+// Run Command: PAResourceCommand.PACommandNames_SHOW_IMPLEMENTED_DESIGN
+// Elapsed time: 164 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 5, true); // f - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IP_INTEGRATOR
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectList(PAResourceOtoP.PlatformSetupView_TYPE_LIST, "AXI Stream Port", 1); // k
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 14,026 MB. GUI used memory: 232 MB. Current time: 8/5/24, 9:08:25 AM JST
+// Elapsed time: 1116 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 14,068 MB. GUI used memory: 232 MB. Current time: 8/5/24, 9:38:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,026 MB. GUI used memory: 232 MB. Current time: 8/5/24, 10:08:25 AM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 14,025 MB. GUI used memory: 232 MB. Current time: 8/5/24, 10:38:25 AM JST
+// Elapsed time: 5755 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+// Elapsed time: 306 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 88, 206, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 21 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), mii_initializer_0 : top_block_mii_initializer_0_0 (Module Reference Wrapper)]", 21); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper)]", 23, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper)]", 23, true, false, false, false, false, true); // D - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HOptionPane Warning: ''top_block_reg_switch_0_0.xci' IP is part of a block design. Please use the block design 'top_block' to customize the IP. (Re-customize IP)'
+selectButton("OptionPane.button", "OK"); // JButton
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v)]", 24, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v)]", 24, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), xlconstant_0 : top_block_xlconstant_0_0 (top_block_xlconstant_0_0.xci)]", 25, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v)]", 24, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v)]", 24, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v), inst : reg_switch (reg_switch.v)]", 25, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block (top_block.v), fakernet : fakernet_imp_CWUDB9 (top_block.v), reg_switch_0 : top_block_reg_switch_0_0 (Module Reference Wrapper), top_block_reg_switch_0_0 (top_block_reg_switch_0_0.v), inst : reg_switch (reg_switch.v)]", 25, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("reg_switch.v", 366, 169); // ac
+selectCodeEditor("reg_switch.v", 371, 170); // ac
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 14,279 MB (+162166kb) [40:21:34]
+// Elapsed time: 21 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_module_reference top_block_reg_switch_0_0 
+// HMemoryUtils.trashcanNow. Engine heap size: 14,636 MB. GUI used memory: 242 MB. Current time: 8/5/24, 10:57:00 AM JST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// Tcl Message: Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd' 
+// TclEventType: FILE_SET_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_block_reg_switch_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+dismissDialog("Refresh Changed Modules"); // bq
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_reg_switch_0_0.v", 11); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_switch.v", 4); // o
+selectCodeEditor("reg_switch.v", 459, 222); // ac
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("reg_switch.v", 469, 278); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("reg_switch.v", 429, 330); // ac
+selectCodeEditor("reg_switch.v", 429, 323); // ac
+selectCodeEditor("reg_switch.v", 449, 294); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 14,802 MB. GUI used memory: 236 MB. Current time: 8/5/24, 10:58:25 AM JST
+// Elapsed time: 12 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference top_block_reg_switch_0_0 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// Tcl Message: Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_block_reg_switch_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Platform Setup", 1); // o
+selectList(PAResourceOtoP.PlatformSetupView_TYPE_LIST, "Clock", 2); // k
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Elapsed time: 80 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 15, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 15, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main_io.xdc", 11); // o
+selectMenuItem((HResource) null, "New Vertical Group"); // JMenuItem
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Elapsed time: 15 seconds
+selectCodeEditor("main_io.xdc", 216, 175); // ac
+// Run Command: RDIResourceCommand.RDICommands_FIND
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Find"); // f
+selectCodeEditor("main_io.xdc", 244, 87); // ac
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc"); // d.c
+// Elapsed time: 13 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+// Elapsed time: 656 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// WARNING: HEventQueue.dispatchEvent() is taking  1046 ms.
+// Elapsed time: 34 seconds
+dismissDialog("Re-customize IP"); // C
+// Elapsed time: 11 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// Elapsed time: 32 seconds
+setText("CLKOUT2 REQUESTED OUT FREQ", "10"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out6", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1027 ms.
+// Elapsed time: 13 seconds
+setText("CLKOUT6 REQUESTED OUT FREQ", "320.000"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 11 seconds
+setText("CLKOUT6 REQUESTED OUT FREQ", (String) null); // v
+setText("CLKOUT6 REQUESTED OUT FREQ", (String) null); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out6", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [GUI Memory]: 320 MB (+47kb) [40:39:01]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(PAResourceAtoD.CustomizeErrorDialog_OK, "OK"); // a
+dismissDialog("Errors Found"); // y
+selectCheckBox((HResource) null, "clk_out6", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out6", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out6", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 10 seconds
+setText("CLKOUT6 REQUESTED OUT FREQ", "100.0"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED OUT FREQ", "10.0"); // v
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Re-customize IP"); // m
+// Tcl Message: startgroup 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: endgroup 
+dismissDialog("Customize IP"); // bq
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 24 seconds
+dismissDialog("Re-customize IP"); // C
+// [GUI Memory]: 342 MB (+6251kb) [40:40:19]
+// Elapsed time: 44 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectCheckBox((HResource) null, "clk_out6", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: startgroup 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 24 seconds
+dismissDialog("Re-customize IP"); // C
+// [GUI Memory]: 360 MB (+1501kb) [40:41:33]
+// Elapsed time: 71 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+setText("CLKOUT2 REQUESTED OUT FREQ", "320.0", true); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1026 ms.
+// Elapsed time: 22 seconds
+setText("CLKOUT2 REQUESTED OUT FREQ", "160.000", true); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED OUT FREQ", "160.000", true); // v
+selectCheckBox((HResource) null, "clk_out2", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1626 ms.
+selectCheckBox((HResource) null, "clk_out2", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out2", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1086 ms.
+selectCheckBox((HResource) null, "clk_out2", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out3", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out4", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out5", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1055 ms.
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+// [GUI Memory]: 397 MB (+19708kb) [40:43:08]
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 174, 401, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ao
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clk"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 0, "Clocking Wizard", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 0); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 0, "Clocking Wizard", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1 
+// Tcl Message: endgroup 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports BASECLK] [get_bd_pins clk_wiz_1/clk_in1] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 12 seconds
+dismissDialog("Re-customize IP"); // C
+// Elapsed time: 94 seconds
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // v: TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // v: TRUE
+setText("PRIM IN FREQ", "40.000"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectRadioButton((HResource) null, "Auto"); // cC
+// WARNING: HEventQueue.dispatchEvent() is taking  1144 ms.
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+setText("CLKOUT1 REQUESTED OUT FREQ", "320.000", true); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// Tcl Command: 'set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Customize Pin"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // C
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// Elapsed time: 12 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 52 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cH
+// Elapsed time: 11 seconds
+selectCheckBox((HResource) null, "Dynamic Phase Shift", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "Dynamic Phase Shift", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cH
+// Elapsed time: 21 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cH
+// Elapsed time: 14 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [GUI Memory]: 424 MB (+6727kb) [40:52:25]
+// Elapsed time: 289 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectCheckBox((HResource) null, "clk_out2", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 14,199 MB. GUI used memory: 308 MB. Current time: 8/5/24, 11:28:25 AM JST
+// Elapsed time: 15 seconds
+selectCheckBox((HResource) null, "clk_out2", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 241 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // cH
+// Elapsed time: 11 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "MMCM Settings", 2); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// Elapsed time: 103 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list \   CONFIG.CLKOUT1_DRIVES {Buffer} \   CONFIG.CLKOUT1_JITTER {128.655} \   CONFIG.CLKOUT1_PHASE_ERROR {166.174} \   CONFIG.CLKOUT2_JITTER {152.933} \   CONFIG.CLKOUT2_MATCHED_ROUTING {false} \   CONFIG.CLKOUT2_PHASE_ERROR {166.174} \   CONFIG.CLKOUT2_USED {false} \   CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \   CONFIG.MMCM_CLKFBOUT_MULT_F {30.000} \   CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.750} \   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \   CONFIG.NUM_OUT_CLKS {1} \   CONFIG.USE_DYN_PHASE_SHIFT {false} \ ] [get_bd_cells clk_wiz_1] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 290, 410, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "buf"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_0 
+// Tcl Message: endgroup 
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 273ms to process. Increasing delay to 2000 ms.
+// Tcl Command: 'set_property location {3 743 1363} [get_bd_cells util_ds_buf_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 743 1363} [get_bd_cells util_ds_buf_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 13 seconds
+selectRadioButton((HResource) null, "OBUFDS"); // aN
+// Elapsed time: 15 seconds
+selectRadioButton((HResource) null, "BUFG PS"); // aN
+selectRadioButton((HResource) null, "IOBUFDS"); // aN
+selectRadioButton((HResource) null, "OBUFDS"); // aN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property CONFIG.C_BUF_TYPE {OBUFDS} [get_bd_cells util_ds_buf_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins util_ds_buf_0/OBUF_IN] 
+// Tcl Command: 'set_property location {5 2635 -33} [get_bd_cells util_ds_buf_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {5 2635 -33} [get_bd_cells util_ds_buf_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports CLKSOIN_P] [get_bd_pins util_ds_buf_0/OBUF_DS_P] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports CLKSOIN_N] [get_bd_pins util_ds_buf_0/OBUF_DS_N] 
+// Elapsed time: 19 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 30 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 311, 94, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 23 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 422, 216, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ao
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SAMPA_EN_A"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir O SAMPA_EN_A 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 414, 302, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+// Elapsed time: 25 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SAMPA_EN_D"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I SAMPA_EN_D 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_LAYOUT_STATE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'regenerate_bd_layout' 
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'create_bd_port -dir I SAMPA_EN_D' 
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "SAMPA_EN_D"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir O SAMPA_EN_D 
+// Tcl Command: 'set_property location {1985 362} [get_bd_ports SAMPA_EN_D]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1985 362} [get_bd_ports SAMPA_EN_D] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 38 seconds
+dismissDialog("Re-customize IP"); // C
+// Elapsed time: 22 seconds
+selectCheckBox((HResource) null, "Safe Clock Startup", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "Safe Clock Startup", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "Enable Clock Monitoring", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "Enable Clock Monitoring", false); // f: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, (String) null); // v: FALSE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1049 ms.
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL"); // v: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 12 seconds
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, (String) null); // v: FALSE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL"); // v: TRUE
+setText("PRIM IN FREQ", "40.000", true); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 38 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+selectCheckBox((HResource) null, "power_down", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 0); // cH
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectRadioButton((HResource) null, "PLL"); // cC
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectRadioButton((HResource) null, "Auto"); // cC
+// WARNING: HEventQueue.dispatchEvent() is taking  1118 ms.
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Elapsed time: 10 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 1); // cH
+// Elapsed time: 20 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// Tcl Command: 'set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1] 
+// Tcl Message: endgroup 
+// Elapsed time: 21 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 427, 322, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, I2C_Controller_v1_0 (I2C_Controller_v1_0.v)]", 4, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+// Elapsed time: 17 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "SAMPA_POWER_ON"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 31 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/SAMPA_POWER_ON.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/SAMPA_POWER_ON.v 
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, "input", 1); // x
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+// HMemoryUtils.trashcanNow. Engine heap size: 14,927 MB. GUI used memory: 323 MB. Current time: 8/5/24, 11:42:00 AM JST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 20 seconds
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ag
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Create and Package New IP"); // x
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 31 seconds
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "SAMPA_POWER_ON"); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Master", 0); // d
+selectButton(PAResourceItoN.NewIpWizard_ADD_NEW_INTERFACE, (String) null); // j
+selectButton(PAResourceItoN.NewIpWizard_DELETE_SELECTED_INTERFACE, (String) null); // j
+selectButton("CANCEL", "Cancel"); // JButton
+// 'n' command handler elapsed time: 61 seconds
+dismissDialog("Create and Package New IP"); // x
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "SAMPA_POWER_ON"); // Q
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 29 seconds
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Master", 0); // d
+selectButton("CANCEL", "Cancel"); // JButton
+// 'n' command handler elapsed time: 45 seconds
+dismissDialog("Create and Package New IP"); // x
+// Elapsed time: 14 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 142, 258, 546, 543, false, false, false, true, false); // fK - Popup Trigger
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "reg_switch.v", 4); // o
+// Elapsed time: 11 seconds
+selectCodeEditor("reg_switch.v", 241, 342); // ac
+selectCodeEditor("reg_switch.v", 302, 342); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("reg_switch.v", 189, 141); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("reg_switch.v", 526, 194); // ac
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 68 seconds
+selectCodeEditor("reg_switch.v", 618, 250); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 279ms to process. Increasing delay to 2000 ms.
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("reg_switch.v", 616, 250); // ac
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 401ms to process. Increasing delay to 3000 ms.
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 5); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 6); // o
+// [Engine Memory]: 15,103 MB (+115100kb) [41:11:59]
+// TclEventType: DG_GRAPH_STALE
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// HMemoryUtils.trashcanNow. Engine heap size: 14,684 MB. GUI used memory: 340 MB. Current time: 8/5/24, 11:47:30 AM JST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 6); // o
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b
+selectButton("NEXT", "Next >"); // JButton
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "SAMPA_PON"); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectComboBox(PAResourceItoN.NewIpWizard_INTERFACE_MODE, "Master", 0); // d
+// Elapsed time: 26 seconds
+selectButton("NEXT", "Next >"); // JButton
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 51 seconds
+dismissDialog("Create and Package New IP"); // x
+// Tcl Message: create_peripheral user.org user SAMPA_PON 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo 
+// Tcl Message: add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:SAMPA_PON:1.0] 
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:SAMPA_PON:1.0] 
+// Tcl Message: write_peripheral [ipx::find_open_core user.org:user:SAMPA_PON:1.0] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+dismissDialog("Create Peripheral IP"); // bq
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v)]", 2, true); // D - Node
+// Elapsed time: 40 seconds
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 475, 233); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level (top_level.v)]", 3, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+selectComboBox(RDIResource.HJFileChooserRecentListPreview_RECENT_DIRECTORIES, "/home/nagafusa/work/spadi/Fakernet/SAMIDARE", 0); // aa.b
+String[] filenames31467 = {"/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0.v", "/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0_M00_AXI.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0_M00_AXI.v} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("SAMPA_PON_v1_0.v", 318, 369); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 316, 350); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 433, 165); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("SAMPA_PON_v1_0.v", 307, 352); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("SAMPA_PON_v1_0.v", 328, 363); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 338, 354); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 11); // o
+selectCodeEditor("SAMPA_PON_v1_0.v", 300, 357); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 300, 356); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 299, 353); // ac
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 9); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 371, 76); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 524, 154); // ac
+typeControlKey((HResource) null, "LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0_M01_AXI.v", 9); // o
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v), SAMPA_PON_v1_0_M00_AXI_inst : SAMPA_PON_v1_0_M00_AXI (SAMPA_PON_v1_0_M00_AXI.v)]", 10, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 483, 99); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 44, 44); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 95, 98); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 92, 95); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 89, 421); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 'v'); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 94, 165); // ac
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ADDRESS", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ADDRESS"); // d.c
+// HMemoryUtils.trashcanNow. Engine heap size: 15,253 MB. GUI used memory: 336 MB. Current time: 8/5/24, 11:53:35 AM JST
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_add", true); // d.c
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 241, 263); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 12 seconds
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 265, 260); // ac
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 14 seconds
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 135, 262); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 104, 155); // ac
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 44 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led_r"); // d.c
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 238, 21); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 238, 21, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 145, 308); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 184, 276); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 15,299 MB. GUI used memory: 332 MB. Current time: 8/5/24, 11:55:50 AM JST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 13); // o
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("SAMPA_PON_v1_0.v", 403, 157); // ac
+// Elapsed time: 17 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("SAMPA_PON_v1_0.v", 295, 170); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v), LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst : LED_REG_READ_SEPARATE_v1_0_M00_AXI (LED_REG_READ_SEPARATE_v1_0_M00_AXI.v)]", 8, false); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 7); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v)]", 3); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd)]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_1_0 (Module Reference Wrapper)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_I2C_Controller_v1_0_0_1 (Module Reference Wrapper)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_1_0 (Module Reference Wrapper)]", 7, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v)]", 7, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_1_0 (Module Reference Wrapper)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v)]", 7, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v)]", 7); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v), inst : LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper), top_block_LED_REG_READ_SEPARAT_0_0 (top_block_LED_REG_READ_SEPARAT_0_0.v), inst : LED_REG_READ_SEPARATE_v1_0 (LED_REG_READ_SEPARATE_v1_0.v)]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 119, 334); // ac
+typeControlKey((HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize Module Reference"); // m
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_LED_REG_READ_SEPARAT_0_0 (Module Reference Wrapper)]", 6); // D
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 632, 304, 1117, 516, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // al
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_fakernet_top_0_0 (Module Reference Wrapper)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper)]", 15, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper)]", 15, true, false, false, false, true, false); // D - Popup Trigger - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper)]", 15); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper), top_block_u_led_inst_0_0 (top_block_u_led_inst_0_0.v)]", 16, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper), top_block_u_led_inst_0_0 (top_block_u_led_inst_0_0.v)]", 16, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper), top_block_u_led_inst_0_0 (top_block_u_led_inst_0_0.v)]", 16); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper), top_block_u_led_inst_0_0 (top_block_u_led_inst_0_0.v), inst : u_led_inst (u_led_inst.v)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_block_wrapper (top_block_wrapper.v), top_block_i : top_block (top_block.bd), top_block_u_led_inst_0_0 (Module Reference Wrapper), top_block_u_led_inst_0_0 (top_block_u_led_inst_0_0.v), inst : u_led_inst (u_led_inst.v)]", 17, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_u_led_inst_0_0.v", 15); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_LED_REG_READ_SEPARAT_0_0.v", 14); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 13); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 6); // o
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0_M00_AXI.v", 236, 265); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Controller_v1_0.v", 6); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 5); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_u_led_inst_0_0.v", 14); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+typeControlKey((HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectCodeEditor("SAMPA_PON_v1_0.v", 91, 358); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'v'); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 89, 417); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 53 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference top_block_reg_switch_0_0 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'. 
+// Tcl Message: Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_block_reg_switch_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 500, 140, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+// HOptionPane Warning: 'Module references are still updating. Please try again after Sources | Hierarchy view is up-to-date. (Add Module)'
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 47 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 519, 129, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ao
+setText("PAResourceQtoS.RSBAddModuleDialog_MODULES_SEARCH_FIELD", "pon"); // OverlayTextField
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "SAMPA_PON_v1_0 (SAMPA_PON_v1_0.v)", 0); // cb
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Add Module"); // bY
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_cell -type module -reference SAMPA_PON_v1_0 SAMPA_PON_v1_0_0 
+// HMemoryUtils.trashcanNow. Engine heap size: 15,358 MB. GUI used memory: 340 MB. Current time: 8/5/24, 12:00:40 PM JST
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports SAMPA_EN_A] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports SAMPA_EN_D] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on] 
+// Elapsed time: 16 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/SAMPA_PON_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins SAMPA_PON_v1_0_0/m00_axi] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/reg_bram/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/SAMPA_PON_v1_0_0/m00_axi' at <0xC000_0000 [ 64K ]>. 
+dismissDialog("Run Connection Automation"); // bq
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_LED_REG_READ_SEPARAT_0_0.v", 13); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 224, 84); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 224, 84, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_LED_REG_READ_SEPARAT_0_0.v", 13); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectCodeEditor("SAMPA_PON_v1_0.v", 460, 160); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'c'); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'v'); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'v'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_LED_REG_READ_SEPARAT_0_0.v", 13); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_block_u_led_inst_0_0.v", 14); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 630, 75); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 383, 30); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 384, 18); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 338, 96); // ac
+typeControlKey((HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+typeControlKey(null, null, 'z');
+selectCodeEditor("SAMPA_PON_v1_0.v", 360, 75); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'v'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 415, 103); // ac
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 452, 248); // ac
+typeControlKey((HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectCodeEditor("SAMPA_PON_v1_0.v", 436, 197); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 438, 173); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 438, 188); // ac
+typeControlKey((HResource) null, "SAMPA_PON_v1_0.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("SAMPA_PON_v1_0.v", 443, 146); // ac
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SAMPA_PON_v1_0.v", 286, 95); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 24 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: update_module_reference top_block_SAMPA_PON_v1_0_0_0 
+// Tcl Message: Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_block_SAMPA_PON_v1_0_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize Module Reference"); // m
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 358ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 15,474 MB. GUI used memory: 344 MB. Current time: 8/5/24, 12:04:41 PM JST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 204 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 59, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, main_io.xdc]", 59, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("main_io.xdc", 564, 122); // ac
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clk"); // d.c
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 877, 189, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "CLK_CFG"); // Q
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // f: TRUE
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // d
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "6"); // O
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Port"); // aL
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir O -from 6 -to 0 CLK_CFG 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 621, 185, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 558, 145, 1117, 543, false, false, false, true, false); // fK - Popup Trigger
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "cons"); // OverlayTextField
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // z
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {5 5119 212} [get_bd_cells xlconstant_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {5 5119 212} [get_bd_cells xlconstant_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 19 seconds
+setText("Const Width", "7"); // v
+setText("Const Val", "0b0000011"); // v
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.CONST_VAL {0b0000011} \   CONFIG.CONST_WIDTH {7} \ ] [get_bd_cells xlconstant_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports CLK_CFG] [get_bd_pins xlconstant_0/dout] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 11 seconds
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", true); // f: TRUE
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// Tcl Message: startgroup 
+// Tcl Message: endgroup 
+// Elapsed time: 16 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize Module Reference"); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 11); // o
+selectCodeEditor("LED_REG_READ_SEPARATE_v1_0.v", 438, 92); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 12); // o
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 151, 216); // ac
+selectCodeEditor("SAMPA_PON_v1_0_M00_AXI.v", 151, 215, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 'c'); // ac
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "PON_r", true); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "PON_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "PON_r"); // d.c
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "PON_r"); // d.c
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 11); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 2); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "Network 2 ;  ;  ;  ;  ; ", 2); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "Network 1 ;  ;  ;  ;  ; ", 1); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "Network 0 ;  ;  ;  ;  ; ", 0); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "native_to_axi_lite_v_0 ;  ;  ;  ;  ; ", 8); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "I2C_Controller_v1_0_0 ;  ;  ;  ;  ; ", 6); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi (32 address bits : 4G) ;  ;  ;  ;  ; ", 7); // o
+expandTreeTable(PAResourceAtoD.AddressNetworkTreeTablePanel_ADDRESS_NETWORK_TREE_TABLE_PANEL, "/fakernet/native_to_axi_lite_v_0/m00_axi (32 address bits : 4G) ;  ;  ;  ;  ; ", 11); // o
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// Elapsed time: 68 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Customize Port"); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 16, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Out-of-Context module run and Synthesis run are Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run top_block_clk_wiz_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run top_block_xbar_1_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // W.d
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+dismissDialog("Save Constraints"); // bq
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs impl_1 -jobs 32 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain  srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// Tcl Message: Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v 
+// Tcl Message: Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block fakernet/reg_switch_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block SAMPA_PON_v1_0_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . 
+// Tcl Message: Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:35 ; elapsed = 00:00:15 . Memory (MB): peak = 21658.918 ; gain = 0.000 ; free physical = 41798 ; free virtual = 59174 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 257 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Launch Run Critical Messages"); // aX
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 32, false); // u.d
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net top_block_i/<const0> has multiple drivers: top_block_i/GND/G, and top_block_i/SAMPA_PON_v1_0_0/inst/txn_reg/Q.. ]", 31, false); // u.d
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main_io.xdc", 13); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "LED_REG_READ_SEPARATE_v1_0.v", 12); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0_M00_AXI.v", 11); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SAMPA_PON_v1_0.v", 10); // o
+selectCodeEditor("SAMPA_PON_v1_0.v", 59, 71); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 301, 244); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 302, 225); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 306, 218); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 305, 224); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 333, 228); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 328, 221); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 326, 221); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 326, 225); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 386, 272); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 372, 232); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 368, 213); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 368, 213); // ac
+selectCodeEditor("SAMPA_PON_v1_0.v", 390, 293); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("SAMPA_PON_v1_0.v", 351, 221); // ac
+typeControlKey(null, null, 'z');
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("SAMPA_PON_v1_0.v", 33, 352); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 15,597 MB. GUI used memory: 349 MB. Current time: 8/5/24, 12:18:56 PM JST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // g
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_module_reference top_block_SAMPA_PON_v1_0_0_0 
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3420] Updated top_block_SAMPA_PON_v1_0_0_0 to use current project options 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+dismissDialog("Refresh Changed Modules"); // bq
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 14, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// Tcl Message: launch_runs synth_1 -jobs 32 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_1/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain  srcPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_I dstPin /SAMPA_I2C_wrapper/I2C_iobuf/util_ds_buf_0/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate 
+// Tcl Message: Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// Tcl Message: Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v 
+// Tcl Message: Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_a2f47783.ui>  Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_4884441c.ui>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block SAMPA_PON_v1_0_0 . 
+// Tcl Message: Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_SAMPA_PON_v1_0_0_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Aug  5 12:19:17 2024] Launched top_block_SAMPA_PON_v1_0_0_0_synth_1... Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_SAMPA_PON_v1_0_0_0_synth_1/runme.log [Mon Aug  5 12:19:17 2024] Launched synth_1... Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:40 ; elapsed = 00:00:13 . Memory (MB): peak = 21895.867 ; gain = 0.000 ; free physical = 42122 ; free virtual = 59502 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+// 'i' command handler elapsed time: 17 seconds
+dismissDialog("Launch Run Critical Messages"); // aX
+// TclEventType: RUN_STATUS_CHANGE

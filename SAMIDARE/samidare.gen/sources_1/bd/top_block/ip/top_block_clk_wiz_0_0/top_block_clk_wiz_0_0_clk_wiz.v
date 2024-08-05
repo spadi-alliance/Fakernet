@@ -56,11 +56,11 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__40.00000______0.000______50.0______232.098____191.950
-// clk_out2__100.00000______0.000______50.0______180.876____191.950
-// clk_out3__25.00000______0.000______50.0______272.548____191.950
-// clk_out4__50.00000______0.000______50.0______216.942____191.950
-// clk_out5__125.00000______0.000______50.0______171.779____191.950
+// clk_out1__40.00000______0.000______50.0______175.009____156.430
+// clk_out2__10.00000______0.000______50.0______270.090____156.430
+// clk_out3__25.00000______0.000______50.0______198.171____156.430
+// clk_out4__50.00000______0.000______50.0______165.954____156.430
+// clk_out5__125.00000______0.000______50.0______141.617____156.430
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -134,26 +134,26 @@ wire clk_in2_top_block_clk_wiz_0_0;
     .COMPENSATION         ("AUTO"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (25.000),
+    .CLKFBOUT_MULT_F      (31.250),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (25.000),
+    .CLKOUT0_DIVIDE_F     (31.250),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (10),
+    .CLKOUT1_DIVIDE       (125),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (40),
+    .CLKOUT2_DIVIDE       (50),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
-    .CLKOUT3_DIVIDE       (20),
+    .CLKOUT3_DIVIDE       (25),
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
     .CLKOUT3_USE_FINE_PS  ("FALSE"),
-    .CLKOUT4_DIVIDE       (8),
+    .CLKOUT4_DIVIDE       (10),
     .CLKOUT4_PHASE        (0.000),
     .CLKOUT4_DUTY_CYCLE   (0.500),
     .CLKOUT4_USE_FINE_PS  ("FALSE"),
@@ -166,7 +166,7 @@ wire clk_in2_top_block_clk_wiz_0_0;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk_out1_top_block_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-	.CLKOUT1             (clk_out2_top_block_clk_wiz_0_0),
+    .CLKOUT1             (clkout1_unused),
     .CLKOUT1B            (clkout1b_unused),
 	.CLKOUT2             (clk_out3_top_block_clk_wiz_0_0),
     .CLKOUT2B            (clkout2b_unused),
@@ -203,6 +203,20 @@ wire clk_in2_top_block_clk_wiz_0_0;
     .PWRDWN              (1'b0),
     .RST                 (1'b0));
 
+BUFGCE_DIV #(
+      .BUFGCE_DIVIDE(4.0),      // 1-8
+      // Programmable Inversion Attributes: Specifies built-in programmable inversion on specific pins
+      .IS_CE_INVERTED(1'b0),  // Optional inversion for CE
+      .IS_CLR_INVERTED(1'b0), // Optional inversion for CLR
+      .IS_I_INVERTED(1'b0)    // Optional inversion for I
+   )
+   BUFGCE_DIV_CLK2_inst (
+      .O(clk_out2_top_block_clk_wiz_0_0),     // 1-bit output: Buffer
+      .CE(1'b1),   // 1-bit input: Buffer enable
+      .CLR(1'b0), // 1-bit input: Asynchronous clear
+      .I(clk_out1_top_block_clk_wiz_0_0)      // 1-bit input: Buffer
+   );
+
 
 
 // Clock Monitor clock assigning
@@ -220,9 +234,7 @@ wire clk_in2_top_block_clk_wiz_0_0;
     .I   (clk_out1_top_block_clk_wiz_0_0));
 
 
-  BUFG clkout2_buf
-   (.O   (clk_out2),
-    .I   (clk_out2_top_block_clk_wiz_0_0));
+  assign clk_out2 = clk_out2_top_block_clk_wiz_0_0;
 
   BUFG clkout3_buf
    (.O   (clk_out3),

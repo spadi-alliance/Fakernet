@@ -105,9 +105,9 @@ input wire [31 : 0] i2c_rdata_i;
 input wire i2c_done;
 
   reg_switch #(
-    .C_ADDR_I2C_READ(32'HAA000000),
-    .C_ADDR_SAMPA_READ(32'HAA000000),
-    .C_ADDR_I2C_WRITE_ALL(32'HAA000000),
+    .C_ADDR_I2C_READ(32'HAA000004),
+    .C_ADDR_SAMPA_READ(32'HAA000008),
+    .C_ADDR_I2C_WRITE_ALL(32'HAA00000C),
     .C_ADDR_I2C_WRITE(32'HAA000000)
   ) inst (
     .axi_aclk(axi_aclk),

@@ -70,6 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_block_xbar_1_synth_1" START { ROLLUP_AUTO }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 8
+set_param power.BramSDPPropagationFix 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -86,6 +91,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0

@@ -137,3 +137,200 @@ reset_run synth_1
 launch_runs impl_1 -jobs 32
 wait_on_run impl_1
 open_run impl_1
+update_module_reference top_block_reg_switch_0_0
+update_module_reference top_block_reg_switch_0_0
+regenerate_bd_layout
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {232.098} \
+  CONFIG.CLKOUT1_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT2_JITTER {337.434} \
+  CONFIG.CLKOUT2_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {10.0} \
+  CONFIG.CLKOUT3_JITTER {272.548} \
+  CONFIG.CLKOUT3_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT4_JITTER {216.942} \
+  CONFIG.CLKOUT4_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT5_JITTER {171.779} \
+  CONFIG.CLKOUT5_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT6_JITTER {180.876} \
+  CONFIG.CLKOUT6_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {100.0} \
+  CONFIG.CLKOUT6_USED {true} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {25.000} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {25.000} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {100} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {40} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {20} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {8} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {10} \
+  CONFIG.NUM_OUT_CLKS {6} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {175.009} \
+  CONFIG.CLKOUT1_PHASE_ERROR {156.430} \
+  CONFIG.CLKOUT2_JITTER {270.090} \
+  CONFIG.CLKOUT2_PHASE_ERROR {156.430} \
+  CONFIG.CLKOUT3_JITTER {198.171} \
+  CONFIG.CLKOUT3_PHASE_ERROR {156.430} \
+  CONFIG.CLKOUT4_JITTER {165.954} \
+  CONFIG.CLKOUT4_PHASE_ERROR {156.430} \
+  CONFIG.CLKOUT5_JITTER {141.617} \
+  CONFIG.CLKOUT5_PHASE_ERROR {156.430} \
+  CONFIG.CLKOUT6_USED {false} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {31.250} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {31.250} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {125} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {50} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {25} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {10} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {5} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1
+endgroup
+connect_bd_net [get_bd_ports BASECLK] [get_bd_pins clk_wiz_1/clk_in1]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {250.0} \
+  CONFIG.CLKOUT1_DRIVES {Buffer} \
+  CONFIG.CLKOUT1_JITTER {128.655} \
+  CONFIG.CLKOUT1_PHASE_ERROR {166.174} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {320.000} \
+  CONFIG.CLKOUT2_DRIVES {Buffer} \
+  CONFIG.CLKOUT3_DRIVES {Buffer} \
+  CONFIG.CLKOUT4_DRIVES {Buffer} \
+  CONFIG.CLKOUT5_DRIVES {Buffer} \
+  CONFIG.CLKOUT6_DRIVES {Buffer} \
+  CONFIG.CLKOUT7_DRIVES {Buffer} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {30.000} \
+  CONFIG.MMCM_CLKIN1_PERIOD {25.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.750} \
+  CONFIG.MMCM_COMPENSATION {AUTO} \
+  CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {true} \
+  CONFIG.PRIMITIVE {Auto} \
+  CONFIG.PRIM_IN_FREQ {40.000} \
+  CONFIG.USE_LOCKED {false} \
+  CONFIG.USE_RESET {false} \
+] [get_bd_cells clk_wiz_1]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT1_DRIVES {Buffer} \
+  CONFIG.CLKOUT1_JITTER {128.655} \
+  CONFIG.CLKOUT1_PHASE_ERROR {166.174} \
+  CONFIG.CLKOUT2_JITTER {152.933} \
+  CONFIG.CLKOUT2_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT2_PHASE_ERROR {166.174} \
+  CONFIG.CLKOUT2_USED {false} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {30.000} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.750} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {1} \
+  CONFIG.USE_DYN_PHASE_SHIFT {false} \
+] [get_bd_cells clk_wiz_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_0
+endgroup
+set_property location {3 743 1363} [get_bd_cells util_ds_buf_0]
+set_property CONFIG.C_BUF_TYPE {OBUFDS} [get_bd_cells util_ds_buf_0]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins util_ds_buf_0/OBUF_IN]
+set_property location {5 2635 -33} [get_bd_cells util_ds_buf_0]
+connect_bd_net [get_bd_ports CLKSOIN_P] [get_bd_pins util_ds_buf_0/OBUF_DS_P]
+connect_bd_net [get_bd_ports CLKSOIN_N] [get_bd_pins util_ds_buf_0/OBUF_DS_N]
+regenerate_bd_layout
+create_bd_port -dir O SAMPA_EN_A
+create_bd_port -dir I SAMPA_EN_D
+regenerate_bd_layout
+undo
+undo
+create_bd_port -dir O SAMPA_EN_D
+set_property location {1985 362} [get_bd_ports SAMPA_EN_D]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]
+set_property -dict [list \
+  CONFIG.AUTO_PRIMITIVE {MMCM} \
+  CONFIG.CLKIN1_JITTER_PS {250.0} \
+  CONFIG.CLKOUT1_DRIVES {Buffer} \
+  CONFIG.CLKOUT1_JITTER {128.655} \
+  CONFIG.CLKOUT1_PHASE_ERROR {166.174} \
+  CONFIG.CLKOUT2_DRIVES {Buffer} \
+  CONFIG.CLKOUT3_DRIVES {Buffer} \
+  CONFIG.CLKOUT4_DRIVES {Buffer} \
+  CONFIG.CLKOUT5_DRIVES {Buffer} \
+  CONFIG.CLKOUT6_DRIVES {Buffer} \
+  CONFIG.CLKOUT7_DRIVES {Buffer} \
+  CONFIG.ENABLE_CLOCK_MONITOR {false} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {30.000} \
+  CONFIG.MMCM_CLKIN1_PERIOD {25.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.750} \
+  CONFIG.MMCM_COMPENSATION {AUTO} \
+  CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {true} \
+  CONFIG.PRIMITIVE {Auto} \
+  CONFIG.PRIM_IN_FREQ {40.000} \
+  CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.USE_LOCKED {false} \
+  CONFIG.USE_POWER_DOWN {true} \
+  CONFIG.USE_RESET {false} \
+  CONFIG.USE_SAFE_CLOCK_STARTUP {false} \
+] [get_bd_cells clk_wiz_1]
+endgroup
+close [ open /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/SAMPA_POWER_ON.v w ]
+add_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/SAMPA_POWER_ON.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_bd_design
+update_compile_order -fileset sources_1
+create_peripheral user.org user SAMPA_PON 1.0 -dir /home/nagafusa/work/spadi/Fakernet/ip_repo
+add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:SAMPA_PON:1.0]
+generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:SAMPA_PON:1.0]
+write_peripheral [ipx::find_open_core user.org:user:SAMPA_PON:1.0]
+set_property  ip_repo_paths  {/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0 /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0} [current_project]
+update_ip_catalog -rebuild
+add_files -norecurse {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0.v /home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0_M00_AXI.v}
+update_compile_order -fileset sources_1
+update_module_reference top_block_reg_switch_0_0
+create_bd_cell -type module -reference SAMPA_PON_v1_0 SAMPA_PON_v1_0_0
+connect_bd_net [get_bd_ports SAMPA_EN_A] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on]
+connect_bd_net [get_bd_ports SAMPA_EN_D] [get_bd_pins SAMPA_PON_v1_0_0/sampa_power_on]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out5 (125 MHz)} Clk_xbar {/clk_wiz_0/clk_out5 (125 MHz)} Master {/SAMPA_PON_v1_0_0/m00_axi} Slave {/reg_bram/axi_bram_ctrl_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins SAMPA_PON_v1_0_0/m00_axi]
+regenerate_bd_layout
+regenerate_bd_layout
+update_module_reference top_block_SAMPA_PON_v1_0_0_0
+update_compile_order -fileset sources_1
+create_bd_port -dir O -from 6 -to 0 CLK_CFG
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {5 5119 212} [get_bd_cells xlconstant_0]
+set_property -dict [list \
+  CONFIG.CONST_VAL {0b0000011} \
+  CONFIG.CONST_WIDTH {7} \
+] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_ports CLK_CFG] [get_bd_pins xlconstant_0/dout]
+startgroup
+endgroup
+regenerate_bd_layout
+reset_run top_block_clk_wiz_0_0_synth_1
+reset_run top_block_xbar_1_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 32
+wait_on_run impl_1
+update_module_reference top_block_SAMPA_PON_v1_0_0_0
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
