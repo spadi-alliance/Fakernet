@@ -25,8 +25,8 @@
 	)
 	(
 		// Users to add ports here
-		input wire  I2C_WR,
-		input wire  I2C_RD,
+		(*mark_debug = "true"*)input wire  I2C_WR,
+		(*mark_debug = "true"*)input wire  I2C_RD,
 		input wire [31:0]  WADDR,
 		input wire [31:0]  RADDR,
 		input wire [31:0]  WDATA,
@@ -40,7 +40,7 @@
 		// Asserts when ERROR is detected
 		output reg  ERROR,
 		// Asserts when AXI transactions is complete
-		output wire  TXN_DONE,
+		(*mark_debug = "true"*)output wire  TXN_DONE,
 		// AXI clock signal
 		input wire  M_AXI_ACLK,
 		// AXI active low reset signal
@@ -126,7 +126,7 @@
 		INIT_COMPARE = 2'b11; // This state issues the status of comparison 
 			// of the written data with the read data	
 
-	 reg [1:0] mst_exec_state;
+	 (*mark_debug = "true"*) reg [1:0] mst_exec_state;
 
 	// AXI4LITE signals
 	//write address valid
@@ -171,6 +171,8 @@
 	reg [C_M_AXI_DATA_WIDTH-1 : 0] 	expected_rdata;
 	//Flag marks the completion of comparison of the read data with the expected read data
 	reg  	compare_done;
+	reg  	write_done;
+	reg  	read_done;
 	//This flag is asserted when there is a mismatch of the read data with the expected read data.
 	reg  	read_mismatch;
 	//Flag is asserted when the write index reaches the last write transction number
@@ -205,7 +207,8 @@
 	//Read and Read Response (R)
 	assign M_AXI_RREADY	= axi_rready;
 	//Example design I/O
-	assign TXN_DONE	= compare_done;
+//	assign TXN_DONE	= compare_done;
+	assign TXN_DONE	= write_done || read_done;
 	assign init_txn_pulse	= (!init_txn_ff2) && init_txn_ff;
 
 
@@ -220,7 +223,8 @@
 	      end                                                                               
 	    else                                                                       
 	      begin  
-	        init_txn_ff <= INIT_AXI_TXN;
+//	        init_txn_ff <= INIT_AXI_TXN;
+	        init_txn_ff <= I2C_WR || I2C_RD;
 	        init_txn_ff2 <= init_txn_ff;                                                                 
 	      end                                                                      
 	  end     
@@ -460,7 +464,7 @@
 	          // available by user logic                            
 	        else if (M_AXI_AWREADY && axi_awvalid)                  
 	          begin                                                 
-	            axi_awaddr <= axi_awaddr + 32'h00000004;            
+	            axi_awaddr <= axi_awaddr;            
 	                                                                
 	          end                                                   
 	      end                                                       
@@ -524,6 +528,8 @@
 	        start_single_read  <= 1'b0;                                                 
 	        read_issued   <= 1'b0;                                                      
 	        compare_done  <= 1'b0;                                                      
+	        write_done  <= 1'b0;                                                      
+	        read_done  <= 1'b0;                                                      
 	        ERROR <= 1'b0;
 	      end                                                                           
 	    else                                                                            
@@ -539,15 +545,22 @@
 	                mst_exec_state  <= INIT_WRITE;                                      
 	                ERROR <= 1'b0;
 	                compare_done <= 1'b0;
+	                write_done <= 1'b0;
+	                read_done <= 1'b0;
+	                
 	              end else
 	            if ( init_txn_pulse == 1'b1 && I2C_RD==1'b1)                                     
 	              begin                                                                 
 	                mst_exec_state  <= INIT_READ;                                      
 	                ERROR <= 1'b0;
 	                compare_done <= 1'b0;
+	                write_done <= 1'b0;
+	                read_done <= 1'b0;
 	              end else                                                                
 	              begin                                                                 
-	                mst_exec_state  <= IDLE;                                    
+	                mst_exec_state  <= IDLE;    
+	                write_done<=1'b0;                                          
+	                read_done<=1'b0;                                          
 	              end                                                                   
 	                                                                                    
 	          INIT_WRITE:                                                               
@@ -557,7 +570,8 @@
 	            // write controller                                                     
 	            if (writes_done)                                                        
 	              begin                                                                 
-	                mst_exec_state <= IDLE;//                                      
+	                mst_exec_state <= IDLE;//      
+	                write_done<=1'b1;                                
 	              end                                                                   
 	            else                                                                    
 	              begin                                                                 
@@ -585,7 +599,8 @@
 	             // read controller                                                     
 	             if (reads_done)                                                        
 	               begin                                                                
-	                 mst_exec_state <= IDLE;                                    
+	                 mst_exec_state <= IDLE;     
+	                 read_done <= 1'b1;                               
 	               end                                                                  
 	             else                                                                   
 	               begin                                                                

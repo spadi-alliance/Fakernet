@@ -98,7 +98,7 @@ module reg_switch #(
     assign regacc_write_w = regacc_write_i;
     wire regacc_read_w;
     assign regacc_read_w = regacc_read_i;
-    wire [24:0] regacc_read_w;
+    wire [24:0] regacc_addr_w;
     assign regacc_addr_w = regacc_addr_i[24:0];
     always @(posedge axi_aclk)										      
 	  begin                                                                        

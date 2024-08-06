@@ -15,14 +15,14 @@
 		parameter  C_M00_AXI_TARGET_SLAVE_BASE_ADDR	= 32'hC0000000,
 		parameter integer C_M00_AXI_ADDR_WIDTH	= 32,
 		parameter integer C_M00_AXI_DATA_WIDTH	= 32,
-		parameter integer C_M00_AXI_TRANSACTIONS_NUM	= 4,
+		parameter integer C_M00_AXI_TRANSACTIONS_NUM	= 1,
 
 		// Parameters of Axi Master Bus Interface M01_AXI
 		parameter  C_M01_AXI_START_DATA_VALUE	= 32'hAA000000,
 		parameter  C_M01_AXI_TARGET_SLAVE_BASE_ADDR	= 32'hC0000000,
 		parameter integer C_M01_AXI_ADDR_WIDTH	= 32,
 		parameter integer C_M01_AXI_DATA_WIDTH	= 32,
-		parameter integer C_M01_AXI_TRANSACTIONS_NUM	= 4
+		parameter integer C_M01_AXI_TRANSACTIONS_NUM	= 1
 	)
 	(
 		// Users to add ports here
@@ -179,7 +179,7 @@ wire [31:0] rdata;
     parameter STATE_WRITE      = 4'b1001;
     parameter STATE_WRITE_ALL      = 4'b1010;
     
-    reg [3:0] state_bram;
+    (*mark_debug = "true"*) reg [3:0] state_bram;
     reg [31:0] timeout_cnt;
     reg end_read;
     reg can_read;
@@ -193,12 +193,12 @@ wire [31:0] rdata;
     reg ack_data;
     
     
-    reg [3:0] state_i2c;
+    (*mark_debug = "true"*) reg [3:0] state_i2c;
     
     reg init_txn_bram;
     reg i2c_wr;
     reg i2c_rd;
-    reg bram_read_done;
+    (*mark_debug = "true"*) reg bram_read_done;
     reg all_write_end;
     
     reg [31:0] bram_raddr; //bram read address. to be confirmed: the same with i2c_waddr?
@@ -209,6 +209,7 @@ wire [31:0] rdata;
     
     assign i2c_rdata_o = i2c_rdata;
     reg busy;
+    reg [3:0] cnt;
     assign i2c_busy = busy;
     assign i2c_done = i2c_done_r;
     
@@ -222,7 +223,8 @@ wire [31:0] rdata;
     
 	  always @(posedge m00_axi_aclk)										      
 	  begin                                                                        
-	    if (m00_axi_aresetn == 1'b0 || start_i2c_read == 1'b1)                                                   
+//	    if (m00_axi_aresetn == 1'b0 || start_i2c_read == 1'b1)                                                   
+	    if (m00_axi_aresetn == 1'b0)                                                   
 	      begin                                            
 	           // reset signals          
 	           state_bram <= STATE_INIT;              
@@ -258,15 +260,15 @@ wire [31:0] rdata;
 	          STATE_READ:
 	               begin
 //	                   if(m00_axi_txn_done==1'b1)
-	                   if(m00_axi_rvalid==1'b1)
-	                       begin
-	                           bram_read_done <= 1'b1;
-	                       end
 	                   if(ack_data == 1'b1)//end of read
 	                       begin
 	                           state_bram <= STATE_IDLE;
 	                           bram_read_done <= 1'b0;
 	                           init_txn_bram <= 1'b0;
+	                       end else 
+	                   if(m00_axi_rvalid==1'b1)
+	                       begin
+	                           bram_read_done <= 1'b1;
 	                       end
 	               end
 	        endcase//state_read    
@@ -282,7 +284,6 @@ wire [31:0] rdata;
 	               end
 	           STATE_IDLE:
 	               begin
-	                   ack_data <= 1'b0;
 	                   if(start_i2c_write == 1'b1)// when start_reg_write == 1, start to write
 	                       begin
 	                           state_i2c <= STATE_WRITE;
@@ -296,54 +297,73 @@ wire [31:0] rdata;
 	                           //start_bram_read <= 1'b1;
 	                           i2c_raddr <= i2c_raddr_i;
 	                           busy <= 1'b1;
+	                           cnt <= 4'b1000;
 	                       end else
 	                   if(start_i2c_write_all == 1'b1)
 	                       begin
 	                           state_i2c <= STATE_WRITE_ALL;
 	                           busy <= 1'b1;
+	                       end else
+	                       begin
+                               ack_data <= 1'b0;
+                               i2c_wr <= 1'b0;
+                               i2c_rd <= 1'b0;
 	                       end
 	               end                                                                
 	          STATE_WRITE:
 	               begin
-	                   if(state_bram == STATE_READ)
+	                   if(state_bram == STATE_READ && start_bram_read == 1'b1)
 	                       begin
 	                           start_bram_read <= 1'b0;
-	                       end
+	                       end else 
 	                   if(bram_read_done == 1'b1)//start write to address
 	                       begin
 	                           ack_data <= 1'b1;
 	                           i2c_wr <= 1'b1;
 	                           i2c_wdata <= m00_axi_rdata;
 	                           i2c_waddr <= bram_raddr;//to be confirmed
-	                       end else begin
-	                           ack_data <= 1'b0;
-	                           i2c_wr <= 1'b0;
 	                       end
-	                   if(m01_axi_txn_done == 1'b1)
+	                   else if(m01_axi_txn_done == 1'b1)
 	                       begin
 	                           i2c_done_r <= 1'b1;
+	                           i2c_wr <= 1'b0;
 	                           state_i2c <= STATE_INIT;
+	                       end
+	                   else 
+	                       begin
+	                           i2c_wr <= i2c_wr;
 	                       end
 	               end                                                         
 	          STATE_READ:
 	               begin
-                       if(m01_axi_rready==1'b0)//ok?
-                        begin
-                            i2c_rd  <= 1'b1;
+//                       if(m01_axi_rready==1'b0)//ok?
+//                        begin
+//                            i2c_rd  <= 1'b1;
                             
-                        end else begin
-                            i2c_rd <= 1'b0;
-                        end
-                       if(m01_axi_rvalid)
+//                        end else begin
+//                            i2c_rd <= 1'b0;
+//                        end
+                       if(cnt != 4'b0000)
                             begin
-//                                i2c_rdata <= m01_axi_rdata;
-                                i2c_rdata <= rdata;
-                            end
+                                i2c_rd <= 1'b1;
+                                cnt <= cnt-1;
+                       end else
 	                   if(m01_axi_txn_done == 1'b1)//end of read
 	                       begin
 	                           i2c_done_r <= 1'b1;
+	                           i2c_rd <= 1'b0;
 	                           state_i2c <= STATE_INIT;
-	                       end
+	                       end else	                   
+                       if(m01_axi_rvalid == 1'b1)
+                            begin
+//                                i2c_rdata <= m01_axi_rdata;
+                                i2c_rd <= 1'b0;
+                                i2c_rdata <= rdata;
+                            end
+                        else
+                            begin
+                                i2c_rd <= i2c_rd;
+                            end
 	               end
 	          STATE_WRITE_ALL:
 	               begin//read all address, and write all data

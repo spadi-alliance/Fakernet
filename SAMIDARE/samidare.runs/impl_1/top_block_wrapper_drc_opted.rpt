@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Tue Aug  6 19:04:01 2024
+| Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
+| Command      : report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
+| Design       : top_block_wrapper
+| Device       : xcau15p-sbvb484-1-i
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_top_block_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| LVDS-1    | Warning  | Bidirection LVDS IOs          | 1          |
+| REQP-1852 | Warning  | BUFGCE_cascade_from_clock_buf | 1          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LVDS-1#1 Warning
+Bidirection LVDS IOs  
+The following port(s) use the LVDS I/O standard and have bi-directional differential usage. Please note that LVDS is a fixed impedance structure optimized to 100ohm differential. This is only intended to be used in point-to-point transmissions that do not have turn around timing requirements. If the intended usage is a bus structure, please use BLVDS/BLVDS_25, instead. GPION[7:0], GPIOP[7:0].
+Related violations: <none>
+
+REQP-1852#1 Warning
+BUFGCE_cascade_from_clock_buf  
+Cascaded clock buffers exist in the design with constant CE pin. This may result in large clock skew and timing violations. Cell BUFGCE top_block_i/clk_wiz_1/inst/clkin1_bufg I pin is driven by another clock buffer top_block_i/clk_wiz_0/inst/clkout1_buf.
+Related violations: <none>
+
+

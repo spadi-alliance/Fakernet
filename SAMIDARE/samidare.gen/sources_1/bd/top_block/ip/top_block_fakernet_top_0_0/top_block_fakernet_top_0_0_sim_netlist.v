@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Jul  5 14:34:17 2024
+// Date        : Tue Aug  6 15:34:39 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0_sim_netlist.v
@@ -1425,13 +1425,13 @@ module top_block_fakernet_top_0_0_efb_common_top
         .I1(Q[1]),
         .I2(fifo_out_has),
         .O(drive_lfsr));
-  (* SOFT_HLUTNM = "soft_lutpair572" *) 
+  (* SOFT_HLUTNM = "soft_lutpair577" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \packet_counter[0]_i_1 
        (.I0(packet_counter_reg[0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair572" *) 
+  (* SOFT_HLUTNM = "soft_lutpair577" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \packet_counter[1]_i_1 
@@ -2131,20 +2131,20 @@ module top_block_fakernet_top_0_0_efb_common_top
         .I2(\regacc_aux_info[stat][reg_idp] ),
         .I3(\ram_udp_regacc[cons][clear_hasdata] ),
         .O(\s_stat[hasdata]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair573" *) 
+  (* SOFT_HLUTNM = "soft_lutpair578" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \slow_counter[0]_i_1 
        (.I0(slow_counter_reg[0]),
         .O(plusOp__1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair571" *) 
+  (* SOFT_HLUTNM = "soft_lutpair576" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \slow_counter[1]_i_1 
        (.I0(slow_counter_reg[0]),
         .I1(slow_counter_reg[1]),
         .O(plusOp__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair571" *) 
+  (* SOFT_HLUTNM = "soft_lutpair576" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \slow_counter[2]_i_1 
@@ -2152,7 +2152,7 @@ module top_block_fakernet_top_0_0_efb_common_top
         .I1(slow_counter_reg[0]),
         .I2(slow_counter_reg[2]),
         .O(\slow_counter[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair570" *) 
+  (* SOFT_HLUTNM = "soft_lutpair575" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \slow_counter[3]_i_1 
@@ -2161,7 +2161,7 @@ module top_block_fakernet_top_0_0_efb_common_top
         .I2(slow_counter_reg[2]),
         .I3(slow_counter_reg[3]),
         .O(plusOp__1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair570" *) 
+  (* SOFT_HLUTNM = "soft_lutpair575" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \slow_counter[4]_i_1 
@@ -2257,7 +2257,7 @@ module top_block_fakernet_top_0_0_efb_common_top
         .I4(slow_counter_reg[3]),
         .I5(slow_counter_tick_i_2_n_0),
         .O(slow_counter_tick_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair573" *) 
+  (* SOFT_HLUTNM = "soft_lutpair578" *) 
   LUT2 #(
     .INIT(4'h7)) 
     slow_counter_tick_i_2
@@ -4378,7 +4378,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .D(Q[9]),
         .Q(\cur_word_reg_n_0_[9] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair574" *) 
+  (* SOFT_HLUTNM = "soft_lutpair579" *) 
   LUT3 #(
     .INIT(8'h54)) 
     get_next_i_1
@@ -4402,7 +4402,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .D(cur_ena),
         .Q(next_ena),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair578" *) 
+  (* SOFT_HLUTNM = "soft_lutpair583" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[0]_i_1 
@@ -4410,7 +4410,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[8] ),
         .O(\next_octet[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair578" *) 
+  (* SOFT_HLUTNM = "soft_lutpair583" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[1]_i_1 
@@ -4418,7 +4418,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[9] ),
         .O(\next_octet[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair577" *) 
+  (* SOFT_HLUTNM = "soft_lutpair582" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[2]_i_1 
@@ -4426,7 +4426,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[10] ),
         .O(\next_octet[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair577" *) 
+  (* SOFT_HLUTNM = "soft_lutpair582" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[3]_i_1 
@@ -4434,7 +4434,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[11] ),
         .O(\next_octet[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair576" *) 
+  (* SOFT_HLUTNM = "soft_lutpair581" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[4]_i_1 
@@ -4442,7 +4442,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[12] ),
         .O(\next_octet[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair576" *) 
+  (* SOFT_HLUTNM = "soft_lutpair581" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[5]_i_1 
@@ -4450,7 +4450,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[13] ),
         .O(\next_octet[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair575" *) 
+  (* SOFT_HLUTNM = "soft_lutpair580" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[6]_i_1 
@@ -4458,7 +4458,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .I1(nibble_counter),
         .I2(\cur_word_reg_n_0_[14] ),
         .O(\next_octet[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair575" *) 
+  (* SOFT_HLUTNM = "soft_lutpair580" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \next_octet[7]_i_1 
@@ -4530,7 +4530,7 @@ module top_block_fakernet_top_0_0_efnet_word_to_octet
         .D(\next_octet[7]_i_1_n_0 ),
         .Q(next_octet[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair574" *) 
+  (* SOFT_HLUTNM = "soft_lutpair579" *) 
   LUT5 #(
     .INIT(32'h00005551)) 
     \nibble_counter[1]_i_1__0 
@@ -4875,7 +4875,6 @@ module top_block_fakernet_top_0_0_fakernet_module
   wire [0:0]O;
   wire [0:0]Q;
   wire \a[done] ;
-  wire \a[off_store] ;
   wire \a[reset] ;
   wire [2:0]\a[wr_idx] ;
   wire access_done0;
@@ -4902,8 +4901,6 @@ module top_block_fakernet_top_0_0_fakernet_module
   wire ctrl_ram_tcp_prep0_n_0;
   wire ctrl_ram_tcp_prep1_n_0;
   wire ctrl_ram_udp_regaidp_n_1;
-  wire ctrl_regacc_aux_n_15;
-  wire ctrl_regacc_aux_n_2;
   wire cur_tcp_prep;
   wire \cycle_count_reg[21] ;
   wire \cycle_count_reg[21]_0 ;
@@ -5435,7 +5432,7 @@ module top_block_fakernet_top_0_0_fakernet_module
   wire \regacc_aux_info[prod][v][reg_ch] ;
   wire \regacc_aux_info[prod][v][reg_idp] ;
   wire [16:0]\regacc_aux_info[stat][checksum] ;
-  wire [10:4]\regacc_aux_info[stat][end_words] ;
+  wire [10:1]\regacc_aux_info[stat][end_words] ;
   wire \regacc_aux_info[stat][reg_ch] ;
   wire \regacc_aux_info[stat][reg_idp] ;
   wire [31:0]regacc_data_rd_i;
@@ -5451,10 +5448,11 @@ module top_block_fakernet_top_0_0_fakernet_module
   wire regacc_n_37;
   wire regacc_n_38;
   wire regacc_n_41;
-  wire regacc_n_43;
-  wire regacc_n_45;
-  wire regacc_n_46;
-  wire regacc_n_47;
+  wire regacc_n_55;
+  wire regacc_n_56;
+  wire regacc_n_57;
+  wire regacc_n_58;
+  wire regacc_n_59;
   wire regacc_n_60;
   wire regacc_n_61;
   wire regacc_n_62;
@@ -5477,17 +5475,12 @@ module top_block_fakernet_top_0_0_fakernet_module
   wire regacc_n_79;
   wire regacc_n_80;
   wire regacc_n_81;
-  wire regacc_n_82;
-  wire regacc_n_83;
   wire regacc_n_84;
   wire regacc_n_85;
   wire regacc_n_86;
-  wire regacc_n_89;
+  wire regacc_n_87;
   wire regacc_n_90;
   wire regacc_n_91;
-  wire regacc_n_92;
-  wire regacc_n_95;
-  wire regacc_n_96;
   wire regacc_read_o;
   wire regacc_write_o;
   wire reset_count0;
@@ -5791,12 +5784,9 @@ module top_block_fakernet_top_0_0_fakernet_module
   top_block_fakernet_top_0_0_fnet_regacc_aux_stat ctrl_regacc_aux
        (.D(\regacc_aux_info[prod][v][end_words] ),
         .E(\ram_udp_regres[0][prod][set_hasdata] ),
-        .\FSM_sequential_s[state][0]_i_4__0 (regacc_n_43),
-        .\FSM_sequential_s[state][1]_i_12__0 ({regacc_n_45,regacc_n_46,regacc_n_47}),
         .Q(\regacc_aux_info[stat][end_words] ),
         .SS(\ram_udp_regacc[cons][clear_hasdata] ),
         .WEA(\dp_ram_udp_regres_port_a_o_tmp[0][wr] ),
-        .\a[off_store] (\a[off_store] ),
         .actual_wr(actual_wr),
         .clk_in(clk_in),
         .\regacc_aux_info[prod][set_reg_ch] (\regacc_aux_info[prod][set_reg_ch] ),
@@ -5806,8 +5796,6 @@ module top_block_fakernet_top_0_0_fakernet_module
         .\s_stat_reg[checksum][16]_1 (\regacc_aux_info[prod][set_checksum] ),
         .\s_stat_reg[checksum][16]_2 (\regacc_aux_info[prod][v][checksum] ),
         .\s_stat_reg[end_words][10]_0 (\regacc_aux_info[prod][set_end_words] ),
-        .\s_stat_reg[end_words][2]_0 (ctrl_regacc_aux_n_15),
-        .\s_stat_reg[end_words][6]_0 (ctrl_regacc_aux_n_2),
         .\s_stat_reg[reg_ch][0]_0 (\regacc_aux_info[stat][reg_ch] ),
         .\s_stat_reg[reg_idp]_0 (\regacc_aux_info[stat][reg_idp] ),
         .\s_stat_reg[reg_idp]_1 (\ram_udp_regres[1][prod][set_hasdata] ),
@@ -6215,7 +6203,7 @@ module top_block_fakernet_top_0_0_fakernet_module
         .S({lclreg_n_146,lclreg_n_147,lclreg_n_148,lclreg_n_149,lclreg_n_150}),
         .access_done0(access_done0),
         .access_done1_out(access_done1_out),
-        .access_done_reg_0(regacc_n_84),
+        .access_done_reg_0(regacc_n_79),
         .\astat[cur_off] (\tcp_state_stat[cur_off] ),
         .\astat[filled] (\tcp_state_stat[filled] ),
         .\astat[unsent] (\tcp_state_stat[unsent] ),
@@ -6246,18 +6234,18 @@ module top_block_fakernet_top_0_0_fakernet_module
         .\rawregs_reg[5][15]_1 ({tcp_ctrl_n_103,tcp_ctrl_n_104,tcp_ctrl_n_105,tcp_ctrl_n_106,tcp_ctrl_n_107,tcp_ctrl_n_108,tcp_ctrl_n_109,tcp_ctrl_n_110,tcp_ctrl_n_111,tcp_ctrl_n_112,tcp_ctrl_n_113,tcp_ctrl_n_114,tcp_ctrl_n_115,tcp_ctrl_n_116,tcp_ctrl_n_117}),
         .\rawregs_reg[8][15]_0 (\rawregs_reg[8]_14 ),
         .\reg_data_rd_reg[12]_0 (regacc_n_32),
-        .\reg_data_rd_reg[14]_0 (regacc_n_91),
+        .\reg_data_rd_reg[14]_0 (regacc_n_86),
         .\reg_data_rd_reg[15]_0 (regacc_n_21),
         .\reg_data_rd_reg[15]_1 (regacc_n_33),
-        .\reg_data_rd_reg[16]_0 ({regacc_n_85,regacc_n_86}),
+        .\reg_data_rd_reg[16]_0 ({regacc_n_80,regacc_n_81}),
         .\reg_data_rd_reg[23]_0 (regacc_n_38),
-        .\reg_data_rd_reg[24]_0 (regacc_n_96),
-        .\reg_data_rd_reg[25]_0 (regacc_n_95),
+        .\reg_data_rd_reg[24]_0 (regacc_n_91),
+        .\reg_data_rd_reg[25]_0 (regacc_n_90),
         .\reg_data_rd_reg[2]_0 (regacc_n_36),
-        .\reg_data_rd_reg[30]_0 (regacc_n_89),
-        .\reg_data_rd_reg[30]_1 (regacc_n_90),
+        .\reg_data_rd_reg[30]_0 (regacc_n_84),
+        .\reg_data_rd_reg[30]_1 (regacc_n_85),
         .\reg_data_rd_reg[31]_0 (reg_int_data_rd),
-        .\reg_data_rd_reg[31]_1 ({regacc_n_60,regacc_n_61,regacc_n_62,regacc_n_63,regacc_n_64,regacc_n_65,regacc_n_66,regacc_n_67,regacc_n_68,regacc_n_69,regacc_n_70,regacc_n_71,regacc_n_72,regacc_n_73,regacc_n_74,regacc_n_75,regacc_n_76,regacc_n_77,regacc_n_78,regacc_n_79,regacc_n_80,regacc_n_81,regacc_n_82,regacc_n_83}),
+        .\reg_data_rd_reg[31]_1 ({regacc_n_55,regacc_n_56,regacc_n_57,regacc_n_58,regacc_n_59,regacc_n_60,regacc_n_61,regacc_n_62,regacc_n_63,regacc_n_64,regacc_n_65,regacc_n_66,regacc_n_67,regacc_n_68,regacc_n_69,regacc_n_70,regacc_n_71,regacc_n_72,regacc_n_73,regacc_n_74,regacc_n_75,regacc_n_76,regacc_n_77,regacc_n_78}),
         .\reg_data_rd_reg[4]_0 (regacc_n_37),
         .\reg_data_rd_reg[5]_0 (regacc_n_31),
         .\reg_data_rd_reg[9]_0 (regacc_n_34),
@@ -6287,7 +6275,7 @@ module top_block_fakernet_top_0_0_fakernet_module
         .tcp_reset(tcp_reset),
         .\testctrl_reg_reg[0][20]_0 ({\testctrl_reg_reg[0]_4 ,tc_limit_tcp_payload}),
         .\testctrl_reg_reg[0][31]_0 (lclreg_n_69),
-        .\testctrl_reg_reg[0][31]_1 (regacc_n_92),
+        .\testctrl_reg_reg[0][31]_1 (regacc_n_87),
         .\testctrl_reg_reg[1][15]_0 (tc_limit_tcp_window),
         .\testctrl_reg_reg[1][31]_0 (\testctrl_reg[1]_16 ),
         .\testctrl_reg_reg[2][0]_0 (lclreg_n_152),
@@ -6602,13 +6590,9 @@ module top_block_fakernet_top_0_0_fakernet_module
         .D(reg_int_data_rd),
         .DOUTBDOUT(\dp_ram_udp_regacc[port_b][i][rdata] ),
         .E(\ram_udp_regidp[prod][set_hasdata] ),
-        .\FSM_sequential_s[state][1]_i_5__0_0 (ctrl_regacc_aux_n_15),
-        .\FSM_sequential_s_reg[state][0]_0 (ctrl_regacc_aux_n_2),
-        .\FSM_sequential_s_reg[state][1]_0 (regacc_n_43),
-        .\FSM_sequential_s_reg[state][1]_1 (\regacc_aux_info[stat][end_words] ),
+        .\FSM_sequential_s_reg[state][0]_0 (\regacc_aux_info[stat][end_words] ),
         .Q(\dp_ram_udp_regres_port_a_o_tmp[1][wdata] ),
         .SS(\ram_udp_regacc[cons][clear_hasdata] ),
-        .\a[off_store] (\a[off_store] ),
         .access_done0(access_done0),
         .access_done1_out(access_done1_out),
         .\actual_woff_reg[10]_0 (\dp_ram_udp_regres_port_a_o_tmp[1][addr] ),
@@ -6617,7 +6601,6 @@ module top_block_fakernet_top_0_0_fakernet_module
         .\dp_ram_counts[port_b][o][rd] (\dp_ram_counts[port_b][o][rd] ),
         .\dp_ram_udp_regacc[port_b][o][rd] (\dp_ram_udp_regacc[port_b][o][rd] ),
         .\mdio_req_d_reg[18] (lclreg_n_12),
-        .\off_reg[3]_0 ({regacc_n_45,regacc_n_46,regacc_n_47}),
         .\ram_udp_regacc[stat][hasdata] (\ram_udp_regacc[stat][hasdata] ),
         .\rawregs_reg[3]_11 ({\rawregs_reg[3]_11 [12],\rawregs_reg[3]_11 [3],\rawregs_reg[3]_11 [0]}),
         .\reg_data_rd[0]_i_2_0 (\rawregs_reg[4]_12 [0]),
@@ -6713,15 +6696,15 @@ module top_block_fakernet_top_0_0_fakernet_module
         .regacc_int_read_reg_0(regacc_n_21),
         .regacc_int_read_reg_1(regacc_n_34),
         .regacc_int_read_reg_2(regacc_n_38),
-        .regacc_int_read_reg_3({regacc_n_60,regacc_n_61,regacc_n_62,regacc_n_63,regacc_n_64,regacc_n_65,regacc_n_66,regacc_n_67,regacc_n_68,regacc_n_69,regacc_n_70,regacc_n_71,regacc_n_72,regacc_n_73,regacc_n_74,regacc_n_75,regacc_n_76,regacc_n_77,regacc_n_78,regacc_n_79,regacc_n_80,regacc_n_81,regacc_n_82,regacc_n_83}),
-        .regacc_int_read_reg_4(regacc_n_84),
-        .regacc_int_read_reg_5({regacc_n_85,regacc_n_86}),
-        .regacc_int_read_reg_6(regacc_n_90),
-        .regacc_int_read_reg_7(regacc_n_95),
-        .regacc_int_read_reg_8(regacc_n_96),
+        .regacc_int_read_reg_3({regacc_n_55,regacc_n_56,regacc_n_57,regacc_n_58,regacc_n_59,regacc_n_60,regacc_n_61,regacc_n_62,regacc_n_63,regacc_n_64,regacc_n_65,regacc_n_66,regacc_n_67,regacc_n_68,regacc_n_69,regacc_n_70,regacc_n_71,regacc_n_72,regacc_n_73,regacc_n_74,regacc_n_75,regacc_n_76,regacc_n_77,regacc_n_78}),
+        .regacc_int_read_reg_4(regacc_n_79),
+        .regacc_int_read_reg_5({regacc_n_80,regacc_n_81}),
+        .regacc_int_read_reg_6(regacc_n_85),
+        .regacc_int_read_reg_7(regacc_n_90),
+        .regacc_int_read_reg_8(regacc_n_91),
         .\regacc_pre2_addr_reg[0]_0 (regacc_n_37),
-        .\regacc_pre2_addr_reg[11]_0 (regacc_n_89),
-        .\regacc_pre2_addr_reg[11]_1 (regacc_n_91),
+        .\regacc_pre2_addr_reg[11]_0 (regacc_n_84),
+        .\regacc_pre2_addr_reg[11]_1 (regacc_n_86),
         .\regacc_pre2_addr_reg[1]_0 (regacc_n_32),
         .\regacc_pre2_addr_reg[1]_1 (\testctrl_reg[1]_16 ),
         .\regacc_pre2_addr_reg[2]_0 (regacc_n_33),
@@ -6731,7 +6714,7 @@ module top_block_fakernet_top_0_0_fakernet_module
         .\regacc_pre2_addr_reg[2]_4 (\testctrl_reg[7]_1 ),
         .\regacc_pre2_addr_reg[2]_5 (regacc_n_41),
         .\regacc_pre2_addr_reg[2]_6 (\testctrl_reg[4]_2 ),
-        .\regacc_pre2_addr_reg[2]_7 (regacc_n_92),
+        .\regacc_pre2_addr_reg[2]_7 (regacc_n_87),
         .\regacc_pre2_addr_reg[2]_8 (\testctrl_reg[3]_15 ),
         .\regacc_pre2_addr_reg[3]_0 (regacc_n_31),
         .\regacc_pre2_addr_reg[8]_0 (reg_int_addr),
@@ -8744,7 +8727,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .DOD(NLW_ram_reg_0_15_14_16_DOD_UNCONNECTED[1:0]),
         .WCLK(clk_in),
         .WE(\wr_ptr_a_reg[4]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair582" *) 
+  (* SOFT_HLUTNM = "soft_lutpair587" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     \rd_ptr_a[0]_i_1 
@@ -8754,7 +8737,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I3(\rd_ptr_gr_a_reg_n_0_[3] ),
         .I4(p_1_in8_in),
         .O(rd_ptr_bin_a[0]));
-  (* SOFT_HLUTNM = "soft_lutpair582" *) 
+  (* SOFT_HLUTNM = "soft_lutpair587" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \rd_ptr_a[1]_i_1 
@@ -8763,7 +8746,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I2(rd_ptr_bin_a_4),
         .I3(p_0_in6_in),
         .O(rd_ptr_bin_a[1]));
-  (* SOFT_HLUTNM = "soft_lutpair585" *) 
+  (* SOFT_HLUTNM = "soft_lutpair590" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \rd_ptr_a[2]_i_1 
@@ -8771,7 +8754,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I1(rd_ptr_bin_a_4),
         .I2(\rd_ptr_gr_a_reg_n_0_[3] ),
         .O(rd_ptr_bin_a[2]));
-  (* SOFT_HLUTNM = "soft_lutpair585" *) 
+  (* SOFT_HLUTNM = "soft_lutpair590" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rd_ptr_a[3]_i_1 
@@ -8948,28 +8931,28 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .D(\rd_ptr_gr0_a_reg_n_0_[4] ),
         .Q(rd_ptr_bin_a_4),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair588" *) 
+  (* SOFT_HLUTNM = "soft_lutpair593" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rd_ptr_gr_b[0]_i_1__0 
        (.I0(rd_ptr_b_reg__0[0]),
         .I1(rd_ptr_b_reg__0[1]),
         .O(\rd_ptr_gr_b[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair588" *) 
+  (* SOFT_HLUTNM = "soft_lutpair593" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rd_ptr_gr_b[1]_i_1__0 
        (.I0(rd_ptr_b_reg__0[1]),
         .I1(rd_ptr_b_reg__0[2]),
         .O(\rd_ptr_gr_b[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair587" *) 
+  (* SOFT_HLUTNM = "soft_lutpair592" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rd_ptr_gr_b[2]_i_1__0 
        (.I0(rd_ptr_b_reg__0[3]),
         .I1(rd_ptr_b_reg__0[2]),
         .O(\rd_ptr_gr_b[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair587" *) 
+  (* SOFT_HLUTNM = "soft_lutpair592" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rd_ptr_gr_b[3]_i_1__0 
@@ -9045,7 +9028,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I4(\wr_ptr_a_reg_n_0_[3] ),
         .I5(taken_prev_i_2_n_0),
         .O(\wr_ptr_a[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair583" *) 
+  (* SOFT_HLUTNM = "soft_lutpair588" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \wr_ptr_a[1]_i_1 
@@ -9053,7 +9036,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I1(\wr_ptr_a_reg_n_0_[0] ),
         .I2(\wr_ptr_a_reg_n_0_[1] ),
         .O(plusOp__2[1]));
-  (* SOFT_HLUTNM = "soft_lutpair579" *) 
+  (* SOFT_HLUTNM = "soft_lutpair584" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \wr_ptr_a[2]_i_1 
@@ -9062,7 +9045,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I2(\wr_ptr_a_reg_n_0_[1] ),
         .I3(\wr_ptr_a_reg_n_0_[2] ),
         .O(plusOp__2[2]));
-  (* SOFT_HLUTNM = "soft_lutpair579" *) 
+  (* SOFT_HLUTNM = "soft_lutpair584" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \wr_ptr_a[3]_i_1 
@@ -9082,7 +9065,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I4(\wr_ptr_a_reg_n_0_[3] ),
         .I5(\wr_ptr_a_reg_n_0_[4] ),
         .O(plusOp__2[4]));
-  (* SOFT_HLUTNM = "soft_lutpair580" *) 
+  (* SOFT_HLUTNM = "soft_lutpair585" *) 
   LUT5 #(
     .INIT(32'h718E8E71)) 
     \wr_ptr_a[4]_i_2 
@@ -9132,7 +9115,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .D(plusOp__2[4]),
         .Q(\wr_ptr_a_reg_n_0_[4] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair581" *) 
+  (* SOFT_HLUTNM = "soft_lutpair586" *) 
   LUT5 #(
     .INIT(32'h96696996)) 
     \wr_ptr_b[0]_i_1 
@@ -9142,7 +9125,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I3(\wr_ptr_gr_b_reg_n_0_[3] ),
         .I4(p_1_in),
         .O(wr_ptr_bin_b[0]));
-  (* SOFT_HLUTNM = "soft_lutpair581" *) 
+  (* SOFT_HLUTNM = "soft_lutpair586" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \wr_ptr_b[1]_i_1 
@@ -9151,7 +9134,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I2(wr_ptr_bin_b_4),
         .I3(p_0_in1_in),
         .O(wr_ptr_bin_b[1]));
-  (* SOFT_HLUTNM = "soft_lutpair584" *) 
+  (* SOFT_HLUTNM = "soft_lutpair589" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \wr_ptr_b[2]_i_1 
@@ -9159,7 +9142,7 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .I1(wr_ptr_bin_b_4),
         .I2(\wr_ptr_gr_b_reg_n_0_[3] ),
         .O(wr_ptr_bin_b[2]));
-  (* SOFT_HLUTNM = "soft_lutpair584" *) 
+  (* SOFT_HLUTNM = "soft_lutpair589" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \wr_ptr_b[3]_i_1 
@@ -9246,28 +9229,28 @@ module top_block_fakernet_top_0_0_fnet_async_fifo__parameterized0
         .D(\wr_ptr_gr_a_reg_n_0_[4] ),
         .Q(\wr_ptr_gr0_b_reg_n_0_[4] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair583" *) 
+  (* SOFT_HLUTNM = "soft_lutpair588" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \wr_ptr_gr_a[0]_i_1 
        (.I0(\wr_ptr_a_reg_n_0_[1] ),
         .I1(\wr_ptr_a_reg_n_0_[0] ),
         .O(\wr_ptr_gr_a[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair586" *) 
+  (* SOFT_HLUTNM = "soft_lutpair591" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \wr_ptr_gr_a[1]_i_1 
        (.I0(\wr_ptr_a_reg_n_0_[2] ),
         .I1(\wr_ptr_a_reg_n_0_[1] ),
         .O(\wr_ptr_gr_a[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair586" *) 
+  (* SOFT_HLUTNM = "soft_lutpair591" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \wr_ptr_gr_a[2]_i_1 
        (.I0(\wr_ptr_a_reg_n_0_[3] ),
         .I1(\wr_ptr_a_reg_n_0_[2] ),
         .O(\wr_ptr_gr_a[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair580" *) 
+  (* SOFT_HLUTNM = "soft_lutpair585" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \wr_ptr_gr_a[3]_i_1 
@@ -12449,7 +12432,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
   wire \FSM_sequential_s[state][1]_i_10_n_0 ;
   wire \FSM_sequential_s[state][1]_i_11_n_0 ;
   wire \FSM_sequential_s[state][1]_i_12_n_0 ;
-  wire \FSM_sequential_s[state][1]_i_13__0_n_0 ;
+  wire \FSM_sequential_s[state][1]_i_13_n_0 ;
   wire \FSM_sequential_s[state][1]_i_14_n_0 ;
   wire \FSM_sequential_s[state][1]_i_15_n_0 ;
   wire \FSM_sequential_s[state][1]_i_16_n_0 ;
@@ -12741,7 +12724,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
   wire \actual_wdata[15]_i_25_n_0 ;
   wire \actual_wdata[15]_i_2_n_0 ;
   wire \actual_wdata[15]_i_3_n_0 ;
-  wire \actual_wdata[15]_i_4__0_n_0 ;
+  wire \actual_wdata[15]_i_4__1_n_0 ;
   wire \actual_wdata[15]_i_6_n_0 ;
   wire \actual_wdata[15]_i_7_n_0 ;
   wire \actual_wdata[15]_i_8_n_0 ;
@@ -14829,12 +14812,12 @@ module top_block_fakernet_top_0_0_fnet_in_state
   (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT4 #(
     .INIT(16'h09FF)) 
-    \FSM_sequential_s[state][1]_i_13__0 
+    \FSM_sequential_s[state][1]_i_13 
        (.I0(\s_reg[ipv4_remain_is__n_0_0] ),
         .I1(\FSM_sequential_s_reg[state][3]_rep__0_n_0 ),
         .I2(\FSM_sequential_s_reg[state][2]_rep_n_0 ),
         .I3(\FSM_sequential_s_reg[state][6]_rep_n_0 ),
-        .O(\FSM_sequential_s[state][1]_i_13__0_n_0 ));
+        .O(\FSM_sequential_s[state][1]_i_13_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT2 #(
     .INIT(4'h1)) 
@@ -14999,7 +14982,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'hBBBBBBBBBBABAAAA)) 
     \FSM_sequential_s[state][1]_i_3 
        (.I0(\FSM_sequential_s[state][1]_i_12_n_0 ),
-        .I1(\FSM_sequential_s[state][1]_i_13__0_n_0 ),
+        .I1(\FSM_sequential_s[state][1]_i_13_n_0 ),
         .I2(\info_counts[good_icmp]_i_2_n_0 ),
         .I3(\FSM_sequential_s[state][1]_i_14_n_0 ),
         .I4(dly_wicmpcksum_i_2_n_0),
@@ -16765,7 +16748,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'hBBBBB8BBB8B8BBBB)) 
     \actual_wdata[0]_i_3 
        (.I0(\actual_wdata[0]_i_6_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata[14]_i_8_n_0 ),
         .I3(\actual_wdata[15]_i_8_n_0 ),
         .I4(\FSM_sequential_s_reg[state][5]_rep_0 ),
@@ -16775,7 +16758,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'h8B888B888888BBBB)) 
     \actual_wdata[0]_i_4 
        (.I0(\actual_wdata[0]_i_7_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata[0]_i_8_n_0 ),
         .I3(\FSM_sequential_s_reg[state][5]_rep_0 ),
         .I4(\actual_wdata[0]_i_9_n_0 ),
@@ -16833,7 +16816,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[10]_i_1 
        (.I0(\actual_wdata[10]_i_2_n_0 ),
         .I1(\actual_wdata[10]_i_3_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata_reg[10]_0 ),
         .I4(\actual_wdata[10]_i_5_n_0 ),
         .I5(\actual_wdata[10]_i_6_n_0 ),
@@ -16882,7 +16865,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[10]_i_8_n_0 ),
         .I2(\actual_wdata[10]_i_9_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[10]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair293" *) 
@@ -16926,7 +16909,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'h00000000AAAAFFAE)) 
     \actual_wdata[11]_i_1 
        (.I0(\actual_wdata[11]_i_2_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata_reg[11]_0 ),
         .I3(\actual_wdata[15]_i_3_n_0 ),
         .I4(\actual_wdata[11]_i_4_n_0 ),
@@ -16947,7 +16930,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[11]_i_7_n_0 ),
         .I2(\actual_wdata[11]_i_8_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[11]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair294" *) 
@@ -17001,7 +16984,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[12]_i_1 
        (.I0(\actual_wdata[12]_i_2_n_0 ),
         .I1(\actual_wdata[12]_i_3_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata_reg[12]_0 ),
         .I4(\actual_wdata[12]_i_5_n_0 ),
         .I5(\actual_wdata[12]_i_6_n_0 ),
@@ -17049,7 +17032,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[12]_i_8_n_0 ),
         .I2(\actual_wdata[12]_i_9_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[12]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair294" *) 
@@ -17092,7 +17075,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'h00000000AAAAFFAE)) 
     \actual_wdata[13]_i_1 
        (.I0(\actual_wdata[13]_i_2_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata_reg[13]_0 ),
         .I3(\actual_wdata[15]_i_3_n_0 ),
         .I4(\actual_wdata[13]_i_4_n_0 ),
@@ -17113,7 +17096,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[13]_i_7_n_0 ),
         .I2(\actual_wdata[13]_i_8_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[13]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair295" *) 
@@ -17158,7 +17141,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[14]_i_1 
        (.I0(\actual_wdata[14]_i_2_n_0 ),
         .I1(\actual_wdata[14]_i_3_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata_reg[14]_0 ),
         .I4(\actual_wdata[14]_i_5_n_0 ),
         .I5(\actual_wdata[14]_i_6_n_0 ),
@@ -17218,7 +17201,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[14]_i_10_n_0 ),
         .I2(\actual_wdata[14]_i_11_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[14]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair295" *) 
@@ -17260,7 +17243,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[15]_i_1 
        (.I0(\actual_wdata[15]_i_2_n_0 ),
         .I1(\actual_wdata[15]_i_3_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata_reg[15]_0 ),
         .I4(\actual_wdata[15]_i_6_n_0 ),
         .I5(\actual_wdata[15]_i_7_n_0 ),
@@ -17440,14 +17423,14 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .O(\actual_wdata[15]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h4444444444444445)) 
-    \actual_wdata[15]_i_4__0 
+    \actual_wdata[15]_i_4__1 
        (.I0(\actual_wdata[15]_i_10_n_0 ),
         .I1(\actual_wdata[15]_i_8_n_0 ),
         .I2(\actual_wdata[15]_i_11_n_0 ),
         .I3(\actual_wdata[15]_i_12_n_0 ),
         .I4(\actual_wdata[15]_i_13_n_0 ),
         .I5(\actual_wdata[15]_i_14_n_0 ),
-        .O(\actual_wdata[15]_i_4__0_n_0 ));
+        .O(\actual_wdata[15]_i_4__1_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEFAFFAAAAAAAA)) 
     \actual_wdata[15]_i_6 
@@ -17455,7 +17438,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[15]_i_18_n_0 ),
         .I2(\actual_wdata[15]_i_19_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[15]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair291" *) 
@@ -17530,7 +17513,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(is_our_mac01_reg_0[5]),
         .I2(\FSM_sequential_s_reg[state][5]_rep_0 ),
         .I3(\FSM_sequential_s_reg[state][1]_rep__0_1 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_9_n_0 ),
         .O(\actual_wdata[1]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair292" *) 
@@ -17588,7 +17571,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(w[2]),
         .I2(\actual_wdata[3]_i_6_n_0 ),
         .I3(\actual_wdata[2]_i_5_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[7]_i_7_n_0 ),
         .O(\actual_wdata[2]_i_2__1_n_0 ));
   LUT6 #(
@@ -17596,7 +17579,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[2]_i_3 
        (.I0(\actual_wdata[8]_i_4__0_n_0 ),
         .I1(\actual_wdata[2]_i_6_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata[2]_i_7_n_0 ),
         .I4(\actual_wdata[7]_i_10_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
@@ -17654,7 +17637,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\w_reg[15]_0 [0]),
         .I2(\actual_wdata[3]_i_6_n_0 ),
         .I3(\actual_wdata[3]_i_7_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[7]_i_7_n_0 ),
         .O(\actual_wdata[3]_i_2__1_n_0 ));
   LUT6 #(
@@ -17662,7 +17645,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[3]_i_3 
        (.I0(\actual_wdata[8]_i_4__0_n_0 ),
         .I1(\actual_wdata[3]_i_8_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata[3]_i_9_n_0 ),
         .I4(\actual_wdata[7]_i_10_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
@@ -17744,7 +17727,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[4]_i_2 
        (.I0(\actual_wdata[10]_i_3_n_0 ),
         .I1(\actual_wdata[4]_i_5_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata[4]_i_6_n_0 ),
         .O(\actual_wdata[4]_i_2_n_0 ));
   LUT5 #(
@@ -17752,7 +17735,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[4]_i_3 
        (.I0(\actual_wdata[8]_i_4__0_n_0 ),
         .I1(\actual_wdata[4]_i_7_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata[1]_i_3_n_0 ),
         .I4(\actual_wdata[4]_i_8_n_0 ),
         .O(\actual_wdata[4]_i_3_n_0 ));
@@ -17798,7 +17781,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[4]_i_8 
        (.I0(\actual_wdata[4]_i_9_n_0 ),
         .I1(\tcp_buf_stat[commit_overrun] ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\s[seqno_hi_same]_i_8_n_0 ),
         .I4(\FSM_sequential_s_reg[state][5]_rep_0 ),
         .O(\actual_wdata[4]_i_8_n_0 ));
@@ -17842,14 +17825,14 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\s[seqno_hi_same]_i_8_n_0 ),
         .I2(\actual_wdata[5]_i_5_n_0 ),
         .I3(\actual_wdata[1]_i_3_n_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[5]_i_6_n_0 ),
         .O(\actual_wdata[5]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hBFBBAAAA)) 
     \actual_wdata[5]_i_4 
        (.I0(\actual_wdata[8]_i_4__0_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata[5]_i_7_n_0 ),
         .I3(\actual_wdata[5]_i_8_n_0 ),
         .I4(\actual_wdata[7]_i_7_n_0 ),
@@ -17924,7 +17907,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
   LUT6 #(
     .INIT(64'h0000A808AAAAA808)) 
     \actual_wdata[6]_i_3 
-       (.I0(\actual_wdata[15]_i_4__0_n_0 ),
+       (.I0(\actual_wdata[15]_i_4__1_n_0 ),
         .I1(is_our_mac01_reg_0[2]),
         .I2(\FSM_sequential_s_reg[state][1]_rep__0_0 ),
         .I3(is_our_mac01_reg_0[10]),
@@ -17935,7 +17918,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     .INIT(64'hAAAA8AAA22220222)) 
     \actual_wdata[6]_i_4 
        (.I0(\actual_wdata[1]_i_3_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\s[seqno_hi_same]_i_8_n_0 ),
         .I3(\FSM_sequential_s_reg[state][5]_rep_0 ),
         .I4(\actual_wdata[6]_i_7_n_0 ),
@@ -18004,13 +17987,13 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[7]_i_10 
        (.I0(\FSM_sequential_s_reg[state][5]_rep_0 ),
         .I1(\s[seqno_hi_same]_i_8_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .O(\actual_wdata[7]_i_10_n_0 ));
   LUT4 #(
     .INIT(16'h40FF)) 
     \actual_wdata[7]_i_2__1 
        (.I0(\actual_wdata[7]_i_5_n_0 ),
-        .I1(\actual_wdata[15]_i_4__0_n_0 ),
+        .I1(\actual_wdata[15]_i_4__1_n_0 ),
         .I2(\actual_wdata[7]_i_6_n_0 ),
         .I3(\actual_wdata[7]_i_7_n_0 ),
         .O(\actual_wdata[7]_i_2__1_n_0 ));
@@ -18019,7 +18002,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
     \actual_wdata[7]_i_3 
        (.I0(\actual_wdata[8]_i_4__0_n_0 ),
         .I1(\actual_wdata[7]_i_8_n_0 ),
-        .I2(\actual_wdata[15]_i_4__0_n_0 ),
+        .I2(\actual_wdata[15]_i_4__1_n_0 ),
         .I3(\actual_wdata[7]_i_9_n_0 ),
         .I4(\actual_wdata[7]_i_10_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
@@ -18168,7 +18151,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I2(\actual_wdata[1]_i_3_n_0 ),
         .I3(\actual_wdata[14]_i_3_n_0 ),
         .I4(\actual_wdata[8]_i_13_n_0 ),
-        .I5(\actual_wdata[15]_i_4__0_n_0 ),
+        .I5(\actual_wdata[15]_i_4__1_n_0 ),
         .O(\actual_wdata[8]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hAAAAAAAABAAAAAAA)) 
@@ -18254,7 +18237,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[9]_i_6_n_0 ),
         .I2(\FSM_sequential_s_reg[state][1]_rep__0_1 ),
         .I3(\actual_wdata_reg[9]_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .O(\actual_wdata[9]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEAFFFAAAAAAAA)) 
@@ -18263,7 +18246,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
         .I1(\actual_wdata[9]_i_8_n_0 ),
         .I2(\actual_wdata[9]_i_9_n_0 ),
         .I3(\FSM_sequential_s_reg[state][5]_rep_0 ),
-        .I4(\actual_wdata[15]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4__1_n_0 ),
         .I5(\actual_wdata[1]_i_3_n_0 ),
         .O(\actual_wdata[9]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair325" *) 
@@ -18380,7 +18363,7 @@ module top_block_fakernet_top_0_0_fnet_in_state
        (.I0(\actual_wdata[1]_i_7_n_0 ),
         .I1(\actual_wdata[1]_i_8_n_0 ),
         .O(\actual_wdata_reg[1]_i_4_n_0 ),
-        .S(\actual_wdata[15]_i_4__0_n_0 ));
+        .S(\actual_wdata[15]_i_4__1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \actual_wdata_reg[2] 
@@ -54227,48 +54210,38 @@ endmodule
 module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
    (\s_stat_reg[reg_idp]_0 ,
     \s_stat_reg[reg_ch][0]_0 ,
-    \s_stat_reg[end_words][6]_0 ,
-    Q,
     E,
     \s_stat_reg[reg_idp]_1 ,
     WEA,
     \s_stat_reg[reg_idp]_2 ,
     \s_stat_reg[reg_idp]_3 ,
-    \s_stat_reg[end_words][2]_0 ,
+    Q,
     \s_stat_reg[checksum][16]_0 ,
     \regacc_aux_info[prod][set_reg_ch] ,
     \regacc_aux_info[prod][v][reg_idp] ,
     clk_in,
     \regacc_aux_info[prod][v][reg_ch] ,
-    \FSM_sequential_s[state][0]_i_4__0 ,
-    \a[off_store] ,
     SS,
     actual_wr,
-    \FSM_sequential_s[state][1]_i_12__0 ,
     \s_stat_reg[end_words][10]_0 ,
     D,
     \s_stat_reg[checksum][16]_1 ,
     \s_stat_reg[checksum][16]_2 );
   output \s_stat_reg[reg_idp]_0 ;
   output \s_stat_reg[reg_ch][0]_0 ;
-  output \s_stat_reg[end_words][6]_0 ;
-  output [6:0]Q;
   output [0:0]E;
   output [0:0]\s_stat_reg[reg_idp]_1 ;
   output [0:0]WEA;
   output [0:0]\s_stat_reg[reg_idp]_2 ;
   output [0:0]\s_stat_reg[reg_idp]_3 ;
-  output \s_stat_reg[end_words][2]_0 ;
+  output [9:0]Q;
   output [16:0]\s_stat_reg[checksum][16]_0 ;
   input \regacc_aux_info[prod][set_reg_ch] ;
   input \regacc_aux_info[prod][v][reg_idp] ;
   input clk_in;
   input \regacc_aux_info[prod][v][reg_ch] ;
-  input \FSM_sequential_s[state][0]_i_4__0 ;
-  input \a[off_store] ;
   input [0:0]SS;
   input actual_wr;
-  input [2:0]\FSM_sequential_s[state][1]_i_12__0 ;
   input [0:0]\s_stat_reg[end_words][10]_0 ;
   input [9:0]D;
   input [0:0]\s_stat_reg[checksum][16]_1 ;
@@ -54276,50 +54249,24 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
 
   wire [9:0]D;
   wire [0:0]E;
-  wire \FSM_sequential_s[state][0]_i_4__0 ;
-  wire [2:0]\FSM_sequential_s[state][1]_i_12__0 ;
-  wire [6:0]Q;
+  wire [9:0]Q;
   wire [0:0]SS;
   wire [0:0]WEA;
-  wire \a[off_store] ;
   wire actual_wr;
   wire clk_in;
   wire \regacc_aux_info[prod][set_reg_ch] ;
   wire \regacc_aux_info[prod][v][reg_ch] ;
   wire \regacc_aux_info[prod][v][reg_idp] ;
-  wire [3:1]\regacc_aux_info[stat][end_words] ;
   wire [16:0]\s_stat_reg[checksum][16]_0 ;
   wire [0:0]\s_stat_reg[checksum][16]_1 ;
   wire [16:0]\s_stat_reg[checksum][16]_2 ;
   wire [0:0]\s_stat_reg[end_words][10]_0 ;
-  wire \s_stat_reg[end_words][2]_0 ;
-  wire \s_stat_reg[end_words][6]_0 ;
   wire \s_stat_reg[reg_ch][0]_0 ;
   wire \s_stat_reg[reg_idp]_0 ;
   wire [0:0]\s_stat_reg[reg_idp]_1 ;
   wire [0:0]\s_stat_reg[reg_idp]_2 ;
   wire [0:0]\s_stat_reg[reg_idp]_3 ;
 
-  LUT6 #(
-    .INIT(64'hFFFFF0F0FFFEF0F0)) 
-    \FSM_sequential_s[state][0]_i_9__0 
-       (.I0(Q[2]),
-        .I1(Q[5]),
-        .I2(\FSM_sequential_s[state][0]_i_4__0 ),
-        .I3(Q[4]),
-        .I4(\a[off_store] ),
-        .I5(Q[3]),
-        .O(\s_stat_reg[end_words][6]_0 ));
-  LUT6 #(
-    .INIT(64'hFE7FDFBFEFF7FDFB)) 
-    \FSM_sequential_s[state][1]_i_13 
-       (.I0(\regacc_aux_info[stat][end_words] [2]),
-        .I1(\regacc_aux_info[stat][end_words] [1]),
-        .I2(\FSM_sequential_s[state][1]_i_12__0 [2]),
-        .I3(\FSM_sequential_s[state][1]_i_12__0 [0]),
-        .I4(\FSM_sequential_s[state][1]_i_12__0 [1]),
-        .I5(\regacc_aux_info[stat][end_words] [3]),
-        .O(\s_stat_reg[end_words][2]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h10)) 
@@ -54500,7 +54447,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[9]),
-        .Q(Q[6]),
+        .Q(Q[9]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54508,7 +54455,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[0]),
-        .Q(\regacc_aux_info[stat][end_words] [1]),
+        .Q(Q[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54516,7 +54463,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[1]),
-        .Q(\regacc_aux_info[stat][end_words] [2]),
+        .Q(Q[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54524,7 +54471,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[2]),
-        .Q(\regacc_aux_info[stat][end_words] [3]),
+        .Q(Q[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54532,7 +54479,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[3]),
-        .Q(Q[0]),
+        .Q(Q[3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54540,7 +54487,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[4]),
-        .Q(Q[1]),
+        .Q(Q[4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54548,7 +54495,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[5]),
-        .Q(Q[2]),
+        .Q(Q[5]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54556,7 +54503,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[6]),
-        .Q(Q[3]),
+        .Q(Q[6]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54564,7 +54511,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[7]),
-        .Q(Q[4]),
+        .Q(Q[7]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54572,7 +54519,7 @@ module top_block_fakernet_top_0_0_fnet_regacc_aux_stat
        (.C(clk_in),
         .CE(\s_stat_reg[end_words][10]_0 ),
         .D(D[8]),
-        .Q(Q[5]),
+        .Q(Q[8]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -54614,12 +54561,9 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \regacc_pre2_addr_reg[2]_4 ,
     \regacc_pre2_addr_reg[2]_5 ,
     \regacc_pre2_addr_reg[2]_6 ,
-    \FSM_sequential_s_reg[state][1]_0 ,
-    \a[off_store] ,
-    \off_reg[3]_0 ,
-    SS,
-    E,
     ADDRBWRADDR,
+    E,
+    SS,
     regacc_int_read_reg_3,
     regacc_int_read_reg_4,
     regacc_int_read_reg_5,
@@ -54666,12 +54610,10 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \reg_data_rd_reg[15]_0 ,
     \reg_data_rd_reg[15]_1 ,
     \reg_data_rd[16]_i_4_0 ,
-    \FSM_sequential_s_reg[state][1]_1 ,
     \ram_udp_regacc[stat][hasdata] ,
     \FSM_sequential_s_reg[state][0]_0 ,
     \regacc_aux_info[stat][reg_idp] ,
     reg_int_done,
-    \FSM_sequential_s[state][1]_i_5__0_0 ,
     \reg_data_rd_reg[31]_0 ,
     \reg_data_rd_reg[30] ,
     \reg_data_rd_reg[21] ,
@@ -54757,12 +54699,9 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   output [0:0]\regacc_pre2_addr_reg[2]_4 ;
   output [0:0]\regacc_pre2_addr_reg[2]_5 ;
   output [0:0]\regacc_pre2_addr_reg[2]_6 ;
-  output \FSM_sequential_s_reg[state][1]_0 ;
-  output \a[off_store] ;
-  output [2:0]\off_reg[3]_0 ;
-  output [0:0]SS;
-  output [0:0]E;
   output [9:0]ADDRBWRADDR;
+  output [0:0]E;
+  output [0:0]SS;
   output [23:0]regacc_int_read_reg_3;
   output regacc_int_read_reg_4;
   output [1:0]regacc_int_read_reg_5;
@@ -54809,12 +54748,10 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   input [0:0]\reg_data_rd_reg[15]_0 ;
   input [0:0]\reg_data_rd_reg[15]_1 ;
   input [2:0]\reg_data_rd[16]_i_4_0 ;
-  input [6:0]\FSM_sequential_s_reg[state][1]_1 ;
   input \ram_udp_regacc[stat][hasdata] ;
-  input \FSM_sequential_s_reg[state][0]_0 ;
+  input [9:0]\FSM_sequential_s_reg[state][0]_0 ;
   input \regacc_aux_info[stat][reg_idp] ;
   input reg_int_done;
-  input \FSM_sequential_s[state][1]_i_5__0_0 ;
   input [11:0]\reg_data_rd_reg[31]_0 ;
   input \reg_data_rd_reg[30] ;
   input \reg_data_rd_reg[21] ;
@@ -54897,29 +54834,29 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire \FSM_sequential_s[state][0]_i_6__0_n_0 ;
   wire \FSM_sequential_s[state][0]_i_7__0_n_0 ;
   wire \FSM_sequential_s[state][0]_i_8__0_n_0 ;
+  wire \FSM_sequential_s[state][0]_i_9__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_10__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_11__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_12__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_2__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_3__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_4__0_n_0 ;
-  wire \FSM_sequential_s[state][1]_i_5__0_0 ;
   wire \FSM_sequential_s[state][1]_i_5__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_6__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_7__0_n_0 ;
+  wire \FSM_sequential_s[state][1]_i_8__0_n_0 ;
   wire \FSM_sequential_s[state][1]_i_9__0_n_0 ;
-  wire \FSM_sequential_s[state][2]_i_2__0_n_0 ;
-  wire \FSM_sequential_s_reg[state][0]_0 ;
-  wire \FSM_sequential_s_reg[state][1]_0 ;
-  wire [6:0]\FSM_sequential_s_reg[state][1]_1 ;
+  wire [9:0]\FSM_sequential_s_reg[state][0]_0 ;
   wire [15:0]Q;
   wire R;
   wire [0:0]SS;
   wire \a[latch_done] ;
   wire \a[next_accum_cksum] ;
   wire [4:0]\a[next_state] ;
+  wire \a[next_state]1 ;
   wire \a[off_store] ;
-  wire [1:1]\a[off_update] ;
+  wire [0:0]\a[off_update] ;
+  wire [1:1]\a[off_update]__0 ;
   wire \a[reset_read] ;
   wire \a[wr] ;
   wire access_done0;
@@ -54934,17 +54871,18 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire \actual_wdata[11]_i_3__0_n_0 ;
   wire \actual_wdata[12]_i_1__0_n_0 ;
   wire \actual_wdata[12]_i_2__0_n_0 ;
+  wire \actual_wdata[12]_i_3__0_n_0 ;
+  wire \actual_wdata[12]_i_4__0_n_0 ;
+  wire \actual_wdata[12]_i_5__0_n_0 ;
   wire \actual_wdata[13]_i_1__0_n_0 ;
   wire \actual_wdata[13]_i_2__0_n_0 ;
   wire \actual_wdata[14]_i_1__0_n_0 ;
-  wire \actual_wdata[14]_i_2__0_n_0 ;
+  wire \actual_wdata[14]_i_2__1_n_0 ;
   wire \actual_wdata[14]_i_3__0_n_0 ;
-  wire \actual_wdata[14]_i_4__0_n_0 ;
-  wire \actual_wdata[14]_i_5__0_n_0 ;
-  wire \actual_wdata[14]_i_6__0_n_0 ;
   wire \actual_wdata[15]_i_1__0_n_0 ;
   wire \actual_wdata[15]_i_2__0_n_0 ;
   wire \actual_wdata[15]_i_3__0_n_0 ;
+  wire \actual_wdata[15]_i_4_n_0 ;
   wire \actual_wdata[1]_i_1__0_n_0 ;
   wire \actual_wdata[1]_i_2__0_n_0 ;
   wire \actual_wdata[2]_i_1__0_n_0 ;
@@ -54959,30 +54897,49 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire \actual_wdata[6]_i_2__0_n_0 ;
   wire \actual_wdata[7]_i_1__0_n_0 ;
   wire \actual_wdata[7]_i_2_n_0 ;
+  wire \actual_wdata[7]_i_4__0_n_0 ;
   wire \actual_wdata[8]_i_1__0_n_0 ;
   wire \actual_wdata[8]_i_2__0_n_0 ;
   wire \actual_wdata[9]_i_1__0_n_0 ;
   wire \actual_wdata[9]_i_2__0_n_0 ;
-  wire \actual_wdata_reg[12]_i_3_n_0 ;
-  wire \actual_wdata_reg[12]_i_3_n_1 ;
-  wire \actual_wdata_reg[12]_i_3_n_10 ;
-  wire \actual_wdata_reg[12]_i_3_n_11 ;
-  wire \actual_wdata_reg[12]_i_3_n_12 ;
-  wire \actual_wdata_reg[12]_i_3_n_13 ;
-  wire \actual_wdata_reg[12]_i_3_n_14 ;
-  wire \actual_wdata_reg[12]_i_3_n_15 ;
-  wire \actual_wdata_reg[12]_i_3_n_2 ;
-  wire \actual_wdata_reg[12]_i_3_n_3 ;
-  wire \actual_wdata_reg[12]_i_3_n_4 ;
-  wire \actual_wdata_reg[12]_i_3_n_5 ;
-  wire \actual_wdata_reg[12]_i_3_n_6 ;
-  wire \actual_wdata_reg[12]_i_3_n_7 ;
-  wire \actual_wdata_reg[12]_i_3_n_8 ;
-  wire \actual_wdata_reg[12]_i_3_n_9 ;
+  wire \actual_wdata_reg[15]_i_5_n_0 ;
+  wire \actual_wdata_reg[15]_i_5_n_1 ;
+  wire \actual_wdata_reg[15]_i_5_n_10 ;
+  wire \actual_wdata_reg[15]_i_5_n_11 ;
+  wire \actual_wdata_reg[15]_i_5_n_12 ;
+  wire \actual_wdata_reg[15]_i_5_n_13 ;
+  wire \actual_wdata_reg[15]_i_5_n_14 ;
+  wire \actual_wdata_reg[15]_i_5_n_15 ;
+  wire \actual_wdata_reg[15]_i_5_n_2 ;
+  wire \actual_wdata_reg[15]_i_5_n_3 ;
+  wire \actual_wdata_reg[15]_i_5_n_4 ;
+  wire \actual_wdata_reg[15]_i_5_n_5 ;
+  wire \actual_wdata_reg[15]_i_5_n_6 ;
+  wire \actual_wdata_reg[15]_i_5_n_7 ;
+  wire \actual_wdata_reg[15]_i_5_n_8 ;
+  wire \actual_wdata_reg[15]_i_5_n_9 ;
+  wire \actual_wdata_reg[7]_i_3_n_0 ;
+  wire \actual_wdata_reg[7]_i_3_n_1 ;
+  wire \actual_wdata_reg[7]_i_3_n_10 ;
+  wire \actual_wdata_reg[7]_i_3_n_11 ;
+  wire \actual_wdata_reg[7]_i_3_n_12 ;
+  wire \actual_wdata_reg[7]_i_3_n_13 ;
+  wire \actual_wdata_reg[7]_i_3_n_14 ;
+  wire \actual_wdata_reg[7]_i_3_n_15 ;
+  wire \actual_wdata_reg[7]_i_3_n_2 ;
+  wire \actual_wdata_reg[7]_i_3_n_3 ;
+  wire \actual_wdata_reg[7]_i_3_n_4 ;
+  wire \actual_wdata_reg[7]_i_3_n_5 ;
+  wire \actual_wdata_reg[7]_i_3_n_6 ;
+  wire \actual_wdata_reg[7]_i_3_n_7 ;
+  wire \actual_wdata_reg[7]_i_3_n_8 ;
+  wire \actual_wdata_reg[7]_i_3_n_9 ;
   wire [9:0]\actual_woff_reg[10]_0 ;
   wire actual_wr;
   wire clk_in;
   wire cnt0;
+  wire \cnt_256[7]_i_3_n_0 ;
+  wire [7:0]cnt_256_reg;
   wire [1:0]cnt_reg;
   wire [3:2]cnt_reg__0;
   wire done_data_i_1_n_0;
@@ -54997,28 +54954,18 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire off;
   wire \off[10]_i_10_n_0 ;
   wire \off[10]_i_11_n_0 ;
-  wire \off[10]_i_12_n_0 ;
-  wire \off[10]_i_4_n_0 ;
   wire \off[10]_i_5_n_0 ;
   wire \off[10]_i_6_n_0 ;
   wire \off[10]_i_7_n_0 ;
   wire \off[10]_i_8_n_0 ;
   wire \off[10]_i_9_n_0 ;
-  wire \off[1]_i_2_n_0 ;
-  wire \off[1]_i_3_n_0 ;
-  wire \off[4]_i_2_n_0 ;
-  wire \off[4]_i_3_n_0 ;
-  wire \off[4]_i_4_n_0 ;
-  wire \off[4]_i_5_n_0 ;
-  wire \off[5]_i_2_n_0 ;
-  wire \off[5]_i_3_n_0 ;
-  wire \off[5]_i_4_n_0 ;
-  wire \off[5]_i_5_n_0 ;
   wire \off[6]_i_2_n_0 ;
   wire \off[8]_i_2_n_0 ;
-  wire [2:0]\off_reg[3]_0 ;
   wire \off_reg_n_0_[0] ;
   wire \off_reg_n_0_[10] ;
+  wire \off_reg_n_0_[1] ;
+  wire \off_reg_n_0_[2] ;
+  wire \off_reg_n_0_[3] ;
   wire \off_reg_n_0_[4] ;
   wire \off_reg_n_0_[5] ;
   wire \off_reg_n_0_[6] ;
@@ -55027,7 +54974,8 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire \off_reg_n_0_[9] ;
   wire [10:0]off_stored;
   wire [10:0]p_1_in;
-  wire [3:0]plusOp;
+  wire [7:0]plusOp;
+  wire [3:0]plusOp__0;
   wire \ram_udp_regacc[stat][hasdata] ;
   wire [2:0]\rawregs_reg[3]_11 ;
   wire \read_data[0]_i_1_n_0 ;
@@ -55418,7 +55366,6 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire \s[wcksum][7]_i_15__0_n_0 ;
   wire \s[wcksum][7]_i_16__0_n_0 ;
   wire \s[wcksum][7]_i_17__0_n_0 ;
-  wire \s[wcksum][7]_i_19_n_0 ;
   wire \s[wcksum][7]_i_2__0_n_0 ;
   wire \s[wcksum][7]_i_3__0_n_0 ;
   wire \s[wcksum][7]_i_4__0_n_0 ;
@@ -55448,22 +55395,6 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire [16:0]\s_reg[wcksum][16]_0 ;
   wire \s_reg[wcksum][16]_i_1__0_n_15 ;
   wire \s_reg[wcksum][16]_i_3__0_n_7 ;
-  wire \s_reg[wcksum][7]_i_18_n_0 ;
-  wire \s_reg[wcksum][7]_i_18_n_1 ;
-  wire \s_reg[wcksum][7]_i_18_n_10 ;
-  wire \s_reg[wcksum][7]_i_18_n_11 ;
-  wire \s_reg[wcksum][7]_i_18_n_12 ;
-  wire \s_reg[wcksum][7]_i_18_n_13 ;
-  wire \s_reg[wcksum][7]_i_18_n_14 ;
-  wire \s_reg[wcksum][7]_i_18_n_15 ;
-  wire \s_reg[wcksum][7]_i_18_n_2 ;
-  wire \s_reg[wcksum][7]_i_18_n_3 ;
-  wire \s_reg[wcksum][7]_i_18_n_4 ;
-  wire \s_reg[wcksum][7]_i_18_n_5 ;
-  wire \s_reg[wcksum][7]_i_18_n_6 ;
-  wire \s_reg[wcksum][7]_i_18_n_7 ;
-  wire \s_reg[wcksum][7]_i_18_n_8 ;
-  wire \s_reg[wcksum][7]_i_18_n_9 ;
   wire \s_reg[wcksum][7]_i_1__0_n_0 ;
   wire \s_reg[wcksum][7]_i_1__0_n_1 ;
   wire \s_reg[wcksum][7]_i_1__0_n_10 ;
@@ -55506,52 +55437,50 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   wire [7:1]\NLW_s_reg[wcksum][16]_i_3__0_CO_UNCONNECTED ;
   wire [7:0]\NLW_s_reg[wcksum][16]_i_3__0_O_UNCONNECTED ;
 
-  LUT3 #(
-    .INIT(8'h7F)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \FSM_sequential_s[state][0]_i_10__0 
-       (.I0(\off_reg_n_0_[4] ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg[3]_0 [2]),
+       (.I0(\off_reg_n_0_[8] ),
+        .I1(\off_reg_n_0_[10] ),
+        .I2(\off_reg_n_0_[9] ),
+        .I3(\off_reg_n_0_[7] ),
+        .I4(\off_reg_n_0_[6] ),
         .O(\FSM_sequential_s[state][0]_i_10__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'h0000000000000002)) 
     \FSM_sequential_s[state][0]_i_11__0 
-       (.I0(\off_reg_n_0_[9] ),
-        .I1(\off_reg_n_0_[10] ),
-        .I2(\off_reg_n_0_[7] ),
-        .I3(\off_reg_n_0_[8] ),
-        .I4(\off_reg_n_0_[6] ),
-        .I5(\off_reg_n_0_[0] ),
+       (.I0(\FSM_sequential_s[state][0]_i_12__0_n_0 ),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[0] ),
+        .I3(\off_reg_n_0_[3] ),
+        .I4(\off_reg_n_0_[2] ),
+        .I5(\FSM_sequential_s[state][0]_i_10__0_n_0 ),
         .O(\FSM_sequential_s[state][0]_i_11__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair484" *) 
-  LUT5 #(
-    .INIT(32'h00040000)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \FSM_sequential_s[state][0]_i_12__0 
-       (.I0(\off_reg[3]_0 [0]),
+       (.I0(\off_reg_n_0_[4] ),
         .I1(\off_reg_n_0_[5] ),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [2]),
         .O(\FSM_sequential_s[state][0]_i_12__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000040000)) 
+    .INIT(64'h0008000000000000)) 
     \FSM_sequential_s[state][0]_i_13__0 
-       (.I0(\off_reg[3]_0 [1]),
-        .I1(\off_reg_n_0_[4] ),
-        .I2(\FSM_sequential_s[state][0]_i_14__0_n_0 ),
-        .I3(\off_reg[3]_0 [0]),
+       (.I0(\off_reg_n_0_[2] ),
+        .I1(\off_reg_n_0_[3] ),
+        .I2(\off_reg_n_0_[0] ),
+        .I3(\off_reg_n_0_[1] ),
         .I4(\off_reg_n_0_[5] ),
-        .I5(\s_reg[state] [2]),
+        .I5(\off_reg_n_0_[4] ),
         .O(\FSM_sequential_s[state][0]_i_13__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair484" *) 
+  (* SOFT_HLUTNM = "soft_lutpair536" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FSM_sequential_s[state][0]_i_14__0 
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [1]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [3]),
         .O(\FSM_sequential_s[state][0]_i_14__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFFFFFAAAAFFFE)) 
     \FSM_sequential_s[state][0]_i_1__0 
        (.I0(\FSM_sequential_s[state][0]_i_2__0_n_0 ),
         .I1(\FSM_sequential_s[state][0]_i_3__0_n_0 ),
@@ -55561,104 +55490,114 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I5(\FSM_sequential_s[state][0]_i_7__0_n_0 ),
         .O(\a[next_state] [0]));
   LUT6 #(
-    .INIT(64'h04040404FF040404)) 
+    .INIT(64'hEEEEAAAAFFFEAAAA)) 
     \FSM_sequential_s[state][0]_i_2__0 
-       (.I0(\off[6]_i_2_n_0 ),
-        .I1(\a[off_store] ),
-        .I2(\FSM_sequential_s_reg[state][1]_1 [1]),
-        .I3(\FSM_sequential_s[state][2]_i_2__0_n_0 ),
+       (.I0(\FSM_sequential_s[state][0]_i_8__0_n_0 ),
+        .I1(\s_reg[state] [2]),
+        .I2(\FSM_sequential_s[state][0]_i_9__0_n_0 ),
+        .I3(\s_reg[state] [1]),
         .I4(\s_reg[state] [4]),
         .I5(\s_reg[state] [0]),
         .O(\FSM_sequential_s[state][0]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h22F2222200000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair503" *) 
+  LUT4 #(
+    .INIT(16'hA0C0)) 
     \FSM_sequential_s[state][0]_i_3__0 
-       (.I0(wr_op),
-        .I1(\s_reg[state] [0]),
-        .I2(\read_data[31]_i_5_n_0 ),
-        .I3(regacc_pst_done),
-        .I4(\s_reg[state] [1]),
-        .I5(\FSM_sequential_s[state][0]_i_8__0_n_0 ),
+       (.I0(\FSM_sequential_s[state][0]_i_10__0_n_0 ),
+        .I1(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
+        .I2(\s_reg[state] [1]),
+        .I3(\s_reg[state] [0]),
         .O(\FSM_sequential_s[state][0]_i_3__0_n_0 ));
   LUT6 #(
-    .INIT(64'hBEEEAAAABFEEAAAA)) 
+    .INIT(64'h800000FF80000000)) 
     \FSM_sequential_s[state][0]_i_4__0 
-       (.I0(\FSM_sequential_s_reg[state][0]_0 ),
-        .I1(\off_reg_n_0_[5] ),
-        .I2(\FSM_sequential_s[state][0]_i_10__0_n_0 ),
-        .I3(\FSM_sequential_s_reg[state][1]_1 [1]),
-        .I4(\a[off_store] ),
-        .I5(\off_reg[3]_0 [0]),
+       (.I0(\off_reg_n_0_[3] ),
+        .I1(\off_reg_n_0_[2] ),
+        .I2(\FSM_sequential_s[state][0]_i_12__0_n_0 ),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [0]),
+        .I5(\ram_udp_regacc[stat][hasdata] ),
         .O(\FSM_sequential_s[state][0]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFEEFE00F000F0)) 
+    .INIT(64'h1455551455555555)) 
     \FSM_sequential_s[state][0]_i_5__0 
-       (.I0(\FSM_sequential_s[state][1]_i_12__0_n_0 ),
-        .I1(\FSM_sequential_s_reg[state][1]_1 [6]),
-        .I2(\ram_udp_regacc[stat][hasdata] ),
-        .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
-        .I5(\a[off_store] ),
+       (.I0(\off[10]_i_7_n_0 ),
+        .I1(ADDRBWRADDR[9]),
+        .I2(\FSM_sequential_s_reg[state][0]_0 [9]),
+        .I3(ADDRBWRADDR[8]),
+        .I4(\FSM_sequential_s_reg[state][0]_0 [8]),
+        .I5(\FSM_sequential_s[state][1]_i_8__0_n_0 ),
         .O(\FSM_sequential_s[state][0]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair483" *) 
-  LUT5 #(
-    .INIT(32'h0F0C0A00)) 
+  (* SOFT_HLUTNM = "soft_lutpair511" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \FSM_sequential_s[state][0]_i_6__0 
-       (.I0(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [0]),
-        .I3(\s_reg[state] [1]),
-        .I4(\s_reg[state] [3]),
+        .I2(\s_reg[state] [4]),
         .O(\FSM_sequential_s[state][0]_i_6__0_n_0 ));
   LUT6 #(
-    .INIT(64'h008000FF00800000)) 
+    .INIT(64'h0000000000100000)) 
     \FSM_sequential_s[state][0]_i_7__0 
-       (.I0(\FSM_sequential_s[state][0]_i_12__0_n_0 ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg_n_0_[4] ),
-        .I3(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
-        .I4(\off_reg[3]_0 [2]),
-        .I5(\FSM_sequential_s[state][0]_i_13__0_n_0 ),
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [0]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [3]),
+        .I4(\FSM_sequential_s[state][0]_i_13__0_n_0 ),
+        .I5(\FSM_sequential_s[state][0]_i_10__0_n_0 ),
         .O(\FSM_sequential_s[state][0]_i_7__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair481" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT6 #(
+    .INIT(64'h00000000BF0FBF0A)) 
     \FSM_sequential_s[state][0]_i_8__0 
-       (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [2]),
+        .I1(\a[next_state]1 ),
+        .I2(\s_reg[state] [0]),
+        .I3(\s_reg[state] [1]),
+        .I4(wr_op),
+        .I5(\FSM_sequential_s[state][0]_i_14__0_n_0 ),
         .O(\FSM_sequential_s[state][0]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF40000000)) 
+    \FSM_sequential_s[state][0]_i_9__0 
+       (.I0(\cnt_256[7]_i_3_n_0 ),
+        .I1(cnt_256_reg[5]),
+        .I2(cnt_256_reg[4]),
+        .I3(cnt_256_reg[7]),
+        .I4(cnt_256_reg[6]),
+        .I5(regacc_pst_done),
+        .O(\FSM_sequential_s[state][0]_i_9__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0006000000000006)) 
+    \FSM_sequential_s[state][1]_i_10__0 
+       (.I0(\FSM_sequential_s_reg[state][0]_0 [5]),
+        .I1(\off[6]_i_2_n_0 ),
+        .I2(\FSM_sequential_s[state][1]_i_11__0_n_0 ),
+        .I3(\FSM_sequential_s[state][1]_i_12__0_n_0 ),
+        .I4(ADDRBWRADDR[4]),
+        .I5(\FSM_sequential_s_reg[state][0]_0 [4]),
+        .O(\FSM_sequential_s[state][1]_i_10__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair486" *) 
+  LUT5 #(
+    .INIT(32'hEBFFFFEB)) 
+    \FSM_sequential_s[state][1]_i_11__0 
+       (.I0(\off_reg_n_0_[0] ),
+        .I1(\FSM_sequential_s_reg[state][0]_0 [0]),
+        .I2(\off_reg_n_0_[1] ),
+        .I3(ADDRBWRADDR[3]),
+        .I4(\FSM_sequential_s_reg[state][0]_0 [3]),
+        .O(\FSM_sequential_s[state][1]_i_11__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair485" *) 
   LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
-    \FSM_sequential_s[state][1]_i_10__0 
-       (.I0(\off_reg_n_0_[4] ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off_reg[3]_0 [2]),
-        .I4(\off_reg_n_0_[5] ),
-        .O(\FSM_sequential_s[state][1]_i_10__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair481" *) 
-  LUT5 #(
-    .INIT(32'h00200000)) 
-    \FSM_sequential_s[state][1]_i_11__0 
-       (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [4]),
-        .I2(\s_reg[state] [1]),
-        .I3(regacc_pst_done),
-        .I4(\read_data[31]_i_5_n_0 ),
-        .O(\FSM_sequential_s[state][1]_i_11__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEBBBBBBBBEEEEEEE)) 
+    .INIT(32'hD6BFBFD6)) 
     \FSM_sequential_s[state][1]_i_12__0 
-       (.I0(\FSM_sequential_s[state][1]_i_5__0_0 ),
-        .I1(\off_reg_n_0_[4] ),
-        .I2(\off_reg[3]_0 [1]),
-        .I3(\off_reg[3]_0 [0]),
-        .I4(\off_reg[3]_0 [2]),
-        .I5(\FSM_sequential_s_reg[state][1]_1 [0]),
+       (.I0(\FSM_sequential_s_reg[state][0]_0 [1]),
+        .I1(\off_reg_n_0_[2] ),
+        .I2(\off_reg_n_0_[1] ),
+        .I3(\off_reg_n_0_[3] ),
+        .I4(\FSM_sequential_s_reg[state][0]_0 [2]),
         .O(\FSM_sequential_s[state][1]_i_12__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFAABAAABAAABA)) 
     \FSM_sequential_s[state][1]_i_1__0 
        (.I0(\FSM_sequential_s[state][1]_i_2__0_n_0 ),
         .I1(\FSM_sequential_s[state][1]_i_3__0_n_0 ),
@@ -55668,91 +55607,82 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I5(\FSM_sequential_s[state][1]_i_7__0_n_0 ),
         .O(\a[next_state] [1]));
   LUT6 #(
-    .INIT(64'hEFFECCCCFEEFCCCC)) 
+    .INIT(64'hFFFF00F0AAF022F0)) 
     \FSM_sequential_s[state][1]_i_2__0 
-       (.I0(\off_reg_n_0_[0] ),
-        .I1(\FSM_sequential_s_reg[state][1]_0 ),
-        .I2(\off_reg_n_0_[5] ),
-        .I3(\off[6]_i_2_n_0 ),
-        .I4(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
-        .I5(\FSM_sequential_s_reg[state][1]_1 [1]),
+       (.I0(\s_reg[state] [3]),
+        .I1(\a[next_state]1 ),
+        .I2(\s_reg[state] [0]),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [2]),
+        .I5(\s_reg[state] [4]),
         .O(\FSM_sequential_s[state][1]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h2FF20000F28F0000)) 
+  (* SOFT_HLUTNM = "soft_lutpair536" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \FSM_sequential_s[state][1]_i_3__0 
-       (.I0(\FSM_sequential_s_reg[state][1]_1 [3]),
-        .I1(\off_reg_n_0_[7] ),
-        .I2(\off_reg_n_0_[6] ),
-        .I3(\FSM_sequential_s[state][1]_i_10__0_n_0 ),
-        .I4(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
-        .I5(\FSM_sequential_s_reg[state][1]_1 [2]),
+       (.I0(\s_reg[state] [2]),
+        .I1(\s_reg[state] [3]),
         .O(\FSM_sequential_s[state][1]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h7C370000D3CD0000)) 
+  (* SOFT_HLUTNM = "soft_lutpair535" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \FSM_sequential_s[state][1]_i_4__0 
-       (.I0(\FSM_sequential_s_reg[state][1]_1 [3]),
-        .I1(\off_reg_n_0_[8] ),
-        .I2(\off[8]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[7] ),
-        .I4(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
-        .I5(\FSM_sequential_s_reg[state][1]_1 [4]),
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [4]),
         .O(\FSM_sequential_s[state][1]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFF10FF10FF10)) 
+    .INIT(64'h8208002000208208)) 
     \FSM_sequential_s[state][1]_i_5__0 
-       (.I0(\s_reg[state] [2]),
-        .I1(\s_reg[state] [0]),
-        .I2(\s_reg[state] [1]),
-        .I3(\FSM_sequential_s[state][1]_i_11__0_n_0 ),
-        .I4(\FSM_sequential_s[state][1]_i_12__0_n_0 ),
-        .I5(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
+       (.I0(\FSM_sequential_s[state][1]_i_8__0_n_0 ),
+        .I1(\FSM_sequential_s_reg[state][0]_0 [8]),
+        .I2(\off_reg_n_0_[9] ),
+        .I3(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
+        .I4(\FSM_sequential_s_reg[state][0]_0 [9]),
+        .I5(\off_reg_n_0_[10] ),
         .O(\FSM_sequential_s[state][1]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair505" *) 
+  (* SOFT_HLUTNM = "soft_lutpair537" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_s[state][1]_i_6__0 
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [1]),
-        .O(\FSM_sequential_s[state][1]_i_6__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h70D0E0B0B0E070D0)) 
-    \FSM_sequential_s[state][1]_i_7__0 
-       (.I0(\FSM_sequential_s_reg[state][1]_1 [5]),
-        .I1(\FSM_sequential_s_reg[state][1]_1 [6]),
-        .I2(\FSM_sequential_s[state][1]_i_9__0_n_0 ),
-        .I3(\off_reg_n_0_[10] ),
-        .I4(\off[10]_i_9_n_0 ),
-        .I5(\off_reg_n_0_[9] ),
-        .O(\FSM_sequential_s[state][1]_i_7__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair498" *) 
-  LUT4 #(
-    .INIT(16'hF800)) 
-    \FSM_sequential_s[state][1]_i_8__0 
        (.I0(\s_reg[state] [1]),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [2]),
-        .O(\FSM_sequential_s_reg[state][1]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair498" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
+        .I1(\s_reg[state] [0]),
+        .O(\FSM_sequential_s[state][1]_i_6__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair512" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \FSM_sequential_s[state][1]_i_7__0 
+       (.I0(\s_reg[state] [2]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [3]),
+        .O(\FSM_sequential_s[state][1]_i_7__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h8408004000408408)) 
+    \FSM_sequential_s[state][1]_i_8__0 
+       (.I0(\FSM_sequential_s_reg[state][0]_0 [6]),
+        .I1(\FSM_sequential_s[state][1]_i_10__0_n_0 ),
+        .I2(\off_reg_n_0_[7] ),
+        .I3(\off[8]_i_2_n_0 ),
+        .I4(\off_reg_n_0_[8] ),
+        .I5(\FSM_sequential_s_reg[state][0]_0 [7]),
+        .O(\FSM_sequential_s[state][1]_i_8__0_n_0 ));
+  LUT3 #(
+    .INIT(8'hDF)) 
     \FSM_sequential_s[state][1]_i_9__0 
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [3]),
+       (.I0(\off_reg_n_0_[7] ),
+        .I1(\off[8]_i_2_n_0 ),
+        .I2(\off_reg_n_0_[8] ),
         .O(\FSM_sequential_s[state][1]_i_9__0_n_0 ));
   LUT6 #(
-    .INIT(64'h05550055E000F000)) 
+    .INIT(64'h00A05F8000A055A0)) 
     \FSM_sequential_s[state][2]_i_1__0 
-       (.I0(\s_reg[state] [4]),
-        .I1(\FSM_sequential_s[state][2]_i_2__0_n_0 ),
+       (.I0(\s_reg[state] [1]),
+        .I1(\a[next_state]1 ),
         .I2(\s_reg[state] [0]),
-        .I3(\s_reg[state] [1]),
-        .I4(\s_reg[state] [3]),
-        .I5(\s_reg[state] [2]),
+        .I3(\s_reg[state] [2]),
+        .I4(\s_reg[state] [4]),
+        .I5(\s_reg[state] [3]),
         .O(\a[next_state] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair482" *) 
+  (* SOFT_HLUTNM = "soft_lutpair484" *) 
   LUT5 #(
     .INIT(32'hFFFF8000)) 
     \FSM_sequential_s[state][2]_i_2__0 
@@ -55761,26 +55691,26 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(cnt_reg__0[2]),
         .I3(cnt_reg__0[3]),
         .I4(regacc_pst_done),
-        .O(\FSM_sequential_s[state][2]_i_2__0_n_0 ));
+        .O(\a[next_state]1 ));
   LUT6 #(
-    .INIT(64'h000000003FFEC000)) 
+    .INIT(64'h060C0C0C060C0C08)) 
     \FSM_sequential_s[state][3]_i_1__0 
-       (.I0(wr_op),
-        .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [0]),
+       (.I0(\s_reg[state] [2]),
+        .I1(\s_reg[state] [3]),
+        .I2(\s_reg[state] [4]),
         .I3(\s_reg[state] [1]),
-        .I4(\s_reg[state] [3]),
-        .I5(\s_reg[state] [4]),
+        .I4(\s_reg[state] [0]),
+        .I5(wr_op),
         .O(\a[next_state] [3]));
   LUT6 #(
-    .INIT(64'h0000FFFF00000010)) 
+    .INIT(64'h0A0A0A0A0A0A0A0E)) 
     \FSM_sequential_s[state][4]_i_1__0 
-       (.I0(wr_op),
-        .I1(\s_reg[state] [0]),
-        .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [1]),
-        .I4(\s_reg[state] [2]),
-        .I5(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [3]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
+        .I5(wr_op),
         .O(\a[next_state] [4]));
   (* FSM_ENCODED_STATES = "rsm_read_waddr_1:10001,rsm_read_wait:10000,rsm_write_wdata_2:01111,rsm_ck:00101,rsm_pad:00100,rsm_next_access:00011,rsm_read_wdata_2:10100,rsm_header:00010,rsm_read_wdata_1:10011,rsm_first:00001,rsm_write_wdata_1:01110,rsm_idle:00000,rsm_write_waddr_2:01101,rsm_write_rdata_2:01010,rsm_write_rdata_1:01001,rsm_done:00110,rsm_write_waddr_1:01100,rsm_write_wait:01011,rsm_raddr_2:01000,rsm_read_waddr_2:10010,rsm_raddr_1:00111" *) 
   FDRE #(
@@ -55836,7 +55766,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(access_done0),
         .I4(access_done1_out),
         .O(regacc_int_read_reg_4));
-  (* SOFT_HLUTNM = "soft_lutpair510" *) 
+  (* SOFT_HLUTNM = "soft_lutpair508" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     access_done_i_2
@@ -55845,354 +55775,369 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(reg_int_addr[9]),
         .I3(reg_int_addr[11]),
         .O(access_done_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair499" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[0]_i_1__0 
+       (.I0(\actual_wdata[0]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[0]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_15 ),
+        .O(\actual_wdata[0]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[0]_i_2__0 
        (.I0(\read_data_reg_n_0_[0] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[0]_i_2__0_n_0 ),
-        .O(\actual_wdata[0]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[0]_i_2__0 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_15 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[0]),
-        .I4(in13[0]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[0]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[0]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[10]_i_1__0 
+       (.I0(\actual_wdata[10]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[10]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_13 ),
+        .O(\actual_wdata[10]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[10]_i_2__0 
        (.I0(\read_data_reg_n_0_[10] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[10]_i_2__0_n_0 ),
-        .O(\actual_wdata[10]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[10]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_13 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[10]),
-        .I4(in13[10]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[10]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[10]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[11]_i_1__0 
+       (.I0(\actual_wdata[11]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[11]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_12 ),
+        .O(\actual_wdata[11]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[11]_i_2__0 
        (.I0(\read_data_reg_n_0_[11] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[11]_i_2__0_n_0 ),
-        .O(\actual_wdata[11]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[11]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_12 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[11]),
-        .I4(in13[11]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[11]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[11]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair480" *) 
+  (* SOFT_HLUTNM = "soft_lutpair481" *) 
   LUT5 #(
-    .INIT(32'h07FF07AF)) 
+    .INIT(32'h0F3F3B3B)) 
     \actual_wdata[11]_i_3__0 
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [3]),
+       (.I0(\s_reg[state] [3]),
+        .I1(\s_reg[state] [2]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [0]),
         .O(\actual_wdata[11]_i_3__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEAAAEAAAFFFFEAAA)) 
+    .INIT(64'hFFF8FFF8FFFFFFF8)) 
     \actual_wdata[12]_i_1__0 
        (.I0(\actual_wdata[12]_i_2__0_n_0 ),
-        .I1(in11),
-        .I2(\FSM_sequential_s[state][1]_i_6__0_n_0 ),
-        .I3(\read_data[31]_i_4_n_0 ),
-        .I4(SS),
-        .I5(\actual_wdata_reg[12]_i_3_n_11 ),
+        .I1(in13[12]),
+        .I2(\actual_wdata[12]_i_3__0_n_0 ),
+        .I3(\actual_wdata[12]_i_4__0_n_0 ),
+        .I4(\actual_wdata[15]_i_4_n_0 ),
+        .I5(\actual_wdata_reg[15]_i_5_n_11 ),
         .O(\actual_wdata[12]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \actual_wdata[12]_i_2__0 
-       (.I0(\actual_wdata[15]_i_3__0_n_0 ),
-        .I1(DOUTBDOUT[12]),
-        .I2(\actual_wdata[14]_i_3__0_n_0 ),
-        .I3(in13[12]),
-        .I4(\read_data_reg_n_0_[12] ),
-        .I5(\actual_wdata[14]_i_2__0_n_0 ),
-        .O(\actual_wdata[12]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair482" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
+    .INIT(16'h4000)) 
+    \actual_wdata[12]_i_2__0 
+       (.I0(\s_reg[state] [2]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [0]),
+        .I3(\s_reg[state] [1]),
+        .O(\actual_wdata[12]_i_2__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h808C808080808080)) 
+    \actual_wdata[12]_i_3__0 
+       (.I0(\read_data_reg_n_0_[12] ),
+        .I1(\s_reg[state] [4]),
+        .I2(\actual_wdata[12]_i_5__0_n_0 ),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [0]),
+        .I5(in11),
+        .O(\actual_wdata[12]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3277227700000000)) 
+    \actual_wdata[12]_i_4__0 
+       (.I0(\s_reg[state] [0]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [3]),
+        .I3(\s_reg[state] [2]),
+        .I4(\s_reg[state] [1]),
+        .I5(DOUTBDOUT[12]),
+        .O(\actual_wdata[12]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair511" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \actual_wdata[12]_i_5__0 
+       (.I0(\s_reg[state] [2]),
+        .I1(\s_reg[state] [3]),
+        .I2(\s_reg[state] [4]),
+        .O(\actual_wdata[12]_i_5__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[13]_i_1__0 
+       (.I0(\actual_wdata[13]_i_2__0_n_0 ),
+        .I1(\actual_wdata[15]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[13]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_10 ),
+        .O(\actual_wdata[13]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[13]_i_2__0 
        (.I0(\read_data_reg_n_0_[13] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[13]_i_2__0_n_0 ),
-        .O(\actual_wdata[13]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[13]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_10 ),
-        .I2(\actual_wdata[15]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[13]),
-        .I4(in13[13]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[13]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[13]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFF888)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[14]_i_1__0 
-       (.I0(\actual_wdata[14]_i_2__0_n_0 ),
-        .I1(\read_data_reg_n_0_[14] ),
-        .I2(in13[14]),
-        .I3(\actual_wdata[14]_i_3__0_n_0 ),
-        .I4(\actual_wdata[14]_i_4__0_n_0 ),
-        .I5(\actual_wdata[14]_i_5__0_n_0 ),
+       (.I0(\actual_wdata[14]_i_2__1_n_0 ),
+        .I1(\actual_wdata[15]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[14]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_9 ),
         .O(\actual_wdata[14]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair500" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \actual_wdata[14]_i_2__0 
+  LUT6 #(
+    .INIT(64'hFFFFF888FFFFF000)) 
+    \actual_wdata[14]_i_2__1 
        (.I0(\s_reg[state] [2]),
         .I1(\s_reg[state] [4]),
-        .O(\actual_wdata[14]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair503" *) 
-  LUT4 #(
-    .INIT(16'h4000)) 
+        .I2(\actual_wdata[12]_i_2__0_n_0 ),
+        .I3(in13[14]),
+        .I4(\actual_wdata[14]_i_3__0_n_0 ),
+        .I5(\read_data_reg_n_0_[14] ),
+        .O(\actual_wdata[14]_i_2__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000002000)) 
     \actual_wdata[14]_i_3__0 
-       (.I0(\s_reg[state] [2]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [4]),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [0]),
+        .I2(in11),
+        .I3(\s_reg[state] [2]),
+        .I4(\s_reg[state] [0]),
+        .I5(\s_reg[state] [1]),
         .O(\actual_wdata[14]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5747474700000000)) 
-    \actual_wdata[14]_i_4__0 
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [0]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [1]),
-        .I5(DOUTBDOUT[14]),
-        .O(\actual_wdata[14]_i_4__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h010C010000000000)) 
-    \actual_wdata[14]_i_5__0 
-       (.I0(\actual_wdata_reg[12]_i_3_n_9 ),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [1]),
-        .I4(in11),
-        .I5(\actual_wdata[14]_i_6__0_n_0 ),
-        .O(\actual_wdata[14]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair502" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \actual_wdata[14]_i_6__0 
-       (.I0(\s_reg[state] [2]),
-        .I1(\s_reg[state] [0]),
-        .O(\actual_wdata[14]_i_6__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[15]_i_1__0 
+       (.I0(\actual_wdata[15]_i_2__0_n_0 ),
+        .I1(\actual_wdata[15]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[15]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_8 ),
+        .O(\actual_wdata[15]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[15]_i_2__0 
        (.I0(\read_data_reg_n_0_[15] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[15]_i_2__0_n_0 ),
-        .O(\actual_wdata[15]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[15]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_8 ),
-        .I2(\actual_wdata[15]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[15]),
-        .I4(in13[15]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[15]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[15]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair480" *) 
+  (* SOFT_HLUTNM = "soft_lutpair482" *) 
   LUT5 #(
-    .INIT(32'h000FFF8F)) 
+    .INIT(32'h00FF33B3)) 
     \actual_wdata[15]_i_3__0 
        (.I0(\s_reg[state] [1]),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [4]),
+        .I1(\s_reg[state] [2]),
+        .I2(\s_reg[state] [3]),
+        .I3(\s_reg[state] [4]),
+        .I4(\s_reg[state] [0]),
         .O(\actual_wdata[15]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair500" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  (* SOFT_HLUTNM = "soft_lutpair481" *) 
+  LUT5 #(
+    .INIT(32'h00040000)) 
+    \actual_wdata[15]_i_4 
+       (.I0(\s_reg[state] [0]),
+        .I1(\s_reg[state] [1]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [3]),
+        .I4(\s_reg[state] [2]),
+        .O(\actual_wdata[15]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[1]_i_1__0 
+       (.I0(\actual_wdata[1]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[1]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_14 ),
+        .O(\actual_wdata[1]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[1]_i_2__0 
        (.I0(\read_data_reg_n_0_[1] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[1]_i_2__0_n_0 ),
-        .O(\actual_wdata[1]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[1]_i_2__0 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_14 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[1]),
-        .I4(in13[1]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[1]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[1]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair501" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[2]_i_1__0 
+       (.I0(\actual_wdata[2]_i_2_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[2]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_13 ),
+        .O(\actual_wdata[2]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[2]_i_2 
        (.I0(\read_data_reg_n_0_[2] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[2]_i_2_n_0 ),
-        .O(\actual_wdata[2]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[2]_i_2 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_13 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[2]),
-        .I4(in13[2]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[2]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair502" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[3]_i_1__0 
+       (.I0(\actual_wdata[3]_i_2_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[3]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_12 ),
+        .O(\actual_wdata[3]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[3]_i_2 
        (.I0(\read_data_reg_n_0_[3] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[3]_i_2_n_0 ),
-        .O(\actual_wdata[3]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[3]_i_2 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_12 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[3]),
-        .I4(in13[3]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[3]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[3]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[4]_i_1__0 
+       (.I0(\actual_wdata[4]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[4]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_11 ),
+        .O(\actual_wdata[4]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[4]_i_2__0 
        (.I0(\read_data_reg_n_0_[4] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[4]_i_2__0_n_0 ),
-        .O(\actual_wdata[4]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[4]_i_2__0 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_11 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[4]),
-        .I4(in13[4]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[4]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[4]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[5]_i_1__0 
+       (.I0(\actual_wdata[5]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[5]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_10 ),
+        .O(\actual_wdata[5]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[5]_i_2__0 
        (.I0(\read_data_reg_n_0_[5] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[5]_i_2__0_n_0 ),
-        .O(\actual_wdata[5]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[5]_i_2__0 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_10 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[5]),
-        .I4(in13[5]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[5]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[5]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[6]_i_1__0 
+       (.I0(\actual_wdata[6]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[6]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_9 ),
+        .O(\actual_wdata[6]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[6]_i_2__0 
        (.I0(\read_data_reg_n_0_[6] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[6]_i_2__0_n_0 ),
-        .O(\actual_wdata[6]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[6]_i_2__0 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_9 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[6]),
-        .I4(in13[6]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[6]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[6]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[7]_i_1__0 
+       (.I0(\actual_wdata[7]_i_2_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[7]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_8 ),
+        .O(\actual_wdata[7]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[7]_i_2 
        (.I0(\read_data_reg_n_0_[7] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[7]_i_2_n_0 ),
-        .O(\actual_wdata[7]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[7]_i_2 
-       (.I0(SS),
-        .I1(\s_reg[wcksum][7]_i_18_n_8 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[7]),
-        .I4(in13[7]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[7]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[7]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \actual_wdata[7]_i_4__0 
+       (.I0(\s_reg[wcksum_n_0_][0] ),
+        .I1(R),
+        .O(\actual_wdata[7]_i_4__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[8]_i_1__0 
+       (.I0(\actual_wdata[8]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[8]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_15 ),
+        .O(\actual_wdata[8]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[8]_i_2__0 
        (.I0(\read_data_reg_n_0_[8] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[8]_i_2__0_n_0 ),
-        .O(\actual_wdata[8]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[8]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_15 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[8]),
-        .I4(in13[8]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[8]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[8]_i_2__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF80)) 
+  LUT5 #(
+    .INIT(32'hEAEAFFEA)) 
     \actual_wdata[9]_i_1__0 
+       (.I0(\actual_wdata[9]_i_2__0_n_0 ),
+        .I1(\actual_wdata[11]_i_3__0_n_0 ),
+        .I2(DOUTBDOUT[9]),
+        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_14 ),
+        .O(\actual_wdata[9]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF808080)) 
+    \actual_wdata[9]_i_2__0 
        (.I0(\read_data_reg_n_0_[9] ),
         .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [4]),
-        .I3(\actual_wdata[9]_i_2__0_n_0 ),
-        .O(\actual_wdata[9]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF222F222F222)) 
-    \actual_wdata[9]_i_2__0 
-       (.I0(SS),
-        .I1(\actual_wdata_reg[12]_i_3_n_14 ),
-        .I2(\actual_wdata[11]_i_3__0_n_0 ),
-        .I3(DOUTBDOUT[9]),
-        .I4(in13[9]),
-        .I5(\actual_wdata[14]_i_3__0_n_0 ),
+        .I3(in13[9]),
+        .I4(\actual_wdata[12]_i_2__0_n_0 ),
         .O(\actual_wdata[9]_i_2__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -56226,13 +56171,6 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\actual_wdata[12]_i_1__0_n_0 ),
         .Q(Q[12]),
         .R(1'b0));
-  CARRY8 \actual_wdata_reg[12]_i_3 
-       (.CI(\s_reg[wcksum][7]_i_18_n_0 ),
-        .CI_TOP(1'b0),
-        .CO({\actual_wdata_reg[12]_i_3_n_0 ,\actual_wdata_reg[12]_i_3_n_1 ,\actual_wdata_reg[12]_i_3_n_2 ,\actual_wdata_reg[12]_i_3_n_3 ,\actual_wdata_reg[12]_i_3_n_4 ,\actual_wdata_reg[12]_i_3_n_5 ,\actual_wdata_reg[12]_i_3_n_6 ,\actual_wdata_reg[12]_i_3_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\actual_wdata_reg[12]_i_3_n_8 ,\actual_wdata_reg[12]_i_3_n_9 ,\actual_wdata_reg[12]_i_3_n_10 ,\actual_wdata_reg[12]_i_3_n_11 ,\actual_wdata_reg[12]_i_3_n_12 ,\actual_wdata_reg[12]_i_3_n_13 ,\actual_wdata_reg[12]_i_3_n_14 ,\actual_wdata_reg[12]_i_3_n_15 }),
-        .S({\s_reg[wcksum_n_0_][15] ,\s_reg[wcksum_n_0_][14] ,\s_reg[wcksum_n_0_][13] ,\s_reg[wcksum_n_0_][12] ,\s_reg[wcksum_n_0_][11] ,\s_reg[wcksum_n_0_][10] ,\s_reg[wcksum_n_0_][9] ,\s_reg[wcksum_n_0_][8] }));
   FDRE #(
     .INIT(1'b0)) 
     \actual_wdata_reg[13] 
@@ -56257,6 +56195,13 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\actual_wdata[15]_i_1__0_n_0 ),
         .Q(Q[15]),
         .R(1'b0));
+  CARRY8 \actual_wdata_reg[15]_i_5 
+       (.CI(\actual_wdata_reg[7]_i_3_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\actual_wdata_reg[15]_i_5_n_0 ,\actual_wdata_reg[15]_i_5_n_1 ,\actual_wdata_reg[15]_i_5_n_2 ,\actual_wdata_reg[15]_i_5_n_3 ,\actual_wdata_reg[15]_i_5_n_4 ,\actual_wdata_reg[15]_i_5_n_5 ,\actual_wdata_reg[15]_i_5_n_6 ,\actual_wdata_reg[15]_i_5_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O({\actual_wdata_reg[15]_i_5_n_8 ,\actual_wdata_reg[15]_i_5_n_9 ,\actual_wdata_reg[15]_i_5_n_10 ,\actual_wdata_reg[15]_i_5_n_11 ,\actual_wdata_reg[15]_i_5_n_12 ,\actual_wdata_reg[15]_i_5_n_13 ,\actual_wdata_reg[15]_i_5_n_14 ,\actual_wdata_reg[15]_i_5_n_15 }),
+        .S({\s_reg[wcksum_n_0_][15] ,\s_reg[wcksum_n_0_][14] ,\s_reg[wcksum_n_0_][13] ,\s_reg[wcksum_n_0_][12] ,\s_reg[wcksum_n_0_][11] ,\s_reg[wcksum_n_0_][10] ,\s_reg[wcksum_n_0_][9] ,\s_reg[wcksum_n_0_][8] }));
   FDRE #(
     .INIT(1'b0)) 
     \actual_wdata_reg[1] 
@@ -56313,6 +56258,13 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\actual_wdata[7]_i_1__0_n_0 ),
         .Q(Q[7]),
         .R(1'b0));
+  CARRY8 \actual_wdata_reg[7]_i_3 
+       (.CI(1'b0),
+        .CI_TOP(1'b0),
+        .CO({\actual_wdata_reg[7]_i_3_n_0 ,\actual_wdata_reg[7]_i_3_n_1 ,\actual_wdata_reg[7]_i_3_n_2 ,\actual_wdata_reg[7]_i_3_n_3 ,\actual_wdata_reg[7]_i_3_n_4 ,\actual_wdata_reg[7]_i_3_n_5 ,\actual_wdata_reg[7]_i_3_n_6 ,\actual_wdata_reg[7]_i_3_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,\s_reg[wcksum_n_0_][0] }),
+        .O({\actual_wdata_reg[7]_i_3_n_8 ,\actual_wdata_reg[7]_i_3_n_9 ,\actual_wdata_reg[7]_i_3_n_10 ,\actual_wdata_reg[7]_i_3_n_11 ,\actual_wdata_reg[7]_i_3_n_12 ,\actual_wdata_reg[7]_i_3_n_13 ,\actual_wdata_reg[7]_i_3_n_14 ,\actual_wdata_reg[7]_i_3_n_15 }),
+        .S({\s_reg[wcksum_n_0_][7] ,\s_reg[wcksum_n_0_][6] ,\s_reg[wcksum_n_0_][5] ,\s_reg[wcksum_n_0_][4] ,\s_reg[wcksum_n_0_][3] ,\s_reg[wcksum_n_0_][2] ,\s_reg[wcksum_n_0_][1] ,\actual_wdata[7]_i_4__0_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \actual_wdata_reg[8] 
@@ -56330,12 +56282,12 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .Q(Q[9]),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h00000400)) 
+    .INIT(32'h00000040)) 
     \actual_woff[10]_i_1 
-       (.I0(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [0]),
         .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [0]),
-        .I3(\s_reg[state] [1]),
+        .I2(\s_reg[state] [1]),
+        .I3(\s_reg[state] [4]),
         .I4(\s_reg[state] [3]),
         .O(SS));
   FDRE \actual_woff_reg[10] 
@@ -56347,19 +56299,19 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   FDRE \actual_woff_reg[1] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\off_reg[3]_0 [0]),
+        .D(\off_reg_n_0_[1] ),
         .Q(\actual_woff_reg[10]_0 [0]),
         .R(SS));
   FDRE \actual_woff_reg[2] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\off_reg[3]_0 [1]),
+        .D(\off_reg_n_0_[2] ),
         .Q(\actual_woff_reg[10]_0 [1]),
         .R(SS));
   FDSE \actual_woff_reg[3] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\off_reg[3]_0 [2]),
+        .D(\off_reg_n_0_[3] ),
         .Q(\actual_woff_reg[10]_0 [2]),
         .S(SS));
   FDRE \actual_woff_reg[4] 
@@ -56398,15 +56350,15 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\off_reg_n_0_[9] ),
         .Q(\actual_woff_reg[10]_0 [8]),
         .R(SS));
-  (* SOFT_HLUTNM = "soft_lutpair479" *) 
+  (* SOFT_HLUTNM = "soft_lutpair480" *) 
   LUT5 #(
-    .INIT(32'h500A570C)) 
+    .INIT(32'h001EF032)) 
     actual_wr_i_1
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [2]),
-        .I4(\s_reg[state] [0]),
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [0]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [3]),
+        .I4(\s_reg[state] [4]),
         .O(\a[wr] ));
   FDRE actual_wr_reg
        (.C(clk_in),
@@ -56414,52 +56366,192 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\a[wr] ),
         .Q(actual_wr),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair533" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \cnt[0]_i_1 
        (.I0(cnt_reg[0]),
-        .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair533" *) 
+        .O(plusOp__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair513" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \cnt[1]_i_1 
        (.I0(cnt_reg[0]),
         .I1(cnt_reg[1]),
-        .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair504" *) 
+        .O(plusOp__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair513" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \cnt[2]_i_1 
-       (.I0(cnt_reg[1]),
-        .I1(cnt_reg[0]),
+       (.I0(cnt_reg[0]),
+        .I1(cnt_reg[1]),
         .I2(cnt_reg__0[2]),
-        .O(plusOp[2]));
-  LUT6 #(
-    .INIT(64'h0000030000000100)) 
-    \cnt[3]_i_1 
-       (.I0(wr_op),
-        .I1(\s_reg[state] [4]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [0]),
-        .I5(\s_reg[state] [1]),
-        .O(cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair504" *) 
+        .O(plusOp__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair484" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
-    \cnt[3]_i_2 
+    \cnt[3]_i_1 
        (.I0(cnt_reg__0[2]),
-        .I1(cnt_reg[0]),
-        .I2(cnt_reg[1]),
+        .I1(cnt_reg[1]),
+        .I2(cnt_reg[0]),
         .I3(cnt_reg__0[3]),
+        .O(plusOp__0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair538" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \cnt_256[0]_i_1 
+       (.I0(cnt_256_reg[0]),
+        .O(plusOp[0]));
+  (* SOFT_HLUTNM = "soft_lutpair538" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \cnt_256[1]_i_1 
+       (.I0(cnt_256_reg[0]),
+        .I1(cnt_256_reg[1]),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair502" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \cnt_256[2]_i_1 
+       (.I0(cnt_256_reg[1]),
+        .I1(cnt_256_reg[0]),
+        .I2(cnt_256_reg[2]),
+        .O(plusOp[2]));
+  (* SOFT_HLUTNM = "soft_lutpair478" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \cnt_256[3]_i_1 
+       (.I0(cnt_256_reg[2]),
+        .I1(cnt_256_reg[0]),
+        .I2(cnt_256_reg[1]),
+        .I3(cnt_256_reg[3]),
         .O(plusOp[3]));
+  (* SOFT_HLUTNM = "soft_lutpair478" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \cnt_256[4]_i_1 
+       (.I0(cnt_256_reg[3]),
+        .I1(cnt_256_reg[1]),
+        .I2(cnt_256_reg[0]),
+        .I3(cnt_256_reg[2]),
+        .I4(cnt_256_reg[4]),
+        .O(plusOp[4]));
+  LUT6 #(
+    .INIT(64'h7FFFFFFF80000000)) 
+    \cnt_256[5]_i_1 
+       (.I0(cnt_256_reg[2]),
+        .I1(cnt_256_reg[0]),
+        .I2(cnt_256_reg[1]),
+        .I3(cnt_256_reg[3]),
+        .I4(cnt_256_reg[4]),
+        .I5(cnt_256_reg[5]),
+        .O(plusOp[5]));
+  LUT4 #(
+    .INIT(16'hF708)) 
+    \cnt_256[6]_i_1 
+       (.I0(cnt_256_reg[5]),
+        .I1(cnt_256_reg[4]),
+        .I2(\cnt_256[7]_i_3_n_0 ),
+        .I3(cnt_256_reg[6]),
+        .O(plusOp[6]));
+  LUT6 #(
+    .INIT(64'h00000000000C0004)) 
+    \cnt_256[7]_i_1 
+       (.I0(wr_op),
+        .I1(\s_reg[state] [3]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [4]),
+        .I4(\s_reg[state] [1]),
+        .I5(\s_reg[state] [0]),
+        .O(cnt0));
+  (* SOFT_HLUTNM = "soft_lutpair479" *) 
+  LUT5 #(
+    .INIT(32'hDFFF2000)) 
+    \cnt_256[7]_i_2 
+       (.I0(cnt_256_reg[6]),
+        .I1(\cnt_256[7]_i_3_n_0 ),
+        .I2(cnt_256_reg[4]),
+        .I3(cnt_256_reg[5]),
+        .I4(cnt_256_reg[7]),
+        .O(plusOp[7]));
+  (* SOFT_HLUTNM = "soft_lutpair502" *) 
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \cnt_256[7]_i_3 
+       (.I0(cnt_256_reg[2]),
+        .I1(cnt_256_reg[0]),
+        .I2(cnt_256_reg[1]),
+        .I3(cnt_256_reg[3]),
+        .O(\cnt_256[7]_i_3_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[0] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[0]),
+        .Q(cnt_256_reg[0]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[1] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[1]),
+        .Q(cnt_256_reg[1]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[2] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[2]),
+        .Q(cnt_256_reg[2]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[3] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[3]),
+        .Q(cnt_256_reg[3]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[4] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[4]),
+        .Q(cnt_256_reg[4]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[5] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[5]),
+        .Q(cnt_256_reg[5]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[6] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[6]),
+        .Q(cnt_256_reg[6]),
+        .R(cnt0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \cnt_256_reg[7] 
+       (.C(clk_in),
+        .CE(1'b1),
+        .D(plusOp[7]),
+        .Q(cnt_256_reg[7]),
+        .R(cnt0));
   FDRE #(
     .INIT(1'b0)) 
     \cnt_reg[0] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(plusOp[0]),
+        .D(plusOp__0[0]),
         .Q(cnt_reg[0]),
         .R(cnt0));
   FDRE #(
@@ -56467,7 +56559,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \cnt_reg[1] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(plusOp[1]),
+        .D(plusOp__0[1]),
         .Q(cnt_reg[1]),
         .R(cnt0));
   FDRE #(
@@ -56475,7 +56567,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \cnt_reg[2] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(plusOp[2]),
+        .D(plusOp__0[2]),
         .Q(cnt_reg__0[2]),
         .R(cnt0));
   FDRE #(
@@ -56483,7 +56575,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \cnt_reg[3] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(plusOp[3]),
+        .D(plusOp__0[3]),
         .Q(cnt_reg__0[3]),
         .R(cnt0));
   LUT3 #(
@@ -56502,13 +56594,13 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .Q(in11),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h00400000)) 
+    .INIT(32'h10000000)) 
     int_op_i_1
        (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [0]),
-        .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [2]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
         .O(regacc_pre_addr[24]));
   FDRE #(
     .INIT(1'b0)) 
@@ -56535,7 +56627,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(reg_int_addr[10]),
         .I5(reg_int_addr[11]),
         .O(\mdio_req_d[31]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair491" *) 
+  (* SOFT_HLUTNM = "soft_lutpair494" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \mdio_req_d[31]_i_3 
@@ -56543,333 +56635,210 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(\regacc_pre2_addr_reg[8]_0 [5]),
         .I2(\regacc_pre2_addr_reg[8]_0 [6]),
         .O(\mdio_req_d[31]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hF888)) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \off[0]_i_1 
-       (.I0(\off_reg_n_0_[0] ),
-        .I1(\off[10]_i_8_n_0 ),
-        .I2(off_stored[0]),
-        .I3(cnt0),
+       (.I0(off_stored[0]),
+        .I1(\off_reg_n_0_[0] ),
+        .I2(\a[off_update] ),
         .O(p_1_in[0]));
-  LUT5 #(
-    .INIT(32'hFE00F001)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \off[10]_i_1 
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [2]),
+       (.I0(\a[off_update] ),
+        .I1(\a[off_update]__0 ),
         .O(off));
   LUT6 #(
-    .INIT(64'hCCCCEFCECCCCEECE)) 
+    .INIT(64'h00000101003030C0)) 
     \off[10]_i_10 
-       (.I0(\actual_wdata[14]_i_6__0_n_0 ),
-        .I1(\off[10]_i_11_n_0 ),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [3]),
+       (.I0(wr_op),
+        .I1(\s_reg[state] [0]),
+        .I2(\s_reg[state] [2]),
+        .I3(\s_reg[state] [1]),
         .I4(\s_reg[state] [4]),
-        .I5(\off[10]_i_12_n_0 ),
+        .I5(\s_reg[state] [3]),
         .O(\off[10]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h040004005F555540)) 
+    .INIT(64'h00000A0300000A00)) 
     \off[10]_i_11 
-       (.I0(\s_reg[state] [2]),
-        .I1(regacc_pst_done),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [1]),
-        .I5(\s_reg[state] [3]),
-        .O(\off[10]_i_11_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \off[10]_i_12 
-       (.I0(\s_reg[state] [0]),
-        .I1(wr_op),
-        .O(\off[10]_i_12_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFEEFEEE)) 
-    \off[10]_i_2 
-       (.I0(\off[10]_i_4_n_0 ),
-        .I1(\off[10]_i_5_n_0 ),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off[10]_i_6_n_0 ),
-        .I4(\off[10]_i_7_n_0 ),
-        .O(\a[off_update] ));
-  LUT6 #(
-    .INIT(64'hFFFFA208A208A208)) 
-    \off[10]_i_3 
-       (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off_reg_n_0_[9] ),
-        .I2(\off[10]_i_9_n_0 ),
-        .I3(\off_reg_n_0_[10] ),
-        .I4(off_stored[10]),
-        .I5(cnt0),
-        .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair483" *) 
-  LUT5 #(
-    .INIT(32'h02330000)) 
-    \off[10]_i_4 
-       (.I0(\s_reg[state] [1]),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [2]),
-        .I4(\s_reg[state] [0]),
-        .O(\off[10]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h0445044566660444)) 
-    \off[10]_i_5 
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [0]),
-        .I4(\FSM_sequential_s[state][2]_i_2__0_n_0 ),
-        .I5(\s_reg[state] [2]),
-        .O(\off[10]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair503" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    \off[10]_i_6 
-       (.I0(\s_reg[state] [1]),
-        .I1(\s_reg[state] [3]),
+       (.I0(\a[next_state]1 ),
+        .I1(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
         .I2(\s_reg[state] [2]),
-        .O(\off[10]_i_6_n_0 ));
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [4]),
+        .I5(\s_reg[state] [1]),
+        .O(\off[10]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFDF)) 
-    \off[10]_i_7 
-       (.I0(\off_reg_n_0_[4] ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg_n_0_[5] ),
-        .I3(\off_reg[3]_0 [2]),
-        .I4(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
-        .I5(\s_reg[state] [4]),
-        .O(\off[10]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000454)) 
-    \off[10]_i_8 
-       (.I0(\read_data[31]_i_5_n_0 ),
-        .I1(\s_reg[state] [0]),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [2]),
-        .I5(\off[10]_i_10_n_0 ),
-        .O(\off[10]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair486" *) 
-  LUT5 #(
-    .INIT(32'hF7FFFFFF)) 
-    \off[10]_i_9 
-       (.I0(\off_reg_n_0_[7] ),
-        .I1(\off_reg_n_0_[5] ),
-        .I2(\off[6]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[6] ),
-        .I4(\off_reg_n_0_[8] ),
-        .O(\off[10]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'h88888888FFF8F8F8)) 
-    \off[1]_i_1 
-       (.I0(cnt0),
-        .I1(off_stored[1]),
-        .I2(\off[1]_i_2_n_0 ),
-        .I3(\off[10]_i_7_n_0 ),
-        .I4(\off[10]_i_6_n_0 ),
-        .I5(\off_reg[3]_0 [0]),
-        .O(p_1_in[1]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00000E00)) 
-    \off[1]_i_2 
-       (.I0(\s_reg[state] [0]),
-        .I1(wr_op),
-        .I2(\s_reg[state] [4]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [1]),
-        .I5(\off[1]_i_3_n_0 ),
-        .O(\off[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h000C0FAF00F30A00)) 
-    \off[1]_i_3 
-       (.I0(\FSM_sequential_s[state][2]_i_2__0_n_0 ),
-        .I1(\s_reg[state] [1]),
+    .INIT(64'hABFAAAFAABAFAAAF)) 
+    \off[10]_i_2 
+       (.I0(\off[10]_i_5_n_0 ),
+        .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [3]),
         .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [2]),
-        .I5(\s_reg[state] [0]),
-        .O(\off[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair478" *) 
-  LUT5 #(
-    .INIT(32'hFF606060)) 
-    \off[2]_i_1 
-       (.I0(\off_reg[3]_0 [0]),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off[10]_i_8_n_0 ),
-        .I3(off_stored[2]),
-        .I4(cnt0),
-        .O(p_1_in[2]));
-  LUT6 #(
-    .INIT(64'hFFFF2A802A802A80)) 
-    \off[3]_i_1 
-       (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off_reg[3]_0 [2]),
-        .I4(off_stored[3]),
-        .I5(cnt0),
-        .O(p_1_in[3]));
-  LUT6 #(
-    .INIT(64'hFFFFABAAABAAABAA)) 
-    \off[4]_i_1 
-       (.I0(\off[4]_i_2_n_0 ),
-        .I1(\off_reg_n_0_[4] ),
-        .I2(\off[4]_i_3_n_0 ),
-        .I3(\off[10]_i_8_n_0 ),
-        .I4(off_stored[4]),
-        .I5(cnt0),
-        .O(p_1_in[4]));
-  LUT6 #(
-    .INIT(64'hBAAAFAAAFAAAAAAA)) 
-    \off[4]_i_2 
-       (.I0(\off[4]_i_4_n_0 ),
-        .I1(\off_reg[3]_0 [2]),
-        .I2(\off[10]_i_6_n_0 ),
-        .I3(\off_reg_n_0_[4] ),
-        .I4(\off_reg[3]_0 [1]),
-        .I5(\off_reg[3]_0 [0]),
-        .O(\off[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair513" *) 
+        .I4(\off[10]_i_6_n_0 ),
+        .I5(\off[10]_i_7_n_0 ),
+        .O(\a[off_update]__0 ));
+  (* SOFT_HLUTNM = "soft_lutpair530" *) 
   LUT3 #(
-    .INIT(8'h7F)) 
-    \off[4]_i_3 
-       (.I0(\off_reg[3]_0 [1]),
-        .I1(\off_reg[3]_0 [0]),
-        .I2(\off_reg[3]_0 [2]),
-        .O(\off[4]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF08080800000000)) 
-    \off[4]_i_4 
-       (.I0(\off[4]_i_5_n_0 ),
-        .I1(\off[10]_i_6_n_0 ),
-        .I2(\off_reg[3]_0 [1]),
-        .I3(\off[1]_i_2_n_0 ),
-        .I4(\off[4]_i_3_n_0 ),
-        .I5(\off_reg_n_0_[4] ),
-        .O(\off[4]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFEFF)) 
-    \off[4]_i_5 
-       (.I0(\s_reg[state] [4]),
-        .I1(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
-        .I2(\off_reg[3]_0 [2]),
-        .I3(\off_reg_n_0_[5] ),
-        .O(\off[4]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFBEFFAAAA)) 
-    \off[5]_i_1 
-       (.I0(\off[5]_i_2_n_0 ),
-        .I1(\off_reg[3]_0 [0]),
-        .I2(\off_reg[3]_0 [1]),
-        .I3(\off_reg_n_0_[4] ),
-        .I4(\off[5]_i_3_n_0 ),
-        .I5(\off[5]_i_4_n_0 ),
-        .O(p_1_in[5]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF8888888)) 
-    \off[5]_i_2 
-       (.I0(off_stored[5]),
-        .I1(cnt0),
-        .I2(\off_reg_n_0_[5] ),
-        .I3(\off[6]_i_2_n_0 ),
-        .I4(\off[1]_i_2_n_0 ),
-        .I5(\off[5]_i_5_n_0 ),
-        .O(\off[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair505" *) 
-  LUT4 #(
-    .INIT(16'h1000)) 
-    \off[5]_i_3 
-       (.I0(\s_reg[state] [2]),
-        .I1(\s_reg[state] [3]),
-        .I2(\s_reg[state] [1]),
-        .I3(\off_reg_n_0_[5] ),
-        .O(\off[5]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h00220022F0220022)) 
-    \off[5]_i_4 
+    .INIT(8'hAC)) 
+    \off[10]_i_3 
+       (.I0(off_stored[10]),
+        .I1(ADDRBWRADDR[9]),
+        .I2(\a[off_update] ),
+        .O(p_1_in[10]));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \off[10]_i_4 
        (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off[6]_i_2_n_0 ),
-        .I2(\off[10]_i_6_n_0 ),
-        .I3(\off_reg_n_0_[5] ),
-        .I4(\off_reg[3]_0 [1]),
-        .I5(\off_reg[3]_0 [2]),
-        .O(\off[5]_i_4_n_0 ));
+        .I1(\off[10]_i_9_n_0 ),
+        .I2(\off[10]_i_10_n_0 ),
+        .O(\a[off_update] ));
   LUT6 #(
-    .INIT(64'h4040404040404000)) 
-    \off[5]_i_5 
-       (.I0(\off_reg[3]_0 [1]),
-        .I1(\off[10]_i_6_n_0 ),
-        .I2(\off_reg_n_0_[5] ),
+    .INIT(64'hAAAAABAAAAFAABFA)) 
+    \off[10]_i_5 
+       (.I0(\off[10]_i_11_n_0 ),
+        .I1(\s_reg[state] [1]),
+        .I2(\s_reg[state] [0]),
+        .I3(\s_reg[state] [2]),
+        .I4(\s_reg[state] [4]),
+        .I5(\s_reg[state] [3]),
+        .O(\off[10]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair535" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \off[10]_i_6 
+       (.I0(\FSM_sequential_s[state][0]_i_9__0_n_0 ),
+        .I1(\s_reg[state] [1]),
+        .O(\off[10]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair503" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \off[10]_i_7 
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [0]),
+        .O(\off[10]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000A00000300)) 
+    \off[10]_i_8 
+       (.I0(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
+        .I1(\FSM_sequential_s[state][0]_i_9__0_n_0 ),
+        .I2(\s_reg[state] [3]),
         .I3(\s_reg[state] [4]),
-        .I4(\FSM_sequential_s[state][0]_i_11__0_n_0 ),
-        .I5(\off_reg[3]_0 [2]),
-        .O(\off[5]_i_5_n_0 ));
+        .I4(\s_reg[state] [0]),
+        .I5(\s_reg[state] [1]),
+        .O(\off[10]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFA208A208A208)) 
-    \off[6]_i_1 
-       (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off_reg_n_0_[5] ),
-        .I2(\off[6]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[6] ),
-        .I4(off_stored[6]),
-        .I5(cnt0),
-        .O(p_1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair506" *) 
+    .INIT(64'h0C00070000000000)) 
+    \off[10]_i_9 
+       (.I0(\a[next_state]1 ),
+        .I1(\s_reg[state] [0]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [2]),
+        .I5(\s_reg[state] [3]),
+        .O(\off[10]_i_9_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair504" *) 
+  LUT3 #(
+    .INIT(8'hA3)) 
+    \off[1]_i_1 
+       (.I0(off_stored[1]),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\a[off_update] ),
+        .O(p_1_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair504" *) 
   LUT4 #(
-    .INIT(16'h7FFF)) 
-    \off[6]_i_2 
-       (.I0(\off_reg[3]_0 [2]),
-        .I1(\off_reg[3]_0 [0]),
-        .I2(\off_reg[3]_0 [1]),
-        .I3(\off_reg_n_0_[4] ),
-        .O(\off[6]_i_2_n_0 ));
+    .INIT(16'hAA3C)) 
+    \off[2]_i_1 
+       (.I0(off_stored[2]),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[2] ),
+        .I3(\a[off_update] ),
+        .O(p_1_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair489" *) 
   LUT5 #(
-    .INIT(32'hFF828282)) 
-    \off[7]_i_1 
-       (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off[8]_i_2_n_0 ),
-        .I2(\off_reg_n_0_[7] ),
-        .I3(off_stored[7]),
-        .I4(cnt0),
-        .O(p_1_in[7]));
+    .INIT(32'hAAAA3FC0)) 
+    \off[3]_i_1 
+       (.I0(off_stored[3]),
+        .I1(\off_reg_n_0_[2] ),
+        .I2(\off_reg_n_0_[1] ),
+        .I3(\off_reg_n_0_[3] ),
+        .I4(\a[off_update] ),
+        .O(p_1_in[3]));
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \off[4]_i_1 
+       (.I0(off_stored[4]),
+        .I1(ADDRBWRADDR[3]),
+        .I2(\a[off_update] ),
+        .O(p_1_in[4]));
+  (* SOFT_HLUTNM = "soft_lutpair531" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \off[5]_i_1 
+       (.I0(off_stored[5]),
+        .I1(ADDRBWRADDR[4]),
+        .I2(\a[off_update] ),
+        .O(p_1_in[5]));
+  (* SOFT_HLUTNM = "soft_lutpair531" *) 
+  LUT3 #(
+    .INIT(8'hA3)) 
+    \off[6]_i_1 
+       (.I0(off_stored[6]),
+        .I1(\off[6]_i_2_n_0 ),
+        .I2(\a[off_update] ),
+        .O(p_1_in[6]));
   LUT6 #(
-    .INIT(64'hFFFFA208A208A208)) 
-    \off[8]_i_1 
-       (.I0(\off[10]_i_8_n_0 ),
+    .INIT(64'h800000007FFFFFFF)) 
+    \off[6]_i_2 
+       (.I0(\off_reg_n_0_[3] ),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[2] ),
+        .I3(\off_reg_n_0_[4] ),
+        .I4(\off_reg_n_0_[5] ),
+        .I5(\off_reg_n_0_[6] ),
+        .O(\off[6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair499" *) 
+  LUT4 #(
+    .INIT(16'hF099)) 
+    \off[7]_i_1__0 
+       (.I0(\off[8]_i_2_n_0 ),
         .I1(\off_reg_n_0_[7] ),
-        .I2(\off[8]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[8] ),
-        .I4(off_stored[8]),
-        .I5(cnt0),
+        .I2(off_stored[7]),
+        .I3(\a[off_update] ),
+        .O(p_1_in[7]));
+  (* SOFT_HLUTNM = "soft_lutpair477" *) 
+  LUT5 #(
+    .INIT(32'hFF00D2D2)) 
+    \off[8]_i_1__0 
+       (.I0(\off_reg_n_0_[7] ),
+        .I1(\off[8]_i_2_n_0 ),
+        .I2(\off_reg_n_0_[8] ),
+        .I3(off_stored[8]),
+        .I4(\a[off_update] ),
         .O(p_1_in[8]));
   LUT6 #(
     .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \off[8]_i_2 
-       (.I0(\off_reg_n_0_[5] ),
-        .I1(\off_reg[3]_0 [2]),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off_reg[3]_0 [1]),
-        .I4(\off_reg_n_0_[4] ),
+       (.I0(\off_reg_n_0_[3] ),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[2] ),
+        .I3(\off_reg_n_0_[4] ),
+        .I4(\off_reg_n_0_[5] ),
         .I5(\off_reg_n_0_[6] ),
         .O(\off[8]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF828282)) 
+  (* SOFT_HLUTNM = "soft_lutpair530" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \off[9]_i_1 
-       (.I0(\off[10]_i_8_n_0 ),
-        .I1(\off[10]_i_9_n_0 ),
-        .I2(\off_reg_n_0_[9] ),
-        .I3(off_stored[9]),
-        .I4(cnt0),
+       (.I0(off_stored[9]),
+        .I1(ADDRBWRADDR[8]),
+        .I2(\a[off_update] ),
         .O(p_1_in[9]));
   FDRE #(
     .INIT(1'b0)) 
     \off_reg[0] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[0]),
         .Q(\off_reg_n_0_[0] ),
         .R(off));
@@ -56877,7 +56846,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[10] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[10]),
         .Q(\off_reg_n_0_[10] ),
         .S(off));
@@ -56885,31 +56854,31 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[1] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[1]),
-        .Q(\off_reg[3]_0 [0]),
+        .Q(\off_reg_n_0_[1] ),
         .S(off));
   FDSE #(
     .INIT(1'b1)) 
     \off_reg[2] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[2]),
-        .Q(\off_reg[3]_0 [1]),
+        .Q(\off_reg_n_0_[2] ),
         .S(off));
   FDSE #(
     .INIT(1'b1)) 
     \off_reg[3] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[3]),
-        .Q(\off_reg[3]_0 [2]),
+        .Q(\off_reg_n_0_[3] ),
         .S(off));
   FDSE #(
     .INIT(1'b1)) 
     \off_reg[4] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[4]),
         .Q(\off_reg_n_0_[4] ),
         .S(off));
@@ -56917,7 +56886,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[5] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[5]),
         .Q(\off_reg_n_0_[5] ),
         .S(off));
@@ -56925,7 +56894,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[6] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[6]),
         .Q(\off_reg_n_0_[6] ),
         .S(off));
@@ -56933,7 +56902,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[7] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[7]),
         .Q(\off_reg_n_0_[7] ),
         .S(off));
@@ -56941,7 +56910,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[8] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[8]),
         .Q(\off_reg_n_0_[8] ),
         .S(off));
@@ -56949,18 +56918,18 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     .INIT(1'b1)) 
     \off_reg[9] 
        (.C(clk_in),
-        .CE(\a[off_update] ),
+        .CE(\a[off_update]__0 ),
         .D(p_1_in[9]),
         .Q(\off_reg_n_0_[9] ),
         .S(off));
   LUT5 #(
-    .INIT(32'h00040000)) 
+    .INIT(32'h01000000)) 
     \off_stored[10]_i_1 
-       (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [0]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [2]),
+        .I2(\s_reg[state] [3]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
         .O(\a[off_store] ));
   FDRE #(
     .INIT(1'b0)) 
@@ -56983,7 +56952,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \off_stored_reg[1] 
        (.C(clk_in),
         .CE(\a[off_store] ),
-        .D(\off_reg[3]_0 [0]),
+        .D(\off_reg_n_0_[1] ),
         .Q(off_stored[1]),
         .R(1'b0));
   FDRE #(
@@ -56991,7 +56960,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \off_stored_reg[2] 
        (.C(clk_in),
         .CE(\a[off_store] ),
-        .D(\off_reg[3]_0 [1]),
+        .D(\off_reg_n_0_[2] ),
         .Q(off_stored[2]),
         .R(1'b0));
   FDRE #(
@@ -56999,7 +56968,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
     \off_stored_reg[3] 
        (.C(clk_in),
         .CE(\a[off_store] ),
-        .D(\off_reg[3]_0 [2]),
+        .D(\off_reg_n_0_[3] ),
         .Q(off_stored[3]),
         .R(1'b0));
   FDRE #(
@@ -57050,34 +57019,36 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\off_reg_n_0_[9] ),
         .Q(off_stored[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair478" *) 
+  (* SOFT_HLUTNM = "soft_lutpair489" *) 
   LUT2 #(
     .INIT(4'h6)) 
     ram_reg_bram_0_i_10__0
-       (.I0(\off_reg[3]_0 [1]),
-        .I1(\off_reg[3]_0 [0]),
+       (.I0(\off_reg_n_0_[2] ),
+        .I1(\off_reg_n_0_[1] ),
         .O(ADDRBWRADDR[1]));
+  (* SOFT_HLUTNM = "soft_lutpair486" *) 
   LUT1 #(
     .INIT(2'h1)) 
     ram_reg_bram_0_i_11__0
-       (.I0(\off_reg[3]_0 [0]),
+       (.I0(\off_reg_n_0_[1] ),
         .O(ADDRBWRADDR[0]));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     ram_reg_bram_0_i_1__0
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [1]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [2]),
         .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [4]),
-        .I4(\s_reg[state] [2]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
         .O(\dp_ram_udp_regacc[port_b][o][rd] ));
-  (* SOFT_HLUTNM = "soft_lutpair532" *) 
+  (* SOFT_HLUTNM = "soft_lutpair534" *) 
   LUT2 #(
     .INIT(4'hE)) 
     ram_reg_bram_0_i_1__4
        (.I0(reg_int_read),
         .I1(reg_read_prev),
         .O(\dp_ram_counts[port_b][o][rd] ));
+  (* SOFT_HLUTNM = "soft_lutpair488" *) 
   LUT5 #(
     .INIT(32'hF7FF0800)) 
     ram_reg_bram_0_i_2__3
@@ -57087,70 +57058,66 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\off_reg_n_0_[8] ),
         .I4(\off_reg_n_0_[10] ),
         .O(ADDRBWRADDR[9]));
-  LUT6 #(
-    .INIT(64'hF7FFFFFF08000000)) 
-    ram_reg_bram_0_i_3__0
-       (.I0(\off_reg_n_0_[8] ),
-        .I1(\off_reg_n_0_[6] ),
-        .I2(\off[6]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[5] ),
-        .I4(\off_reg_n_0_[7] ),
-        .I5(\off_reg_n_0_[9] ),
-        .O(ADDRBWRADDR[8]));
-  (* SOFT_HLUTNM = "soft_lutpair486" *) 
-  LUT5 #(
-    .INIT(32'hF7FF0800)) 
-    ram_reg_bram_0_i_4__0
-       (.I0(\off_reg_n_0_[7] ),
-        .I1(\off_reg_n_0_[5] ),
-        .I2(\off[6]_i_2_n_0 ),
-        .I3(\off_reg_n_0_[6] ),
-        .I4(\off_reg_n_0_[8] ),
-        .O(ADDRBWRADDR[7]));
+  (* SOFT_HLUTNM = "soft_lutpair488" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
+    ram_reg_bram_0_i_3__0
+       (.I0(\off_reg_n_0_[8] ),
+        .I1(\off[8]_i_2_n_0 ),
+        .I2(\off_reg_n_0_[7] ),
+        .I3(\off_reg_n_0_[9] ),
+        .O(ADDRBWRADDR[8]));
+  (* SOFT_HLUTNM = "soft_lutpair477" *) 
+  LUT3 #(
+    .INIT(8'hD2)) 
+    ram_reg_bram_0_i_4__0
+       (.I0(\off_reg_n_0_[7] ),
+        .I1(\off[8]_i_2_n_0 ),
+        .I2(\off_reg_n_0_[8] ),
+        .O(ADDRBWRADDR[7]));
+  (* SOFT_HLUTNM = "soft_lutpair499" *) 
+  LUT2 #(
+    .INIT(4'h9)) 
     ram_reg_bram_0_i_5__0
-       (.I0(\off_reg_n_0_[6] ),
-        .I1(\off[6]_i_2_n_0 ),
-        .I2(\off_reg_n_0_[5] ),
-        .I3(\off_reg_n_0_[7] ),
+       (.I0(\off[8]_i_2_n_0 ),
+        .I1(\off_reg_n_0_[7] ),
         .O(ADDRBWRADDR[6]));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
     ram_reg_bram_0_i_6__0
-       (.I0(\off_reg_n_0_[5] ),
-        .I1(\off_reg[3]_0 [2]),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off_reg[3]_0 [1]),
-        .I4(\off_reg_n_0_[4] ),
-        .I5(\off_reg_n_0_[6] ),
+       (.I0(\off_reg_n_0_[6] ),
+        .I1(\off_reg_n_0_[5] ),
+        .I2(\off_reg_n_0_[4] ),
+        .I3(\off_reg_n_0_[2] ),
+        .I4(\off_reg_n_0_[1] ),
+        .I5(\off_reg_n_0_[3] ),
         .O(ADDRBWRADDR[5]));
-  (* SOFT_HLUTNM = "soft_lutpair485" *) 
+  (* SOFT_HLUTNM = "soft_lutpair487" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     ram_reg_bram_0_i_7__0
        (.I0(\off_reg_n_0_[4] ),
-        .I1(\off_reg[3]_0 [1]),
-        .I2(\off_reg[3]_0 [0]),
-        .I3(\off_reg[3]_0 [2]),
+        .I1(\off_reg_n_0_[2] ),
+        .I2(\off_reg_n_0_[1] ),
+        .I3(\off_reg_n_0_[3] ),
         .I4(\off_reg_n_0_[5] ),
         .O(ADDRBWRADDR[4]));
-  (* SOFT_HLUTNM = "soft_lutpair506" *) 
+  (* SOFT_HLUTNM = "soft_lutpair487" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     ram_reg_bram_0_i_8__0
-       (.I0(\off_reg[3]_0 [2]),
-        .I1(\off_reg[3]_0 [0]),
-        .I2(\off_reg[3]_0 [1]),
+       (.I0(\off_reg_n_0_[3] ),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[2] ),
         .I3(\off_reg_n_0_[4] ),
         .O(ADDRBWRADDR[3]));
-  (* SOFT_HLUTNM = "soft_lutpair513" *) 
+  (* SOFT_HLUTNM = "soft_lutpair485" *) 
   LUT3 #(
     .INIT(8'h78)) 
     ram_reg_bram_0_i_9__0
-       (.I0(\off_reg[3]_0 [1]),
-        .I1(\off_reg[3]_0 [0]),
-        .I2(\off_reg[3]_0 [2]),
+       (.I0(\off_reg_n_0_[2] ),
+        .I1(\off_reg_n_0_[1] ),
+        .I2(\off_reg_n_0_[3] ),
         .O(ADDRBWRADDR[2]));
   (* SOFT_HLUTNM = "soft_lutpair529" *) 
   LUT3 #(
@@ -57345,23 +57312,23 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(regacc_pst_ext_data_rd[30]),
         .O(\read_data[30]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000100)) 
+    .INIT(64'h0000000200000000)) 
     \read_data[31]_i_1 
-       (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [0]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [3]),
+        .I2(\s_reg[state] [2]),
         .I3(\read_data[31]_i_4_n_0 ),
         .I4(regacc_pst_done),
         .I5(\read_data[31]_i_5_n_0 ),
         .O(\a[reset_read] ));
   LUT5 #(
-    .INIT(32'h10000002)) 
+    .INIT(32'h00000180)) 
     \read_data[31]_i_2 
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [2]),
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [0]),
         .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [1]),
+        .I3(\s_reg[state] [4]),
+        .I4(\s_reg[state] [2]),
         .O(\a[latch_done] ));
   (* SOFT_HLUTNM = "soft_lutpair514" *) 
   LUT3 #(
@@ -57371,21 +57338,22 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(int_op_reg_n_0),
         .I2(regacc_pst_ext_data_rd[31]),
         .O(\read_data[31]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair501" *) 
+  (* SOFT_HLUTNM = "soft_lutpair537" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hE)) 
     \read_data[31]_i_4 
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [2]),
+       (.I0(\s_reg[state] [1]),
+        .I1(\s_reg[state] [0]),
         .O(\read_data[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair482" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
+  (* SOFT_HLUTNM = "soft_lutpair479" *) 
+  LUT5 #(
+    .INIT(32'h00008000)) 
     \read_data[31]_i_5 
-       (.I0(cnt_reg__0[2]),
-        .I1(cnt_reg[0]),
-        .I2(cnt_reg[1]),
-        .I3(cnt_reg__0[3]),
+       (.I0(cnt_256_reg[6]),
+        .I1(cnt_256_reg[7]),
+        .I2(cnt_256_reg[4]),
+        .I3(cnt_256_reg[5]),
+        .I4(\cnt_256[7]_i_3_n_0 ),
         .O(\read_data[31]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair528" *) 
   LUT3 #(
@@ -57699,7 +57667,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\read_data[9]_i_1_n_0 ),
         .Q(\read_data_reg_n_0_[9] ),
         .R(\a[reset_read] ));
-  (* SOFT_HLUTNM = "soft_lutpair487" *) 
+  (* SOFT_HLUTNM = "soft_lutpair490" *) 
   LUT5 #(
     .INIT(32'h000055FD)) 
     \reg_data_rd[0]_i_1 
@@ -57774,7 +57742,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
        (.I0(\regacc_pre2_addr_reg[8]_0 [1]),
         .I1(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(\reg_data_rd[10]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair492" *) 
+  (* SOFT_HLUTNM = "soft_lutpair495" *) 
   LUT5 #(
     .INIT(32'h0002888A)) 
     \reg_data_rd[10]_i_3 
@@ -57784,7 +57752,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\reg_data_rd[10]_i_5_n_0 ),
         .I4(\reg_data_rd_reg[10] ),
         .O(\reg_data_rd[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair494" *) 
+  (* SOFT_HLUTNM = "soft_lutpair497" *) 
   LUT5 #(
     .INIT(32'hF503F5F3)) 
     \reg_data_rd[10]_i_5 
@@ -57848,7 +57816,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd[12]_i_5_n_0 ),
         .I5(\reg_data_rd[12]_i_6_n_0 ),
         .O(\regacc_pre2_addr_reg[1]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair494" *) 
+  (* SOFT_HLUTNM = "soft_lutpair497" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \reg_data_rd[12]_i_10 
@@ -57910,14 +57878,14 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\reg_data_rd_reg[13] ),
         .I4(regacc_int_read_reg_2),
         .O(\reg_data_rd[13]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair488" *) 
+  (* SOFT_HLUTNM = "soft_lutpair491" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \reg_data_rd[13]_i_3 
        (.I0(\regacc_pre2_addr_reg[8]_0 [1]),
         .I1(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(\reg_data_rd[13]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair531" *) 
+  (* SOFT_HLUTNM = "soft_lutpair533" *) 
   LUT3 #(
     .INIT(8'hCB)) 
     \reg_data_rd[13]_i_4 
@@ -57925,7 +57893,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(\regacc_pre2_addr_reg[8]_0 [3]),
         .I2(\regacc_pre2_addr_reg[8]_0 [2]),
         .O(\reg_data_rd[13]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair509" *) 
+  (* SOFT_HLUTNM = "soft_lutpair507" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \reg_data_rd[13]_i_5 
@@ -57991,7 +57959,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .I4(\reg_data_rd_reg[31] [12]),
         .O(\reg_data_rd[14]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair507" *) 
+  (* SOFT_HLUTNM = "soft_lutpair505" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \reg_data_rd[15]_i_1 
@@ -58057,7 +58025,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd[16]_i_4_n_0 ),
         .I5(regacc_int_read_reg_2),
         .O(regacc_int_read_reg_3[10]));
-  (* SOFT_HLUTNM = "soft_lutpair493" *) 
+  (* SOFT_HLUTNM = "soft_lutpair496" *) 
   LUT5 #(
     .INIT(32'hAABAAAAA)) 
     \reg_data_rd[16]_i_10 
@@ -58087,7 +58055,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\regacc_pre2_addr_reg[8]_0 [2]),
         .I5(\regacc_pre2_addr_reg[8]_0 [4]),
         .O(\reg_data_rd[16]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair487" *) 
+  (* SOFT_HLUTNM = "soft_lutpair490" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \reg_data_rd[16]_i_5 
@@ -58104,7 +58072,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd[16]_i_4_0 [2]),
         .I5(\reg_data_rd[16]_i_10_n_0 ),
         .O(\reg_data_rd[16]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair490" *) 
+  (* SOFT_HLUTNM = "soft_lutpair493" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \reg_data_rd[16]_i_9 
@@ -58130,7 +58098,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\reg_data_rd[31]_i_9_n_0 ),
         .I4(\tcp_ctrl_stat[base_seqno] [4]),
         .O(\reg_data_rd[17]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair531" *) 
+  (* SOFT_HLUTNM = "soft_lutpair533" *) 
   LUT3 #(
     .INIT(8'h07)) 
     \reg_data_rd[17]_i_3 
@@ -58217,7 +58185,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd_reg[31]_1 [2]),
         .I5(regacc_int_read_reg_6),
         .O(\reg_data_rd[19]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair511" *) 
+  (* SOFT_HLUTNM = "soft_lutpair509" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \reg_data_rd[19]_i_4 
@@ -58292,7 +58260,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .I4(\reg_data_rd[20]_i_7_n_0 ),
         .O(\reg_data_rd[20]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair488" *) 
+  (* SOFT_HLUTNM = "soft_lutpair491" *) 
   LUT5 #(
     .INIT(32'hFFFFFF02)) 
     \reg_data_rd[20]_i_6 
@@ -58341,7 +58309,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\mdio_req_d[31]_i_2_n_0 ),
         .I5(reg_int_read),
         .O(regacc_int_read_reg_3[16]));
-  (* SOFT_HLUTNM = "soft_lutpair512" *) 
+  (* SOFT_HLUTNM = "soft_lutpair510" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \reg_data_rd[22]_i_2 
@@ -58497,7 +58465,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd_reg[31]_1 [7]),
         .I5(regacc_int_read_reg_6),
         .O(\reg_data_rd[27]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair511" *) 
+  (* SOFT_HLUTNM = "soft_lutpair509" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \reg_data_rd[27]_i_4 
@@ -58609,14 +58577,14 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\regacc_pre2_addr_reg[8]_0 [3]),
         .I5(\reg_data_rd_reg[31] [28]),
         .O(\reg_data_rd[30]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair532" *) 
+  (* SOFT_HLUTNM = "soft_lutpair534" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \reg_data_rd[30]_i_4 
        (.I0(\reg_data_rd[30]_i_6_n_0 ),
         .I1(reg_int_read),
         .O(\reg_data_rd[30]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair492" *) 
+  (* SOFT_HLUTNM = "soft_lutpair495" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \reg_data_rd[30]_i_6 
@@ -58632,7 +58600,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(reg_int_read),
         .I4(\reg_data_rd[31]_i_5_n_0 ),
         .O(regacc_int_read_reg_5[1]));
-  (* SOFT_HLUTNM = "soft_lutpair493" *) 
+  (* SOFT_HLUTNM = "soft_lutpair496" *) 
   LUT4 #(
     .INIT(16'hF7FF)) 
     \reg_data_rd[31]_i_10 
@@ -58647,14 +58615,14 @@ module top_block_fakernet_top_0_0_fnet_regaccess
        (.I0(reg_int_addr[9]),
         .I1(\regacc_pre2_addr_reg[8]_0 [8]),
         .O(\reg_data_rd[31]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair510" *) 
+  (* SOFT_HLUTNM = "soft_lutpair508" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \reg_data_rd[31]_i_12 
        (.I0(reg_int_addr[11]),
         .I1(reg_int_addr[10]),
         .O(\reg_data_rd[31]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair490" *) 
+  (* SOFT_HLUTNM = "soft_lutpair493" *) 
   LUT5 #(
     .INIT(32'h000000DF)) 
     \reg_data_rd[31]_i_13 
@@ -58702,7 +58670,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\regacc_pre2_cnt_reg[0]_0 ),
         .I5(reg_read_prev2),
         .O(\regacc_pre2_addr_reg[11]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair530" *) 
+  (* SOFT_HLUTNM = "soft_lutpair532" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \reg_data_rd[31]_i_4 
@@ -58710,7 +58678,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(\reg_data_rd[31]_i_7_n_0 ),
         .I2(reg_int_read),
         .O(regacc_int_read_reg_6));
-  (* SOFT_HLUTNM = "soft_lutpair491" *) 
+  (* SOFT_HLUTNM = "soft_lutpair494" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFD)) 
     \reg_data_rd[31]_i_5 
@@ -58749,7 +58717,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\regacc_pre2_addr_reg[11]_0 ),
         .I4(regacc_int_read_reg_2),
         .O(\reg_data_rd[31]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair489" *) 
+  (* SOFT_HLUTNM = "soft_lutpair492" *) 
   LUT4 #(
     .INIT(16'hFFFD)) 
     \reg_data_rd[31]_i_9 
@@ -58887,7 +58855,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(reg_int_read),
         .I5(\mdio_req_d[31]_i_2_n_0 ),
         .O(regacc_int_read_reg_3[3]));
-  (* SOFT_HLUTNM = "soft_lutpair509" *) 
+  (* SOFT_HLUTNM = "soft_lutpair507" *) 
   LUT4 #(
     .INIT(16'h02A2)) 
     \reg_data_rd[6]_i_2 
@@ -58935,7 +58903,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd_reg[7]_0 ),
         .I5(\reg_data_rd[7]_i_7_n_0 ),
         .O(\reg_data_rd[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair530" *) 
+  (* SOFT_HLUTNM = "soft_lutpair532" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \reg_data_rd[7]_i_4 
@@ -58952,7 +58920,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\reg_data_rd_reg[15] [5]),
         .I4(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(\reg_data_rd[7]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair507" *) 
+  (* SOFT_HLUTNM = "soft_lutpair505" *) 
   LUT4 #(
     .INIT(16'h02A2)) 
     \reg_data_rd[8]_i_1 
@@ -58981,7 +58949,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\reg_data_rd[8]_i_2_0 ),
         .I5(\reg_data_rd[8]_i_2_1 ),
         .O(\reg_data_rd[8]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair489" *) 
+  (* SOFT_HLUTNM = "soft_lutpair492" *) 
   LUT5 #(
     .INIT(32'h00011500)) 
     \reg_data_rd[8]_i_5 
@@ -59010,7 +58978,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(reg_int_read),
         .I5(\reg_data_rd[9]_i_4_n_0 ),
         .O(regacc_int_read_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair512" *) 
+  (* SOFT_HLUTNM = "soft_lutpair510" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \reg_data_rd[9]_i_3 
@@ -59992,15 +59960,15 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .CLK(clk_in),
         .D(regacc_pre_ext_read0),
         .Q(regacc_pre2_ext_read_reg_srl2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair477" *) 
+  (* SOFT_HLUTNM = "soft_lutpair483" *) 
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00000004)) 
     regacc_pre2_ext_read_reg_srl2_i_1
        (.I0(int_op_reg_n_0),
-        .I1(\s_reg[state] [0]),
+        .I1(regacc_pre_int_read_i_2_n_0),
         .I2(wr_op),
         .I3(\s_reg[state] [1]),
-        .I4(regacc_pre_int_read_i_2_n_0),
+        .I4(\s_reg[state] [0]),
         .O(regacc_pre_ext_read0));
   (* srl_name = "\inst/t/fakernet/regacc/regacc_pre2_ext_write_reg_srl2 " *) 
   SRL16E #(
@@ -60015,23 +59983,23 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(regacc_pre_ext_write0),
         .Q(regacc_pre2_ext_write_reg_srl2_n_0));
   LUT6 #(
-    .INIT(64'h0000000000100000)) 
+    .INIT(64'h0000000000000200)) 
     regacc_pre2_ext_write_reg_srl2_i_1
-       (.I0(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [1]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [0]),
         .I5(int_op_reg_n_0),
         .O(regacc_pre_ext_write0));
   LUT5 #(
-    .INIT(32'h00000100)) 
+    .INIT(32'h00000002)) 
     \regacc_pre_addr[15]_i_1 
-       (.I0(\s_reg[state] [1]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [4]),
         .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [0]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
         .O(regacc_pre_addr[11]));
   FDRE #(
     .INIT(1'b0)) 
@@ -60234,22 +60202,22 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .Q(\regacc_pre_addr_reg_n_0_[9] ),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h00100000)) 
+    .INIT(32'h00000200)) 
     \regacc_pre_data_wr[15]_i_1 
-       (.I0(\s_reg[state] [4]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [3]),
-        .I3(\s_reg[state] [0]),
-        .I4(\s_reg[state] [1]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [1]),
+        .I4(\s_reg[state] [0]),
         .O(regacc_pre_data_wr[15]));
   LUT5 #(
-    .INIT(32'h01000000)) 
+    .INIT(32'h00000200)) 
     \regacc_pre_data_wr[31]_i_1 
-       (.I0(\s_reg[state] [1]),
+       (.I0(\s_reg[state] [3]),
         .I1(\s_reg[state] [4]),
         .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [0]),
+        .I3(\s_reg[state] [0]),
+        .I4(\s_reg[state] [1]),
         .O(regacc_pre_data_wr[31]));
   FDRE #(
     .INIT(1'b0)) 
@@ -60507,23 +60475,23 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(DOUTBDOUT[9]),
         .Q(\regacc_pre_data_wr_reg_n_0_[9] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair477" *) 
+  (* SOFT_HLUTNM = "soft_lutpair483" *) 
   LUT5 #(
-    .INIT(32'h00000010)) 
+    .INIT(32'h00000008)) 
     regacc_pre_int_read_i_1
-       (.I0(\s_reg[state] [0]),
-        .I1(wr_op),
-        .I2(int_op_reg_n_0),
+       (.I0(int_op_reg_n_0),
+        .I1(regacc_pre_int_read_i_2_n_0),
+        .I2(wr_op),
         .I3(\s_reg[state] [1]),
-        .I4(regacc_pre_int_read_i_2_n_0),
+        .I4(\s_reg[state] [0]),
         .O(regacc_pre_int_read0));
-  (* SOFT_HLUTNM = "soft_lutpair499" *) 
+  (* SOFT_HLUTNM = "soft_lutpair512" *) 
   LUT3 #(
-    .INIT(8'hEF)) 
+    .INIT(8'h02)) 
     regacc_pre_int_read_i_2
-       (.I0(\s_reg[state] [4]),
-        .I1(\s_reg[state] [2]),
-        .I2(\s_reg[state] [3]),
+       (.I0(\s_reg[state] [3]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [2]),
         .O(regacc_pre_int_read_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -60536,12 +60504,12 @@ module top_block_fakernet_top_0_0_fnet_regaccess
   LUT6 #(
     .INIT(64'h0000020000000000)) 
     regacc_pre_int_write_i_1
-       (.I0(int_op_reg_n_0),
-        .I1(\s_reg[state] [4]),
-        .I2(\s_reg[state] [2]),
-        .I3(\s_reg[state] [3]),
+       (.I0(\s_reg[state] [3]),
+        .I1(\s_reg[state] [2]),
+        .I2(\s_reg[state] [4]),
+        .I3(\s_reg[state] [1]),
         .I4(\s_reg[state] [0]),
-        .I5(\s_reg[state] [1]),
+        .I5(int_op_reg_n_0),
         .O(regacc_pre_int_write0));
   FDRE #(
     .INIT(1'b0)) 
@@ -61358,15 +61326,15 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(regacc_pre2_ext_write_reg_srl2_n_0),
         .Q(regacc_write_o),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair479" *) 
+  (* SOFT_HLUTNM = "soft_lutpair480" *) 
   LUT5 #(
-    .INIT(32'h330400C8)) 
+    .INIT(32'h550002A8)) 
     \s[accum_cksum]_i_1__0 
-       (.I0(\s_reg[state] [0]),
-        .I1(\s_reg[state] [4]),
-        .I2(\s_reg[state] [1]),
-        .I3(\s_reg[state] [3]),
-        .I4(\s_reg[state] [2]),
+       (.I0(\s_reg[state] [4]),
+        .I1(\s_reg[state] [1]),
+        .I2(\s_reg[state] [0]),
+        .I3(\s_reg[state] [2]),
+        .I4(\s_reg[state] [3]),
         .O(\a[next_accum_cksum] ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61375,7 +61343,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[15]),
         .I2(\s_reg[wcksum][16]_0 [15]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_8 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_8 ),
         .O(\s[wcksum][15]_i_10__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61384,7 +61352,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[14]),
         .I2(\s_reg[wcksum][16]_0 [14]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_9 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_9 ),
         .O(\s[wcksum][15]_i_11__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61393,7 +61361,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[13]),
         .I2(\s_reg[wcksum][16]_0 [13]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_10 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_10 ),
         .O(\s[wcksum][15]_i_12__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61402,7 +61370,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[12]),
         .I2(\s_reg[wcksum][16]_0 [12]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_11 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_11 ),
         .O(\s[wcksum][15]_i_13__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61411,7 +61379,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[11]),
         .I2(\s_reg[wcksum][16]_0 [11]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_12 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_12 ),
         .O(\s[wcksum][15]_i_14__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61420,7 +61388,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[10]),
         .I2(\s_reg[wcksum][16]_0 [10]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_13 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_13 ),
         .O(\s[wcksum][15]_i_15__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61429,7 +61397,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[9]),
         .I2(\s_reg[wcksum][16]_0 [9]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_14 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_14 ),
         .O(\s[wcksum][15]_i_16__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61438,7 +61406,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[8]),
         .I2(\s_reg[wcksum][16]_0 [8]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\actual_wdata_reg[12]_i_3_n_15 ),
+        .I4(\actual_wdata_reg[15]_i_5_n_15 ),
         .O(\s[wcksum][15]_i_17__0_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
@@ -61510,7 +61478,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[7]),
         .I2(\s_reg[wcksum][16]_0 [7]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_8 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_8 ),
         .O(\s[wcksum][7]_i_10__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61519,7 +61487,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[6]),
         .I2(\s_reg[wcksum][16]_0 [6]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_9 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_9 ),
         .O(\s[wcksum][7]_i_11__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61528,7 +61496,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[5]),
         .I2(\s_reg[wcksum][16]_0 [5]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_10 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_10 ),
         .O(\s[wcksum][7]_i_12__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61537,7 +61505,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[4]),
         .I2(\s_reg[wcksum][16]_0 [4]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_11 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_11 ),
         .O(\s[wcksum][7]_i_13__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61546,7 +61514,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[3]),
         .I2(\s_reg[wcksum][16]_0 [3]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_12 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_12 ),
         .O(\s[wcksum][7]_i_14__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61555,7 +61523,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[2]),
         .I2(\s_reg[wcksum][16]_0 [2]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_13 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_13 ),
         .O(\s[wcksum][7]_i_15__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61564,7 +61532,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[1]),
         .I2(\s_reg[wcksum][16]_0 [1]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_14 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_14 ),
         .O(\s[wcksum][7]_i_16__0_n_0 ));
   LUT5 #(
     .INIT(32'h77F088F0)) 
@@ -61573,14 +61541,8 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I1(Q[0]),
         .I2(\s_reg[wcksum][16]_0 [0]),
         .I3(\dp_ram_udp_regacc[port_b][o][rd] ),
-        .I4(\s_reg[wcksum][7]_i_18_n_15 ),
+        .I4(\actual_wdata_reg[7]_i_3_n_15 ),
         .O(\s[wcksum][7]_i_17__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \s[wcksum][7]_i_19 
-       (.I0(\s_reg[wcksum_n_0_][0] ),
-        .I1(R),
-        .O(\s[wcksum][7]_i_19_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \s[wcksum][7]_i_2__0 
@@ -61724,7 +61686,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .O({\NLW_s_reg[wcksum][16]_i_1__0_O_UNCONNECTED [7:1],\s_reg[wcksum][16]_i_1__0_n_15 }),
         .S({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,\s[wcksum][16]_i_2__0_n_0 }));
   CARRY8 \s_reg[wcksum][16]_i_3__0 
-       (.CI(\actual_wdata_reg[12]_i_3_n_0 ),
+       (.CI(\actual_wdata_reg[15]_i_5_n_0 ),
         .CI_TOP(1'b0),
         .CO({\NLW_s_reg[wcksum][16]_i_3__0_CO_UNCONNECTED [7:1],\s_reg[wcksum][16]_i_3__0_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -61786,13 +61748,6 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .D(\s_reg[wcksum][7]_i_1__0_n_8 ),
         .Q(\s_reg[wcksum_n_0_][7] ),
         .R(1'b0));
-  CARRY8 \s_reg[wcksum][7]_i_18 
-       (.CI(1'b0),
-        .CI_TOP(1'b0),
-        .CO({\s_reg[wcksum][7]_i_18_n_0 ,\s_reg[wcksum][7]_i_18_n_1 ,\s_reg[wcksum][7]_i_18_n_2 ,\s_reg[wcksum][7]_i_18_n_3 ,\s_reg[wcksum][7]_i_18_n_4 ,\s_reg[wcksum][7]_i_18_n_5 ,\s_reg[wcksum][7]_i_18_n_6 ,\s_reg[wcksum][7]_i_18_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,\s_reg[wcksum_n_0_][0] }),
-        .O({\s_reg[wcksum][7]_i_18_n_8 ,\s_reg[wcksum][7]_i_18_n_9 ,\s_reg[wcksum][7]_i_18_n_10 ,\s_reg[wcksum][7]_i_18_n_11 ,\s_reg[wcksum][7]_i_18_n_12 ,\s_reg[wcksum][7]_i_18_n_13 ,\s_reg[wcksum][7]_i_18_n_14 ,\s_reg[wcksum][7]_i_18_n_15 }),
-        .S({\s_reg[wcksum_n_0_][7] ,\s_reg[wcksum_n_0_][6] ,\s_reg[wcksum_n_0_][5] ,\s_reg[wcksum_n_0_][4] ,\s_reg[wcksum_n_0_][3] ,\s_reg[wcksum_n_0_][2] ,\s_reg[wcksum_n_0_][1] ,\s[wcksum][7]_i_19_n_0 }));
   CARRY8 \s_reg[wcksum][7]_i_1__0 
        (.CI(1'b0),
         .CI_TOP(1'b0),
@@ -61817,13 +61772,13 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .Q(\s_reg[wcksum_n_0_][9] ),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000040000000000)) 
+    .INIT(64'h0000100000000000)) 
     \s_stat[words][10]_i_1__1 
        (.I0(\s_reg[state] [3]),
-        .I1(\s_reg[state] [1]),
-        .I2(\s_reg[state] [0]),
+        .I1(\s_reg[state] [4]),
+        .I2(\s_reg[state] [1]),
         .I3(\s_reg[state] [2]),
-        .I4(\s_reg[state] [4]),
+        .I4(\s_reg[state] [0]),
         .I5(\regacc_aux_info[stat][reg_idp] ),
         .O(E));
   LUT6 #(
@@ -61854,7 +61809,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .I4(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(tcp_reset_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair497" *) 
+  (* SOFT_HLUTNM = "soft_lutpair501" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \testctrl_reg[0][31]_i_1 
@@ -61873,7 +61828,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I4(\regacc_pre2_addr_reg[8]_0 [6]),
         .I5(access_done_i_2_n_0),
         .O(\testctrl_reg[0][31]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair508" *) 
+  (* SOFT_HLUTNM = "soft_lutpair506" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     \testctrl_reg[1][31]_i_1 
@@ -61882,7 +61837,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [0]),
         .I3(\regacc_pre2_addr_reg[8]_0 [2]),
         .O(\regacc_pre2_addr_reg[1]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair495" *) 
+  (* SOFT_HLUTNM = "soft_lutpair498" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \testctrl_reg[2][31]_i_1 
@@ -61891,7 +61846,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [0]),
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .O(\regacc_pre2_addr_reg[2]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair508" *) 
+  (* SOFT_HLUTNM = "soft_lutpair506" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \testctrl_reg[3][31]_i_1 
@@ -61900,7 +61855,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [1]),
         .I3(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(\regacc_pre2_addr_reg[2]_8 ));
-  (* SOFT_HLUTNM = "soft_lutpair497" *) 
+  (* SOFT_HLUTNM = "soft_lutpair501" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \testctrl_reg[4][31]_i_1 
@@ -61909,7 +61864,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [1]),
         .I3(\regacc_pre2_addr_reg[8]_0 [0]),
         .O(\regacc_pre2_addr_reg[2]_6 ));
-  (* SOFT_HLUTNM = "soft_lutpair496" *) 
+  (* SOFT_HLUTNM = "soft_lutpair500" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \testctrl_reg[5][31]_i_1 
@@ -61918,7 +61873,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [0]),
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .O(\regacc_pre2_addr_reg[2]_5 ));
-  (* SOFT_HLUTNM = "soft_lutpair495" *) 
+  (* SOFT_HLUTNM = "soft_lutpair498" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \testctrl_reg[6][31]_i_1 
@@ -61927,7 +61882,7 @@ module top_block_fakernet_top_0_0_fnet_regaccess
         .I2(\regacc_pre2_addr_reg[8]_0 [0]),
         .I3(\regacc_pre2_addr_reg[8]_0 [1]),
         .O(\regacc_pre2_addr_reg[2]_3 ));
-  (* SOFT_HLUTNM = "soft_lutpair496" *) 
+  (* SOFT_HLUTNM = "soft_lutpair500" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \testctrl_reg[7][31]_i_1 
@@ -62291,7 +62246,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .D(plusOp[9]),
         .Q(Q[7]),
         .R(tcp_reset));
-  (* SOFT_HLUTNM = "soft_lutpair536" *) 
+  (* SOFT_HLUTNM = "soft_lutpair541" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     commit_overrun_i_1
@@ -63059,7 +63014,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .D(data_pst_free0),
         .Q(data_pst_free),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair534" *) 
+  (* SOFT_HLUTNM = "soft_lutpair539" *) 
   LUT3 #(
     .INIT(8'h02)) 
     ram_reg_bram_0_i_1__8
@@ -63067,14 +63022,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .I1(\data_port_a_addr_reg[12]_0 [12]),
         .I2(\data_port_a_addr_reg[12]_0 [11]),
         .O(WEA));
-  (* SOFT_HLUTNM = "soft_lutpair538" *) 
+  (* SOFT_HLUTNM = "soft_lutpair543" *) 
   LUT2 #(
     .INIT(4'hB)) 
     ram_reg_bram_1_i_1
        (.I0(\data_port_a_addr_reg[12]_0 [12]),
         .I1(\data_port_a_addr_reg[12]_0 [11]),
         .O(\data_port_a_addr_reg[12]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair535" *) 
+  (* SOFT_HLUTNM = "soft_lutpair540" *) 
   LUT3 #(
     .INIT(8'h20)) 
     ram_reg_bram_1_i_3
@@ -63082,14 +63037,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .I1(\data_port_a_addr_reg[12]_0 [12]),
         .I2(\data_port_a_addr_reg[12]_0 [11]),
         .O(data_port_a_wr_reg_2));
-  (* SOFT_HLUTNM = "soft_lutpair539" *) 
+  (* SOFT_HLUTNM = "soft_lutpair544" *) 
   LUT2 #(
     .INIT(4'hB)) 
     ram_reg_bram_2_i_1
        (.I0(\data_port_a_addr_reg[12]_0 [11]),
         .I1(\data_port_a_addr_reg[12]_0 [12]),
         .O(\data_port_a_addr_reg[11]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair535" *) 
+  (* SOFT_HLUTNM = "soft_lutpair540" *) 
   LUT3 #(
     .INIT(8'h20)) 
     ram_reg_bram_2_i_3
@@ -63097,14 +63052,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .I1(\data_port_a_addr_reg[12]_0 [11]),
         .I2(\data_port_a_addr_reg[12]_0 [12]),
         .O(data_port_a_wr_reg_3));
-  (* SOFT_HLUTNM = "soft_lutpair538" *) 
+  (* SOFT_HLUTNM = "soft_lutpair543" *) 
   LUT2 #(
     .INIT(4'h7)) 
     ram_reg_bram_3_i_1
        (.I0(\data_port_a_addr_reg[12]_0 [12]),
         .I1(\data_port_a_addr_reg[12]_0 [11]),
         .O(\data_port_a_addr_reg[12]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair534" *) 
+  (* SOFT_HLUTNM = "soft_lutpair539" *) 
   LUT3 #(
     .INIT(8'h80)) 
     ram_reg_bram_3_i_3
@@ -63112,20 +63067,20 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .I1(\data_port_a_addr_reg[12]_0 [12]),
         .I2(\data_port_a_addr_reg[12]_0 [11]),
         .O(data_port_a_wr_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair537" *) 
+  (* SOFT_HLUTNM = "soft_lutpair542" *) 
   LUT2 #(
     .INIT(4'h2)) 
     ram_reg_bram_4_i_1
        (.I0(data_port_a_wr),
         .I1(\data_port_a_addr_reg[12]_0 [12]),
         .O(data_port_a_wr_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair539" *) 
+  (* SOFT_HLUTNM = "soft_lutpair544" *) 
   LUT1 #(
     .INIT(2'h1)) 
     ram_reg_bram_5_i_1
        (.I0(\data_port_a_addr_reg[12]_0 [12]),
         .O(\data_port_a_addr_reg[12]_3 ));
-  (* SOFT_HLUTNM = "soft_lutpair537" *) 
+  (* SOFT_HLUTNM = "soft_lutpair542" *) 
   LUT2 #(
     .INIT(4'h8)) 
     ram_reg_bram_5_i_3
@@ -63226,7 +63181,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_buffer
         .DI({Q[6:0],1'b0}),
         .O(\astat[filled] [7:0]),
         .S({\rawregs[3][8]_i_3_n_0 ,\rawregs[3][8]_i_4_n_0 ,\rawregs[3][8]_i_5_n_0 ,\rawregs[3][8]_i_6_n_0 ,\rawregs[3][8]_i_7_n_0 ,\rawregs[3][8]_i_8_n_0 ,\rawregs[3][8]_i_9_n_0 ,S}));
-  (* SOFT_HLUTNM = "soft_lutpair536" *) 
+  (* SOFT_HLUTNM = "soft_lutpair541" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     write_overrun_i_1
@@ -64150,7 +64105,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I3(cur_tcp_prep),
         .I4(\ram_tcp_prep2[1][stat][hasdata] ),
         .O(\packet_req_reg[send_syn]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair552" *) 
+  (* SOFT_HLUTNM = "soft_lutpair557" *) 
   LUT5 #(
     .INIT(32'h08FF0808)) 
     \FSM_sequential_s_stat[conn_state][1]_i_2 
@@ -64178,7 +64133,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .D(\s_stat[conn_state]__0 ),
         .Q(Q[1]),
         .R(tcp_reset));
-  (* SOFT_HLUTNM = "soft_lutpair561" *) 
+  (* SOFT_HLUTNM = "soft_lutpair566" *) 
   LUT4 #(
     .INIT(16'hAC00)) 
     \actual_wdata[0]_i_5__0 
@@ -64198,7 +64153,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .O(\s_reg[repeat] ));
   LUT5 #(
     .INIT(32'h0A000C00)) 
-    \actual_wdata[12]_i_4__0 
+    \actual_wdata[12]_i_4__1 
        (.I0(\tcp_ctrl_stat[base_seqno] [12]),
         .I1(\s_stat_reg[max_sent][16]_1 [12]),
         .I2(\packet_req[send_syn] ),
@@ -64207,7 +64162,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .O(\s_stat_reg[base_seqno][12]_0 ));
   LUT5 #(
     .INIT(32'h0A000C00)) 
-    \actual_wdata[14]_i_5__1 
+    \actual_wdata[14]_i_5__0 
        (.I0(\tcp_ctrl_stat[base_seqno] [14]),
         .I1(\s_stat_reg[max_sent][16]_1 [14]),
         .I2(\packet_req[send_syn] ),
@@ -64413,7 +64368,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .DI(\s_stat_reg[max_sent][16]_1 [7:0]),
         .O(\s_stat_reg[max_sent][15]_1 [7:0]),
         .S({\already_sent[7]_i_2_n_0 ,\already_sent[7]_i_3_n_0 ,\already_sent[7]_i_4_n_0 ,\already_sent[7]_i_5_n_0 ,\already_sent[7]_i_6_n_0 ,\already_sent[7]_i_7_n_0 ,\already_sent[7]_i_8_n_0 ,\already_sent[7]_i_9_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair567" *) 
+  (* SOFT_HLUTNM = "soft_lutpair572" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     data_pst_free3_i_1
@@ -64666,7 +64621,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .DI({data_pst_free3_i_18_n_0,data_pst_free3_i_19_n_0,data_pst_free3_i_20_n_0,data_pst_free3_i_21_n_0,data_pst_free3_i_22_n_0,data_pst_free_i_9_n_0,data_pst_free3_i_23_n_0,data_pst_free3_i_24_n_0}),
         .O(NLW_data_pst_free3_reg_i_3_O_UNCONNECTED[7:0]),
         .S({data_pst_free3_i_25_n_0,data_pst_free3_i_26_n_0,data_pst_free3_i_27_n_0,data_pst_free3_i_28_n_0,data_pst_free3_i_29_n_0,data_pst_free3_i_30_n_0,data_pst_free3_i_31_n_0,data_pst_free3_i_32_n_0}));
-  (* SOFT_HLUTNM = "soft_lutpair567" *) 
+  (* SOFT_HLUTNM = "soft_lutpair572" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     data_pst_free_i_1
@@ -64935,7 +64890,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .DI({data_pst_free_i_20_n_0,data_pst_free_i_21_n_0,data_pst_free_i_22_n_0,data_pst_free_i_23_n_0,data_pst_free_i_24_n_0,data_pst_free_i_9_n_0,data_pst_free_i_25_n_0,data_pst_free_i_26_n_0}),
         .O(NLW_data_pst_free_reg_i_3_O_UNCONNECTED[7:0]),
         .S({data_pst_free_i_27_n_0,data_pst_free_i_28_n_0,data_pst_free_i_29_n_0,data_pst_free_i_30_n_0,data_pst_free_i_31_n_0,data_pst_free_i_32_n_0,data_pst_free_i_33_n_0,data_pst_free_i_34_n_0}));
-  (* SOFT_HLUTNM = "soft_lutpair557" *) 
+  (* SOFT_HLUTNM = "soft_lutpair562" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \info_counts[connect]_i_1 
@@ -64943,7 +64898,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(Q[1]),
         .I2(\tcp_ctrl_recv[got_ack] ),
         .O(\info_counts[connect]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair549" *) 
+  (* SOFT_HLUTNM = "soft_lutpair554" *) 
   LUT5 #(
     .INIT(32'h00000010)) 
     \info_counts[new_rtt_est]_i_1 
@@ -65019,7 +64974,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .D(\info_counts_reg[twice_same_ack]_0 ),
         .Q(\ts_info_counts[twice_same_ack] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair561" *) 
+  (* SOFT_HLUTNM = "soft_lutpair566" *) 
   LUT2 #(
     .INIT(4'h9)) 
     is_tcp_stat_max_sent16_eq_base_seqno16_i_1
@@ -65224,7 +65179,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\info_counts[connect]_i_1_n_0 ),
         .I5(need_repeat_reg_0),
         .O(need_repeat_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair540" *) 
+  (* SOFT_HLUTNM = "soft_lutpair545" *) 
   LUT5 #(
     .INIT(32'h40445555)) 
     need_repeat_i_2
@@ -65234,7 +65189,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I3(Q[1]),
         .I4(\packet_req[discard_cur_prepare]_i_4_n_0 ),
         .O(need_repeat_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair552" *) 
+  (* SOFT_HLUTNM = "soft_lutpair557" *) 
   LUT3 #(
     .INIT(8'h80)) 
     need_repeat_i_3
@@ -65268,7 +65223,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(tcp_reset),
         .I5(\packet_req[discard_cur_prepare]_i_4_n_0 ),
         .O(\packet_req[discard_cur_prepare]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair546" *) 
+  (* SOFT_HLUTNM = "soft_lutpair551" *) 
   LUT5 #(
     .INIT(32'hFFFFFEFF)) 
     \packet_req[discard_cur_prepare]_i_4 
@@ -65286,7 +65241,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\tcp_ctrl_recv[ack_seqno] [15]),
         .I3(\tcp_ctrl_stat[base_seqno] [15]),
         .O(\s_stat_reg[base_seqno][16]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair557" *) 
+  (* SOFT_HLUTNM = "soft_lutpair562" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \packet_req[send_repeat]_i_1 
@@ -65669,7 +65624,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
        (.I0(\rawregs[5][15]_i_2_n_0 ),
         .I1(\astat[filled] [10]),
         .O(\base_fill_reg[13] [10]));
-  (* SOFT_HLUTNM = "soft_lutpair556" *) 
+  (* SOFT_HLUTNM = "soft_lutpair561" *) 
   LUT3 #(
     .INIT(8'h4B)) 
     \rawregs[5][12]_i_1 
@@ -65677,7 +65632,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\rawregs[5][15]_i_2_n_0 ),
         .I2(\astat[filled] [11]),
         .O(\base_fill_reg[13] [11]));
-  (* SOFT_HLUTNM = "soft_lutpair556" *) 
+  (* SOFT_HLUTNM = "soft_lutpair561" *) 
   LUT4 #(
     .INIT(16'h04FB)) 
     \rawregs[5][13]_i_1 
@@ -65686,7 +65641,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\astat[filled] [10]),
         .I3(\astat[filled] [12]),
         .O(\base_fill_reg[13] [12]));
-  (* SOFT_HLUTNM = "soft_lutpair545" *) 
+  (* SOFT_HLUTNM = "soft_lutpair550" *) 
   LUT5 #(
     .INIT(32'h0010FFEF)) 
     \rawregs[5][14]_i_1 
@@ -65696,7 +65651,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I3(\astat[filled] [11]),
         .I4(\astat[filled] [13]),
         .O(\base_fill_reg[13] [13]));
-  (* SOFT_HLUTNM = "soft_lutpair545" *) 
+  (* SOFT_HLUTNM = "soft_lutpair550" *) 
   LUT5 #(
     .INIT(32'h00000010)) 
     \rawregs[5][15]_i_1 
@@ -65716,14 +65671,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\astat[filled] [7]),
         .I5(\astat[filled] [9]),
         .O(\rawregs[5][15]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair564" *) 
+  (* SOFT_HLUTNM = "soft_lutpair569" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rawregs[5][1]_i_1 
        (.I0(\tcp_ctrl_stat[base_seqno] [0]),
         .I1(\astat[filled] [0]),
         .O(\base_fill_reg[13] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair564" *) 
+  (* SOFT_HLUTNM = "soft_lutpair569" *) 
   LUT3 #(
     .INIT(8'h1E)) 
     \rawregs[5][2]_i_1 
@@ -65731,7 +65686,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\astat[filled] [0]),
         .I2(\astat[filled] [1]),
         .O(\base_fill_reg[13] [1]));
-  (* SOFT_HLUTNM = "soft_lutpair543" *) 
+  (* SOFT_HLUTNM = "soft_lutpair548" *) 
   LUT4 #(
     .INIT(16'h01FE)) 
     \rawregs[5][3]_i_1 
@@ -65740,7 +65695,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\tcp_ctrl_stat[base_seqno] [0]),
         .I3(\astat[filled] [2]),
         .O(\base_fill_reg[13] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair543" *) 
+  (* SOFT_HLUTNM = "soft_lutpair548" *) 
   LUT5 #(
     .INIT(32'h0001FFFE)) 
     \rawregs[5][4]_i_1 
@@ -65760,14 +65715,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\astat[filled] [2]),
         .I5(\astat[filled] [4]),
         .O(\base_fill_reg[13] [4]));
-  (* SOFT_HLUTNM = "soft_lutpair565" *) 
+  (* SOFT_HLUTNM = "soft_lutpair570" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \rawregs[5][6]_i_1 
        (.I0(\rawregs[5][10]_i_2_n_0 ),
         .I1(\astat[filled] [5]),
         .O(\base_fill_reg[13] [5]));
-  (* SOFT_HLUTNM = "soft_lutpair565" *) 
+  (* SOFT_HLUTNM = "soft_lutpair570" *) 
   LUT3 #(
     .INIT(8'h4B)) 
     \rawregs[5][7]_i_1 
@@ -65775,7 +65730,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\rawregs[5][10]_i_2_n_0 ),
         .I2(\astat[filled] [6]),
         .O(\base_fill_reg[13] [6]));
-  (* SOFT_HLUTNM = "soft_lutpair544" *) 
+  (* SOFT_HLUTNM = "soft_lutpair549" *) 
   LUT4 #(
     .INIT(16'h04FB)) 
     \rawregs[5][8]_i_1 
@@ -65784,7 +65739,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\astat[filled] [5]),
         .I3(\astat[filled] [7]),
         .O(\base_fill_reg[13] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair544" *) 
+  (* SOFT_HLUTNM = "soft_lutpair549" *) 
   LUT5 #(
     .INIT(32'h0010FFEF)) 
     \rawregs[5][9]_i_1 
@@ -66214,7 +66169,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\reg_data_rd[5]_i_8_n_0 ),
         .O(\regacc_pre2_addr_reg[2]_1 ),
         .S(\reg_data_rd_reg[5] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair560" *) 
+  (* SOFT_HLUTNM = "soft_lutpair565" *) 
   LUT4 #(
     .INIT(16'hD5FF)) 
     \rtt_count_meas[0]_i_1 
@@ -66253,7 +66208,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(rtt_count_meas[11]),
         .I5(\rtt_count_meas[11]_i_3_n_0 ),
         .O(\rtt_count_meas[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair560" *) 
+  (* SOFT_HLUTNM = "soft_lutpair565" *) 
   LUT3 #(
     .INIT(8'h60)) 
     \rtt_count_meas[11]_i_2 
@@ -66285,7 +66240,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(rtt_count_meas[1]),
         .I2(rtt_count_meas[0]),
         .O(\rtt_count_meas[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair541" *) 
+  (* SOFT_HLUTNM = "soft_lutpair546" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rtt_count_meas[3]_i_1 
@@ -66294,7 +66249,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(rtt_count_meas[0]),
         .I3(rtt_count_meas[1]),
         .O(\rtt_count_meas[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair541" *) 
+  (* SOFT_HLUTNM = "soft_lutpair546" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \rtt_count_meas[4]_i_1 
@@ -66314,14 +66269,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(rtt_count_meas[1]),
         .I5(rtt_count_meas[3]),
         .O(\rtt_count_meas[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair563" *) 
+  (* SOFT_HLUTNM = "soft_lutpair568" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \rtt_count_meas[6]_i_1 
        (.I0(rtt_count_meas[6]),
         .I1(\rtt_count_meas[10]_i_3_n_0 ),
         .O(\rtt_count_meas[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair563" *) 
+  (* SOFT_HLUTNM = "soft_lutpair568" *) 
   LUT3 #(
     .INIT(8'hA6)) 
     \rtt_count_meas[7]_i_1 
@@ -66329,7 +66284,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(rtt_count_meas[6]),
         .I2(\rtt_count_meas[10]_i_3_n_0 ),
         .O(\rtt_count_meas[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair542" *) 
+  (* SOFT_HLUTNM = "soft_lutpair547" *) 
   LUT4 #(
     .INIT(16'hA6AA)) 
     \rtt_count_meas[8]_i_1 
@@ -66338,7 +66293,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_count_meas[10]_i_3_n_0 ),
         .I3(rtt_count_meas[6]),
         .O(\rtt_count_meas[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair542" *) 
+  (* SOFT_HLUTNM = "soft_lutpair547" *) 
   LUT5 #(
     .INIT(32'hAA6AAAAA)) 
     \rtt_count_meas[9]_i_1 
@@ -66462,7 +66417,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\rtt_counter[12]_i_3_n_0 ),
         .I5(rtt_estimate_reg[9]),
         .O(\rtt_counter[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair547" *) 
+  (* SOFT_HLUTNM = "soft_lutpair552" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \rtt_counter[10]_i_2 
@@ -66488,7 +66443,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(rtt_counter[11]),
         .I5(\rtt_counter[12]_i_4_n_0 ),
         .O(\rtt_counter[12]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair546" *) 
+  (* SOFT_HLUTNM = "soft_lutpair551" *) 
   LUT4 #(
     .INIT(16'h00FE)) 
     \rtt_counter[12]_i_3 
@@ -66578,7 +66533,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I3(rtt_counter[6]),
         .I4(\rtt_counter[8]_i_2_n_0 ),
         .O(\rtt_counter[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair547" *) 
+  (* SOFT_HLUTNM = "soft_lutpair552" *) 
   LUT5 #(
     .INIT(32'hE1FFE100)) 
     \rtt_counter[7]_i_1 
@@ -66721,7 +66676,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .D(\rtt_counter[9]_i_1_n_0 ),
         .Q(rtt_counter[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair559" *) 
+  (* SOFT_HLUTNM = "soft_lutpair564" *) 
   LUT3 #(
     .INIT(8'h8B)) 
     \rtt_estimate[0]_i_1 
@@ -66774,7 +66729,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_estimate[8]_i_2_n_0 ),
         .I3(rtt_estimate_reg[6]),
         .O(\rtt_estimate[11]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair559" *) 
+  (* SOFT_HLUTNM = "soft_lutpair564" *) 
   LUT4 #(
     .INIT(16'h8BB8)) 
     \rtt_estimate[1]_i_1 
@@ -66783,7 +66738,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(rtt_estimate_reg[0]),
         .I3(rtt_estimate_reg[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair548" *) 
+  (* SOFT_HLUTNM = "soft_lutpair553" *) 
   LUT5 #(
     .INIT(32'h8BBBB888)) 
     \rtt_estimate[2]_i_1 
@@ -66813,7 +66768,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(rtt_estimate_reg[3]),
         .I5(rtt_estimate_reg[2]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair548" *) 
+  (* SOFT_HLUTNM = "soft_lutpair553" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \rtt_estimate[4]_i_2 
@@ -67414,7 +67369,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_small_counter_reg_n_0_[10] ),
         .I3(\rtt_small_counter[10]_i_3_n_0 ),
         .O(rtt_small_counter[10]));
-  (* SOFT_HLUTNM = "soft_lutpair550" *) 
+  (* SOFT_HLUTNM = "soft_lutpair555" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \rtt_small_counter[10]_i_3 
@@ -67459,7 +67414,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_small_counter[4]_i_2_n_0 ),
         .I3(\rtt_small_counter_reg_n_0_[4] ),
         .O(rtt_small_counter[4]));
-  (* SOFT_HLUTNM = "soft_lutpair551" *) 
+  (* SOFT_HLUTNM = "soft_lutpair556" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \rtt_small_counter[4]_i_2 
@@ -67476,7 +67431,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_small_counter[5]_i_2_n_0 ),
         .I3(\rtt_small_counter_reg_n_0_[5] ),
         .O(rtt_small_counter[5]));
-  (* SOFT_HLUTNM = "soft_lutpair551" *) 
+  (* SOFT_HLUTNM = "soft_lutpair556" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \rtt_small_counter[5]_i_2 
@@ -67531,7 +67486,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\rtt_small_counter_reg_n_0_[9] ),
         .I3(\s_stat[max_sent] ),
         .O(rtt_small_counter[9]));
-  (* SOFT_HLUTNM = "soft_lutpair550" *) 
+  (* SOFT_HLUTNM = "soft_lutpair555" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \rtt_small_counter[9]_i_2 
@@ -67633,14 +67588,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
     \rtt_taken[0]_i_1 
        (.I0(rtt_taken_reg[0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair566" *) 
+  (* SOFT_HLUTNM = "soft_lutpair571" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \rtt_taken[1]_i_1 
        (.I0(rtt_taken_reg[0]),
         .I1(rtt_taken_reg[1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair566" *) 
+  (* SOFT_HLUTNM = "soft_lutpair571" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \rtt_taken[2]_i_1 
@@ -67648,7 +67603,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(rtt_taken_reg[1]),
         .I2(rtt_taken_reg[0]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair549" *) 
+  (* SOFT_HLUTNM = "soft_lutpair554" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rtt_taken[3]_i_1 
@@ -67859,7 +67814,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\packet_req[send_repeat] ),
         .I5(\s_reg[cur_address][0] [0]),
         .O(\FSM_onehot_s_reg[state][37] [9]));
-  (* SOFT_HLUTNM = "soft_lutpair540" *) 
+  (* SOFT_HLUTNM = "soft_lutpair545" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \s[fill_ram_tcp_template]_i_1 
@@ -67925,7 +67880,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\tcp_ctrl_stat[base_seqno] [24]),
         .I5(\s_reg[seqno_hi_same]_0 [5]),
         .O(\s[seqno_hi_next]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair554" *) 
+  (* SOFT_HLUTNM = "soft_lutpair559" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \s[seqno_hi_next]_i_8 
@@ -67980,14 +67935,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
     \s_stat[base_seqno][16]_i_1 
        (.I0(\tcp_ctrl_stat[base_seqno] [16]),
         .O(\tcp_state_stat[base_seqno_hi_plus_1] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair569" *) 
+  (* SOFT_HLUTNM = "soft_lutpair574" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \s_stat[base_seqno][17]_i_1 
        (.I0(\tcp_ctrl_stat[base_seqno] [16]),
         .I1(\tcp_ctrl_stat[base_seqno] [17]),
         .O(\tcp_state_stat[base_seqno_hi_plus_1] [1]));
-  (* SOFT_HLUTNM = "soft_lutpair569" *) 
+  (* SOFT_HLUTNM = "soft_lutpair574" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \s_stat[base_seqno][18]_i_1 
@@ -67995,7 +67950,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\tcp_ctrl_stat[base_seqno] [17]),
         .I2(\tcp_ctrl_stat[base_seqno] [18]),
         .O(\s_stat_reg[base_seqno][29]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair555" *) 
+  (* SOFT_HLUTNM = "soft_lutpair560" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \s_stat[base_seqno][19]_i_1 
@@ -68014,7 +67969,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\tcp_ctrl_recv[ack_seqno] [16]),
         .I5(\tcp_ctrl_stat[base_seqno] [16]),
         .O(\s_stat[base_seqno][20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair555" *) 
+  (* SOFT_HLUTNM = "soft_lutpair560" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \s_stat[base_seqno][20]_i_2 
@@ -68040,7 +67995,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
        (.I0(\s_stat_reg[base_seqno][21]_0 ),
         .I1(\tcp_ctrl_stat[base_seqno] [22]),
         .O(\tcp_state_stat[base_seqno_hi_plus_1] [6]));
-  (* SOFT_HLUTNM = "soft_lutpair562" *) 
+  (* SOFT_HLUTNM = "soft_lutpair567" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \s_stat[base_seqno][23]_i_1 
@@ -68048,7 +68003,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\tcp_ctrl_stat[base_seqno] [22]),
         .I2(\tcp_ctrl_stat[base_seqno] [23]),
         .O(\s_stat_reg[base_seqno][29]_0 [4]));
-  (* SOFT_HLUTNM = "soft_lutpair562" *) 
+  (* SOFT_HLUTNM = "soft_lutpair567" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \s_stat[base_seqno][24]_i_1 
@@ -68057,7 +68012,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(\tcp_ctrl_stat[base_seqno] [23]),
         .I3(\tcp_ctrl_stat[base_seqno] [24]),
         .O(\s_stat_reg[base_seqno][29]_0 [5]));
-  (* SOFT_HLUTNM = "soft_lutpair554" *) 
+  (* SOFT_HLUTNM = "soft_lutpair559" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \s_stat[base_seqno][25]_i_1 
@@ -68087,14 +68042,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I4(\tcp_ctrl_stat[base_seqno] [18]),
         .I5(\tcp_ctrl_stat[base_seqno] [20]),
         .O(\s_stat_reg[base_seqno][21]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair568" *) 
+  (* SOFT_HLUTNM = "soft_lutpair573" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \s_stat[base_seqno][27]_i_1 
        (.I0(\s_stat[base_seqno][31]_i_2_n_0 ),
         .I1(\tcp_ctrl_stat[base_seqno] [27]),
         .O(\s_stat_reg[base_seqno][29]_0 [8]));
-  (* SOFT_HLUTNM = "soft_lutpair558" *) 
+  (* SOFT_HLUTNM = "soft_lutpair563" *) 
   LUT3 #(
     .INIT(8'h3A)) 
     \s_stat[base_seqno][28]_i_1 
@@ -68102,7 +68057,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\tcp_ctrl_stat[base_seqno] [28]),
         .I2(tcp_reset),
         .O(p_1_in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair568" *) 
+  (* SOFT_HLUTNM = "soft_lutpair573" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \s_stat[base_seqno][28]_i_2 
@@ -68110,7 +68065,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I1(\tcp_ctrl_stat[base_seqno] [27]),
         .I2(\tcp_ctrl_stat[base_seqno] [28]),
         .O(\s_stat_reg[base_seqno][29]_0 [9]));
-  (* SOFT_HLUTNM = "soft_lutpair558" *) 
+  (* SOFT_HLUTNM = "soft_lutpair563" *) 
   LUT4 #(
     .INIT(16'h6F60)) 
     \s_stat[base_seqno][29]_i_1 
@@ -68119,7 +68074,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I2(tcp_reset),
         .I3(\s_stat_reg[base_seqno][29]_0 [10]),
         .O(p_1_in[29]));
-  (* SOFT_HLUTNM = "soft_lutpair553" *) 
+  (* SOFT_HLUTNM = "soft_lutpair558" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \s_stat[base_seqno][29]_i_2 
@@ -68137,7 +68092,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_control
         .I3(tcp_reset),
         .I4(\s_stat_reg[base_seqno][29]_0 [11]),
         .O(p_1_in[30]));
-  (* SOFT_HLUTNM = "soft_lutpair553" *) 
+  (* SOFT_HLUTNM = "soft_lutpair558" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \s_stat[base_seqno][30]_i_3 
@@ -69440,18 +69395,18 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
   wire \actual_wdata[11]_i_3__1_n_0 ;
   wire \actual_wdata[12]_i_1__1_n_0 ;
   wire \actual_wdata[12]_i_2__1_n_0 ;
-  wire \actual_wdata[12]_i_3__0_n_0 ;
+  wire \actual_wdata[12]_i_3__1_n_0 ;
   wire \actual_wdata[13]_i_1__1_n_0 ;
   wire \actual_wdata[13]_i_2__1_n_0 ;
   wire \actual_wdata[13]_i_3__0_n_0 ;
   wire \actual_wdata[14]_i_1__1_n_0 ;
-  wire \actual_wdata[14]_i_2__1_n_0 ;
+  wire \actual_wdata[14]_i_2__0_n_0 ;
   wire \actual_wdata[14]_i_3__1_n_0 ;
-  wire \actual_wdata[14]_i_4__1_n_0 ;
+  wire \actual_wdata[14]_i_4__0_n_0 ;
   wire \actual_wdata[15]_i_1__1_n_0 ;
   wire \actual_wdata[15]_i_2__1_n_0 ;
   wire \actual_wdata[15]_i_3__1_n_0 ;
-  wire \actual_wdata[15]_i_4_n_0 ;
+  wire \actual_wdata[15]_i_4__0_n_0 ;
   wire \actual_wdata[15]_i_5__0_n_0 ;
   wire \actual_wdata[15]_i_6__0_n_0 ;
   wire \actual_wdata[15]_i_7__0_n_0 ;
@@ -69486,7 +69441,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
   wire \actual_wdata[7]_i_1__1_n_0 ;
   wire \actual_wdata[7]_i_2__0_n_0 ;
   wire \actual_wdata[7]_i_3__0_n_0 ;
-  wire \actual_wdata[7]_i_4__0_n_0 ;
+  wire \actual_wdata[7]_i_4__1_n_0 ;
   wire \actual_wdata[7]_i_5__0_n_0 ;
   wire \actual_wdata[7]_i_6__0_n_0 ;
   wire \actual_wdata[8]_i_1__1_n_0 ;
@@ -69643,11 +69598,11 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
   wire \off[1]_i_1__0_n_0 ;
   wire \off[2]_i_1__0_n_0 ;
   wire \off[4]_i_1__0_n_0 ;
-  wire \off[4]_i_4__0_n_0 ;
+  wire \off[4]_i_4_n_0 ;
   wire \off[5]_i_1__0_n_0 ;
   wire \off[6]_i_1__0_n_0 ;
-  wire \off[7]_i_1__0_n_0 ;
-  wire \off[8]_i_1__0_n_0 ;
+  wire \off[7]_i_1_n_0 ;
+  wire \off[8]_i_1_n_0 ;
   wire \off[9]_i_1__0_n_0 ;
   wire [9:0]\off_reg[10]_0 ;
   wire [12:0]p_0_in;
@@ -70555,7 +70510,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .I2(\actual_wdata[12]_i_2__1_n_0 ),
         .I3(\actual_wdata[14]_i_3__1_n_0 ),
         .I4(\s_reg[drd_rdata] [28]),
-        .I5(\actual_wdata[12]_i_3__0_n_0 ),
+        .I5(\actual_wdata[12]_i_3__1_n_0 ),
         .O(\actual_wdata[12]_i_1__1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFEEEFEEEFEEE)) 
@@ -70569,13 +70524,13 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(\actual_wdata[12]_i_2__1_n_0 ));
   LUT5 #(
     .INIT(32'hFFA8A8A8)) 
-    \actual_wdata[12]_i_3__0 
+    \actual_wdata[12]_i_3__1 
        (.I0(keep_wcksum[12]),
         .I1(\a[wipcksum] ),
         .I2(\a[wtcpcksum] ),
         .I3(\tcp_ctrl_stat[base_seqno] [20]),
         .I4(\actual_wdata[15]_i_6__0_n_0 ),
-        .O(\actual_wdata[12]_i_3__0_n_0 ));
+        .O(\actual_wdata[12]_i_3__1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFEAFFEAFFEA)) 
     \actual_wdata[13]_i_1__1 
@@ -70611,21 +70566,21 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
     \actual_wdata[14]_i_1__1 
        (.I0(\actual_wdata[15]_i_5__0_n_0 ),
         .I1(DOUTBDOUT[14]),
-        .I2(\actual_wdata[14]_i_2__1_n_0 ),
+        .I2(\actual_wdata[14]_i_2__0_n_0 ),
         .I3(\actual_wdata[14]_i_3__1_n_0 ),
         .I4(\s_reg[drd_rdata] [30]),
-        .I5(\actual_wdata[14]_i_4__1_n_0 ),
+        .I5(\actual_wdata[14]_i_4__0_n_0 ),
         .O(\actual_wdata[14]_i_1__1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFEEEFEEEFEEE)) 
-    \actual_wdata[14]_i_2__1 
+    \actual_wdata[14]_i_2__0 
        (.I0(\FSM_onehot_s_reg[state_n_0_][33] ),
         .I1(\actual_wdata_reg[14]_0 ),
         .I2(\tcp_state_stat[base_seqno_hi_plus_1] [11]),
         .I3(\actual_wdata[15]_i_9_n_0 ),
         .I4(\s_reg[drd_rdata] [14]),
         .I5(\actual_wdata[15]_i_3__1_n_0 ),
-        .O(\actual_wdata[14]_i_2__1_n_0 ));
+        .O(\actual_wdata[14]_i_2__0_n_0 ));
   LUT3 #(
     .INIT(8'h08)) 
     \actual_wdata[14]_i_3__1 
@@ -70635,20 +70590,20 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(\actual_wdata[14]_i_3__1_n_0 ));
   LUT5 #(
     .INIT(32'hFFA8A8A8)) 
-    \actual_wdata[14]_i_4__1 
+    \actual_wdata[14]_i_4__0 
        (.I0(keep_wcksum[14]),
         .I1(\a[wipcksum] ),
         .I2(\a[wtcpcksum] ),
         .I3(\tcp_ctrl_stat[base_seqno] [22]),
         .I4(\actual_wdata[15]_i_6__0_n_0 ),
-        .O(\actual_wdata[14]_i_4__1_n_0 ));
+        .O(\actual_wdata[14]_i_4__0_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFEAFFEAFFEA)) 
     \actual_wdata[15]_i_1__1 
        (.I0(\actual_wdata[15]_i_2__1_n_0 ),
         .I1(\s_reg[drd_rdata] [15]),
         .I2(\actual_wdata[15]_i_3__1_n_0 ),
-        .I3(\actual_wdata[15]_i_4_n_0 ),
+        .I3(\actual_wdata[15]_i_4__0_n_0 ),
         .I4(DOUTBDOUT[15]),
         .I5(\actual_wdata[15]_i_5__0_n_0 ),
         .O(\actual_wdata[15]_i_1__1_n_0 ));
@@ -70672,14 +70627,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(\actual_wdata[15]_i_3__1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
-    \actual_wdata[15]_i_4 
+    \actual_wdata[15]_i_4__0 
        (.I0(\actual_wdata[15]_i_7__0_n_0 ),
         .I1(\actual_wdata[1]_i_4_0 [7]),
         .I2(\actual_wdata[15]_i_8__0_n_0 ),
         .I3(\tcp_ctrl_stat[base_seqno] [7]),
         .I4(\tcp_state_stat[base_seqno_hi_plus_1] [12]),
         .I5(\actual_wdata[15]_i_9_n_0 ),
-        .O(\actual_wdata[15]_i_4_n_0 ));
+        .O(\actual_wdata[15]_i_4__0_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \actual_wdata[15]_i_5__0 
@@ -70966,7 +70921,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
        (.I0(\actual_wdata[7]_i_2__0_n_0 ),
         .I1(\actual_wdata[7]_i_3__0_n_0 ),
         .I2(DOUTBDOUT[7]),
-        .I3(\actual_wdata[7]_i_4__0_n_0 ),
+        .I3(\actual_wdata[7]_i_4__1_n_0 ),
         .I4(\s_reg[drd_rdata] [7]),
         .I5(\actual_wdata[15]_i_3__1_n_0 ),
         .O(\actual_wdata[7]_i_1__1_n_0 ));
@@ -70992,14 +70947,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(\actual_wdata[7]_i_3__0_n_0 ));
   LUT6 #(
     .INIT(64'h2228282888888888)) 
-    \actual_wdata[7]_i_4__0 
+    \actual_wdata[7]_i_4__1 
        (.I0(\s[accum_cksum]_i_7_n_0 ),
         .I1(\s_reg[payload_len][10]_0 [5]),
         .I2(\s_reg[payload_len][10]_0 [3]),
         .I3(\s_reg[payload_len][10]_0 [1]),
         .I4(\s_reg[payload_len][10]_0 [2]),
         .I5(\s_reg[payload_len][10]_0 [4]),
-        .O(\actual_wdata[7]_i_4__0_n_0 ));
+        .O(\actual_wdata[7]_i_4__1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \actual_wdata[7]_i_5__0 
@@ -72178,11 +72133,11 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .I2(Q[3]),
         .I3(\a[wtcpcksum] ),
         .I4(\a[wipcksum] ),
-        .I5(\off[4]_i_4__0_n_0 ),
+        .I5(\off[4]_i_4_n_0 ),
         .O(\off[4]_i_1__0_n_0 ));
   LUT5 #(
     .INIT(32'h11100010)) 
-    \off[4]_i_2__0 
+    \off[4]_i_2 
        (.I0(\a[early_done] ),
         .I1(\FSM_onehot_s_reg[state_n_0_][40] ),
         .I2(\off[10]_i_6__0_n_0 ),
@@ -72192,7 +72147,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
   (* SOFT_HLUTNM = "soft_lutpair446" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
-    \off[4]_i_3__0 
+    \off[4]_i_3 
        (.I0(\off_reg[10]_0 [0]),
         .I1(\off_reg[10]_0 [1]),
         .I2(\off_reg[10]_0 [2]),
@@ -72200,14 +72155,14 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(ADDRBWRADDR[3]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \off[4]_i_4__0 
+    \off[4]_i_4 
        (.I0(\FSM_onehot_s[state][42]_i_5_n_0 ),
         .I1(\a[ctcpcksum] ),
         .I2(\FSM_onehot_s_reg[state_n_0_][10] ),
         .I3(\FSM_onehot_s_reg[state_n_0_][11] ),
         .I4(\FSM_onehot_s_reg[state_n_0_][32] ),
         .I5(\off[10]_i_5__0_n_0 ),
-        .O(\off[4]_i_4__0_n_0 ));
+        .O(\off[4]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'h000000000A2A222A)) 
     \off[5]_i_1__0 
@@ -72230,24 +72185,24 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
         .O(\off[6]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h000000000A2A222A)) 
-    \off[7]_i_1__0 
+    \off[7]_i_1 
        (.I0(ADDRBWRADDR[6]),
         .I1(\off[10]_i_6__0_n_0 ),
         .I2(\s[accum_cksum]_i_3__0_n_0 ),
         .I3(Q[3]),
         .I4(\FSM_onehot_s[state][37]_i_2_n_0 ),
         .I5(\a[wipcksum] ),
-        .O(\off[7]_i_1__0_n_0 ));
+        .O(\off[7]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000000000A2A222A)) 
-    \off[8]_i_1__0 
+    \off[8]_i_1 
        (.I0(ADDRBWRADDR[7]),
         .I1(\off[10]_i_6__0_n_0 ),
         .I2(\s[accum_cksum]_i_3__0_n_0 ),
         .I3(Q[3]),
         .I4(\FSM_onehot_s[state][37]_i_2_n_0 ),
         .I5(\a[wipcksum] ),
-        .O(\off[8]_i_1__0_n_0 ));
+        .O(\off[8]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000000000A2A222A)) 
     \off[9]_i_1__0 
@@ -72319,7 +72274,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
     \off_reg[7] 
        (.C(clk_in),
         .CE(\off[10]_i_2__0_n_0 ),
-        .D(\off[7]_i_1__0_n_0 ),
+        .D(\off[7]_i_1_n_0 ),
         .Q(\off_reg[10]_0 [6]),
         .S(\off[10]_i_1__0_n_0 ));
   FDSE #(
@@ -72327,7 +72282,7 @@ module top_block_fakernet_top_0_0_fnet_tcp_prepare
     \off_reg[8] 
        (.C(clk_in),
         .CE(\off[10]_i_2__0_n_0 ),
-        .D(\off[8]_i_1__0_n_0 ),
+        .D(\off[8]_i_1_n_0 ),
         .Q(\off_reg[10]_0 [7]),
         .S(\off[10]_i_1__0_n_0 ));
   FDSE #(

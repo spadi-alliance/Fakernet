@@ -1,0 +1,144 @@
+$date
+        2024-Aug-06 19:16:26
+$end
+$version
+        Vivado v2022.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 32 " top_block_i/led_module/LED_REG_READ_SEPARAT_1/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr [31:0] $end
+$var reg 4 B top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c [3:0] $end
+$var reg 4 F top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram [3:0] $end
+$var reg 1 J \u_ila_0_m00_axi_araddr[0]_2 $end
+$var reg 1 K \u_ila_0_m00_axi_araddr[1]_2 $end
+$var reg 1 L \u_ila_0_m00_axi_araddr[2]_2 $end
+$var reg 1 M \u_ila_0_m00_axi_araddr[3]_2 $end
+$var reg 1 N \u_ila_0_m00_axi_araddr[4]_2 $end
+$var reg 1 O \u_ila_0_m00_axi_araddr[5]_2 $end
+$var reg 1 P \u_ila_0_m00_axi_araddr[6]_2 $end
+$var reg 1 Q \u_ila_0_m00_axi_araddr[7]_2 $end
+$var reg 1 R \u_ila_0_m00_axi_araddr[8]_2 $end
+$var reg 1 S \u_ila_0_m00_axi_araddr[9]_2 $end
+$var reg 1 T \u_ila_0_m00_axi_araddr[10]_2 $end
+$var reg 1 U \u_ila_0_m00_axi_araddr[11]_2 $end
+$var reg 1 V \u_ila_0_m00_axi_araddr[12]_2 $end
+$var reg 1 W \u_ila_0_m00_axi_araddr[13]_2 $end
+$var reg 1 X \u_ila_0_m00_axi_araddr[14]_2 $end
+$var reg 1 Y \u_ila_0_m00_axi_araddr[15]_2 $end
+$var reg 1 Z \u_ila_0_m00_axi_araddr[16]_2 $end
+$var reg 1 [ \u_ila_0_m00_axi_araddr[17]_2 $end
+$var reg 1 \ \u_ila_0_m00_axi_araddr[18]_2 $end
+$var reg 1 ] \u_ila_0_m00_axi_araddr[19]_2 $end
+$var reg 1 ^ \u_ila_0_m00_axi_araddr[20]_2 $end
+$var reg 1 _ \u_ila_0_m00_axi_araddr[21]_2 $end
+$var reg 1 ` \u_ila_0_m00_axi_araddr[22]_2 $end
+$var reg 1 a \u_ila_0_m00_axi_araddr[23]_2 $end
+$var reg 1 b \u_ila_0_m00_axi_araddr[24]_2 $end
+$var reg 1 c \u_ila_0_m00_axi_araddr[25]_2 $end
+$var reg 1 d \u_ila_0_m00_axi_araddr[26]_2 $end
+$var reg 1 e \u_ila_0_m00_axi_araddr[27]_2 $end
+$var reg 1 f \u_ila_0_m00_axi_araddr[28]_2 $end
+$var reg 1 g \u_ila_0_m00_axi_araddr[29]_2 $end
+$var reg 1 h \u_ila_0_m00_axi_araddr[30]_2 $end
+$var reg 1 i \u_ila_0_m00_axi_araddr[31]_2 $end
+$var reg 9 j top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_awaddr [8:0] $end
+$var reg 23 s u_ila_0_m01_axi_awaddr [31:9] $end
+$var reg 1 ," top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_rdata $end
+$var reg 31 -" u_ila_0_m00_axi_rdata [31:1] $end
+$var reg 32 L" top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr [31:0] $end
+$var reg 24 l" top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/i2c_waddr_i [23:0] $end
+$var reg 8 &# u_ila_0_i2c_waddr_i [31:24] $end
+$var reg 32 .# top_block_i/SAMPA_PON_v1_0_0/inst/m00_axi_araddr [31:0] $end
+$var reg 32 N# top_block_i/SAMPA_PON_v1_0_0/inst/m00_axi_rdata [31:0] $end
+$var reg 1 n# top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/bram_read_done $end
+$var reg 1 o# top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_RD $end
+$var reg 1 p# top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_WR $end
+$var reg 1 q# top_block_i/SAMPA_PON_v1_0_0/inst/sampa_power_on $end
+$var reg 1 r# u_ila_0_start_i2c_read $end
+$var reg 1 s# u_ila_0_start_i2c_write $end
+$var reg 1 t# _TRIGGER $end
+$var reg 1 u# _WINDOW $end
+$var reg 1 v# _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111000000001100 "
+b10 B
+b10 F
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+1R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+1h
+1i
+b100000000 j
+b1000000000000000000000 s
+0,"
+b0 -"
+b1111000000001000 L"
+b100000000 l"
+b0 &#
+b11000000000000001000000000000000 .#
+b0 N#
+0n#
+0o#
+0p#
+1q#
+0r#
+0s#
+0t#
+1u#
+0v#
+$end
+#512
+1s#
+1t#
+#513
+b1001 B
+0s#
+#514
+b1000 F
+#522
+b111110101111101 -"
+b1111101011111010 N#
+#523
+1n#
+#524
+1p#
+#525
+b10 F
+0n#
+#557
+b1 B
+0p#
+#558
+b10 B

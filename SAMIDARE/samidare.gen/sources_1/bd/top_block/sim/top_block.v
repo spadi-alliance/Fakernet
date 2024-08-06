@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Aug  6 11:02:46 2024
+//Date        : Tue Aug  6 18:05:13 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -83,7 +83,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
     m00_axi_wstrb,
     m00_axi_wvalid,
     s_axi_aclk,
-    s_axi_aresetn,
     start_i2c_read,
     start_i2c_write,
     start_i2c_write_all);
@@ -115,7 +114,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   output [3:0]m00_axi_wstrb;
   output [0:0]m00_axi_wvalid;
   input s_axi_aclk;
-  input s_axi_aresetn;
   input start_i2c_read;
   input start_i2c_write;
   input start_i2c_write_all;
@@ -171,7 +169,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   wire m00_axi_aclk_1;
   wire m00_axi_aresetn_1;
   wire s_axi_aclk_1;
-  wire s_axi_aresetn_1;
   wire start_i2c_read_1;
   wire start_i2c_write_1;
   wire start_i2c_write_all_1;
@@ -202,7 +199,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   assign m00_axi_wstrb[3:0] = Conn1_WSTRB;
   assign m00_axi_wvalid[0] = Conn1_WVALID;
   assign s_axi_aclk_1 = s_axi_aclk;
-  assign s_axi_aresetn_1 = s_axi_aresetn;
   assign start_i2c_read_1 = start_i2c_read;
   assign start_i2c_write_1 = start_i2c_write;
   assign start_i2c_write_all_1 = start_i2c_write_all;
@@ -235,7 +231,7 @@ module SAMPA_I2C_wrapper_imp_VOP84W
         .m00_axi_wvalid(Conn1_WVALID),
         .m01_axi_aclk(s_axi_aclk_1),
         .m01_axi_araddr(I2C_Controller_v1_0_0_m01_axi_ARADDR),
-        .m01_axi_aresetn(s_axi_aresetn_1),
+        .m01_axi_aresetn(m00_axi_aresetn_1),
         .m01_axi_arready(I2C_Controller_v1_0_0_m01_axi_ARREADY),
         .m01_axi_arvalid(I2C_Controller_v1_0_0_m01_axi_ARVALID),
         .m01_axi_awaddr(I2C_Controller_v1_0_0_m01_axi_AWADDR),
@@ -268,7 +264,7 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   top_block_axi_iic_0_0 axi_iic_0
        (.s_axi_aclk(s_axi_aclk_1),
         .s_axi_araddr(I2C_Controller_v1_0_0_m01_axi_ARADDR[8:0]),
-        .s_axi_aresetn(s_axi_aresetn_1),
+        .s_axi_aresetn(m00_axi_aresetn_1),
         .s_axi_arready(I2C_Controller_v1_0_0_m01_axi_ARREADY),
         .s_axi_arvalid(I2C_Controller_v1_0_0_m01_axi_ARVALID),
         .s_axi_awaddr(I2C_Controller_v1_0_0_m01_axi_AWADDR[8:0]),
@@ -2224,7 +2220,6 @@ module top_block
   wire [0:0]led_module_m00_axi_WVALID;
   wire native_to_axi_lite_v_0_regacc_done;
   wire [0:0]rst_clk_wiz_0_125M_peripheral_aresetn;
-  wire [0:0]rst_clk_wiz_0_40M_peripheral_aresetn;
   wire rxn_0_1;
   wire rxp_0_1;
   wire [3:0]util_ds_buf_0_OBUF_DS_N;
@@ -2296,7 +2291,6 @@ module top_block
         .m00_axi_wstrb(S00_AXI_1_WSTRB),
         .m00_axi_wvalid(S00_AXI_1_WVALID),
         .s_axi_aclk(clk_wiz_0_clk_out1),
-        .s_axi_aresetn(rst_clk_wiz_0_40M_peripheral_aresetn),
         .start_i2c_read(fakernet_start_i2c_read_o),
         .start_i2c_write(fakernet_start_i2c_write_o),
         .start_i2c_write_all(fakernet_start_i2c_write_all_o));
@@ -2597,7 +2591,6 @@ module top_block
         .dcm_locked(1'b1),
         .ext_reset_in(fakernet_user_data_reset),
         .mb_debug_sys_rst(1'b0),
-        .peripheral_aresetn(rst_clk_wiz_0_40M_peripheral_aresetn),
         .slowest_sync_clk(clk_wiz_0_clk_out1));
   top_block_util_ds_buf_0_1 util_ds_buf_0
        (.OBUF_DS_N(util_ds_buf_0_OBUF_DS_N),
