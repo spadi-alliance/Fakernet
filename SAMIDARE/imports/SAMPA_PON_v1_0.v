@@ -10,7 +10,7 @@
 
 
 		// Parameters of Axi Master Bus Interface M00_AXI
-        parameter LED_ADDRESS = 32'h00008000,
+        parameter POWER_ON_ADDRESS = 32'h00008000,
         
 		// Do not modify the parameters beyond this line
 
@@ -24,7 +24,7 @@
 	)
 	(
 		// Users to add ports here
-        output wire sampa_power_on,
+        (*mark_debug = "true"*) output wire sampa_power_on,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -46,17 +46,18 @@
 		input wire [1 : 0] m00_axi_bresp,
 		input wire  m00_axi_bvalid,
 		output wire  m00_axi_bready,
-		output wire [C_M00_AXI_ADDR_WIDTH-1 : 0] m00_axi_araddr,
+		(*mark_debug = "true"*) output wire [C_M00_AXI_ADDR_WIDTH-1 : 0] m00_axi_araddr,
 		output wire [2 : 0] m00_axi_arprot,
 		output wire  m00_axi_arvalid,
 		input wire  m00_axi_arready,
-		input wire [C_M00_AXI_DATA_WIDTH-1 : 0] m00_axi_rdata,
+		(*mark_debug = "true"*) input wire [C_M00_AXI_DATA_WIDTH-1 : 0] m00_axi_rdata,
 		input wire [1 : 0] m00_axi_rresp,
 		input wire  m00_axi_rvalid,
 		output wire  m00_axi_rready
 	);
 // Instantiation of Axi Bus Interface M00_AXI
 	SAMPA_PON_v1_0_M00_AXI # ( 
+	    .POWER_ON_ADDRESS(POWER_ON_ADDRESS),
 		.C_M_START_DATA_VALUE(C_M00_AXI_START_DATA_VALUE),
 		.C_M_TARGET_SLAVE_BASE_ADDR(C_M00_AXI_TARGET_SLAVE_BASE_ADDR),
 		.C_M_AXI_ADDR_WIDTH(C_M00_AXI_ADDR_WIDTH),

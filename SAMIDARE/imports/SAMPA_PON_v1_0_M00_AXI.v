@@ -6,7 +6,7 @@
 	
 
 		// Users to add parameters here
-        parameter  POWER_ON_ADDRESS = 32'h0000F000,
+        parameter  POWER_ON_ADDRESS = 32'h00008000,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -729,31 +729,10 @@
 	
 //	reg [2:0] read_cnt;
 	always @(posedge M_AXI_ACLK)                                                      
-	  begin                                                                             
-//	    if (M_AXI_ARESETN == 0 || init_txn_pulse == 1'b1)   begin                                                      
-//	      read_cnt <= 3'b000;                                                           
-	                                                                                    
-	    //The reads_done should be associated with a read ready response                
-//	    end else if(M_AXI_RVALID)begin
-//	    end else if(M_AXI_ARREADY && axi_arvalid)begin
-//	    end else if(start_single_read)begin
-//	       read_cnt <= read_cnt + 1;
-//	    end
+	  begin       
 	    if (M_AXI_RVALID) begin                         
 	      pon_r <= M_AXI_RDATA;                                                     
-	    end
-//	    if (M_AXI_RVALID && read_cnt == 3'b001) begin                         
-//	      led_r0 <= M_AXI_RDATA;                                                     
-//	    end
-//	    if (M_AXI_RVALID && read_cnt == 3'b010) begin                        
-//	      led_r1 <= M_AXI_RDATA;  
-//	    end
-//	    if (M_AXI_RVALID && read_cnt == 3'b011) begin                          
-//	      led_r2 <= M_AXI_RDATA;                
-//	    end
-//	    if (M_AXI_RVALID && read_cnt == 3'b100) begin                               
-//	      led_r3 <= M_AXI_RDATA;                            
-//	    end     
+	    end 
 	  end    
 
 	  assign PON = pon_r[0];

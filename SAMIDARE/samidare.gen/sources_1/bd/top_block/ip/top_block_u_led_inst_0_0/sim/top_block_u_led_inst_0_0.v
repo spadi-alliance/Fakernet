@@ -59,6 +59,7 @@ module top_block_u_led_inst_0_0 (
   reset,
   enable,
   fnet_txn,
+  power_on,
   LED_REG0,
   LED_REG1,
   LED_REG2,
@@ -75,6 +76,7 @@ input wire clk125MHz;
 input wire reset;
 input wire enable;
 input wire fnet_txn;
+input wire power_on;
 input wire [31 : 0] LED_REG0;
 input wire [31 : 0] LED_REG1;
 input wire [31 : 0] LED_REG2;
@@ -89,6 +91,7 @@ output wire [3 : 0] LED;
     .reset(reset),
     .enable(enable),
     .fnet_txn(fnet_txn),
+    .power_on(power_on),
     .LED_REG0(LED_REG0),
     .LED_REG1(LED_REG1),
     .LED_REG2(LED_REG2),

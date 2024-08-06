@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Jul  5 13:26:03 2024
+-- Date        : Tue Aug  6 09:55:57 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_1_0/top_block_LED_REG_READ_SEPARAT_1_0_sim_netlist.vhdl
@@ -17,6 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI is
   port (
     m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_rready_reg_0 : out STD_LOGIC;
     reads_done_reg_0 : out STD_LOGIC;
@@ -35,6 +36,9 @@ end top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI;
 
 architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI is
   signal FSM_sequential_mst_exec_state_i_1_n_0 : STD_LOGIC;
+  signal axi_araddr : STD_LOGIC_VECTOR ( 31 downto 0 );
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of axi_araddr : signal is std.standard.true;
   signal axi_arvalid_i_1_n_0 : STD_LOGIC;
   signal axi_bready_i_1_n_0 : STD_LOGIC;
   signal axi_rready_i_1_n_0 : STD_LOGIC;
@@ -43,6 +47,11 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARA
   signal init_txn_ff2 : STD_LOGIC;
   signal last_read : STD_LOGIC;
   signal last_read_i_1_n_0 : STD_LOGIC;
+  signal \^m00_axi_araddr\ : STD_LOGIC_VECTOR ( 31 downto 29 );
+  signal \m00_axi_araddr[29]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \m00_axi_araddr[29]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \m00_axi_araddr[29]_INST_0_n_6\ : STD_LOGIC;
+  signal \m00_axi_araddr[29]_INST_0_n_7\ : STD_LOGIC;
   signal \^m00_axi_arvalid\ : STD_LOGIC;
   signal \^m00_axi_bready\ : STD_LOGIC;
   signal mst_exec_state : STD_LOGIC;
@@ -57,15 +66,87 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARA
   signal start_single_read0 : STD_LOGIC;
   signal start_single_read_i_1_n_0 : STD_LOGIC;
   signal start_single_read_reg_n_0 : STD_LOGIC;
+  signal \NLW_m00_axi_araddr[29]_INST_0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
+  signal \NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of FSM_sequential_mst_exec_state_reg : label is "INIT_WRITE:01,INIT_READ:1,IDLE:0";
+  attribute KEEP : string;
+  attribute KEEP of \axi_araddr_reg[0]\ : label is "yes";
+  attribute mark_debug_string : string;
+  attribute mark_debug_string of \axi_araddr_reg[0]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[10]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[10]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[11]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[11]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[12]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[12]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[13]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[13]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[14]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[14]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[15]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[15]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[16]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[16]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[17]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[17]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[18]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[18]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[19]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[19]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[1]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[1]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[20]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[20]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[21]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[21]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[22]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[22]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[23]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[23]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[24]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[24]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[25]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[25]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[26]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[26]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[27]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[27]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[28]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[28]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[29]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[29]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[2]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[2]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[30]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[30]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[31]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[31]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[3]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[3]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[4]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[4]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[5]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[5]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[6]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[6]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[7]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[7]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[8]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[8]\ : label is "true";
+  attribute KEEP of \axi_araddr_reg[9]\ : label is "yes";
+  attribute mark_debug_string of \axi_araddr_reg[9]\ : label is "true";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_rready_i_1 : label is "soft_lutpair0";
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \m00_axi_araddr[29]_INST_0\ : label is 35;
   attribute SOFT_HLUTNM of \read_index[1]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \read_index[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of reads_done_i_2 : label is "soft_lutpair0";
 begin
   axi_rready_reg_0 <= \^axi_rready_reg_0\;
+  m00_axi_araddr(31 downto 29) <= \^m00_axi_araddr\(31 downto 29);
+  m00_axi_araddr(28 downto 0) <= axi_araddr(28 downto 0);
   m00_axi_arvalid <= \^m00_axi_arvalid\;
   m00_axi_bready <= \^m00_axi_bready\;
   reads_done_reg_0 <= \^reads_done_reg_0\;
@@ -95,6 +176,262 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       D => \mst_exec_state__0\,
       Q => mst_exec_state,
       R => FSM_sequential_mst_exec_state_i_1_n_0
+    );
+\axi_araddr_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(0),
+      Q => axi_araddr(0),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(10),
+      Q => axi_araddr(10),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(11),
+      Q => axi_araddr(11),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[12]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(12),
+      Q => axi_araddr(12),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[13]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(13),
+      Q => axi_araddr(13),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[14]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(14),
+      Q => axi_araddr(14),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[15]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(15),
+      Q => axi_araddr(15),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(16),
+      Q => axi_araddr(16),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[17]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(17),
+      Q => axi_araddr(17),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[18]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(18),
+      Q => axi_araddr(18),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[19]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(19),
+      Q => axi_araddr(19),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(1),
+      Q => axi_araddr(1),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[20]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(20),
+      Q => axi_araddr(20),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[21]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(21),
+      Q => axi_araddr(21),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[22]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(22),
+      Q => axi_araddr(22),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(23),
+      Q => axi_araddr(23),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[24]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(24),
+      Q => axi_araddr(24),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[25]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(25),
+      Q => axi_araddr(25),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[26]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(26),
+      Q => axi_araddr(26),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[27]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(27),
+      Q => axi_araddr(27),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[28]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(28),
+      Q => axi_araddr(28),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[29]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(29),
+      Q => axi_araddr(29),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[2]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(2),
+      Q => axi_araddr(2),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(30),
+      Q => axi_araddr(30),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[31]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(31),
+      Q => axi_araddr(31),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[3]\: unisim.vcomponents.FDSE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(3),
+      Q => axi_araddr(3),
+      S => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(4),
+      Q => axi_araddr(4),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(5),
+      Q => axi_araddr(5),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(6),
+      Q => axi_araddr(6),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(7),
+      Q => axi_araddr(7),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(8),
+      Q => axi_araddr(8),
+      R => reads_done_i_1_n_0
+    );
+\axi_araddr_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => m00_axi_aclk,
+      CE => '1',
+      D => axi_araddr(9),
+      Q => axi_araddr(9),
+      R => reads_done_i_1_n_0
     );
 axi_arvalid_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -440,6 +777,39 @@ last_read_reg: unisim.vcomponents.FDRE
       Q => LED_REG(9),
       R => '0'
     );
+\m00_axi_araddr[29]_INST_0\: unisim.vcomponents.CARRY8
+     port map (
+      CI => '0',
+      CI_TOP => '0',
+      CO(7 downto 2) => \NLW_m00_axi_araddr[29]_INST_0_CO_UNCONNECTED\(7 downto 2),
+      CO(1) => \m00_axi_araddr[29]_INST_0_n_6\,
+      CO(0) => \m00_axi_araddr[29]_INST_0_n_7\,
+      DI(7 downto 2) => B"000000",
+      DI(1) => axi_araddr(30),
+      DI(0) => '0',
+      O(7 downto 3) => \NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED\(7 downto 3),
+      O(2 downto 0) => \^m00_axi_araddr\(31 downto 29),
+      S(7 downto 3) => B"00000",
+      S(2) => \m00_axi_araddr[29]_INST_0_i_1_n_0\,
+      S(1) => \m00_axi_araddr[29]_INST_0_i_2_n_0\,
+      S(0) => axi_araddr(29)
+    );
+\m00_axi_araddr[29]_INST_0_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => axi_araddr(31),
+      O => \m00_axi_araddr[29]_INST_0_i_1_n_0\
+    );
+\m00_axi_araddr[29]_INST_0_i_2\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => axi_araddr(30),
+      O => \m00_axi_araddr[29]_INST_0_i_2_n_0\
+    );
 \read_index[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -580,6 +950,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARATE_v1_0 is
   port (
     m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_rready_reg : out STD_LOGIC;
     reads_done_reg : out STD_LOGIC;
@@ -603,6 +974,7 @@ LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst: entity work.top_block_LED_REG_READ_SEPA
       LED_REG(31 downto 0) => LED_REG(31 downto 0),
       axi_rready_reg_0 => axi_rready_reg,
       m00_axi_aclk => m00_axi_aclk,
+      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_arvalid => m00_axi_arvalid,
@@ -688,38 +1060,6 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_1_0 is
   attribute X_INTERFACE_INFO of m00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 m00_axi WDATA";
   attribute X_INTERFACE_INFO of m00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 m00_axi WSTRB";
 begin
-  m00_axi_araddr(31) <= \<const1>\;
-  m00_axi_araddr(30) <= \<const1>\;
-  m00_axi_araddr(29) <= \<const0>\;
-  m00_axi_araddr(28) <= \<const0>\;
-  m00_axi_araddr(27) <= \<const0>\;
-  m00_axi_araddr(26) <= \<const0>\;
-  m00_axi_araddr(25) <= \<const0>\;
-  m00_axi_araddr(24) <= \<const0>\;
-  m00_axi_araddr(23) <= \<const0>\;
-  m00_axi_araddr(22) <= \<const0>\;
-  m00_axi_araddr(21) <= \<const0>\;
-  m00_axi_araddr(20) <= \<const0>\;
-  m00_axi_araddr(19) <= \<const0>\;
-  m00_axi_araddr(18) <= \<const0>\;
-  m00_axi_araddr(17) <= \<const0>\;
-  m00_axi_araddr(16) <= \<const0>\;
-  m00_axi_araddr(15) <= \<const1>\;
-  m00_axi_araddr(14) <= \<const1>\;
-  m00_axi_araddr(13) <= \<const1>\;
-  m00_axi_araddr(12) <= \<const1>\;
-  m00_axi_araddr(11) <= \<const0>\;
-  m00_axi_araddr(10) <= \<const0>\;
-  m00_axi_araddr(9) <= \<const0>\;
-  m00_axi_araddr(8) <= \<const0>\;
-  m00_axi_araddr(7) <= \<const0>\;
-  m00_axi_araddr(6) <= \<const0>\;
-  m00_axi_araddr(5) <= \<const0>\;
-  m00_axi_araddr(4) <= \<const0>\;
-  m00_axi_araddr(3) <= \<const1>\;
-  m00_axi_araddr(2) <= \<const1>\;
-  m00_axi_araddr(1) <= \<const0>\;
-  m00_axi_araddr(0) <= \<const0>\;
   m00_axi_arprot(2) <= \<const0>\;
   m00_axi_arprot(1) <= \<const0>\;
   m00_axi_arprot(0) <= \<const1>\;
@@ -810,6 +1150,7 @@ inst: entity work.top_block_LED_REG_READ_SEPARAT_1_0_LED_REG_READ_SEPARATE_v1_0
       LED_REG(31 downto 0) => LED_REG(31 downto 0),
       axi_rready_reg => m00_axi_rready,
       m00_axi_aclk => m00_axi_aclk,
+      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_arvalid => m00_axi_arvalid,

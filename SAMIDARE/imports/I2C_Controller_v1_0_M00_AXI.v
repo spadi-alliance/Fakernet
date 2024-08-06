@@ -26,7 +26,7 @@
 	)
 	(
 		// Users to add ports here
-        input wire [24:0] bram_addr,
+        input wire [31:0] bram_addr,
 		input wire bram_txn,
 		// User ports ends
 		// Do not modify the ports beyond this line

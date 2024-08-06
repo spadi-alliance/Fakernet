@@ -12,14 +12,14 @@
 
 		// Parameters of Axi Master Bus Interface M00_AXI
 		parameter  C_M00_AXI_START_DATA_VALUE	= 32'hAA000000,
-		parameter  C_M00_AXI_TARGET_SLAVE_BASE_ADDR	= 32'h40000000,
+		parameter  C_M00_AXI_TARGET_SLAVE_BASE_ADDR	= 32'hC0000000,
 		parameter integer C_M00_AXI_ADDR_WIDTH	= 32,
 		parameter integer C_M00_AXI_DATA_WIDTH	= 32,
 		parameter integer C_M00_AXI_TRANSACTIONS_NUM	= 4,
 
 		// Parameters of Axi Master Bus Interface M01_AXI
 		parameter  C_M01_AXI_START_DATA_VALUE	= 32'hAA000000,
-		parameter  C_M01_AXI_TARGET_SLAVE_BASE_ADDR	= 32'h40000000,
+		parameter  C_M01_AXI_TARGET_SLAVE_BASE_ADDR	= 32'hC0000000,
 		parameter integer C_M01_AXI_ADDR_WIDTH	= 32,
 		parameter integer C_M01_AXI_DATA_WIDTH	= 32,
 		parameter integer C_M01_AXI_TRANSACTIONS_NUM	= 4
@@ -127,7 +127,7 @@
 		.M_AXI_RVALID(m00_axi_rvalid),
 		.M_AXI_RREADY(m00_axi_rready)
 	);
-
+wire [31:0] rdata;
 // Instantiation of Axi Bus Interface M01_AXI
 	I2C_Controller_v1_0_M01_AXI # ( 
 		.C_M_START_DATA_VALUE(C_M01_AXI_START_DATA_VALUE),
@@ -141,6 +141,7 @@
 		.WADDR(i2c_waddr),
 		.RADDR(i2c_raddr),
 		.WDATA(i2c_wdata),
+		.RDATA(rdata),
 		
 		.INIT_AXI_TXN(m01_axi_init_axi_txn),//not used
 		.ERROR(m01_axi_error),
@@ -256,7 +257,8 @@
 	               end                                                               
 	          STATE_READ:
 	               begin
-	                   if(m00_axi_txn_done==1'b1)
+//	                   if(m00_axi_txn_done==1'b1)
+	                   if(m00_axi_rvalid==1'b1)
 	                       begin
 	                           bram_read_done <= 1'b1;
 	                       end
@@ -281,7 +283,7 @@
 	           STATE_IDLE:
 	               begin
 	                   ack_data <= 1'b0;
-	                   if(start_i2c_write == 1'b1)// when start_reg_read == 1, start to read
+	                   if(start_i2c_write == 1'b1)// when start_reg_write == 1, start to write
 	                       begin
 	                           state_i2c <= STATE_WRITE;
 	                           start_bram_read <= 1'b1;
@@ -303,7 +305,6 @@
 	               end                                                                
 	          STATE_WRITE:
 	               begin
-	                   busy <= busy;
 	                   if(state_bram == STATE_READ)
 	                       begin
 	                           start_bram_read <= 1'b0;
@@ -335,7 +336,8 @@
                         end
                        if(m01_axi_rvalid)
                             begin
-                                i2c_rdata <= m01_axi_rdata;
+//                                i2c_rdata <= m01_axi_rdata;
+                                i2c_rdata <= rdata;
                             end
 	                   if(m01_axi_txn_done == 1'b1)//end of read
 	                       begin
@@ -352,7 +354,7 @@
 	        endcase//state_i2c
 	      end                                                              
 	  end                                                                          
-	         
+	         //assign i2c_rdata_o = rdata;
     
 	// User logic ends
 

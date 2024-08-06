@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Thu Jul  4 14:08:05 2024
+-- Date        : Mon Aug  5 18:42:56 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0_sim_netlist.vhdl
@@ -16,13 +16,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_block_u_led_inst_0_0_u_led_inst is
   port (
-    LED : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    LED : out STD_LOGIC_VECTOR ( 0 to 0 );
     INIT_AXI_TXN : out STD_LOGIC;
     INIT_AXI_TXN_SUB : out STD_LOGIC;
     \r3_reg[0]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     enable : in STD_LOGIC;
     reset : in STD_LOGIC;
-    fnet_txn : in STD_LOGIC;
     clk125MHz : in STD_LOGIC;
     LED_REG2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG3 : in STD_LOGIC_VECTOR ( 31 downto 0 )
@@ -33,7 +32,7 @@ end top_block_u_led_inst_0_0_u_led_inst;
 
 architecture STRUCTURE of top_block_u_led_inst_0_0_u_led_inst is
   signal \^init_axi_txn\ : STD_LOGIC;
-  signal \^led\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^led\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_txn : STD_LOGIC;
   signal axi_txn_i_1_n_0 : STD_LOGIC;
   signal axi_txn_i_3_n_0 : STD_LOGIC;
@@ -46,7 +45,7 @@ architecture STRUCTURE of top_block_u_led_inst_0_0_u_led_inst is
   signal axi_txn_sub0 : STD_LOGIC;
   signal \counter[0]_i_1_n_0\ : STD_LOGIC;
   signal \counter[0]_i_3_n_0\ : STD_LOGIC;
-  signal counter_reg : STD_LOGIC_VECTOR ( 27 downto 0 );
+  signal counter_reg : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \counter_reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \counter_reg[0]_i_2_n_1\ : STD_LOGIC;
   signal \counter_reg[0]_i_2_n_10\ : STD_LOGIC;
@@ -102,13 +101,9 @@ architecture STRUCTURE of top_block_u_led_inst_0_0_u_led_inst is
   signal \counter_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal \counter_reg[8]_i_1_n_8\ : STD_LOGIC;
   signal \counter_reg[8]_i_1_n_9\ : STD_LOGIC;
+  signal \counter_reg__0\ : STD_LOGIC_VECTOR ( 27 downto 24 );
   signal data1 : STD_LOGIC_VECTOR ( 30 downto 0 );
-  signal fnet_txn_acc : STD_LOGIC;
-  signal \fnet_txn_acc[0]_i_2_n_0\ : STD_LOGIC;
-  signal \fnet_txn_acc[0]_i_3_n_0\ : STD_LOGIC;
-  signal fnet_txn_acc_reg : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal p_0_in : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \r2[0]_i_1_n_0\ : STD_LOGIC;
   signal \r2[10]_i_1_n_0\ : STD_LOGIC;
   signal \r2[11]_i_1_n_0\ : STD_LOGIC;
@@ -152,19 +147,15 @@ architecture STRUCTURE of top_block_u_led_inst_0_0_u_led_inst is
   signal \NLW_counter_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_counter_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 4 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \fnet_txn_acc[0]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \fnet_txn_acc[1]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \fnet_txn_acc[2]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \fnet_txn_acc[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \r2[31]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \r3[31]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \txn_acc[0]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \txn_acc[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \r2[31]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \r3[31]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \txn_acc[0]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \txn_acc[1]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \txn_acc[2]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \txn_acc[3]_i_1\ : label is "soft_lutpair0";
 begin
   INIT_AXI_TXN <= \^init_axi_txn\;
-  LED(1 downto 0) <= \^led\(1 downto 0);
+  LED(0) <= \^led\(0);
 axi_txn_i_1: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -178,10 +169,10 @@ axi_txn_i_2: unisim.vcomponents.LUT6
       INIT => X"0000000000000001"
     )
         port map (
-      I0 => counter_reg(27),
-      I1 => counter_reg(24),
-      I2 => counter_reg(25),
-      I3 => counter_reg(26),
+      I0 => \counter_reg__0\(27),
+      I1 => \counter_reg__0\(24),
+      I2 => \counter_reg__0\(25),
+      I3 => \counter_reg__0\(26),
       I4 => counter_reg(23),
       I5 => axi_txn_i_3_n_0,
       O => axi_txn
@@ -277,12 +268,12 @@ axi_txn_sub_i_1: unisim.vcomponents.LUT6
       INIT => X"0000000000000002"
     )
         port map (
-      I0 => counter_reg(27),
+      I0 => \counter_reg__0\(27),
       I1 => axi_txn_i_3_n_0,
       I2 => counter_reg(23),
-      I3 => counter_reg(26),
-      I4 => counter_reg(25),
-      I5 => counter_reg(24),
+      I3 => \counter_reg__0\(26),
+      I4 => \counter_reg__0\(25),
+      I5 => \counter_reg__0\(24),
       O => axi_txn_sub0
     );
 axi_txn_sub_reg: unisim.vcomponents.FDRE
@@ -490,7 +481,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       C => clk125MHz,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[24]_i_1_n_15\,
-      Q => counter_reg(24),
+      Q => \counter_reg__0\(24),
       R => '0'
     );
 \counter_reg[24]_i_1\: unisim.vcomponents.CARRY8
@@ -508,14 +499,14 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       O(1) => \counter_reg[24]_i_1_n_14\,
       O(0) => \counter_reg[24]_i_1_n_15\,
       S(7 downto 4) => B"0000",
-      S(3 downto 0) => counter_reg(27 downto 24)
+      S(3 downto 0) => \counter_reg__0\(27 downto 24)
     );
 \counter_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => clk125MHz,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[24]_i_1_n_14\,
-      Q => counter_reg(25),
+      Q => \counter_reg__0\(25),
       R => '0'
     );
 \counter_reg[26]\: unisim.vcomponents.FDRE
@@ -523,7 +514,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       C => clk125MHz,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[24]_i_1_n_13\,
-      Q => counter_reg(26),
+      Q => \counter_reg__0\(26),
       R => '0'
     );
 \counter_reg[27]\: unisim.vcomponents.FDRE
@@ -531,7 +522,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       C => clk125MHz,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[24]_i_1_n_12\,
-      Q => counter_reg(27),
+      Q => \counter_reg__0\(27),
       R => '0'
     );
 \counter_reg[2]\: unisim.vcomponents.FDRE
@@ -621,103 +612,6 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       Q => counter_reg(9),
       R => '0'
     );
-\fnet_txn_acc[0]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FFFF00001110"
-    )
-        port map (
-      I0 => axi_txn_i_3_n_0,
-      I1 => counter_reg(23),
-      I2 => fnet_txn_acc_reg(3),
-      I3 => \fnet_txn_acc[0]_i_3_n_0\,
-      I4 => reset,
-      I5 => fnet_txn,
-      O => fnet_txn_acc
-    );
-\fnet_txn_acc[0]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^led\(1),
-      I1 => fnet_txn,
-      O => \fnet_txn_acc[0]_i_2_n_0\
-    );
-\fnet_txn_acc[0]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => fnet_txn_acc_reg(1),
-      I1 => \^led\(1),
-      I2 => fnet_txn_acc_reg(2),
-      O => \fnet_txn_acc[0]_i_3_n_0\
-    );
-\fnet_txn_acc[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"41"
-    )
-        port map (
-      I0 => fnet_txn,
-      I1 => \^led\(1),
-      I2 => fnet_txn_acc_reg(1),
-      O => \p_0_in__0\(1)
-    );
-\fnet_txn_acc[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"EEEB"
-    )
-        port map (
-      I0 => fnet_txn,
-      I1 => fnet_txn_acc_reg(2),
-      I2 => \^led\(1),
-      I3 => fnet_txn_acc_reg(1),
-      O => \p_0_in__0\(2)
-    );
-\fnet_txn_acc[3]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"55540001"
-    )
-        port map (
-      I0 => fnet_txn,
-      I1 => fnet_txn_acc_reg(2),
-      I2 => \^led\(1),
-      I3 => fnet_txn_acc_reg(1),
-      I4 => fnet_txn_acc_reg(3),
-      O => \p_0_in__0\(3)
-    );
-\fnet_txn_acc_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk125MHz,
-      CE => fnet_txn_acc,
-      D => \fnet_txn_acc[0]_i_2_n_0\,
-      Q => \^led\(1),
-      R => '0'
-    );
-\fnet_txn_acc_reg[1]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk125MHz,
-      CE => fnet_txn_acc,
-      D => \p_0_in__0\(1),
-      Q => fnet_txn_acc_reg(1),
-      R => '0'
-    );
-\fnet_txn_acc_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk125MHz,
-      CE => fnet_txn_acc,
-      D => \p_0_in__0\(2),
-      Q => fnet_txn_acc_reg(2),
-      R => '0'
-    );
-\fnet_txn_acc_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => clk125MHz,
-      CE => fnet_txn_acc,
-      D => \p_0_in__0\(3),
-      Q => fnet_txn_acc_reg(3),
-      R => '0'
-    );
 \r2[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"AAABAAA8"
@@ -726,7 +620,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(0),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(0),
       O => \r2[0]_i_1_n_0\
     );
@@ -738,7 +632,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(10),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(10),
       O => \r2[10]_i_1_n_0\
     );
@@ -750,7 +644,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(11),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(11),
       O => \r2[11]_i_1_n_0\
     );
@@ -762,7 +656,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(12),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(12),
       O => \r2[12]_i_1_n_0\
     );
@@ -774,7 +668,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(13),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(13),
       O => \r2[13]_i_1_n_0\
     );
@@ -786,7 +680,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(14),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(14),
       O => \r2[14]_i_1_n_0\
     );
@@ -798,7 +692,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(15),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(15),
       O => \r2[15]_i_1_n_0\
     );
@@ -810,7 +704,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(16),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(16),
       O => \r2[16]_i_1_n_0\
     );
@@ -822,7 +716,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(17),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(17),
       O => \r2[17]_i_1_n_0\
     );
@@ -834,7 +728,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(18),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(18),
       O => \r2[18]_i_1_n_0\
     );
@@ -846,7 +740,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(19),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(19),
       O => \r2[19]_i_1_n_0\
     );
@@ -858,7 +752,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(1),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(1),
       O => \r2[1]_i_1_n_0\
     );
@@ -870,7 +764,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(20),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(20),
       O => \r2[20]_i_1_n_0\
     );
@@ -882,7 +776,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(21),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(21),
       O => \r2[21]_i_1_n_0\
     );
@@ -894,7 +788,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(22),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(22),
       O => \r2[22]_i_1_n_0\
     );
@@ -906,7 +800,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(23),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(23),
       O => \r2[23]_i_1_n_0\
     );
@@ -918,7 +812,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(24),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(24),
       O => \r2[24]_i_1_n_0\
     );
@@ -930,7 +824,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(25),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(25),
       O => \r2[25]_i_1_n_0\
     );
@@ -942,7 +836,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(26),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(26),
       O => \r2[26]_i_1_n_0\
     );
@@ -954,7 +848,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(27),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(27),
       O => \r2[27]_i_1_n_0\
     );
@@ -966,7 +860,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(28),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(28),
       O => \r2[28]_i_1_n_0\
     );
@@ -978,7 +872,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(29),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(29),
       O => \r2[29]_i_1_n_0\
     );
@@ -990,7 +884,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(2),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(2),
       O => \r2[2]_i_1_n_0\
     );
@@ -1002,7 +896,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(30),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(30),
       O => \r2[30]_i_1_n_0\
     );
@@ -1012,7 +906,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => LED_REG2(31),
-      I1 => counter_reg(27),
+      I1 => \counter_reg__0\(27),
       I2 => \r3[0]_i_3_n_0\,
       I3 => counter_reg(23),
       O => \r2[31]_i_1_n_0\
@@ -1025,7 +919,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(3),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(3),
       O => \r2[3]_i_1_n_0\
     );
@@ -1037,7 +931,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(4),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(4),
       O => \r2[4]_i_1_n_0\
     );
@@ -1049,7 +943,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(5),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(5),
       O => \r2[5]_i_1_n_0\
     );
@@ -1061,7 +955,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(6),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(6),
       O => \r2[6]_i_1_n_0\
     );
@@ -1073,7 +967,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(7),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(7),
       O => \r2[7]_i_1_n_0\
     );
@@ -1085,7 +979,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(8),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(8),
       O => \r2[8]_i_1_n_0\
     );
@@ -1097,7 +991,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => data1(9),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG2(9),
       O => \r2[9]_i_1_n_0\
     );
@@ -1373,7 +1267,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(1),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(0),
       O => r3_0(0)
     );
@@ -1382,9 +1276,9 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       INIT => X"FE"
     )
         port map (
-      I0 => counter_reg(26),
-      I1 => counter_reg(25),
-      I2 => counter_reg(24),
+      I0 => \counter_reg__0\(26),
+      I1 => \counter_reg__0\(25),
+      I2 => \counter_reg__0\(24),
       O => \r3[0]_i_3_n_0\
     );
 \r3[10]_i_1\: unisim.vcomponents.LUT5
@@ -1395,7 +1289,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(11),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(10),
       O => r3_0(10)
     );
@@ -1407,7 +1301,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(12),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(11),
       O => r3_0(11)
     );
@@ -1419,7 +1313,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(13),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(12),
       O => r3_0(12)
     );
@@ -1431,7 +1325,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(14),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(13),
       O => r3_0(13)
     );
@@ -1443,7 +1337,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(15),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(14),
       O => r3_0(14)
     );
@@ -1455,7 +1349,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(16),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(15),
       O => r3_0(15)
     );
@@ -1467,7 +1361,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(17),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(16),
       O => r3_0(16)
     );
@@ -1479,7 +1373,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(18),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(17),
       O => r3_0(17)
     );
@@ -1491,7 +1385,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(19),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(18),
       O => r3_0(18)
     );
@@ -1503,7 +1397,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(20),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(19),
       O => r3_0(19)
     );
@@ -1515,7 +1409,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(2),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(1),
       O => r3_0(1)
     );
@@ -1527,7 +1421,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(21),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(20),
       O => r3_0(20)
     );
@@ -1539,7 +1433,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(22),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(21),
       O => r3_0(21)
     );
@@ -1551,7 +1445,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(23),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(22),
       O => r3_0(22)
     );
@@ -1563,7 +1457,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(24),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(23),
       O => r3_0(23)
     );
@@ -1575,7 +1469,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(25),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(24),
       O => r3_0(24)
     );
@@ -1587,7 +1481,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(26),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(25),
       O => r3_0(25)
     );
@@ -1599,7 +1493,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(27),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(26),
       O => r3_0(26)
     );
@@ -1611,7 +1505,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(28),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(27),
       O => r3_0(27)
     );
@@ -1623,7 +1517,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(29),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(28),
       O => r3_0(28)
     );
@@ -1635,7 +1529,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(30),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(29),
       O => r3_0(29)
     );
@@ -1647,7 +1541,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(3),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(2),
       O => r3_0(2)
     );
@@ -1659,7 +1553,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(31),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(30),
       O => r3_0(30)
     );
@@ -1669,7 +1563,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => LED_REG3(31),
-      I1 => counter_reg(27),
+      I1 => \counter_reg__0\(27),
       I2 => \r3[0]_i_3_n_0\,
       I3 => counter_reg(23),
       O => r3_0(31)
@@ -1682,7 +1576,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(4),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(3),
       O => r3_0(3)
     );
@@ -1694,7 +1588,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(5),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(4),
       O => r3_0(4)
     );
@@ -1706,7 +1600,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(6),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(5),
       O => r3_0(5)
     );
@@ -1718,7 +1612,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(7),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(6),
       O => r3_0(6)
     );
@@ -1730,7 +1624,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(8),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(7),
       O => r3_0(7)
     );
@@ -1742,7 +1636,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(9),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(8),
       O => r3_0(8)
     );
@@ -1754,7 +1648,7 @@ axi_txn_sub_reg: unisim.vcomponents.FDRE
       I0 => r3(10),
       I1 => counter_reg(23),
       I2 => \r3[0]_i_3_n_0\,
-      I3 => counter_reg(27),
+      I3 => \counter_reg__0\(27),
       I4 => LED_REG3(9),
       O => r3_0(9)
     );
@@ -2122,6 +2016,7 @@ entity top_block_u_led_inst_0_0 is
     reset : in STD_LOGIC;
     enable : in STD_LOGIC;
     fnet_txn : in STD_LOGIC;
+    power_on : in STD_LOGIC;
     LED_REG0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2144,22 +2039,27 @@ entity top_block_u_led_inst_0_0 is
 end top_block_u_led_inst_0_0;
 
 architecture STRUCTURE of top_block_u_led_inst_0_0 is
+  signal \^led\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^power_on\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
+  LED(3 downto 2) <= \^led\(3 downto 2);
+  LED(1) <= \^power_on\;
+  LED(0) <= \^led\(0);
+  \^power_on\ <= power_on;
 inst: entity work.top_block_u_led_inst_0_0_u_led_inst
      port map (
       INIT_AXI_TXN => INIT_AXI_TXN,
       INIT_AXI_TXN_SUB => INIT_AXI_TXN_SUB,
-      LED(1 downto 0) => LED(1 downto 0),
+      LED(0) => \^led\(0),
       LED_REG2(31 downto 0) => LED_REG2(31 downto 0),
       LED_REG3(31 downto 0) => LED_REG3(31 downto 0),
       clk125MHz => clk125MHz,
       enable => enable,
-      fnet_txn => fnet_txn,
-      \r3_reg[0]_0\(1 downto 0) => LED(3 downto 2),
+      \r3_reg[0]_0\(1 downto 0) => \^led\(3 downto 2),
       reset => reset
     );
 end STRUCTURE;

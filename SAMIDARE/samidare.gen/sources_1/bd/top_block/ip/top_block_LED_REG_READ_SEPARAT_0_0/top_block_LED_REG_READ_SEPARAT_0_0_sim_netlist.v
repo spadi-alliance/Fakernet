@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Jul  5 13:26:03 2024
+// Date        : Tue Aug  6 09:55:57 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_0_0/top_block_LED_REG_READ_SEPARAT_0_0_sim_netlist.v
@@ -71,6 +71,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0
   wire \<const1> ;
   wire [31:0]LED_REG;
   wire m00_axi_aclk;
+  wire [31:0]m00_axi_araddr;
   wire m00_axi_aresetn;
   wire m00_axi_arready;
   wire m00_axi_arvalid;
@@ -82,38 +83,6 @@ module top_block_LED_REG_READ_SEPARAT_0_0
   wire m00_axi_rvalid;
   wire m00_axi_txn_done;
 
-  assign m00_axi_araddr[31] = \<const1> ;
-  assign m00_axi_araddr[30] = \<const1> ;
-  assign m00_axi_araddr[29] = \<const0> ;
-  assign m00_axi_araddr[28] = \<const0> ;
-  assign m00_axi_araddr[27] = \<const0> ;
-  assign m00_axi_araddr[26] = \<const0> ;
-  assign m00_axi_araddr[25] = \<const0> ;
-  assign m00_axi_araddr[24] = \<const0> ;
-  assign m00_axi_araddr[23] = \<const0> ;
-  assign m00_axi_araddr[22] = \<const0> ;
-  assign m00_axi_araddr[21] = \<const0> ;
-  assign m00_axi_araddr[20] = \<const0> ;
-  assign m00_axi_araddr[19] = \<const0> ;
-  assign m00_axi_araddr[18] = \<const0> ;
-  assign m00_axi_araddr[17] = \<const0> ;
-  assign m00_axi_araddr[16] = \<const0> ;
-  assign m00_axi_araddr[15] = \<const1> ;
-  assign m00_axi_araddr[14] = \<const1> ;
-  assign m00_axi_araddr[13] = \<const1> ;
-  assign m00_axi_araddr[12] = \<const1> ;
-  assign m00_axi_araddr[11] = \<const0> ;
-  assign m00_axi_araddr[10] = \<const0> ;
-  assign m00_axi_araddr[9] = \<const0> ;
-  assign m00_axi_araddr[8] = \<const0> ;
-  assign m00_axi_araddr[7] = \<const0> ;
-  assign m00_axi_araddr[6] = \<const0> ;
-  assign m00_axi_araddr[5] = \<const0> ;
-  assign m00_axi_araddr[4] = \<const0> ;
-  assign m00_axi_araddr[3] = \<const1> ;
-  assign m00_axi_araddr[2] = \<const0> ;
-  assign m00_axi_araddr[1] = \<const0> ;
-  assign m00_axi_araddr[0] = \<const0> ;
   assign m00_axi_arprot[2] = \<const0> ;
   assign m00_axi_arprot[1] = \<const0> ;
   assign m00_axi_arprot[0] = \<const1> ;
@@ -199,6 +168,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0
        (.LED_REG(LED_REG),
         .axi_rready_reg(m00_axi_rready),
         .m00_axi_aclk(m00_axi_aclk),
+        .m00_axi_araddr(m00_axi_araddr),
         .m00_axi_aresetn(m00_axi_aresetn),
         .m00_axi_arready(m00_axi_arready),
         .m00_axi_arvalid(m00_axi_arvalid),
@@ -213,6 +183,7 @@ endmodule
 (* ORIG_REF_NAME = "LED_REG_READ_SEPARATE_v1_0" *) 
 module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0
    (m00_axi_bready,
+    m00_axi_araddr,
     LED_REG,
     axi_rready_reg,
     reads_done_reg,
@@ -225,6 +196,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0
     m00_axi_init_axi_txn,
     m00_axi_arready);
   output m00_axi_bready;
+  output [31:0]m00_axi_araddr;
   output [31:0]LED_REG;
   output axi_rready_reg;
   output reads_done_reg;
@@ -240,6 +212,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0
   wire [31:0]LED_REG;
   wire axi_rready_reg;
   wire m00_axi_aclk;
+  wire [31:0]m00_axi_araddr;
   wire m00_axi_aresetn;
   wire m00_axi_arready;
   wire m00_axi_arvalid;
@@ -254,6 +227,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0
        (.LED_REG(LED_REG),
         .axi_rready_reg_0(axi_rready_reg),
         .m00_axi_aclk(m00_axi_aclk),
+        .m00_axi_araddr(m00_axi_araddr),
         .m00_axi_aresetn(m00_axi_aresetn),
         .m00_axi_arready(m00_axi_arready),
         .m00_axi_arvalid(m00_axi_arvalid),
@@ -268,6 +242,7 @@ endmodule
 (* ORIG_REF_NAME = "LED_REG_READ_SEPARATE_v1_0_M00_AXI" *) 
 module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
    (m00_axi_bready,
+    m00_axi_araddr,
     LED_REG,
     axi_rready_reg_0,
     reads_done_reg_0,
@@ -280,6 +255,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
     m00_axi_init_axi_txn,
     m00_axi_arready);
   output m00_axi_bready;
+  output [31:0]m00_axi_araddr;
   output [31:0]LED_REG;
   output axi_rready_reg_0;
   output reads_done_reg_0;
@@ -294,6 +270,7 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
 
   wire FSM_sequential_mst_exec_state_i_1_n_0;
   wire [31:0]LED_REG;
+  (* MARK_DEBUG *) wire [31:0]axi_araddr;
   wire axi_arvalid_i_1_n_0;
   wire axi_bready_i_1_n_0;
   wire axi_rready_i_1_n_0;
@@ -303,6 +280,11 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
   wire last_read;
   wire last_read_i_1_n_0;
   wire m00_axi_aclk;
+  wire [31:29]\^m00_axi_araddr ;
+  wire \m00_axi_araddr[29]_INST_0_i_1_n_0 ;
+  wire \m00_axi_araddr[29]_INST_0_i_2_n_0 ;
+  wire \m00_axi_araddr[29]_INST_0_n_6 ;
+  wire \m00_axi_araddr[29]_INST_0_n_7 ;
   wire m00_axi_aresetn;
   wire m00_axi_arready;
   wire m00_axi_arvalid;
@@ -323,7 +305,11 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
   wire start_single_read0;
   wire start_single_read_i_1_n_0;
   wire start_single_read_reg_n_0;
+  wire [7:2]\NLW_m00_axi_araddr[29]_INST_0_CO_UNCONNECTED ;
+  wire [7:3]\NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED ;
 
+  assign m00_axi_araddr[31:29] = \^m00_axi_araddr [31:29];
+  assign m00_axi_araddr[28:0] = axi_araddr[28:0];
   LUT1 #(
     .INIT(2'h1)) 
     FSM_sequential_mst_exec_state_i_1
@@ -344,6 +330,262 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
         .D(mst_exec_state__0),
         .Q(mst_exec_state),
         .R(FSM_sequential_mst_exec_state_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[0] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[0]),
+        .Q(axi_araddr[0]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[10] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[10]),
+        .Q(axi_araddr[10]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[11] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[11]),
+        .Q(axi_araddr[11]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDSE \axi_araddr_reg[12] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[12]),
+        .Q(axi_araddr[12]),
+        .S(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDSE \axi_araddr_reg[13] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[13]),
+        .Q(axi_araddr[13]),
+        .S(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDSE \axi_araddr_reg[14] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[14]),
+        .Q(axi_araddr[14]),
+        .S(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDSE \axi_araddr_reg[15] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[15]),
+        .Q(axi_araddr[15]),
+        .S(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[16] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[16]),
+        .Q(axi_araddr[16]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[17] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[17]),
+        .Q(axi_araddr[17]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[18] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[18]),
+        .Q(axi_araddr[18]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[19] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[19]),
+        .Q(axi_araddr[19]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[1] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[1]),
+        .Q(axi_araddr[1]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[20] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[20]),
+        .Q(axi_araddr[20]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[21] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[21]),
+        .Q(axi_araddr[21]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[22] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[22]),
+        .Q(axi_araddr[22]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[23] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[23]),
+        .Q(axi_araddr[23]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[24] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[24]),
+        .Q(axi_araddr[24]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[25] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[25]),
+        .Q(axi_araddr[25]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[26] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[26]),
+        .Q(axi_araddr[26]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[27] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[27]),
+        .Q(axi_araddr[27]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[28] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[28]),
+        .Q(axi_araddr[28]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[29] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[29]),
+        .Q(axi_araddr[29]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[2] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[2]),
+        .Q(axi_araddr[2]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[30] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[30]),
+        .Q(axi_araddr[30]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[31] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[31]),
+        .Q(axi_araddr[31]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDSE \axi_araddr_reg[3] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[3]),
+        .Q(axi_araddr[3]),
+        .S(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[4] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[4]),
+        .Q(axi_araddr[4]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[5] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[5]),
+        .Q(axi_araddr[5]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[6] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[6]),
+        .Q(axi_araddr[6]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[7] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[7]),
+        .Q(axi_araddr[7]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[8] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[8]),
+        .Q(axi_araddr[8]),
+        .R(reads_done_i_1_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \axi_araddr_reg[9] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(axi_araddr[9]),
+        .Q(axi_araddr[9]),
+        .R(reads_done_i_1_n_0));
   LUT3 #(
     .INIT(8'hAE)) 
     axi_arvalid_i_1
@@ -601,6 +843,24 @@ module top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI
         .D(m00_axi_rdata[9]),
         .Q(LED_REG[9]),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 \m00_axi_araddr[29]_INST_0 
+       (.CI(1'b0),
+        .CI_TOP(1'b0),
+        .CO({\NLW_m00_axi_araddr[29]_INST_0_CO_UNCONNECTED [7:2],\m00_axi_araddr[29]_INST_0_n_6 ,\m00_axi_araddr[29]_INST_0_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_araddr[30],1'b0}),
+        .O({\NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED [7:3],\^m00_axi_araddr }),
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,\m00_axi_araddr[29]_INST_0_i_1_n_0 ,\m00_axi_araddr[29]_INST_0_i_2_n_0 ,axi_araddr[29]}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \m00_axi_araddr[29]_INST_0_i_1 
+       (.I0(axi_araddr[31]),
+        .O(\m00_axi_araddr[29]_INST_0_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \m00_axi_araddr[29]_INST_0_i_2 
+       (.I0(axi_araddr[30]),
+        .O(\m00_axi_araddr[29]_INST_0_i_2_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \read_index[0]_i_1 

@@ -264,3 +264,6 @@ set_property IOSTANDARD LVCMOS12 [get_ports {CLK_CFG[*]}]
 
 
 
+
+
+

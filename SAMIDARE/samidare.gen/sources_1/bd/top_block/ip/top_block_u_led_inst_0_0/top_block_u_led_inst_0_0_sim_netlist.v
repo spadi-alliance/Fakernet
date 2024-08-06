@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Jul  4 14:08:05 2024
+// Date        : Mon Aug  5 18:42:56 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0_sim_netlist.v
@@ -20,6 +20,7 @@ module top_block_u_led_inst_0_0
     reset,
     enable,
     fnet_txn,
+    power_on,
     LED_REG0,
     LED_REG1,
     LED_REG2,
@@ -32,6 +33,7 @@ module top_block_u_led_inst_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
   input enable;
   input fnet_txn;
+  input power_on;
   input [31:0]LED_REG0;
   input [31:0]LED_REG1;
   input [31:0]LED_REG2;
@@ -43,24 +45,26 @@ module top_block_u_led_inst_0_0
 
   wire INIT_AXI_TXN;
   wire INIT_AXI_TXN_SUB;
-  wire [3:0]LED;
+  wire [3:0]\^LED ;
   wire [31:0]LED_REG2;
   wire [31:0]LED_REG3;
   wire clk125MHz;
   wire enable;
-  wire fnet_txn;
+  wire power_on;
   wire reset;
 
+  assign LED[3:2] = \^LED [3:2];
+  assign LED[1] = power_on;
+  assign LED[0] = \^LED [0];
   top_block_u_led_inst_0_0_u_led_inst inst
        (.INIT_AXI_TXN(INIT_AXI_TXN),
         .INIT_AXI_TXN_SUB(INIT_AXI_TXN_SUB),
-        .LED(LED[1:0]),
+        .LED(\^LED [0]),
         .LED_REG2(LED_REG2),
         .LED_REG3(LED_REG3),
         .clk125MHz(clk125MHz),
         .enable(enable),
-        .fnet_txn(fnet_txn),
-        .\r3_reg[0]_0 (LED[3:2]),
+        .\r3_reg[0]_0 (\^LED [3:2]),
         .reset(reset));
 endmodule
 
@@ -72,24 +76,22 @@ module top_block_u_led_inst_0_0_u_led_inst
     \r3_reg[0]_0 ,
     enable,
     reset,
-    fnet_txn,
     clk125MHz,
     LED_REG2,
     LED_REG3);
-  output [1:0]LED;
+  output [0:0]LED;
   output INIT_AXI_TXN;
   output INIT_AXI_TXN_SUB;
   output [1:0]\r3_reg[0]_0 ;
   input enable;
   input reset;
-  input fnet_txn;
   input clk125MHz;
   input [31:0]LED_REG2;
   input [31:0]LED_REG3;
 
   wire INIT_AXI_TXN;
   wire INIT_AXI_TXN_SUB;
-  wire [1:0]LED;
+  wire [0:0]LED;
   wire [31:0]LED_REG2;
   wire [31:0]LED_REG3;
   wire axi_txn;
@@ -105,7 +107,7 @@ module top_block_u_led_inst_0_0_u_led_inst
   wire clk125MHz;
   wire \counter[0]_i_1_n_0 ;
   wire \counter[0]_i_3_n_0 ;
-  wire [27:0]counter_reg;
+  wire [23:0]counter_reg;
   wire \counter_reg[0]_i_2_n_0 ;
   wire \counter_reg[0]_i_2_n_1 ;
   wire \counter_reg[0]_i_2_n_10 ;
@@ -161,15 +163,10 @@ module top_block_u_led_inst_0_0_u_led_inst
   wire \counter_reg[8]_i_1_n_7 ;
   wire \counter_reg[8]_i_1_n_8 ;
   wire \counter_reg[8]_i_1_n_9 ;
+  wire [27:24]counter_reg__0;
   wire [30:0]data1;
   wire enable;
-  wire fnet_txn;
-  wire fnet_txn_acc;
-  wire \fnet_txn_acc[0]_i_2_n_0 ;
-  wire \fnet_txn_acc[0]_i_3_n_0 ;
-  wire [3:1]fnet_txn_acc_reg;
   wire [3:1]p_0_in;
-  wire [3:1]p_0_in__0;
   wire \r2[0]_i_1_n_0 ;
   wire \r2[10]_i_1_n_0 ;
   wire \r2[11]_i_1_n_0 ;
@@ -223,10 +220,10 @@ module top_block_u_led_inst_0_0_u_led_inst
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     axi_txn_i_2
-       (.I0(counter_reg[27]),
-        .I1(counter_reg[24]),
-        .I2(counter_reg[25]),
-        .I3(counter_reg[26]),
+       (.I0(counter_reg__0[27]),
+        .I1(counter_reg__0[24]),
+        .I2(counter_reg__0[25]),
+        .I3(counter_reg__0[26]),
         .I4(counter_reg[23]),
         .I5(axi_txn_i_3_n_0),
         .O(axi_txn));
@@ -296,12 +293,12 @@ module top_block_u_led_inst_0_0_u_led_inst
   LUT6 #(
     .INIT(64'h0000000000000002)) 
     axi_txn_sub_i_1
-       (.I0(counter_reg[27]),
+       (.I0(counter_reg__0[27]),
         .I1(axi_txn_i_3_n_0),
         .I2(counter_reg[23]),
-        .I3(counter_reg[26]),
-        .I4(counter_reg[25]),
-        .I5(counter_reg[24]),
+        .I3(counter_reg__0[26]),
+        .I4(counter_reg__0[25]),
+        .I5(counter_reg__0[24]),
         .O(axi_txn_sub0));
   FDRE axi_txn_sub_reg
        (.C(clk125MHz),
@@ -434,7 +431,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.C(clk125MHz),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[24]_i_1_n_15 ),
-        .Q(counter_reg[24]),
+        .Q(counter_reg__0[24]),
         .R(1'b0));
   CARRY8 \counter_reg[24]_i_1 
        (.CI(\counter_reg[16]_i_1_n_0 ),
@@ -442,24 +439,24 @@ module top_block_u_led_inst_0_0_u_led_inst
         .CO({\NLW_counter_reg[24]_i_1_CO_UNCONNECTED [7:3],\counter_reg[24]_i_1_n_5 ,\counter_reg[24]_i_1_n_6 ,\counter_reg[24]_i_1_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O({\NLW_counter_reg[24]_i_1_O_UNCONNECTED [7:4],\counter_reg[24]_i_1_n_12 ,\counter_reg[24]_i_1_n_13 ,\counter_reg[24]_i_1_n_14 ,\counter_reg[24]_i_1_n_15 }),
-        .S({1'b0,1'b0,1'b0,1'b0,counter_reg[27:24]}));
+        .S({1'b0,1'b0,1'b0,1'b0,counter_reg__0}));
   FDRE \counter_reg[25] 
        (.C(clk125MHz),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[24]_i_1_n_14 ),
-        .Q(counter_reg[25]),
+        .Q(counter_reg__0[25]),
         .R(1'b0));
   FDRE \counter_reg[26] 
        (.C(clk125MHz),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[24]_i_1_n_13 ),
-        .Q(counter_reg[26]),
+        .Q(counter_reg__0[26]),
         .R(1'b0));
   FDRE \counter_reg[27] 
        (.C(clk125MHz),
         .CE(\counter[0]_i_1_n_0 ),
         .D(\counter_reg[24]_i_1_n_12 ),
-        .Q(counter_reg[27]),
+        .Q(counter_reg__0[27]),
         .R(1'b0));
   FDRE \counter_reg[2] 
        (.C(clk125MHz),
@@ -516,88 +513,13 @@ module top_block_u_led_inst_0_0_u_led_inst
         .D(\counter_reg[8]_i_1_n_14 ),
         .Q(counter_reg[9]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000FFFF00001110)) 
-    \fnet_txn_acc[0]_i_1 
-       (.I0(axi_txn_i_3_n_0),
-        .I1(counter_reg[23]),
-        .I2(fnet_txn_acc_reg[3]),
-        .I3(\fnet_txn_acc[0]_i_3_n_0 ),
-        .I4(reset),
-        .I5(fnet_txn),
-        .O(fnet_txn_acc));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \fnet_txn_acc[0]_i_2 
-       (.I0(LED[1]),
-        .I1(fnet_txn),
-        .O(\fnet_txn_acc[0]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \fnet_txn_acc[0]_i_3 
-       (.I0(fnet_txn_acc_reg[1]),
-        .I1(LED[1]),
-        .I2(fnet_txn_acc_reg[2]),
-        .O(\fnet_txn_acc[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h41)) 
-    \fnet_txn_acc[1]_i_1 
-       (.I0(fnet_txn),
-        .I1(LED[1]),
-        .I2(fnet_txn_acc_reg[1]),
-        .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'hEEEB)) 
-    \fnet_txn_acc[2]_i_1 
-       (.I0(fnet_txn),
-        .I1(fnet_txn_acc_reg[2]),
-        .I2(LED[1]),
-        .I3(fnet_txn_acc_reg[1]),
-        .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h55540001)) 
-    \fnet_txn_acc[3]_i_1 
-       (.I0(fnet_txn),
-        .I1(fnet_txn_acc_reg[2]),
-        .I2(LED[1]),
-        .I3(fnet_txn_acc_reg[1]),
-        .I4(fnet_txn_acc_reg[3]),
-        .O(p_0_in__0[3]));
-  FDRE \fnet_txn_acc_reg[0] 
-       (.C(clk125MHz),
-        .CE(fnet_txn_acc),
-        .D(\fnet_txn_acc[0]_i_2_n_0 ),
-        .Q(LED[1]),
-        .R(1'b0));
-  FDRE \fnet_txn_acc_reg[1] 
-       (.C(clk125MHz),
-        .CE(fnet_txn_acc),
-        .D(p_0_in__0[1]),
-        .Q(fnet_txn_acc_reg[1]),
-        .R(1'b0));
-  FDRE \fnet_txn_acc_reg[2] 
-       (.C(clk125MHz),
-        .CE(fnet_txn_acc),
-        .D(p_0_in__0[2]),
-        .Q(fnet_txn_acc_reg[2]),
-        .R(1'b0));
-  FDRE \fnet_txn_acc_reg[3] 
-       (.C(clk125MHz),
-        .CE(fnet_txn_acc),
-        .D(p_0_in__0[3]),
-        .Q(fnet_txn_acc_reg[3]),
-        .R(1'b0));
   LUT5 #(
     .INIT(32'hAAABAAA8)) 
     \r2[0]_i_1 
        (.I0(data1[0]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[0]),
         .O(\r2[0]_i_1_n_0 ));
   LUT5 #(
@@ -606,7 +528,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[10]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[10]),
         .O(\r2[10]_i_1_n_0 ));
   LUT5 #(
@@ -615,7 +537,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[11]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[11]),
         .O(\r2[11]_i_1_n_0 ));
   LUT5 #(
@@ -624,7 +546,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[12]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[12]),
         .O(\r2[12]_i_1_n_0 ));
   LUT5 #(
@@ -633,7 +555,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[13]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[13]),
         .O(\r2[13]_i_1_n_0 ));
   LUT5 #(
@@ -642,7 +564,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[14]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[14]),
         .O(\r2[14]_i_1_n_0 ));
   LUT5 #(
@@ -651,7 +573,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[15]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[15]),
         .O(\r2[15]_i_1_n_0 ));
   LUT5 #(
@@ -660,7 +582,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[16]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[16]),
         .O(\r2[16]_i_1_n_0 ));
   LUT5 #(
@@ -669,7 +591,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[17]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[17]),
         .O(\r2[17]_i_1_n_0 ));
   LUT5 #(
@@ -678,7 +600,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[18]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[18]),
         .O(\r2[18]_i_1_n_0 ));
   LUT5 #(
@@ -687,7 +609,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[19]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[19]),
         .O(\r2[19]_i_1_n_0 ));
   LUT5 #(
@@ -696,7 +618,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[1]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[1]),
         .O(\r2[1]_i_1_n_0 ));
   LUT5 #(
@@ -705,7 +627,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[20]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[20]),
         .O(\r2[20]_i_1_n_0 ));
   LUT5 #(
@@ -714,7 +636,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[21]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[21]),
         .O(\r2[21]_i_1_n_0 ));
   LUT5 #(
@@ -723,7 +645,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[22]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[22]),
         .O(\r2[22]_i_1_n_0 ));
   LUT5 #(
@@ -732,7 +654,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[23]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[23]),
         .O(\r2[23]_i_1_n_0 ));
   LUT5 #(
@@ -741,7 +663,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[24]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[24]),
         .O(\r2[24]_i_1_n_0 ));
   LUT5 #(
@@ -750,7 +672,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[25]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[25]),
         .O(\r2[25]_i_1_n_0 ));
   LUT5 #(
@@ -759,7 +681,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[26]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[26]),
         .O(\r2[26]_i_1_n_0 ));
   LUT5 #(
@@ -768,7 +690,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[27]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[27]),
         .O(\r2[27]_i_1_n_0 ));
   LUT5 #(
@@ -777,7 +699,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[28]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[28]),
         .O(\r2[28]_i_1_n_0 ));
   LUT5 #(
@@ -786,7 +708,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[29]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[29]),
         .O(\r2[29]_i_1_n_0 ));
   LUT5 #(
@@ -795,7 +717,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[2]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[2]),
         .O(\r2[2]_i_1_n_0 ));
   LUT5 #(
@@ -804,15 +726,15 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[30]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[30]),
         .O(\r2[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \r2[31]_i_1 
        (.I0(LED_REG2[31]),
-        .I1(counter_reg[27]),
+        .I1(counter_reg__0[27]),
         .I2(\r3[0]_i_3_n_0 ),
         .I3(counter_reg[23]),
         .O(\r2[31]_i_1_n_0 ));
@@ -822,7 +744,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[3]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[3]),
         .O(\r2[3]_i_1_n_0 ));
   LUT5 #(
@@ -831,7 +753,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[4]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[4]),
         .O(\r2[4]_i_1_n_0 ));
   LUT5 #(
@@ -840,7 +762,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[5]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[5]),
         .O(\r2[5]_i_1_n_0 ));
   LUT5 #(
@@ -849,7 +771,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[6]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[6]),
         .O(\r2[6]_i_1_n_0 ));
   LUT5 #(
@@ -858,7 +780,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[7]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[7]),
         .O(\r2[7]_i_1_n_0 ));
   LUT5 #(
@@ -867,7 +789,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[8]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[8]),
         .O(\r2[8]_i_1_n_0 ));
   LUT5 #(
@@ -876,7 +798,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(data1[9]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG2[9]),
         .O(\r2[9]_i_1_n_0 ));
   FDCE \r2_reg[0] 
@@ -1082,15 +1004,15 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[1]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[0]),
         .O(r3_0[0]));
   LUT3 #(
     .INIT(8'hFE)) 
     \r3[0]_i_3 
-       (.I0(counter_reg[26]),
-        .I1(counter_reg[25]),
-        .I2(counter_reg[24]),
+       (.I0(counter_reg__0[26]),
+        .I1(counter_reg__0[25]),
+        .I2(counter_reg__0[24]),
         .O(\r3[0]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hAAABAAA8)) 
@@ -1098,7 +1020,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[11]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[10]),
         .O(r3_0[10]));
   LUT5 #(
@@ -1107,7 +1029,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[12]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[11]),
         .O(r3_0[11]));
   LUT5 #(
@@ -1116,7 +1038,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[13]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[12]),
         .O(r3_0[12]));
   LUT5 #(
@@ -1125,7 +1047,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[14]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[13]),
         .O(r3_0[13]));
   LUT5 #(
@@ -1134,7 +1056,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[15]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[14]),
         .O(r3_0[14]));
   LUT5 #(
@@ -1143,7 +1065,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[16]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[15]),
         .O(r3_0[15]));
   LUT5 #(
@@ -1152,7 +1074,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[17]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[16]),
         .O(r3_0[16]));
   LUT5 #(
@@ -1161,7 +1083,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[18]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[17]),
         .O(r3_0[17]));
   LUT5 #(
@@ -1170,7 +1092,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[19]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[18]),
         .O(r3_0[18]));
   LUT5 #(
@@ -1179,7 +1101,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[20]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[19]),
         .O(r3_0[19]));
   LUT5 #(
@@ -1188,7 +1110,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[2]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[1]),
         .O(r3_0[1]));
   LUT5 #(
@@ -1197,7 +1119,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[21]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[20]),
         .O(r3_0[20]));
   LUT5 #(
@@ -1206,7 +1128,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[22]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[21]),
         .O(r3_0[21]));
   LUT5 #(
@@ -1215,7 +1137,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[23]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[22]),
         .O(r3_0[22]));
   LUT5 #(
@@ -1224,7 +1146,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[24]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[23]),
         .O(r3_0[23]));
   LUT5 #(
@@ -1233,7 +1155,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[25]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[24]),
         .O(r3_0[24]));
   LUT5 #(
@@ -1242,7 +1164,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[26]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[25]),
         .O(r3_0[25]));
   LUT5 #(
@@ -1251,7 +1173,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[27]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[26]),
         .O(r3_0[26]));
   LUT5 #(
@@ -1260,7 +1182,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[28]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[27]),
         .O(r3_0[27]));
   LUT5 #(
@@ -1269,7 +1191,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[29]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[28]),
         .O(r3_0[28]));
   LUT5 #(
@@ -1278,7 +1200,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[30]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[29]),
         .O(r3_0[29]));
   LUT5 #(
@@ -1287,7 +1209,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[3]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[2]),
         .O(r3_0[2]));
   LUT5 #(
@@ -1296,15 +1218,15 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[31]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[30]),
         .O(r3_0[30]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     \r3[31]_i_1 
        (.I0(LED_REG3[31]),
-        .I1(counter_reg[27]),
+        .I1(counter_reg__0[27]),
         .I2(\r3[0]_i_3_n_0 ),
         .I3(counter_reg[23]),
         .O(r3_0[31]));
@@ -1314,7 +1236,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[4]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[3]),
         .O(r3_0[3]));
   LUT5 #(
@@ -1323,7 +1245,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[5]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[4]),
         .O(r3_0[4]));
   LUT5 #(
@@ -1332,7 +1254,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[6]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[5]),
         .O(r3_0[5]));
   LUT5 #(
@@ -1341,7 +1263,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[7]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[6]),
         .O(r3_0[6]));
   LUT5 #(
@@ -1350,7 +1272,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[8]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[7]),
         .O(r3_0[7]));
   LUT5 #(
@@ -1359,7 +1281,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[9]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[8]),
         .O(r3_0[8]));
   LUT5 #(
@@ -1368,7 +1290,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.I0(r3[10]),
         .I1(counter_reg[23]),
         .I2(\r3[0]_i_3_n_0 ),
-        .I3(counter_reg[27]),
+        .I3(counter_reg__0[27]),
         .I4(LED_REG3[9]),
         .O(r3_0[9]));
   FDCE \r3_reg[0] 
@@ -1573,26 +1495,26 @@ module top_block_u_led_inst_0_0_u_led_inst
         .I4(reset),
         .I5(INIT_AXI_TXN),
         .O(txn_acc));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \txn_acc[0]_i_2 
-       (.I0(LED[0]),
+       (.I0(LED),
         .I1(INIT_AXI_TXN),
         .O(\txn_acc[0]_i_2_n_0 ));
   LUT3 #(
     .INIT(8'hFE)) 
     \txn_acc[0]_i_3 
        (.I0(txn_acc_reg[1]),
-        .I1(LED[0]),
+        .I1(LED),
         .I2(txn_acc_reg[2]),
         .O(\txn_acc[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h41)) 
     \txn_acc[1]_i_1 
        (.I0(INIT_AXI_TXN),
-        .I1(LED[0]),
+        .I1(LED),
         .I2(txn_acc_reg[1]),
         .O(p_0_in[1]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -1601,7 +1523,7 @@ module top_block_u_led_inst_0_0_u_led_inst
     \txn_acc[2]_i_1 
        (.I0(INIT_AXI_TXN),
         .I1(txn_acc_reg[2]),
-        .I2(LED[0]),
+        .I2(LED),
         .I3(txn_acc_reg[1]),
         .O(p_0_in[2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -1610,7 +1532,7 @@ module top_block_u_led_inst_0_0_u_led_inst
     \txn_acc[3]_i_1 
        (.I0(INIT_AXI_TXN),
         .I1(txn_acc_reg[2]),
-        .I2(LED[0]),
+        .I2(LED),
         .I3(txn_acc_reg[1]),
         .I4(txn_acc_reg[3]),
         .O(p_0_in[3]));
@@ -1618,7 +1540,7 @@ module top_block_u_led_inst_0_0_u_led_inst
        (.C(clk125MHz),
         .CE(txn_acc),
         .D(\txn_acc[0]_i_2_n_0 ),
-        .Q(LED[0]),
+        .Q(LED),
         .R(1'b0));
   FDRE \txn_acc_reg[1] 
        (.C(clk125MHz),

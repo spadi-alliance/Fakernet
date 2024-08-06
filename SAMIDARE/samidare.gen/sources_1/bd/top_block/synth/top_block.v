@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Aug  5 15:31:16 2024
+//Date        : Tue Aug  6 11:02:46 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -57,7 +57,9 @@ endmodule
 module SAMPA_I2C_wrapper_imp_VOP84W
    (SAMPA_I2C_SCL,
     SAMPA_I2C_SDA,
+    i2c_done,
     i2c_raddr_i,
+    i2c_rdata_o,
     i2c_waddr_i,
     m00_axi_aclk,
     m00_axi_araddr,
@@ -87,7 +89,9 @@ module SAMPA_I2C_wrapper_imp_VOP84W
     start_i2c_write_all);
   inout [0:0]SAMPA_I2C_SCL;
   inout [0:0]SAMPA_I2C_SDA;
+  output i2c_done;
   input [31:0]i2c_raddr_i;
+  output [31:0]i2c_rdata_o;
   input [31:0]i2c_waddr_i;
   input m00_axi_aclk;
   output [31:0]m00_axi_araddr;
@@ -135,6 +139,8 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   wire [0:0]Conn1_WREADY;
   wire [3:0]Conn1_WSTRB;
   wire Conn1_WVALID;
+  wire I2C_Controller_v1_0_0_i2c_done;
+  wire [31:0]I2C_Controller_v1_0_0_i2c_rdata_o;
   wire [31:0]I2C_Controller_v1_0_0_m01_axi_ARADDR;
   wire I2C_Controller_v1_0_0_m01_axi_ARREADY;
   wire I2C_Controller_v1_0_0_m01_axi_ARVALID;
@@ -178,7 +184,9 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   assign Conn1_RRESP = m00_axi_rresp[1:0];
   assign Conn1_RVALID = m00_axi_rvalid[0];
   assign Conn1_WREADY = m00_axi_wready[0];
+  assign i2c_done = I2C_Controller_v1_0_0_i2c_done;
   assign i2c_raddr_i_1 = i2c_raddr_i[31:0];
+  assign i2c_rdata_o[31:0] = I2C_Controller_v1_0_0_i2c_rdata_o;
   assign i2c_waddr_i_1 = i2c_waddr_i[31:0];
   assign m00_axi_aclk_1 = m00_axi_aclk;
   assign m00_axi_araddr[31:0] = Conn1_ARADDR;
@@ -199,7 +207,9 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   assign start_i2c_write_1 = start_i2c_write;
   assign start_i2c_write_all_1 = start_i2c_write_all;
   top_block_I2C_Controller_v1_0_0_1 I2C_Controller_v1_0_0
-       (.i2c_raddr_i(i2c_raddr_i_1),
+       (.i2c_done(I2C_Controller_v1_0_0_i2c_done),
+        .i2c_raddr_i(i2c_raddr_i_1),
+        .i2c_rdata_o(I2C_Controller_v1_0_0_i2c_rdata_o),
         .i2c_waddr_i(i2c_waddr_i_1),
         .m00_axi_aclk(m00_axi_aclk_1),
         .m00_axi_araddr(Conn1_ARADDR),
@@ -288,7 +298,9 @@ module fakernet_imp_CWUDB9
     clk_in_0,
     gtrefclk_n_0,
     gtrefclk_p_0,
+    i2c_done,
     i2c_raddr_o,
+    i2c_rdata_i,
     i2c_waddr_o,
     independent_clock_0,
     m00_axi_araddr,
@@ -331,7 +343,9 @@ module fakernet_imp_CWUDB9
   input clk_in_0;
   input gtrefclk_n_0;
   input gtrefclk_p_0;
+  input i2c_done;
   output [31:0]i2c_raddr_o;
+  input [31:0]i2c_rdata_i;
   output [31:0]i2c_waddr_o;
   input independent_clock_0;
   output [31:0]m00_axi_araddr;
@@ -412,6 +426,8 @@ module fakernet_imp_CWUDB9
   wire gig_ethernet_pcs_pma_0_txp;
   wire gtrefclk_n_0_1;
   wire gtrefclk_p_0_1;
+  wire i2c_done_1;
+  wire [31:0]i2c_rdata_i_1;
   wire [0:0]if_gate1_Res;
   wire [0:0]if_gate_Res;
   wire independent_clock_0_1;
@@ -457,7 +473,9 @@ module fakernet_imp_CWUDB9
   assign clk_in_0_1 = clk_in_0;
   assign gtrefclk_n_0_1 = gtrefclk_n_0;
   assign gtrefclk_p_0_1 = gtrefclk_p_0;
+  assign i2c_done_1 = i2c_done;
   assign i2c_raddr_o[31:0] = reg_switch_0_i2c_raddr_o;
+  assign i2c_rdata_i_1 = i2c_rdata_i[31:0];
   assign i2c_waddr_o[31:0] = reg_switch_0_i2c_waddr_o;
   assign independent_clock_0_1 = independent_clock_0;
   assign m00_axi_araddr[31:0] = Conn1_ARADDR;
@@ -605,9 +623,9 @@ module fakernet_imp_CWUDB9
   top_block_reg_switch_0_0 reg_switch_0
        (.axi_aclk(clk_in_0_1),
         .axi_aresetn(m00_axi_aresetn_1),
-        .i2c_done(1'b0),
+        .i2c_done(i2c_done_1),
         .i2c_raddr_o(reg_switch_0_i2c_raddr_o),
-        .i2c_rdata_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .i2c_rdata_i(i2c_rdata_i_1),
         .i2c_waddr_o(reg_switch_0_i2c_waddr_o),
         .regacc_addr_i(fakernet_top_0_regacc_addr_o),
         .regacc_addr_o(reg_switch_0_regacc_addr_o),
@@ -755,6 +773,7 @@ module led_module_imp_CAGS8R
     m00_axi_wready,
     m00_axi_wstrb,
     m00_axi_wvalid,
+    power_on,
     reset);
   output [3:0]LED;
   input clk125MHz;
@@ -798,6 +817,7 @@ module led_module_imp_CAGS8R
   input [0:0]m00_axi_wready;
   output [3:0]m00_axi_wstrb;
   output [0:0]m00_axi_wvalid;
+  input power_on;
   input reset;
 
   wire [31:0]Conn1_ARADDR;
@@ -845,6 +865,7 @@ module led_module_imp_CAGS8R
   wire clk125MHz_1;
   wire fnet_txn_1;
   wire m00_axi_aresetn_1;
+  wire power_on_1;
   wire reset_1;
   wire u_led_inst_0_INIT_AXI_TXN;
   wire u_led_inst_0_INIT_AXI_TXN_SUB;
@@ -894,6 +915,7 @@ module led_module_imp_CAGS8R
   assign m00_axi_wdata[31:0] = Conn1_WDATA;
   assign m00_axi_wstrb[3:0] = Conn1_WSTRB;
   assign m00_axi_wvalid[0] = Conn1_WVALID;
+  assign power_on_1 = power_on;
   assign reset_1 = reset;
   top_block_LED_REG_READ_SEPARAT_0_0 LED_REG_READ_SEPARAT_0
        (.LED_REG(LED_REG_READ_SEPARAT_0_LED_REG),
@@ -957,6 +979,7 @@ module led_module_imp_CAGS8R
         .clk125MHz(clk125MHz_1),
         .enable(xlconstant_0_dout),
         .fnet_txn(fnet_txn_1),
+        .power_on(power_on_1),
         .reset(reset_1));
   top_block_util_vector_logic_0_2 util_vector_logic_0
        (.Op1(LED_REG_READ_SEPARAT_0_m00_axi_txn_done),
@@ -2078,6 +2101,8 @@ module top_block
   wire [0:0]S00_AXI_1_WREADY;
   wire [3:0]S00_AXI_1_WSTRB;
   wire [0:0]S00_AXI_1_WVALID;
+  wire SAMPA_I2C_wrapper_i2c_done;
+  wire [31:0]SAMPA_I2C_wrapper_i2c_rdata_o;
   wire [31:0]SAMPA_PON_v1_0_0_m00_axi_ARADDR;
   wire [2:0]SAMPA_PON_v1_0_0_m00_axi_ARPROT;
   wire SAMPA_PON_v1_0_0_m00_axi_ARREADY;
@@ -2245,7 +2270,9 @@ module top_block
   SAMPA_I2C_wrapper_imp_VOP84W SAMPA_I2C_wrapper
        (.SAMPA_I2C_SCL(SAMPA_I2C_SCL),
         .SAMPA_I2C_SDA(SAMPA_I2C_SDA),
+        .i2c_done(SAMPA_I2C_wrapper_i2c_done),
         .i2c_raddr_i(i2c_raddr_i_1),
+        .i2c_rdata_o(SAMPA_I2C_wrapper_i2c_rdata_o),
         .i2c_waddr_i(fakernet_i2c_waddr_o),
         .m00_axi_aclk(clk_in_0_1),
         .m00_axi_araddr(S00_AXI_1_ARADDR),
@@ -2433,7 +2460,9 @@ module top_block
         .clk_in_0(clk_in_0_1),
         .gtrefclk_n_0(gtrefclk_n_0_1),
         .gtrefclk_p_0(gtrefclk_p_0_1),
+        .i2c_done(SAMPA_I2C_wrapper_i2c_done),
         .i2c_raddr_o(i2c_raddr_i_1),
+        .i2c_rdata_i(SAMPA_I2C_wrapper_i2c_rdata_o),
         .i2c_waddr_o(fakernet_i2c_waddr_o),
         .independent_clock_0(clk_wiz_0_clk_out4),
         .m00_axi_araddr(fakernet_m00_axi_ARADDR),
@@ -2515,6 +2544,7 @@ module top_block
         .m00_axi_wready(led_module_m00_axi_WREADY),
         .m00_axi_wstrb(led_module_m00_axi_WSTRB),
         .m00_axi_wvalid(led_module_m00_axi_WVALID),
+        .power_on(SAMPA_PON_v1_0_0_sampa_power_on),
         .reset(vio_0_probe_out0));
   reg_bram_imp_WBS55O reg_bram
        (.S_AXI1_araddr(axi_mem_intercon_M00_AXI_ARADDR),

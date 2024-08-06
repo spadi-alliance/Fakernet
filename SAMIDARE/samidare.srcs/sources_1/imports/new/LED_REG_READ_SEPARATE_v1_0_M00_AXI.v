@@ -144,7 +144,7 @@
 	//write data
 	reg [C_M_AXI_DATA_WIDTH-1 : 0] 	axi_wdata;
 	//read addresss
-	reg [C_M_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
+	(*mark_debug = "true"*)reg [C_M_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	//Asserts when there is a write response error
 	wire  	write_resp_error;
 	//Asserts when there is a read response error

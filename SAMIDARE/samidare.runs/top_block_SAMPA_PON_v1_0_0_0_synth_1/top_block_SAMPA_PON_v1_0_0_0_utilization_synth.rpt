@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Aug  5 12:19:35 2024
+| Date         : Tue Aug  6 10:40:43 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_SAMPA_PON_v1_0_0_0_utilization_synth.rpt -pb top_block_SAMPA_PON_v1_0_0_0_utilization_synth.pb
 | Design       : top_block_SAMPA_PON_v1_0_0_0
@@ -32,8 +32,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |   20 |     0 |          0 |     77760 |  0.03 |
-|   LUT as Logic          |   20 |     0 |          0 |     77760 |  0.03 |
+| CLB LUTs*               |   52 |     0 |          0 |     77760 |  0.07 |
+|   LUT as Logic          |   52 |     0 |          0 |     77760 |  0.07 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
 | CLB Registers           |   43 |     0 |          0 |    155520 |  0.03 |
 |   Register as Flip Flop |   43 |     0 |          0 |    155520 |  0.03 |
@@ -154,13 +154,13 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   43 |            Register |
+| LUT1     |   35 |                 CLB |
 | LUT5     |    5 |                 CLB |
 | LUT6     |    4 |                 CLB |
 | LUT3     |    4 |                 CLB |
 | CARRY8   |    4 |                 CLB |
 | LUT4     |    3 |                 CLB |
 | LUT2     |    3 |                 CLB |
-| LUT1     |    3 |                 CLB |
 +----------+------+---------------------+
 
 

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "reg_switch,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *)
-(* CORE_GENERATION_INFO = "top_block_reg_switch_0_0,reg_switch,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=reg_switch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_ADDR_I2C_READ=0xAA000004,C_ADDR_SAMPA_READ=0xAA000008,C_ADDR_I2C_WRITE_ALL=0xAA00000C,C_ADDR_I2C_WRITE=0xAA000000}" *)
+(* CORE_GENERATION_INFO = "top_block_reg_switch_0_0,reg_switch,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=reg_switch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_ADDR_I2C_READ=0000000000000000000000100,C_ADDR_SAMPA_READ=0000000000000000000001000,C_ADDR_I2C_WRITE_ALL=0000000000000000000001100,C_ADDR_I2C_WRITE=0000000000000000000010000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_reg_switch_0_0 (
@@ -106,10 +106,10 @@ input wire [31 : 0] i2c_rdata_i;
 input wire i2c_done;
 
   reg_switch #(
-    .C_ADDR_I2C_READ(32'HAA000004),
-    .C_ADDR_SAMPA_READ(32'HAA000008),
-    .C_ADDR_I2C_WRITE_ALL(32'HAA00000C),
-    .C_ADDR_I2C_WRITE(32'HAA000000)
+    .C_ADDR_I2C_READ(25'B0000000000000000000000100),
+    .C_ADDR_SAMPA_READ(25'B0000000000000000000001000),
+    .C_ADDR_I2C_WRITE_ALL(25'B0000000000000000000001100),
+    .C_ADDR_I2C_WRITE(25'B0000000000000000000010000)
   ) inst (
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),

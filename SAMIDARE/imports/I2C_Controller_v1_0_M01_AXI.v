@@ -27,9 +27,10 @@
 		// Users to add ports here
 		input wire  I2C_WR,
 		input wire  I2C_RD,
-		input wire [24:0]  WADDR,
-		input wire [24:0]  RADDR,
+		input wire [31:0]  WADDR,
+		input wire [31:0]  RADDR,
 		input wire [31:0]  WDATA,
+		output wire [31:0] RDATA,
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -490,7 +491,8 @@
 	          // available by user logic                            
 	        else if (M_AXI_ARREADY && axi_arvalid)                  
 	          begin                                                 
-	            axi_araddr <= axi_araddr + 32'h00000004;            
+//	            axi_araddr <= axi_araddr + 32'h00000004;            
+	            axi_araddr <= axi_araddr;            
 	          end                                                   
 	      end                                                       
 	                                                                
@@ -710,7 +712,13 @@
 	      error_reg <= error_reg;                                                       
 	  end                                                                               
 	// Add user logic here
-
-	// User logic ends
+	reg [31:0] rdata;
+	assign RDATA = rdata;
+	always @(posedge M_AXI_ACLK)                                                      
+	  begin                           
+	    if (M_AXI_RVALID) begin                         
+	      rdata <= M_AXI_RDATA;                                                     
+	    end
+	  end   	// User logic ends
 
 	endmodule

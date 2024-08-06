@@ -61,7 +61,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>27f67d55</spirit:value>
+            <spirit:value>dbf6b14b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>27f67d55</spirit:value>
+            <spirit:value>dbf6b14b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -402,22 +402,22 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>C_ADDR_I2C_READ</spirit:name>
         <spirit:displayName>C Addr I2c Read</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_READ" spirit:bitStringLength="32">0xAA000004</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_READ" spirit:bitStringLength="25">&quot;0000000000000000000000100&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADDR_SAMPA_READ</spirit:name>
         <spirit:displayName>C Addr Sampa Read</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_SAMPA_READ" spirit:bitStringLength="32">0xAA000008</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_SAMPA_READ" spirit:bitStringLength="25">&quot;0000000000000000000001000&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADDR_I2C_WRITE_ALL</spirit:name>
         <spirit:displayName>C Addr I2c Write All</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_WRITE_ALL" spirit:bitStringLength="32">0xAA00000C</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_WRITE_ALL" spirit:bitStringLength="25">&quot;0000000000000000000001100&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADDR_I2C_WRITE</spirit:name>
         <spirit:displayName>C Addr I2c Write</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_WRITE" spirit:bitStringLength="32">0xAA000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_I2C_WRITE" spirit:bitStringLength="25">&quot;0000000000000000000010000&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -444,22 +444,22 @@
     <spirit:parameter>
       <spirit:name>C_ADDR_I2C_READ</spirit:name>
       <spirit:displayName>C Addr I2c Read</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_READ" spirit:bitStringLength="32">0xAA000004</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_READ" spirit:bitStringLength="25">&quot;0000000000000000000000100&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_ADDR_SAMPA_READ</spirit:name>
       <spirit:displayName>C Addr Sampa Read</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_SAMPA_READ" spirit:bitStringLength="32">0xAA000008</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_SAMPA_READ" spirit:bitStringLength="25">&quot;0000000000000000000001000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_ADDR_I2C_WRITE_ALL</spirit:name>
       <spirit:displayName>C Addr I2c Write All</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_WRITE_ALL" spirit:bitStringLength="32">0xAA00000C</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_WRITE_ALL" spirit:bitStringLength="25">&quot;0000000000000000000001100&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_ADDR_I2C_WRITE</spirit:name>
       <spirit:displayName>C Addr I2c Write</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_WRITE" spirit:bitStringLength="32">0xAA000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_I2C_WRITE" spirit:bitStringLength="25">&quot;0000000000000000000010000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -481,7 +481,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-08-05T02:59:32Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-08-06T02:02:36Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

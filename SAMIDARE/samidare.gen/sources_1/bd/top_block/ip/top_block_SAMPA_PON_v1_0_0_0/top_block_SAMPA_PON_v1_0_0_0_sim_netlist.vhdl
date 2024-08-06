@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Mon Aug  5 12:19:35 2024
+-- Date        : Tue Aug  6 10:40:43 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0/top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl
@@ -16,35 +16,73 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   port (
-    m00_axi_bready : out STD_LOGIC;
-    sampa_power_on : out STD_LOGIC;
-    m00_axi_arvalid : out STD_LOGIC;
-    reads_done_reg_0 : out STD_LOGIC;
-    axi_rready_reg_0 : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    txn : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC;
-    m00_axi_bvalid : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_arready : in STD_LOGIC
+    PON : out STD_LOGIC;
+    INIT_AXI_TXN : in STD_LOGIC;
+    ERROR : out STD_LOGIC;
+    TXN_DONE : out STD_LOGIC;
+    M_AXI_ACLK : in STD_LOGIC;
+    M_AXI_ARESETN : in STD_LOGIC;
+    M_AXI_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_AWVALID : out STD_LOGIC;
+    M_AXI_AWREADY : in STD_LOGIC;
+    M_AXI_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_WVALID : out STD_LOGIC;
+    M_AXI_WREADY : in STD_LOGIC;
+    M_AXI_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_BVALID : in STD_LOGIC;
+    M_AXI_BREADY : out STD_LOGIC;
+    M_AXI_ARADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_ARVALID : out STD_LOGIC;
+    M_AXI_ARREADY : in STD_LOGIC;
+    M_AXI_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_RVALID : in STD_LOGIC;
+    M_AXI_RREADY : out STD_LOGIC
   );
+  attribute C_M_AXI_ADDR_WIDTH : integer;
+  attribute C_M_AXI_ADDR_WIDTH of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 32;
+  attribute C_M_AXI_DATA_WIDTH : integer;
+  attribute C_M_AXI_DATA_WIDTH of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 32;
+  attribute C_M_START_DATA_VALUE : integer;
+  attribute C_M_START_DATA_VALUE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is -1442840576;
+  attribute C_M_TARGET_SLAVE_BASE_ADDR : integer;
+  attribute C_M_TARGET_SLAVE_BASE_ADDR of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is -1073741824;
+  attribute C_M_TRANSACTIONS_NUM : integer;
+  attribute C_M_TRANSACTIONS_NUM of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 4;
+  attribute IDLE : string;
+  attribute IDLE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b00";
+  attribute INIT_COMPARE : string;
+  attribute INIT_COMPARE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b11";
+  attribute INIT_READ : string;
+  attribute INIT_READ of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b10";
+  attribute INIT_WRITE : string;
+  attribute INIT_WRITE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b01";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "SAMPA_PON_v1_0_M00_AXI";
+  attribute POWER_ON_ADDRESS : integer;
+  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 32768;
+  attribute TRANS_NUM_BITS : integer;
+  attribute TRANS_NUM_BITS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 2;
 end top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI;
 
 architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
+  signal \<const0>\ : STD_LOGIC;
   signal FSM_sequential_mst_exec_state_i_1_n_0 : STD_LOGIC;
+  signal \^m_axi_arvalid\ : STD_LOGIC;
+  signal \^m_axi_bready\ : STD_LOGIC;
+  signal \^m_axi_rready\ : STD_LOGIC;
+  signal \^pon\ : STD_LOGIC;
+  signal \^txn_done\ : STD_LOGIC;
   signal axi_arvalid_i_1_n_0 : STD_LOGIC;
   signal axi_bready_i_1_n_0 : STD_LOGIC;
   signal axi_rready_i_1_n_0 : STD_LOGIC;
-  signal \^axi_rready_reg_0\ : STD_LOGIC;
   signal init_txn_ff : STD_LOGIC;
   signal init_txn_ff2 : STD_LOGIC;
   signal last_read : STD_LOGIC;
   signal last_read_i_1_n_0 : STD_LOGIC;
-  signal \^m00_axi_arvalid\ : STD_LOGIC;
-  signal \^m00_axi_bready\ : STD_LOGIC;
   signal mst_exec_state : STD_LOGIC;
   signal \mst_exec_state__0\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -54,8 +92,6 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   signal read_issued_reg_n_0 : STD_LOGIC;
   signal reads_done_i_1_n_0 : STD_LOGIC;
   signal reads_done_i_2_n_0 : STD_LOGIC;
-  signal \^reads_done_reg_0\ : STD_LOGIC;
-  signal \^sampa_power_on\ : STD_LOGIC;
   signal start_single_read0 : STD_LOGIC;
   signal start_single_read_i_1_n_0 : STD_LOGIC;
   signal start_single_read_reg_n_0 : STD_LOGIC;
@@ -67,17 +103,126 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   attribute SOFT_HLUTNM of \read_index[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of reads_done_i_2 : label is "soft_lutpair0";
 begin
-  axi_rready_reg_0 <= \^axi_rready_reg_0\;
-  m00_axi_arvalid <= \^m00_axi_arvalid\;
-  m00_axi_bready <= \^m00_axi_bready\;
-  reads_done_reg_0 <= \^reads_done_reg_0\;
-  sampa_power_on <= \^sampa_power_on\;
+  ERROR <= \<const0>\;
+  M_AXI_ARADDR(31) <= \<const0>\;
+  M_AXI_ARADDR(30) <= \<const0>\;
+  M_AXI_ARADDR(29) <= \<const0>\;
+  M_AXI_ARADDR(28) <= \<const0>\;
+  M_AXI_ARADDR(27) <= \<const0>\;
+  M_AXI_ARADDR(26) <= \<const0>\;
+  M_AXI_ARADDR(25) <= \<const0>\;
+  M_AXI_ARADDR(24) <= \<const0>\;
+  M_AXI_ARADDR(23) <= \<const0>\;
+  M_AXI_ARADDR(22) <= \<const0>\;
+  M_AXI_ARADDR(21) <= \<const0>\;
+  M_AXI_ARADDR(20) <= \<const0>\;
+  M_AXI_ARADDR(19) <= \<const0>\;
+  M_AXI_ARADDR(18) <= \<const0>\;
+  M_AXI_ARADDR(17) <= \<const0>\;
+  M_AXI_ARADDR(16) <= \<const0>\;
+  M_AXI_ARADDR(15) <= \<const0>\;
+  M_AXI_ARADDR(14) <= \<const0>\;
+  M_AXI_ARADDR(13) <= \<const0>\;
+  M_AXI_ARADDR(12) <= \<const0>\;
+  M_AXI_ARADDR(11) <= \<const0>\;
+  M_AXI_ARADDR(10) <= \<const0>\;
+  M_AXI_ARADDR(9) <= \<const0>\;
+  M_AXI_ARADDR(8) <= \<const0>\;
+  M_AXI_ARADDR(7) <= \<const0>\;
+  M_AXI_ARADDR(6) <= \<const0>\;
+  M_AXI_ARADDR(5) <= \<const0>\;
+  M_AXI_ARADDR(4) <= \<const0>\;
+  M_AXI_ARADDR(3) <= \<const0>\;
+  M_AXI_ARADDR(2) <= \<const0>\;
+  M_AXI_ARADDR(1) <= \<const0>\;
+  M_AXI_ARADDR(0) <= \<const0>\;
+  M_AXI_ARPROT(2) <= \<const0>\;
+  M_AXI_ARPROT(1) <= \<const0>\;
+  M_AXI_ARPROT(0) <= \<const0>\;
+  M_AXI_ARVALID <= \^m_axi_arvalid\;
+  M_AXI_AWADDR(31) <= \<const0>\;
+  M_AXI_AWADDR(30) <= \<const0>\;
+  M_AXI_AWADDR(29) <= \<const0>\;
+  M_AXI_AWADDR(28) <= \<const0>\;
+  M_AXI_AWADDR(27) <= \<const0>\;
+  M_AXI_AWADDR(26) <= \<const0>\;
+  M_AXI_AWADDR(25) <= \<const0>\;
+  M_AXI_AWADDR(24) <= \<const0>\;
+  M_AXI_AWADDR(23) <= \<const0>\;
+  M_AXI_AWADDR(22) <= \<const0>\;
+  M_AXI_AWADDR(21) <= \<const0>\;
+  M_AXI_AWADDR(20) <= \<const0>\;
+  M_AXI_AWADDR(19) <= \<const0>\;
+  M_AXI_AWADDR(18) <= \<const0>\;
+  M_AXI_AWADDR(17) <= \<const0>\;
+  M_AXI_AWADDR(16) <= \<const0>\;
+  M_AXI_AWADDR(15) <= \<const0>\;
+  M_AXI_AWADDR(14) <= \<const0>\;
+  M_AXI_AWADDR(13) <= \<const0>\;
+  M_AXI_AWADDR(12) <= \<const0>\;
+  M_AXI_AWADDR(11) <= \<const0>\;
+  M_AXI_AWADDR(10) <= \<const0>\;
+  M_AXI_AWADDR(9) <= \<const0>\;
+  M_AXI_AWADDR(8) <= \<const0>\;
+  M_AXI_AWADDR(7) <= \<const0>\;
+  M_AXI_AWADDR(6) <= \<const0>\;
+  M_AXI_AWADDR(5) <= \<const0>\;
+  M_AXI_AWADDR(4) <= \<const0>\;
+  M_AXI_AWADDR(3) <= \<const0>\;
+  M_AXI_AWADDR(2) <= \<const0>\;
+  M_AXI_AWADDR(1) <= \<const0>\;
+  M_AXI_AWADDR(0) <= \<const0>\;
+  M_AXI_AWPROT(2) <= \<const0>\;
+  M_AXI_AWPROT(1) <= \<const0>\;
+  M_AXI_AWPROT(0) <= \<const0>\;
+  M_AXI_AWVALID <= \<const0>\;
+  M_AXI_BREADY <= \^m_axi_bready\;
+  M_AXI_RREADY <= \^m_axi_rready\;
+  M_AXI_WDATA(31) <= \<const0>\;
+  M_AXI_WDATA(30) <= \<const0>\;
+  M_AXI_WDATA(29) <= \<const0>\;
+  M_AXI_WDATA(28) <= \<const0>\;
+  M_AXI_WDATA(27) <= \<const0>\;
+  M_AXI_WDATA(26) <= \<const0>\;
+  M_AXI_WDATA(25) <= \<const0>\;
+  M_AXI_WDATA(24) <= \<const0>\;
+  M_AXI_WDATA(23) <= \<const0>\;
+  M_AXI_WDATA(22) <= \<const0>\;
+  M_AXI_WDATA(21) <= \<const0>\;
+  M_AXI_WDATA(20) <= \<const0>\;
+  M_AXI_WDATA(19) <= \<const0>\;
+  M_AXI_WDATA(18) <= \<const0>\;
+  M_AXI_WDATA(17) <= \<const0>\;
+  M_AXI_WDATA(16) <= \<const0>\;
+  M_AXI_WDATA(15) <= \<const0>\;
+  M_AXI_WDATA(14) <= \<const0>\;
+  M_AXI_WDATA(13) <= \<const0>\;
+  M_AXI_WDATA(12) <= \<const0>\;
+  M_AXI_WDATA(11) <= \<const0>\;
+  M_AXI_WDATA(10) <= \<const0>\;
+  M_AXI_WDATA(9) <= \<const0>\;
+  M_AXI_WDATA(8) <= \<const0>\;
+  M_AXI_WDATA(7) <= \<const0>\;
+  M_AXI_WDATA(6) <= \<const0>\;
+  M_AXI_WDATA(5) <= \<const0>\;
+  M_AXI_WDATA(4) <= \<const0>\;
+  M_AXI_WDATA(3) <= \<const0>\;
+  M_AXI_WDATA(2) <= \<const0>\;
+  M_AXI_WDATA(1) <= \<const0>\;
+  M_AXI_WDATA(0) <= \<const0>\;
+  M_AXI_WSTRB(3) <= \<const0>\;
+  M_AXI_WSTRB(2) <= \<const0>\;
+  M_AXI_WSTRB(1) <= \<const0>\;
+  M_AXI_WSTRB(0) <= \<const0>\;
+  M_AXI_WVALID <= \<const0>\;
+  PON <= \^pon\;
+  TXN_DONE <= \^txn_done\;
 FSM_sequential_mst_exec_state_i_1: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => m00_axi_aresetn,
+      I0 => M_AXI_ARESETN,
       O => FSM_sequential_mst_exec_state_i_1_n_0
     );
 FSM_sequential_mst_exec_state_i_2: unisim.vcomponents.LUT4
@@ -85,7 +230,7 @@ FSM_sequential_mst_exec_state_i_2: unisim.vcomponents.LUT4
       INIT => X"4474"
     )
         port map (
-      I0 => \^reads_done_reg_0\,
+      I0 => \^txn_done\,
       I1 => mst_exec_state,
       I2 => init_txn_ff,
       I3 => init_txn_ff2,
@@ -93,11 +238,15 @@ FSM_sequential_mst_exec_state_i_2: unisim.vcomponents.LUT4
     );
 FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => \mst_exec_state__0\,
       Q => mst_exec_state,
       R => FSM_sequential_mst_exec_state_i_1_n_0
+    );
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
     );
 axi_arvalid_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -105,16 +254,16 @@ axi_arvalid_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => start_single_read_reg_n_0,
-      I1 => \^m00_axi_arvalid\,
-      I2 => m00_axi_arready,
+      I1 => \^m_axi_arvalid\,
+      I2 => M_AXI_ARREADY,
       O => axi_arvalid_i_1_n_0
     );
 axi_arvalid_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => axi_arvalid_i_1_n_0,
-      Q => \^m00_axi_arvalid\,
+      Q => \^m_axi_arvalid\,
       R => reads_done_i_1_n_0
     );
 axi_bready_i_1: unisim.vcomponents.LUT2
@@ -122,16 +271,16 @@ axi_bready_i_1: unisim.vcomponents.LUT2
       INIT => X"2"
     )
         port map (
-      I0 => m00_axi_bvalid,
-      I1 => \^m00_axi_bready\,
+      I0 => M_AXI_BVALID,
+      I1 => \^m_axi_bready\,
       O => axi_bready_i_1_n_0
     );
 axi_bready_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => axi_bready_i_1_n_0,
-      Q => \^m00_axi_bready\,
+      Q => \^m_axi_bready\,
       R => reads_done_i_1_n_0
     );
 axi_rready_i_1: unisim.vcomponents.LUT2
@@ -139,21 +288,21 @@ axi_rready_i_1: unisim.vcomponents.LUT2
       INIT => X"4"
     )
         port map (
-      I0 => \^axi_rready_reg_0\,
-      I1 => m00_axi_rvalid,
+      I0 => \^m_axi_rready\,
+      I1 => M_AXI_RVALID,
       O => axi_rready_i_1_n_0
     );
 axi_rready_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => axi_rready_i_1_n_0,
-      Q => \^axi_rready_reg_0\,
+      Q => \^m_axi_rready\,
       R => reads_done_i_1_n_0
     );
 init_txn_ff2_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => init_txn_ff,
       Q => init_txn_ff2,
@@ -161,9 +310,9 @@ init_txn_ff2_reg: unisim.vcomponents.FDRE
     );
 init_txn_ff_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
-      D => txn,
+      D => INIT_AXI_TXN,
       Q => init_txn_ff,
       R => FSM_sequential_mst_exec_state_i_1_n_0
     );
@@ -172,7 +321,7 @@ last_read_i_1: unisim.vcomponents.LUT5
       INIT => X"FFFF0008"
     )
         port map (
-      I0 => m00_axi_arready,
+      I0 => M_AXI_ARREADY,
       I1 => read_index(0),
       I2 => read_index(2),
       I3 => read_index(1),
@@ -181,7 +330,7 @@ last_read_i_1: unisim.vcomponents.LUT5
     );
 last_read_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => last_read_i_1_n_0,
       Q => last_read,
@@ -192,17 +341,17 @@ last_read_reg: unisim.vcomponents.FDRE
       INIT => X"B8"
     )
         port map (
-      I0 => m00_axi_rdata(0),
-      I1 => m00_axi_rvalid,
-      I2 => \^sampa_power_on\,
+      I0 => M_AXI_RDATA(0),
+      I1 => M_AXI_RVALID,
+      I2 => \^pon\,
       O => \pon_r[0]_i_1_n_0\
     );
 \pon_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => \pon_r[0]_i_1_n_0\,
-      Q => \^sampa_power_on\,
+      Q => \^pon\,
       R => '0'
     );
 \read_index[0]_i_1\: unisim.vcomponents.LUT1
@@ -234,7 +383,7 @@ last_read_reg: unisim.vcomponents.FDRE
     );
 \read_index_reg[0]\: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => start_single_read_reg_n_0,
       D => p_1_in(0),
       Q => read_index(0),
@@ -242,7 +391,7 @@ last_read_reg: unisim.vcomponents.FDRE
     );
 \read_index_reg[1]\: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => start_single_read_reg_n_0,
       D => p_1_in(1),
       Q => read_index(1),
@@ -250,7 +399,7 @@ last_read_reg: unisim.vcomponents.FDRE
     );
 \read_index_reg[2]\: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => start_single_read_reg_n_0,
       D => p_1_in(2),
       Q => read_index(2),
@@ -262,15 +411,15 @@ read_issued_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => mst_exec_state,
-      I1 => \^reads_done_reg_0\,
+      I1 => \^txn_done\,
       I2 => start_single_read0,
-      I3 => \^axi_rready_reg_0\,
+      I3 => \^m_axi_rready\,
       I4 => read_issued_reg_n_0,
       O => read_issued_i_1_n_0
     );
 read_issued_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => read_issued_i_1_n_0,
       Q => read_issued_reg_n_0,
@@ -283,7 +432,7 @@ reads_done_i_1: unisim.vcomponents.LUT3
         port map (
       I0 => init_txn_ff2,
       I1 => init_txn_ff,
-      I2 => m00_axi_aresetn,
+      I2 => M_AXI_ARESETN,
       O => reads_done_i_1_n_0
     );
 reads_done_i_2: unisim.vcomponents.LUT4
@@ -291,18 +440,18 @@ reads_done_i_2: unisim.vcomponents.LUT4
       INIT => X"FF80"
     )
         port map (
-      I0 => \^axi_rready_reg_0\,
-      I1 => m00_axi_rvalid,
+      I0 => \^m_axi_rready\,
+      I1 => M_AXI_RVALID,
       I2 => last_read,
-      I3 => \^reads_done_reg_0\,
+      I3 => \^txn_done\,
       O => reads_done_i_2_n_0
     );
 reads_done_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => reads_done_i_2_n_0,
-      Q => \^reads_done_reg_0\,
+      Q => \^txn_done\,
       R => reads_done_i_1_n_0
     );
 start_single_read_i_1: unisim.vcomponents.LUT5
@@ -311,9 +460,9 @@ start_single_read_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => mst_exec_state,
-      I1 => \^reads_done_reg_0\,
+      I1 => \^txn_done\,
       I2 => start_single_read0,
-      I3 => \^axi_rready_reg_0\,
+      I3 => \^m_axi_rready\,
       I4 => start_single_read_reg_n_0,
       O => start_single_read_i_1_n_0
     );
@@ -323,15 +472,15 @@ start_single_read_i_2: unisim.vcomponents.LUT5
     )
         port map (
       I0 => last_read,
-      I1 => m00_axi_rvalid,
+      I1 => M_AXI_RVALID,
       I2 => read_issued_reg_n_0,
       I3 => start_single_read_reg_n_0,
-      I4 => \^m00_axi_arvalid\,
+      I4 => \^m_axi_arvalid\,
       O => start_single_read0
     );
 start_single_read_reg: unisim.vcomponents.FDRE
      port map (
-      C => m00_axi_aclk,
+      C => M_AXI_ACLK,
       CE => '1',
       D => start_single_read_i_1_n_0,
       Q => start_single_read_reg_n_0,
@@ -344,23 +493,52 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   port (
-    m00_axi_bready : out STD_LOGIC;
-    axi_rready_reg : out STD_LOGIC;
-    reads_done_reg : out STD_LOGIC;
-    m00_axi_arvalid : out STD_LOGIC;
     sampa_power_on : out STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC;
-    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_init_axi_txn : in STD_LOGIC;
+    m00_axi_error : out STD_LOGIC;
+    m00_axi_txn_done : out STD_LOGIC;
     m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC;
+    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_awvalid : out STD_LOGIC;
+    m00_axi_awready : in STD_LOGIC;
+    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axi_wvalid : out STD_LOGIC;
+    m00_axi_wready : in STD_LOGIC;
+    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_arvalid : out STD_LOGIC;
+    m00_axi_arready : in STD_LOGIC;
+    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m00_axi_arready : in STD_LOGIC
+    m00_axi_rready : out STD_LOGIC
   );
+  attribute C_M00_AXI_ADDR_WIDTH : integer;
+  attribute C_M00_AXI_ADDR_WIDTH of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 32;
+  attribute C_M00_AXI_DATA_WIDTH : integer;
+  attribute C_M00_AXI_DATA_WIDTH of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 32;
+  attribute C_M00_AXI_START_DATA_VALUE : integer;
+  attribute C_M00_AXI_START_DATA_VALUE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is -1442840576;
+  attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR : integer;
+  attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is -1073741824;
+  attribute C_M00_AXI_TRANSACTIONS_NUM : integer;
+  attribute C_M00_AXI_TRANSACTIONS_NUM of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 4;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is "SAMPA_PON_v1_0";
+  attribute POWER_ON_ADDRESS : integer;
+  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 32768;
+  attribute keep_hierarchy : string;
+  attribute keep_hierarchy of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is "soft";
 end top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0;
 
 architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
+  signal \<const0>\ : STD_LOGIC;
   signal \cnt[0]_i_2_n_0\ : STD_LOGIC;
   signal cnt_reg : STD_LOGIC_VECTOR ( 27 downto 0 );
   signal \cnt_reg[0]_i_1_n_0\ : STD_LOGIC;
@@ -425,23 +603,153 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   signal txn_i_4_n_0 : STD_LOGIC;
   signal txn_i_5_n_0 : STD_LOGIC;
   signal txn_i_6_n_0 : STD_LOGIC;
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_ERROR_UNCONNECTED : STD_LOGIC;
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWVALID_UNCONNECTED : STD_LOGIC;
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WVALID_UNCONNECTED : STD_LOGIC;
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_ARADDR_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_ARPROT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWADDR_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWPROT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_cnt_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_cnt_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 4 );
+  attribute C_M_AXI_ADDR_WIDTH : integer;
+  attribute C_M_AXI_ADDR_WIDTH of SAMPA_PON_v1_0_M00_AXI_inst : label is 32;
+  attribute C_M_AXI_DATA_WIDTH : integer;
+  attribute C_M_AXI_DATA_WIDTH of SAMPA_PON_v1_0_M00_AXI_inst : label is 32;
+  attribute C_M_START_DATA_VALUE : integer;
+  attribute C_M_START_DATA_VALUE of SAMPA_PON_v1_0_M00_AXI_inst : label is -1442840576;
+  attribute C_M_TARGET_SLAVE_BASE_ADDR : integer;
+  attribute C_M_TARGET_SLAVE_BASE_ADDR of SAMPA_PON_v1_0_M00_AXI_inst : label is -1073741824;
+  attribute C_M_TRANSACTIONS_NUM : integer;
+  attribute C_M_TRANSACTIONS_NUM of SAMPA_PON_v1_0_M00_AXI_inst : label is 4;
+  attribute IDLE : string;
+  attribute IDLE of SAMPA_PON_v1_0_M00_AXI_inst : label is "2'b00";
+  attribute INIT_COMPARE : string;
+  attribute INIT_COMPARE of SAMPA_PON_v1_0_M00_AXI_inst : label is "2'b11";
+  attribute INIT_READ : string;
+  attribute INIT_READ of SAMPA_PON_v1_0_M00_AXI_inst : label is "2'b10";
+  attribute INIT_WRITE : string;
+  attribute INIT_WRITE of SAMPA_PON_v1_0_M00_AXI_inst : label is "2'b01";
+  attribute KEEP_HIERARCHY of SAMPA_PON_v1_0_M00_AXI_inst : label is "soft";
+  attribute POWER_ON_ADDRESS of SAMPA_PON_v1_0_M00_AXI_inst : label is 32768;
+  attribute TRANS_NUM_BITS : integer;
+  attribute TRANS_NUM_BITS of SAMPA_PON_v1_0_M00_AXI_inst : label is 2;
+  attribute mark_debug : string;
+  attribute mark_debug of sampa_power_on : signal is "true";
+  attribute mark_debug of m00_axi_araddr : signal is "true";
+  attribute mark_debug of m00_axi_rdata : signal is "true";
 begin
+  m00_axi_arprot(2) <= \<const0>\;
+  m00_axi_arprot(1) <= \<const0>\;
+  m00_axi_arprot(0) <= \<const0>\;
+  m00_axi_awaddr(31) <= \<const0>\;
+  m00_axi_awaddr(30) <= \<const0>\;
+  m00_axi_awaddr(29) <= \<const0>\;
+  m00_axi_awaddr(28) <= \<const0>\;
+  m00_axi_awaddr(27) <= \<const0>\;
+  m00_axi_awaddr(26) <= \<const0>\;
+  m00_axi_awaddr(25) <= \<const0>\;
+  m00_axi_awaddr(24) <= \<const0>\;
+  m00_axi_awaddr(23) <= \<const0>\;
+  m00_axi_awaddr(22) <= \<const0>\;
+  m00_axi_awaddr(21) <= \<const0>\;
+  m00_axi_awaddr(20) <= \<const0>\;
+  m00_axi_awaddr(19) <= \<const0>\;
+  m00_axi_awaddr(18) <= \<const0>\;
+  m00_axi_awaddr(17) <= \<const0>\;
+  m00_axi_awaddr(16) <= \<const0>\;
+  m00_axi_awaddr(15) <= \<const0>\;
+  m00_axi_awaddr(14) <= \<const0>\;
+  m00_axi_awaddr(13) <= \<const0>\;
+  m00_axi_awaddr(12) <= \<const0>\;
+  m00_axi_awaddr(11) <= \<const0>\;
+  m00_axi_awaddr(10) <= \<const0>\;
+  m00_axi_awaddr(9) <= \<const0>\;
+  m00_axi_awaddr(8) <= \<const0>\;
+  m00_axi_awaddr(7) <= \<const0>\;
+  m00_axi_awaddr(6) <= \<const0>\;
+  m00_axi_awaddr(5) <= \<const0>\;
+  m00_axi_awaddr(4) <= \<const0>\;
+  m00_axi_awaddr(3) <= \<const0>\;
+  m00_axi_awaddr(2) <= \<const0>\;
+  m00_axi_awaddr(1) <= \<const0>\;
+  m00_axi_awaddr(0) <= \<const0>\;
+  m00_axi_awprot(2) <= \<const0>\;
+  m00_axi_awprot(1) <= \<const0>\;
+  m00_axi_awprot(0) <= \<const0>\;
+  m00_axi_awvalid <= \<const0>\;
+  m00_axi_error <= \<const0>\;
+  m00_axi_wdata(31) <= \<const0>\;
+  m00_axi_wdata(30) <= \<const0>\;
+  m00_axi_wdata(29) <= \<const0>\;
+  m00_axi_wdata(28) <= \<const0>\;
+  m00_axi_wdata(27) <= \<const0>\;
+  m00_axi_wdata(26) <= \<const0>\;
+  m00_axi_wdata(25) <= \<const0>\;
+  m00_axi_wdata(24) <= \<const0>\;
+  m00_axi_wdata(23) <= \<const0>\;
+  m00_axi_wdata(22) <= \<const0>\;
+  m00_axi_wdata(21) <= \<const0>\;
+  m00_axi_wdata(20) <= \<const0>\;
+  m00_axi_wdata(19) <= \<const0>\;
+  m00_axi_wdata(18) <= \<const0>\;
+  m00_axi_wdata(17) <= \<const0>\;
+  m00_axi_wdata(16) <= \<const0>\;
+  m00_axi_wdata(15) <= \<const0>\;
+  m00_axi_wdata(14) <= \<const0>\;
+  m00_axi_wdata(13) <= \<const0>\;
+  m00_axi_wdata(12) <= \<const0>\;
+  m00_axi_wdata(11) <= \<const0>\;
+  m00_axi_wdata(10) <= \<const0>\;
+  m00_axi_wdata(9) <= \<const0>\;
+  m00_axi_wdata(8) <= \<const0>\;
+  m00_axi_wdata(7) <= \<const0>\;
+  m00_axi_wdata(6) <= \<const0>\;
+  m00_axi_wdata(5) <= \<const0>\;
+  m00_axi_wdata(4) <= \<const0>\;
+  m00_axi_wdata(3) <= \<const0>\;
+  m00_axi_wdata(2) <= \<const0>\;
+  m00_axi_wdata(1) <= \<const0>\;
+  m00_axi_wdata(0) <= \<const0>\;
+  m00_axi_wstrb(3) <= \<const0>\;
+  m00_axi_wstrb(2) <= \<const0>\;
+  m00_axi_wstrb(1) <= \<const0>\;
+  m00_axi_wstrb(0) <= \<const0>\;
+  m00_axi_wvalid <= \<const0>\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
 SAMPA_PON_v1_0_M00_AXI_inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI
      port map (
-      axi_rready_reg_0 => axi_rready_reg,
-      m00_axi_aclk => m00_axi_aclk,
-      m00_axi_aresetn => m00_axi_aresetn,
-      m00_axi_arready => m00_axi_arready,
-      m00_axi_arvalid => m00_axi_arvalid,
-      m00_axi_bready => m00_axi_bready,
-      m00_axi_bvalid => m00_axi_bvalid,
-      m00_axi_rdata(0) => m00_axi_rdata(0),
-      m00_axi_rvalid => m00_axi_rvalid,
-      reads_done_reg_0 => reads_done_reg,
-      sampa_power_on => sampa_power_on,
-      txn => txn
+      ERROR => NLW_SAMPA_PON_v1_0_M00_AXI_inst_ERROR_UNCONNECTED,
+      INIT_AXI_TXN => txn,
+      M_AXI_ACLK => m00_axi_aclk,
+      M_AXI_ARADDR(31 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_ARADDR_UNCONNECTED(31 downto 0),
+      M_AXI_ARESETN => m00_axi_aresetn,
+      M_AXI_ARPROT(2 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_ARPROT_UNCONNECTED(2 downto 0),
+      M_AXI_ARREADY => m00_axi_arready,
+      M_AXI_ARVALID => m00_axi_arvalid,
+      M_AXI_AWADDR(31 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWADDR_UNCONNECTED(31 downto 0),
+      M_AXI_AWPROT(2 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWPROT_UNCONNECTED(2 downto 0),
+      M_AXI_AWREADY => '0',
+      M_AXI_AWVALID => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWVALID_UNCONNECTED,
+      M_AXI_BREADY => m00_axi_bready,
+      M_AXI_BRESP(1 downto 0) => B"00",
+      M_AXI_BVALID => m00_axi_bvalid,
+      M_AXI_RDATA(31 downto 1) => B"0000000000000000000000000000000",
+      M_AXI_RDATA(0) => m00_axi_rdata(0),
+      M_AXI_RREADY => m00_axi_rready,
+      M_AXI_RRESP(1 downto 0) => B"00",
+      M_AXI_RVALID => m00_axi_rvalid,
+      M_AXI_WDATA(31 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WDATA_UNCONNECTED(31 downto 0),
+      M_AXI_WREADY => '0',
+      M_AXI_WSTRB(3 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WSTRB_UNCONNECTED(3 downto 0),
+      M_AXI_WVALID => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WVALID_UNCONNECTED,
+      PON => sampa_power_on,
+      TXN_DONE => m00_axi_txn_done
     );
 \cnt[0]_i_2\: unisim.vcomponents.LUT1
     generic map(
@@ -762,6 +1070,262 @@ SAMPA_PON_v1_0_M00_AXI_inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_
       Q => cnt_reg(9),
       R => '0'
     );
+i_0: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '1',
+      O => m00_axi_araddr(31)
+    );
+i_1: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '1',
+      O => m00_axi_araddr(30)
+    );
+i_10: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(21)
+    );
+i_11: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(20)
+    );
+i_12: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(19)
+    );
+i_13: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(18)
+    );
+i_14: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(17)
+    );
+i_15: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(16)
+    );
+i_16: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '1',
+      O => m00_axi_araddr(15)
+    );
+i_17: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(14)
+    );
+i_18: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(13)
+    );
+i_19: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(12)
+    );
+i_2: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(29)
+    );
+i_20: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(11)
+    );
+i_21: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(10)
+    );
+i_22: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(9)
+    );
+i_23: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(8)
+    );
+i_24: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(7)
+    );
+i_25: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(6)
+    );
+i_26: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(5)
+    );
+i_27: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(4)
+    );
+i_28: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(3)
+    );
+i_29: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(2)
+    );
+i_3: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(28)
+    );
+i_30: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(1)
+    );
+i_31: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(0)
+    );
+i_4: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(27)
+    );
+i_5: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(26)
+    );
+i_6: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(25)
+    );
+i_7: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(24)
+    );
+i_8: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(23)
+    );
+i_9: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => '0',
+      O => m00_axi_araddr(22)
+    );
 txn_i_1: unisim.vcomponents.LUT5
     generic map(
       INIT => X"80000000"
@@ -893,6 +1457,28 @@ end top_block_SAMPA_PON_v1_0_0_0;
 architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
+  signal NLW_inst_m00_axi_awvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_m00_axi_error_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_m00_axi_wvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_m00_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_inst_m00_axi_awaddr_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_inst_m00_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_inst_m00_axi_wdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_inst_m00_axi_wstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  attribute C_M00_AXI_ADDR_WIDTH : integer;
+  attribute C_M00_AXI_ADDR_WIDTH of inst : label is 32;
+  attribute C_M00_AXI_DATA_WIDTH : integer;
+  attribute C_M00_AXI_DATA_WIDTH of inst : label is 32;
+  attribute C_M00_AXI_START_DATA_VALUE : integer;
+  attribute C_M00_AXI_START_DATA_VALUE of inst : label is -1442840576;
+  attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR : integer;
+  attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR of inst : label is -1073741824;
+  attribute C_M00_AXI_TRANSACTIONS_NUM : integer;
+  attribute C_M00_AXI_TRANSACTIONS_NUM of inst : label is 4;
+  attribute KEEP_HIERARCHY : string;
+  attribute KEEP_HIERARCHY of inst : label is "soft";
+  attribute POWER_ON_ADDRESS : integer;
+  attribute POWER_ON_ADDRESS of inst : label is 32768;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -920,42 +1506,10 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0 is
   attribute X_INTERFACE_INFO of m00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 m00_axi WDATA";
   attribute X_INTERFACE_INFO of m00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 m00_axi WSTRB";
 begin
-  m00_axi_araddr(31) <= \<const0>\;
-  m00_axi_araddr(30) <= \<const1>\;
-  m00_axi_araddr(29) <= \<const0>\;
-  m00_axi_araddr(28) <= \<const0>\;
-  m00_axi_araddr(27) <= \<const0>\;
-  m00_axi_araddr(26) <= \<const0>\;
-  m00_axi_araddr(25) <= \<const0>\;
-  m00_axi_araddr(24) <= \<const0>\;
-  m00_axi_araddr(23) <= \<const0>\;
-  m00_axi_araddr(22) <= \<const0>\;
-  m00_axi_araddr(21) <= \<const0>\;
-  m00_axi_araddr(20) <= \<const0>\;
-  m00_axi_araddr(19) <= \<const0>\;
-  m00_axi_araddr(18) <= \<const0>\;
-  m00_axi_araddr(17) <= \<const0>\;
-  m00_axi_araddr(16) <= \<const0>\;
-  m00_axi_araddr(15) <= \<const1>\;
-  m00_axi_araddr(14) <= \<const1>\;
-  m00_axi_araddr(13) <= \<const1>\;
-  m00_axi_araddr(12) <= \<const1>\;
-  m00_axi_araddr(11) <= \<const0>\;
-  m00_axi_araddr(10) <= \<const0>\;
-  m00_axi_araddr(9) <= \<const0>\;
-  m00_axi_araddr(8) <= \<const0>\;
-  m00_axi_araddr(7) <= \<const0>\;
-  m00_axi_araddr(6) <= \<const0>\;
-  m00_axi_araddr(5) <= \<const0>\;
-  m00_axi_araddr(4) <= \<const0>\;
-  m00_axi_araddr(3) <= \<const0>\;
-  m00_axi_araddr(2) <= \<const0>\;
-  m00_axi_araddr(1) <= \<const0>\;
-  m00_axi_araddr(0) <= \<const0>\;
   m00_axi_arprot(2) <= \<const0>\;
   m00_axi_arprot(1) <= \<const0>\;
   m00_axi_arprot(0) <= \<const1>\;
-  m00_axi_awaddr(31) <= \<const0>\;
+  m00_axi_awaddr(31) <= \<const1>\;
   m00_axi_awaddr(30) <= \<const1>\;
   m00_axi_awaddr(29) <= \<const0>\;
   m00_axi_awaddr(28) <= \<const0>\;
@@ -1039,16 +1593,30 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0
      port map (
-      axi_rready_reg => m00_axi_rready,
       m00_axi_aclk => m00_axi_aclk,
+      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
+      m00_axi_arprot(2 downto 0) => NLW_inst_m00_axi_arprot_UNCONNECTED(2 downto 0),
       m00_axi_arready => m00_axi_arready,
       m00_axi_arvalid => m00_axi_arvalid,
+      m00_axi_awaddr(31 downto 0) => NLW_inst_m00_axi_awaddr_UNCONNECTED(31 downto 0),
+      m00_axi_awprot(2 downto 0) => NLW_inst_m00_axi_awprot_UNCONNECTED(2 downto 0),
+      m00_axi_awready => '0',
+      m00_axi_awvalid => NLW_inst_m00_axi_awvalid_UNCONNECTED,
       m00_axi_bready => m00_axi_bready,
+      m00_axi_bresp(1 downto 0) => B"00",
       m00_axi_bvalid => m00_axi_bvalid,
-      m00_axi_rdata(0) => m00_axi_rdata(0),
+      m00_axi_error => NLW_inst_m00_axi_error_UNCONNECTED,
+      m00_axi_init_axi_txn => '0',
+      m00_axi_rdata(31 downto 0) => m00_axi_rdata(31 downto 0),
+      m00_axi_rready => m00_axi_rready,
+      m00_axi_rresp(1 downto 0) => B"00",
       m00_axi_rvalid => m00_axi_rvalid,
-      reads_done_reg => m00_axi_txn_done,
+      m00_axi_txn_done => m00_axi_txn_done,
+      m00_axi_wdata(31 downto 0) => NLW_inst_m00_axi_wdata_UNCONNECTED(31 downto 0),
+      m00_axi_wready => '0',
+      m00_axi_wstrb(3 downto 0) => NLW_inst_m00_axi_wstrb_UNCONNECTED(3 downto 0),
+      m00_axi_wvalid => NLW_inst_m00_axi_wvalid_UNCONNECTED,
       sampa_power_on => sampa_power_on
     );
 end STRUCTURE;

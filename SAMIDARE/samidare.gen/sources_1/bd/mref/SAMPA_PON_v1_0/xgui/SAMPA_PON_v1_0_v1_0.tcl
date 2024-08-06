@@ -8,7 +8,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "C_M00_AXI_START_DATA_VALUE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_M00_AXI_TARGET_SLAVE_BASE_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_M00_AXI_TRANSACTIONS_NUM" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "LED_ADDRESS" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "POWER_ON_ADDRESS" -parent ${Page_0}
 
 
 }
@@ -58,19 +58,19 @@ proc validate_PARAM_VALUE.C_M00_AXI_TRANSACTIONS_NUM { PARAM_VALUE.C_M00_AXI_TRA
 	return true
 }
 
-proc update_PARAM_VALUE.LED_ADDRESS { PARAM_VALUE.LED_ADDRESS } {
-	# Procedure called to update LED_ADDRESS when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.POWER_ON_ADDRESS { PARAM_VALUE.POWER_ON_ADDRESS } {
+	# Procedure called to update POWER_ON_ADDRESS when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.LED_ADDRESS { PARAM_VALUE.LED_ADDRESS } {
-	# Procedure called to validate LED_ADDRESS
+proc validate_PARAM_VALUE.POWER_ON_ADDRESS { PARAM_VALUE.POWER_ON_ADDRESS } {
+	# Procedure called to validate POWER_ON_ADDRESS
 	return true
 }
 
 
-proc update_MODELPARAM_VALUE.LED_ADDRESS { MODELPARAM_VALUE.LED_ADDRESS PARAM_VALUE.LED_ADDRESS } {
+proc update_MODELPARAM_VALUE.POWER_ON_ADDRESS { MODELPARAM_VALUE.POWER_ON_ADDRESS PARAM_VALUE.POWER_ON_ADDRESS } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.LED_ADDRESS}] ${MODELPARAM_VALUE.LED_ADDRESS}
+	set_property value [get_property value ${PARAM_VALUE.POWER_ON_ADDRESS}] ${MODELPARAM_VALUE.POWER_ON_ADDRESS}
 }
 
 proc update_MODELPARAM_VALUE.C_M00_AXI_START_DATA_VALUE { MODELPARAM_VALUE.C_M00_AXI_START_DATA_VALUE PARAM_VALUE.C_M00_AXI_START_DATA_VALUE } {

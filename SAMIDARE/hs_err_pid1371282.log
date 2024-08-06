@@ -1,0 +1,12 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbefecb) [0x7fe87b5efecb]
+/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(JVM_handle_linux_signal+0xd1) [0x7fe87b5f6c81]
+/opt/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbead23) [0x7fe87b5ead23]
+/opt/Xilinx/Vivado/2022.2/tps/lnx64/javafx-sdk-11.0.2/lib/libjfxwebkit.so(+0x205ae18) [0x7fe832929e18]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7fe8b8019520]
+/opt/Xilinx/Vivado/2022.2/lib/lnx64.o/librdi_coregen.so(HRSBMoBlk::getParent()+0x7) [0x7fe8a4509127]
+/opt/Xilinx/Vivado/2022.2/lib/lnx64.o/librdi_rsb.so(Java_ui_data_rsbi_RSBBlock_1getParent+0x17) [0x7fe892fc6237]
+[0x7fe869fc6d84]

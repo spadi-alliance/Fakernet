@@ -77,6 +77,8 @@ set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 8
 set_param power.BramSDPPropagationFix 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/mref
@@ -91,6 +93,13 @@ set_property parent.project_path /home/nagafusa/work/spadi/Fakernet/SAMIDARE/sam
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths {
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

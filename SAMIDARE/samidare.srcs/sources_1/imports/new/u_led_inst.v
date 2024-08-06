@@ -26,6 +26,7 @@ module u_led_inst(
     input enable,
     
     input fnet_txn,
+    input power_on,
     
     input [31:0] LED_REG0,
     input [31:0] LED_REG1,
@@ -124,7 +125,8 @@ module u_led_inst(
 //    assign LED[0] = r0[0];
 //    assign LED[1] = r1[0];
     assign LED[0] = txn_acc[0];
-    assign LED[1] = fnet_txn_acc[0];    
+    assign LED[1] = power_on;    
+//    assign LED[1] = fnet_txn_acc[0];    
     assign LED[2] = r2[0];
     assign LED[3] = r3[0];
     assign INIT_AXI_TXN = axi_txn;

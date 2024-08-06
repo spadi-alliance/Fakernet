@@ -10,111 +10,236 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,025"></ZoomEndTime>
+      <ZoomEndTime time="6"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="419"></NameColumnWidth>
-      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+      <ValueColumnWidth column_width="136"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject type="logic" fp_name="top_block_i/fakernet/regacc_read_o">
+   <WVObjectSize size="32" />
+   <wvobject type="array" fp_name="u_ila_1_i2c_rdata_i">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/fakernet/regacc_read_o</obj_property>
-      <obj_property name="ObjectShortName">regacc_read_o</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/native_to_axi_lite_v_0/regacc_read">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_1">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/native_to_axi_lite_v_0/regacc_read</obj_property>
-      <obj_property name="ObjectShortName">regacc_read</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_1</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_COMPLETE">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_2">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_COMPLETE</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_COMPLETE</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_2</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_2</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_arvalid">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_3">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_arvalid</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_arvalid</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_3</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_3</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_arvalid_1">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_4">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_arvalid_1</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_arvalid_1</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_4</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_4</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_bready">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_5">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_bready</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_bready</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_5</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_5</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_bready_1">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_6">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_bready_1</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_bready_1</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_6</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_6</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_bvalid">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_7">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_bvalid</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_bvalid</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_7</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_7</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_bvalid_1">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_8">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_bvalid_1</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_bvalid_1</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_8</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_8</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_txn_done">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_9">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_txn_done</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_txn_done</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_9</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_9</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_m00_axi_txn_done_1">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_10">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_m00_axi_txn_done_1</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_m00_axi_txn_done_1</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_10</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_10</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_regacc_write">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_11">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_regacc_write</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_regacc_write</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_11</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_11</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_regacc_write_1">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_12">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_regacc_write_1</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_regacc_write_1</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_12</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_12</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_rst_clk_wiz_0_125M_peripheral_aresetn">
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_13">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_rst_clk_wiz_0_125M_peripheral_aresetn</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_rst_clk_wiz_0_125M_peripheral_aresetn</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_13</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_13</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_14">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_14</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_14</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_15">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_15</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_15</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_16">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_16</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_16</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_17">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_17</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_17</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_18">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_18</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_18</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_19">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_19</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_19</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_20">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_20</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_20</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_21">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_21</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_21</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_22">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_22</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_22</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_23">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_23</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_23</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_24">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_24</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_24</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_25">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_25</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_25</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_26">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_26</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_26</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_27">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_27</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_27</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_28">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_28</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_28</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_29">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_29</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_29</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_30">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_30</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_30</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_i2c_rdata_i[0]_31">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_i2c_rdata_i[0]_31</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_i2c_rdata_i[0]_31</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
