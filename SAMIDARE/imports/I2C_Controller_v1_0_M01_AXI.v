@@ -188,8 +188,8 @@
 	// I/O Connections assignments
 
 	//Adding the offset address to the base addr of the slave
-//	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_awaddr;
-	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + WADDR;
+	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_awaddr;
+//	assign M_AXI_AWADDR	= C_M_TARGET_SLAVE_BASE_ADDR + WADDR;
 	//AXI 4 write data
 	assign M_AXI_WDATA	= axi_wdata;
 	assign M_AXI_AWPROT	= 3'b000;

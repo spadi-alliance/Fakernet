@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Thu Jul  4 14:08:12 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_0_1/top_block_util_vector_logic_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top top_block_util_vector_logic_0_1 -prefix
+--               top_block_util_vector_logic_0_1_ top_block_util_vector_logic_0_1_stub.vhdl
 -- Design      : top_block_util_vector_logic_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-sbvb484-1-i

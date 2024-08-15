@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Aug  6 18:05:13 2024
+//Date        : Thu Aug 15 16:09:22 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block_wrapper.bd
 //Design      : top_block_wrapper
@@ -11,8 +11,8 @@
 
 module top_block_wrapper
    (BASECLK,
+    BX_SYNC_TRG_N,
     BX_SYNC_TRG_P,
-    BX_SYNX_TRG_N,
     CLKSOIN_N,
     CLKSOIN_P,
     CLK_CFG,
@@ -26,8 +26,6 @@ module top_block_wrapper
     PUSH_SW,
     SAMPA_EN_A,
     SAMPA_EN_D,
-    SAMPA_I2C_SCL,
-    SAMPA_I2C_SDA,
     SFP0RXN,
     SFP0RXP,
     SFP0TXN,
@@ -42,11 +40,13 @@ module top_block_wrapper
     SO2P,
     SO3N,
     SO3P,
+    S_I2C_SCL,
+    S_I2C_SDA,
     TRG_N,
     TRG_P);
   input BASECLK;
+  output [0:0]BX_SYNC_TRG_N;
   output [0:0]BX_SYNC_TRG_P;
-  output [0:0]BX_SYNX_TRG_N;
   output [3:0]CLKSOIN_N;
   output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
@@ -60,8 +60,6 @@ module top_block_wrapper
   input PUSH_SW;
   output SAMPA_EN_A;
   output SAMPA_EN_D;
-  inout SAMPA_I2C_SCL;
-  inout SAMPA_I2C_SDA;
   input SFP0RXN;
   input SFP0RXP;
   output SFP0TXN;
@@ -76,12 +74,14 @@ module top_block_wrapper
   input [10:0]SO2P;
   input [10:0]SO3N;
   input [10:0]SO3P;
+  inout S_I2C_SCL;
+  inout S_I2C_SDA;
   output [3:0]TRG_N;
   output [3:0]TRG_P;
 
   wire BASECLK;
+  wire [0:0]BX_SYNC_TRG_N;
   wire [0:0]BX_SYNC_TRG_P;
-  wire [0:0]BX_SYNX_TRG_N;
   wire [3:0]CLKSOIN_N;
   wire [3:0]CLKSOIN_P;
   wire [6:0]CLK_CFG;
@@ -95,8 +95,6 @@ module top_block_wrapper
   wire PUSH_SW;
   wire SAMPA_EN_A;
   wire SAMPA_EN_D;
-  wire SAMPA_I2C_SCL;
-  wire SAMPA_I2C_SDA;
   wire SFP0RXN;
   wire SFP0RXP;
   wire SFP0TXN;
@@ -111,13 +109,15 @@ module top_block_wrapper
   wire [10:0]SO2P;
   wire [10:0]SO3N;
   wire [10:0]SO3P;
+  wire S_I2C_SCL;
+  wire S_I2C_SDA;
   wire [3:0]TRG_N;
   wire [3:0]TRG_P;
 
   top_block top_block_i
        (.BASECLK(BASECLK),
+        .BX_SYNC_TRG_N(BX_SYNC_TRG_N),
         .BX_SYNC_TRG_P(BX_SYNC_TRG_P),
-        .BX_SYNX_TRG_N(BX_SYNX_TRG_N),
         .CLKSOIN_N(CLKSOIN_N),
         .CLKSOIN_P(CLKSOIN_P),
         .CLK_CFG(CLK_CFG),
@@ -131,8 +131,6 @@ module top_block_wrapper
         .PUSH_SW(PUSH_SW),
         .SAMPA_EN_A(SAMPA_EN_A),
         .SAMPA_EN_D(SAMPA_EN_D),
-        .SAMPA_I2C_SCL(SAMPA_I2C_SCL),
-        .SAMPA_I2C_SDA(SAMPA_I2C_SDA),
         .SFP0RXN(SFP0RXN),
         .SFP0RXP(SFP0RXP),
         .SFP0TXN(SFP0TXN),
@@ -147,6 +145,8 @@ module top_block_wrapper
         .SO2P(SO2P),
         .SO3N(SO3N),
         .SO3P(SO3P),
+        .S_I2C_SCL(S_I2C_SCL),
+        .S_I2C_SDA(S_I2C_SDA),
         .TRG_N(TRG_N),
         .TRG_P(TRG_P));
 endmodule

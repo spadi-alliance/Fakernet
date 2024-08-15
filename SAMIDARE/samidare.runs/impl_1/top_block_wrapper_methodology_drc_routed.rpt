@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Aug  6 19:06:50 2024
+| Date         : Thu Aug 15 16:51:21 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_methodology -file top_block_wrapper_methodology_drc_routed.rpt -pb top_block_wrapper_methodology_drc_routed.pb -rpx top_block_wrapper_methodology_drc_routed.rpx
 | Design       : top_block_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: checkpoint_top_block_wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 22
+             Violations found: 24
 +-----------+------------------+--------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                            | Violations |
 +-----------+------------------+--------------------------------------------------------+------------+
@@ -34,6 +34,7 @@ Table of Contents
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin              | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                           | 7          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                      | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                          | 2          |
 | XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
 | CLKC-5    | Advisory         | BUFGCE with constant CE has BUFG driver                | 1          |
@@ -147,6 +148,16 @@ Related violations: <none>
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on S_I2C_SCL relative to clock(s) BASECLK
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on S_I2C_SDA relative to clock(s) BASECLK
 Related violations: <none>
 
 XDCC-1#1 Warning

@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Tue Aug  6 16:49:22 2024
+// Date        : Fri Aug  9 12:48:21 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_I2C_Controller_v1_0_0_1 -prefix
+//               top_block_I2C_Controller_v1_0_0_1_ top_block_I2C_Controller_v1_0_0_1_sim_netlist.v
 // Design      : top_block_I2C_Controller_v1_0_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,302 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "top_block_I2C_Controller_v1_0_0_1,I2C_Controller_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "I2C_Controller_v1_0,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module top_block_I2C_Controller_v1_0_0_1
-   (start_i2c_read,
-    start_i2c_write,
-    start_i2c_write_all,
-    i2c_waddr_i,
-    i2c_raddr_i,
-    i2c_rdata_o,
-    i2c_done,
-    i2c_busy,
-    m00_axi_init_axi_txn,
-    m00_axi_error,
-    m00_axi_txn_done,
-    m00_axi_aclk,
-    m00_axi_aresetn,
-    m00_axi_awaddr,
-    m00_axi_awprot,
-    m00_axi_awvalid,
-    m00_axi_awready,
-    m00_axi_wdata,
-    m00_axi_wstrb,
-    m00_axi_wvalid,
-    m00_axi_wready,
-    m00_axi_bresp,
-    m00_axi_bvalid,
-    m00_axi_bready,
-    m00_axi_araddr,
-    m00_axi_arprot,
-    m00_axi_arvalid,
-    m00_axi_arready,
-    m00_axi_rdata,
-    m00_axi_rresp,
-    m00_axi_rvalid,
-    m00_axi_rready,
-    m01_axi_init_axi_txn,
-    m01_axi_error,
-    m01_axi_txn_done,
-    m01_axi_aclk,
-    m01_axi_aresetn,
-    m01_axi_awaddr,
-    m01_axi_awprot,
-    m01_axi_awvalid,
-    m01_axi_awready,
-    m01_axi_wdata,
-    m01_axi_wstrb,
-    m01_axi_wvalid,
-    m01_axi_wready,
-    m01_axi_bresp,
-    m01_axi_bvalid,
-    m01_axi_bready,
-    m01_axi_araddr,
-    m01_axi_arprot,
-    m01_axi_arvalid,
-    m01_axi_arready,
-    m01_axi_rdata,
-    m01_axi_rresp,
-    m01_axi_rvalid,
-    m01_axi_rready);
-  input start_i2c_read;
-  input start_i2c_write;
-  input start_i2c_write_all;
-  input [31:0]i2c_waddr_i;
-  input [31:0]i2c_raddr_i;
-  output [31:0]i2c_rdata_o;
-  output i2c_done;
-  output i2c_busy;
-  input m00_axi_init_axi_txn;
-  output m00_axi_error;
-  output m00_axi_txn_done;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi_aclk, ASSOCIATED_BUSIF m00_axi, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input m00_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m00_axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m00_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWADDR" *) output [31:0]m00_axi_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWPROT" *) output [2:0]m00_axi_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWVALID" *) output m00_axi_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWREADY" *) input m00_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WDATA" *) output [31:0]m00_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WSTRB" *) output [3:0]m00_axi_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WVALID" *) output m00_axi_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WREADY" *) input m00_axi_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BRESP" *) input [1:0]m00_axi_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BVALID" *) input m00_axi_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BREADY" *) output m00_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARADDR" *) output [31:0]m00_axi_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARPROT" *) output [2:0]m00_axi_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARVALID" *) output m00_axi_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARREADY" *) input m00_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RDATA" *) input [31:0]m00_axi_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RRESP" *) input [1:0]m00_axi_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RVALID" *) input m00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m00_axi_rready;
-  input m01_axi_init_axi_txn;
-  output m01_axi_error;
-  output m01_axi_txn_done;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m01_axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi_aclk, ASSOCIATED_BUSIF m01_axi, ASSOCIATED_RESET m01_axi_aresetn, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input m01_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m01_axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m01_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWADDR" *) output [31:0]m01_axi_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWPROT" *) output [2:0]m01_axi_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWVALID" *) output m01_axi_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWREADY" *) input m01_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WDATA" *) output [31:0]m01_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WSTRB" *) output [3:0]m01_axi_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WVALID" *) output m01_axi_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WREADY" *) input m01_axi_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BRESP" *) input [1:0]m01_axi_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BVALID" *) input m01_axi_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BREADY" *) output m01_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARADDR" *) output [31:0]m01_axi_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARPROT" *) output [2:0]m01_axi_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARVALID" *) output m01_axi_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARREADY" *) input m01_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RDATA" *) input [31:0]m01_axi_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RRESP" *) input [1:0]m01_axi_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RVALID" *) input m01_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 40000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m01_axi_rready;
-
-  wire \<const0> ;
-  wire \<const1> ;
-  wire i2c_busy;
-  wire i2c_done;
-  wire [31:0]i2c_raddr_i;
-  wire [31:0]i2c_rdata_o;
-  wire [31:0]i2c_waddr_i;
-  wire m00_axi_aclk;
-  wire [31:0]m00_axi_araddr;
-  wire m00_axi_aresetn;
-  wire m00_axi_arready;
-  wire m00_axi_arvalid;
-  wire m00_axi_bready;
-  wire m00_axi_bvalid;
-  wire [31:0]m00_axi_rdata;
-  wire m00_axi_rready;
-  wire m00_axi_rvalid;
-  wire m01_axi_aclk;
-  wire [23:0]\^m01_axi_araddr ;
-  wire m01_axi_aresetn;
-  wire m01_axi_arready;
-  wire m01_axi_arvalid;
-  wire [31:0]m01_axi_awaddr;
-  wire m01_axi_awready;
-  wire m01_axi_awvalid;
-  wire m01_axi_bready;
-  wire m01_axi_bvalid;
-  wire [31:0]m01_axi_rdata;
-  wire m01_axi_rready;
-  wire m01_axi_rvalid;
-  wire m01_axi_txn_done;
-  wire [31:0]m01_axi_wdata;
-  wire m01_axi_wready;
-  wire m01_axi_wvalid;
-  wire start_i2c_read;
-  wire start_i2c_write;
-  wire start_i2c_write_all;
-
-  assign m00_axi_arprot[2] = \<const0> ;
-  assign m00_axi_arprot[1] = \<const0> ;
-  assign m00_axi_arprot[0] = \<const1> ;
-  assign m00_axi_awaddr[31] = \<const1> ;
-  assign m00_axi_awaddr[30] = \<const1> ;
-  assign m00_axi_awaddr[29] = \<const0> ;
-  assign m00_axi_awaddr[28] = \<const0> ;
-  assign m00_axi_awaddr[27] = \<const0> ;
-  assign m00_axi_awaddr[26] = \<const0> ;
-  assign m00_axi_awaddr[25] = \<const0> ;
-  assign m00_axi_awaddr[24] = \<const0> ;
-  assign m00_axi_awaddr[23] = \<const0> ;
-  assign m00_axi_awaddr[22] = \<const0> ;
-  assign m00_axi_awaddr[21] = \<const0> ;
-  assign m00_axi_awaddr[20] = \<const0> ;
-  assign m00_axi_awaddr[19] = \<const0> ;
-  assign m00_axi_awaddr[18] = \<const0> ;
-  assign m00_axi_awaddr[17] = \<const0> ;
-  assign m00_axi_awaddr[16] = \<const0> ;
-  assign m00_axi_awaddr[15] = \<const0> ;
-  assign m00_axi_awaddr[14] = \<const0> ;
-  assign m00_axi_awaddr[13] = \<const0> ;
-  assign m00_axi_awaddr[12] = \<const0> ;
-  assign m00_axi_awaddr[11] = \<const0> ;
-  assign m00_axi_awaddr[10] = \<const0> ;
-  assign m00_axi_awaddr[9] = \<const0> ;
-  assign m00_axi_awaddr[8] = \<const0> ;
-  assign m00_axi_awaddr[7] = \<const0> ;
-  assign m00_axi_awaddr[6] = \<const0> ;
-  assign m00_axi_awaddr[5] = \<const0> ;
-  assign m00_axi_awaddr[4] = \<const0> ;
-  assign m00_axi_awaddr[3] = \<const0> ;
-  assign m00_axi_awaddr[2] = \<const0> ;
-  assign m00_axi_awaddr[1] = \<const0> ;
-  assign m00_axi_awaddr[0] = \<const0> ;
-  assign m00_axi_awprot[2] = \<const0> ;
-  assign m00_axi_awprot[1] = \<const0> ;
-  assign m00_axi_awprot[0] = \<const0> ;
-  assign m00_axi_awvalid = \<const0> ;
-  assign m00_axi_error = \<const0> ;
-  assign m00_axi_txn_done = \<const0> ;
-  assign m00_axi_wdata[31] = \<const1> ;
-  assign m00_axi_wdata[30] = \<const0> ;
-  assign m00_axi_wdata[29] = \<const1> ;
-  assign m00_axi_wdata[28] = \<const0> ;
-  assign m00_axi_wdata[27] = \<const1> ;
-  assign m00_axi_wdata[26] = \<const0> ;
-  assign m00_axi_wdata[25] = \<const1> ;
-  assign m00_axi_wdata[24] = \<const0> ;
-  assign m00_axi_wdata[23] = \<const0> ;
-  assign m00_axi_wdata[22] = \<const0> ;
-  assign m00_axi_wdata[21] = \<const0> ;
-  assign m00_axi_wdata[20] = \<const0> ;
-  assign m00_axi_wdata[19] = \<const0> ;
-  assign m00_axi_wdata[18] = \<const0> ;
-  assign m00_axi_wdata[17] = \<const0> ;
-  assign m00_axi_wdata[16] = \<const0> ;
-  assign m00_axi_wdata[15] = \<const0> ;
-  assign m00_axi_wdata[14] = \<const0> ;
-  assign m00_axi_wdata[13] = \<const0> ;
-  assign m00_axi_wdata[12] = \<const0> ;
-  assign m00_axi_wdata[11] = \<const0> ;
-  assign m00_axi_wdata[10] = \<const0> ;
-  assign m00_axi_wdata[9] = \<const0> ;
-  assign m00_axi_wdata[8] = \<const0> ;
-  assign m00_axi_wdata[7] = \<const0> ;
-  assign m00_axi_wdata[6] = \<const0> ;
-  assign m00_axi_wdata[5] = \<const0> ;
-  assign m00_axi_wdata[4] = \<const0> ;
-  assign m00_axi_wdata[3] = \<const0> ;
-  assign m00_axi_wdata[2] = \<const0> ;
-  assign m00_axi_wdata[1] = \<const0> ;
-  assign m00_axi_wdata[0] = \<const0> ;
-  assign m00_axi_wstrb[3] = \<const1> ;
-  assign m00_axi_wstrb[2] = \<const1> ;
-  assign m00_axi_wstrb[1] = \<const1> ;
-  assign m00_axi_wstrb[0] = \<const1> ;
-  assign m00_axi_wvalid = \<const0> ;
-  assign m01_axi_araddr[31] = \<const0> ;
-  assign m01_axi_araddr[30] = \<const1> ;
-  assign m01_axi_araddr[29] = \<const0> ;
-  assign m01_axi_araddr[28] = \<const0> ;
-  assign m01_axi_araddr[27] = \<const0> ;
-  assign m01_axi_araddr[26] = \<const0> ;
-  assign m01_axi_araddr[25] = \<const0> ;
-  assign m01_axi_araddr[24] = \<const0> ;
-  assign m01_axi_araddr[23:0] = \^m01_axi_araddr [23:0];
-  assign m01_axi_arprot[2] = \<const0> ;
-  assign m01_axi_arprot[1] = \<const0> ;
-  assign m01_axi_arprot[0] = \<const1> ;
-  assign m01_axi_awprot[2] = \<const0> ;
-  assign m01_axi_awprot[1] = \<const0> ;
-  assign m01_axi_awprot[0] = \<const0> ;
-  assign m01_axi_error = \<const0> ;
-  assign m01_axi_wstrb[3] = \<const1> ;
-  assign m01_axi_wstrb[2] = \<const1> ;
-  assign m01_axi_wstrb[1] = \<const1> ;
-  assign m01_axi_wstrb[0] = \<const1> ;
-  GND GND
-       (.G(\<const0> ));
-  VCC VCC
-       (.P(\<const1> ));
-  top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 inst
-       (.axi_arvalid_reg(m00_axi_arvalid),
-        .axi_rready_reg(m00_axi_rready),
-        .i2c_busy(i2c_busy),
-        .i2c_done(i2c_done),
-        .i2c_raddr_i(i2c_raddr_i[23:0]),
-        .i2c_rdata_o(i2c_rdata_o),
-        .i2c_waddr_i(i2c_waddr_i),
-        .m00_axi_aclk(m00_axi_aclk),
-        .m00_axi_araddr(m00_axi_araddr),
-        .m00_axi_aresetn(m00_axi_aresetn),
-        .m00_axi_arready(m00_axi_arready),
-        .m00_axi_bready(m00_axi_bready),
-        .m00_axi_bvalid(m00_axi_bvalid),
-        .m00_axi_rdata(m00_axi_rdata),
-        .m00_axi_rvalid(m00_axi_rvalid),
-        .m01_axi_aclk(m01_axi_aclk),
-        .m01_axi_araddr(\^m01_axi_araddr ),
-        .m01_axi_aresetn(m01_axi_aresetn),
-        .m01_axi_arready(m01_axi_arready),
-        .m01_axi_arvalid(m01_axi_arvalid),
-        .m01_axi_awaddr(m01_axi_awaddr),
-        .m01_axi_awready(m01_axi_awready),
-        .m01_axi_awvalid(m01_axi_awvalid),
-        .m01_axi_bready(m01_axi_bready),
-        .m01_axi_bvalid(m01_axi_bvalid),
-        .m01_axi_rdata(m01_axi_rdata),
-        .m01_axi_rready(m01_axi_rready),
-        .m01_axi_rvalid(m01_axi_rvalid),
-        .m01_axi_txn_done(m01_axi_txn_done),
-        .m01_axi_wdata(m01_axi_wdata),
-        .m01_axi_wready(m01_axi_wready),
-        .m01_axi_wvalid(m01_axi_wvalid),
-        .start_i2c_read(start_i2c_read),
-        .start_i2c_write(start_i2c_write),
-        .start_i2c_write_all(start_i2c_write_all));
-endmodule
-
-(* ORIG_REF_NAME = "I2C_Controller_v1_0" *) 
 module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
    (m01_axi_txn_done,
     m01_axi_awaddr,
@@ -355,7 +59,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   output m01_axi_rready;
   output axi_rready_reg;
   output m00_axi_bready;
-  output [31:0]m00_axi_araddr;
+  output [29:0]m00_axi_araddr;
   output [31:0]i2c_rdata_o;
   output axi_arvalid_reg;
   output i2c_done;
@@ -388,7 +92,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire axi_arvalid_reg;
   wire axi_rready_reg;
   wire [31:0]bram_raddr;
-  wire bram_raddr_0;
+  wire bram_raddr_1;
   (* MARK_DEBUG *) wire bram_read_done;
   wire bram_read_done_i_1_n_0;
   wire bram_read_done_i_2_n_0;
@@ -518,7 +222,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire init_txn_bram_i_2_n_0;
   wire init_txn_bram_i_3_n_0;
   wire m00_axi_aclk;
-  wire [31:0]m00_axi_araddr;
+  wire [29:0]m00_axi_araddr;
   wire m00_axi_aresetn;
   wire m00_axi_arready;
   wire m00_axi_bready;
@@ -565,7 +269,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire [3:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_WSTRB_UNCONNECTED;
 
   top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI I2C_Controller_v1_0_M00_AXI_inst
-       (.Q(bram_raddr),
+       (.Q(bram_raddr[29:0]),
         .SR(I2C_Controller_v1_0_M00_AXI_inst_n_0),
         .axi_arvalid_reg_0(axi_arvalid_reg),
         .axi_rready_reg_0(axi_rready_reg),
@@ -663,196 +367,196 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I3(state_i2c[3]),
         .I4(state_i2c[0]),
         .I5(start_i2c_write),
-        .O(bram_raddr_0));
+        .O(bram_raddr_1));
   FDRE \bram_raddr_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[0]),
         .Q(bram_raddr[0]),
         .R(1'b0));
   FDRE \bram_raddr_reg[10] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[10]),
         .Q(bram_raddr[10]),
         .R(1'b0));
   FDRE \bram_raddr_reg[11] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[11]),
         .Q(bram_raddr[11]),
         .R(1'b0));
   FDRE \bram_raddr_reg[12] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[12]),
         .Q(bram_raddr[12]),
         .R(1'b0));
   FDRE \bram_raddr_reg[13] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[13]),
         .Q(bram_raddr[13]),
         .R(1'b0));
   FDRE \bram_raddr_reg[14] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[14]),
         .Q(bram_raddr[14]),
         .R(1'b0));
   FDRE \bram_raddr_reg[15] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[15]),
         .Q(bram_raddr[15]),
         .R(1'b0));
   FDRE \bram_raddr_reg[16] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[16]),
         .Q(bram_raddr[16]),
         .R(1'b0));
   FDRE \bram_raddr_reg[17] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[17]),
         .Q(bram_raddr[17]),
         .R(1'b0));
   FDRE \bram_raddr_reg[18] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[18]),
         .Q(bram_raddr[18]),
         .R(1'b0));
   FDRE \bram_raddr_reg[19] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[19]),
         .Q(bram_raddr[19]),
         .R(1'b0));
   FDRE \bram_raddr_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[1]),
         .Q(bram_raddr[1]),
         .R(1'b0));
   FDRE \bram_raddr_reg[20] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[20]),
         .Q(bram_raddr[20]),
         .R(1'b0));
   FDRE \bram_raddr_reg[21] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[21]),
         .Q(bram_raddr[21]),
         .R(1'b0));
   FDRE \bram_raddr_reg[22] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[22]),
         .Q(bram_raddr[22]),
         .R(1'b0));
   FDRE \bram_raddr_reg[23] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[23]),
         .Q(bram_raddr[23]),
         .R(1'b0));
   FDRE \bram_raddr_reg[24] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[24]),
         .Q(bram_raddr[24]),
         .R(1'b0));
   FDRE \bram_raddr_reg[25] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[25]),
         .Q(bram_raddr[25]),
         .R(1'b0));
   FDRE \bram_raddr_reg[26] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[26]),
         .Q(bram_raddr[26]),
         .R(1'b0));
   FDRE \bram_raddr_reg[27] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[27]),
         .Q(bram_raddr[27]),
         .R(1'b0));
   FDRE \bram_raddr_reg[28] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[28]),
         .Q(bram_raddr[28]),
         .R(1'b0));
   FDRE \bram_raddr_reg[29] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[29]),
         .Q(bram_raddr[29]),
         .R(1'b0));
   FDRE \bram_raddr_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[2]),
         .Q(bram_raddr[2]),
         .R(1'b0));
   FDRE \bram_raddr_reg[30] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[30]),
         .Q(bram_raddr[30]),
         .R(1'b0));
   FDRE \bram_raddr_reg[31] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[31]),
         .Q(bram_raddr[31]),
         .R(1'b0));
   FDRE \bram_raddr_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[3]),
         .Q(bram_raddr[3]),
         .R(1'b0));
   FDRE \bram_raddr_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[4]),
         .Q(bram_raddr[4]),
         .R(1'b0));
   FDRE \bram_raddr_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[5]),
         .Q(bram_raddr[5]),
         .R(1'b0));
   FDRE \bram_raddr_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[6]),
         .Q(bram_raddr[6]),
         .R(1'b0));
   FDRE \bram_raddr_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[7]),
         .Q(bram_raddr[7]),
         .R(1'b0));
   FDRE \bram_raddr_reg[8] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[8]),
         .Q(bram_raddr[8]),
         .R(1'b0));
   FDRE \bram_raddr_reg[9] 
        (.C(m00_axi_aclk),
-        .CE(bram_raddr_0),
+        .CE(bram_raddr_1),
         .D(i2c_waddr_i[9]),
         .Q(bram_raddr[9]),
         .R(1'b0));
@@ -1882,7 +1586,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
     start_bram_read_i_1
        (.I0(start_i2c_write),
         .I1(state_i2c[1]),
-        .I2(bram_raddr_0),
+        .I2(bram_raddr_1),
         .I3(busy_i_4_n_0),
         .I4(\i2c_waddr[31]_i_2_n_0 ),
         .I5(start_bram_read_reg_n_0),
@@ -2059,7 +1763,6 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "I2C_Controller_v1_0_M00_AXI" *) 
 module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
    (SR,
     m00_axi_bready,
@@ -2077,18 +1780,17 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   output m00_axi_bready;
   output axi_arvalid_reg_0;
   output axi_rready_reg_0;
-  output [31:0]m00_axi_araddr;
+  output [29:0]m00_axi_araddr;
   input m00_axi_aclk;
   input init_txn_bram;
   input m00_axi_aresetn;
   input m00_axi_rvalid;
   input m00_axi_bvalid;
   input m00_axi_arready;
-  input [31:0]Q;
+  input [29:0]Q;
 
-  wire [31:0]Q;
+  wire [29:0]Q;
   wire [0:0]SR;
-  wire [31:29]axi_araddr;
   wire axi_arvalid_i_1_n_0;
   wire axi_arvalid_reg_0;
   wire axi_bready0;
@@ -2101,7 +1803,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire last_read;
   wire last_read_i_1_n_0;
   wire m00_axi_aclk;
-  wire [31:0]m00_axi_araddr;
+  wire [29:0]m00_axi_araddr;
   wire \m00_axi_araddr[29]_INST_0_i_1_n_0 ;
   wire \m00_axi_araddr[29]_INST_0_i_2_n_0 ;
   wire \m00_axi_araddr[29]_INST_0_n_6 ;
@@ -2113,6 +1815,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire m00_axi_rvalid;
   wire mst_exec_state;
   wire mst_exec_state__0;
+  wire [31:29]p_0_in;
   wire read_index;
   wire \read_index[0]_i_1_n_0 ;
   wire read_issued_i_1_n_0;
@@ -2265,37 +1968,25 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.C(m00_axi_aclk),
         .CE(axi_bready_i_1_n_0),
         .D(Q[27]),
-        .Q(m00_axi_araddr[27]),
+        .Q(p_0_in[29]),
         .R(1'b0));
   FDRE \axi_araddr_reg[28] 
        (.C(m00_axi_aclk),
         .CE(axi_bready_i_1_n_0),
         .D(Q[28]),
-        .Q(m00_axi_araddr[28]),
+        .Q(p_0_in[30]),
         .R(1'b0));
   FDRE \axi_araddr_reg[29] 
        (.C(m00_axi_aclk),
         .CE(axi_bready_i_1_n_0),
         .D(Q[29]),
-        .Q(axi_araddr[29]),
+        .Q(p_0_in[31]),
         .R(1'b0));
   FDRE \axi_araddr_reg[2] 
        (.C(m00_axi_aclk),
         .CE(axi_bready_i_1_n_0),
         .D(Q[2]),
         .Q(m00_axi_araddr[2]),
-        .R(1'b0));
-  FDRE \axi_araddr_reg[30] 
-       (.C(m00_axi_aclk),
-        .CE(axi_bready_i_1_n_0),
-        .D(Q[30]),
-        .Q(axi_araddr[30]),
-        .R(1'b0));
-  FDRE \axi_araddr_reg[31] 
-       (.C(m00_axi_aclk),
-        .CE(axi_bready_i_1_n_0),
-        .D(Q[31]),
-        .Q(axi_araddr[31]),
         .R(1'b0));
   FDRE \axi_araddr_reg[3] 
        (.C(m00_axi_aclk),
@@ -2415,18 +2106,18 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.CI(1'b0),
         .CI_TOP(1'b0),
         .CO({\NLW_m00_axi_araddr[29]_INST_0_CO_UNCONNECTED [7:2],\m00_axi_araddr[29]_INST_0_n_6 ,\m00_axi_araddr[29]_INST_0_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_araddr[30],1'b0}),
-        .O({\NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED [7:3],m00_axi_araddr[31:29]}),
-        .S({1'b0,1'b0,1'b0,1'b0,1'b0,\m00_axi_araddr[29]_INST_0_i_1_n_0 ,\m00_axi_araddr[29]_INST_0_i_2_n_0 ,axi_araddr[29]}));
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,p_0_in[30],1'b0}),
+        .O({\NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED [7:3],m00_axi_araddr[29:27]}),
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,\m00_axi_araddr[29]_INST_0_i_1_n_0 ,\m00_axi_araddr[29]_INST_0_i_2_n_0 ,p_0_in[29]}));
   LUT1 #(
     .INIT(2'h1)) 
     \m00_axi_araddr[29]_INST_0_i_1 
-       (.I0(axi_araddr[31]),
+       (.I0(p_0_in[31]),
         .O(\m00_axi_araddr[29]_INST_0_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \m00_axi_araddr[29]_INST_0_i_2 
-       (.I0(axi_araddr[30]),
+       (.I0(p_0_in[30]),
         .O(\m00_axi_araddr[29]_INST_0_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
@@ -2507,7 +2198,7 @@ endmodule
 (* C_M_AXI_ADDR_WIDTH = "32" *) (* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_START_DATA_VALUE = "-1442840576" *) 
 (* C_M_TARGET_SLAVE_BASE_ADDR = "1073741824" *) (* C_M_TRANSACTIONS_NUM = "1" *) (* IDLE = "2'b00" *) 
 (* INIT_COMPARE = "2'b11" *) (* INIT_READ = "2'b10" *) (* INIT_WRITE = "2'b01" *) 
-(* ORIG_REF_NAME = "I2C_Controller_v1_0_M01_AXI" *) (* TRANS_NUM_BITS = "0" *) (* keep_hierarchy = "soft" *) 
+(* TRANS_NUM_BITS = "0" *) (* keep_hierarchy = "soft" *) 
 module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
    (I2C_WR,
     I2C_RD,
@@ -2578,7 +2269,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
   wire M_AXI_ARESETN;
   wire M_AXI_ARREADY;
   wire M_AXI_ARVALID;
-  wire [31:29]\^M_AXI_AWADDR ;
+  wire [31:0]M_AXI_AWADDR;
   wire \M_AXI_AWADDR[29]_INST_0_i_1_n_0 ;
   wire \M_AXI_AWADDR[29]_INST_0_n_6 ;
   wire \M_AXI_AWADDR[29]_INST_0_n_7 ;
@@ -2598,8 +2289,9 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
   wire [31:0]WADDR;
   wire [31:0]WDATA;
   wire axi_arvalid_i_1_n_0;
+  wire [31:29]axi_awaddr;
+  wire \axi_awaddr[28]_i_1_n_0 ;
   wire axi_awvalid_i_1_n_0;
-  wire axi_awvalid_i_2_n_0;
   wire axi_bready_i_1_n_0;
   wire axi_rready_i_1_n_0;
   wire \axi_wdata[31]_i_1_n_0 ;
@@ -2653,8 +2345,6 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
   assign M_AXI_ARPROT[2] = \<const0> ;
   assign M_AXI_ARPROT[1] = \<const0> ;
   assign M_AXI_ARPROT[0] = \<const0> ;
-  assign M_AXI_AWADDR[31:29] = \^M_AXI_AWADDR [31:29];
-  assign M_AXI_AWADDR[28:0] = WADDR[28:0];
   assign M_AXI_AWPROT[2] = \<const0> ;
   assign M_AXI_AWPROT[1] = \<const0> ;
   assign M_AXI_AWPROT[0] = \<const0> ;
@@ -2669,13 +2359,13 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
        (.CI(1'b0),
         .CI_TOP(1'b0),
         .CO({\NLW_M_AXI_AWADDR[29]_INST_0_CO_UNCONNECTED [7:2],\M_AXI_AWADDR[29]_INST_0_n_6 ,\M_AXI_AWADDR[29]_INST_0_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,WADDR[30],1'b0}),
-        .O({\NLW_M_AXI_AWADDR[29]_INST_0_O_UNCONNECTED [7:3],\^M_AXI_AWADDR }),
-        .S({1'b0,1'b0,1'b0,1'b0,1'b0,WADDR[31],\M_AXI_AWADDR[29]_INST_0_i_1_n_0 ,WADDR[29]}));
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_awaddr[30],1'b0}),
+        .O({\NLW_M_AXI_AWADDR[29]_INST_0_O_UNCONNECTED [7:3],M_AXI_AWADDR[31:29]}),
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,axi_awaddr[31],\M_AXI_AWADDR[29]_INST_0_i_1_n_0 ,axi_awaddr[29]}));
   LUT1 #(
     .INIT(2'h1)) 
     \M_AXI_AWADDR[29]_INST_0_i_1 
-       (.I0(WADDR[30]),
+       (.I0(axi_awaddr[30]),
         .O(\M_AXI_AWADDR[29]_INST_0_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
@@ -2685,145 +2375,145 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .O(TXN_DONE));
   FDRE \axi_araddr_reg[0] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[0]),
         .Q(\^M_AXI_ARADDR [0]),
         .R(1'b0));
   FDRE \axi_araddr_reg[10] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[10]),
         .Q(\^M_AXI_ARADDR [10]),
         .R(1'b0));
   FDRE \axi_araddr_reg[11] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[11]),
         .Q(\^M_AXI_ARADDR [11]),
         .R(1'b0));
   FDRE \axi_araddr_reg[12] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[12]),
         .Q(\^M_AXI_ARADDR [12]),
         .R(1'b0));
   FDRE \axi_araddr_reg[13] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[13]),
         .Q(\^M_AXI_ARADDR [13]),
         .R(1'b0));
   FDRE \axi_araddr_reg[14] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[14]),
         .Q(\^M_AXI_ARADDR [14]),
         .R(1'b0));
   FDRE \axi_araddr_reg[15] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[15]),
         .Q(\^M_AXI_ARADDR [15]),
         .R(1'b0));
   FDRE \axi_araddr_reg[16] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[16]),
         .Q(\^M_AXI_ARADDR [16]),
         .R(1'b0));
   FDRE \axi_araddr_reg[17] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[17]),
         .Q(\^M_AXI_ARADDR [17]),
         .R(1'b0));
   FDRE \axi_araddr_reg[18] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[18]),
         .Q(\^M_AXI_ARADDR [18]),
         .R(1'b0));
   FDRE \axi_araddr_reg[19] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[19]),
         .Q(\^M_AXI_ARADDR [19]),
         .R(1'b0));
   FDRE \axi_araddr_reg[1] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[1]),
         .Q(\^M_AXI_ARADDR [1]),
         .R(1'b0));
   FDRE \axi_araddr_reg[20] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[20]),
         .Q(\^M_AXI_ARADDR [20]),
         .R(1'b0));
   FDRE \axi_araddr_reg[21] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[21]),
         .Q(\^M_AXI_ARADDR [21]),
         .R(1'b0));
   FDRE \axi_araddr_reg[22] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[22]),
         .Q(\^M_AXI_ARADDR [22]),
         .R(1'b0));
   FDRE \axi_araddr_reg[23] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[23]),
         .Q(\^M_AXI_ARADDR [23]),
         .R(1'b0));
   FDRE \axi_araddr_reg[2] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[2]),
         .Q(\^M_AXI_ARADDR [2]),
         .R(1'b0));
   FDRE \axi_araddr_reg[3] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[3]),
         .Q(\^M_AXI_ARADDR [3]),
         .R(1'b0));
   FDRE \axi_araddr_reg[4] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[4]),
         .Q(\^M_AXI_ARADDR [4]),
         .R(1'b0));
   FDRE \axi_araddr_reg[5] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[5]),
         .Q(\^M_AXI_ARADDR [5]),
         .R(1'b0));
   FDRE \axi_araddr_reg[6] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[6]),
         .Q(\^M_AXI_ARADDR [6]),
         .R(1'b0));
   FDRE \axi_araddr_reg[7] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[7]),
         .Q(\^M_AXI_ARADDR [7]),
         .R(1'b0));
   FDRE \axi_araddr_reg[8] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[8]),
         .Q(\^M_AXI_ARADDR [8]),
         .R(1'b0));
   FDRE \axi_araddr_reg[9] 
        (.C(M_AXI_ACLK),
-        .CE(axi_awvalid_i_1_n_0),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
         .D(RADDR[9]),
         .Q(\^M_AXI_ARADDR [9]),
         .R(1'b0));
@@ -2840,28 +2530,220 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(axi_arvalid_i_1_n_0),
         .Q(M_AXI_ARVALID),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h4F)) 
-    axi_awvalid_i_1
+    \axi_awaddr[28]_i_1 
        (.I0(init_txn_ff2),
         .I1(init_txn_ff),
         .I2(M_AXI_ARESETN),
-        .O(axi_awvalid_i_1_n_0));
+        .O(\axi_awaddr[28]_i_1_n_0 ));
+  FDRE \axi_awaddr_reg[0] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[0]),
+        .Q(M_AXI_AWADDR[0]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[10] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[10]),
+        .Q(M_AXI_AWADDR[10]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[11] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[11]),
+        .Q(M_AXI_AWADDR[11]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[12] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[12]),
+        .Q(M_AXI_AWADDR[12]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[13] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[13]),
+        .Q(M_AXI_AWADDR[13]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[14] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[14]),
+        .Q(M_AXI_AWADDR[14]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[15] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[15]),
+        .Q(M_AXI_AWADDR[15]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[16] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[16]),
+        .Q(M_AXI_AWADDR[16]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[17] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[17]),
+        .Q(M_AXI_AWADDR[17]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[18] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[18]),
+        .Q(M_AXI_AWADDR[18]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[19] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[19]),
+        .Q(M_AXI_AWADDR[19]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[1] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[1]),
+        .Q(M_AXI_AWADDR[1]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[20] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[20]),
+        .Q(M_AXI_AWADDR[20]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[21] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[21]),
+        .Q(M_AXI_AWADDR[21]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[22] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[22]),
+        .Q(M_AXI_AWADDR[22]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[23] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[23]),
+        .Q(M_AXI_AWADDR[23]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[24] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[24]),
+        .Q(M_AXI_AWADDR[24]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[25] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[25]),
+        .Q(M_AXI_AWADDR[25]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[26] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[26]),
+        .Q(M_AXI_AWADDR[26]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[27] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[27]),
+        .Q(M_AXI_AWADDR[27]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[28] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[28]),
+        .Q(M_AXI_AWADDR[28]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[29] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[29]),
+        .Q(axi_awaddr[29]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[2] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[2]),
+        .Q(M_AXI_AWADDR[2]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[30] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[30]),
+        .Q(axi_awaddr[30]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[31] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[31]),
+        .Q(axi_awaddr[31]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[3] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[3]),
+        .Q(M_AXI_AWADDR[3]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[4] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[4]),
+        .Q(M_AXI_AWADDR[4]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[5] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[5]),
+        .Q(M_AXI_AWADDR[5]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[6] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[6]),
+        .Q(M_AXI_AWADDR[6]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[7] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[7]),
+        .Q(M_AXI_AWADDR[7]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[8] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[8]),
+        .Q(M_AXI_AWADDR[8]),
+        .R(1'b0));
+  FDRE \axi_awaddr_reg[9] 
+       (.C(M_AXI_ACLK),
+        .CE(\axi_awaddr[28]_i_1_n_0 ),
+        .D(WADDR[9]),
+        .Q(M_AXI_AWADDR[9]),
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hAE)) 
-    axi_awvalid_i_2
+    axi_awvalid_i_1
        (.I0(start_single_write_reg_n_0),
         .I1(M_AXI_AWVALID),
         .I2(M_AXI_AWREADY),
-        .O(axi_awvalid_i_2_n_0));
+        .O(axi_awvalid_i_1_n_0));
   FDRE axi_awvalid_reg
        (.C(M_AXI_ACLK),
         .CE(1'b1),
-        .D(axi_awvalid_i_2_n_0),
+        .D(axi_awvalid_i_1_n_0),
         .Q(M_AXI_AWVALID),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h2)) 
@@ -2874,7 +2756,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(axi_bready_i_1_n_0),
         .Q(M_AXI_BREADY),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h4)) 
@@ -2887,7 +2769,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(axi_rready_i_1_n_0),
         .Q(M_AXI_RREADY),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFF5D5D5D)) 
     \axi_wdata[31]_i_1 
@@ -3102,7 +2984,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(axi_wvalid_i_1_n_0),
         .Q(M_AXI_WVALID),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   FDRE init_txn_ff2_reg
        (.C(M_AXI_ACLK),
         .CE(1'b1),
@@ -3134,7 +3016,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(last_read_i_1_n_0),
         .Q(last_read),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hF8)) 
@@ -3148,7 +3030,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(last_write_i_1_n_0),
         .Q(last_write),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000000000008FF08)) 
     \mst_exec_state[0]_i_1 
@@ -3415,7 +3297,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(\read_index[0]_i_1_n_0 ),
         .Q(read_index),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFBFFFF00500000)) 
     read_issued_i_1
@@ -3455,7 +3337,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(reads_done_i_1_n_0),
         .Q(reads_done),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFEFFFF00500000)) 
     start_single_read_i_1
@@ -3524,7 +3406,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(\write_index[0]_i_1_n_0 ),
         .Q(write_index),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFBF00004400)) 
     write_issued_i_1
@@ -3555,7 +3437,305 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI
         .CE(1'b1),
         .D(writes_done_i_1_n_0),
         .Q(writes_done),
-        .R(axi_awvalid_i_1_n_0));
+        .R(\axi_awaddr[28]_i_1_n_0 ));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "top_block_I2C_Controller_v1_0_0_1,I2C_Controller_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "I2C_Controller_v1_0,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module top_block_I2C_Controller_v1_0_0_1
+   (start_i2c_read,
+    start_i2c_write,
+    start_i2c_write_all,
+    i2c_waddr_i,
+    i2c_raddr_i,
+    i2c_rdata_o,
+    i2c_done,
+    i2c_busy,
+    m00_axi_init_axi_txn,
+    m00_axi_error,
+    m00_axi_txn_done,
+    m00_axi_aclk,
+    m00_axi_aresetn,
+    m00_axi_awaddr,
+    m00_axi_awprot,
+    m00_axi_awvalid,
+    m00_axi_awready,
+    m00_axi_wdata,
+    m00_axi_wstrb,
+    m00_axi_wvalid,
+    m00_axi_wready,
+    m00_axi_bresp,
+    m00_axi_bvalid,
+    m00_axi_bready,
+    m00_axi_araddr,
+    m00_axi_arprot,
+    m00_axi_arvalid,
+    m00_axi_arready,
+    m00_axi_rdata,
+    m00_axi_rresp,
+    m00_axi_rvalid,
+    m00_axi_rready,
+    m01_axi_init_axi_txn,
+    m01_axi_error,
+    m01_axi_txn_done,
+    m01_axi_aclk,
+    m01_axi_aresetn,
+    m01_axi_awaddr,
+    m01_axi_awprot,
+    m01_axi_awvalid,
+    m01_axi_awready,
+    m01_axi_wdata,
+    m01_axi_wstrb,
+    m01_axi_wvalid,
+    m01_axi_wready,
+    m01_axi_bresp,
+    m01_axi_bvalid,
+    m01_axi_bready,
+    m01_axi_araddr,
+    m01_axi_arprot,
+    m01_axi_arvalid,
+    m01_axi_arready,
+    m01_axi_rdata,
+    m01_axi_rresp,
+    m01_axi_rvalid,
+    m01_axi_rready);
+  input start_i2c_read;
+  input start_i2c_write;
+  input start_i2c_write_all;
+  input [31:0]i2c_waddr_i;
+  input [31:0]i2c_raddr_i;
+  output [31:0]i2c_rdata_o;
+  output i2c_done;
+  output i2c_busy;
+  input m00_axi_init_axi_txn;
+  output m00_axi_error;
+  output m00_axi_txn_done;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi_aclk, ASSOCIATED_BUSIF m00_axi, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input m00_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m00_axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m00_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWADDR" *) output [31:0]m00_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWPROT" *) output [2:0]m00_axi_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWVALID" *) output m00_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi AWREADY" *) input m00_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WDATA" *) output [31:0]m00_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WSTRB" *) output [3:0]m00_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WVALID" *) output m00_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi WREADY" *) input m00_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BRESP" *) input [1:0]m00_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BVALID" *) input m00_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi BREADY" *) output m00_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARADDR" *) output [31:0]m00_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARPROT" *) output [2:0]m00_axi_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARVALID" *) output m00_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi ARREADY" *) input m00_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RDATA" *) input [31:0]m00_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RRESP" *) input [1:0]m00_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RVALID" *) input m00_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m00_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m00_axi_rready;
+  input m01_axi_init_axi_txn;
+  output m01_axi_error;
+  output m01_axi_txn_done;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m01_axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi_aclk, ASSOCIATED_BUSIF m01_axi, ASSOCIATED_RESET m01_axi_aresetn, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input m01_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m01_axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m01_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWADDR" *) output [31:0]m01_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWPROT" *) output [2:0]m01_axi_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWVALID" *) output m01_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi AWREADY" *) input m01_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WDATA" *) output [31:0]m01_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WSTRB" *) output [3:0]m01_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WVALID" *) output m01_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi WREADY" *) input m01_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BRESP" *) input [1:0]m01_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BVALID" *) input m01_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi BREADY" *) output m01_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARADDR" *) output [31:0]m01_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARPROT" *) output [2:0]m01_axi_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARVALID" *) output m01_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi ARREADY" *) input m01_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RDATA" *) input [31:0]m01_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RRESP" *) input [1:0]m01_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RVALID" *) input m01_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m01_axi RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m01_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 40000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m01_axi_rready;
+
+  wire \<const0> ;
+  wire \<const1> ;
+  wire i2c_busy;
+  wire i2c_done;
+  wire [31:0]i2c_raddr_i;
+  wire [31:0]i2c_rdata_o;
+  wire [31:0]i2c_waddr_i;
+  wire m00_axi_aclk;
+  wire [31:2]\^m00_axi_araddr ;
+  wire m00_axi_aresetn;
+  wire m00_axi_arready;
+  wire m00_axi_arvalid;
+  wire m00_axi_bready;
+  wire m00_axi_bvalid;
+  wire [31:0]m00_axi_rdata;
+  wire m00_axi_rready;
+  wire m00_axi_rvalid;
+  wire m01_axi_aclk;
+  wire [23:0]\^m01_axi_araddr ;
+  wire m01_axi_aresetn;
+  wire m01_axi_arready;
+  wire m01_axi_arvalid;
+  wire [31:0]m01_axi_awaddr;
+  wire m01_axi_awready;
+  wire m01_axi_awvalid;
+  wire m01_axi_bready;
+  wire m01_axi_bvalid;
+  wire [31:0]m01_axi_rdata;
+  wire m01_axi_rready;
+  wire m01_axi_rvalid;
+  wire m01_axi_txn_done;
+  wire [31:0]m01_axi_wdata;
+  wire m01_axi_wready;
+  wire m01_axi_wvalid;
+  wire start_i2c_read;
+  wire start_i2c_write;
+  wire start_i2c_write_all;
+
+  assign m00_axi_araddr[31:2] = \^m00_axi_araddr [31:2];
+  assign m00_axi_araddr[1] = \<const0> ;
+  assign m00_axi_araddr[0] = \<const0> ;
+  assign m00_axi_arprot[2] = \<const0> ;
+  assign m00_axi_arprot[1] = \<const0> ;
+  assign m00_axi_arprot[0] = \<const1> ;
+  assign m00_axi_awaddr[31] = \<const1> ;
+  assign m00_axi_awaddr[30] = \<const1> ;
+  assign m00_axi_awaddr[29] = \<const0> ;
+  assign m00_axi_awaddr[28] = \<const0> ;
+  assign m00_axi_awaddr[27] = \<const0> ;
+  assign m00_axi_awaddr[26] = \<const0> ;
+  assign m00_axi_awaddr[25] = \<const0> ;
+  assign m00_axi_awaddr[24] = \<const0> ;
+  assign m00_axi_awaddr[23] = \<const0> ;
+  assign m00_axi_awaddr[22] = \<const0> ;
+  assign m00_axi_awaddr[21] = \<const0> ;
+  assign m00_axi_awaddr[20] = \<const0> ;
+  assign m00_axi_awaddr[19] = \<const0> ;
+  assign m00_axi_awaddr[18] = \<const0> ;
+  assign m00_axi_awaddr[17] = \<const0> ;
+  assign m00_axi_awaddr[16] = \<const0> ;
+  assign m00_axi_awaddr[15] = \<const0> ;
+  assign m00_axi_awaddr[14] = \<const0> ;
+  assign m00_axi_awaddr[13] = \<const0> ;
+  assign m00_axi_awaddr[12] = \<const0> ;
+  assign m00_axi_awaddr[11] = \<const0> ;
+  assign m00_axi_awaddr[10] = \<const0> ;
+  assign m00_axi_awaddr[9] = \<const0> ;
+  assign m00_axi_awaddr[8] = \<const0> ;
+  assign m00_axi_awaddr[7] = \<const0> ;
+  assign m00_axi_awaddr[6] = \<const0> ;
+  assign m00_axi_awaddr[5] = \<const0> ;
+  assign m00_axi_awaddr[4] = \<const0> ;
+  assign m00_axi_awaddr[3] = \<const0> ;
+  assign m00_axi_awaddr[2] = \<const0> ;
+  assign m00_axi_awaddr[1] = \<const0> ;
+  assign m00_axi_awaddr[0] = \<const0> ;
+  assign m00_axi_awprot[2] = \<const0> ;
+  assign m00_axi_awprot[1] = \<const0> ;
+  assign m00_axi_awprot[0] = \<const0> ;
+  assign m00_axi_awvalid = \<const0> ;
+  assign m00_axi_error = \<const0> ;
+  assign m00_axi_txn_done = \<const0> ;
+  assign m00_axi_wdata[31] = \<const1> ;
+  assign m00_axi_wdata[30] = \<const0> ;
+  assign m00_axi_wdata[29] = \<const1> ;
+  assign m00_axi_wdata[28] = \<const0> ;
+  assign m00_axi_wdata[27] = \<const1> ;
+  assign m00_axi_wdata[26] = \<const0> ;
+  assign m00_axi_wdata[25] = \<const1> ;
+  assign m00_axi_wdata[24] = \<const0> ;
+  assign m00_axi_wdata[23] = \<const0> ;
+  assign m00_axi_wdata[22] = \<const0> ;
+  assign m00_axi_wdata[21] = \<const0> ;
+  assign m00_axi_wdata[20] = \<const0> ;
+  assign m00_axi_wdata[19] = \<const0> ;
+  assign m00_axi_wdata[18] = \<const0> ;
+  assign m00_axi_wdata[17] = \<const0> ;
+  assign m00_axi_wdata[16] = \<const0> ;
+  assign m00_axi_wdata[15] = \<const0> ;
+  assign m00_axi_wdata[14] = \<const0> ;
+  assign m00_axi_wdata[13] = \<const0> ;
+  assign m00_axi_wdata[12] = \<const0> ;
+  assign m00_axi_wdata[11] = \<const0> ;
+  assign m00_axi_wdata[10] = \<const0> ;
+  assign m00_axi_wdata[9] = \<const0> ;
+  assign m00_axi_wdata[8] = \<const0> ;
+  assign m00_axi_wdata[7] = \<const0> ;
+  assign m00_axi_wdata[6] = \<const0> ;
+  assign m00_axi_wdata[5] = \<const0> ;
+  assign m00_axi_wdata[4] = \<const0> ;
+  assign m00_axi_wdata[3] = \<const0> ;
+  assign m00_axi_wdata[2] = \<const0> ;
+  assign m00_axi_wdata[1] = \<const0> ;
+  assign m00_axi_wdata[0] = \<const0> ;
+  assign m00_axi_wstrb[3] = \<const1> ;
+  assign m00_axi_wstrb[2] = \<const1> ;
+  assign m00_axi_wstrb[1] = \<const1> ;
+  assign m00_axi_wstrb[0] = \<const1> ;
+  assign m00_axi_wvalid = \<const0> ;
+  assign m01_axi_araddr[31] = \<const0> ;
+  assign m01_axi_araddr[30] = \<const1> ;
+  assign m01_axi_araddr[29] = \<const0> ;
+  assign m01_axi_araddr[28] = \<const0> ;
+  assign m01_axi_araddr[27] = \<const0> ;
+  assign m01_axi_araddr[26] = \<const0> ;
+  assign m01_axi_araddr[25] = \<const0> ;
+  assign m01_axi_araddr[24] = \<const0> ;
+  assign m01_axi_araddr[23:0] = \^m01_axi_araddr [23:0];
+  assign m01_axi_arprot[2] = \<const0> ;
+  assign m01_axi_arprot[1] = \<const0> ;
+  assign m01_axi_arprot[0] = \<const1> ;
+  assign m01_axi_awprot[2] = \<const0> ;
+  assign m01_axi_awprot[1] = \<const0> ;
+  assign m01_axi_awprot[0] = \<const0> ;
+  assign m01_axi_error = \<const0> ;
+  assign m01_axi_wstrb[3] = \<const1> ;
+  assign m01_axi_wstrb[2] = \<const1> ;
+  assign m01_axi_wstrb[1] = \<const1> ;
+  assign m01_axi_wstrb[0] = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
+  top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 inst
+       (.axi_arvalid_reg(m00_axi_arvalid),
+        .axi_rready_reg(m00_axi_rready),
+        .i2c_busy(i2c_busy),
+        .i2c_done(i2c_done),
+        .i2c_raddr_i(i2c_raddr_i[23:0]),
+        .i2c_rdata_o(i2c_rdata_o),
+        .i2c_waddr_i(i2c_waddr_i),
+        .m00_axi_aclk(m00_axi_aclk),
+        .m00_axi_araddr(\^m00_axi_araddr ),
+        .m00_axi_aresetn(m00_axi_aresetn),
+        .m00_axi_arready(m00_axi_arready),
+        .m00_axi_bready(m00_axi_bready),
+        .m00_axi_bvalid(m00_axi_bvalid),
+        .m00_axi_rdata(m00_axi_rdata),
+        .m00_axi_rvalid(m00_axi_rvalid),
+        .m01_axi_aclk(m01_axi_aclk),
+        .m01_axi_araddr(\^m01_axi_araddr ),
+        .m01_axi_aresetn(m01_axi_aresetn),
+        .m01_axi_arready(m01_axi_arready),
+        .m01_axi_arvalid(m01_axi_arvalid),
+        .m01_axi_awaddr(m01_axi_awaddr),
+        .m01_axi_awready(m01_axi_awready),
+        .m01_axi_awvalid(m01_axi_awvalid),
+        .m01_axi_bready(m01_axi_bready),
+        .m01_axi_bvalid(m01_axi_bvalid),
+        .m01_axi_rdata(m01_axi_rdata),
+        .m01_axi_rready(m01_axi_rready),
+        .m01_axi_rvalid(m01_axi_rvalid),
+        .m01_axi_txn_done(m01_axi_txn_done),
+        .m01_axi_wdata(m01_axi_wdata),
+        .m01_axi_wready(m01_axi_wready),
+        .m01_axi_wvalid(m01_axi_wvalid),
+        .start_i2c_read(start_i2c_read),
+        .start_i2c_write(start_i2c_write),
+        .start_i2c_write_all(start_i2c_write_all));
 endmodule
 `ifndef GLBL
 `define GLBL

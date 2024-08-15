@@ -11,13 +11,13 @@
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
       <ZoomEndTime time="1,025"></ZoomEndTime>
-      <Cursor1Time time="556"></Cursor1Time>
+      <Cursor1Time time="572"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="551"></NameColumnWidth>
-      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="92" />
    <wave_markers>
    </wave_markers>
    <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata">
@@ -33,13 +33,6 @@
       <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata_1[8:0]</obj_property>
       <obj_property name="ObjectShortName">s_axi_rdata_1[8:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/init_txn_ff">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/init_txn_ff</obj_property>
-      <obj_property name="ObjectShortName">init_txn_ff</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -170,22 +163,6 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="u_ila_1_IOBUF_IO_T1">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_IOBUF_IO_T1[0:0]</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_IOBUF_IO_T1[0:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="u_ila_1_IOBUF_IO_T">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_IOBUF_IO_T[0:0]</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_IOBUF_IO_T[0:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="u_ila_1_m01_axi_araddr">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">u_ila_1_m01_axi_araddr[23:9]</obj_property>
@@ -207,6 +184,539 @@
       <obj_property name="ElementShortName">u_ila_1_m01_axi_wdata[3:0]</obj_property>
       <obj_property name="ObjectShortName">u_ila_1_m01_axi_wdata[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/init_txn_ff">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/init_txn_ff</obj_property>
+      <obj_property name="ObjectShortName">init_txn_ff</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">m01_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Tx_addr_0[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Tx_fifo_data_0[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_full">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">Tx_fifo_full</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Tx_fifo_rd">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Tx_fifo_rd</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Tx_fifo_rd</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Tx_fifo_rd_d">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Tx_fifo_rd_d</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Tx_fifo_rd_d</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Tx_fifo_rst">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Tx_fifo_rst</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Tx_fifo_rst</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Tx_fifo_wr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Tx_fifo_wr</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Tx_fifo_wr</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Tx_fifo_wr_d">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Tx_fifo_wr_d</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Tx_fifo_wr_d</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">m01_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Aas">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Aas</obj_property>
+      <obj_property name="ObjectShortName">Aas</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Abgc">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Abgc</obj_property>
+      <obj_property name="ObjectShortName">Abgc</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[0:6]</obj_property>
+      <obj_property name="ObjectShortName">Adr[0:6]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Al">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Al</obj_property>
+      <obj_property name="ObjectShortName">Al</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bb">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bb</obj_property>
+      <obj_property name="ObjectShortName">Bb</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr[2:5]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_Addr[2:5]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_RdCE">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_RdCE[3:3]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_RdCE[3:3]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_WrCE[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[10:17]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_WrCE_1[10:17]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_2[7:8]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_WrCE_2[7:8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_3">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_3[4:4]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_WrCE_3[4:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_4">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_4[2:2]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IIC_WrCE_4[2:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[0:8]</obj_property>
+      <obj_property name="ObjectShortName">q_int_reg[0:8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr[0:1]</obj_property>
+      <obj_property name="ObjectShortName">Cr[0:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr_1[3:5]</obj_property>
+      <obj_property name="ObjectShortName">Cr_1[3:5]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/D">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/D</obj_property>
+      <obj_property name="ObjectShortName">D</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[0:7]</obj_property>
+      <obj_property name="ObjectShortName">Data_i2c[0:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/FILTER_I_n_2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/FILTER_I_n_2</obj_property>
+      <obj_property name="ObjectShortName">FILTER_I_n_2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[0:7]</obj_property>
+      <obj_property name="ObjectShortName">IIC2Bus_IntrEvent[0:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr[0:3]</obj_property>
+      <obj_property name="ObjectShortName">Rc_addr[0:3]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[0:7]</obj_property>
+      <obj_property name="ObjectShortName">Rc_fifo_data[0:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[8:0]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_tbuf[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[8:3]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_thdsta[8:3]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta_1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_thdsta_1[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh[7:6]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_thigh[7:6]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_thigh_1[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[8:4]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_tlow[8:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[5:1]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_tsusta[5:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[7:3]</obj_property>
+      <obj_property name="ObjectShortName">Timing_param_tsusto[7:3]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/ackDataState">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/ackDataState</obj_property>
+      <obj_property name="ObjectShortName">ackDataState</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/callingReadAccess">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/callingReadAccess</obj_property>
+      <obj_property name="ObjectShortName">callingReadAccess</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_clr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_clr</obj_property>
+      <obj_property name="ObjectShortName">cr_txModeSelect_clr</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_set">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_set</obj_property>
+      <obj_property name="ObjectShortName">cr_txModeSelect_set</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckDataState">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckDataState</obj_property>
+      <obj_property name="ObjectShortName">earlyAckDataState</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckHdr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckHdr</obj_property>
+      <obj_property name="ObjectShortName">earlyAckHdr</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/firstDynStartSeen">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/firstDynStartSeen</obj_property>
+      <obj_property name="ObjectShortName">firstDynStartSeen</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_0_out">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_0_out[6:6]</obj_property>
+      <obj_property name="ObjectShortName">p_0_out[6:6]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_2_in__0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_2_in__0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">p_2_in__0[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_araddr[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr[8:8]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awaddr[8:8]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr_1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_awaddr_1[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_rdata_1[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_Bus2IIC_Reset">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Bus2IIC_Reset</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Bus2IIC_Reset</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Cr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Cr[7:7]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Cr[7:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Cr">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Cr[7:7]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Cr[7:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_DYN_MASTER_I_n_6">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_DYN_MASTER_I_n_6</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_DYN_MASTER_I_n_6</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_DYN_MASTER_I_n_7">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_DYN_MASTER_I_n_7</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_DYN_MASTER_I_n_7</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_D_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_D_0</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_D_0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Timing_param_thigh">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Timing_param_thigh[5:5]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Timing_param_thigh[5:5]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Timing_param_tsudat">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Timing_param_tsudat[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Timing_param_tsudat[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Timing_param_tsudat">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Timing_param_tsudat[3:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Timing_param_tsudat[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_Timing_param_tsusta">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_Timing_param_tsusta[7:6]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_Timing_param_tsusta[7:6]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_ctrlFifoDin">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_ctrlFifoDin[0:1]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_ctrlFifoDin[0:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_dynamic_MSMS">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_dynamic_MSMS[0:1]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_dynamic_MSMS[0:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="u_ila_1_gpo">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_gpo[0:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_gpo[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_iic2intc_irpt">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_iic2intc_irpt</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_iic2intc_irpt</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_is_read_reg">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_is_read_reg</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_is_read_reg</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_1_is_write_reg">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_1_is_write_reg</obj_property>
+      <obj_property name="ObjectShortName">u_ila_1_is_write_reg</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

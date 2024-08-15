@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Aug  5 12:13:53 2024
+// Date        : Mon Aug  5 12:13:52 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_1/top_block_xbar_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top top_block_xbar_1 -prefix
+//               top_block_xbar_1_ top_block_xbar_1_stub.v
 // Design      : top_block_xbar_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i

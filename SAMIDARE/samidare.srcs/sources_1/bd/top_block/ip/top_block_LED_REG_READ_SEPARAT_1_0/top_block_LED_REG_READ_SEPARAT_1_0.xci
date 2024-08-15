@@ -8,7 +8,7 @@
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_1_0",
     "parameters": {
       "component_parameters": {
-        "LED_ADDRESS": [ { "value": "0x0000F00c", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "LED_ADDRESS": [ { "value": "0x00000F03", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_START_DATA_VALUE": [ { "value": "0xAA000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0xC0000000", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -17,7 +17,7 @@
         "Component_Name": [ { "value": "top_block_LED_REG_READ_SEPARAT_1_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "LED_ADDRESS": [ { "value": "0x0000F00c", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "LED_ADDRESS": [ { "value": "0x00000F03", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_START_DATA_VALUE": [ { "value": "0xAA000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0xC0000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],

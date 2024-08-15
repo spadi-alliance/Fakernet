@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Tue Aug  6 11:52:36 2024
+// Date        : Fri Aug  9 10:30:37 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_reg_switch_0_0 -prefix
+//               top_block_reg_switch_0_0_ top_block_reg_switch_0_0_sim_netlist.v
 // Design      : top_block_reg_switch_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,101 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "reg_switch,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module top_block_reg_switch_0_0
-   (axi_aclk,
-    axi_aresetn,
-    regacc_addr_i,
-    regacc_addr_o,
-    regacc_data_wr_i,
-    regacc_data_wr_o,
-    regacc_write_i,
-    regacc_write_o,
-    regacc_read_i,
-    regacc_read_o,
-    regacc_data_rd_i,
-    regacc_data_rd_o,
-    regacc_done_i,
-    regacc_done_o,
-    start_i2c_write_o,
-    start_i2c_write_all_o,
-    start_i2c_read_o,
-    i2c_raddr_o,
-    i2c_waddr_o,
-    i2c_rdata_i,
-    i2c_done);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_aresetn;
-  input [24:0]regacc_addr_i;
-  output [24:0]regacc_addr_o;
-  input [31:0]regacc_data_wr_i;
-  output [31:0]regacc_data_wr_o;
-  input regacc_write_i;
-  output regacc_write_o;
-  input regacc_read_i;
-  output regacc_read_o;
-  input [31:0]regacc_data_rd_i;
-  output [31:0]regacc_data_rd_o;
-  input regacc_done_i;
-  output regacc_done_o;
-  output start_i2c_write_o;
-  output start_i2c_write_all_o;
-  output start_i2c_read_o;
-  output [31:0]i2c_raddr_o;
-  output [31:0]i2c_waddr_o;
-  input [31:0]i2c_rdata_i;
-  input i2c_done;
-
-  wire \<const0> ;
-  wire axi_aclk;
-  wire axi_aresetn;
-  wire i2c_done;
-  wire [31:0]i2c_rdata_i;
-  wire [31:0]i2c_waddr_o;
-  wire [24:0]regacc_addr_i;
-  wire [24:0]regacc_addr_o;
-  wire [31:0]regacc_data_rd_i;
-  wire [31:0]regacc_data_rd_o;
-  wire [31:0]regacc_data_wr_i;
-  wire [31:0]regacc_data_wr_o;
-  wire regacc_done_i;
-  wire regacc_done_o;
-  wire regacc_read_i;
-  wire regacc_read_o;
-  wire regacc_write_i;
-  wire regacc_write_o;
-  wire start_i2c_read_o;
-  wire start_i2c_write_o;
-
-  assign i2c_raddr_o[31:0] = i2c_waddr_o;
-  assign start_i2c_write_all_o = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  top_block_reg_switch_0_0_reg_switch inst
-       (.axi_aclk(axi_aclk),
-        .axi_aresetn(axi_aresetn),
-        .i2c_done(i2c_done),
-        .i2c_rdata_i(i2c_rdata_i),
-        .i2c_waddr_o(i2c_waddr_o),
-        .regacc_addr_i(regacc_addr_i),
-        .regacc_addr_o(regacc_addr_o),
-        .regacc_data_rd_i(regacc_data_rd_i),
-        .regacc_data_rd_o(regacc_data_rd_o),
-        .regacc_data_wr_i(regacc_data_wr_i),
-        .regacc_data_wr_o(regacc_data_wr_o),
-        .regacc_done_i(regacc_done_i),
-        .regacc_done_o(regacc_done_o),
-        .regacc_read_i(regacc_read_i),
-        .regacc_read_o(regacc_read_o),
-        .regacc_write_i(regacc_write_i),
-        .regacc_write_o(regacc_write_o),
-        .start_i2c_read_o(start_i2c_read_o),
-        .start_i2c_write_o(start_i2c_write_o));
-endmodule
-
-(* ORIG_REF_NAME = "reg_switch" *) 
 module top_block_reg_switch_0_0_reg_switch
    (regacc_addr_o,
     regacc_data_wr_o,
@@ -124,8 +29,8 @@ module top_block_reg_switch_0_0_reg_switch
     regacc_read_i,
     i2c_rdata_i,
     i2c_done,
-    axi_aresetn,
     regacc_done_i,
+    axi_aresetn,
     regacc_data_rd_i);
   output [24:0]regacc_addr_o;
   output [31:0]regacc_data_wr_o;
@@ -143,17 +48,14 @@ module top_block_reg_switch_0_0_reg_switch
   input regacc_read_i;
   input [31:0]i2c_rdata_i;
   input i2c_done;
-  input axi_aresetn;
   input regacc_done_i;
+  input axi_aresetn;
   input [31:0]regacc_data_rd_i;
 
+  wire \FSM_sequential_state_sw[0]_i_2_n_0 ;
   wire \FSM_sequential_state_sw[2]_i_1_n_0 ;
   wire \FSM_sequential_state_sw[2]_i_3_n_0 ;
   wire \FSM_sequential_state_sw[2]_i_4_n_0 ;
-  wire \FSM_sequential_state_sw[2]_i_5_n_0 ;
-  wire \FSM_sequential_state_sw[2]_i_6_n_0 ;
-  wire \FSM_sequential_state_sw[2]_i_7_n_0 ;
-  wire \FSM_sequential_state_sw[2]_i_8_n_0 ;
   wire axi_aclk;
   wire axi_aresetn;
   wire i2c_addr;
@@ -178,11 +80,11 @@ module top_block_reg_switch_0_0_reg_switch
   wire [31:0]regacc_data_rd_o;
   wire [31:0]regacc_data_wr_i;
   wire [31:0]regacc_data_wr_o;
-  wire regacc_done2_out;
   wire regacc_done_i;
   wire regacc_done_i_1_n_0;
   wire regacc_done_i_2_n_0;
   wire regacc_done_i_3_n_0;
+  wire regacc_done_i_4_n_0;
   wire regacc_done_o;
   wire regacc_read_i;
   wire regacc_read_o;
@@ -191,109 +93,82 @@ module top_block_reg_switch_0_0_reg_switch
   wire [31:0]sampa_rdata;
   wire \sampa_rdata[31]_i_1_n_0 ;
   wire start_i2c_read;
+  wire start_i2c_read_i_2_n_0;
   wire start_i2c_read_o;
   wire start_i2c_write;
   wire start_i2c_write_i_1_n_0;
   wire start_i2c_write_i_2_n_0;
   wire start_i2c_write_i_4_n_0;
+  wire start_i2c_write_i_5_n_0;
   wire start_i2c_write_o;
   wire [2:0]state_sw;
   wire [2:0]state_sw__0;
 
   LUT6 #(
-    .INIT(64'h0000101111111011)) 
+    .INIT(64'h00000000000F0404)) 
     \FSM_sequential_state_sw[0]_i_1 
-       (.I0(state_sw[2]),
-        .I1(state_sw[1]),
-        .I2(\regacc_addr[24]_i_2_n_0 ),
-        .I3(\regacc_addr[24]_i_4_n_0 ),
+       (.I0(\regacc_addr[24]_i_2_n_0 ),
+        .I1(\FSM_sequential_state_sw[0]_i_2_n_0 ),
+        .I2(state_sw[2]),
+        .I3(i2c_done),
         .I4(state_sw[0]),
-        .I5(i2c_done),
+        .I5(state_sw[1]),
         .O(state_sw__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h00E2)) 
+    \FSM_sequential_state_sw[0]_i_2 
+       (.I0(regacc_write_i),
+        .I1(regacc_addr_i[1]),
+        .I2(regacc_read_i),
+        .I3(regacc_addr_i[0]),
+        .O(\FSM_sequential_state_sw[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000007000000)) 
+    .INIT(64'h0044400000004000)) 
     \FSM_sequential_state_sw[1]_i_1 
-       (.I0(\FSM_sequential_state_sw[2]_i_7_n_0 ),
-        .I1(\FSM_sequential_state_sw[2]_i_5_n_0 ),
-        .I2(\FSM_sequential_state_sw[2]_i_8_n_0 ),
-        .I3(\FSM_sequential_state_sw[2]_i_6_n_0 ),
-        .I4(\FSM_sequential_state_sw[2]_i_3_n_0 ),
-        .I5(\FSM_sequential_state_sw[2]_i_4_n_0 ),
+       (.I0(\regacc_addr[24]_i_2_n_0 ),
+        .I1(\FSM_sequential_state_sw[2]_i_4_n_0 ),
+        .I2(regacc_read_i),
+        .I3(regacc_addr_i[1]),
+        .I4(regacc_addr_i[0]),
+        .I5(regacc_write_i),
         .O(state_sw__0[1]));
   LUT6 #(
-    .INIT(64'h000FFFC50000FFC5)) 
+    .INIT(64'h030FFFA30303FFA3)) 
     \FSM_sequential_state_sw[2]_i_1 
-       (.I0(\regacc_addr[24]_i_5_n_0 ),
-        .I1(i2c_done),
+       (.I0(i2c_done),
+        .I1(\FSM_sequential_state_sw[2]_i_3_n_0 ),
         .I2(state_sw[1]),
         .I3(state_sw[0]),
         .I4(state_sw[2]),
         .I5(regacc_done_i),
         .O(\FSM_sequential_state_sw[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000ECFFCCFF)) 
+    .INIT(64'hFFFF0000DD1D0000)) 
     \FSM_sequential_state_sw[2]_i_2 
-       (.I0(\FSM_sequential_state_sw[2]_i_3_n_0 ),
-        .I1(\FSM_sequential_state_sw[2]_i_4_n_0 ),
-        .I2(\FSM_sequential_state_sw[2]_i_5_n_0 ),
-        .I3(\FSM_sequential_state_sw[2]_i_6_n_0 ),
-        .I4(\FSM_sequential_state_sw[2]_i_7_n_0 ),
-        .I5(\FSM_sequential_state_sw[2]_i_8_n_0 ),
-        .O(state_sw__0[2]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
-    \FSM_sequential_state_sw[2]_i_3 
        (.I0(regacc_write_i),
-        .I1(regacc_addr_i[3]),
-        .I2(regacc_addr_i[0]),
-        .I3(regacc_addr_i[4]),
-        .I4(regacc_addr_i[1]),
-        .I5(regacc_addr_i[2]),
-        .O(\FSM_sequential_state_sw[2]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \FSM_sequential_state_sw[2]_i_4 
-       (.I0(regacc_addr_i[8]),
-        .I1(regacc_addr_i[5]),
-        .I2(regacc_addr_i[7]),
-        .I3(regacc_addr_i[6]),
-        .O(\FSM_sequential_state_sw[2]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
-    \FSM_sequential_state_sw[2]_i_5 
-       (.I0(regacc_write_i),
-        .I1(regacc_addr_i[3]),
-        .I2(regacc_addr_i[1]),
-        .I3(regacc_addr_i[2]),
-        .I4(regacc_addr_i[0]),
-        .I5(regacc_addr_i[4]),
-        .O(\FSM_sequential_state_sw[2]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h0004)) 
-    \FSM_sequential_state_sw[2]_i_6 
-       (.I0(\regacc_addr[24]_i_10_n_0 ),
-        .I1(\regacc_addr[24]_i_9_n_0 ),
-        .I2(\regacc_addr[24]_i_8_n_0 ),
-        .I3(\regacc_addr[24]_i_7_n_0 ),
-        .O(\FSM_sequential_state_sw[2]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFEFFF)) 
-    \FSM_sequential_state_sw[2]_i_7 
-       (.I0(regacc_addr_i[4]),
-        .I1(regacc_addr_i[0]),
+        .I1(regacc_addr_i[1]),
         .I2(regacc_read_i),
-        .I3(regacc_addr_i[3]),
-        .I4(regacc_addr_i[1]),
-        .I5(regacc_addr_i[2]),
-        .O(\FSM_sequential_state_sw[2]_i_7_n_0 ));
+        .I3(regacc_addr_i[0]),
+        .I4(\FSM_sequential_state_sw[2]_i_4_n_0 ),
+        .I5(\regacc_addr[24]_i_2_n_0 ),
+        .O(state_sw__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hAB)) 
+    \FSM_sequential_state_sw[2]_i_3 
+       (.I0(state_sw[2]),
+        .I1(regacc_read_i),
+        .I2(regacc_write_i),
+        .O(\FSM_sequential_state_sw[2]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
-    .INIT(8'hFE)) 
-    \FSM_sequential_state_sw[2]_i_8 
-       (.I0(state_sw[2]),
-        .I1(state_sw[1]),
-        .I2(state_sw[0]),
-        .O(\FSM_sequential_state_sw[2]_i_8_n_0 ));
+    .INIT(8'h01)) 
+    \FSM_sequential_state_sw[2]_i_4 
+       (.I0(state_sw[1]),
+        .I1(state_sw[0]),
+        .I2(state_sw[2]),
+        .O(\FSM_sequential_state_sw[2]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "STATE_I2C_READ:010,STATE_REG:100,STATE_SAMPA_READ:011,STATE_I2C_WRITE:001,STATE_IDLE:000" *) 
   FDRE \FSM_sequential_state_sw_reg[0] 
        (.C(axi_aclk),
@@ -315,14 +190,15 @@ module top_block_reg_switch_0_0_reg_switch
         .D(state_sw__0[2]),
         .Q(state_sw[2]),
         .R(start_i2c_write_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h0000000E)) 
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
     \i2c_addr[31]_i_1 
-       (.I0(\regacc_addr[24]_i_3_n_0 ),
-        .I1(\regacc_addr[24]_i_2_n_0 ),
-        .I2(state_sw[0]),
+       (.I0(regacc_addr_i[1]),
+        .I1(regacc_write_i),
+        .I2(\regacc_addr[24]_i_2_n_0 ),
         .I3(state_sw[1]),
-        .I4(state_sw[2]),
+        .I4(state_sw[0]),
+        .I5(state_sw[2]),
         .O(i2c_addr));
   FDRE \i2c_addr_reg[0] 
        (.C(axi_aclk),
@@ -517,88 +393,87 @@ module top_block_reg_switch_0_0_reg_switch
         .Q(i2c_waddr_o[9]),
         .R(start_i2c_write_i_1_n_0));
   LUT6 #(
-    .INIT(64'h00000000FFFF0010)) 
+    .INIT(64'h0000FF000000E000)) 
     \regacc_addr[24]_i_1 
-       (.I0(\regacc_addr[24]_i_2_n_0 ),
-        .I1(\regacc_addr[24]_i_3_n_0 ),
-        .I2(\regacc_addr[24]_i_4_n_0 ),
-        .I3(\regacc_addr[24]_i_5_n_0 ),
-        .I4(state_sw[2]),
-        .I5(\regacc_addr[24]_i_6_n_0 ),
+       (.I0(regacc_read_i),
+        .I1(regacc_write_i),
+        .I2(\regacc_addr[24]_i_2_n_0 ),
+        .I3(axi_aresetn),
+        .I4(\regacc_addr[24]_i_3_n_0 ),
+        .I5(\regacc_addr[24]_i_4_n_0 ),
         .O(\regacc_addr[24]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_10 
-       (.I0(regacc_addr_i[22]),
-        .I1(regacc_addr_i[10]),
-        .I2(regacc_addr_i[18]),
-        .I3(regacc_addr_i[14]),
+       (.I0(regacc_addr_i[4]),
+        .I1(regacc_addr_i[3]),
+        .I2(regacc_addr_i[6]),
+        .I3(regacc_addr_i[5]),
         .O(\regacc_addr[24]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000010)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \regacc_addr[24]_i_2 
-       (.I0(\regacc_addr[24]_i_7_n_0 ),
-        .I1(\regacc_addr[24]_i_8_n_0 ),
-        .I2(\regacc_addr[24]_i_9_n_0 ),
-        .I3(\regacc_addr[24]_i_10_n_0 ),
-        .I4(\FSM_sequential_state_sw[2]_i_3_n_0 ),
-        .I5(\FSM_sequential_state_sw[2]_i_4_n_0 ),
-        .O(\regacc_addr[24]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000010)) 
-    \regacc_addr[24]_i_3 
-       (.I0(\regacc_addr[24]_i_7_n_0 ),
-        .I1(\regacc_addr[24]_i_8_n_0 ),
-        .I2(\regacc_addr[24]_i_9_n_0 ),
-        .I3(\regacc_addr[24]_i_10_n_0 ),
-        .I4(\FSM_sequential_state_sw[2]_i_5_n_0 ),
-        .I5(\FSM_sequential_state_sw[2]_i_4_n_0 ),
-        .O(\regacc_addr[24]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFEFFFF)) 
-    \regacc_addr[24]_i_4 
-       (.I0(\FSM_sequential_state_sw[2]_i_7_n_0 ),
-        .I1(\FSM_sequential_state_sw[2]_i_4_n_0 ),
+       (.I0(\regacc_addr[24]_i_5_n_0 ),
+        .I1(\regacc_addr[24]_i_6_n_0 ),
         .I2(\regacc_addr[24]_i_7_n_0 ),
         .I3(\regacc_addr[24]_i_8_n_0 ),
         .I4(\regacc_addr[24]_i_9_n_0 ),
         .I5(\regacc_addr[24]_i_10_n_0 ),
-        .O(\regacc_addr[24]_i_4_n_0 ));
+        .O(\regacc_addr[24]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
-    .INIT(4'h1)) 
-    \regacc_addr[24]_i_5 
-       (.I0(regacc_read_i),
-        .I1(regacc_write_i),
-        .O(\regacc_addr[24]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'hFD)) 
-    \regacc_addr[24]_i_6 
-       (.I0(axi_aresetn),
+    .INIT(4'hE)) 
+    \regacc_addr[24]_i_3 
+       (.I0(state_sw[0]),
         .I1(state_sw[1]),
-        .I2(state_sw[0]),
-        .O(\regacc_addr[24]_i_6_n_0 ));
+        .O(\regacc_addr[24]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hEEFCCFCC)) 
+    \regacc_addr[24]_i_4 
+       (.I0(regacc_addr_i[0]),
+        .I1(state_sw[2]),
+        .I2(regacc_write_i),
+        .I3(regacc_read_i),
+        .I4(regacc_addr_i[1]),
+        .O(\regacc_addr[24]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \regacc_addr[24]_i_7 
+    \regacc_addr[24]_i_5 
+       (.I0(regacc_addr_i[20]),
+        .I1(regacc_addr_i[19]),
+        .I2(regacc_addr_i[22]),
+        .I3(regacc_addr_i[21]),
+        .O(\regacc_addr[24]_i_5_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \regacc_addr[24]_i_6 
        (.I0(regacc_addr_i[24]),
+        .I1(regacc_addr_i[23]),
+        .I2(regacc_addr_i[2]),
+        .O(\regacc_addr[24]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFEF)) 
+    \regacc_addr[24]_i_7 
+       (.I0(regacc_addr_i[12]),
         .I1(regacc_addr_i[11]),
-        .I2(regacc_addr_i[19]),
-        .I3(regacc_addr_i[15]),
+        .I2(regacc_addr_i[14]),
+        .I3(regacc_addr_i[13]),
         .O(\regacc_addr[24]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_8 
-       (.I0(regacc_addr_i[20]),
-        .I1(regacc_addr_i[16]),
-        .I2(regacc_addr_i[23]),
-        .I3(regacc_addr_i[12]),
+       (.I0(regacc_addr_i[16]),
+        .I1(regacc_addr_i[15]),
+        .I2(regacc_addr_i[18]),
+        .I3(regacc_addr_i[17]),
         .O(\regacc_addr[24]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'h0001)) 
+    .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_9 
-       (.I0(regacc_addr_i[17]),
-        .I1(regacc_addr_i[13]),
-        .I2(regacc_addr_i[21]),
+       (.I0(regacc_addr_i[8]),
+        .I1(regacc_addr_i[7]),
+        .I2(regacc_addr_i[10]),
         .I3(regacc_addr_i[9]),
         .O(\regacc_addr[24]_i_9_n_0 ));
   FDRE \regacc_addr_reg[0] 
@@ -970,12 +845,12 @@ module top_block_reg_switch_0_0_reg_switch
         .I4(sampa_rdata[30]),
         .O(regacc_data_rd0_in[30]));
   LUT4 #(
-    .INIT(16'h2008)) 
+    .INIT(16'h2400)) 
     \regacc_data_rd[31]_i_1 
-       (.I0(axi_aresetn),
+       (.I0(state_sw[1]),
         .I1(state_sw[2]),
-        .I2(state_sw[1]),
-        .I3(state_sw[0]),
+        .I2(state_sw[0]),
+        .I3(axi_aresetn),
         .O(\regacc_data_rd[31]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h10FF1010)) 
@@ -1434,41 +1309,41 @@ module top_block_reg_switch_0_0_reg_switch
         .Q(regacc_data_wr_o[9]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h80FFFFFF80FF0000)) 
+    .INIT(64'hBBBBFBFB8888F8C8)) 
     regacc_done_i_1
-       (.I0(state_sw[2]),
-        .I1(regacc_done_i_2_n_0),
-        .I2(regacc_done_i),
-        .I3(regacc_done_i_3_n_0),
-        .I4(regacc_done2_out),
+       (.I0(regacc_done_i_2_n_0),
+        .I1(regacc_done_i_3_n_0),
+        .I2(regacc_done_i_4_n_0),
+        .I3(axi_aresetn),
+        .I4(state_sw[2]),
         .I5(regacc_done_o),
         .O(regacc_done_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    regacc_done_i_2
-       (.I0(state_sw[0]),
-        .I1(state_sw[1]),
-        .O(regacc_done_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'hFF17)) 
+    .INIT(16'h0008)) 
+    regacc_done_i_2
+       (.I0(regacc_done_i),
+        .I1(state_sw[2]),
+        .I2(state_sw[1]),
+        .I3(state_sw[0]),
+        .O(regacc_done_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h000000F100000000)) 
     regacc_done_i_3
+       (.I0(regacc_write_i),
+        .I1(regacc_read_i),
+        .I2(state_sw[2]),
+        .I3(state_sw[0]),
+        .I4(state_sw[1]),
+        .I5(axi_aresetn),
+        .O(regacc_done_i_3_n_0));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    regacc_done_i_4
        (.I0(i2c_done),
         .I1(state_sw[0]),
         .I2(state_sw[1]),
-        .I3(state_sw[2]),
-        .O(regacc_done_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0202AAA802028280)) 
-    regacc_done_i_4
-       (.I0(axi_aresetn),
-        .I1(state_sw[1]),
-        .I2(state_sw[0]),
-        .I3(\regacc_addr[24]_i_5_n_0 ),
-        .I4(state_sw[2]),
-        .I5(i2c_done),
-        .O(regacc_done2_out));
+        .O(regacc_done_i_4_n_0));
   FDRE regacc_done_reg
        (.C(axi_aclk),
         .CE(1'b1),
@@ -1488,13 +1363,13 @@ module top_block_reg_switch_0_0_reg_switch
         .Q(regacc_write_o),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h00080000)) 
+    .INIT(32'h00400000)) 
     \sampa_rdata[31]_i_1 
-       (.I0(state_sw[1]),
+       (.I0(state_sw[0]),
         .I1(i2c_done),
-        .I2(state_sw[0]),
+        .I2(axi_aresetn),
         .I3(state_sw[2]),
-        .I4(axi_aresetn),
+        .I4(state_sw[1]),
         .O(\sampa_rdata[31]_i_1_n_0 ));
   FDRE \sampa_rdata_reg[0] 
        (.C(axi_aclk),
@@ -1688,15 +1563,23 @@ module top_block_reg_switch_0_0_reg_switch
         .D(i2c_rdata_i[9]),
         .Q(sampa_rdata[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h1110)) 
+  LUT6 #(
+    .INIT(64'h0100010301000100)) 
     start_i2c_read_i_1
-       (.I0(state_sw[2]),
-        .I1(state_sw[0]),
-        .I2(\regacc_addr[24]_i_3_n_0 ),
+       (.I0(i2c_done),
+        .I1(state_sw[2]),
+        .I2(state_sw[0]),
         .I3(state_sw[1]),
+        .I4(\regacc_addr[24]_i_2_n_0 ),
+        .I5(start_i2c_read_i_2_n_0),
         .O(start_i2c_read));
+  LUT3 #(
+    .INIT(8'h40)) 
+    start_i2c_read_i_2
+       (.I0(regacc_addr_i[1]),
+        .I1(regacc_write_i),
+        .I2(regacc_addr_i[0]),
+        .O(start_i2c_read_i_2_n_0));
   FDRE start_i2c_read_reg
        (.C(axi_aclk),
         .CE(start_i2c_write_i_2_n_0),
@@ -1708,40 +1591,144 @@ module top_block_reg_switch_0_0_reg_switch
     start_i2c_write_i_1
        (.I0(axi_aresetn),
         .O(start_i2c_write_i_1_n_0));
-  LUT5 #(
-    .INIT(32'hFFFF000E)) 
+  LUT6 #(
+    .INIT(64'hAEAEAEAEAEFFAEAE)) 
     start_i2c_write_i_2
-       (.I0(\regacc_addr[24]_i_2_n_0 ),
-        .I1(\regacc_addr[24]_i_3_n_0 ),
-        .I2(state_sw[0]),
-        .I3(state_sw[2]),
-        .I4(start_i2c_write_i_4_n_0),
+       (.I0(start_i2c_write_i_4_n_0),
+        .I1(start_i2c_write_i_5_n_0),
+        .I2(\regacc_addr[24]_i_2_n_0 ),
+        .I3(regacc_done_i),
+        .I4(state_sw[2]),
+        .I5(\regacc_addr[24]_i_3_n_0 ),
         .O(start_i2c_write_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    start_i2c_write_i_3
+       (.I0(regacc_addr_i[0]),
+        .I1(regacc_write_i),
+        .I2(regacc_addr_i[1]),
+        .I3(\regacc_addr[24]_i_2_n_0 ),
+        .I4(\regacc_addr[24]_i_3_n_0 ),
+        .I5(state_sw[2]),
+        .O(start_i2c_write));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h0002)) 
-    start_i2c_write_i_3
-       (.I0(\regacc_addr[24]_i_2_n_0 ),
-        .I1(state_sw[0]),
-        .I2(state_sw[1]),
-        .I3(state_sw[2]),
-        .O(start_i2c_write));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'h30333434)) 
+    .INIT(16'h0F02)) 
     start_i2c_write_i_4
-       (.I0(regacc_done_i),
-        .I1(state_sw[2]),
-        .I2(state_sw[1]),
-        .I3(i2c_done),
-        .I4(state_sw[0]),
+       (.I0(state_sw[0]),
+        .I1(i2c_done),
+        .I2(state_sw[2]),
+        .I3(state_sw[1]),
         .O(start_i2c_write_i_4_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'h0100)) 
+    start_i2c_write_i_5
+       (.I0(state_sw[0]),
+        .I1(state_sw[2]),
+        .I2(regacc_addr_i[1]),
+        .I3(regacc_write_i),
+        .O(start_i2c_write_i_5_n_0));
   FDRE start_i2c_write_reg
        (.C(axi_aclk),
         .CE(start_i2c_write_i_2_n_0),
         .D(start_i2c_write),
         .Q(start_i2c_write_o),
         .R(start_i2c_write_i_1_n_0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "reg_switch,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module top_block_reg_switch_0_0
+   (axi_aclk,
+    axi_aresetn,
+    regacc_addr_i,
+    regacc_addr_o,
+    regacc_data_wr_i,
+    regacc_data_wr_o,
+    regacc_write_i,
+    regacc_write_o,
+    regacc_read_i,
+    regacc_read_o,
+    regacc_data_rd_i,
+    regacc_data_rd_o,
+    regacc_done_i,
+    regacc_done_o,
+    start_i2c_write_o,
+    start_i2c_write_all_o,
+    start_i2c_read_o,
+    i2c_raddr_o,
+    i2c_waddr_o,
+    i2c_rdata_i,
+    i2c_done);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_aresetn;
+  input [24:0]regacc_addr_i;
+  output [24:0]regacc_addr_o;
+  input [31:0]regacc_data_wr_i;
+  output [31:0]regacc_data_wr_o;
+  input regacc_write_i;
+  output regacc_write_o;
+  input regacc_read_i;
+  output regacc_read_o;
+  input [31:0]regacc_data_rd_i;
+  output [31:0]regacc_data_rd_o;
+  input regacc_done_i;
+  output regacc_done_o;
+  output start_i2c_write_o;
+  output start_i2c_write_all_o;
+  output start_i2c_read_o;
+  output [31:0]i2c_raddr_o;
+  output [31:0]i2c_waddr_o;
+  input [31:0]i2c_rdata_i;
+  input i2c_done;
+
+  wire \<const0> ;
+  wire axi_aclk;
+  wire axi_aresetn;
+  wire i2c_done;
+  wire [31:0]i2c_rdata_i;
+  wire [31:0]i2c_waddr_o;
+  wire [24:0]regacc_addr_i;
+  wire [24:0]regacc_addr_o;
+  wire [31:0]regacc_data_rd_i;
+  wire [31:0]regacc_data_rd_o;
+  wire [31:0]regacc_data_wr_i;
+  wire [31:0]regacc_data_wr_o;
+  wire regacc_done_i;
+  wire regacc_done_o;
+  wire regacc_read_i;
+  wire regacc_read_o;
+  wire regacc_write_i;
+  wire regacc_write_o;
+  wire start_i2c_read_o;
+  wire start_i2c_write_o;
+
+  assign i2c_raddr_o[31:0] = i2c_waddr_o;
+  assign start_i2c_write_all_o = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  top_block_reg_switch_0_0_reg_switch inst
+       (.axi_aclk(axi_aclk),
+        .axi_aresetn(axi_aresetn),
+        .i2c_done(i2c_done),
+        .i2c_rdata_i(i2c_rdata_i),
+        .i2c_waddr_o(i2c_waddr_o),
+        .regacc_addr_i(regacc_addr_i),
+        .regacc_addr_o(regacc_addr_o),
+        .regacc_data_rd_i(regacc_data_rd_i),
+        .regacc_data_rd_o(regacc_data_rd_o),
+        .regacc_data_wr_i(regacc_data_wr_i),
+        .regacc_data_wr_o(regacc_data_wr_o),
+        .regacc_done_i(regacc_done_i),
+        .regacc_done_o(regacc_done_o),
+        .regacc_read_i(regacc_read_i),
+        .regacc_read_o(regacc_read_o),
+        .regacc_write_i(regacc_write_i),
+        .regacc_write_o(regacc_write_o),
+        .start_i2c_read_o(start_i2c_read_o),
+        .start_i2c_write_o(start_i2c_write_o));
 endmodule
 `ifndef GLBL
 `define GLBL

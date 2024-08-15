@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Mon Aug  5 12:13:49 2024
+-- Date        : Mon Aug  5 12:13:48 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_clk_wiz_0_0 -prefix
+--               top_block_clk_wiz_0_0_ top_block_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : top_block_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_block_clk_wiz_0_0_clk_wiz is
+entity top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
@@ -23,9 +23,9 @@ entity top_block_clk_wiz_0_0_clk_wiz is
     clk_out5 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end top_block_clk_wiz_0_0_clk_wiz;
+end top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of top_block_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz is
   signal clk_in1_top_block_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out1_top_block_clk_wiz_0_0 : STD_LOGIC;
   signal clk_out3_top_block_clk_wiz_0_0 : STD_LOGIC;
@@ -252,7 +252,7 @@ end top_block_clk_wiz_0_0;
 
 architecture STRUCTURE of top_block_clk_wiz_0_0 is
 begin
-inst: entity work.top_block_clk_wiz_0_0_clk_wiz
+inst: entity work.top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,

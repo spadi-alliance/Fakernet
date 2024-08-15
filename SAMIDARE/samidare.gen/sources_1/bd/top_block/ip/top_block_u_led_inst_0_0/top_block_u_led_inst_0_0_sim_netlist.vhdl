@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Mon Aug  5 18:42:56 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_u_led_inst_0_0 -prefix
+--               top_block_u_led_inst_0_0_ top_block_u_led_inst_0_0_sim_netlist.vhdl
 -- Design      : top_block_u_led_inst_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity top_block_u_led_inst_0_0_u_led_inst is
     LED_REG2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED_REG3 : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_u_led_inst_0_0_u_led_inst : entity is "u_led_inst";
 end top_block_u_led_inst_0_0_u_led_inst;
 
 architecture STRUCTURE of top_block_u_led_inst_0_0_u_led_inst is

@@ -10,7 +10,7 @@
 
 
 		// Parameters of Axi Master Bus Interface M00_AXI
-        parameter POWER_ON_ADDRESS = 32'h00008000,
+        parameter POWER_ON_ADDRESS = 32'h00000800,
         
 		// Do not modify the parameters beyond this line
 

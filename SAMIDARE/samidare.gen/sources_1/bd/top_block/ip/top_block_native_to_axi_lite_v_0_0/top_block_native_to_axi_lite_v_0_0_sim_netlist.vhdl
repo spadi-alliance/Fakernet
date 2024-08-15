@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Jul  5 13:26:04 2024
+-- Date        : Fri Jul  5 13:26:03 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_native_to_axi_lite_v_0_0/top_block_native_to_axi_lite_v_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_native_to_axi_lite_v_0_0 -prefix
+--               top_block_native_to_axi_lite_v_0_0_ top_block_native_to_axi_lite_v_0_0_sim_netlist.vhdl
 -- Design      : top_block_native_to_axi_lite_v_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0_M00_AXI is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_wready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0_M00_AXI : entity is "native_to_axi_lite_v1_0_M00_AXI";
 end top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0_M00_AXI;
 
 architecture STRUCTURE of top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0_M00_AXI is
@@ -1670,8 +1668,6 @@ entity top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0 is
     m00_axi_awready : in STD_LOGIC;
     m00_axi_wready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0 : entity is "native_to_axi_lite_v1_0";
 end top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0;
 
 architecture STRUCTURE of top_block_native_to_axi_lite_v_0_0_native_to_axi_lite_v1_0 is

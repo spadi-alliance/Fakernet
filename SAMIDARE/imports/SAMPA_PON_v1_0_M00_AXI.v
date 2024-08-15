@@ -6,7 +6,7 @@
 	
 
 		// Users to add parameters here
-        parameter  POWER_ON_ADDRESS = 32'h00008000,
+        parameter  POWER_ON_ADDRESS = 32'h00000800,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -205,7 +205,7 @@
 	//Write Response (B)
 	assign M_AXI_BREADY	= axi_bready;
 	//Read Address (AR)
-	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_araddr;
+	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + {axi_araddr[C_M_AXI_ADDR_WIDTH-3 : 0] , 2'b00};;//bram data is 32 bits, and 1 address has 8 data
 	assign M_AXI_ARVALID	= axi_arvalid;
 	assign M_AXI_ARPROT	= 3'b001;
 	//Read and Read Response (R)

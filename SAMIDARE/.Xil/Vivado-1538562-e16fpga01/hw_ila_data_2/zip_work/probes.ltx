@@ -10,11 +10,33 @@
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="PROBE_PORT" value="0"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
       </probeOptions>
       <nets>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[1]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[8]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="9"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata[31]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -25,66 +47,6 @@
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="PROBE_PORT" value="1"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/IOBUF_IO_O1[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
-        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="2"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="u_ila_1_IOBUF_IO_T1[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
-        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="3"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_iobuf/IOBUF_IO_O[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
-        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="4"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="u_ila_1_IOBUF_IO_T[0]"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
-        <Option Id="CORE_LOCATION" value="1:2"/>
-        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
-        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="5"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
       </probeOptions>
@@ -102,7 +64,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="4"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="6"/>
       </probeOptions>
@@ -122,7 +84,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="10"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="21"/>
       </probeOptions>
@@ -157,7 +119,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="31"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -172,7 +134,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="6"/>
+        <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
       </probeOptions>
@@ -195,7 +157,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="6"/>
+        <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="9"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="15"/>
       </probeOptions>
@@ -224,20 +186,70 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="7"/>
+        <Option Id="PROBE_PORT" value="3"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="5"/>
       </probeOptions>
       <nets>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[8]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[7]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[6]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[5]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[4]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[3]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[2]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[1]"/>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata_1[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[8]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tlow[4]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="4"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_RdCE[3]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="7"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Adr[6]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="6"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_addr[3]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -248,11 +260,14 @@
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="PROBE_PORT" value="7"/>
-        <Option Id="PROBE_PORT_BITS" value="9"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
       </probeOptions>
       <nets>
-        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_rdata[31]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_Addr[5]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -263,6 +278,486 @@
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[10]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[11]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[12]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[13]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[14]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[15]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[16]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_1[17]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT_BITS" value="8"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_2[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_2[8]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT_BITS" value="10"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_3[4]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT_BITS" value="11"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE_4[2]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT_BITS" value="12"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bus2IIC_WrCE[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="9"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/IIC2Bus_IntrEvent[7]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="10"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/CLKCNT/q_int_reg[8]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="11"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Cr[7]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT_BITS" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="3"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr_1[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr_1[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr_1[5]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT_BITS" value="4"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Cr[2]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT_BITS" value="5"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Cr[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="13"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Rc_fifo_data[7]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="14"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[0]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Data_i2c[7]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="15"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="15"/>
+        <Option Id="PROBE_PORT_BITS" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="7"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_m01_axi_awaddr[7]"/>
+        <net name="u_ila_0_m01_axi_awaddr[6]"/>
+        <net name="u_ila_0_m01_axi_awaddr[5]"/>
+        <net name="u_ila_0_m01_axi_awaddr[4]"/>
+        <net name="u_ila_0_m01_axi_awaddr[3]"/>
+        <net name="u_ila_0_m01_axi_awaddr[2]"/>
+        <net name="u_ila_0_m01_axi_awaddr[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="15"/>
+        <Option Id="PROBE_PORT_BITS" value="8"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_awaddr[8]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="16"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_2_in__0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="17"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[8]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/s_axi_araddr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="18"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="8"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_data_0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="19"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/p_0_out[6]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="20"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_addr_0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="21"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="5"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusta[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="21"/>
+        <Option Id="PROBE_PORT_BITS" value="5"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Timing_param_tsusta[7]"/>
+        <net name="u_ila_1_Timing_param_tsusta[6]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="22"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="5"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tsusto[3]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="23"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_gpo[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="24"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_ctrlFifoDin[0]"/>
+        <net name="u_ila_1_ctrlFifoDin[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="25"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
       </probeOptions>
@@ -285,12 +780,171 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="8"/>
+        <Option Id="PROBE_PORT" value="25"/>
         <Option Id="PROBE_PORT_BITS" value="9"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
         <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/s_axi_rdata[31]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="26"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="9"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[8]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_tbuf[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="27"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_dynamic_MSMS[0]"/>
+        <net name="u_ila_1_dynamic_MSMS[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="28"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="4"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Timing_param_tsudat[3]"/>
+        <net name="u_ila_1_Timing_param_tsudat[2]"/>
+        <net name="u_ila_1_Timing_param_tsudat[1]"/>
+        <net name="u_ila_1_Timing_param_tsudat[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="28"/>
+        <Option Id="PROBE_PORT_BITS" value="4"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="3"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Timing_param_tsudat[8]"/>
+        <net name="u_ila_1_Timing_param_tsudat[7]"/>
+        <net name="u_ila_1_Timing_param_tsudat[6]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="29"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="29"/>
+        <Option Id="PROBE_PORT_BITS" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="6"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[8]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[6]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[5]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thdsta[3]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="30"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="5"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[4]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[3]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[2]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[1]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="30"/>
+        <Option Id="PROBE_PORT_BITS" value="5"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Timing_param_thigh[5]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="30"/>
+        <Option Id="PROBE_PORT_BITS" value="6"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="2"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh[7]"/>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Timing_param_thigh[6]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -300,7 +954,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="9"/>
+        <Option Id="PROBE_PORT" value="31"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -315,7 +969,37 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="10"/>
+        <Option Id="PROBE_PORT" value="32"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_is_read_reg"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="33"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_is_write_reg"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="34"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -330,7 +1014,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="11"/>
+        <Option Id="PROBE_PORT" value="35"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -345,7 +1029,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT" value="36"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -360,7 +1044,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="13"/>
+        <Option Id="PROBE_PORT" value="37"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -375,7 +1059,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="14"/>
+        <Option Id="PROBE_PORT" value="38"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -390,7 +1074,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="15"/>
+        <Option Id="PROBE_PORT" value="39"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -405,7 +1089,7 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="16"/>
+        <Option Id="PROBE_PORT" value="40"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -420,7 +1104,97 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="17"/>
+        <Option Id="PROBE_PORT" value="41"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Tx_fifo_full"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="42"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Tx_fifo_rd"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="43"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Tx_fifo_rd_d"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="44"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Tx_fifo_rst"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="45"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Tx_fifo_wr"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="46"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Tx_fifo_wr_d"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="47"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
@@ -435,12 +1209,282 @@
         <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
         <Option Id="HW_ILA" value="hw_ila_2"/>
-        <Option Id="PROBE_PORT" value="18"/>
+        <Option Id="PROBE_PORT" value="48"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
         <net name="top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/writes_done"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="49"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Aas"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="50"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Abgc"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="51"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/ackDataState"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="52"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Al"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="53"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/Bb"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="54"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_Bus2IIC_Reset"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="55"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/callingReadAccess"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="56"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_clr"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="57"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/cr_txModeSelect_set"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="58"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/D"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="59"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_D_0"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="60"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_DYN_MASTER_I_n_6"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="61"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_DYN_MASTER_I_n_7"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="62"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckDataState"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="63"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/earlyAckHdr"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="64"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/FILTER_I_n_2"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="65"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="top_block_i/SAMPA_I2C_wrapper/axi_iic_0/U0/X_IIC/firstDynStartSeen"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:2"/>
+        <Option Id="CORE_UUID" value="3b505a030738513c98471d25f5b1f848"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="PROBE_PORT" value="66"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_iic2intc_irpt"/>
       </nets>
     </probe>
   </probeset>

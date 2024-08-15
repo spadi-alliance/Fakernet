@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Aug  6 09:55:57 2024
+-- Date        : Fri Aug  9 10:56:06 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_LED_REG_READ_SEPARAT_0_0/top_block_LED_REG_READ_SEPARAT_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_LED_REG_READ_SEPARAT_0_0 -prefix
+--               top_block_LED_REG_READ_SEPARAT_0_0_ top_block_LED_REG_READ_SEPARAT_0_0_sim_netlist.vhdl
 -- Design      : top_block_LED_REG_READ_SEPARAT_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI is
   port (
     m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     LED_REG : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_rready_reg_0 : out STD_LOGIC;
     reads_done_reg_0 : out STD_LOGIC;
@@ -30,8 +30,6 @@ entity top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI is
     m00_axi_init_axi_txn : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI : entity is "LED_REG_READ_SEPARATE_v1_0_M00_AXI";
 end top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI;
 
 architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0_M00_AXI is
@@ -47,7 +45,7 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARA
   signal init_txn_ff2 : STD_LOGIC;
   signal last_read : STD_LOGIC;
   signal last_read_i_1_n_0 : STD_LOGIC;
-  signal \^m00_axi_araddr\ : STD_LOGIC_VECTOR ( 31 downto 29 );
+  signal \^m00_axi_araddr\ : STD_LOGIC_VECTOR ( 29 downto 27 );
   signal \m00_axi_araddr[29]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \m00_axi_araddr[29]_INST_0_i_2_n_0\ : STD_LOGIC;
   signal \m00_axi_araddr[29]_INST_0_n_6\ : STD_LOGIC;
@@ -145,8 +143,8 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARA
   attribute SOFT_HLUTNM of reads_done_i_2 : label is "soft_lutpair0";
 begin
   axi_rready_reg_0 <= \^axi_rready_reg_0\;
-  m00_axi_araddr(31 downto 29) <= \^m00_axi_araddr\(31 downto 29);
-  m00_axi_araddr(28 downto 0) <= axi_araddr(28 downto 0);
+  m00_axi_araddr(29 downto 27) <= \^m00_axi_araddr\(29 downto 27);
+  m00_axi_araddr(26 downto 0) <= axi_araddr(26 downto 0);
   m00_axi_arvalid <= \^m00_axi_arvalid\;
   m00_axi_bready <= \^m00_axi_bready\;
   reads_done_reg_0 <= \^reads_done_reg_0\;
@@ -185,53 +183,53 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       Q => axi_araddr(0),
       R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[10]\: unisim.vcomponents.FDRE
+\axi_araddr_reg[10]\: unisim.vcomponents.FDSE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(10),
       Q => axi_araddr(10),
-      R => reads_done_i_1_n_0
+      S => reads_done_i_1_n_0
     );
-\axi_araddr_reg[11]\: unisim.vcomponents.FDRE
+\axi_araddr_reg[11]\: unisim.vcomponents.FDSE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(11),
       Q => axi_araddr(11),
-      R => reads_done_i_1_n_0
+      S => reads_done_i_1_n_0
     );
-\axi_araddr_reg[12]\: unisim.vcomponents.FDSE
+\axi_araddr_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(12),
       Q => axi_araddr(12),
-      S => reads_done_i_1_n_0
+      R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[13]\: unisim.vcomponents.FDSE
+\axi_araddr_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(13),
       Q => axi_araddr(13),
-      S => reads_done_i_1_n_0
+      R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[14]\: unisim.vcomponents.FDSE
+\axi_araddr_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(14),
       Q => axi_araddr(14),
-      S => reads_done_i_1_n_0
+      R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[15]\: unisim.vcomponents.FDSE
+\axi_araddr_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(15),
       Q => axi_araddr(15),
-      S => reads_done_i_1_n_0
+      R => reads_done_i_1_n_0
     );
 \axi_araddr_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -265,13 +263,13 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       Q => axi_araddr(19),
       R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[1]\: unisim.vcomponents.FDRE
+\axi_araddr_reg[1]\: unisim.vcomponents.FDSE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(1),
       Q => axi_araddr(1),
-      R => reads_done_i_1_n_0
+      S => reads_done_i_1_n_0
     );
 \axi_araddr_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -377,13 +375,13 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       Q => axi_araddr(31),
       R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[3]\: unisim.vcomponents.FDSE
+\axi_araddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(3),
       Q => axi_araddr(3),
-      S => reads_done_i_1_n_0
+      R => reads_done_i_1_n_0
     );
 \axi_araddr_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -417,21 +415,21 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       Q => axi_araddr(7),
       R => reads_done_i_1_n_0
     );
-\axi_araddr_reg[8]\: unisim.vcomponents.FDRE
+\axi_araddr_reg[8]\: unisim.vcomponents.FDSE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(8),
       Q => axi_araddr(8),
-      R => reads_done_i_1_n_0
+      S => reads_done_i_1_n_0
     );
-\axi_araddr_reg[9]\: unisim.vcomponents.FDRE
+\axi_araddr_reg[9]\: unisim.vcomponents.FDSE
      port map (
       C => m00_axi_aclk,
       CE => '1',
       D => axi_araddr(9),
       Q => axi_araddr(9),
-      R => reads_done_i_1_n_0
+      S => reads_done_i_1_n_0
     );
 axi_arvalid_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -785,21 +783,21 @@ last_read_reg: unisim.vcomponents.FDRE
       CO(1) => \m00_axi_araddr[29]_INST_0_n_6\,
       CO(0) => \m00_axi_araddr[29]_INST_0_n_7\,
       DI(7 downto 2) => B"000000",
-      DI(1) => axi_araddr(30),
+      DI(1) => axi_araddr(28),
       DI(0) => '0',
       O(7 downto 3) => \NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED\(7 downto 3),
-      O(2 downto 0) => \^m00_axi_araddr\(31 downto 29),
+      O(2 downto 0) => \^m00_axi_araddr\(29 downto 27),
       S(7 downto 3) => B"00000",
       S(2) => \m00_axi_araddr[29]_INST_0_i_1_n_0\,
       S(1) => \m00_axi_araddr[29]_INST_0_i_2_n_0\,
-      S(0) => axi_araddr(29)
+      S(0) => axi_araddr(27)
     );
 \m00_axi_araddr[29]_INST_0_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => axi_araddr(31),
+      I0 => axi_araddr(29),
       O => \m00_axi_araddr[29]_INST_0_i_1_n_0\
     );
 \m00_axi_araddr[29]_INST_0_i_2\: unisim.vcomponents.LUT1
@@ -807,7 +805,7 @@ last_read_reg: unisim.vcomponents.FDRE
       INIT => X"1"
     )
         port map (
-      I0 => axi_araddr(30),
+      I0 => axi_araddr(28),
       O => \m00_axi_araddr[29]_INST_0_i_2_n_0\
     );
 \read_index[0]_i_1\: unisim.vcomponents.LUT1
@@ -950,7 +948,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0 is
   port (
     m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     LED_REG : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_rready_reg : out STD_LOGIC;
     reads_done_reg : out STD_LOGIC;
@@ -963,8 +961,6 @@ entity top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0 is
     m00_axi_init_axi_txn : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0 : entity is "LED_REG_READ_SEPARATE_v1_0";
 end top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0;
 
 architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0 is
@@ -974,7 +970,7 @@ LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst: entity work.top_block_LED_REG_READ_SEPA
       LED_REG(31 downto 0) => LED_REG(31 downto 0),
       axi_rready_reg_0 => axi_rready_reg,
       m00_axi_aclk => m00_axi_aclk,
-      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
+      m00_axi_araddr(29 downto 0) => m00_axi_araddr(29 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_arvalid => m00_axi_arvalid,
@@ -1033,6 +1029,7 @@ end top_block_LED_REG_READ_SEPARAT_0_0;
 architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
+  signal \^m00_axi_araddr\ : STD_LOGIC_VECTOR ( 31 downto 2 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -1060,6 +1057,9 @@ architecture STRUCTURE of top_block_LED_REG_READ_SEPARAT_0_0 is
   attribute X_INTERFACE_INFO of m00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 m00_axi WDATA";
   attribute X_INTERFACE_INFO of m00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 m00_axi WSTRB";
 begin
+  m00_axi_araddr(31 downto 2) <= \^m00_axi_araddr\(31 downto 2);
+  m00_axi_araddr(1) <= \<const0>\;
+  m00_axi_araddr(0) <= \<const0>\;
   m00_axi_arprot(2) <= \<const0>\;
   m00_axi_arprot(1) <= \<const0>\;
   m00_axi_arprot(0) <= \<const1>\;
@@ -1150,7 +1150,7 @@ inst: entity work.top_block_LED_REG_READ_SEPARAT_0_0_LED_REG_READ_SEPARATE_v1_0
       LED_REG(31 downto 0) => LED_REG(31 downto 0),
       axi_rready_reg => m00_axi_rready,
       m00_axi_aclk => m00_axi_aclk,
-      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
+      m00_axi_araddr(29 downto 0) => \^m00_axi_araddr\(31 downto 2),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_arvalid => m00_axi_arvalid,

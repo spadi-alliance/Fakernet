@@ -1,0 +1,41 @@
+$date
+        2024-Aug-15 15:32:12
+$end
+$version
+        Vivado v2022.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " top_block_i/util_vector_logic_1/Res $end
+$var reg 2 # top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state [1:0] $end
+$var reg 1 % u_ila_1_i_1 $end
+$var reg 1 & u_ila_1_i $end
+$var reg 1 ' top_block_i/iobuf_vhdl_1/o $end
+$var reg 1 ( top_block_i/iobuf_vhdl_0/o $end
+$var reg 1 ) top_block_i/iobuf_vhdl_1/t $end
+$var reg 1 * top_block_i/iobuf_vhdl_0/t $end
+$var reg 1 + top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/TXN_DONE $end
+$var reg 1 , _TRIGGER $end
+$var reg 1 - _WINDOW $end
+$var reg 1 . _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+b0 #
+0%
+0&
+1'
+1(
+1)
+1*
+0+
+0,
+1-
+0.
+$end
+#512
+1,

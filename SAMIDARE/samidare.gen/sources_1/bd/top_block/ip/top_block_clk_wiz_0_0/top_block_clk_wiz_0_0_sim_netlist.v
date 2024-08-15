@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Aug  5 12:13:49 2024
+// Date        : Mon Aug  5 12:13:48 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_clk_wiz_0_0 -prefix
+//               top_block_clk_wiz_0_0_ top_block_clk_wiz_0_0_sim_netlist.v
 // Design      : top_block_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,7 +34,7 @@ module top_block_clk_wiz_0_0
   wire clk_out4;
   wire clk_out5;
 
-  top_block_clk_wiz_0_0_clk_wiz inst
+  top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
@@ -43,7 +43,7 @@ module top_block_clk_wiz_0_0
         .clk_out5(clk_out5));
 endmodule
 
-module top_block_clk_wiz_0_0_clk_wiz
+module top_block_clk_wiz_0_0_top_block_clk_wiz_0_0_clk_wiz
    (clk_out1,
     clk_out2,
     clk_out3,

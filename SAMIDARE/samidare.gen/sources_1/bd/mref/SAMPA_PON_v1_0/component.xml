@@ -235,7 +235,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>067e50e5</spirit:value>
+            <spirit:value>372e88c4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -248,7 +248,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>067e50e5</spirit:value>
+            <spirit:value>372e88c4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -652,7 +652,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>POWER_ON_ADDRESS</spirit:name>
         <spirit:displayName>Power On Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.POWER_ON_ADDRESS" spirit:bitStringLength="32">0x00008000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.POWER_ON_ADDRESS" spirit:bitStringLength="32">0x00000800</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -704,7 +704,7 @@
     <spirit:parameter>
       <spirit:name>POWER_ON_ADDRESS</spirit:name>
       <spirit:displayName>Power On Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.POWER_ON_ADDRESS" spirit:bitStringLength="32">0x00008000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.POWER_ON_ADDRESS" spirit:bitStringLength="32">0x00000800</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -751,7 +751,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-08-06T00:57:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-08-09T01:55:26Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

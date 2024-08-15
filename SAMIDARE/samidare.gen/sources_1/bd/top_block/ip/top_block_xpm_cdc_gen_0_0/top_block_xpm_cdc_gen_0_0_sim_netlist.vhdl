@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Sun Aug  4 20:20:47 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_0/top_block_xpm_cdc_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_xpm_cdc_gen_0_0 -prefix
+--               top_block_xpm_cdc_gen_0_0_ top_block_xpm_cdc_gen_0_0_sim_netlist.vhdl
 -- Design      : top_block_xpm_cdc_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity top_block_xpm_cdc_gen_0_0_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of top_block_xpm_cdc_gen_0_0_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of top_block_xpm_cdc_gen_0_0_xpm_cdc_async_rst : entity is "1'b0";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xpm_cdc_gen_0_0_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of top_block_xpm_cdc_gen_0_0_xpm_cdc_async_rst : entity is 0;
   attribute VERSION : integer;
@@ -155,8 +153,6 @@ entity top_block_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_2 is
   attribute INIT of top_block_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_2 : entity is "1";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_block_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_2 : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_2 : entity is "xpm_cdc_gen_v1_0_2";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_block_xpm_cdc_gen_0_0_xpm_cdc_gen_v1_0_2 : entity is 0;
   attribute RST_ACTIVE_HIGH : integer;

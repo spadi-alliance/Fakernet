@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Thu Jul  4 14:54:44 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_RESET_INST_0_0/top_block_RESET_INST_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_RESET_INST_0_0 -prefix
+//               top_block_RESET_INST_0_0_ top_block_RESET_INST_0_0_sim_netlist.v
 // Design      : top_block_RESET_INST_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,30 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "top_block_RESET_INST_0_0,RESET_INST,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "RESET_INST,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module top_block_RESET_INST_0_0
-   (clk125,
-    reset_vio,
-    resetdone,
-    sfp_reset_pulse);
-  input clk125;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset_vio RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset_vio, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset_vio;
-  input resetdone;
-  output sfp_reset_pulse;
-
-  wire \<const0> ;
-  wire resetdone;
-
-  assign sfp_reset_pulse = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  top_block_RESET_INST_0_0_RESET_INST inst
-       (.resetdone(resetdone));
-endmodule
-
-(* ORIG_REF_NAME = "RESET_INST" *) 
 module top_block_RESET_INST_0_0_RESET_INST
    (resetdone);
   input resetdone;
@@ -61,6 +37,29 @@ module top_block_RESET_INST_0_0_RESET_INST
         .D(async_dly_resetdone0),
         .Q(async_dly_resetdone1),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "top_block_RESET_INST_0_0,RESET_INST,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "RESET_INST,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module top_block_RESET_INST_0_0
+   (clk125,
+    reset_vio,
+    resetdone,
+    sfp_reset_pulse);
+  input clk125;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset_vio RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset_vio, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset_vio;
+  input resetdone;
+  output sfp_reset_pulse;
+
+  wire \<const0> ;
+  wire resetdone;
+
+  assign sfp_reset_pulse = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  top_block_RESET_INST_0_0_RESET_INST inst
+       (.resetdone(resetdone));
 endmodule
 `ifndef GLBL
 `define GLBL

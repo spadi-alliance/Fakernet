@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Tue Aug  6 18:05:13 2024
+//Date        : Thu Aug 15 16:09:21 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -9,55 +9,8 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-module I2C_iobuf_imp_1CO6D0F
-   (IOBUF_IO_I,
-    IOBUF_IO_I1,
-    IOBUF_IO_O,
-    IOBUF_IO_O1,
-    IOBUF_IO_T,
-    IOBUF_IO_T1,
-    SAMPA_I2C_SCL,
-    SAMPA_I2C_SDA);
-  input [0:0]IOBUF_IO_I;
-  input [0:0]IOBUF_IO_I1;
-  output [0:0]IOBUF_IO_O;
-  output [0:0]IOBUF_IO_O1;
-  input [0:0]IOBUF_IO_T;
-  input [0:0]IOBUF_IO_T1;
-  inout [0:0]SAMPA_I2C_SCL;
-  inout [0:0]SAMPA_I2C_SDA;
-
-  wire [0:0]IOBUF_IO_I1_1;
-  wire [0:0]IOBUF_IO_I_1;
-  wire [0:0]IOBUF_IO_T1_1;
-  wire [0:0]IOBUF_IO_T_1;
-  wire [0:0]Net;
-  wire [0:0]Net1;
-  wire [0:0]util_ds_buf_0_IOBUF_IO_O;
-  wire [0:0]util_ds_buf_1_IOBUF_IO_O;
-
-  assign IOBUF_IO_I1_1 = IOBUF_IO_I1[0];
-  assign IOBUF_IO_I_1 = IOBUF_IO_I[0];
-  assign IOBUF_IO_O[0] = util_ds_buf_0_IOBUF_IO_O;
-  assign IOBUF_IO_O1[0] = util_ds_buf_1_IOBUF_IO_O;
-  assign IOBUF_IO_T1_1 = IOBUF_IO_T1[0];
-  assign IOBUF_IO_T_1 = IOBUF_IO_T[0];
-  top_block_util_ds_buf_0_0 util_ds_buf_0
-       (.IOBUF_IO_I(IOBUF_IO_I_1),
-        .IOBUF_IO_IO(SAMPA_I2C_SCL[0]),
-        .IOBUF_IO_O(util_ds_buf_0_IOBUF_IO_O),
-        .IOBUF_IO_T(IOBUF_IO_T_1));
-  top_block_util_ds_buf_1_0 util_ds_buf_1
-       (.IOBUF_IO_I(IOBUF_IO_I1_1),
-        .IOBUF_IO_IO(SAMPA_I2C_SDA[0]),
-        .IOBUF_IO_O(util_ds_buf_1_IOBUF_IO_O),
-        .IOBUF_IO_T(IOBUF_IO_T1_1));
-endmodule
-
 module SAMPA_I2C_wrapper_imp_VOP84W
-   (SAMPA_I2C_SCL,
-    SAMPA_I2C_SDA,
-    i2c_done,
+   (i2c_done,
     i2c_raddr_i,
     i2c_rdata_o,
     i2c_waddr_i,
@@ -83,11 +36,15 @@ module SAMPA_I2C_wrapper_imp_VOP84W
     m00_axi_wstrb,
     m00_axi_wvalid,
     s_axi_aclk,
+    scl_i,
+    scl_o,
+    scl_t,
+    sda_i,
+    sda_o,
+    sda_t,
     start_i2c_read,
     start_i2c_write,
     start_i2c_write_all);
-  inout [0:0]SAMPA_I2C_SCL;
-  inout [0:0]SAMPA_I2C_SDA;
   output i2c_done;
   input [31:0]i2c_raddr_i;
   output [31:0]i2c_rdata_o;
@@ -114,6 +71,12 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   output [3:0]m00_axi_wstrb;
   output [0:0]m00_axi_wvalid;
   input s_axi_aclk;
+  input scl_i;
+  output scl_o;
+  output scl_t;
+  input sda_i;
+  output sda_o;
+  output sda_t;
   input start_i2c_read;
   input start_i2c_write;
   input start_i2c_write_all;
@@ -156,10 +119,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   wire I2C_Controller_v1_0_0_m01_axi_WREADY;
   wire [3:0]I2C_Controller_v1_0_0_m01_axi_WSTRB;
   wire I2C_Controller_v1_0_0_m01_axi_WVALID;
-  wire [0:0]I2C_iobuf_IOBUF_IO_O;
-  wire [0:0]I2C_iobuf_IOBUF_IO_O1;
-  wire [0:0]Net;
-  wire [0:0]Net1;
   wire axi_iic_0_scl_o;
   wire axi_iic_0_scl_t;
   wire axi_iic_0_sda_o;
@@ -169,6 +128,8 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   wire m00_axi_aclk_1;
   wire m00_axi_aresetn_1;
   wire s_axi_aclk_1;
+  wire scl_i_1;
+  wire sda_i_1;
   wire start_i2c_read_1;
   wire start_i2c_write_1;
   wire start_i2c_write_all_1;
@@ -199,6 +160,12 @@ module SAMPA_I2C_wrapper_imp_VOP84W
   assign m00_axi_wstrb[3:0] = Conn1_WSTRB;
   assign m00_axi_wvalid[0] = Conn1_WVALID;
   assign s_axi_aclk_1 = s_axi_aclk;
+  assign scl_i_1 = scl_i;
+  assign scl_o = axi_iic_0_scl_o;
+  assign scl_t = axi_iic_0_scl_t;
+  assign sda_i_1 = sda_i;
+  assign sda_o = axi_iic_0_sda_o;
+  assign sda_t = axi_iic_0_sda_t;
   assign start_i2c_read_1 = start_i2c_read;
   assign start_i2c_write_1 = start_i2c_write;
   assign start_i2c_write_all_1 = start_i2c_write_all;
@@ -252,15 +219,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
         .start_i2c_read(start_i2c_read_1),
         .start_i2c_write(start_i2c_write_1),
         .start_i2c_write_all(start_i2c_write_all_1));
-  I2C_iobuf_imp_1CO6D0F I2C_iobuf
-       (.IOBUF_IO_I(axi_iic_0_scl_o),
-        .IOBUF_IO_I1(axi_iic_0_sda_o),
-        .IOBUF_IO_O(I2C_iobuf_IOBUF_IO_O),
-        .IOBUF_IO_O1(I2C_iobuf_IOBUF_IO_O1),
-        .IOBUF_IO_T(axi_iic_0_scl_t),
-        .IOBUF_IO_T1(axi_iic_0_sda_t),
-        .SAMPA_I2C_SCL(SAMPA_I2C_SCL[0]),
-        .SAMPA_I2C_SDA(SAMPA_I2C_SDA[0]));
   top_block_axi_iic_0_0 axi_iic_0
        (.s_axi_aclk(s_axi_aclk_1),
         .s_axi_araddr(I2C_Controller_v1_0_0_m01_axi_ARADDR[8:0]),
@@ -281,10 +239,10 @@ module SAMPA_I2C_wrapper_imp_VOP84W
         .s_axi_wready(I2C_Controller_v1_0_0_m01_axi_WREADY),
         .s_axi_wstrb(I2C_Controller_v1_0_0_m01_axi_WSTRB),
         .s_axi_wvalid(I2C_Controller_v1_0_0_m01_axi_WVALID),
-        .scl_i(I2C_iobuf_IOBUF_IO_O),
+        .scl_i(scl_i_1),
         .scl_o(axi_iic_0_scl_o),
         .scl_t(axi_iic_0_scl_t),
-        .sda_i(I2C_iobuf_IOBUF_IO_O1),
+        .sda_i(sda_i_1),
         .sda_o(axi_iic_0_sda_o),
         .sda_t(axi_iic_0_sda_t));
 endmodule
@@ -2003,11 +1961,11 @@ module s03_couplers_imp_17JAZQP
   assign s03_couplers_to_s03_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=65,numReposBlks=51,numNonXlnxBlks=0,numHierBlks=14,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=12,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=18,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=73,numReposBlks=60,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=14,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
+    BX_SYNC_TRG_N,
     BX_SYNC_TRG_P,
-    BX_SYNX_TRG_N,
     CLKSOIN_N,
     CLKSOIN_P,
     CLK_CFG,
@@ -2021,8 +1979,6 @@ module top_block
     PUSH_SW,
     SAMPA_EN_A,
     SAMPA_EN_D,
-    SAMPA_I2C_SCL,
-    SAMPA_I2C_SDA,
     SFP0RXN,
     SFP0RXP,
     SFP0TXN,
@@ -2037,13 +1993,15 @@ module top_block
     SO2P,
     SO3N,
     SO3P,
+    S_I2C_SCL,
+    S_I2C_SDA,
     TRG_N,
     TRG_P);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.BASECLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.BASECLK, CLK_DOMAIN top_block_BASECLK, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input BASECLK;
+  output [0:0]BX_SYNC_TRG_N;
   output [0:0]BX_SYNC_TRG_P;
-  output [0:0]BX_SYNX_TRG_N;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_N, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_N;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_P, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_P;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_N, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_N;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_P, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
   inout [7:0]GPION;
   inout [7:0]GPIOP;
@@ -2055,8 +2013,6 @@ module top_block
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.PUSH_SW RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.PUSH_SW, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input PUSH_SW;
   output SAMPA_EN_A;
   output SAMPA_EN_D;
-  inout SAMPA_I2C_SCL;
-  inout SAMPA_I2C_SDA;
   input SFP0RXN;
   input SFP0RXP;
   output SFP0TXN;
@@ -2071,6 +2027,8 @@ module top_block
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SO2P DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SO2P, LAYERED_METADATA undef" *) input [10:0]SO2P;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SO3N DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SO3N, LAYERED_METADATA undef" *) input [10:0]SO3N;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SO3P DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SO3P, LAYERED_METADATA undef" *) input [10:0]SO3P;
+  inout S_I2C_SCL;
+  inout S_I2C_SDA;
   output [3:0]TRG_N;
   output [3:0]TRG_P;
 
@@ -2099,6 +2057,10 @@ module top_block
   wire [0:0]S00_AXI_1_WVALID;
   wire SAMPA_I2C_wrapper_i2c_done;
   wire [31:0]SAMPA_I2C_wrapper_i2c_rdata_o;
+  wire SAMPA_I2C_wrapper_scl_o;
+  wire SAMPA_I2C_wrapper_scl_t;
+  wire SAMPA_I2C_wrapper_sda_o;
+  wire SAMPA_I2C_wrapper_sda_t;
   wire [31:0]SAMPA_PON_v1_0_0_m00_axi_ARADDR;
   wire [2:0]SAMPA_PON_v1_0_0_m00_axi_ARPROT;
   wire SAMPA_PON_v1_0_0_m00_axi_ARREADY;
@@ -2119,6 +2081,14 @@ module top_block
   wire [3:0]SAMPA_PON_v1_0_0_m00_axi_WSTRB;
   wire SAMPA_PON_v1_0_0_m00_axi_WVALID;
   wire SAMPA_PON_v1_0_0_sampa_power_on;
+  wire [10:0]SO0N_1;
+  wire [10:0]SO0P_1;
+  wire [10:0]SO1N_1;
+  wire [10:0]SO1P_1;
+  wire [10:0]SO2N_1;
+  wire [10:0]SO2P_1;
+  wire [10:0]SO3N_1;
+  wire [10:0]SO3P_1;
   wire [31:0]axi_mem_intercon_M00_AXI_ARADDR;
   wire [2:0]axi_mem_intercon_M00_AXI_ARPROT;
   wire [0:0]axi_mem_intercon_M00_AXI_ARREADY;
@@ -2179,6 +2149,8 @@ module top_block
   wire gtrefclk_n_0_1;
   wire gtrefclk_p_0_1;
   wire [31:0]i2c_raddr_i_1;
+  wire iobuf_vhdl_0_o;
+  wire iobuf_vhdl_1_o;
   wire [3:0]led_module_LED;
   wire [31:0]led_module_m00_axi1_ARADDR;
   wire [2:0]led_module_m00_axi1_ARPROT;
@@ -2232,22 +2204,27 @@ module top_block
   wire [0:0]util_ds_buf_3_OBUF_DS_P;
   wire [0:0]util_ds_buf_4_OBUF_DS_N;
   wire [0:0]util_ds_buf_4_OBUF_DS_P;
+  wire [10:0]util_ds_buf_5_IBUF_OUT;
+  wire [10:0]util_ds_buf_6_IBUF_OUT;
+  wire [10:0]util_ds_buf_7_IBUF_OUT;
+  wire [10:0]util_ds_buf_8_IBUF_OUT;
   wire [0:0]util_vector_logic_0_Res;
+  wire [0:0]util_vector_logic_1_Res;
   wire [0:0]vio_0_probe_out0;
   wire [3:0]xlconcat_0_dout;
-  wire [3:0]xlconcat_1_dout;
-  wire [3:0]xlconcat_2_dout;
+  wire [63:0]xlconcat_1_dout;
+  wire [51:0]xlconcat_2_dout;
   wire [6:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
 
   assign BASECLK_1 = BASECLK;
-  assign BX_SYNC_TRG_P[0] = util_ds_buf_4_OBUF_DS_P;
-  assign BX_SYNX_TRG_N[0] = util_ds_buf_4_OBUF_DS_N;
+  assign BX_SYNC_TRG_N[0] = util_ds_buf_3_OBUF_DS_N;
+  assign BX_SYNC_TRG_P[0] = util_ds_buf_3_OBUF_DS_P;
   assign CLKSOIN_N[3:0] = util_ds_buf_0_OBUF_DS_N;
   assign CLKSOIN_P[3:0] = util_ds_buf_0_OBUF_DS_P;
   assign CLK_CFG[6:0] = xlconstant_0_dout;
-  assign HBTRG_N[0] = util_ds_buf_3_OBUF_DS_N;
-  assign HBTRG_P[0] = util_ds_buf_3_OBUF_DS_P;
+  assign HBTRG_N[0] = util_ds_buf_4_OBUF_DS_N;
+  assign HBTRG_P[0] = util_ds_buf_4_OBUF_DS_P;
   assign HRSTB_N[3:0] = util_ds_buf_2_OBUF_DS_N;
   assign HRSTB_P[3:0] = util_ds_buf_2_OBUF_DS_P;
   assign LED[3:0] = led_module_LED;
@@ -2256,6 +2233,14 @@ module top_block
   assign SAMPA_EN_D = SAMPA_PON_v1_0_0_sampa_power_on;
   assign SFP0TXN = fakernet_txn_0;
   assign SFP0TXP = fakernet_txp_0;
+  assign SO0N_1 = SO0N[10:0];
+  assign SO0P_1 = SO0P[10:0];
+  assign SO1N_1 = SO1N[10:0];
+  assign SO1P_1 = SO1P[10:0];
+  assign SO2N_1 = SO2N[10:0];
+  assign SO2P_1 = SO2P[10:0];
+  assign SO3N_1 = SO3N[10:0];
+  assign SO3P_1 = SO3P[10:0];
   assign TRG_N[3:0] = util_ds_buf_1_OBUF_DS_N;
   assign TRG_P[3:0] = util_ds_buf_1_OBUF_DS_P;
   assign gtrefclk_n_0_1 = SFP_CLK_N;
@@ -2263,9 +2248,7 @@ module top_block
   assign rxn_0_1 = SFP0RXN;
   assign rxp_0_1 = SFP0RXP;
   SAMPA_I2C_wrapper_imp_VOP84W SAMPA_I2C_wrapper
-       (.SAMPA_I2C_SCL(SAMPA_I2C_SCL),
-        .SAMPA_I2C_SDA(SAMPA_I2C_SDA),
-        .i2c_done(SAMPA_I2C_wrapper_i2c_done),
+       (.i2c_done(SAMPA_I2C_wrapper_i2c_done),
         .i2c_raddr_i(i2c_raddr_i_1),
         .i2c_rdata_o(SAMPA_I2C_wrapper_i2c_rdata_o),
         .i2c_waddr_i(fakernet_i2c_waddr_o),
@@ -2291,6 +2274,12 @@ module top_block
         .m00_axi_wstrb(S00_AXI_1_WSTRB),
         .m00_axi_wvalid(S00_AXI_1_WVALID),
         .s_axi_aclk(clk_wiz_0_clk_out1),
+        .scl_i(iobuf_vhdl_0_o),
+        .scl_o(SAMPA_I2C_wrapper_scl_o),
+        .scl_t(SAMPA_I2C_wrapper_scl_t),
+        .sda_i(iobuf_vhdl_1_o),
+        .sda_o(SAMPA_I2C_wrapper_sda_o),
+        .sda_t(SAMPA_I2C_wrapper_sda_t),
         .start_i2c_read(fakernet_start_i2c_read_o),
         .start_i2c_write(fakernet_start_i2c_write_o),
         .start_i2c_write_all(fakernet_start_i2c_write_all_o));
@@ -2495,6 +2484,16 @@ module top_block
         .user_data_reset(fakernet_user_data_reset),
         .user_data_word(data_gen_user_0_event_word),
         .user_data_write(data_gen_user_0_event_write));
+  top_block_iobuf_vhdl_0_0 iobuf_vhdl_0
+       (.i(SAMPA_I2C_wrapper_scl_o),
+        .io(S_I2C_SCL),
+        .o(iobuf_vhdl_0_o),
+        .t(SAMPA_I2C_wrapper_scl_t));
+  top_block_iobuf_vhdl_1_0 iobuf_vhdl_1
+       (.i(SAMPA_I2C_wrapper_sda_o),
+        .io(S_I2C_SDA),
+        .o(iobuf_vhdl_1_o),
+        .t(SAMPA_I2C_wrapper_sda_t));
   led_module_imp_CAGS8R led_module
        (.LED(led_module_LED),
         .clk125MHz(clk_in_0_1),
@@ -2599,22 +2598,53 @@ module top_block
   top_block_util_ds_buf_1_1 util_ds_buf_1
        (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),
-        .OBUF_IN(xlconcat_1_dout));
+        .OBUF_IN(xlconcat_1_dout[3:0]));
   top_block_util_ds_buf_2_0 util_ds_buf_2
        (.OBUF_DS_N(util_ds_buf_2_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
-        .OBUF_IN(xlconcat_2_dout));
-  top_block_util_ds_buf_3_0 util_ds_buf_3
+        .OBUF_IN(xlconcat_2_dout[3:0]));
+  top_block_util_ds_buf_3_2 util_ds_buf_3
        (.OBUF_DS_N(util_ds_buf_3_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_3_OBUF_DS_P),
         .OBUF_IN(clk_wiz_2_clk_out1));
-  top_block_util_ds_buf_4_0 util_ds_buf_4
+  top_block_util_ds_buf_4_1 util_ds_buf_4
        (.OBUF_DS_N(util_ds_buf_4_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_4_OBUF_DS_P),
         .OBUF_IN(clk_wiz_2_clk_out1));
+  top_block_util_ds_buf_5_0 util_ds_buf_5
+       (.IBUF_DS_N(SO0N_1),
+        .IBUF_DS_P(SO0P_1),
+        .IBUF_OUT(util_ds_buf_5_IBUF_OUT));
+  top_block_util_ds_buf_6_0 util_ds_buf_6
+       (.IBUF_DS_N(SO1N_1),
+        .IBUF_DS_P(SO1P_1),
+        .IBUF_OUT(util_ds_buf_6_IBUF_OUT));
+  top_block_util_ds_buf_6_1 util_ds_buf_7
+       (.IBUF_DS_N(SO2N_1),
+        .IBUF_DS_P(SO2P_1),
+        .IBUF_OUT(util_ds_buf_7_IBUF_OUT));
+  top_block_util_ds_buf_7_0 util_ds_buf_8
+       (.IBUF_DS_N(SO3N_1),
+        .IBUF_DS_P(SO3P_1),
+        .IBUF_OUT(util_ds_buf_8_IBUF_OUT));
   top_block_util_vector_logic_0_3 util_vector_logic_0
        (.Op1(SAMPA_PON_v1_0_0_sampa_power_on),
         .Res(util_vector_logic_0_Res));
+  top_block_util_vector_logic_1_3 util_vector_logic_1
+       (.Op1(clk_wiz_2_clk_out1),
+        .Res(util_vector_logic_1_Res));
+  top_block_vio_0_1 vio_0
+       (.clk(clk_wiz_1_clk_out1),
+        .probe_in0(util_ds_buf_5_IBUF_OUT));
+  top_block_vio_0_2 vio_1
+       (.clk(clk_wiz_1_clk_out1),
+        .probe_in0(util_ds_buf_6_IBUF_OUT));
+  top_block_vio_1_0 vio_2
+       (.clk(clk_wiz_1_clk_out1),
+        .probe_in0(util_ds_buf_7_IBUF_OUT));
+  top_block_vio_2_0 vio_3
+       (.clk(clk_wiz_1_clk_out1),
+        .probe_in0(util_ds_buf_8_IBUF_OUT));
   top_block_xlconcat_0_0 xlconcat_0
        (.In0(clk_wiz_1_clk_out1),
         .In1(clk_wiz_1_clk_out1),
@@ -2622,16 +2652,16 @@ module top_block
         .In3(clk_wiz_1_clk_out1),
         .dout(xlconcat_0_dout));
   top_block_xlconcat_1_0 xlconcat_1
-       (.In0(clk_wiz_2_clk_out1),
-        .In1(clk_wiz_2_clk_out1),
-        .In2(clk_wiz_2_clk_out1),
-        .In3(clk_wiz_2_clk_out1),
+       (.In0({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+        .In1({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+        .In2({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+        .In3({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
         .dout(xlconcat_1_dout));
-  top_block_xlconcat_2_0 xlconcat_2
-       (.In0(clk_wiz_2_clk_out1),
-        .In1(clk_wiz_2_clk_out1),
-        .In2(clk_wiz_2_clk_out1),
-        .In3(clk_wiz_2_clk_out1),
+  top_block_xlconcat_2_1 xlconcat_2
+       (.In0({1'b0,1'b0,1'b0,util_vector_logic_1_Res}),
+        .In1({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+        .In2({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+        .In3({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
         .dout(xlconcat_2_dout));
   top_block_xlconstant_0_3 xlconstant_0
        (.dout(xlconstant_0_dout));

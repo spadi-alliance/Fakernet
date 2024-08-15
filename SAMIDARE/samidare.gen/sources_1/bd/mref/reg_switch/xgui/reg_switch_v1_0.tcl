@@ -48,6 +48,11 @@ proc validate_PARAM_VALUE.C_ADDR_SAMPA_READ { PARAM_VALUE.C_ADDR_SAMPA_READ } {
 }
 
 
+proc update_MODELPARAM_VALUE.C_ADDR_I2C_WRITE { MODELPARAM_VALUE.C_ADDR_I2C_WRITE PARAM_VALUE.C_ADDR_I2C_WRITE } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.C_ADDR_I2C_WRITE}] ${MODELPARAM_VALUE.C_ADDR_I2C_WRITE}
+}
+
 proc update_MODELPARAM_VALUE.C_ADDR_I2C_READ { MODELPARAM_VALUE.C_ADDR_I2C_READ PARAM_VALUE.C_ADDR_I2C_READ } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.C_ADDR_I2C_READ}] ${MODELPARAM_VALUE.C_ADDR_I2C_READ}
@@ -61,10 +66,5 @@ proc update_MODELPARAM_VALUE.C_ADDR_SAMPA_READ { MODELPARAM_VALUE.C_ADDR_SAMPA_R
 proc update_MODELPARAM_VALUE.C_ADDR_I2C_WRITE_ALL { MODELPARAM_VALUE.C_ADDR_I2C_WRITE_ALL PARAM_VALUE.C_ADDR_I2C_WRITE_ALL } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.C_ADDR_I2C_WRITE_ALL}] ${MODELPARAM_VALUE.C_ADDR_I2C_WRITE_ALL}
-}
-
-proc update_MODELPARAM_VALUE.C_ADDR_I2C_WRITE { MODELPARAM_VALUE.C_ADDR_I2C_WRITE PARAM_VALUE.C_ADDR_I2C_WRITE } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.C_ADDR_I2C_WRITE}] ${MODELPARAM_VALUE.C_ADDR_I2C_WRITE}
 }
 

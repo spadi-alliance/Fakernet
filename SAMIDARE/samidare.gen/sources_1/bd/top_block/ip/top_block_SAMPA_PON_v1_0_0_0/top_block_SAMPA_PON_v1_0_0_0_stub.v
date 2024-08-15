@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Tue Aug  6 10:40:43 2024
+// Date        : Fri Aug  9 10:56:06 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0/top_block_SAMPA_PON_v1_0_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top top_block_SAMPA_PON_v1_0_0_0 -prefix
+//               top_block_SAMPA_PON_v1_0_0_0_ top_block_SAMPA_PON_v1_0_0_0_stub.v
 // Design      : top_block_SAMPA_PON_v1_0_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i

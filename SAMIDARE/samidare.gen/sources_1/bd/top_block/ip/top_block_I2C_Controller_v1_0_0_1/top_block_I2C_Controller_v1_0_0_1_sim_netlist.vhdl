@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Aug  6 16:49:22 2024
+-- Date        : Fri Aug  9 12:48:21 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_I2C_Controller_v1_0_0_1 -prefix
+--               top_block_I2C_Controller_v1_0_0_1_ top_block_I2C_Controller_v1_0_0_1_sim_netlist.vhdl
 -- Design      : top_block_I2C_Controller_v1_0_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,22 +20,19 @@ entity top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI is
     m00_axi_bready : out STD_LOGIC;
     axi_arvalid_reg_0 : out STD_LOGIC;
     axi_rready_reg_0 : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     m00_axi_aclk : in STD_LOGIC;
     init_txn_bram : in STD_LOGIC;
     m00_axi_aresetn : in STD_LOGIC;
     m00_axi_rvalid : in STD_LOGIC;
     m00_axi_bvalid : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    Q : in STD_LOGIC_VECTOR ( 29 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI : entity is "I2C_Controller_v1_0_M00_AXI";
 end top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI;
 
 architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI is
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal axi_araddr : STD_LOGIC_VECTOR ( 31 downto 29 );
   signal axi_arvalid_i_1_n_0 : STD_LOGIC;
   signal \^axi_arvalid_reg_0\ : STD_LOGIC;
   signal axi_bready0 : STD_LOGIC;
@@ -53,6 +50,7 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_
   signal \^m00_axi_bready\ : STD_LOGIC;
   signal mst_exec_state : STD_LOGIC;
   signal \mst_exec_state__0\ : STD_LOGIC;
+  signal p_0_in : STD_LOGIC_VECTOR ( 31 downto 29 );
   signal read_index : STD_LOGIC;
   signal \read_index[0]_i_1_n_0\ : STD_LOGIC;
   signal read_issued_i_1_n_0 : STD_LOGIC;
@@ -265,7 +263,7 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       C => m00_axi_aclk,
       CE => axi_bready_i_1_n_0,
       D => Q(27),
-      Q => m00_axi_araddr(27),
+      Q => p_0_in(29),
       R => '0'
     );
 \axi_araddr_reg[28]\: unisim.vcomponents.FDRE
@@ -273,7 +271,7 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       C => m00_axi_aclk,
       CE => axi_bready_i_1_n_0,
       D => Q(28),
-      Q => m00_axi_araddr(28),
+      Q => p_0_in(30),
       R => '0'
     );
 \axi_araddr_reg[29]\: unisim.vcomponents.FDRE
@@ -281,7 +279,7 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       C => m00_axi_aclk,
       CE => axi_bready_i_1_n_0,
       D => Q(29),
-      Q => axi_araddr(29),
+      Q => p_0_in(31),
       R => '0'
     );
 \axi_araddr_reg[2]\: unisim.vcomponents.FDRE
@@ -290,22 +288,6 @@ FSM_sequential_mst_exec_state_reg: unisim.vcomponents.FDRE
       CE => axi_bready_i_1_n_0,
       D => Q(2),
       Q => m00_axi_araddr(2),
-      R => '0'
-    );
-\axi_araddr_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => m00_axi_aclk,
-      CE => axi_bready_i_1_n_0,
-      D => Q(30),
-      Q => axi_araddr(30),
-      R => '0'
-    );
-\axi_araddr_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => m00_axi_aclk,
-      CE => axi_bready_i_1_n_0,
-      D => Q(31),
-      Q => axi_araddr(31),
       R => '0'
     );
 \axi_araddr_reg[3]\: unisim.vcomponents.FDRE
@@ -468,21 +450,21 @@ last_read_reg: unisim.vcomponents.FDRE
       CO(1) => \m00_axi_araddr[29]_INST_0_n_6\,
       CO(0) => \m00_axi_araddr[29]_INST_0_n_7\,
       DI(7 downto 2) => B"000000",
-      DI(1) => axi_araddr(30),
+      DI(1) => p_0_in(30),
       DI(0) => '0',
       O(7 downto 3) => \NLW_m00_axi_araddr[29]_INST_0_O_UNCONNECTED\(7 downto 3),
-      O(2 downto 0) => m00_axi_araddr(31 downto 29),
+      O(2 downto 0) => m00_axi_araddr(29 downto 27),
       S(7 downto 3) => B"00000",
       S(2) => \m00_axi_araddr[29]_INST_0_i_1_n_0\,
       S(1) => \m00_axi_araddr[29]_INST_0_i_2_n_0\,
-      S(0) => axi_araddr(29)
+      S(0) => p_0_in(29)
     );
 \m00_axi_araddr[29]_INST_0_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => axi_araddr(31),
+      I0 => p_0_in(31),
       O => \m00_axi_araddr[29]_INST_0_i_1_n_0\
     );
 \m00_axi_araddr[29]_INST_0_i_2\: unisim.vcomponents.LUT1
@@ -490,7 +472,7 @@ last_read_reg: unisim.vcomponents.FDRE
       INIT => X"1"
     )
         port map (
-      I0 => axi_araddr(30),
+      I0 => p_0_in(30),
       O => \m00_axi_araddr[29]_INST_0_i_2_n_0\
     );
 \read_index[0]_i_1\: unisim.vcomponents.LUT2
@@ -646,8 +628,6 @@ entity top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI is
   attribute INIT_READ of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI : entity is "2'b10";
   attribute INIT_WRITE : string;
   attribute INIT_WRITE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI : entity is "2'b01";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI : entity is "I2C_Controller_v1_0_M01_AXI";
   attribute TRANS_NUM_BITS : integer;
   attribute TRANS_NUM_BITS of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI : entity is 0;
   attribute keep_hierarchy : string;
@@ -658,7 +638,6 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_araddr\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \^m_axi_arvalid\ : STD_LOGIC;
-  signal \^m_axi_awaddr\ : STD_LOGIC_VECTOR ( 31 downto 29 );
   signal \M_AXI_AWADDR[29]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \M_AXI_AWADDR[29]_INST_0_n_6\ : STD_LOGIC;
   signal \M_AXI_AWADDR[29]_INST_0_n_7\ : STD_LOGIC;
@@ -666,10 +645,10 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_
   signal \^m_axi_bready\ : STD_LOGIC;
   signal \^m_axi_rready\ : STD_LOGIC;
   signal \^m_axi_wvalid\ : STD_LOGIC;
-  signal \^waddr\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_arvalid_i_1_n_0 : STD_LOGIC;
+  signal axi_awaddr : STD_LOGIC_VECTOR ( 31 downto 29 );
+  signal \axi_awaddr[28]_i_1_n_0\ : STD_LOGIC;
   signal axi_awvalid_i_1_n_0 : STD_LOGIC;
-  signal axi_awvalid_i_2_n_0 : STD_LOGIC;
   signal axi_bready_i_1_n_0 : STD_LOGIC;
   signal axi_rready_i_1_n_0 : STD_LOGIC;
   signal \axi_wdata[31]_i_1_n_0\ : STD_LOGIC;
@@ -715,7 +694,7 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_
   attribute ADDER_THRESHOLD of \M_AXI_AWADDR[29]_INST_0\ : label is 35;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_arvalid_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of axi_awvalid_i_2 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of axi_awvalid_i_1 : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of axi_bready_i_1 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of axi_rready_i_1 : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of axi_wvalid_i_1 : label is "soft_lutpair4";
@@ -751,8 +730,6 @@ begin
   M_AXI_ARPROT(1) <= \<const0>\;
   M_AXI_ARPROT(0) <= \<const0>\;
   M_AXI_ARVALID <= \^m_axi_arvalid\;
-  M_AXI_AWADDR(31 downto 29) <= \^m_axi_awaddr\(31 downto 29);
-  M_AXI_AWADDR(28 downto 0) <= \^waddr\(28 downto 0);
   M_AXI_AWPROT(2) <= \<const0>\;
   M_AXI_AWPROT(1) <= \<const0>\;
   M_AXI_AWPROT(0) <= \<const0>\;
@@ -764,7 +741,6 @@ begin
   M_AXI_WSTRB(1) <= \<const0>\;
   M_AXI_WSTRB(0) <= \<const0>\;
   M_AXI_WVALID <= \^m_axi_wvalid\;
-  \^waddr\(31 downto 0) <= WADDR(31 downto 0);
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -777,21 +753,21 @@ GND: unisim.vcomponents.GND
       CO(1) => \M_AXI_AWADDR[29]_INST_0_n_6\,
       CO(0) => \M_AXI_AWADDR[29]_INST_0_n_7\,
       DI(7 downto 2) => B"000000",
-      DI(1) => \^waddr\(30),
+      DI(1) => axi_awaddr(30),
       DI(0) => '0',
       O(7 downto 3) => \NLW_M_AXI_AWADDR[29]_INST_0_O_UNCONNECTED\(7 downto 3),
-      O(2 downto 0) => \^m_axi_awaddr\(31 downto 29),
+      O(2 downto 0) => M_AXI_AWADDR(31 downto 29),
       S(7 downto 3) => B"00000",
-      S(2) => \^waddr\(31),
+      S(2) => axi_awaddr(31),
       S(1) => \M_AXI_AWADDR[29]_INST_0_i_1_n_0\,
-      S(0) => \^waddr\(29)
+      S(0) => axi_awaddr(29)
     );
 \M_AXI_AWADDR[29]_INST_0_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \^waddr\(30),
+      I0 => axi_awaddr(30),
       O => \M_AXI_AWADDR[29]_INST_0_i_1_n_0\
     );
 TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
@@ -806,7 +782,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(0),
       Q => \^m_axi_araddr\(0),
       R => '0'
@@ -814,7 +790,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(10),
       Q => \^m_axi_araddr\(10),
       R => '0'
@@ -822,7 +798,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(11),
       Q => \^m_axi_araddr\(11),
       R => '0'
@@ -830,7 +806,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(12),
       Q => \^m_axi_araddr\(12),
       R => '0'
@@ -838,7 +814,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(13),
       Q => \^m_axi_araddr\(13),
       R => '0'
@@ -846,7 +822,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(14),
       Q => \^m_axi_araddr\(14),
       R => '0'
@@ -854,7 +830,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(15),
       Q => \^m_axi_araddr\(15),
       R => '0'
@@ -862,7 +838,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(16),
       Q => \^m_axi_araddr\(16),
       R => '0'
@@ -870,7 +846,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(17),
       Q => \^m_axi_araddr\(17),
       R => '0'
@@ -878,7 +854,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(18),
       Q => \^m_axi_araddr\(18),
       R => '0'
@@ -886,7 +862,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(19),
       Q => \^m_axi_araddr\(19),
       R => '0'
@@ -894,7 +870,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(1),
       Q => \^m_axi_araddr\(1),
       R => '0'
@@ -902,7 +878,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(20),
       Q => \^m_axi_araddr\(20),
       R => '0'
@@ -910,7 +886,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(21),
       Q => \^m_axi_araddr\(21),
       R => '0'
@@ -918,7 +894,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(22),
       Q => \^m_axi_araddr\(22),
       R => '0'
@@ -926,7 +902,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(23),
       Q => \^m_axi_araddr\(23),
       R => '0'
@@ -934,7 +910,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(2),
       Q => \^m_axi_araddr\(2),
       R => '0'
@@ -942,7 +918,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(3),
       Q => \^m_axi_araddr\(3),
       R => '0'
@@ -950,7 +926,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(4),
       Q => \^m_axi_araddr\(4),
       R => '0'
@@ -958,7 +934,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(5),
       Q => \^m_axi_araddr\(5),
       R => '0'
@@ -966,7 +942,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(6),
       Q => \^m_axi_araddr\(6),
       R => '0'
@@ -974,7 +950,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(7),
       Q => \^m_axi_araddr\(7),
       R => '0'
@@ -982,7 +958,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(8),
       Q => \^m_axi_araddr\(8),
       R => '0'
@@ -990,7 +966,7 @@ TXN_DONE_inferred_i_1: unisim.vcomponents.LUT2
 \axi_araddr_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => axi_awvalid_i_1_n_0,
+      CE => \axi_awaddr[28]_i_1_n_0\,
       D => RADDR(9),
       Q => \^m_axi_araddr\(9),
       R => '0'
@@ -1011,9 +987,9 @@ axi_arvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_arvalid_i_1_n_0,
       Q => \^m_axi_arvalid\,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
-axi_awvalid_i_1: unisim.vcomponents.LUT3
+\axi_awaddr[28]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"4F"
     )
@@ -1021,9 +997,265 @@ axi_awvalid_i_1: unisim.vcomponents.LUT3
       I0 => init_txn_ff2,
       I1 => init_txn_ff,
       I2 => M_AXI_ARESETN,
-      O => axi_awvalid_i_1_n_0
+      O => \axi_awaddr[28]_i_1_n_0\
     );
-axi_awvalid_i_2: unisim.vcomponents.LUT3
+\axi_awaddr_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(0),
+      Q => M_AXI_AWADDR(0),
+      R => '0'
+    );
+\axi_awaddr_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(10),
+      Q => M_AXI_AWADDR(10),
+      R => '0'
+    );
+\axi_awaddr_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(11),
+      Q => M_AXI_AWADDR(11),
+      R => '0'
+    );
+\axi_awaddr_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(12),
+      Q => M_AXI_AWADDR(12),
+      R => '0'
+    );
+\axi_awaddr_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(13),
+      Q => M_AXI_AWADDR(13),
+      R => '0'
+    );
+\axi_awaddr_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(14),
+      Q => M_AXI_AWADDR(14),
+      R => '0'
+    );
+\axi_awaddr_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(15),
+      Q => M_AXI_AWADDR(15),
+      R => '0'
+    );
+\axi_awaddr_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(16),
+      Q => M_AXI_AWADDR(16),
+      R => '0'
+    );
+\axi_awaddr_reg[17]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(17),
+      Q => M_AXI_AWADDR(17),
+      R => '0'
+    );
+\axi_awaddr_reg[18]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(18),
+      Q => M_AXI_AWADDR(18),
+      R => '0'
+    );
+\axi_awaddr_reg[19]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(19),
+      Q => M_AXI_AWADDR(19),
+      R => '0'
+    );
+\axi_awaddr_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(1),
+      Q => M_AXI_AWADDR(1),
+      R => '0'
+    );
+\axi_awaddr_reg[20]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(20),
+      Q => M_AXI_AWADDR(20),
+      R => '0'
+    );
+\axi_awaddr_reg[21]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(21),
+      Q => M_AXI_AWADDR(21),
+      R => '0'
+    );
+\axi_awaddr_reg[22]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(22),
+      Q => M_AXI_AWADDR(22),
+      R => '0'
+    );
+\axi_awaddr_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(23),
+      Q => M_AXI_AWADDR(23),
+      R => '0'
+    );
+\axi_awaddr_reg[24]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(24),
+      Q => M_AXI_AWADDR(24),
+      R => '0'
+    );
+\axi_awaddr_reg[25]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(25),
+      Q => M_AXI_AWADDR(25),
+      R => '0'
+    );
+\axi_awaddr_reg[26]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(26),
+      Q => M_AXI_AWADDR(26),
+      R => '0'
+    );
+\axi_awaddr_reg[27]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(27),
+      Q => M_AXI_AWADDR(27),
+      R => '0'
+    );
+\axi_awaddr_reg[28]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(28),
+      Q => M_AXI_AWADDR(28),
+      R => '0'
+    );
+\axi_awaddr_reg[29]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(29),
+      Q => axi_awaddr(29),
+      R => '0'
+    );
+\axi_awaddr_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(2),
+      Q => M_AXI_AWADDR(2),
+      R => '0'
+    );
+\axi_awaddr_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(30),
+      Q => axi_awaddr(30),
+      R => '0'
+    );
+\axi_awaddr_reg[31]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(31),
+      Q => axi_awaddr(31),
+      R => '0'
+    );
+\axi_awaddr_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(3),
+      Q => M_AXI_AWADDR(3),
+      R => '0'
+    );
+\axi_awaddr_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(4),
+      Q => M_AXI_AWADDR(4),
+      R => '0'
+    );
+\axi_awaddr_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(5),
+      Q => M_AXI_AWADDR(5),
+      R => '0'
+    );
+\axi_awaddr_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(6),
+      Q => M_AXI_AWADDR(6),
+      R => '0'
+    );
+\axi_awaddr_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(7),
+      Q => M_AXI_AWADDR(7),
+      R => '0'
+    );
+\axi_awaddr_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(8),
+      Q => M_AXI_AWADDR(8),
+      R => '0'
+    );
+\axi_awaddr_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => \axi_awaddr[28]_i_1_n_0\,
+      D => WADDR(9),
+      Q => M_AXI_AWADDR(9),
+      R => '0'
+    );
+axi_awvalid_i_1: unisim.vcomponents.LUT3
     generic map(
       INIT => X"AE"
     )
@@ -1031,15 +1263,15 @@ axi_awvalid_i_2: unisim.vcomponents.LUT3
       I0 => start_single_write_reg_n_0,
       I1 => \^m_axi_awvalid\,
       I2 => M_AXI_AWREADY,
-      O => axi_awvalid_i_2_n_0
+      O => axi_awvalid_i_1_n_0
     );
 axi_awvalid_reg: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
       CE => '1',
-      D => axi_awvalid_i_2_n_0,
+      D => axi_awvalid_i_1_n_0,
       Q => \^m_axi_awvalid\,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 axi_bready_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -1056,7 +1288,7 @@ axi_bready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_bready_i_1_n_0,
       Q => \^m_axi_bready\,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 axi_rready_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -1073,7 +1305,7 @@ axi_rready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_rready_i_1_n_0,
       Q => \^m_axi_rready\,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 \axi_wdata[31]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -1359,7 +1591,7 @@ axi_wvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_wvalid_i_1_n_0,
       Q => \^m_axi_wvalid\,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 init_txn_ff2_reg: unisim.vcomponents.FDRE
      port map (
@@ -1402,7 +1634,7 @@ last_read_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => last_read_i_1_n_0,
       Q => last_read,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 last_write_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -1420,7 +1652,7 @@ last_write_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => last_write_i_1_n_0,
       Q => last_write,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 \mst_exec_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1771,7 +2003,7 @@ read_done_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \read_index[0]_i_1_n_0\,
       Q => read_index,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 read_issued_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1823,7 +2055,7 @@ reads_done_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => reads_done_i_1_n_0,
       Q => reads_done,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 start_single_read_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1914,7 +2146,7 @@ write_done_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \write_index[0]_i_1_n_0\,
       Q => write_index,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 write_issued_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1954,7 +2186,7 @@ writes_done_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => writes_done_i_1_n_0,
       Q => writes_done,
-      R => axi_awvalid_i_1_n_0
+      R => \axi_awaddr[28]_i_1_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -1974,7 +2206,7 @@ entity top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 is
     m01_axi_rready : out STD_LOGIC;
     axi_rready_reg : out STD_LOGIC;
     m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     i2c_rdata_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     axi_arvalid_reg : out STD_LOGIC;
     i2c_done : out STD_LOGIC;
@@ -1999,8 +2231,6 @@ entity top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 is
     m00_axi_bvalid : in STD_LOGIC;
     m00_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 : entity is "I2C_Controller_v1_0";
 end top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0;
 
 architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 is
@@ -2010,7 +2240,7 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0 
   signal ack_data_i_3_n_0 : STD_LOGIC;
   signal ack_data_reg_n_0 : STD_LOGIC;
   signal bram_raddr : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal bram_raddr_0 : STD_LOGIC;
+  signal bram_raddr_1 : STD_LOGIC;
   signal bram_read_done : STD_LOGIC;
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of bram_read_done : signal is std.standard.true;
@@ -2215,13 +2445,13 @@ begin
   m01_axi_txn_done <= \^m01_axi_txn_done\;
 I2C_Controller_v1_0_M00_AXI_inst: entity work.top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
      port map (
-      Q(31 downto 0) => bram_raddr(31 downto 0),
+      Q(29 downto 0) => bram_raddr(29 downto 0),
       SR(0) => I2C_Controller_v1_0_M00_AXI_inst_n_0,
       axi_arvalid_reg_0 => axi_arvalid_reg,
       axi_rready_reg_0 => axi_rready_reg,
       init_txn_bram => init_txn_bram,
       m00_axi_aclk => m00_axi_aclk,
-      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
+      m00_axi_araddr(29 downto 0) => m00_axi_araddr(29 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_bready => m00_axi_bready,
@@ -2405,12 +2635,12 @@ ack_data_reg: unisim.vcomponents.FDRE
       I3 => state_i2c(3),
       I4 => state_i2c(0),
       I5 => start_i2c_write,
-      O => bram_raddr_0
+      O => bram_raddr_1
     );
 \bram_raddr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(0),
       Q => bram_raddr(0),
       R => '0'
@@ -2418,7 +2648,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(10),
       Q => bram_raddr(10),
       R => '0'
@@ -2426,7 +2656,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(11),
       Q => bram_raddr(11),
       R => '0'
@@ -2434,7 +2664,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(12),
       Q => bram_raddr(12),
       R => '0'
@@ -2442,7 +2672,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(13),
       Q => bram_raddr(13),
       R => '0'
@@ -2450,7 +2680,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(14),
       Q => bram_raddr(14),
       R => '0'
@@ -2458,7 +2688,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(15),
       Q => bram_raddr(15),
       R => '0'
@@ -2466,7 +2696,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(16),
       Q => bram_raddr(16),
       R => '0'
@@ -2474,7 +2704,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(17),
       Q => bram_raddr(17),
       R => '0'
@@ -2482,7 +2712,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(18),
       Q => bram_raddr(18),
       R => '0'
@@ -2490,7 +2720,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(19),
       Q => bram_raddr(19),
       R => '0'
@@ -2498,7 +2728,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(1),
       Q => bram_raddr(1),
       R => '0'
@@ -2506,7 +2736,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(20),
       Q => bram_raddr(20),
       R => '0'
@@ -2514,7 +2744,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(21),
       Q => bram_raddr(21),
       R => '0'
@@ -2522,7 +2752,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(22),
       Q => bram_raddr(22),
       R => '0'
@@ -2530,7 +2760,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(23),
       Q => bram_raddr(23),
       R => '0'
@@ -2538,7 +2768,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(24),
       Q => bram_raddr(24),
       R => '0'
@@ -2546,7 +2776,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(25),
       Q => bram_raddr(25),
       R => '0'
@@ -2554,7 +2784,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(26),
       Q => bram_raddr(26),
       R => '0'
@@ -2562,7 +2792,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(27),
       Q => bram_raddr(27),
       R => '0'
@@ -2570,7 +2800,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(28),
       Q => bram_raddr(28),
       R => '0'
@@ -2578,7 +2808,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(29),
       Q => bram_raddr(29),
       R => '0'
@@ -2586,7 +2816,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(2),
       Q => bram_raddr(2),
       R => '0'
@@ -2594,7 +2824,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(30),
       Q => bram_raddr(30),
       R => '0'
@@ -2602,7 +2832,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(31),
       Q => bram_raddr(31),
       R => '0'
@@ -2610,7 +2840,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(3),
       Q => bram_raddr(3),
       R => '0'
@@ -2618,7 +2848,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(4),
       Q => bram_raddr(4),
       R => '0'
@@ -2626,7 +2856,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(5),
       Q => bram_raddr(5),
       R => '0'
@@ -2634,7 +2864,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(6),
       Q => bram_raddr(6),
       R => '0'
@@ -2642,7 +2872,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(7),
       Q => bram_raddr(7),
       R => '0'
@@ -2650,7 +2880,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(8),
       Q => bram_raddr(8),
       R => '0'
@@ -2658,7 +2888,7 @@ ack_data_reg: unisim.vcomponents.FDRE
 \bram_raddr_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => m00_axi_aclk,
-      CE => bram_raddr_0,
+      CE => bram_raddr_1,
       D => i2c_waddr_i(9),
       Q => bram_raddr(9),
       R => '0'
@@ -4029,7 +4259,7 @@ start_bram_read_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => start_i2c_write,
       I1 => state_i2c(1),
-      I2 => bram_raddr_0,
+      I2 => bram_raddr_1,
       I3 => busy_i_4_n_0,
       I4 => \i2c_waddr[31]_i_2_n_0\,
       I5 => start_bram_read_reg_n_0,
@@ -4314,6 +4544,7 @@ end top_block_I2C_Controller_v1_0_0_1;
 architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
+  signal \^m00_axi_araddr\ : STD_LOGIC_VECTOR ( 31 downto 2 );
   signal \^m01_axi_araddr\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK";
@@ -4366,6 +4597,9 @@ architecture STRUCTURE of top_block_I2C_Controller_v1_0_0_1 is
   attribute X_INTERFACE_INFO of m01_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 m01_axi WDATA";
   attribute X_INTERFACE_INFO of m01_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 m01_axi WSTRB";
 begin
+  m00_axi_araddr(31 downto 2) <= \^m00_axi_araddr\(31 downto 2);
+  m00_axi_araddr(1) <= \<const0>\;
+  m00_axi_araddr(0) <= \<const0>\;
   m00_axi_arprot(2) <= \<const0>\;
   m00_axi_arprot(1) <= \<const0>\;
   m00_axi_arprot(0) <= \<const1>\;
@@ -4482,7 +4716,7 @@ inst: entity work.top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
       i2c_rdata_o(31 downto 0) => i2c_rdata_o(31 downto 0),
       i2c_waddr_i(31 downto 0) => i2c_waddr_i(31 downto 0),
       m00_axi_aclk => m00_axi_aclk,
-      m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
+      m00_axi_araddr(29 downto 0) => \^m00_axi_araddr\(31 downto 2),
       m00_axi_aresetn => m00_axi_aresetn,
       m00_axi_arready => m00_axi_arready,
       m00_axi_bready => m00_axi_bready,

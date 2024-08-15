@@ -4,7 +4,7 @@
 	module LED_REG_READ_SEPARATE_v1_0_M00_AXI #
 	(
 		// Users to add parameters here
-        parameter  LED_ADDRESS = 32'h0000F000,
+        parameter  LED_ADDRESS = 32'h00000f00,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -202,7 +202,7 @@
 	//Write Response (B)
 	assign M_AXI_BREADY	= axi_bready;
 	//Read Address (AR)
-	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_araddr;
+	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + {axi_araddr[C_M_AXI_ADDR_WIDTH-3 : 0] , 2'b00};
 	assign M_AXI_ARVALID	= axi_arvalid;
 	assign M_AXI_ARPROT	= 3'b001;
 	//Read and Read Response (R)

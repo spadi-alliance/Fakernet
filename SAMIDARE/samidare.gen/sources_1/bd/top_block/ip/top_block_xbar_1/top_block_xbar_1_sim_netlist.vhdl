@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Mon Aug  5 12:13:53 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_1/top_block_xbar_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_xbar_1 -prefix
+--               top_block_xbar_1_ top_block_xbar_1_sim_netlist.vhdl
 -- Design      : top_block_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,8 +70,6 @@ entity top_block_xbar_1_axi_crossbar_v2_1_28_addr_arbiter_sasd is
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_crossbar_v2_1_28_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_28_addr_arbiter_sasd";
 end top_block_xbar_1_axi_crossbar_v2_1_28_addr_arbiter_sasd;
 
 architecture STRUCTURE of top_block_xbar_1_axi_crossbar_v2_1_28_addr_arbiter_sasd is
@@ -4249,8 +4247,6 @@ entity top_block_xbar_1_axi_crossbar_v2_1_28_decerr_slave is
     aa_rready : in STD_LOGIC;
     \s_axi_awready_i0__0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_crossbar_v2_1_28_decerr_slave : entity is "axi_crossbar_v2_1_28_decerr_slave";
 end top_block_xbar_1_axi_crossbar_v2_1_28_decerr_slave;
 
 architecture STRUCTURE of top_block_xbar_1_axi_crossbar_v2_1_28_decerr_slave is
@@ -4356,8 +4352,6 @@ entity top_block_xbar_1_axi_crossbar_v2_1_28_splitter is
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_crossbar_v2_1_28_splitter : entity is "axi_crossbar_v2_1_28_splitter";
 end top_block_xbar_1_axi_crossbar_v2_1_28_splitter;
 
 architecture STRUCTURE of top_block_xbar_1_axi_crossbar_v2_1_28_splitter is
@@ -4472,8 +4466,6 @@ entity top_block_xbar_1_axi_register_slice_v2_1_27_axic_register_slice is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_register_slice_v2_1_27_axic_register_slice : entity is "axi_register_slice_v2_1_27_axic_register_slice";
 end top_block_xbar_1_axi_register_slice_v2_1_27_axic_register_slice;
 
 architecture STRUCTURE of top_block_xbar_1_axi_register_slice_v2_1_27_axic_register_slice is
@@ -5808,8 +5800,6 @@ entity top_block_xbar_1_axi_crossbar_v2_1_28_crossbar_sasd is
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_crossbar_v2_1_28_crossbar_sasd : entity is "axi_crossbar_v2_1_28_crossbar_sasd";
 end top_block_xbar_1_axi_crossbar_v2_1_28_crossbar_sasd;
 
 architecture STRUCTURE of top_block_xbar_1_axi_crossbar_v2_1_28_crossbar_sasd is
@@ -6169,8 +6159,6 @@ entity top_block_xbar_1_axi_crossbar_v2_1_28_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of top_block_xbar_1_axi_crossbar_v2_1_28_axi_crossbar : entity is "128'b00000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of top_block_xbar_1_axi_crossbar_v2_1_28_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xbar_1_axi_crossbar_v2_1_28_axi_crossbar : entity is "axi_crossbar_v2_1_28_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of top_block_xbar_1_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

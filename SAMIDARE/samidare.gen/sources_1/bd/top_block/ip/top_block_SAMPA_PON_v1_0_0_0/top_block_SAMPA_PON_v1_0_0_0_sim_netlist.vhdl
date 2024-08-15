@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Aug  6 10:40:43 2024
+-- Date        : Fri Aug  9 10:56:06 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0/top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_SAMPA_PON_v1_0_0_0 -prefix
+--               top_block_SAMPA_PON_v1_0_0_0_ top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl
 -- Design      : top_block_SAMPA_PON_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -60,10 +60,8 @@ entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   attribute INIT_READ of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b10";
   attribute INIT_WRITE : string;
   attribute INIT_WRITE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b01";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "SAMPA_PON_v1_0_M00_AXI";
   attribute POWER_ON_ADDRESS : integer;
-  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 32768;
+  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 2048;
   attribute TRANS_NUM_BITS : integer;
   attribute TRANS_NUM_BITS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 2;
 end top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI;
@@ -529,10 +527,8 @@ entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is -1073741824;
   attribute C_M00_AXI_TRANSACTIONS_NUM : integer;
   attribute C_M00_AXI_TRANSACTIONS_NUM of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is "SAMPA_PON_v1_0";
   attribute POWER_ON_ADDRESS : integer;
-  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 32768;
+  attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 2048;
   attribute keep_hierarchy : string;
   attribute keep_hierarchy of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is "soft";
 end top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0;
@@ -633,7 +629,7 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   attribute INIT_WRITE : string;
   attribute INIT_WRITE of SAMPA_PON_v1_0_M00_AXI_inst : label is "2'b01";
   attribute KEEP_HIERARCHY of SAMPA_PON_v1_0_M00_AXI_inst : label is "soft";
-  attribute POWER_ON_ADDRESS of SAMPA_PON_v1_0_M00_AXI_inst : label is 32768;
+  attribute POWER_ON_ADDRESS of SAMPA_PON_v1_0_M00_AXI_inst : label is 2048;
   attribute TRANS_NUM_BITS : integer;
   attribute TRANS_NUM_BITS of SAMPA_PON_v1_0_M00_AXI_inst : label is 2;
   attribute mark_debug : string;
@@ -1139,7 +1135,7 @@ i_16: unisim.vcomponents.LUT1
       INIT => X"2"
     )
         port map (
-      I0 => '1',
+      I0 => '0',
       O => m00_axi_araddr(15)
     );
 i_17: unisim.vcomponents.LUT1
@@ -1155,7 +1151,7 @@ i_18: unisim.vcomponents.LUT1
       INIT => X"2"
     )
         port map (
-      I0 => '0',
+      I0 => '1',
       O => m00_axi_araddr(13)
     );
 i_19: unisim.vcomponents.LUT1
@@ -1478,7 +1474,7 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0 is
   attribute KEEP_HIERARCHY : string;
   attribute KEEP_HIERARCHY of inst : label is "soft";
   attribute POWER_ON_ADDRESS : integer;
-  attribute POWER_ON_ADDRESS of inst : label is 32768;
+  attribute POWER_ON_ADDRESS of inst : label is 2048;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 m00_axi_aclk CLK";
   attribute X_INTERFACE_PARAMETER : string;

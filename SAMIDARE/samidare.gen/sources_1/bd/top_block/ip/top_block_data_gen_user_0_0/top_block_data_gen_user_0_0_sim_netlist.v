@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Jul  4 14:08:05 2024
+// Date        : Thu Jul  4 14:08:04 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_data_gen_user_0_0/top_block_data_gen_user_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_data_gen_user_0_0 -prefix
+//               top_block_data_gen_user_0_0_ top_block_data_gen_user_0_0_sim_netlist.v
 // Design      : top_block_data_gen_user_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,48 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "top_block_data_gen_user_0_0,data_gen_user,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "data_gen_user,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module top_block_data_gen_user_0_0
-   (clk,
-    event_word,
-    event_offset,
-    event_write,
-    event_commit_len,
-    event_commit,
-    event_free,
-    event_reset);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input clk;
-  output [31:0]event_word;
-  output [9:0]event_offset;
-  output event_write;
-  output [10:0]event_commit_len;
-  output event_commit;
-  input event_free;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 event_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME event_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input event_reset;
-
-  wire clk;
-  wire event_commit;
-  wire [10:0]event_commit_len;
-  wire event_free;
-  wire [9:0]event_offset;
-  wire event_reset;
-  wire [31:0]event_word;
-  wire event_write;
-
-  top_block_data_gen_user_0_0_data_gen_user inst
-       (.clk(clk),
-        .event_commit(event_commit),
-        .event_commit_len(event_commit_len),
-        .event_free(event_free),
-        .event_offset(event_offset),
-        .event_reset(event_reset),
-        .event_word(event_word),
-        .event_write(event_write));
-endmodule
-
-(* ORIG_REF_NAME = "data_gen_user" *) 
 module top_block_data_gen_user_0_0_data_gen_user
    (event_word,
     event_offset,
@@ -1778,6 +1736,47 @@ module top_block_data_gen_user_0_0_data_gen_user
         .D(\rest_count[9]_i_1_n_0 ),
         .Q(\rest_count_reg_n_0_[9] ),
         .R(\rest_count[10]_i_1_n_0 ));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "top_block_data_gen_user_0_0,data_gen_user,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "data_gen_user,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module top_block_data_gen_user_0_0
+   (clk,
+    event_word,
+    event_offset,
+    event_write,
+    event_commit_len,
+    event_commit,
+    event_free,
+    event_reset);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input clk;
+  output [31:0]event_word;
+  output [9:0]event_offset;
+  output event_write;
+  output [10:0]event_commit_len;
+  output event_commit;
+  input event_free;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 event_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME event_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input event_reset;
+
+  wire clk;
+  wire event_commit;
+  wire [10:0]event_commit_len;
+  wire event_free;
+  wire [9:0]event_offset;
+  wire event_reset;
+  wire [31:0]event_word;
+  wire event_write;
+
+  top_block_data_gen_user_0_0_data_gen_user inst
+       (.clk(clk),
+        .event_commit(event_commit),
+        .event_commit_len(event_commit_len),
+        .event_free(event_free),
+        .event_offset(event_offset),
+        .event_reset(event_reset),
+        .event_word(event_word),
+        .event_write(event_write));
 endmodule
 `ifndef GLBL
 `define GLBL
