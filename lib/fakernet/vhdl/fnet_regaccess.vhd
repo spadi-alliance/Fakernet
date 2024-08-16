@@ -86,6 +86,7 @@ architecture RTL of fnet_regaccess is
   signal int_op : std_logic := '0';
   -- Count to 15.
   signal cnt    : std_logic_vector(3 downto 0) := (others => '0');
+  signal cnt_256    : std_logic_vector(7 downto 0) := (others => '0');
 
   signal off         : std_logic_vector(10 downto 0) :=
     (0 => '0', others => '1');
@@ -249,7 +250,8 @@ begin
       when RSM_WRITE_WAIT =>
         a.next_state <= RSM_WRITE_WAIT;
         if ((regacc_pst_done = '1') or
-            (cnt = 15)) then
+--            (cnt = 15)) then
+            (cnt_256 = 255)) then
           a.next_state <= RSM_WRITE_WADDR_1;
           a.off_update <= ROU_INCREASE;
           --a.next_accum_cksum <= '1'; -- delay 1
@@ -289,7 +291,8 @@ begin
           a.next_state <= RSM_READ_WADDR_1;
           a.off_update <= ROU_INCREASE;
           --a.next_accum_cksum <= '1'; -- delay 1
-        elsif (cnt = 15) then
+--        elsif (cnt = 15) then
+        elsif (cnt_256 = 255) then
           a.next_state <= RSM_READ_WADDR_1;
           a.off_update <= ROU_INCREASE;
           --a.next_accum_cksum <= '1'; -- delay 1
@@ -422,8 +425,10 @@ begin
       if (a.issue_read = '1' or
           a.issue_write = '1') then
         cnt <= (others => '0');
+        cnt_256 <= (others => '0');
       else
         cnt <= cnt + 1;
+        cnt_256 <= cnt_256 + 1;
       end if;
 
       if (a.reset = '1') then

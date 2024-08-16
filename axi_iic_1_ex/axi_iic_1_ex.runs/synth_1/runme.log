@@ -1,0 +1,297 @@
+
+*** Running vivado
+    with args -log axi_iic_1_exdes.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_iic_1_exdes.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source axi_iic_1_exdes.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+Command: synth_design -top axi_iic_1_exdes -part xcau15p-sbvb484-1-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4082116
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2152.531 ; gain = 366.695 ; free physical = 33204 ; free virtual = 51407
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.043; parent = 2152.535; children = 968.508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'axi_iic_1_exdes' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:74]
+INFO: [Synth 8-3491] module 'clock_gen' declared at '/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/clock_gen.vhd:58' bound to instance 'CLOCK_GEN_INST' of component 'clock_gen' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'clock_gen' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/clock_gen.vhd:69]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/clk_wiz_0_stub.v:5' bound to instance 'CLOCKING' of component 'clk_wiz_0' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/clock_gen.vhd:91]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clock_gen' (0#1) [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/clock_gen.vhd:69]
+INFO: [Synth 8-3491] module 'axi_traffic_gen_0' declared at '/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_traffic_gen_0_stub.v:5' bound to instance 'ATG1' of component 'axi_traffic_gen_0' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:215]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_0' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_traffic_gen_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_traffic_gen_0_stub.v:5]
+INFO: [Synth 8-3491] module 'axi_iic_1' declared at '/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_iic_1_stub.v:5' bound to instance 'DUT' of component 'axi_iic_1' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:242]
+INFO: [Synth 8-6157] synthesizing module 'axi_iic_1' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_iic_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_iic_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/.Xil/Vivado-4082061-e16fpga01/realtime/axi_iic_1_stub.v:5]
+INFO: [Synth 8-113] binding component instance 'scl_inst' to cell 'IOBUF' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:275]
+INFO: [Synth 8-113] binding component instance 'sda_inst' to cell 'IOBUF' [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'axi_iic_1_exdes' (0#1) [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.vhd:74]
+WARNING: [Synth 8-7129] Port start in module axi_iic_1_exdes is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2222.469 ; gain = 436.633 ; free physical = 33292 ; free virtual = 51496
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3190.980; parent = 2222.473; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2234.344 ; gain = 448.508 ; free physical = 33290 ; free virtual = 51494
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3202.855; parent = 2234.348; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2234.344 ; gain = 448.508 ; free physical = 33290 ; free virtual = 51494
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3202.855; parent = 2234.348; children = 968.508
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2240.281 ; gain = 0.000 ; free physical = 33290 ; free virtual = 51493
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/axi_iic_1/axi_iic_1/axi_iic_1_in_context.xdc] for cell 'DUT'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/axi_iic_1/axi_iic_1/axi_iic_1_in_context.xdc] for cell 'DUT'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/axi_traffic_gen_0/axi_traffic_gen_0/axi_traffic_gen_0_in_context.xdc] for cell 'ATG1'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/axi_traffic_gen_0/axi_traffic_gen_0/axi_traffic_gen_0_in_context.xdc] for cell 'ATG1'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLOCK_GEN_INST/CLOCKING'
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLOCK_GEN_INST/CLOCKING'
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.xdc]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/imports/axi_iic_1_exdes.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2333.094 ; gain = 0.000 ; free physical = 33254 ; free virtual = 51457
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2333.094 ; gain = 0.000 ; free physical = 33254 ; free virtual = 51457
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2333.094 ; gain = 547.258 ; free physical = 33280 ; free virtual = 51484
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.590; parent = 2301.082; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-sbvb484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2333.094 ; gain = 547.258 ; free physical = 33282 ; free virtual = 51485
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.590; parent = 2301.082; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1_n. (constraint file  /home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1_n. (constraint file  /home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1_p. (constraint file  /home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1_p. (constraint file  /home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for DUT. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ATG1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CLOCK_GEN_INST/CLOCKING. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2333.094 ; gain = 547.258 ; free physical = 33281 ; free virtual = 51485
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.590; parent = 2301.082; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2333.094 ; gain = 547.258 ; free physical = 33276 ; free virtual = 51480
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.590; parent = 2301.082; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port start in module axi_iic_1_exdes is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2333.094 ; gain = 547.258 ; free physical = 33262 ; free virtual = 51470
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1450.058; parent = 1283.784; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.590; parent = 2301.082; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2401.711 ; gain = 615.875 ; free physical = 33047 ; free virtual = 51255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.139; parent = 1469.195; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3370.223; parent = 2401.715; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2401.711 ; gain = 615.875 ; free physical = 33047 ; free virtual = 51255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.205; parent = 1469.293; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3370.223; parent = 2401.715; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2420.742 ; gain = 634.906 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.654; parent = 1469.742; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3389.254; parent = 2420.746; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.850; parent = 1469.938; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.865; parent = 1469.953; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.881; parent = 1469.969; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.881; parent = 1469.969; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.881; parent = 1469.969; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.912; parent = 1470.000; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |axi_traffic_gen_0 |         1|
+|2     |axi_iic_1         |         1|
+|3     |clk_wiz_0         |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |axi_iic         |     1|
+|2     |axi_traffic_gen |     1|
+|3     |clk_wiz         |     1|
+|4     |LUT1            |     1|
+|5     |FDRE            |     1|
+|6     |IBUF            |     1|
+|7     |IOBUF           |     2|
+|8     |OBUF            |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.680 ; gain = 640.844 ; free physical = 33045 ; free virtual = 51253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1635.943; parent = 1470.031; children = 166.273
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3395.191; parent = 2426.684; children = 968.508
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2426.680 ; gain = 542.094 ; free physical = 33061 ; free virtual = 51269
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.688 ; gain = 640.844 ; free physical = 33061 ; free virtual = 51269
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2433.617 ; gain = 0.000 ; free physical = 33054 ; free virtual = 51262
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2456.430 ; gain = 0.000 ; free physical = 33125 ; free virtual = 51333
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+Synth Design complete, checksum: 869013a7
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.430 ; gain = 1162.832 ; free physical = 33329 ; free virtual = 51537
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/axi_iic_1_ex/axi_iic_1_ex.runs/synth_1/axi_iic_1_exdes.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axi_iic_1_exdes_utilization_synth.rpt -pb axi_iic_1_exdes_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  7 16:49:48 2024...
