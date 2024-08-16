@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2014 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -47,19 +47,26 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:ip:xlconstant:1.1
-// IP Revision: 1
+// IP VLNV: xilinx.com:ip:util_vector_logic:2.0
+// IP Revision: 2
 
-#ifndef _top_block_xlconstant_0_3_H_
-#define _top_block_xlconstant_0_3_H_
+`timescale 1ns/1ps
 
-#include "xlconstant_v1_1_7.h"
-#include "systemc.h"
-class top_block_xlconstant_0_3 : public sc_module {
-  public:
-xlconstant_v1_1_7<7,0b1010011> mod;
-  sc_out< sc_bv<7> > dout;
-top_block_xlconstant_0_3 (sc_core::sc_module_name name);
-  };
+(* DowngradeIPIdentifiedWarnings = "yes" *)
+module top_block_util_vector_logic_2_2 (
+  Op1,
+  Res
+);
 
-#endif
+input wire [3 : 0] Op1;
+output wire [3 : 0] Res;
+
+  util_vector_logic_v2_0_2_util_vector_logic #(
+    .C_OPERATION("not"),
+    .C_SIZE(4)
+  ) inst (
+    .Op1(Op1),
+    .Op2(4'B0),
+    .Res(Res)
+  );
+endmodule

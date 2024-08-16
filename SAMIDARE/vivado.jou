@@ -856,3 +856,48 @@ save_wave_config {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/hw_1/w
 save_wave_config {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
 save_wave_config {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
 save_wave_config {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+startgroup
+set_property CONFIG.CONST_VAL {0b1010011} [get_bd_cells xlconstant_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+wait_on_run impl_1
+reset_run impl_1
+set_property location {4 1443 2185} [get_bd_cells xlconcat_1]
+startgroup
+set_property -dict [list CONFIG.IN2_WIDTH.VALUE_SRC USER CONFIG.IN1_WIDTH.VALUE_SRC USER CONFIG.IN3_WIDTH.VALUE_SRC USER CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_2]
+set_property -dict [list \
+  CONFIG.IN0_WIDTH {1} \
+  CONFIG.IN1_WIDTH {1} \
+  CONFIG.IN2_WIDTH {1} \
+  CONFIG.IN3_WIDTH {1} \
+] [get_bd_cells xlconcat_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.IN2_WIDTH.VALUE_SRC USER CONFIG.IN3_WIDTH.VALUE_SRC USER CONFIG.IN1_WIDTH.VALUE_SRC USER CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_1]
+set_property -dict [list \
+  CONFIG.IN0_WIDTH {1} \
+  CONFIG.IN1_WIDTH {1} \
+  CONFIG.IN2_WIDTH {1} \
+  CONFIG.IN3_WIDTH {1} \
+] [get_bd_cells xlconcat_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_2
+endgroup
+set_property CONFIG.C_OPERATION {not} [get_bd_cells util_vector_logic_2]
+delete_bd_objs [get_bd_nets xlconcat_1_dout]
+connect_bd_net [get_bd_pins xlconcat_1/dout] [get_bd_pins util_vector_logic_2/Op1]
+connect_bd_net [get_bd_pins util_vector_logic_2/Res] [get_bd_pins util_ds_buf_1/OBUF_IN]
+startgroup
+set_property CONFIG.C_SIZE {4} [get_bd_cells util_vector_logic_2]
+endgroup
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 32
+launch_runs synth_1 -jobs 32
+wait_on_run synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd]
+refresh_design

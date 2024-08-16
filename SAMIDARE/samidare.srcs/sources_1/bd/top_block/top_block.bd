@@ -92,7 +92,8 @@
       "vio_0": "",
       "vio_1": "",
       "vio_2": "",
-      "vio_3": ""
+      "vio_3": "",
+      "util_vector_logic_2": ""
     },
     "ports": {
       "SFP0RXN": {
@@ -4834,7 +4835,7 @@
         "inst_hier_path": "xlconstant_0",
         "parameters": {
           "CONST_VAL": {
-            "value": "0b0000011"
+            "value": "0b1010011"
           },
           "CONST_WIDTH": {
             "value": "7"
@@ -4977,6 +4978,18 @@
         "xci_path": "ip/top_block_xlconcat_1_0/top_block_xlconcat_1_0.xci",
         "inst_hier_path": "xlconcat_1",
         "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "1"
+          },
+          "IN2_WIDTH": {
+            "value": "1"
+          },
+          "IN3_WIDTH": {
+            "value": "1"
+          },
           "NUM_PORTS": {
             "value": "4"
           }
@@ -5383,6 +5396,18 @@
         "xci_path": "ip/top_block_xlconcat_2_1/top_block_xlconcat_2_1.xci",
         "inst_hier_path": "xlconcat_2",
         "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "1"
+          },
+          "IN2_WIDTH": {
+            "value": "1"
+          },
+          "IN3_WIDTH": {
+            "value": "1"
+          },
           "NUM_PORTS": {
             "value": "4"
           }
@@ -5473,6 +5498,20 @@
         "parameters": {
           "C_NUM_PROBE_OUT": {
             "value": "0"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "top_block_util_vector_logic_2_2",
+        "xci_path": "ip/top_block_util_vector_logic_2_2/top_block_util_vector_logic_2_2.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "4"
           }
         }
       }
@@ -5945,6 +5984,12 @@
           "xlconcat_2/In0"
         ]
       },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "util_ds_buf_1/OBUF_IN"
+        ]
+      },
       "vio_0_probe_out0": {
         "ports": [
           "reset/probe_out0",
@@ -5961,7 +6006,7 @@
       "xlconcat_1_dout": {
         "ports": [
           "xlconcat_1/dout",
-          "util_ds_buf_1/OBUF_IN"
+          "util_vector_logic_2/Op1"
         ]
       },
       "xlconcat_2_dout": {

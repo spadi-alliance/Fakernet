@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.154682",
-   "Default View_TopLeft":"-1390,6",
+   "Default View_ScaleFactor":"1.13688",
+   "Default View_TopLeft":"1784,2041",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"",
    "PinnedPorts":"",
@@ -22,25 +22,25 @@ preplace port port-id_S_I2C_SCL -pg 1 -lvl 6 -x 2070 -y 60 -defaultsOSRD
 preplace portBus LED -pg 1 -lvl 6 -x 2070 -y 1170 -defaultsOSRD
 preplace portBus SO1P -pg 1 -lvl 0 -x 0 -y 2310 -defaultsOSRD
 preplace portBus SO1N -pg 1 -lvl 0 -x 0 -y 2330 -defaultsOSRD
-preplace portBus SO0N -pg 1 -lvl 0 -x 0 -y 1890 -defaultsOSRD
-preplace portBus SO0P -pg 1 -lvl 0 -x 0 -y 1870 -defaultsOSRD
-preplace portBus SO2N -pg 1 -lvl 0 -x 0 -y 2470 -defaultsOSRD
-preplace portBus SO2P -pg 1 -lvl 0 -x 0 -y 2450 -defaultsOSRD
-preplace portBus SO3N -pg 1 -lvl 0 -x 0 -y 2610 -defaultsOSRD
-preplace portBus SO3P -pg 1 -lvl 0 -x 0 -y 2590 -defaultsOSRD
-preplace portBus TRG_N -pg 1 -lvl 6 -x 2070 -y 2180 -defaultsOSRD
-preplace portBus TRG_P -pg 1 -lvl 6 -x 2070 -y 2160 -defaultsOSRD
+preplace portBus SO0N -pg 1 -lvl 0 -x 0 -y 1640 -defaultsOSRD
+preplace portBus SO0P -pg 1 -lvl 0 -x 0 -y 1620 -defaultsOSRD
+preplace portBus SO2N -pg 1 -lvl 0 -x 0 -y 1780 -defaultsOSRD
+preplace portBus SO2P -pg 1 -lvl 0 -x 0 -y 1760 -defaultsOSRD
+preplace portBus SO3N -pg 1 -lvl 0 -x 0 -y 2470 -defaultsOSRD
+preplace portBus SO3P -pg 1 -lvl 0 -x 0 -y 2450 -defaultsOSRD
+preplace portBus TRG_N -pg 1 -lvl 6 -x 2070 -y 2040 -defaultsOSRD
+preplace portBus TRG_P -pg 1 -lvl 6 -x 2070 -y 2020 -defaultsOSRD
 preplace portBus GPION -pg 1 -lvl 6 -x 2070 -y 20 -defaultsOSRD
 preplace portBus GPIOP -pg 1 -lvl 6 -x 2070 -y 40 -defaultsOSRD
 preplace portBus CLK_CFG -pg 1 -lvl 6 -x 2070 -y 2280 -defaultsOSRD
-preplace portBus CLKSOIN_P -pg 1 -lvl 6 -x 2070 -y 1770 -defaultsOSRD
-preplace portBus CLKSOIN_N -pg 1 -lvl 6 -x 2070 -y 1790 -defaultsOSRD
+preplace portBus CLKSOIN_P -pg 1 -lvl 6 -x 2070 -y 2160 -defaultsOSRD
+preplace portBus CLKSOIN_N -pg 1 -lvl 6 -x 2070 -y 2180 -defaultsOSRD
 preplace portBus BX_SYNC_TRG_P -pg 1 -lvl 6 -x 2070 -y 1470 -defaultsOSRD
 preplace portBus BX_SYNC_TRG_N -pg 1 -lvl 6 -x 2070 -y 1490 -defaultsOSRD
 preplace portBus HBTRG_P -pg 1 -lvl 6 -x 2070 -y 1630 -defaultsOSRD
 preplace portBus HBTRG_N -pg 1 -lvl 6 -x 2070 -y 1650 -defaultsOSRD
-preplace portBus HRSTB_N -pg 1 -lvl 6 -x 2070 -y 2020 -defaultsOSRD
-preplace portBus HRSTB_P -pg 1 -lvl 6 -x 2070 -y 2000 -defaultsOSRD
+preplace portBus HRSTB_N -pg 1 -lvl 6 -x 2070 -y 1900 -defaultsOSRD
+preplace portBus HRSTB_P -pg 1 -lvl 6 -x 2070 -y 1880 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 180 -y 1040 -defaultsOSRD
 preplace inst fakernet -pg 1 -lvl 4 -x 1460 -y 900 -defaultsOSRD
 preplace inst led_module -pg 1 -lvl 3 -x 1000 -y 1230 -defaultsOSRD
@@ -51,30 +51,31 @@ preplace inst SAMPA_I2C_wrapper -pg 1 -lvl 3 -x 1000 -y 290 -defaultsOSRD
 preplace inst rst_clk_wiz_0_40M -pg 1 -lvl 4 -x 1460 -y 580 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1460 -y 1340 -defaultsOSRD
 preplace inst clk_wiz_1 -pg 1 -lvl 3 -x 1000 -y 1560 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 5 -x 1900 -y 1770 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 5 -x 1900 -y 2160 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1900 -y 2280 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 540 -y 1570 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 5 -x 1900 -y 2160 -defaultsOSRD
-preplace inst util_ds_buf_2 -pg 1 -lvl 5 -x 1900 -y 2000 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1460 -y 1720 -defaultsOSRD
-preplace inst clk_wiz_2 -pg 1 -lvl 2 -x 540 -y 1970 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 180 -y 1990 -defaultsOSRD
-preplace inst xlconcat_1 -pg 1 -lvl 4 -x 1460 -y 2160 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 5 -x 1900 -y 2020 -defaultsOSRD
+preplace inst util_ds_buf_2 -pg 1 -lvl 5 -x 1900 -y 1880 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1460 -y 2160 -defaultsOSRD
+preplace inst clk_wiz_2 -pg 1 -lvl 2 -x 540 -y 1870 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 180 -y 1880 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 3 -x 1000 -y 2020 -defaultsOSRD
 preplace inst SAMPA_PON_v1_0_0 -pg 1 -lvl 3 -x 1000 -y 1420 -defaultsOSRD
 preplace inst iobuf_vhdl_0 -pg 1 -lvl 4 -x 1460 -y 70 -defaultsOSRD
 preplace inst iobuf_vhdl_1 -pg 1 -lvl 4 -x 1460 -y 340 -defaultsOSRD
 preplace inst util_ds_buf_4 -pg 1 -lvl 5 -x 1900 -y 1630 -defaultsOSRD
 preplace inst util_ds_buf_3 -pg 1 -lvl 5 -x 1900 -y 1470 -defaultsOSRD
-preplace inst util_vector_logic_1 -pg 1 -lvl 3 -x 1000 -y 1970 -defaultsOSRD
-preplace inst xlconcat_2 -pg 1 -lvl 4 -x 1460 -y 2000 -defaultsOSRD
-preplace inst util_ds_buf_5 -pg 1 -lvl 1 -x 180 -y 1870 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 3 -x 1000 -y 1860 -defaultsOSRD
+preplace inst xlconcat_2 -pg 1 -lvl 4 -x 1460 -y 1890 -defaultsOSRD
+preplace inst util_ds_buf_5 -pg 1 -lvl 1 -x 180 -y 1620 -defaultsOSRD
 preplace inst util_ds_buf_6 -pg 1 -lvl 1 -x 180 -y 2310 -defaultsOSRD
-preplace inst util_ds_buf_7 -pg 1 -lvl 1 -x 180 -y 2450 -defaultsOSRD
-preplace inst util_ds_buf_8 -pg 1 -lvl 1 -x 180 -y 2590 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 4 -x 1460 -y 1860 -defaultsOSRD
+preplace inst util_ds_buf_7 -pg 1 -lvl 1 -x 180 -y 1760 -defaultsOSRD
+preplace inst util_ds_buf_8 -pg 1 -lvl 1 -x 180 -y 2450 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 4 -x 1460 -y 1630 -defaultsOSRD
 preplace inst vio_1 -pg 1 -lvl 4 -x 1460 -y 2300 -defaultsOSRD
-preplace inst vio_2 -pg 1 -lvl 4 -x 1460 -y 2440 -defaultsOSRD
-preplace inst vio_3 -pg 1 -lvl 4 -x 1460 -y 2580 -defaultsOSRD
+preplace inst vio_2 -pg 1 -lvl 4 -x 1460 -y 1750 -defaultsOSRD
+preplace inst vio_3 -pg 1 -lvl 4 -x 1460 -y 2440 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -x 1460 -y 2020 -defaultsOSRD
 preplace netloc BASECLK_1 1 0 1 NJ 1040
 preplace netloc Net 1 4 2 NJ 60 NJ
 preplace netloc Net1 1 4 2 NJ 330 NJ
@@ -91,7 +92,7 @@ preplace netloc clk_wiz_0_clk_out1 1 1 3 360 1000 730 540 NJ
 preplace netloc clk_wiz_0_clk_out3 1 1 3 350 850 NJ 850 NJ
 preplace netloc clk_wiz_0_clk_out4 1 1 3 340 810 NJ 810 NJ
 preplace netloc clk_wiz_1_clk_out1 1 3 1 1210 1560n
-preplace netloc clk_wiz_2_clk_out1 1 2 3 760 1910 1250 1630 1700
+preplace netloc clk_wiz_2_clk_out1 1 2 3 760 1920 1250 1560 1700
 preplace netloc data_gen_user_0_event_commit 1 3 1 N 1010
 preplace netloc data_gen_user_0_event_commit_len 1 3 1 N 990
 preplace netloc data_gen_user_0_event_offset 1 3 1 N 950
@@ -115,36 +116,37 @@ preplace netloc native_to_axi_lite_v_0_regacc_done 1 2 3 810 1320 1240J 1100 168
 preplace netloc rst_clk_wiz_0_125M_peripheral_aresetn 1 2 3 710 870 1200 1110 1750J
 preplace netloc rxn_0_1 1 0 4 NJ 750 NJ 750 NJ 750 NJ
 preplace netloc rxp_0_1 1 0 4 NJ 830 NJ 830 NJ 830 NJ
-preplace netloc util_ds_buf_0_OBUF_DS_N 1 5 1 NJ 1790
-preplace netloc util_ds_buf_0_OBUF_DS_P 1 5 1 NJ 1770
-preplace netloc util_ds_buf_1_OBUF_DS_N 1 5 1 NJ 2180
-preplace netloc util_ds_buf_1_OBUF_DS_P 1 5 1 NJ 2160
+preplace netloc util_ds_buf_0_OBUF_DS_N 1 5 1 NJ 2180
+preplace netloc util_ds_buf_0_OBUF_DS_P 1 5 1 NJ 2160
+preplace netloc util_ds_buf_1_OBUF_DS_N 1 5 1 NJ 2040
+preplace netloc util_ds_buf_1_OBUF_DS_P 1 5 1 NJ 2020
 preplace netloc util_vector_logic_0_Res 1 2 1 NJ 1570
 preplace netloc vio_0_probe_out0 1 2 2 720 1070 1210J
-preplace netloc xlconcat_0_dout 1 4 1 1710J 1720n
-preplace netloc xlconcat_1_dout 1 4 1 N 2160
+preplace netloc xlconcat_0_dout 1 4 1 NJ 2160
 preplace netloc xlconstant_0_dout 1 5 1 NJ 2280
-preplace netloc xlconstant_1_dout 1 1 1 350 1980n
+preplace netloc xlconstant_1_dout 1 1 1 N 1880
 preplace netloc util_ds_buf_3_OBUF_DS_P 1 5 1 NJ 1470
 preplace netloc util_ds_buf_3_OBUF_DS_N 1 5 1 NJ 1490
 preplace netloc util_ds_buf_4_OBUF_DS_P 1 5 1 NJ 1630
 preplace netloc util_ds_buf_4_OBUF_DS_N 1 5 1 NJ 1650
-preplace netloc util_ds_buf_2_OBUF_DS_N 1 5 1 NJ 2020
-preplace netloc util_ds_buf_2_OBUF_DS_P 1 5 1 NJ 2000
-preplace netloc util_vector_logic_1_Res 1 3 1 N 1970
-preplace netloc xlconcat_2_dout 1 4 1 N 2000
-preplace netloc SO0N_1 1 0 1 NJ 1890
-preplace netloc SO0P_1 1 0 1 NJ 1870
+preplace netloc util_ds_buf_2_OBUF_DS_N 1 5 1 NJ 1900
+preplace netloc util_ds_buf_2_OBUF_DS_P 1 5 1 NJ 1880
+preplace netloc util_vector_logic_1_Res 1 3 1 NJ 1860
+preplace netloc xlconcat_2_dout 1 4 1 1710 1880n
+preplace netloc SO0N_1 1 0 1 NJ 1640
+preplace netloc SO0P_1 1 0 1 NJ 1620
 preplace netloc SO1N_1 1 0 1 NJ 2330
 preplace netloc SO1P_1 1 0 1 NJ 2310
-preplace netloc SO2N_1 1 0 1 NJ 2470
-preplace netloc SO2P_1 1 0 1 NJ 2450
-preplace netloc SO3N_1 1 0 1 NJ 2610
-preplace netloc SO3P_1 1 0 1 NJ 2590
-preplace netloc util_ds_buf_5_IBUF_OUT 1 1 3 N 1870 NJ 1870 NJ
+preplace netloc SO2N_1 1 0 1 NJ 1780
+preplace netloc SO2P_1 1 0 1 NJ 1760
+preplace netloc SO3N_1 1 0 1 NJ 2470
+preplace netloc SO3P_1 1 0 1 NJ 2450
+preplace netloc util_ds_buf_5_IBUF_OUT 1 1 3 340 1640 NJ 1640 NJ
 preplace netloc util_ds_buf_6_IBUF_OUT 1 1 3 N 2310 NJ 2310 NJ
-preplace netloc util_ds_buf_7_IBUF_OUT 1 1 3 N 2450 NJ 2450 NJ
-preplace netloc util_ds_buf_8_IBUF_OUT 1 1 3 N 2590 NJ 2590 NJ
+preplace netloc util_ds_buf_7_IBUF_OUT 1 1 3 N 1760 NJ 1760 NJ
+preplace netloc util_ds_buf_8_IBUF_OUT 1 1 3 N 2450 NJ 2450 NJ
+preplace netloc xlconcat_1_dout 1 3 1 NJ 2020
+preplace netloc util_vector_logic_2_Res 1 4 1 NJ 2020
 preplace netloc S00_AXI_1 1 3 1 1260 230n
 preplace netloc SAMPA_PON_v1_0_0_m00_axi 1 3 1 1220 1250n
 preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1720 1080n
@@ -152,7 +154,7 @@ preplace netloc fakernet_m00_axi 1 4 1 1750 800n
 preplace netloc led_module_m00_axi 1 3 1 N 1210
 preplace netloc led_module_m00_axi1 1 3 1 N 1230
 levelinfo -pg 1 0 180 540 1000 1460 1900 2070
-pagesize -pg 1 -db -bbox -sgen -140 0 2280 2670
+pagesize -pg 1 -db -bbox -sgen -140 0 2280 2530
 "
 }
 {

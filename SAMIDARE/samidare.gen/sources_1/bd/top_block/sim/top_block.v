@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Thu Aug 15 16:09:21 2024
+//Date        : Thu Aug 15 17:29:10 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -1961,7 +1961,7 @@ module s03_couplers_imp_17JAZQP
   assign s03_couplers_to_s03_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=73,numReposBlks=60,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=14,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=74,numReposBlks=61,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=14,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -2210,10 +2210,11 @@ module top_block
   wire [10:0]util_ds_buf_8_IBUF_OUT;
   wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
+  wire [3:0]util_vector_logic_2_Res;
   wire [0:0]vio_0_probe_out0;
   wire [3:0]xlconcat_0_dout;
-  wire [63:0]xlconcat_1_dout;
-  wire [51:0]xlconcat_2_dout;
+  wire [3:0]xlconcat_1_dout;
+  wire [3:0]xlconcat_2_dout;
   wire [6:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
 
@@ -2598,11 +2599,11 @@ module top_block
   top_block_util_ds_buf_1_1 util_ds_buf_1
        (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),
-        .OBUF_IN(xlconcat_1_dout[3:0]));
+        .OBUF_IN(util_vector_logic_2_Res));
   top_block_util_ds_buf_2_0 util_ds_buf_2
        (.OBUF_DS_N(util_ds_buf_2_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
-        .OBUF_IN(xlconcat_2_dout[3:0]));
+        .OBUF_IN(xlconcat_2_dout));
   top_block_util_ds_buf_3_2 util_ds_buf_3
        (.OBUF_DS_N(util_ds_buf_3_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_3_OBUF_DS_P),
@@ -2633,6 +2634,9 @@ module top_block
   top_block_util_vector_logic_1_3 util_vector_logic_1
        (.Op1(clk_wiz_2_clk_out1),
         .Res(util_vector_logic_1_Res));
+  top_block_util_vector_logic_2_2 util_vector_logic_2
+       (.Op1(xlconcat_1_dout),
+        .Res(util_vector_logic_2_Res));
   top_block_vio_0_1 vio_0
        (.clk(clk_wiz_1_clk_out1),
         .probe_in0(util_ds_buf_5_IBUF_OUT));
@@ -2652,16 +2656,16 @@ module top_block
         .In3(clk_wiz_1_clk_out1),
         .dout(xlconcat_0_dout));
   top_block_xlconcat_1_0 xlconcat_1
-       (.In0({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
-        .In1({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
-        .In2({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
-        .In3({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+       (.In0(clk_wiz_2_clk_out1),
+        .In1(clk_wiz_2_clk_out1),
+        .In2(clk_wiz_2_clk_out1),
+        .In3(clk_wiz_2_clk_out1),
         .dout(xlconcat_1_dout));
   top_block_xlconcat_2_1 xlconcat_2
-       (.In0({1'b0,1'b0,1'b0,util_vector_logic_1_Res}),
-        .In1({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
-        .In2({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
-        .In3({clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1,clk_wiz_2_clk_out1}),
+       (.In0(util_vector_logic_1_Res),
+        .In1(clk_wiz_2_clk_out1),
+        .In2(clk_wiz_2_clk_out1),
+        .In3(clk_wiz_2_clk_out1),
         .dout(xlconcat_2_dout));
   top_block_xlconstant_0_3 xlconstant_0
        (.dout(xlconstant_0_dout));

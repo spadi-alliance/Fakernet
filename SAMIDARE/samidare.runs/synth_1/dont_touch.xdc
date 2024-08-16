@@ -202,6 +202,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_v
 # IP: bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_vio_2_0 || ORIG_REF_NAME==top_block_vio_2_0} -quiet] -quiet
 
+# IP: bd/top_block/ip/top_block_util_vector_logic_2_2/top_block_util_vector_logic_2_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_2_2 || ORIG_REF_NAME==top_block_util_vector_logic_2_2} -quiet] -quiet
+
 # XDC: ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt_ooc.xdc
 
 # XDC: ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt.xdc
