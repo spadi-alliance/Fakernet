@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Aug 16 10:42:55 2024
-# Process ID: 1818104
+# Start of session at: Fri Aug 16 12:33:07 2024
+# Process ID: 1854654
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE
 # Command line: vivado
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.log
 # Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.jou
-# Running On: e16fpga01, OS: Linux, CPU Frequency: 5676.313 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
@@ -74,13 +74,9 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 avail
 open_project /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr
 WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'.
 WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0.v'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_S00_AXI.v'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_controller_v1_0_M00_AXI.v'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
@@ -139,8 +135,17 @@ Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_2
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
 Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
 Adding component instance block -- xilinx.com:module_ref:SAMPA_PON_v1_0:1.0 - SAMPA_PON_v1_0_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/SAMPA_PON_v1_0_0'.
+Given inputs for module-source, Top-module name : SAMPA_PON_v1_0, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
 Adding component instance block -- xilinx.com:module_ref:iobuf_vhdl:1.0 - iobuf_vhdl_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/iobuf_vhdl_0'.
+Given inputs for module-source, Top-module name : iobuf_vhdl, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
 Adding component instance block -- xilinx.com:module_ref:iobuf_vhdl:1.0 - iobuf_vhdl_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/iobuf_vhdl_1'.
+Given inputs for module-source, Top-module name : iobuf_vhdl, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
 Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_4
 Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_3
 Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
@@ -156,4 +161,4 @@ Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_3
 Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
 Successfully read diagram <top_block> from block design file </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 10:43:32 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 12:33:40 2024...
