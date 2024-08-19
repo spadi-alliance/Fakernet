@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Aug 15 16:10:21 2024
+| Date         : Sun Aug 18 21:57:40 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_fakernet_top_0_0_utilization_synth.rpt -pb top_block_fakernet_top_0_0_utilization_synth.pb
 | Design       : top_block_fakernet_top_0_0
@@ -32,16 +32,16 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 3277 |     0 |          0 |     77760 |  4.21 |
-|   LUT as Logic             | 3234 |     0 |          0 |     77760 |  4.16 |
-|   LUT as Memory            |   43 |     0 |          0 |     40320 |  0.11 |
+| CLB LUTs*                  | 3671 |     0 |          0 |     77760 |  4.72 |
+|   LUT as Logic             | 3625 |     0 |          0 |     77760 |  4.66 |
+|   LUT as Memory            |   46 |     0 |          0 |     40320 |  0.11 |
 |     LUT as Distributed RAM |   24 |     0 |            |           |       |
-|     LUT as Shift Register  |   19 |     0 |            |           |       |
-| CLB Registers              | 3579 |     0 |          0 |    155520 |  2.30 |
-|   Register as Flip Flop    | 3579 |     0 |          0 |    155520 |  2.30 |
+|     LUT as Shift Register  |   22 |     0 |            |           |       |
+| CLB Registers              | 4224 |     0 |          0 |    155520 |  2.72 |
+|   Register as Flip Flop    | 4224 |     0 |          0 |    155520 |  2.72 |
 |   Register as Latch        |    0 |     0 |          0 |    155520 |  0.00 |
-| CARRY8                     |  107 |     0 |          0 |      9720 |  1.10 |
-| F7 Muxes                   |   54 |     0 |          0 |     38880 |  0.14 |
+| CARRY8                     |  131 |     0 |          0 |      9720 |  1.35 |
+| F7 Muxes                   |   58 |     0 |          0 |     38880 |  0.15 |
 | F8 Muxes                   |   15 |     0 |          0 |     19440 |  0.08 |
 | F9 Muxes                   |    0 |     0 |          0 |      9720 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
@@ -63,8 +63,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 131   |          Yes |         Set |            - |
-| 3448  |          Yes |       Reset |            - |
+| 139   |          Yes |         Set |            - |
+| 4085  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -74,11 +74,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    | 12.5 |     0 |          0 |       144 |  8.68 |
+| Block RAM Tile    |   13 |     0 |          0 |       144 |  9.03 |
 |   RAMB36/FIFO*    |    7 |     0 |          0 |       144 |  4.86 |
 |     RAMB36E2 only |    7 |       |            |           |       |
-|   RAMB18          |   11 |     0 |          0 |       288 |  3.82 |
-|     RAMB18E2 only |   11 |       |            |           |       |
+|   RAMB18          |   12 |     0 |          0 |       288 |  4.17 |
+|     RAMB18E2 only |   12 |       |            |           |       |
 +-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
@@ -157,20 +157,20 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 3448 |            Register |
-| LUT6       | 1591 |                 CLB |
-| LUT4       |  715 |                 CLB |
-| LUT5       |  544 |                 CLB |
-| LUT2       |  543 |                 CLB |
-| LUT3       |  467 |                 CLB |
-| FDSE       |  131 |            Register |
-| CARRY8     |  107 |                 CLB |
-| LUT1       |   88 |                 CLB |
-| MUXF7      |   54 |                 CLB |
+| FDRE       | 4085 |            Register |
+| LUT6       | 1816 |                 CLB |
+| LUT4       |  770 |                 CLB |
+| LUT5       |  615 |                 CLB |
+| LUT2       |  556 |                 CLB |
+| LUT3       |  503 |                 CLB |
+| FDSE       |  139 |            Register |
+| CARRY8     |  131 |                 CLB |
+| LUT1       |  106 |                 CLB |
+| MUXF7      |   58 |                 CLB |
 | RAMD32     |   40 |                 CLB |
-| SRL16E     |   19 |                 CLB |
+| SRL16E     |   22 |                 CLB |
 | MUXF8      |   15 |                 CLB |
-| RAMB18E2   |   11 |            BLOCKRAM |
+| RAMB18E2   |   12 |            BLOCKRAM |
 | RAMS32     |    8 |                 CLB |
 | RAMB36E2   |    7 |            BLOCKRAM |
 | OSERDESE3  |    1 |                 I/O |

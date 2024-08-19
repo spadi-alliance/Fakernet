@@ -1246,12 +1246,12 @@ begin
 --      end if;
 
 --      -- Data source control.
---      if (regacc_write = '1' and
---          regacc_addr(15 downto 0) = "00000000" & "00000101") -- 0x0005 / 5
---      then
---        data_source <= regacc_data_wr(data_source'range);
---        regacc_done <= '1';
---      end if;
+      if (regacc_write = '1' and
+          regacc_addr(15 downto 0) = "00000000" & "00000101") -- 0x0005 / 5
+      then
+        data_source <= regacc_data_wr(data_source'range);
+        --regacc_done <= '1';
+      end if;
 
 --      spir_reg_start <= '0';
 --      -- SPI flash read (issue the access, i.e. write from outside).

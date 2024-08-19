@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Thu Aug 15 17:29:09 2024
+//Date        : Sun Aug 18 23:26:56 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -245,6 +245,169 @@ module SAMPA_I2C_wrapper_imp_VOP84W
         .sda_i(sda_i_1),
         .sda_o(axi_iic_0_sda_o),
         .sda_t(axi_iic_0_sda_t));
+endmodule
+
+module appUnit_imp_1BHH9Z2
+   (SO0,
+    SO1,
+    SO2,
+    SO3,
+    clk,
+    clk125MHz,
+    event_commit,
+    event_commit_len,
+    event_free,
+    event_offset,
+    event_reset,
+    event_word,
+    event_write,
+    user_clk);
+  input [10:0]SO0;
+  input [10:0]SO1;
+  input [10:0]SO2;
+  input [10:0]SO3;
+  input clk;
+  input clk125MHz;
+  output event_commit;
+  output [10:0]event_commit_len;
+  input event_free;
+  output [9:0]event_offset;
+  input event_reset;
+  output [31:0]event_word;
+  output event_write;
+  input user_clk;
+
+  wire clk1_1;
+  wire clk_1;
+  wire [319:0]das_rx_0_bus0;
+  wire [319:0]das_rx_0_bus1;
+  wire [319:0]das_rx_0_bus2;
+  wire [319:0]das_rx_0_bus3;
+  wire das_rx_0_wr_en0;
+  wire das_rx_0_wr_en1;
+  wire das_rx_0_wr_en2;
+  wire das_rx_0_wr_en3;
+  wire event_builder_v0_0_event_commit;
+  wire [10:0]event_builder_v0_0_event_commit_len;
+  wire [9:0]event_builder_v0_0_event_offset;
+  wire [31:0]event_builder_v0_0_event_word;
+  wire event_builder_v0_0_event_write;
+  wire event_builder_v0_0_rd_en;
+  wire event_free_1;
+  wire event_reset_1;
+  wire [319:0]fifo_generator_0_dout;
+  wire fifo_generator_0_empty;
+  wire fifo_generator_0_full;
+  wire [319:0]fifo_generator_1_dout;
+  wire fifo_generator_1_empty;
+  wire fifo_generator_1_full;
+  wire [319:0]fifo_generator_2_dout;
+  wire fifo_generator_2_empty;
+  wire fifo_generator_2_full;
+  wire [319:0]fifo_generator_3_dout;
+  wire fifo_generator_3_empty;
+  wire fifo_generator_3_full;
+  wire [10:0]probe_in0_1;
+  wire [10:0]probe_in1_1;
+  wire [10:0]probe_in2_1;
+  wire [10:0]probe_in3_1;
+  wire user_clk_1;
+  wire [3:0]xlconcat_0_dout;
+  wire [3:0]xlconcat_3_dout;
+
+  assign clk1_1 = clk125MHz;
+  assign clk_1 = clk;
+  assign event_commit = event_builder_v0_0_event_commit;
+  assign event_commit_len[10:0] = event_builder_v0_0_event_commit_len;
+  assign event_free_1 = event_free;
+  assign event_offset[9:0] = event_builder_v0_0_event_offset;
+  assign event_reset_1 = event_reset;
+  assign event_word[31:0] = event_builder_v0_0_event_word;
+  assign event_write = event_builder_v0_0_event_write;
+  assign probe_in0_1 = SO0[10:0];
+  assign probe_in1_1 = SO1[10:0];
+  assign probe_in2_1 = SO2[10:0];
+  assign probe_in3_1 = SO3[10:0];
+  assign user_clk_1 = user_clk;
+  top_block_das_rx_0_0 das_rx_0
+       (.SO0(probe_in0_1),
+        .SO1(probe_in1_1),
+        .SO2(probe_in2_1),
+        .SO3(probe_in3_1),
+        .bus0(das_rx_0_bus0),
+        .bus1(das_rx_0_bus1),
+        .bus2(das_rx_0_bus2),
+        .bus3(das_rx_0_bus3),
+        .clk_SO(clk_1),
+        .full(xlconcat_0_dout),
+        .user_clk(user_clk_1),
+        .wr_en0(das_rx_0_wr_en0),
+        .wr_en1(das_rx_0_wr_en1),
+        .wr_en2(das_rx_0_wr_en2),
+        .wr_en3(das_rx_0_wr_en3));
+  top_block_event_builder_v0_0_0 event_builder_v0_0
+       (.bus0(fifo_generator_1_dout),
+        .bus1(fifo_generator_0_dout),
+        .bus2(fifo_generator_2_dout),
+        .bus3(fifo_generator_3_dout),
+        .clk(clk1_1),
+        .empty(xlconcat_3_dout),
+        .event_commit(event_builder_v0_0_event_commit),
+        .event_commit_len(event_builder_v0_0_event_commit_len),
+        .event_free(event_free_1),
+        .event_offset(event_builder_v0_0_event_offset),
+        .event_reset(event_reset_1),
+        .event_word(event_builder_v0_0_event_word),
+        .event_write(event_builder_v0_0_event_write),
+        .rd_en(event_builder_v0_0_rd_en));
+  top_block_fifo_generator_0_1 fifo_generator_0
+       (.din(das_rx_0_bus0),
+        .dout(fifo_generator_0_dout),
+        .empty(fifo_generator_0_empty),
+        .full(fifo_generator_0_full),
+        .rd_clk(clk1_1),
+        .rd_en(event_builder_v0_0_rd_en),
+        .wr_clk(clk_1),
+        .wr_en(das_rx_0_wr_en1));
+  top_block_fifo_generator_0_2 fifo_generator_1
+       (.din(das_rx_0_bus1),
+        .dout(fifo_generator_1_dout),
+        .empty(fifo_generator_1_empty),
+        .full(fifo_generator_1_full),
+        .rd_clk(clk1_1),
+        .rd_en(event_builder_v0_0_rd_en),
+        .wr_clk(clk_1),
+        .wr_en(das_rx_0_wr_en0));
+  top_block_fifo_generator_0_3 fifo_generator_2
+       (.din(das_rx_0_bus2),
+        .dout(fifo_generator_2_dout),
+        .empty(fifo_generator_2_empty),
+        .full(fifo_generator_2_full),
+        .rd_clk(clk1_1),
+        .rd_en(event_builder_v0_0_rd_en),
+        .wr_clk(clk_1),
+        .wr_en(das_rx_0_wr_en2));
+  top_block_fifo_generator_0_4 fifo_generator_3
+       (.din(das_rx_0_bus3),
+        .dout(fifo_generator_3_dout),
+        .empty(fifo_generator_3_empty),
+        .full(fifo_generator_3_full),
+        .rd_clk(clk1_1),
+        .rd_en(event_builder_v0_0_rd_en),
+        .wr_clk(clk_1),
+        .wr_en(das_rx_0_wr_en3));
+  top_block_xlconcat_0_1 xlconcat_0
+       (.In0(fifo_generator_0_full),
+        .In1(fifo_generator_1_full),
+        .In2(fifo_generator_2_full),
+        .In3(fifo_generator_3_full),
+        .dout(xlconcat_0_dout));
+  top_block_xlconcat_0_2 xlconcat_3
+       (.In0(fifo_generator_1_empty),
+        .In1(fifo_generator_0_empty),
+        .In2(fifo_generator_2_empty),
+        .In3(fifo_generator_3_empty),
+        .dout(xlconcat_3_dout));
 endmodule
 
 module fakernet_imp_CWUDB9
@@ -1961,7 +2124,10 @@ module s03_couplers_imp_17JAZQP
   assign s03_couplers_to_s03_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=74,numReposBlks=61,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=14,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=24,da_board_cnt=4,da_clkrst_cnt=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+/* clk_out1: 40MHz
+
+ */
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=78,numReposBlks=64,numNonXlnxBlks=0,numHierBlks=14,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,\"\"da_axi4_cnt\"\"=24,\"\"da_board_cnt\"\"=4,\"\"da_clkrst_cnt\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -2114,11 +2280,6 @@ module top_block
   wire clk_wiz_0_clk_out4;
   wire clk_wiz_1_clk_out1;
   wire clk_wiz_2_clk_out1;
-  wire data_gen_user_0_event_commit;
-  wire [10:0]data_gen_user_0_event_commit_len;
-  wire [9:0]data_gen_user_0_event_offset;
-  wire [31:0]data_gen_user_0_event_word;
-  wire data_gen_user_0_event_write;
   wire [31:0]fakernet_i2c_waddr_o;
   wire [31:0]fakernet_m00_axi_ARADDR;
   wire [2:0]fakernet_m00_axi_ARPROT;
@@ -2194,6 +2355,11 @@ module top_block
   wire [0:0]rst_clk_wiz_0_125M_peripheral_aresetn;
   wire rxn_0_1;
   wire rxp_0_1;
+  wire user_data_commit_1;
+  wire [10:0]user_data_commit_len_1;
+  wire [9:0]user_data_offset_1;
+  wire [31:0]user_data_word_1;
+  wire user_data_write_1;
   wire [3:0]util_ds_buf_0_OBUF_DS_N;
   wire [3:0]util_ds_buf_0_OBUF_DS_P;
   wire [3:0]util_ds_buf_1_OBUF_DS_N;
@@ -2208,9 +2374,7 @@ module top_block
   wire [10:0]util_ds_buf_6_IBUF_OUT;
   wire [10:0]util_ds_buf_7_IBUF_OUT;
   wire [10:0]util_ds_buf_8_IBUF_OUT;
-  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
-  wire [3:0]util_vector_logic_2_Res;
   wire [0:0]vio_0_probe_out0;
   wire [3:0]xlconcat_0_dout;
   wire [3:0]xlconcat_1_dout;
@@ -2308,6 +2472,21 @@ module top_block
         .m00_axi_wstrb(SAMPA_PON_v1_0_0_m00_axi_WSTRB),
         .m00_axi_wvalid(SAMPA_PON_v1_0_0_m00_axi_WVALID),
         .sampa_power_on(SAMPA_PON_v1_0_0_sampa_power_on));
+  appUnit_imp_1BHH9Z2 appUnit
+       (.SO0(util_ds_buf_5_IBUF_OUT),
+        .SO1(util_ds_buf_6_IBUF_OUT),
+        .SO2(util_ds_buf_7_IBUF_OUT),
+        .SO3(util_ds_buf_8_IBUF_OUT),
+        .clk(clk_wiz_1_clk_out1),
+        .clk125MHz(clk_in_0_1),
+        .event_commit(user_data_commit_1),
+        .event_commit_len(user_data_commit_len_1),
+        .event_free(fakernet_user_data_free),
+        .event_offset(user_data_offset_1),
+        .event_reset(fakernet_user_data_reset),
+        .event_word(user_data_word_1),
+        .event_write(user_data_write_1),
+        .user_clk(clk_wiz_0_clk_out1));
   top_block_axi_mem_intercon_3 axi_mem_intercon
        (.ACLK(clk_in_0_1),
         .ARESETN(rst_clk_wiz_0_125M_peripheral_aresetn),
@@ -2425,20 +2604,15 @@ module top_block
   top_block_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(clk_wiz_0_clk_out1),
         .clk_out1(clk_wiz_1_clk_out1),
-        .power_down(util_vector_logic_0_Res));
+        .power_down(1'b0));
   top_block_clk_wiz_2_0 clk_wiz_2
        (.clk_in1(clk_wiz_0_clk_out1),
         .clk_out1(clk_wiz_2_clk_out1),
         .power_down(xlconstant_1_dout));
   top_block_data_gen_user_0_0 data_gen_user_0
        (.clk(clk_in_0_1),
-        .event_commit(data_gen_user_0_event_commit),
-        .event_commit_len(data_gen_user_0_event_commit_len),
-        .event_free(fakernet_user_data_free),
-        .event_offset(data_gen_user_0_event_offset),
-        .event_reset(fakernet_user_data_reset),
-        .event_word(data_gen_user_0_event_word),
-        .event_write(data_gen_user_0_event_write));
+        .event_free(1'b0),
+        .event_reset(1'b0));
   fakernet_imp_CWUDB9 fakernet
        (.clk25_in_0(clk_wiz_0_clk_out3),
         .clk_in_0(clk_in_0_1),
@@ -2478,13 +2652,13 @@ module top_block
         .start_i2c_write_o(fakernet_start_i2c_write_o),
         .txn_0(fakernet_txn_0),
         .txp_0(fakernet_txp_0),
-        .user_data_commit(data_gen_user_0_event_commit),
-        .user_data_commit_len(data_gen_user_0_event_commit_len),
+        .user_data_commit(user_data_commit_1),
+        .user_data_commit_len(user_data_commit_len_1),
         .user_data_free(fakernet_user_data_free),
-        .user_data_offset(data_gen_user_0_event_offset),
+        .user_data_offset(user_data_offset_1),
         .user_data_reset(fakernet_user_data_reset),
-        .user_data_word(data_gen_user_0_event_word),
-        .user_data_write(data_gen_user_0_event_write));
+        .user_data_word(user_data_word_1),
+        .user_data_write(user_data_write_1));
   top_block_iobuf_vhdl_0_0 iobuf_vhdl_0
        (.i(SAMPA_I2C_wrapper_scl_o),
         .io(S_I2C_SCL),
@@ -2589,7 +2763,7 @@ module top_block
   top_block_rst_clk_wiz_0_40M_3 rst_clk_wiz_0_40M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
-        .ext_reset_in(fakernet_user_data_reset),
+        .ext_reset_in(1'b0),
         .mb_debug_sys_rst(1'b0),
         .slowest_sync_clk(clk_wiz_0_clk_out1));
   top_block_util_ds_buf_0_1 util_ds_buf_0
@@ -2599,7 +2773,7 @@ module top_block
   top_block_util_ds_buf_1_1 util_ds_buf_1
        (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),
-        .OBUF_IN(util_vector_logic_2_Res));
+        .OBUF_IN(xlconcat_1_dout));
   top_block_util_ds_buf_2_0 util_ds_buf_2
        (.OBUF_DS_N(util_ds_buf_2_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
@@ -2628,38 +2802,22 @@ module top_block
        (.IBUF_DS_N(SO3N_1),
         .IBUF_DS_P(SO3P_1),
         .IBUF_OUT(util_ds_buf_8_IBUF_OUT));
-  top_block_util_vector_logic_0_3 util_vector_logic_0
-       (.Op1(SAMPA_PON_v1_0_0_sampa_power_on),
-        .Res(util_vector_logic_0_Res));
   top_block_util_vector_logic_1_3 util_vector_logic_1
        (.Op1(clk_wiz_2_clk_out1),
         .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_2_2 util_vector_logic_2
-       (.Op1(xlconcat_1_dout),
-        .Res(util_vector_logic_2_Res));
-  top_block_vio_0_1 vio_0
-       (.clk(clk_wiz_1_clk_out1),
-        .probe_in0(util_ds_buf_5_IBUF_OUT));
-  top_block_vio_0_2 vio_1
-       (.clk(clk_wiz_1_clk_out1),
-        .probe_in0(util_ds_buf_6_IBUF_OUT));
-  top_block_vio_1_0 vio_2
-       (.clk(clk_wiz_1_clk_out1),
-        .probe_in0(util_ds_buf_7_IBUF_OUT));
-  top_block_vio_2_0 vio_3
-       (.clk(clk_wiz_1_clk_out1),
-        .probe_in0(util_ds_buf_8_IBUF_OUT));
+  top_block_util_vector_logic_3_2 util_vector_logic_4
+       (.Op1(clk_wiz_2_clk_out1));
   top_block_xlconcat_0_0 xlconcat_0
        (.In0(clk_wiz_1_clk_out1),
         .In1(clk_wiz_1_clk_out1),
         .In2(clk_wiz_1_clk_out1),
         .In3(clk_wiz_1_clk_out1),
         .dout(xlconcat_0_dout));
-  top_block_xlconcat_1_0 xlconcat_1
-       (.In0(clk_wiz_2_clk_out1),
+  top_block_xlconcat_1_1 xlconcat_1
+       (.In0(util_vector_logic_1_Res),
         .In1(clk_wiz_2_clk_out1),
         .In2(clk_wiz_2_clk_out1),
-        .In3(clk_wiz_2_clk_out1),
+        .In3(util_vector_logic_1_Res),
         .dout(xlconcat_1_dout));
   top_block_xlconcat_2_1 xlconcat_2
        (.In0(util_vector_logic_1_Res),

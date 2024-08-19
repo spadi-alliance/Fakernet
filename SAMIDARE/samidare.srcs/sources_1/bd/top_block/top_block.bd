@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x451032EB429D75E3",
+      "boundary_crc": "0x451032EB80F1FAAB",
       "device": "xcau15p-sbvb484-1-i",
       "gen_directory": "../../../../samidare.gen/sources_1/bd/top_block",
       "name": "top_block",
@@ -34,8 +34,8 @@
         "RESET_INST_0": "",
         "gig_ethernet_pcs_pma_0": "",
         "native_to_axi_lite_v_0": "",
-        "fakernet_top_0": "",
-        "reg_switch_0": ""
+        "reg_switch_0": "",
+        "fakernet_top_0": ""
       },
       "led_module": {
         "util_vector_logic_0": "",
@@ -71,13 +71,11 @@
       "clk_wiz_1": "",
       "util_ds_buf_0": "",
       "xlconstant_0": "",
-      "util_vector_logic_0": "",
       "util_ds_buf_1": "",
       "util_ds_buf_2": "",
       "xlconcat_0": "",
       "clk_wiz_2": "",
       "xlconstant_1": "",
-      "xlconcat_1": "",
       "SAMPA_PON_v1_0_0": "",
       "iobuf_vhdl_0": "",
       "iobuf_vhdl_1": "",
@@ -89,11 +87,18 @@
       "util_ds_buf_6": "",
       "util_ds_buf_7": "",
       "util_ds_buf_8": "",
-      "vio_0": "",
-      "vio_1": "",
-      "vio_2": "",
-      "vio_3": "",
-      "util_vector_logic_2": ""
+      "appUnit": {
+        "fifo_generator_0": "",
+        "fifo_generator_1": "",
+        "fifo_generator_2": "",
+        "fifo_generator_3": "",
+        "xlconcat_0": "",
+        "xlconcat_3": "",
+        "das_rx_0": "",
+        "event_builder_v0_0": ""
+      },
+      "xlconcat_1": "",
+      "util_vector_logic_4": ""
     },
     "ports": {
       "SFP0RXN": {
@@ -250,7 +255,7 @@
             "value_src": "ip_prop"
           },
           "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
+            "value": "180.0:0.0:0.0:180.0",
             "value_src": "ip_prop"
           }
         }
@@ -265,7 +270,7 @@
             "value_src": "ip_prop"
           },
           "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
+            "value": "180.0:0.0:0.0:180.0",
             "value_src": "ip_prop"
           }
         }
@@ -1588,6 +1593,114 @@
               }
             }
           },
+          "reg_switch_0": {
+            "vlnv": "xilinx.com:module_ref:reg_switch:1.0",
+            "xci_name": "top_block_reg_switch_0_0",
+            "xci_path": "ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.xci",
+            "inst_hier_path": "fakernet/reg_switch_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "reg_switch",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "axi_aclk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "axi_aresetn",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "axi_aresetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "regacc_addr_i": {
+                "direction": "I",
+                "left": "24",
+                "right": "0"
+              },
+              "regacc_addr_o": {
+                "direction": "O",
+                "left": "24",
+                "right": "0"
+              },
+              "regacc_data_wr_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "regacc_data_wr_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "regacc_write_i": {
+                "direction": "I"
+              },
+              "regacc_write_o": {
+                "direction": "O"
+              },
+              "regacc_read_i": {
+                "direction": "I"
+              },
+              "regacc_read_o": {
+                "direction": "O"
+              },
+              "regacc_data_rd_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "regacc_data_rd_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "regacc_done_i": {
+                "direction": "I"
+              },
+              "regacc_done_o": {
+                "direction": "O"
+              },
+              "start_i2c_write_o": {
+                "direction": "O"
+              },
+              "start_i2c_write_all_o": {
+                "direction": "O"
+              },
+              "start_i2c_read_o": {
+                "direction": "O"
+              },
+              "i2c_raddr_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_waddr_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_rdata_i": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "i2c_done": {
+                "direction": "I"
+              }
+            }
+          },
           "fakernet_top_0": {
             "vlnv": "xilinx.com:module_ref:fakernet_top:1.0",
             "xci_name": "top_block_fakernet_top_0_0",
@@ -1857,114 +1970,6 @@
                 "direction": "I"
               }
             }
-          },
-          "reg_switch_0": {
-            "vlnv": "xilinx.com:module_ref:reg_switch:1.0",
-            "xci_name": "top_block_reg_switch_0_0",
-            "xci_path": "ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.xci",
-            "inst_hier_path": "fakernet/reg_switch_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "reg_switch",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "axi_aclk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "axi_aresetn",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "axi_aresetn": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "regacc_addr_i": {
-                "direction": "I",
-                "left": "24",
-                "right": "0"
-              },
-              "regacc_addr_o": {
-                "direction": "O",
-                "left": "24",
-                "right": "0"
-              },
-              "regacc_data_wr_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_data_wr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_write_i": {
-                "direction": "I"
-              },
-              "regacc_write_o": {
-                "direction": "O"
-              },
-              "regacc_read_i": {
-                "direction": "I"
-              },
-              "regacc_read_o": {
-                "direction": "O"
-              },
-              "regacc_data_rd_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_data_rd_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_done_i": {
-                "direction": "I"
-              },
-              "regacc_done_o": {
-                "direction": "O"
-              },
-              "start_i2c_write_o": {
-                "direction": "O"
-              },
-              "start_i2c_write_all_o": {
-                "direction": "O"
-              },
-              "start_i2c_read_o": {
-                "direction": "O"
-              },
-              "i2c_raddr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_waddr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_rdata_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_done": {
-                "direction": "I"
-              }
-            }
           }
         },
         "interface_nets": {
@@ -1995,8 +2000,8 @@
               "mii_initializer_0/CLK",
               "RESET_INST_0/clk125",
               "native_to_axi_lite_v_0/m00_axi_aclk",
-              "fakernet_top_0/clk_in",
-              "reg_switch_0/axi_aclk"
+              "reg_switch_0/axi_aclk",
+              "fakernet_top_0/clk_in"
             ]
           },
           "fakernet_top_0_eth_mdc": {
@@ -4842,20 +4847,6 @@
           }
         }
       },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "top_block_util_vector_logic_0_3",
-        "xci_path": "ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "util_ds_buf_1": {
         "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
         "xci_name": "top_block_util_ds_buf_1_1",
@@ -4971,29 +4962,6 @@
         "xci_name": "top_block_xlconstant_1_4",
         "xci_path": "ip/top_block_xlconstant_1_4/top_block_xlconstant_1_4.xci",
         "inst_hier_path": "xlconstant_1"
-      },
-      "xlconcat_1": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "top_block_xlconcat_1_0",
-        "xci_path": "ip/top_block_xlconcat_1_0/top_block_xlconcat_1_0.xci",
-        "inst_hier_path": "xlconcat_1",
-        "parameters": {
-          "IN0_WIDTH": {
-            "value": "1"
-          },
-          "IN1_WIDTH": {
-            "value": "1"
-          },
-          "IN2_WIDTH": {
-            "value": "1"
-          },
-          "IN3_WIDTH": {
-            "value": "1"
-          },
-          "NUM_PORTS": {
-            "value": "4"
-          }
-        }
       },
       "SAMPA_PON_v1_0_0": {
         "vlnv": "xilinx.com:module_ref:SAMPA_PON_v1_0:1.0",
@@ -5457,61 +5425,687 @@
           }
         }
       },
-      "vio_0": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "top_block_vio_0_1",
-        "xci_path": "ip/top_block_vio_0_1/top_block_vio_0_1.xci",
-        "inst_hier_path": "vio_0",
-        "parameters": {
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
+      "appUnit": {
+        "ports": {
+          "SO0": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "SO1": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "SO2": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "SO3": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "user_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "event_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "event_free": {
+            "direction": "I"
+          },
+          "clk125MHz": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "event_word": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "event_offset": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "event_write": {
+            "direction": "O"
+          },
+          "event_commit_len": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "event_commit": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "fifo_generator_0": {
+            "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+            "xci_name": "top_block_fifo_generator_0_1",
+            "xci_path": "ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1.xci",
+            "inst_hier_path": "appUnit/fifo_generator_0",
+            "parameters": {
+              "Fifo_Implementation": {
+                "value": "Independent_Clocks_Block_RAM"
+              },
+              "Input_Data_Width": {
+                "value": "320"
+              },
+              "Input_Depth": {
+                "value": "16"
+              },
+              "Performance_Options": {
+                "value": "First_Word_Fall_Through"
+              },
+              "Reset_Pin": {
+                "value": "false"
+              }
+            }
+          },
+          "fifo_generator_1": {
+            "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+            "xci_name": "top_block_fifo_generator_0_2",
+            "xci_path": "ip/top_block_fifo_generator_0_2/top_block_fifo_generator_0_2.xci",
+            "inst_hier_path": "appUnit/fifo_generator_1",
+            "parameters": {
+              "Fifo_Implementation": {
+                "value": "Independent_Clocks_Block_RAM"
+              },
+              "Input_Data_Width": {
+                "value": "320"
+              },
+              "Input_Depth": {
+                "value": "16"
+              },
+              "Performance_Options": {
+                "value": "First_Word_Fall_Through"
+              },
+              "Reset_Pin": {
+                "value": "false"
+              }
+            }
+          },
+          "fifo_generator_2": {
+            "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+            "xci_name": "top_block_fifo_generator_0_3",
+            "xci_path": "ip/top_block_fifo_generator_0_3/top_block_fifo_generator_0_3.xci",
+            "inst_hier_path": "appUnit/fifo_generator_2",
+            "parameters": {
+              "Fifo_Implementation": {
+                "value": "Independent_Clocks_Block_RAM"
+              },
+              "Input_Data_Width": {
+                "value": "320"
+              },
+              "Input_Depth": {
+                "value": "16"
+              },
+              "Performance_Options": {
+                "value": "First_Word_Fall_Through"
+              },
+              "Reset_Pin": {
+                "value": "false"
+              }
+            }
+          },
+          "fifo_generator_3": {
+            "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+            "xci_name": "top_block_fifo_generator_0_4",
+            "xci_path": "ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4.xci",
+            "inst_hier_path": "appUnit/fifo_generator_3",
+            "parameters": {
+              "Fifo_Implementation": {
+                "value": "Independent_Clocks_Block_RAM"
+              },
+              "Input_Data_Width": {
+                "value": "320"
+              },
+              "Input_Depth": {
+                "value": "16"
+              },
+              "Performance_Options": {
+                "value": "First_Word_Fall_Through"
+              },
+              "Reset_Pin": {
+                "value": "false"
+              }
+            }
+          },
+          "xlconcat_0": {
+            "vlnv": "xilinx.com:ip:xlconcat:2.1",
+            "xci_name": "top_block_xlconcat_0_1",
+            "xci_path": "ip/top_block_xlconcat_0_1/top_block_xlconcat_0_1.xci",
+            "inst_hier_path": "appUnit/xlconcat_0",
+            "parameters": {
+              "NUM_PORTS": {
+                "value": "4"
+              }
+            }
+          },
+          "xlconcat_3": {
+            "vlnv": "xilinx.com:ip:xlconcat:2.1",
+            "xci_name": "top_block_xlconcat_0_2",
+            "xci_path": "ip/top_block_xlconcat_0_2/top_block_xlconcat_0_2.xci",
+            "inst_hier_path": "appUnit/xlconcat_3",
+            "parameters": {
+              "NUM_PORTS": {
+                "value": "4"
+              }
+            }
+          },
+          "das_rx_0": {
+            "vlnv": "xilinx.com:module_ref:das_rx:1.0",
+            "xci_name": "top_block_das_rx_0_0",
+            "xci_path": "ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci",
+            "inst_hier_path": "appUnit/das_rx_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "das_rx",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_SO": {
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "320000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_1_0_clk_out1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "user_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_0_0_clk_out1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "SO0": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "default_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_5_0_IBUF_OUT",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "SO1": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "default_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_6_0_IBUF_OUT",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "SO2": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "default_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_6_1_IBUF_OUT",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "SO3": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "default_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_7_0_IBUF_OUT",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "full": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "wr_en0": {
+                "direction": "O"
+              },
+              "wr_en1": {
+                "direction": "O"
+              },
+              "wr_en2": {
+                "direction": "O"
+              },
+              "wr_en3": {
+                "direction": "O"
+              },
+              "bus0": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus1": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus2": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus3": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              }
+            }
+          },
+          "event_builder_v0_0": {
+            "vlnv": "xilinx.com:module_ref:event_builder_v0:1.0",
+            "xci_name": "top_block_event_builder_v0_0_0",
+            "xci_path": "ip/top_block_event_builder_v0_0_0/top_block_event_builder_v0_0_0.xci",
+            "inst_hier_path": "appUnit/event_builder_v0_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "event_builder_v0",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "empty": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "rd_en": {
+                "direction": "O"
+              },
+              "bus0": {
+                "direction": "I",
+                "left": "319",
+                "right": "0"
+              },
+              "bus1": {
+                "direction": "I",
+                "left": "319",
+                "right": "0"
+              },
+              "bus2": {
+                "direction": "I",
+                "left": "319",
+                "right": "0"
+              },
+              "bus3": {
+                "direction": "I",
+                "left": "319",
+                "right": "0"
+              },
+              "event_word": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "event_offset": {
+                "direction": "O",
+                "left": "9",
+                "right": "0"
+              },
+              "event_write": {
+                "direction": "O"
+              },
+              "event_commit_len": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "event_commit": {
+                "direction": "O"
+              },
+              "event_free": {
+                "direction": "I"
+              },
+              "event_reset": {
+                "type": "rst",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "nets": {
+          "clk1_1": {
+            "ports": [
+              "clk125MHz",
+              "fifo_generator_3/rd_clk",
+              "fifo_generator_2/rd_clk",
+              "fifo_generator_1/rd_clk",
+              "fifo_generator_0/rd_clk",
+              "event_builder_v0_0/clk"
+            ]
+          },
+          "clk_1": {
+            "ports": [
+              "clk",
+              "fifo_generator_3/wr_clk",
+              "fifo_generator_2/wr_clk",
+              "fifo_generator_1/wr_clk",
+              "fifo_generator_0/wr_clk",
+              "das_rx_0/clk_SO"
+            ]
+          },
+          "das_rx_0_bus0": {
+            "ports": [
+              "das_rx_0/bus0",
+              "fifo_generator_0/din"
+            ]
+          },
+          "das_rx_0_bus1": {
+            "ports": [
+              "das_rx_0/bus1",
+              "fifo_generator_1/din"
+            ]
+          },
+          "das_rx_0_bus2": {
+            "ports": [
+              "das_rx_0/bus2",
+              "fifo_generator_2/din"
+            ]
+          },
+          "das_rx_0_bus3": {
+            "ports": [
+              "das_rx_0/bus3",
+              "fifo_generator_3/din"
+            ]
+          },
+          "das_rx_0_wr_en0": {
+            "ports": [
+              "das_rx_0/wr_en0",
+              "fifo_generator_1/wr_en"
+            ]
+          },
+          "das_rx_0_wr_en1": {
+            "ports": [
+              "das_rx_0/wr_en1",
+              "fifo_generator_0/wr_en"
+            ]
+          },
+          "das_rx_0_wr_en2": {
+            "ports": [
+              "das_rx_0/wr_en2",
+              "fifo_generator_2/wr_en"
+            ]
+          },
+          "das_rx_0_wr_en3": {
+            "ports": [
+              "das_rx_0/wr_en3",
+              "fifo_generator_3/wr_en"
+            ]
+          },
+          "event_builder_v0_0_event_commit": {
+            "ports": [
+              "event_builder_v0_0/event_commit",
+              "event_commit"
+            ]
+          },
+          "event_builder_v0_0_event_commit_len": {
+            "ports": [
+              "event_builder_v0_0/event_commit_len",
+              "event_commit_len"
+            ]
+          },
+          "event_builder_v0_0_event_offset": {
+            "ports": [
+              "event_builder_v0_0/event_offset",
+              "event_offset"
+            ]
+          },
+          "event_builder_v0_0_event_word": {
+            "ports": [
+              "event_builder_v0_0/event_word",
+              "event_word"
+            ]
+          },
+          "event_builder_v0_0_event_write": {
+            "ports": [
+              "event_builder_v0_0/event_write",
+              "event_write"
+            ]
+          },
+          "event_builder_v0_0_rd_en": {
+            "ports": [
+              "event_builder_v0_0/rd_en",
+              "fifo_generator_1/rd_en",
+              "fifo_generator_0/rd_en",
+              "fifo_generator_2/rd_en",
+              "fifo_generator_3/rd_en"
+            ]
+          },
+          "event_free_1": {
+            "ports": [
+              "event_free",
+              "event_builder_v0_0/event_free"
+            ]
+          },
+          "event_reset_1": {
+            "ports": [
+              "event_reset",
+              "event_builder_v0_0/event_reset"
+            ]
+          },
+          "fifo_generator_0_dout": {
+            "ports": [
+              "fifo_generator_0/dout",
+              "event_builder_v0_0/bus1"
+            ]
+          },
+          "fifo_generator_0_empty": {
+            "ports": [
+              "fifo_generator_0/empty",
+              "xlconcat_3/In1"
+            ]
+          },
+          "fifo_generator_0_full": {
+            "ports": [
+              "fifo_generator_0/full",
+              "xlconcat_0/In0"
+            ]
+          },
+          "fifo_generator_1_dout": {
+            "ports": [
+              "fifo_generator_1/dout",
+              "event_builder_v0_0/bus0"
+            ]
+          },
+          "fifo_generator_1_empty": {
+            "ports": [
+              "fifo_generator_1/empty",
+              "xlconcat_3/In0"
+            ]
+          },
+          "fifo_generator_1_full": {
+            "ports": [
+              "fifo_generator_1/full",
+              "xlconcat_0/In1"
+            ]
+          },
+          "fifo_generator_2_dout": {
+            "ports": [
+              "fifo_generator_2/dout",
+              "event_builder_v0_0/bus2"
+            ]
+          },
+          "fifo_generator_2_empty": {
+            "ports": [
+              "fifo_generator_2/empty",
+              "xlconcat_3/In2"
+            ]
+          },
+          "fifo_generator_2_full": {
+            "ports": [
+              "fifo_generator_2/full",
+              "xlconcat_0/In2"
+            ]
+          },
+          "fifo_generator_3_dout": {
+            "ports": [
+              "fifo_generator_3/dout",
+              "event_builder_v0_0/bus3"
+            ]
+          },
+          "fifo_generator_3_empty": {
+            "ports": [
+              "fifo_generator_3/empty",
+              "xlconcat_3/In3"
+            ]
+          },
+          "fifo_generator_3_full": {
+            "ports": [
+              "fifo_generator_3/full",
+              "xlconcat_0/In3"
+            ]
+          },
+          "probe_in0_1": {
+            "ports": [
+              "SO0",
+              "das_rx_0/SO0"
+            ]
+          },
+          "probe_in1_1": {
+            "ports": [
+              "SO1",
+              "das_rx_0/SO1"
+            ]
+          },
+          "probe_in2_1": {
+            "ports": [
+              "SO2",
+              "das_rx_0/SO2"
+            ]
+          },
+          "probe_in3_1": {
+            "ports": [
+              "SO3",
+              "das_rx_0/SO3"
+            ]
+          },
+          "user_clk_1": {
+            "ports": [
+              "user_clk",
+              "das_rx_0/user_clk"
+            ]
+          },
+          "xlconcat_0_dout": {
+            "ports": [
+              "xlconcat_0/dout",
+              "das_rx_0/full"
+            ]
+          },
+          "xlconcat_3_dout": {
+            "ports": [
+              "xlconcat_3/dout",
+              "event_builder_v0_0/empty"
+            ]
           }
         }
       },
-      "vio_1": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "top_block_vio_0_2",
-        "xci_path": "ip/top_block_vio_0_2/top_block_vio_0_2.xci",
-        "inst_hier_path": "vio_1",
+      "xlconcat_1": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "top_block_xlconcat_1_1",
+        "xci_path": "ip/top_block_xlconcat_1_1/top_block_xlconcat_1_1.xci",
+        "inst_hier_path": "xlconcat_1",
         "parameters": {
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
+          "IN1_WIDTH": {
+            "value": "1"
+          },
+          "IN2_WIDTH": {
+            "value": "1"
+          },
+          "NUM_PORTS": {
+            "value": "4"
           }
         }
       },
-      "vio_2": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "top_block_vio_1_0",
-        "xci_path": "ip/top_block_vio_1_0/top_block_vio_1_0.xci",
-        "inst_hier_path": "vio_2",
-        "parameters": {
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
-          }
-        }
-      },
-      "vio_3": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "top_block_vio_2_0",
-        "xci_path": "ip/top_block_vio_2_0/top_block_vio_2_0.xci",
-        "inst_hier_path": "vio_3",
-        "parameters": {
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
-          }
-        }
-      },
-      "util_vector_logic_2": {
+      "util_vector_logic_4": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "top_block_util_vector_logic_2_2",
-        "xci_path": "ip/top_block_util_vector_logic_2_2/top_block_util_vector_logic_2_2.xci",
-        "inst_hier_path": "util_vector_logic_2",
+        "xci_name": "top_block_util_vector_logic_3_2",
+        "xci_path": "ip/top_block_util_vector_logic_3_2/top_block_util_vector_logic_3_2.xci",
+        "inst_hier_path": "util_vector_logic_4",
         "parameters": {
           "C_OPERATION": {
             "value": "not"
           },
           "C_SIZE": {
-            "value": "4"
+            "value": "1"
           }
         }
       }
@@ -5620,7 +6214,6 @@
           "SAMPA_PON_v1_0_0/sampa_power_on",
           "SAMPA_EN_A",
           "SAMPA_EN_D",
-          "util_vector_logic_0/Op1",
           "led_module/power_on"
         ]
       },
@@ -5687,16 +6280,18 @@
           "axi_mem_intercon/S02_ACLK",
           "SAMPA_I2C_wrapper/m00_axi_aclk",
           "axi_mem_intercon/S03_ACLK",
-          "SAMPA_PON_v1_0_0/m00_axi_aclk"
+          "SAMPA_PON_v1_0_0/m00_axi_aclk",
+          "appUnit/clk125MHz"
         ]
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "rst_clk_wiz_0_40M/slowest_sync_clk",
-          "clk_wiz_1/clk_in1",
           "clk_wiz_2/clk_in1",
-          "SAMPA_I2C_wrapper/s_axi_aclk"
+          "SAMPA_I2C_wrapper/s_axi_aclk",
+          "clk_wiz_1/clk_in1",
+          "rst_clk_wiz_0_40M/slowest_sync_clk",
+          "appUnit/user_clk"
         ]
       },
       "clk_wiz_0_clk_out3": {
@@ -5718,55 +6313,21 @@
           "xlconcat_0/In1",
           "xlconcat_0/In2",
           "xlconcat_0/In3",
-          "vio_1/clk",
-          "vio_2/clk",
-          "vio_3/clk",
-          "vio_0/clk"
+          "appUnit/clk"
         ]
       },
       "clk_wiz_2_clk_out1": {
         "ports": [
           "clk_wiz_2/clk_out1",
-          "xlconcat_1/In3",
-          "xlconcat_1/In2",
-          "xlconcat_1/In1",
-          "xlconcat_1/In0",
           "util_ds_buf_3/OBUF_IN",
           "util_ds_buf_4/OBUF_IN",
           "util_vector_logic_1/Op1",
           "xlconcat_2/In1",
           "xlconcat_2/In2",
-          "xlconcat_2/In3"
-        ]
-      },
-      "data_gen_user_0_event_commit": {
-        "ports": [
-          "data_gen_user_0/event_commit",
-          "fakernet/user_data_commit"
-        ]
-      },
-      "data_gen_user_0_event_commit_len": {
-        "ports": [
-          "data_gen_user_0/event_commit_len",
-          "fakernet/user_data_commit_len"
-        ]
-      },
-      "data_gen_user_0_event_offset": {
-        "ports": [
-          "data_gen_user_0/event_offset",
-          "fakernet/user_data_offset"
-        ]
-      },
-      "data_gen_user_0_event_word": {
-        "ports": [
-          "data_gen_user_0/event_word",
-          "fakernet/user_data_word"
-        ]
-      },
-      "data_gen_user_0_event_write": {
-        "ports": [
-          "data_gen_user_0/event_write",
-          "fakernet/user_data_write"
+          "xlconcat_2/In3",
+          "util_vector_logic_4/Op1",
+          "xlconcat_1/In1",
+          "xlconcat_1/In2"
         ]
       },
       "fakernet_i2c_waddr_o": {
@@ -5808,14 +6369,13 @@
       "fakernet_user_data_free": {
         "ports": [
           "fakernet/user_data_free",
-          "data_gen_user_0/event_free"
+          "appUnit/event_free"
         ]
       },
       "fakernet_user_data_reset": {
         "ports": [
           "fakernet/user_data_reset",
-          "data_gen_user_0/event_reset",
-          "rst_clk_wiz_0_40M/ext_reset_in"
+          "appUnit/event_reset"
         ]
       },
       "gtrefclk_n_0_1": {
@@ -5888,6 +6448,36 @@
           "fakernet/rxp_0"
         ]
       },
+      "user_data_commit_1": {
+        "ports": [
+          "appUnit/event_commit",
+          "fakernet/user_data_commit"
+        ]
+      },
+      "user_data_commit_len_1": {
+        "ports": [
+          "appUnit/event_commit_len",
+          "fakernet/user_data_commit_len"
+        ]
+      },
+      "user_data_offset_1": {
+        "ports": [
+          "appUnit/event_offset",
+          "fakernet/user_data_offset"
+        ]
+      },
+      "user_data_word_1": {
+        "ports": [
+          "appUnit/event_word",
+          "fakernet/user_data_word"
+        ]
+      },
+      "user_data_write_1": {
+        "ports": [
+          "appUnit/event_write",
+          "fakernet/user_data_write"
+        ]
+      },
       "util_ds_buf_0_OBUF_DS_N": {
         "ports": [
           "util_ds_buf_0/OBUF_DS_N",
@@ -5951,43 +6541,33 @@
       "util_ds_buf_5_IBUF_OUT": {
         "ports": [
           "util_ds_buf_5/IBUF_OUT",
-          "vio_0/probe_in0"
+          "appUnit/SO0"
         ]
       },
       "util_ds_buf_6_IBUF_OUT": {
         "ports": [
           "util_ds_buf_6/IBUF_OUT",
-          "vio_1/probe_in0"
+          "appUnit/SO1"
         ]
       },
       "util_ds_buf_7_IBUF_OUT": {
         "ports": [
           "util_ds_buf_7/IBUF_OUT",
-          "vio_2/probe_in0"
+          "appUnit/SO2"
         ]
       },
       "util_ds_buf_8_IBUF_OUT": {
         "ports": [
           "util_ds_buf_8/IBUF_OUT",
-          "vio_3/probe_in0"
-        ]
-      },
-      "util_vector_logic_0_Res": {
-        "ports": [
-          "util_vector_logic_0/Res",
-          "clk_wiz_1/power_down"
+          "appUnit/SO3"
         ]
       },
       "util_vector_logic_1_Res": {
         "ports": [
           "util_vector_logic_1/Res",
-          "xlconcat_2/In0"
-        ]
-      },
-      "util_vector_logic_2_Res": {
-        "ports": [
-          "util_vector_logic_2/Res",
-          "util_ds_buf_1/OBUF_IN"
+          "xlconcat_2/In0",
+          "xlconcat_1/In0",
+          "xlconcat_1/In3"
         ]
       },
       "vio_0_probe_out0": {
@@ -6006,7 +6586,7 @@
       "xlconcat_1_dout": {
         "ports": [
           "xlconcat_1/dout",
-          "util_vector_logic_2/Op1"
+          "util_ds_buf_1/OBUF_IN"
         ]
       },
       "xlconcat_2_dout": {
@@ -6026,6 +6606,11 @@
           "xlconstant_1/dout",
           "clk_wiz_2/power_down"
         ]
+      }
+    },
+    "comments": {
+      "/": {
+        "comment_0": "clk_out1: 40MHz\n\n"
       }
     },
     "addressing": {

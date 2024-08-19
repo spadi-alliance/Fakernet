@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -122,13 +123,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.enableLutRouteBelPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 8
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xcau15p-sbvb484-1-i
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
+  set_param power.BramSDPPropagationFix 1
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.dcp
   set_property webtalk.parent_dir /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/wt [current_project]
   set_property parent.project_path /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr [current_project]
   set_property ip_repo_paths {
@@ -141,28 +144,6 @@ OPTRACE "set parameters" START { }
   set_property ip_output_repo /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  read_ip -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_gt/gig_ethernet_pcs_pma_0_gt.xci
-  add_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd
-  read_ip -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci
-  set_param project.isImplRun false
-OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/GTH.xdc
-  read_xdc /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/main_io.xdc
-  read_xdc /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  set_param project.isImplRun true
-  link_design -top top_block_wrapper -part xcau15p-sbvb484-1-i 
-OPTRACE "link_design" END { }
-  set_param project.isImplRun false
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
