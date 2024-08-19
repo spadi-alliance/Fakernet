@@ -188,6 +188,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/reg_switch.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../lib/fakernet/vhdl/fnet_records.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -434,13 +441,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/reg_switch.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/u_led_inst.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../downloads/project_20240605/samidare_v0_20240515/samidare_v0_20240515.srcs/sources_1/imports/new/u_led_inst.v"/>
@@ -511,14 +511,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/event_builder_v0.v">
+      <File Path="$PSRCDIR/sources_1/new/das_rx.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/das_rx.v">
+      <File Path="$PSRCDIR/sources_1/new/event_builder_v0.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -531,11 +531,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_event_builder_v0_0_0/top_block_event_builder_v0_0_0.xci">
-          <Proxy FileSetName="top_block_event_builder_v0_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci">
-          <Proxy FileSetName="top_block_das_rx_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.xci">
+          <Proxy FileSetName="top_block_mii_initializer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.xci">
           <Proxy FileSetName="top_block_fakernet_top_0_0"/>
@@ -549,12 +546,6 @@
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_rst_clk_wiz_0_125M_0/top_block_rst_clk_wiz_0_125M_0.xci">
           <Proxy FileSetName="top_block_rst_clk_wiz_0_125M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.xci">
-          <Proxy FileSetName="top_block_mii_initializer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4.xci">
-          <Proxy FileSetName="top_block_fifo_generator_0_4"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1.xci">
           <Proxy FileSetName="top_block_fifo_generator_0_1"/>
         </CompFileExtendedInfo>
@@ -563,6 +554,15 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fifo_generator_0_3/top_block_fifo_generator_0_3.xci">
           <Proxy FileSetName="top_block_fifo_generator_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4.xci">
+          <Proxy FileSetName="top_block_fifo_generator_0_4"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci">
+          <Proxy FileSetName="top_block_das_rx_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_event_builder_v0_0_0/top_block_event_builder_v0_0_0.xci">
+          <Proxy FileSetName="top_block_event_builder_v0_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/top_block/hdl/top_block_wrapper.v">
@@ -617,22 +617,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/signal_delay.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/I2C_controller.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/SAMPA_POWER_ON.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -956,9 +940,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_4_synth_1" Type="Ft3:Synth" SrcSet="top_block_fifo_generator_0_4" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fifo_generator_0_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_4_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -968,9 +950,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_1_synth_1" Type="Ft3:Synth" SrcSet="top_block_fifo_generator_0_1" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fifo_generator_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -980,9 +960,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_2_synth_1" Type="Ft3:Synth" SrcSet="top_block_fifo_generator_0_2" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fifo_generator_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_2_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -992,9 +970,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_3_synth_1" Type="Ft3:Synth" SrcSet="top_block_fifo_generator_0_3" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fifo_generator_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_3_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1004,9 +980,7 @@
     </Run>
     <Run Id="top_block_fakernet_top_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_fakernet_top_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fakernet_top_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_fakernet_top_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1016,9 +990,7 @@
     </Run>
     <Run Id="top_block_das_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_das_rx_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_das_rx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_das_rx_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_das_rx_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_das_rx_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1028,9 +1000,7 @@
     </Run>
     <Run Id="top_block_event_builder_v0_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_event_builder_v0_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_event_builder_v0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_event_builder_v0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_event_builder_v0_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_event_builder_v0_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1177,9 +1147,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_4_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fifo_generator_0_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_4_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1196,9 +1164,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_1_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fifo_generator_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_1_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1215,9 +1181,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_2_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fifo_generator_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_2_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1234,9 +1198,7 @@
     </Run>
     <Run Id="top_block_fifo_generator_0_3_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fifo_generator_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fifo_generator_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fifo_generator_0_3_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1253,9 +1215,7 @@
     </Run>
     <Run Id="top_block_fakernet_top_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_fakernet_top_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_fakernet_top_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_fakernet_top_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1272,9 +1232,7 @@
     </Run>
     <Run Id="top_block_das_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_das_rx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_das_rx_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_das_rx_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_das_rx_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1291,9 +1249,7 @@
     </Run>
     <Run Id="top_block_event_builder_v0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_event_builder_v0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_event_builder_v0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_event_builder_v0_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_event_builder_v0_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
