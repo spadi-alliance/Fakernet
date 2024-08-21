@@ -58,17 +58,21 @@ module top_block_event_builder_v0_0_0 (
   clk,
   empty,
   rd_en,
-  bus0,
-  bus1,
-  bus2,
-  bus3,
+  bus_sel_i,
+  sample_cnt_i,
+  data_i,
+  last_data,
+  data_wr,
+  data_ack,
+  last_ack,
   event_word,
   event_offset,
   event_write,
   event_commit_len,
   event_commit,
   event_free,
-  event_reset
+  event_reset,
+  busy
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *)
@@ -76,10 +80,13 @@ module top_block_event_builder_v0_0_0 (
 input wire clk;
 input wire [3 : 0] empty;
 output wire rd_en;
-input wire [319 : 0] bus0;
-input wire [319 : 0] bus1;
-input wire [319 : 0] bus2;
-input wire [319 : 0] bus3;
+input wire [1 : 0] bus_sel_i;
+input wire [3 : 0] sample_cnt_i;
+input wire [319 : 0] data_i;
+input wire last_data;
+input wire data_wr;
+output wire data_ack;
+output wire last_ack;
 output wire [31 : 0] event_word;
 output wire [9 : 0] event_offset;
 output wire event_write;
@@ -89,21 +96,26 @@ input wire event_free;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME event_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 event_reset RST" *)
 input wire event_reset;
+output wire busy;
 
   event_builder_v0 inst (
     .clk(clk),
     .empty(empty),
     .rd_en(rd_en),
-    .bus0(bus0),
-    .bus1(bus1),
-    .bus2(bus2),
-    .bus3(bus3),
+    .bus_sel_i(bus_sel_i),
+    .sample_cnt_i(sample_cnt_i),
+    .data_i(data_i),
+    .last_data(last_data),
+    .data_wr(data_wr),
+    .data_ack(data_ack),
+    .last_ack(last_ack),
     .event_word(event_word),
     .event_offset(event_offset),
     .event_write(event_write),
     .event_commit_len(event_commit_len),
     .event_commit(event_commit),
     .event_free(event_free),
-    .event_reset(event_reset)
+    .event_reset(event_reset),
+    .busy(busy)
   );
 endmodule

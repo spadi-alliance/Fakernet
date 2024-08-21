@@ -70,11 +70,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==gig_etherne
 # IP: bd/top_block/ip/top_block_native_to_axi_lite_v_0_0/top_block_native_to_axi_lite_v_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_native_to_axi_lite_v_0_0 || ORIG_REF_NAME==top_block_native_to_axi_lite_v_0_0} -quiet] -quiet
 
-# IP: bd/top_block/ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_fakernet_top_0_0 || ORIG_REF_NAME==top_block_fakernet_top_0_0} -quiet] -quiet
-
 # IP: bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_reg_switch_0_0 || ORIG_REF_NAME==top_block_reg_switch_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_fakernet_top_0_0 || ORIG_REF_NAME==top_block_fakernet_top_0_0} -quiet] -quiet
 
 # IP: bd/top_block/ip/top_block_util_vector_logic_0_2/top_block_util_vector_logic_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_0_2 || ORIG_REF_NAME==top_block_util_vector_logic_0_2} -quiet] -quiet
@@ -117,9 +117,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_a
 
 # IP: bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_I2C_Controller_v1_0_0_1 || ORIG_REF_NAME==top_block_I2C_Controller_v1_0_0_1} -quiet] -quiet
-
-# IP: bd/top_block/ip/top_block_rst_clk_wiz_0_40M_3/top_block_rst_clk_wiz_0_40M_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_rst_clk_wiz_0_40M_3 || ORIG_REF_NAME==top_block_rst_clk_wiz_0_40M_3} -quiet] -quiet
 
 # IP: bd/top_block/ip/top_block_xbar_1/top_block_xbar_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xbar_1 || ORIG_REF_NAME==top_block_xbar_1} -quiet] -quiet
@@ -184,18 +181,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_u
 # IP: bd/top_block/ip/top_block_util_ds_buf_7_0/top_block_util_ds_buf_7_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_ds_buf_7_0 || ORIG_REF_NAME==top_block_util_ds_buf_7_0} -quiet] -quiet
 
-# IP: bd/top_block/ip/top_block_event_builder_v0_0_0/top_block_event_builder_v0_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_event_builder_v0_0_0 || ORIG_REF_NAME==top_block_event_builder_v0_0_0} -quiet] -quiet
-
-# IP: bd/top_block/ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_das_rx_0_0 || ORIG_REF_NAME==top_block_das_rx_0_0} -quiet] -quiet
-
-# IP: bd/top_block/ip/top_block_xlconcat_1_1/top_block_xlconcat_1_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlconcat_1_1 || ORIG_REF_NAME==top_block_xlconcat_1_1} -quiet] -quiet
-
-# IP: bd/top_block/ip/top_block_util_vector_logic_3_2/top_block_util_vector_logic_3_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_3_2 || ORIG_REF_NAME==top_block_util_vector_logic_3_2} -quiet] -quiet
-
 # IP: bd/top_block/ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_fifo_generator_0_1 || ORIG_REF_NAME==top_block_fifo_generator_0_1} -quiet] -quiet
 
@@ -213,6 +198,54 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_x
 
 # IP: bd/top_block/ip/top_block_xlconcat_0_2/top_block_xlconcat_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlconcat_0_2 || ORIG_REF_NAME==top_block_xlconcat_0_2} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_das_rx_0_0 || ORIG_REF_NAME==top_block_das_rx_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_event_builder_v0_0_0/top_block_event_builder_v0_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_event_builder_v0_0_0 || ORIG_REF_NAME==top_block_event_builder_v0_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlconcat_1_1/top_block_xlconcat_1_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlconcat_1_1 || ORIG_REF_NAME==top_block_xlconcat_1_1} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_util_vector_logic_3_2/top_block_util_vector_logic_3_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_3_2 || ORIG_REF_NAME==top_block_util_vector_logic_3_2} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_data_processor_0_0 || ORIG_REF_NAME==top_block_data_processor_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_trigger_manager_0_0 || ORIG_REF_NAME==top_block_trigger_manager_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xpm_cdc_gen_0_1/top_block_xpm_cdc_gen_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xpm_cdc_gen_0_1 || ORIG_REF_NAME==top_block_xpm_cdc_gen_0_1} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_util_vector_logic_0_3/top_block_util_vector_logic_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_0_3 || ORIG_REF_NAME==top_block_util_vector_logic_0_3} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_util_vector_logic_0_7/top_block_util_vector_logic_0_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_0_7 || ORIG_REF_NAME==top_block_util_vector_logic_0_7} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_util_vector_logic_0_8/top_block_util_vector_logic_0_8.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_0_8 || ORIG_REF_NAME==top_block_util_vector_logic_0_8} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_util_vector_logic_0_9/top_block_util_vector_logic_0_9.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_vector_logic_0_9 || ORIG_REF_NAME==top_block_util_vector_logic_0_9} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlslice_0_0/top_block_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlslice_0_0 || ORIG_REF_NAME==top_block_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlslice_0_1/top_block_xlslice_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlslice_0_1 || ORIG_REF_NAME==top_block_xlslice_0_1} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlslice_0_2/top_block_xlslice_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlslice_0_2 || ORIG_REF_NAME==top_block_xlslice_0_2} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlslice_0_3/top_block_xlslice_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlslice_0_3 || ORIG_REF_NAME==top_block_xlslice_0_3} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_xlconcat_1_2/top_block_xlconcat_1_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_xlconcat_1_2 || ORIG_REF_NAME==top_block_xlconcat_1_2} -quiet] -quiet
 
 # XDC: ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt_ooc.xdc
 

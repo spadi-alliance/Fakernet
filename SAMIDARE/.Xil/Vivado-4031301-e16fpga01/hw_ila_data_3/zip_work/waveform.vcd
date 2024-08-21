@@ -1,0 +1,43 @@
+$date
+        2024-Aug-21 17:53:01
+$end
+$version
+        Vivado v2022.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " top_block_i/appUnit/trigger_manager_0/inst/clear $end
+$var reg 1 # u_ila_2_en $end
+$var reg 1 $ u_ila_2_trg $end
+$var reg 1 % u_ila_2_trg_internal $end
+$var reg 1 & _TRIGGER $end
+$var reg 1 ' _WINDOW $end
+$var reg 1 ( _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+1#
+0$
+0%
+0&
+1'
+0(
+$end
+#510
+1"
+#511
+0"
+1%
+#512
+0#
+1$
+0%
+1&
+#513
+0$
+#580
+1#
