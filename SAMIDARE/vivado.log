@@ -5262,3 +5262,6 @@ add_wave -into {hw_ila_data_2.wcfg} -radix hex { {top_block_i/appUnit/event_buil
 add_wave -into {hw_ila_data_2.wcfg} -radix hex { {top_block_i/appUnit/event_builder_v0_0/event_commit} }
 add_wave -into {hw_ila_data_2.wcfg} -radix hex { {top_block_i/appUnit/data_processor_0/inst/bus_sel} {top_block_i/appUnit/data_processor_0/inst/bus_sel_internal} }
 add_wave -into {hw_ila_data_2.wcfg} -radix hex { {top_block_i/appUnit/data_processor_0/inst/counter} {top_block_i/appUnit/data_processor_0/inst/req} {top_block_i/appUnit/data_processor_0/inst/data_out} }
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 20:11:01 2024...

@@ -24,7 +24,8 @@ module reg_switch #(
 	parameter  C_ADDR_I2C_WRITE	       = 25'h00004000, //should be fixed
 	parameter  C_ADDR_I2C_READ	       = 25'h00004001,//should be fixed
 	parameter  C_ADDR_SAMPA_READ       = 25'h00004002,//should be fixed
-   	parameter  C_ADDR_I2C_WRITE_ALL	   = 25'h00004003//should be fixed
+   	parameter  C_ADDR_I2C_WRITE_ALL	   = 25'h00004003,//should be fixed
+   	parameter  C_ADDR_TRGEN     	   = 25'h00005000//should be fixed
 
     )
     (
@@ -51,7 +52,9 @@ module reg_switch #(
     
     input [31:0] i2c_rdata_i,
     
-    input i2c_done
+    input i2c_done,
+    
+    output trg_en
     );
     
     parameter STATE_IDLE            = 4'b0001;
@@ -75,6 +78,8 @@ module reg_switch #(
     reg [3:0] state_sw;
     
     reg [31:0] sampa_rdata;
+    reg         trg_en_r;
+    assign trg_en = trg_en_r;
     //
     //assign regacc_addr      = regacc_addr_i;
     assign regacc_addr_o    = regacc_addr;
@@ -111,6 +116,7 @@ module reg_switch #(
 	           i2c_addr <='b0;                                      
 	           start_i2c_write <= 1'b0;                                      
 	           start_i2c_read <= 1'b0;                                      
+	           trg_en_r <= 1'b0;                                      
 	      end                                                                               
 	    else                                                                       
 	      begin  
@@ -142,6 +148,10 @@ module reg_switch #(
                                    regacc_write     <= regacc_write_i;
                                    regacc_read      <= regacc_read_i;
                                    state_sw <= STATE_REG;
+                                   if(regacc_write_w==1'b1&&regacc_addr_i[24:0] == C_ADDR_TRGEN)
+                                        begin
+                                            trg_en_r <= regacc_data_wr_i[0];
+                                        end
                                end
                            else begin
                                 regacc_done <= 1'b0;

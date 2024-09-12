@@ -23,7 +23,7 @@
 module trigger_manager (
     input wire clk,            // System clock
     input wire reg_trg,        // Register trigger value
-    input wire trg_i,          // External trigger input
+    input wire external_trg,          // External trigger input
     input wire busy_i,         // Busy signal from downstream module
     output reg [3:0] samples,  // Samples value to downstream module
     output reg trg,            // Trigger signal to data processor
@@ -55,7 +55,7 @@ module trigger_manager (
             trg_internal <= 1'b0;
         end
         // Generate trigger signal
-        if (trg_internal || trg_i) begin
+        if (trg_internal || external_trg) begin
             trg <= 1'b1;  // Trigger signal active
             trg_active <= 1'b1;
         end else begin
@@ -71,6 +71,6 @@ module trigger_manager (
     always @(posedge clk) begin
         // Update samples based on the register trigger value
 //        samples <= reg_trg[8:4];
-        samples <= 4'd4;
+        samples <= 4'd15;
     end
 endmodule

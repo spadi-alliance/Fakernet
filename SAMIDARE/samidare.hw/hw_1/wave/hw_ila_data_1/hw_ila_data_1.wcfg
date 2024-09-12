@@ -9,122 +9,764 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,024"></ZoomEndTime>
-      <Cursor1Time time="335"></Cursor1Time>
+      <ZoomStartTime time="797"></ZoomStartTime>
+      <ZoomEndTime time="2,140"></ZoomEndTime>
+      <Cursor1Time time="1,220"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="238"></NameColumnWidth>
-      <ValueColumnWidth column_width="80"></ValueColumnWidth>
+      <NameColumnWidth column_width="309"></NameColumnWidth>
+      <ValueColumnWidth column_width="147"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="20" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/bus1">
+   <wvobject type="array" fp_name="top_block_i/appUnit/data_processor_0/inst/bus_sel">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/bus1[319:0]</obj_property>
-      <obj_property name="ObjectShortName">bus1[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/bus_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_sel[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO0[10]">
-      <obj_property name="ElementShortName">[10]</obj_property>
-      <obj_property name="ObjectShortName">[10]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/bus2">
+   <wvobject type="array" fp_name="top_block_i/appUnit/data_processor_0/inst/bus_sel_internal">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/bus2[319:0]</obj_property>
-      <obj_property name="ObjectShortName">bus2[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/bus_sel_internal[1:1]</obj_property>
+      <obj_property name="ObjectShortName">bus_sel_internal[1:1]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[10]">
-      <obj_property name="ElementShortName">[10]</obj_property>
-      <obj_property name="ObjectShortName">[10]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/bus3">
+   <wvobject type="array" fp_name="top_block_i/appUnit/data_processor_0/inst/counter">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/bus3[319:0]</obj_property>
-      <obj_property name="ObjectShortName">bus3[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/counter[7:7]</obj_property>
+      <obj_property name="ObjectShortName">counter[7:7]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[10]">
-      <obj_property name="ElementShortName">[10]</obj_property>
-      <obj_property name="ObjectShortName">[10]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/bus0">
+   <wvobject type="array" fp_name="top_block_i/appUnit/data_processor_0/inst/data_out">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/bus0[319:0]</obj_property>
-      <obj_property name="ObjectShortName">bus0[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/data_out[319:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[319:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[10]">
-      <obj_property name="ElementShortName">[10]</obj_property>
-      <obj_property name="ObjectShortName">[10]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO0">
+   <wvobject type="logic" fp_name="top_block_i/appUnit/data_processor_0/inst/last_data">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO0[10:0]</obj_property>
-      <obj_property name="ObjectShortName">SO0[10:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/last_data</obj_property>
+      <obj_property name="ObjectShortName">last_data</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/bus_sel_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/bus_sel_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_sel_i[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1">
+   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO1[10:0]</obj_property>
-      <obj_property name="ObjectShortName">SO1[10:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[319:0]</obj_property>
+      <obj_property name="ObjectShortName">busx_reg[319:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2">
+   <wvobject type="vbus" fp_name="vbus568">
+      <obj_property name="label">bus80-89</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[89]">
+         <obj_property name="ElementShortName">[89]</obj_property>
+         <obj_property name="ObjectShortName">[89]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[88]">
+         <obj_property name="ElementShortName">[88]</obj_property>
+         <obj_property name="ObjectShortName">[88]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[87]">
+         <obj_property name="ElementShortName">[87]</obj_property>
+         <obj_property name="ObjectShortName">[87]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[86]">
+         <obj_property name="ElementShortName">[86]</obj_property>
+         <obj_property name="ObjectShortName">[86]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[85]">
+         <obj_property name="ElementShortName">[85]</obj_property>
+         <obj_property name="ObjectShortName">[85]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[84]">
+         <obj_property name="ElementShortName">[84]</obj_property>
+         <obj_property name="ObjectShortName">[84]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[83]">
+         <obj_property name="ElementShortName">[83]</obj_property>
+         <obj_property name="ObjectShortName">[83]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[82]">
+         <obj_property name="ElementShortName">[82]</obj_property>
+         <obj_property name="ObjectShortName">[82]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[81]">
+         <obj_property name="ElementShortName">[81]</obj_property>
+         <obj_property name="ObjectShortName">[81]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[80]">
+         <obj_property name="ElementShortName">[80]</obj_property>
+         <obj_property name="ObjectShortName">[80]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="VirtualBus">
+      <obj_property name="label">bus70-79</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[79]">
+         <obj_property name="ElementShortName">[79]</obj_property>
+         <obj_property name="ObjectShortName">[79]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[78]">
+         <obj_property name="ElementShortName">[78]</obj_property>
+         <obj_property name="ObjectShortName">[78]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[77]">
+         <obj_property name="ElementShortName">[77]</obj_property>
+         <obj_property name="ObjectShortName">[77]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[76]">
+         <obj_property name="ElementShortName">[76]</obj_property>
+         <obj_property name="ObjectShortName">[76]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[75]">
+         <obj_property name="ElementShortName">[75]</obj_property>
+         <obj_property name="ObjectShortName">[75]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[74]">
+         <obj_property name="ElementShortName">[74]</obj_property>
+         <obj_property name="ObjectShortName">[74]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[73]">
+         <obj_property name="ElementShortName">[73]</obj_property>
+         <obj_property name="ObjectShortName">[73]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[72]">
+         <obj_property name="ElementShortName">[72]</obj_property>
+         <obj_property name="ObjectShortName">[72]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[71]">
+         <obj_property name="ElementShortName">[71]</obj_property>
+         <obj_property name="ObjectShortName">[71]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[70]">
+         <obj_property name="ElementShortName">[70]</obj_property>
+         <obj_property name="ObjectShortName">[70]</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus1115">
+         <obj_property name="label">bus20-29</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus1136">
+         <obj_property name="label">f</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus579">
+            <obj_property name="label">bus90-99</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[99]">
+               <obj_property name="ElementShortName">[99]</obj_property>
+               <obj_property name="ObjectShortName">[99]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[98]">
+               <obj_property name="ElementShortName">[98]</obj_property>
+               <obj_property name="ObjectShortName">[98]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[97]">
+               <obj_property name="ElementShortName">[97]</obj_property>
+               <obj_property name="ObjectShortName">[97]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[96]">
+               <obj_property name="ElementShortName">[96]</obj_property>
+               <obj_property name="ObjectShortName">[96]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[95]">
+               <obj_property name="ElementShortName">[95]</obj_property>
+               <obj_property name="ObjectShortName">[95]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[94]">
+               <obj_property name="ElementShortName">[94]</obj_property>
+               <obj_property name="ObjectShortName">[94]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[93]">
+               <obj_property name="ElementShortName">[93]</obj_property>
+               <obj_property name="ObjectShortName">[93]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[92]">
+               <obj_property name="ElementShortName">[92]</obj_property>
+               <obj_property name="ObjectShortName">[92]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[91]">
+               <obj_property name="ElementShortName">[91]</obj_property>
+               <obj_property name="ObjectShortName">[91]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[90]">
+               <obj_property name="ElementShortName">[90]</obj_property>
+               <obj_property name="ObjectShortName">[90]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="VirtualBus">
+      <obj_property name="label">bus60-69</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[69]">
+         <obj_property name="ElementShortName">[69]</obj_property>
+         <obj_property name="ObjectShortName">[69]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[68]">
+         <obj_property name="ElementShortName">[68]</obj_property>
+         <obj_property name="ObjectShortName">[68]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[67]">
+         <obj_property name="ElementShortName">[67]</obj_property>
+         <obj_property name="ObjectShortName">[67]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[66]">
+         <obj_property name="ElementShortName">[66]</obj_property>
+         <obj_property name="ObjectShortName">[66]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[65]">
+         <obj_property name="ElementShortName">[65]</obj_property>
+         <obj_property name="ObjectShortName">[65]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[64]">
+         <obj_property name="ElementShortName">[64]</obj_property>
+         <obj_property name="ObjectShortName">[64]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[63]">
+         <obj_property name="ElementShortName">[63]</obj_property>
+         <obj_property name="ObjectShortName">[63]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[62]">
+         <obj_property name="ElementShortName">[62]</obj_property>
+         <obj_property name="ObjectShortName">[62]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[61]">
+         <obj_property name="ElementShortName">[61]</obj_property>
+         <obj_property name="ObjectShortName">[61]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[60]">
+         <obj_property name="ElementShortName">[60]</obj_property>
+         <obj_property name="ObjectShortName">[60]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus535">
+      <obj_property name="label">bus50-59</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[59]">
+         <obj_property name="ElementShortName">[59]</obj_property>
+         <obj_property name="ObjectShortName">[59]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[58]">
+         <obj_property name="ElementShortName">[58]</obj_property>
+         <obj_property name="ObjectShortName">[58]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[57]">
+         <obj_property name="ElementShortName">[57]</obj_property>
+         <obj_property name="ObjectShortName">[57]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[56]">
+         <obj_property name="ElementShortName">[56]</obj_property>
+         <obj_property name="ObjectShortName">[56]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[55]">
+         <obj_property name="ElementShortName">[55]</obj_property>
+         <obj_property name="ObjectShortName">[55]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[54]">
+         <obj_property name="ElementShortName">[54]</obj_property>
+         <obj_property name="ObjectShortName">[54]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[53]">
+         <obj_property name="ElementShortName">[53]</obj_property>
+         <obj_property name="ObjectShortName">[53]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[52]">
+         <obj_property name="ElementShortName">[52]</obj_property>
+         <obj_property name="ObjectShortName">[52]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[51]">
+         <obj_property name="ElementShortName">[51]</obj_property>
+         <obj_property name="ObjectShortName">[51]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[50]">
+         <obj_property name="ElementShortName">[50]</obj_property>
+         <obj_property name="ObjectShortName">[50]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus524">
+      <obj_property name="label">bus40-49</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[49]">
+         <obj_property name="ElementShortName">[49]</obj_property>
+         <obj_property name="ObjectShortName">[49]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[48]">
+         <obj_property name="ElementShortName">[48]</obj_property>
+         <obj_property name="ObjectShortName">[48]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[47]">
+         <obj_property name="ElementShortName">[47]</obj_property>
+         <obj_property name="ObjectShortName">[47]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[46]">
+         <obj_property name="ElementShortName">[46]</obj_property>
+         <obj_property name="ObjectShortName">[46]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[45]">
+         <obj_property name="ElementShortName">[45]</obj_property>
+         <obj_property name="ObjectShortName">[45]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[44]">
+         <obj_property name="ElementShortName">[44]</obj_property>
+         <obj_property name="ObjectShortName">[44]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[43]">
+         <obj_property name="ElementShortName">[43]</obj_property>
+         <obj_property name="ObjectShortName">[43]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[42]">
+         <obj_property name="ElementShortName">[42]</obj_property>
+         <obj_property name="ObjectShortName">[42]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[41]">
+         <obj_property name="ElementShortName">[41]</obj_property>
+         <obj_property name="ObjectShortName">[41]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[40]">
+         <obj_property name="ElementShortName">[40]</obj_property>
+         <obj_property name="ObjectShortName">[40]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="VirtualBus">
+      <obj_property name="label">bus30-39</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[39]">
+         <obj_property name="ElementShortName">[39]</obj_property>
+         <obj_property name="ObjectShortName">[39]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[38]">
+         <obj_property name="ElementShortName">[38]</obj_property>
+         <obj_property name="ObjectShortName">[38]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[37]">
+         <obj_property name="ElementShortName">[37]</obj_property>
+         <obj_property name="ObjectShortName">[37]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[36]">
+         <obj_property name="ElementShortName">[36]</obj_property>
+         <obj_property name="ObjectShortName">[36]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[35]">
+         <obj_property name="ElementShortName">[35]</obj_property>
+         <obj_property name="ObjectShortName">[35]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[34]">
+         <obj_property name="ElementShortName">[34]</obj_property>
+         <obj_property name="ObjectShortName">[34]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[33]">
+         <obj_property name="ElementShortName">[33]</obj_property>
+         <obj_property name="ObjectShortName">[33]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[32]">
+         <obj_property name="ElementShortName">[32]</obj_property>
+         <obj_property name="ObjectShortName">[32]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[31]">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">[31]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[30]">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">[30]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/sample_cnt">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/sample_cnt[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sample_cnt[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus1104">
+         <obj_property name="label">bus20-29</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="VirtualBus">
+      <obj_property name="label">bus10-19</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[19]">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">[19]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[18]">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">[18]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[17]">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">[17]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[16]">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">[16]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[15]">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">[15]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[14]">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">[14]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[13]">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">[13]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[12]">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">[12]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[11]">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">[11]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[10]">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">[10]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="VirtualBus">
+      <obj_property name="label">bus0-9</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus502">
+         <obj_property name="label">bus20-29</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus1083">
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[29]">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[28]">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/busx_reg[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/data_i">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO2[10:0]</obj_property>
-      <obj_property name="ObjectShortName">SO2[10:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/data_i[319:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[319:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3">
+   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/rest_count">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO3[10:0]</obj_property>
-      <obj_property name="ObjectShortName">SO3[10:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/rest_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rest_count[9:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/fifo_generator_0_full">
+   <wvobject type="logic" fp_name="top_block_i/SAMPA_PON_v1_0_0/inst/sampa_power_on">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_0_full</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_0_full</obj_property>
+      <obj_property name="ElementShortName">top_block_i/SAMPA_PON_v1_0_0/inst/sampa_power_on</obj_property>
+      <obj_property name="ObjectShortName">sampa_power_on</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/fifo_generator_1_full">
+   <wvobject type="array" fp_name="u_ila_0_state">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_1_full</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_1_full</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_state[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/fifo_generator_2_full">
+   <wvobject type="logic" fp_name="u_ila_0_valid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_2_full</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_2_full</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/fifo_generator_3_full">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_3_full</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_3_full</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_valid</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_valid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

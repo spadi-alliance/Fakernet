@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Aug  9 10:30:37 2024
+-- Date        : Thu Sep 12 19:03:27 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top top_block_reg_switch_0_0 -prefix
---               top_block_reg_switch_0_0_ top_block_reg_switch_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0_sim_netlist.vhdl
 -- Design      : top_block_reg_switch_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,7 @@ entity top_block_reg_switch_0_0_reg_switch is
     start_i2c_read_o : out STD_LOGIC;
     i2c_waddr_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     regacc_done_o : out STD_LOGIC;
+    trg_en : out STD_LOGIC;
     axi_aclk : in STD_LOGIC;
     regacc_addr_i : in STD_LOGIC_VECTOR ( 24 downto 0 );
     regacc_data_wr_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -36,6 +37,8 @@ entity top_block_reg_switch_0_0_reg_switch is
     axi_aresetn : in STD_LOGIC;
     regacc_data_rd_i : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_block_reg_switch_0_0_reg_switch : entity is "reg_switch";
 end top_block_reg_switch_0_0_reg_switch;
 
 architecture STRUCTURE of top_block_reg_switch_0_0_reg_switch is
@@ -44,7 +47,6 @@ architecture STRUCTURE of top_block_reg_switch_0_0_reg_switch is
   signal \FSM_sequential_state_sw[2]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_sw[2]_i_4_n_0\ : STD_LOGIC;
   signal i2c_addr : STD_LOGIC;
-  signal \regacc_addr[24]_i_10_n_0\ : STD_LOGIC;
   signal \regacc_addr[24]_i_1_n_0\ : STD_LOGIC;
   signal \regacc_addr[24]_i_2_n_0\ : STD_LOGIC;
   signal \regacc_addr[24]_i_3_n_0\ : STD_LOGIC;
@@ -72,6 +74,10 @@ architecture STRUCTURE of top_block_reg_switch_0_0_reg_switch is
   signal start_i2c_write_i_5_n_0 : STD_LOGIC;
   signal state_sw : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \state_sw__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \^trg_en\ : STD_LOGIC;
+  signal trg_en_r_i_1_n_0 : STD_LOGIC;
+  signal trg_en_r_i_2_n_0 : STD_LOGIC;
+  signal trg_en_r_i_3_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \FSM_sequential_state_sw[0]_i_2\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \FSM_sequential_state_sw[2]_i_3\ : label is "soft_lutpair4";
@@ -89,6 +95,7 @@ architecture STRUCTURE of top_block_reg_switch_0_0_reg_switch is
   attribute SOFT_HLUTNM of start_i2c_write_i_5 : label is "soft_lutpair4";
 begin
   regacc_done_o <= \^regacc_done_o\;
+  trg_en <= \^trg_en\;
 \FSM_sequential_state_sw[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00000000000F0404"
@@ -198,15 +205,15 @@ begin
     );
 \i2c_addr[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000004"
+      INIT => X"0000000100000000"
     )
         port map (
-      I0 => regacc_addr_i(1),
-      I1 => regacc_write_i,
-      I2 => \regacc_addr[24]_i_2_n_0\,
-      I3 => state_sw(1),
-      I4 => state_sw(0),
-      I5 => state_sw(2),
+      I0 => \regacc_addr[24]_i_2_n_0\,
+      I1 => state_sw(1),
+      I2 => state_sw(0),
+      I3 => state_sw(2),
+      I4 => regacc_addr_i(1),
+      I5 => regacc_write_i,
       O => i2c_addr
     );
 \i2c_addr_reg[0]\: unisim.vcomponents.FDRE
@@ -478,17 +485,6 @@ begin
       I5 => \regacc_addr[24]_i_4_n_0\,
       O => \regacc_addr[24]_i_1_n_0\
     );
-\regacc_addr[24]_i_10\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => regacc_addr_i(4),
-      I1 => regacc_addr_i(3),
-      I2 => regacc_addr_i(6),
-      I3 => regacc_addr_i(5),
-      O => \regacc_addr[24]_i_10_n_0\
-    );
 \regacc_addr[24]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
@@ -499,7 +495,7 @@ begin
       I2 => \regacc_addr[24]_i_7_n_0\,
       I3 => \regacc_addr[24]_i_8_n_0\,
       I4 => \regacc_addr[24]_i_9_n_0\,
-      I5 => \regacc_addr[24]_i_10_n_0\,
+      I5 => regacc_addr_i(12),
       O => \regacc_addr[24]_i_2_n_0\
     );
 \regacc_addr[24]_i_3\: unisim.vcomponents.LUT2
@@ -528,53 +524,56 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => regacc_addr_i(20),
-      I1 => regacc_addr_i(19),
-      I2 => regacc_addr_i(22),
-      I3 => regacc_addr_i(21),
+      I0 => regacc_addr_i(5),
+      I1 => regacc_addr_i(4),
+      I2 => regacc_addr_i(7),
+      I3 => regacc_addr_i(6),
       O => \regacc_addr[24]_i_5_n_0\
     );
-\regacc_addr[24]_i_6\: unisim.vcomponents.LUT3
+\regacc_addr[24]_i_6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => regacc_addr_i(24),
-      I1 => regacc_addr_i(23),
-      I2 => regacc_addr_i(2),
+      I0 => regacc_addr_i(9),
+      I1 => regacc_addr_i(8),
+      I2 => regacc_addr_i(11),
+      I3 => regacc_addr_i(10),
       O => \regacc_addr[24]_i_6_n_0\
     );
 \regacc_addr[24]_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => regacc_addr_i(12),
-      I1 => regacc_addr_i(11),
-      I2 => regacc_addr_i(14),
-      I3 => regacc_addr_i(13),
+      I0 => regacc_addr_i(18),
+      I1 => regacc_addr_i(17),
+      I2 => regacc_addr_i(20),
+      I3 => regacc_addr_i(19),
       O => \regacc_addr[24]_i_7_n_0\
     );
 \regacc_addr[24]_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => regacc_addr_i(16),
-      I1 => regacc_addr_i(15),
-      I2 => regacc_addr_i(18),
-      I3 => regacc_addr_i(17),
+      I0 => regacc_addr_i(14),
+      I1 => regacc_addr_i(13),
+      I2 => regacc_addr_i(16),
+      I3 => regacc_addr_i(15),
       O => \regacc_addr[24]_i_8_n_0\
     );
-\regacc_addr[24]_i_9\: unisim.vcomponents.LUT4
+\regacc_addr[24]_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => regacc_addr_i(8),
-      I1 => regacc_addr_i(7),
-      I2 => regacc_addr_i(10),
-      I3 => regacc_addr_i(9),
+      I0 => regacc_addr_i(23),
+      I1 => regacc_addr_i(24),
+      I2 => regacc_addr_i(21),
+      I3 => regacc_addr_i(22),
+      I4 => regacc_addr_i(3),
+      I5 => regacc_addr_i(2),
       O => \regacc_addr[24]_i_9_n_0\
     );
 \regacc_addr_reg[0]\: unisim.vcomponents.FDRE
@@ -2118,6 +2117,51 @@ start_i2c_write_reg: unisim.vcomponents.FDRE
       Q => start_i2c_write_o,
       R => start_i2c_write_i_1_n_0
     );
+trg_en_r_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BA8A0000"
+    )
+        port map (
+      I0 => \^trg_en\,
+      I1 => trg_en_r_i_2_n_0,
+      I2 => trg_en_r_i_3_n_0,
+      I3 => regacc_data_wr_i(0),
+      I4 => axi_aresetn,
+      O => trg_en_r_i_1_n_0
+    );
+trg_en_r_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => \regacc_addr[24]_i_9_n_0\,
+      I1 => \regacc_addr[24]_i_8_n_0\,
+      I2 => \regacc_addr[24]_i_7_n_0\,
+      I3 => \regacc_addr[24]_i_6_n_0\,
+      I4 => \regacc_addr[24]_i_5_n_0\,
+      O => trg_en_r_i_2_n_0
+    );
+trg_en_r_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000020"
+    )
+        port map (
+      I0 => regacc_write_i,
+      I1 => regacc_addr_i(1),
+      I2 => regacc_addr_i(12),
+      I3 => regacc_addr_i(0),
+      I4 => state_sw(2),
+      I5 => \regacc_addr[24]_i_3_n_0\,
+      O => trg_en_r_i_3_n_0
+    );
+trg_en_r_reg: unisim.vcomponents.FDRE
+     port map (
+      C => axi_aclk,
+      CE => '1',
+      D => trg_en_r_i_1_n_0,
+      Q => \^trg_en\,
+      R => '0'
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -2145,7 +2189,8 @@ entity top_block_reg_switch_0_0 is
     i2c_raddr_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     i2c_waddr_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     i2c_rdata_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    i2c_done : in STD_LOGIC
+    i2c_done : in STD_LOGIC;
+    trg_en : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of top_block_reg_switch_0_0 : entity is true;
@@ -2196,6 +2241,7 @@ inst: entity work.top_block_reg_switch_0_0_reg_switch
       regacc_write_i => regacc_write_i,
       regacc_write_o => regacc_write_o,
       start_i2c_read_o => start_i2c_read_o,
-      start_i2c_write_o => start_i2c_write_o
+      start_i2c_write_o => start_i2c_write_o,
+      trg_en => trg_en
     );
 end STRUCTURE;

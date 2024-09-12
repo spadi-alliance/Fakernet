@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Aug 21 17:43:35 2024
+//Date        : Thu Sep 12 19:58:29 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block_wrapper.bd
 //Design      : top_block_wrapper
@@ -13,9 +13,12 @@ module top_block_wrapper
    (BASECLK,
     BX_SYNC_TRG_N,
     BX_SYNC_TRG_P,
+    CG0,
+    CG1,
     CLKSOIN_N,
     CLKSOIN_P,
     CLK_CFG,
+    CTS,
     GPION,
     GPIOP,
     HBTRG_N,
@@ -23,6 +26,7 @@ module top_block_wrapper
     HRSTB_N,
     HRSTB_P,
     LED,
+    POL,
     PUSH_SW,
     SAMPA_EN_A,
     SAMPA_EN_D,
@@ -47,9 +51,12 @@ module top_block_wrapper
   input BASECLK;
   output [0:0]BX_SYNC_TRG_N;
   output [0:0]BX_SYNC_TRG_P;
+  output [0:0]CG0;
+  output [0:0]CG1;
   output [3:0]CLKSOIN_N;
   output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
+  output [0:0]CTS;
   inout [7:0]GPION;
   inout [7:0]GPIOP;
   output [0:0]HBTRG_N;
@@ -57,6 +64,7 @@ module top_block_wrapper
   output [3:0]HRSTB_N;
   output [3:0]HRSTB_P;
   output [3:0]LED;
+  output [0:0]POL;
   input PUSH_SW;
   output SAMPA_EN_A;
   output SAMPA_EN_D;
@@ -82,9 +90,12 @@ module top_block_wrapper
   wire BASECLK;
   wire [0:0]BX_SYNC_TRG_N;
   wire [0:0]BX_SYNC_TRG_P;
+  wire [0:0]CG0;
+  wire [0:0]CG1;
   wire [3:0]CLKSOIN_N;
   wire [3:0]CLKSOIN_P;
   wire [6:0]CLK_CFG;
+  wire [0:0]CTS;
   wire [7:0]GPION;
   wire [7:0]GPIOP;
   wire [0:0]HBTRG_N;
@@ -92,6 +103,7 @@ module top_block_wrapper
   wire [3:0]HRSTB_N;
   wire [3:0]HRSTB_P;
   wire [3:0]LED;
+  wire [0:0]POL;
   wire PUSH_SW;
   wire SAMPA_EN_A;
   wire SAMPA_EN_D;
@@ -118,9 +130,12 @@ module top_block_wrapper
        (.BASECLK(BASECLK),
         .BX_SYNC_TRG_N(BX_SYNC_TRG_N),
         .BX_SYNC_TRG_P(BX_SYNC_TRG_P),
+        .CG0(CG0),
+        .CG1(CG1),
         .CLKSOIN_N(CLKSOIN_N),
         .CLKSOIN_P(CLKSOIN_P),
         .CLK_CFG(CLK_CFG),
+        .CTS(CTS),
         .GPION(GPION),
         .GPIOP(GPIOP),
         .HBTRG_N(HBTRG_N),
@@ -128,6 +143,7 @@ module top_block_wrapper
         .HRSTB_N(HRSTB_N),
         .HRSTB_P(HRSTB_P),
         .LED(LED),
+        .POL(POL),
         .PUSH_SW(PUSH_SW),
         .SAMPA_EN_A(SAMPA_EN_A),
         .SAMPA_EN_D(SAMPA_EN_D),

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "reg_switch,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *)
-(* CORE_GENERATION_INFO = "top_block_reg_switch_0_0,reg_switch,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=reg_switch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_ADDR_I2C_WRITE=0000000000100000000000000,C_ADDR_I2C_READ=0000000000100000000000001,C_ADDR_SAMPA_READ=0000000000100000000000010,C_ADDR_I2C_WRITE_ALL=0000000000100000000000011}" *)
+(* CORE_GENERATION_INFO = "top_block_reg_switch_0_0,reg_switch,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=reg_switch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_ADDR_I2C_WRITE=0000000000100000000000000,C_ADDR_I2C_READ=0000000000100000000000001,C_ADDR_SAMPA_READ=0000000000100000000000010,C_ADDR_I2C_WRITE_ALL=0000000000100000000000011,C_ADDR_TRGEN=0000000000101000000000000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_reg_switch_0_0 (
@@ -76,7 +76,8 @@ module top_block_reg_switch_0_0 (
   i2c_raddr_o,
   i2c_waddr_o,
   i2c_rdata_i,
-  i2c_done
+  i2c_done,
+  trg_en
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *)
@@ -104,12 +105,14 @@ output wire [31 : 0] i2c_raddr_o;
 output wire [31 : 0] i2c_waddr_o;
 input wire [31 : 0] i2c_rdata_i;
 input wire i2c_done;
+output wire trg_en;
 
   reg_switch #(
     .C_ADDR_I2C_WRITE(25'B0000000000100000000000000),
     .C_ADDR_I2C_READ(25'B0000000000100000000000001),
     .C_ADDR_SAMPA_READ(25'B0000000000100000000000010),
-    .C_ADDR_I2C_WRITE_ALL(25'B0000000000100000000000011)
+    .C_ADDR_I2C_WRITE_ALL(25'B0000000000100000000000011),
+    .C_ADDR_TRGEN(25'B0000000000101000000000000)
   ) inst (
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
@@ -131,6 +134,7 @@ input wire i2c_done;
     .i2c_raddr_o(i2c_raddr_o),
     .i2c_waddr_o(i2c_waddr_o),
     .i2c_rdata_i(i2c_rdata_i),
-    .i2c_done(i2c_done)
+    .i2c_done(i2c_done),
+    .trg_en(trg_en)
   );
 endmodule

@@ -282,6 +282,7 @@ set_property IOSTANDARD LVCMOS12 [get_ports S_I2C_SDA]
 set_property PULLUP true [get_ports S_I2C_SCL]
 set_property PULLUP true [get_ports S_I2C_SDA]
 
+
 #______________________________________________
 # SAMPA CONFIG
 set_property PACKAGE_PIN B8 [get_ports {CLK_CFG[0]}]
@@ -293,13 +294,13 @@ set_property PACKAGE_PIN A12 [get_ports {CLK_CFG[5]}]
 set_property PACKAGE_PIN B10 [get_ports {CLK_CFG[6]}]
 set_property IOSTANDARD LVCMOS12 [get_ports {CLK_CFG[*]}]
 
-
-
-
-
-
-
-
-
+set_property PACKAGE_PIN C9 [get_ports POL]
+set_property PACKAGE_PIN D8 [get_ports CTS]
+set_property PACKAGE_PIN C8 [get_ports CG0]
+set_property PACKAGE_PIN D9 [get_ports CG1]
+set_property IOSTANDARD LVCMOS12 [get_ports POL]
+set_property IOSTANDARD LVCMOS12 [get_ports CTS]
+set_property IOSTANDARD LVCMOS12 [get_ports CG0]
+set_property IOSTANDARD LVCMOS12 [get_ports CG1]
 
 

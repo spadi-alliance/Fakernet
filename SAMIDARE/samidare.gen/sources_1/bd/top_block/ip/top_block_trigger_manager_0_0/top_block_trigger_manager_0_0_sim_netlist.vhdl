@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Wed Aug 21 17:40:13 2024
+-- Date        : Thu Sep 12 13:06:26 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0_sim_netlist.vhdl
@@ -19,7 +19,7 @@ entity top_block_trigger_manager_0_0_trigger_manager is
     trg : out STD_LOGIC;
     en : out STD_LOGIC;
     clk : in STD_LOGIC;
-    trg_i : in STD_LOGIC;
+    external_trg : in STD_LOGIC;
     busy_i : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -304,7 +304,7 @@ trg_i_1: unisim.vcomponents.LUT4
       INIT => X"0EEE"
     )
         port map (
-      I0 => trg_i,
+      I0 => external_trg,
       I1 => trg_internal,
       I2 => \^trg\,
       I3 => busy_i,
@@ -370,7 +370,7 @@ entity top_block_trigger_manager_0_0 is
   port (
     clk : in STD_LOGIC;
     reg_trg : in STD_LOGIC;
-    trg_i : in STD_LOGIC;
+    external_trg : in STD_LOGIC;
     busy_i : in STD_LOGIC;
     samples : out STD_LOGIC_VECTOR ( 3 downto 0 );
     trg : out STD_LOGIC;
@@ -389,21 +389,16 @@ entity top_block_trigger_manager_0_0 is
 end top_block_trigger_manager_0_0;
 
 architecture STRUCTURE of top_block_trigger_manager_0_0 is
-  signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
 begin
-  samples(3) <= \<const0>\;
+  samples(3) <= \<const1>\;
   samples(2) <= \<const1>\;
-  samples(1) <= \<const0>\;
-  samples(0) <= \<const0>\;
-GND: unisim.vcomponents.GND
-     port map (
-      G => \<const0>\
-    );
+  samples(1) <= \<const1>\;
+  samples(0) <= \<const1>\;
 VCC: unisim.vcomponents.VCC
      port map (
       P => \<const1>\
@@ -413,7 +408,7 @@ inst: entity work.top_block_trigger_manager_0_0_trigger_manager
       busy_i => busy_i,
       clk => clk,
       en => en,
-      trg => trg,
-      trg_i => trg_i
+      external_trg => external_trg,
+      trg => trg
     );
 end STRUCTURE;

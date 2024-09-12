@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Aug 21 17:45:51 2024
+| Date         : Thu Sep 12 19:59:11 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
 | Design       : top_block_wrapper
@@ -95,7 +95,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   30 |     0 |          0 |       204 | 14.71 |
+| Bonded IOB |   34 |     0 |          0 |       204 | 16.67 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -153,9 +153,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| OBUF     |   17 |                 I/O |
 | INBUF    |   17 |                 I/O |
 | IBUFCTRL |   17 |              Others |
-| OBUF     |   13 |                 I/O |
 +----------+------+---------------------+
 
 
@@ -173,6 +173,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_3_0    |    1 |
 | top_block_util_vector_logic_2_1    |    1 |
 | top_block_util_vector_logic_2_0    |    1 |
+| top_block_util_vector_logic_1_5    |    1 |
+| top_block_util_vector_logic_1_4    |    1 |
 | top_block_util_vector_logic_1_3    |    1 |
 | top_block_util_vector_logic_1_2    |    1 |
 | top_block_util_vector_logic_1_1    |    1 |
@@ -182,6 +184,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_0_7    |    1 |
 | top_block_util_vector_logic_0_3    |    1 |
 | top_block_util_vector_logic_0_2    |    1 |
+| top_block_util_vector_logic_0_11   |    1 |
+| top_block_util_vector_logic_0_10   |    1 |
 | top_block_util_vector_logic_0_1    |    1 |
 | top_block_util_vector_logic_0_0    |    1 |
 | top_block_util_ds_buf_7_0          |    1 |
@@ -218,6 +222,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_axi_iic_0_0              |    1 |
 | top_block_axi_bram_ctrl_1_0        |    1 |
 | top_block_axi_bram_ctrl_0_0        |    1 |
+| top_block_TRG_MODULE_0_0           |    1 |
 | top_block_SAMPA_PON_v1_0_0_0       |    1 |
 | top_block_RESET_INST_0_0           |    1 |
 | top_block_LED_REG_READ_SEPARAT_1_0 |    1 |

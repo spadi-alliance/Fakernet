@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.877586",
+   "Default View_TopLeft":"-293,1",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace portBus SO1P -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace portBus SO1N -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace portBus SO0N -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus SO0P -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus SO2N -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace portBus SO2P -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace portBus SO3N -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace portBus SO3P -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace portBus IBUF_OUT1 -pg 1 -lvl 3 -x 630 -y 220 -defaultsOSRD
+preplace portBus IBUF_OUT3 -pg 1 -lvl 3 -x 630 -y 500 -defaultsOSRD
+preplace portBus IBUF_OUT2 -pg 1 -lvl 3 -x 630 -y 360 -defaultsOSRD
+preplace portBus IBUF_OUT0 -pg 1 -lvl 3 -x 630 -y 80 -defaultsOSRD
+preplace inst slice_rev_concat -pg 1 -lvl 2 -x 480 -y 80 -defaultsOSRD
+preplace inst util_ds_buf_5 -pg 1 -lvl 1 -x 180 -y 80 -defaultsOSRD
+preplace inst util_ds_buf_6 -pg 1 -lvl 1 -x 180 -y 220 -defaultsOSRD
+preplace inst util_ds_buf_7 -pg 1 -lvl 1 -x 180 -y 360 -defaultsOSRD
+preplace inst util_ds_buf_8 -pg 1 -lvl 1 -x 180 -y 500 -defaultsOSRD
+preplace inst slice_rev_concat1 -pg 1 -lvl 2 -x 480 -y 220 -defaultsOSRD
+preplace inst slice_rev_concat2 -pg 1 -lvl 2 -x 480 -y 360 -defaultsOSRD
+preplace inst slice_rev_concat3 -pg 1 -lvl 2 -x 480 -y 500 -defaultsOSRD
+preplace netloc Din_1 1 1 1 NJ 80
+preplace netloc Din_2 1 1 1 NJ 220
+preplace netloc util_ds_buf_7_IBUF_OUT 1 1 1 NJ 360
+preplace netloc util_ds_buf_8_IBUF_OUT 1 1 1 NJ 500
+preplace netloc SO1P_1 1 0 1 NJ 220
+preplace netloc SO1N_1 1 0 1 NJ 240
+preplace netloc SO0N_1 1 0 1 NJ 100
+preplace netloc SO0P_1 1 0 1 NJ 80
+preplace netloc SO2N_1 1 0 1 NJ 380
+preplace netloc SO2P_1 1 0 1 NJ 360
+preplace netloc SO3N_1 1 0 1 NJ 520
+preplace netloc SO3P_1 1 0 1 NJ 500
+preplace netloc slice_rev_concat1_IBUF_OUT0 1 2 1 NJ 220
+preplace netloc slice_rev_concat3_IBUF_OUT0 1 2 1 NJ 500
+preplace netloc slice_rev_concat2_IBUF_OUT0 1 2 1 NJ 360
+preplace netloc slice_rev_concat_IBUF_OUT0 1 2 1 NJ 80
+levelinfo -pg 1 0 180 480 630
+pagesize -pg 1 -db -bbox -sgen -140 0 810 580
+"
+}
+

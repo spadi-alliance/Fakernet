@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Wed Aug 21 17:40:13 2024
+// Date        : Thu Sep 12 13:06:26 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0_sim_netlist.v
@@ -18,41 +18,38 @@
 module top_block_trigger_manager_0_0
    (clk,
     reg_trg,
-    trg_i,
+    external_trg,
     busy_i,
     samples,
     trg,
     en);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 40000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input clk;
   input reg_trg;
-  input trg_i;
+  input external_trg;
   input busy_i;
   output [3:0]samples;
   output trg;
   output en;
 
-  wire \<const0> ;
   wire \<const1> ;
   wire busy_i;
   wire clk;
   wire en;
+  wire external_trg;
   wire trg;
-  wire trg_i;
 
-  assign samples[3] = \<const0> ;
+  assign samples[3] = \<const1> ;
   assign samples[2] = \<const1> ;
-  assign samples[1] = \<const0> ;
-  assign samples[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
+  assign samples[1] = \<const1> ;
+  assign samples[0] = \<const1> ;
   VCC VCC
        (.P(\<const1> ));
   top_block_trigger_manager_0_0_trigger_manager inst
        (.busy_i(busy_i),
         .clk(clk),
         .en(en),
-        .trg(trg),
-        .trg_i(trg_i));
+        .external_trg(external_trg),
+        .trg(trg));
 endmodule
 
 (* ORIG_REF_NAME = "trigger_manager" *) 
@@ -60,18 +57,19 @@ module top_block_trigger_manager_0_0_trigger_manager
    (trg,
     en,
     clk,
-    trg_i,
+    external_trg,
     busy_i);
   output trg;
   output en;
   input clk;
-  input trg_i;
+  input external_trg;
   input busy_i;
 
   wire busy_i;
   wire clear;
   wire clk;
   wire en;
+  wire external_trg;
   wire trg;
   wire \trg_counter[0]_i_2_n_0 ;
   wire [16:5]trg_counter_reg;
@@ -113,7 +111,6 @@ module top_block_trigger_manager_0_0_trigger_manager
   wire \trg_counter_reg_n_0_[2] ;
   wire \trg_counter_reg_n_0_[3] ;
   wire \trg_counter_reg_n_0_[4] ;
-  wire trg_i;
   wire trg_i_1_n_0;
   wire trg_internal;
   wire trg_internal_i_2_n_0;
@@ -263,7 +260,7 @@ module top_block_trigger_manager_0_0_trigger_manager
   LUT4 #(
     .INIT(16'h0EEE)) 
     trg_i_1
-       (.I0(trg_i),
+       (.I0(external_trg),
         .I1(trg_internal),
         .I2(trg),
         .I3(busy_i),

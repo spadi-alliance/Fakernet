@@ -75,7 +75,8 @@ module top_block_reg_switch_0_0 (
   i2c_raddr_o,
   i2c_waddr_o,
   i2c_rdata_i,
-  i2c_done
+  i2c_done,
+  trg_en
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *)
@@ -103,12 +104,14 @@ output wire [31 : 0] i2c_raddr_o;
 output wire [31 : 0] i2c_waddr_o;
 input wire [31 : 0] i2c_rdata_i;
 input wire i2c_done;
+output wire trg_en;
 
   reg_switch #(
     .C_ADDR_I2C_WRITE(25'B0000000000100000000000000),
     .C_ADDR_I2C_READ(25'B0000000000100000000000001),
     .C_ADDR_SAMPA_READ(25'B0000000000100000000000010),
-    .C_ADDR_I2C_WRITE_ALL(25'B0000000000100000000000011)
+    .C_ADDR_I2C_WRITE_ALL(25'B0000000000100000000000011),
+    .C_ADDR_TRGEN(25'B0000000000101000000000000)
   ) inst (
     .axi_aclk(axi_aclk),
     .axi_aresetn(axi_aresetn),
@@ -130,6 +133,7 @@ input wire i2c_done;
     .i2c_raddr_o(i2c_raddr_o),
     .i2c_waddr_o(i2c_waddr_o),
     .i2c_rdata_i(i2c_rdata_i),
-    .i2c_done(i2c_done)
+    .i2c_done(i2c_done),
+    .trg_en(trg_en)
   );
 endmodule

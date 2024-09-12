@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Aug  9 10:30:37 2024
+// Date        : Thu Sep 12 19:03:27 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top top_block_reg_switch_0_0 -prefix
-//               top_block_reg_switch_0_0_ top_block_reg_switch_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0_sim_netlist.v
 // Design      : top_block_reg_switch_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,105 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
+(* X_CORE_INFO = "reg_switch,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module top_block_reg_switch_0_0
+   (axi_aclk,
+    axi_aresetn,
+    regacc_addr_i,
+    regacc_addr_o,
+    regacc_data_wr_i,
+    regacc_data_wr_o,
+    regacc_write_i,
+    regacc_write_o,
+    regacc_read_i,
+    regacc_read_o,
+    regacc_data_rd_i,
+    regacc_data_rd_o,
+    regacc_done_i,
+    regacc_done_o,
+    start_i2c_write_o,
+    start_i2c_write_all_o,
+    start_i2c_read_o,
+    i2c_raddr_o,
+    i2c_waddr_o,
+    i2c_rdata_i,
+    i2c_done,
+    trg_en);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_aresetn;
+  input [24:0]regacc_addr_i;
+  output [24:0]regacc_addr_o;
+  input [31:0]regacc_data_wr_i;
+  output [31:0]regacc_data_wr_o;
+  input regacc_write_i;
+  output regacc_write_o;
+  input regacc_read_i;
+  output regacc_read_o;
+  input [31:0]regacc_data_rd_i;
+  output [31:0]regacc_data_rd_o;
+  input regacc_done_i;
+  output regacc_done_o;
+  output start_i2c_write_o;
+  output start_i2c_write_all_o;
+  output start_i2c_read_o;
+  output [31:0]i2c_raddr_o;
+  output [31:0]i2c_waddr_o;
+  input [31:0]i2c_rdata_i;
+  input i2c_done;
+  output trg_en;
+
+  wire \<const0> ;
+  wire axi_aclk;
+  wire axi_aresetn;
+  wire i2c_done;
+  wire [31:0]i2c_rdata_i;
+  wire [31:0]i2c_waddr_o;
+  wire [24:0]regacc_addr_i;
+  wire [24:0]regacc_addr_o;
+  wire [31:0]regacc_data_rd_i;
+  wire [31:0]regacc_data_rd_o;
+  wire [31:0]regacc_data_wr_i;
+  wire [31:0]regacc_data_wr_o;
+  wire regacc_done_i;
+  wire regacc_done_o;
+  wire regacc_read_i;
+  wire regacc_read_o;
+  wire regacc_write_i;
+  wire regacc_write_o;
+  wire start_i2c_read_o;
+  wire start_i2c_write_o;
+  wire trg_en;
+
+  assign i2c_raddr_o[31:0] = i2c_waddr_o;
+  assign start_i2c_write_all_o = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  top_block_reg_switch_0_0_reg_switch inst
+       (.axi_aclk(axi_aclk),
+        .axi_aresetn(axi_aresetn),
+        .i2c_done(i2c_done),
+        .i2c_rdata_i(i2c_rdata_i),
+        .i2c_waddr_o(i2c_waddr_o),
+        .regacc_addr_i(regacc_addr_i),
+        .regacc_addr_o(regacc_addr_o),
+        .regacc_data_rd_i(regacc_data_rd_i),
+        .regacc_data_rd_o(regacc_data_rd_o),
+        .regacc_data_wr_i(regacc_data_wr_i),
+        .regacc_data_wr_o(regacc_data_wr_o),
+        .regacc_done_i(regacc_done_i),
+        .regacc_done_o(regacc_done_o),
+        .regacc_read_i(regacc_read_i),
+        .regacc_read_o(regacc_read_o),
+        .regacc_write_i(regacc_write_i),
+        .regacc_write_o(regacc_write_o),
+        .start_i2c_read_o(start_i2c_read_o),
+        .start_i2c_write_o(start_i2c_write_o),
+        .trg_en(trg_en));
+endmodule
+
+(* ORIG_REF_NAME = "reg_switch" *) 
 module top_block_reg_switch_0_0_reg_switch
    (regacc_addr_o,
     regacc_data_wr_o,
@@ -22,6 +121,7 @@ module top_block_reg_switch_0_0_reg_switch
     start_i2c_read_o,
     i2c_waddr_o,
     regacc_done_o,
+    trg_en,
     axi_aclk,
     regacc_addr_i,
     regacc_data_wr_i,
@@ -41,6 +141,7 @@ module top_block_reg_switch_0_0_reg_switch
   output start_i2c_read_o;
   output [31:0]i2c_waddr_o;
   output regacc_done_o;
+  output trg_en;
   input axi_aclk;
   input [24:0]regacc_addr_i;
   input [31:0]regacc_data_wr_i;
@@ -62,7 +163,6 @@ module top_block_reg_switch_0_0_reg_switch
   wire i2c_done;
   wire [31:0]i2c_rdata_i;
   wire [31:0]i2c_waddr_o;
-  wire \regacc_addr[24]_i_10_n_0 ;
   wire \regacc_addr[24]_i_1_n_0 ;
   wire \regacc_addr[24]_i_2_n_0 ;
   wire \regacc_addr[24]_i_3_n_0 ;
@@ -103,6 +203,10 @@ module top_block_reg_switch_0_0_reg_switch
   wire start_i2c_write_o;
   wire [2:0]state_sw;
   wire [2:0]state_sw__0;
+  wire trg_en;
+  wire trg_en_r_i_1_n_0;
+  wire trg_en_r_i_2_n_0;
+  wire trg_en_r_i_3_n_0;
 
   LUT6 #(
     .INIT(64'h00000000000F0404)) 
@@ -191,14 +295,14 @@ module top_block_reg_switch_0_0_reg_switch
         .Q(state_sw[2]),
         .R(start_i2c_write_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'h0000000100000000)) 
     \i2c_addr[31]_i_1 
-       (.I0(regacc_addr_i[1]),
-        .I1(regacc_write_i),
-        .I2(\regacc_addr[24]_i_2_n_0 ),
-        .I3(state_sw[1]),
-        .I4(state_sw[0]),
-        .I5(state_sw[2]),
+       (.I0(\regacc_addr[24]_i_2_n_0 ),
+        .I1(state_sw[1]),
+        .I2(state_sw[0]),
+        .I3(state_sw[2]),
+        .I4(regacc_addr_i[1]),
+        .I5(regacc_write_i),
         .O(i2c_addr));
   FDRE \i2c_addr_reg[0] 
        (.C(axi_aclk),
@@ -402,14 +506,6 @@ module top_block_reg_switch_0_0_reg_switch
         .I4(\regacc_addr[24]_i_3_n_0 ),
         .I5(\regacc_addr[24]_i_4_n_0 ),
         .O(\regacc_addr[24]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \regacc_addr[24]_i_10 
-       (.I0(regacc_addr_i[4]),
-        .I1(regacc_addr_i[3]),
-        .I2(regacc_addr_i[6]),
-        .I3(regacc_addr_i[5]),
-        .O(\regacc_addr[24]_i_10_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \regacc_addr[24]_i_2 
@@ -418,7 +514,7 @@ module top_block_reg_switch_0_0_reg_switch
         .I2(\regacc_addr[24]_i_7_n_0 ),
         .I3(\regacc_addr[24]_i_8_n_0 ),
         .I4(\regacc_addr[24]_i_9_n_0 ),
-        .I5(\regacc_addr[24]_i_10_n_0 ),
+        .I5(regacc_addr_i[12]),
         .O(\regacc_addr[24]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
@@ -440,41 +536,44 @@ module top_block_reg_switch_0_0_reg_switch
   LUT4 #(
     .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_5 
-       (.I0(regacc_addr_i[20]),
-        .I1(regacc_addr_i[19]),
-        .I2(regacc_addr_i[22]),
-        .I3(regacc_addr_i[21]),
+       (.I0(regacc_addr_i[5]),
+        .I1(regacc_addr_i[4]),
+        .I2(regacc_addr_i[7]),
+        .I3(regacc_addr_i[6]),
         .O(\regacc_addr[24]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_6 
-       (.I0(regacc_addr_i[24]),
-        .I1(regacc_addr_i[23]),
-        .I2(regacc_addr_i[2]),
+       (.I0(regacc_addr_i[9]),
+        .I1(regacc_addr_i[8]),
+        .I2(regacc_addr_i[11]),
+        .I3(regacc_addr_i[10]),
         .O(\regacc_addr[24]_i_6_n_0 ));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFFE)) 
     \regacc_addr[24]_i_7 
-       (.I0(regacc_addr_i[12]),
-        .I1(regacc_addr_i[11]),
-        .I2(regacc_addr_i[14]),
-        .I3(regacc_addr_i[13]),
+       (.I0(regacc_addr_i[18]),
+        .I1(regacc_addr_i[17]),
+        .I2(regacc_addr_i[20]),
+        .I3(regacc_addr_i[19]),
         .O(\regacc_addr[24]_i_7_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'hFFFD)) 
     \regacc_addr[24]_i_8 
-       (.I0(regacc_addr_i[16]),
-        .I1(regacc_addr_i[15]),
-        .I2(regacc_addr_i[18]),
-        .I3(regacc_addr_i[17]),
+       (.I0(regacc_addr_i[14]),
+        .I1(regacc_addr_i[13]),
+        .I2(regacc_addr_i[16]),
+        .I3(regacc_addr_i[15]),
         .O(\regacc_addr[24]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \regacc_addr[24]_i_9 
-       (.I0(regacc_addr_i[8]),
-        .I1(regacc_addr_i[7]),
-        .I2(regacc_addr_i[10]),
-        .I3(regacc_addr_i[9]),
+       (.I0(regacc_addr_i[23]),
+        .I1(regacc_addr_i[24]),
+        .I2(regacc_addr_i[21]),
+        .I3(regacc_addr_i[22]),
+        .I4(regacc_addr_i[3]),
+        .I5(regacc_addr_i[2]),
         .O(\regacc_addr[24]_i_9_n_0 ));
   FDRE \regacc_addr_reg[0] 
        (.C(axi_aclk),
@@ -1635,100 +1734,40 @@ module top_block_reg_switch_0_0_reg_switch
         .D(start_i2c_write),
         .Q(start_i2c_write_o),
         .R(start_i2c_write_i_1_n_0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "top_block_reg_switch_0_0,reg_switch,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "reg_switch,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module top_block_reg_switch_0_0
-   (axi_aclk,
-    axi_aresetn,
-    regacc_addr_i,
-    regacc_addr_o,
-    regacc_data_wr_i,
-    regacc_data_wr_o,
-    regacc_write_i,
-    regacc_write_o,
-    regacc_read_i,
-    regacc_read_o,
-    regacc_data_rd_i,
-    regacc_data_rd_o,
-    regacc_done_i,
-    regacc_done_o,
-    start_i2c_write_o,
-    start_i2c_write_all_o,
-    start_i2c_read_o,
-    i2c_raddr_o,
-    i2c_waddr_o,
-    i2c_rdata_i,
-    i2c_done);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_aresetn;
-  input [24:0]regacc_addr_i;
-  output [24:0]regacc_addr_o;
-  input [31:0]regacc_data_wr_i;
-  output [31:0]regacc_data_wr_o;
-  input regacc_write_i;
-  output regacc_write_o;
-  input regacc_read_i;
-  output regacc_read_o;
-  input [31:0]regacc_data_rd_i;
-  output [31:0]regacc_data_rd_o;
-  input regacc_done_i;
-  output regacc_done_o;
-  output start_i2c_write_o;
-  output start_i2c_write_all_o;
-  output start_i2c_read_o;
-  output [31:0]i2c_raddr_o;
-  output [31:0]i2c_waddr_o;
-  input [31:0]i2c_rdata_i;
-  input i2c_done;
-
-  wire \<const0> ;
-  wire axi_aclk;
-  wire axi_aresetn;
-  wire i2c_done;
-  wire [31:0]i2c_rdata_i;
-  wire [31:0]i2c_waddr_o;
-  wire [24:0]regacc_addr_i;
-  wire [24:0]regacc_addr_o;
-  wire [31:0]regacc_data_rd_i;
-  wire [31:0]regacc_data_rd_o;
-  wire [31:0]regacc_data_wr_i;
-  wire [31:0]regacc_data_wr_o;
-  wire regacc_done_i;
-  wire regacc_done_o;
-  wire regacc_read_i;
-  wire regacc_read_o;
-  wire regacc_write_i;
-  wire regacc_write_o;
-  wire start_i2c_read_o;
-  wire start_i2c_write_o;
-
-  assign i2c_raddr_o[31:0] = i2c_waddr_o;
-  assign start_i2c_write_all_o = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  top_block_reg_switch_0_0_reg_switch inst
-       (.axi_aclk(axi_aclk),
-        .axi_aresetn(axi_aresetn),
-        .i2c_done(i2c_done),
-        .i2c_rdata_i(i2c_rdata_i),
-        .i2c_waddr_o(i2c_waddr_o),
-        .regacc_addr_i(regacc_addr_i),
-        .regacc_addr_o(regacc_addr_o),
-        .regacc_data_rd_i(regacc_data_rd_i),
-        .regacc_data_rd_o(regacc_data_rd_o),
-        .regacc_data_wr_i(regacc_data_wr_i),
-        .regacc_data_wr_o(regacc_data_wr_o),
-        .regacc_done_i(regacc_done_i),
-        .regacc_done_o(regacc_done_o),
-        .regacc_read_i(regacc_read_i),
-        .regacc_read_o(regacc_read_o),
-        .regacc_write_i(regacc_write_i),
-        .regacc_write_o(regacc_write_o),
-        .start_i2c_read_o(start_i2c_read_o),
-        .start_i2c_write_o(start_i2c_write_o));
+  LUT5 #(
+    .INIT(32'hBA8A0000)) 
+    trg_en_r_i_1
+       (.I0(trg_en),
+        .I1(trg_en_r_i_2_n_0),
+        .I2(trg_en_r_i_3_n_0),
+        .I3(regacc_data_wr_i[0]),
+        .I4(axi_aresetn),
+        .O(trg_en_r_i_1_n_0));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    trg_en_r_i_2
+       (.I0(\regacc_addr[24]_i_9_n_0 ),
+        .I1(\regacc_addr[24]_i_8_n_0 ),
+        .I2(\regacc_addr[24]_i_7_n_0 ),
+        .I3(\regacc_addr[24]_i_6_n_0 ),
+        .I4(\regacc_addr[24]_i_5_n_0 ),
+        .O(trg_en_r_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000020)) 
+    trg_en_r_i_3
+       (.I0(regacc_write_i),
+        .I1(regacc_addr_i[1]),
+        .I2(regacc_addr_i[12]),
+        .I3(regacc_addr_i[0]),
+        .I4(state_sw[2]),
+        .I5(\regacc_addr[24]_i_3_n_0 ),
+        .O(trg_en_r_i_3_n_0));
+  FDRE trg_en_r_reg
+       (.C(axi_aclk),
+        .CE(1'b1),
+        .D(trg_en_r_i_1_n_0),
+        .Q(trg_en),
+        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

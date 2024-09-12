@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Wed Aug 21 17:40:13 2024
+// Date        : Thu Sep 12 13:06:26 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0_stub.v
@@ -14,11 +14,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "trigger_manager,Vivado 2022.2" *)
-module top_block_trigger_manager_0_0(clk, reg_trg, trg_i, busy_i, samples, trg, en)
-/* synthesis syn_black_box black_box_pad_pin="clk,reg_trg,trg_i,busy_i,samples[3:0],trg,en" */;
+module top_block_trigger_manager_0_0(clk, reg_trg, external_trg, busy_i, samples, trg, en)
+/* synthesis syn_black_box black_box_pad_pin="clk,reg_trg,external_trg,busy_i,samples[3:0],trg,en" */;
   input clk;
   input reg_trg;
-  input trg_i;
+  input external_trg;
   input busy_i;
   output [3:0]samples;
   output trg;

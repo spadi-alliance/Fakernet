@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_reg_switch_0_0",
-    "cell_name": "fakernet/reg_switch_0",
+    "cell_name": "reg_switch_0",
     "component_reference": "xilinx.com:module_ref:reg_switch:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0",
@@ -12,13 +12,15 @@
         "C_ADDR_I2C_READ": [ { "value": "\"0000000000100000000000001\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_ADDR_SAMPA_READ": [ { "value": "\"0000000000100000000000010\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_ADDR_I2C_WRITE_ALL": [ { "value": "\"0000000000100000000000011\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_ADDR_TRGEN": [ { "value": "\"0000000000101000000000000\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "top_block_reg_switch_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "C_ADDR_I2C_WRITE": [ { "value": "\"0000000000100000000000000\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_ADDR_I2C_READ": [ { "value": "\"0000000000100000000000001\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_ADDR_SAMPA_READ": [ { "value": "\"0000000000100000000000010\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "C_ADDR_I2C_WRITE_ALL": [ { "value": "\"0000000000100000000000011\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+        "C_ADDR_I2C_WRITE_ALL": [ { "value": "\"0000000000100000000000011\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_ADDR_TRGEN": [ { "value": "\"0000000000101000000000000\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "kintexuplus" } ],
@@ -68,7 +70,8 @@
         "i2c_raddr_o": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "i2c_waddr_o": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "i2c_rdata_i": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
-        "i2c_done": [ { "direction": "in" } ]
+        "i2c_done": [ { "direction": "in" } ],
+        "trg_en": [ { "direction": "out" } ]
       },
       "interfaces": {
         "axi_aresetn": {

@@ -54,6 +54,8 @@ module das_rx(
     reg [3:0] clk_10MHz_r;
     reg [3:0] clk_10MHz_rr;
     
+    reg [4:0] clk_cnt [3:0];
+    reg [4:0] ch0_cnt [3:0];
     wire [3:0] wr_en;
     assign wr_en0 = wr_en[0];
     assign wr_en1 = wr_en[1];
@@ -70,7 +72,8 @@ module das_rx(
                 clk_10MHz_rr[i] <= SO[i][10]&&~clk_10MHz_r[i];
                 bus_r[i] <= {bus_r[i][309:0], SO[i][9:0]}; // SO0 10 bit data shift
                 
-                if(SO[i][10]&&~clk_10MHz_r[i])begin // assign data when posedge of SO[10]
+                //if(SO[i][10]&&~clk_10MHz_r[i])begin // assign data when posedge of SO[10]
+                if(clk_cnt[i]==ch0_cnt[i])begin // assign data when posedge of SO[10]
                     bus[i] <= bus_r[i];
                 end
             end
@@ -82,7 +85,6 @@ module das_rx(
     assign bus1 = bus[1];
     assign bus2 = bus[2];
     assign bus3 = bus[3];
-    
     
 //    reg clk_10MHz;
 

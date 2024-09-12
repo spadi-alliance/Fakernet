@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Wed Aug 21 17:50:27 2024
+| Date             : Thu Sep 12 20:04:04 2024
 | Host             : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
 | Design           : top_block_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.418        |
+| Total On-Chip Power (W)  | 1.247        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.151        |
-| Device Static (W)        | 0.267        |
+| Dynamic (W)              | 0.981        |
+| Device Static (W)        | 0.266        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 96.1         |
-| Junction Temperature (C) | 28.9         |
+| Max Ambient (C)          | 96.6         |
+| Junction Temperature (C) | 28.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.143 |       16 |       --- |             --- |
-| CLB Logic                |     0.096 |    53714 |       --- |             --- |
-|   LUT as Shift Register  |     0.050 |     3419 |     40320 |            8.48 |
-|   LUT as Logic           |     0.034 |    11706 |     77760 |           15.05 |
-|   Register               |     0.010 |    28336 |    155520 |           18.22 |
+| Clocks                   |     0.099 |       16 |       --- |             --- |
+| CLB Logic                |     0.063 |    38068 |       --- |             --- |
+|   LUT as Logic           |     0.030 |     9876 |     77760 |           12.70 |
+|   LUT as Shift Register  |     0.025 |     1507 |     40320 |            3.74 |
+|   Register               |     0.007 |    20389 |    155520 |           13.11 |
 |   LUT as Distributed RAM |     0.002 |       54 |     40320 |            0.13 |
-|   CARRY8                 |    <0.001 |      423 |      9720 |            4.35 |
-|   Others                 |     0.000 |     2316 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      721 |     77760 |            0.93 |
-| Signals                  |     0.067 |    40662 |       --- |             --- |
-| Block RAM                |     0.196 |    133.5 |       144 |           92.71 |
+|   CARRY8                 |    <0.001 |      292 |      9720 |            3.00 |
+|   Others                 |     0.000 |     1748 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      367 |     77760 |            0.47 |
+| Signals                  |     0.049 |    30120 |       --- |             --- |
+| Block RAM                |     0.152 |      112 |       144 |           77.78 |
 | MMCM                     |     0.198 |        0 |       --- |             --- |
-| I/O                      |     0.303 |      133 |       204 |           65.20 |
+| I/O                      |     0.272 |      137 |       204 |           67.16 |
 | GTH                      |     0.148 |        1 |        12 |            8.33 |
-| Static Power             |     0.267 |          |           |                 |
-| Total                    |     1.418 |          |           |                 |
+| Static Power             |     0.266 |          |           |                 |
+| Total                    |     1.247 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,14 +77,14 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.850 |     0.626 |       0.570 |      0.056 |       NA    | Unspecified | NA         |
-| Vccint_io |       0.850 |     0.046 |       0.019 |      0.027 |       NA    | Unspecified | NA         |
-| Vccbram   |       0.850 |     0.029 |       0.028 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       0.850 |     0.471 |       0.416 |      0.055 |       NA    | Unspecified | NA         |
+| Vccint_io |       0.850 |     0.045 |       0.018 |      0.027 |       NA    | Unspecified | NA         |
+| Vccbram   |       0.850 |     0.019 |       0.018 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.174 |       0.110 |      0.064 |       NA    | Unspecified | NA         |
-| Vccaux_io |       1.800 |     0.108 |       0.085 |      0.023 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.102 |       0.079 |      0.023 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.075 |       0.075 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.064 |       0.064 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -162,27 +162,34 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| top_block_wrapper            |     1.151 |
+| top_block_wrapper            |     0.981 |
 |   dbg_hub                    |     0.003 |
 |     inst                     |     0.003 |
 |       BSCANID.u_xsdbm_id     |     0.003 |
-|   top_block_i                |     0.861 |
+|   top_block_i                |     0.833 |
 |     SAMPA_I2C_wrapper        |     0.002 |
 |       axi_iic_0              |     0.001 |
+|     SO_IN                    |     0.092 |
+|       util_ds_buf_5          |     0.023 |
+|       util_ds_buf_6          |     0.023 |
+|       util_ds_buf_7          |     0.023 |
+|       util_ds_buf_8          |     0.023 |
 |     appUnit                  |     0.116 |
-|       das_rx_0               |     0.029 |
-|       data_processor_0       |     0.008 |
+|       das_rx_0               |     0.035 |
+|       data_processor_0       |     0.011 |
 |       event_builder_v0_0     |     0.004 |
-|       fifo_generator_0       |     0.019 |
-|       fifo_generator_1       |     0.019 |
-|       fifo_generator_2       |     0.019 |
-|       fifo_generator_3       |     0.019 |
+|       fifo_generator_0       |     0.017 |
+|       fifo_generator_1       |     0.017 |
+|       fifo_generator_2       |     0.017 |
+|       fifo_generator_3       |     0.017 |
+|     axi_mem_intercon         |     0.001 |
+|       xbar                   |     0.001 |
 |     clk_wiz_0                |     0.101 |
 |       inst                   |     0.101 |
 |     clk_wiz_1                |     0.097 |
 |       inst                   |     0.097 |
-|     fakernet                 |     0.226 |
-|       fakernet_top_0         |     0.062 |
+|     fakernet                 |     0.227 |
+|       fakernet_top_0         |     0.064 |
 |       gig_ethernet_pcs_pma_0 |     0.162 |
 |     led_module               |     0.001 |
 |     reg_bram                 |     0.018 |
@@ -191,28 +198,20 @@ Table of Contents
 |       vio_0                  |     0.001 |
 |     util_ds_buf_0            |     0.080 |
 |       U0                     |     0.080 |
-|     util_ds_buf_1            |     0.050 |
-|       U0                     |     0.050 |
+|     util_ds_buf_1            |     0.019 |
+|       U0                     |     0.019 |
 |     util_ds_buf_2            |     0.050 |
 |       U0                     |     0.050 |
 |     util_ds_buf_3            |     0.013 |
 |       U0                     |     0.013 |
 |     util_ds_buf_4            |     0.013 |
 |       U0                     |     0.013 |
-|     util_ds_buf_5            |     0.023 |
-|       U0                     |     0.023 |
-|     util_ds_buf_6            |     0.023 |
-|       U0                     |     0.023 |
-|     util_ds_buf_7            |     0.023 |
-|       U0                     |     0.023 |
-|     util_ds_buf_8            |     0.023 |
-|       U0                     |     0.023 |
-|   u_ila_0                    |     0.135 |
-|     inst                     |     0.135 |
-|       ila_core_inst          |     0.135 |
-|   u_ila_1                    |     0.147 |
-|     inst                     |     0.147 |
-|       ila_core_inst          |     0.147 |
+|   u_ila_0                    |     0.122 |
+|     inst                     |     0.122 |
+|       ila_core_inst          |     0.122 |
+|   u_ila_1                    |     0.018 |
+|     inst                     |     0.018 |
+|       ila_core_inst          |     0.018 |
 |   u_ila_2                    |     0.005 |
 |     inst                     |     0.005 |
 |       ila_core_inst          |     0.005 |

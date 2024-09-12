@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date                      : Wed Aug 21 17:48:39 2024
+| Date                      : Thu Sep 12 20:02:15 2024
 | Host                      : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command                   : report_io -file top_block_wrapper_io_placed.rpt
 | Design                    : top_block_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           155 |
+|           159 |
 +---------------+
 
 
@@ -130,8 +130,8 @@ Table of Contents
 | C5         |                  |                  | GND                                | GND           |                |         |            |                         |      |                   |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | C6         |                  |                  | MGTAVCC_R                          | Gigabit Power |                |         |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
 | C7         |                  |                  | GND                                | GND           |                |         |            |                         |      |                   |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| C8         |                  | High Density     | IO_L6N_HDGC_85                     | GCLK          |                |      85 |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
-| C9         |                  | High Density     | IO_L9P_AD11P_85                    | User IO       |                |      85 |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
+| C8         | CG0[0]           | High Density     | IO_L6N_HDGC_85                     | OUTPUT        | LVCMOS12       |      85 |          8 |                         | SLOW |                   |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| C9         | POL[0]           | High Density     | IO_L9P_AD11P_85                    | OUTPUT        | LVCMOS12       |      85 |          8 |                         | SLOW |                   |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C10        | S_I2C_SCL        | High Density     | IO_L8N_HDGC_85                     | BIDIR         | LVCMOS12       |      85 |         12 |                         | SLOW |                   |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | C11        |                  | High Density     | IO_L8P_HDGC_85                     | GCLK          |                |      85 |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
 | C12        | SO3N[9]          | High Performance | IO_L24N_T3U_N11_66                 | INPUT         | SLVS_400_18    |      66 |            |                         |      |              NONE |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
@@ -152,8 +152,8 @@ Table of Contents
 | D5         |                  |                  | MGTHTXN1_226                       | Gigabit       |                |         |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
 | D6         |                  |                  | MGTHTXP1_226                       | Gigabit       |                |         |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
 | D7         |                  |                  | GND                                | GND           |                |         |            |                         |      |                   |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| D8         |                  | High Density     | IO_L6P_HDGC_85                     | GCLK          |                |      85 |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
-| D9         |                  | High Density     | IO_L5N_HDGC_85                     | GCLK          |                |      85 |            |                         |      |                   |                      |         |            |           |          |      |                  |              |                   |              |
+| D8         | CTS[0]           | High Density     | IO_L6P_HDGC_85                     | OUTPUT        | LVCMOS12       |      85 |          8 |                         | SLOW |                   |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| D9         | CG1[0]           | High Density     | IO_L5N_HDGC_85                     | OUTPUT        | LVCMOS12       |      85 |          8 |                         | SLOW |                   |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | D10        |                  |                  | GND                                | GND           |                |         |            |                         |      |                   |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | D11        | CLK_CFG[3]       | High Density     | IO_L7N_HDGC_85                     | OUTPUT        | LVCMOS12       |      85 |          8 |                         | SLOW |                   |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | D12        | SO3P[9]          | High Performance | IO_L24P_T3U_N10_66                 | INPUT         | SLVS_400_18    |      66 |            |                         |      |              NONE |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |

@@ -58,7 +58,7 @@
 module top_block_trigger_manager_0_0 (
   clk,
   reg_trg,
-  trg_i,
+  external_trg,
   busy_i,
   samples,
   trg,
@@ -69,7 +69,7 @@ module top_block_trigger_manager_0_0 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire reg_trg;
-input wire trg_i;
+input wire external_trg;
 input wire busy_i;
 output wire [3 : 0] samples;
 output wire trg;
@@ -78,7 +78,7 @@ output wire en;
   trigger_manager inst (
     .clk(clk),
     .reg_trg(reg_trg),
-    .trg_i(trg_i),
+    .external_trg(external_trg),
     .busy_i(busy_i),
     .samples(samples),
     .trg(trg),

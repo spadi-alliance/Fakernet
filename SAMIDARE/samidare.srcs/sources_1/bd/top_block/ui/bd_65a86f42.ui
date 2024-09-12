@@ -1,104 +1,104 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.850163",
-   "Default View_TopLeft":"-163,997",
+   "Default View_ScaleFactor":"0.523335",
+   "Default View_TopLeft":"-592,694",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x -30 -y 930 -defaultsOSRD
-preplace port port-id_user_clk -pg 1 -lvl 0 -x -30 -y 1120 -defaultsOSRD
-preplace port port-id_event_reset -pg 1 -lvl 0 -x -30 -y 1360 -defaultsOSRD
-preplace port port-id_event_free -pg 1 -lvl 0 -x -30 -y 1520 -defaultsOSRD
-preplace port port-id_clk125MHz -pg 1 -lvl 0 -x -30 -y 1330 -defaultsOSRD
-preplace port port-id_event_write -pg 1 -lvl 5 -x 1650 -y 1440 -defaultsOSRD
-preplace port port-id_event_commit -pg 1 -lvl 5 -x 1650 -y 1480 -defaultsOSRD
-preplace portBus event_word -pg 1 -lvl 5 -x 1650 -y 1400 -defaultsOSRD
-preplace portBus event_offset -pg 1 -lvl 5 -x 1650 -y 1420 -defaultsOSRD
-preplace portBus event_commit_len -pg 1 -lvl 5 -x 1650 -y 1460 -defaultsOSRD
-preplace portBus SO1 -pg 1 -lvl 0 -x -30 -y 720 -defaultsOSRD
-preplace portBus SO3 -pg 1 -lvl 0 -x -30 -y 760 -defaultsOSRD
-preplace portBus SO2 -pg 1 -lvl 0 -x -30 -y 740 -defaultsOSRD
-preplace portBus SO0 -pg 1 -lvl 0 -x -30 -y 700 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 4 -x 1430 -y 150 -defaultsOSRD
-preplace inst fifo_generator_1 -pg 1 -lvl 4 -x 1430 -y 430 -defaultsOSRD
-preplace inst fifo_generator_2 -pg 1 -lvl 4 -x 1430 -y 710 -defaultsOSRD
-preplace inst fifo_generator_3 -pg 1 -lvl 4 -x 1430 -y 1150 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -40 -y 930 -defaultsOSRD
+preplace port port-id_user_clk -pg 1 -lvl 0 -x -40 -y 1120 -defaultsOSRD
+preplace port port-id_event_reset -pg 1 -lvl 0 -x -40 -y 1360 -defaultsOSRD
+preplace port port-id_event_free -pg 1 -lvl 0 -x -40 -y 1520 -defaultsOSRD
+preplace port port-id_clk125MHz -pg 1 -lvl 0 -x -40 -y 1330 -defaultsOSRD
+preplace port port-id_event_write -pg 1 -lvl 5 -x 1660 -y 1440 -defaultsOSRD
+preplace port port-id_event_commit -pg 1 -lvl 5 -x 1660 -y 1480 -defaultsOSRD
+preplace portBus event_word -pg 1 -lvl 5 -x 1660 -y 1400 -defaultsOSRD
+preplace portBus event_offset -pg 1 -lvl 5 -x 1660 -y 1420 -defaultsOSRD
+preplace portBus event_commit_len -pg 1 -lvl 5 -x 1660 -y 1460 -defaultsOSRD
+preplace portBus SO1 -pg 1 -lvl 0 -x -40 -y 720 -defaultsOSRD
+preplace portBus SO3 -pg 1 -lvl 0 -x -40 -y 760 -defaultsOSRD
+preplace portBus SO2 -pg 1 -lvl 0 -x -40 -y 740 -defaultsOSRD
+preplace portBus SO0 -pg 1 -lvl 0 -x -40 -y 700 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 4 -x 1440 -y 150 -defaultsOSRD
+preplace inst fifo_generator_1 -pg 1 -lvl 4 -x 1440 -y 430 -defaultsOSRD
+preplace inst fifo_generator_2 -pg 1 -lvl 4 -x 1440 -y 710 -defaultsOSRD
+preplace inst fifo_generator_3 -pg 1 -lvl 4 -x 1440 -y 1150 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 1 -x 200 -y 840 -defaultsOSRD
-preplace inst xlconcat_3 -pg 1 -lvl 4 -x 1430 -y 930 -defaultsOSRD
-preplace inst das_rx_0 -pg 1 -lvl 2 -x 580 -y 720 -defaultsOSRD
-preplace inst xpm_cdc_gen_0 -pg 1 -lvl 2 -x 580 -y 1000 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 980 -y 380 -defaultsOSRD
-preplace inst util_vector_logic_1 -pg 1 -lvl 3 -x 980 -y 530 -defaultsOSRD
-preplace inst util_vector_logic_2 -pg 1 -lvl 3 -x 980 -y 700 -defaultsOSRD
-preplace inst util_vector_logic_3 -pg 1 -lvl 3 -x 980 -y 990 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 3 -x 980 -y 170 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 3 -x 980 -y 270 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 3 -x 980 -y 810 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 3 -x 980 -y 1200 -defaultsOSRD
+preplace inst xlconcat_3 -pg 1 -lvl 4 -x 1440 -y 930 -defaultsOSRD
+preplace inst xpm_cdc_gen_0 -pg 1 -lvl 2 -x 590 -y 1000 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 990 -y 380 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 3 -x 990 -y 530 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 3 -x 990 -y 700 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 3 -x 990 -y 990 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 990 -y 170 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 3 -x 990 -y 270 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 3 -x 990 -y 810 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 3 -x 990 -y 1200 -defaultsOSRD
 preplace inst xlconcat_1 -pg 1 -lvl 1 -x 200 -y 1030 -defaultsOSRD
-preplace inst event_builder_v0_0 -pg 1 -lvl 4 -x 1430 -y 1420 -defaultsOSRD
+preplace inst event_builder_v0_0 -pg 1 -lvl 4 -x 1440 -y 1420 -defaultsOSRD
+preplace inst data_processor_0 -pg 1 -lvl 2 -x 590 -y 1400 -defaultsOSRD
 preplace inst trigger_manager_0 -pg 1 -lvl 1 -x 200 -y 1230 -defaultsOSRD
-preplace inst data_processor_0 -pg 1 -lvl 2 -x 580 -y 1400 -defaultsOSRD
-preplace netloc clk1_1 1 0 4 30J 1340 390 1260 770J 1270 1180
-preplace netloc clk_1 1 0 4 NJ 930 360 450 NJ 450 1170
-preplace netloc das_rx_0_bus0 1 2 2 750 100 NJ
-preplace netloc das_rx_0_bus1 1 2 2 790 610 1140J
-preplace netloc das_rx_0_bus2 1 2 2 820 630 1130J
-preplace netloc das_rx_0_bus3 1 2 2 790 920 1140J
+preplace inst das_rx_0 -pg 1 -lvl 2 -x 590 -y 720 -defaultsOSRD
+preplace netloc clk1_1 1 0 4 20J 1340 400 1260 780J 1270 1190
+preplace netloc clk_1 1 0 4 NJ 930 370 450 NJ 450 1180
+preplace netloc das_rx_0_bus0 1 2 2 760 100 NJ
+preplace netloc das_rx_0_bus1 1 2 2 800 610 1150J
+preplace netloc das_rx_0_bus2 1 2 2 830 630 1140J
+preplace netloc das_rx_0_bus3 1 2 2 800 920 1150J
+preplace netloc das_rx_0_wr_en0 1 2 1 770 370n
+preplace netloc das_rx_0_wr_en1 1 2 1 780 520n
+preplace netloc das_rx_0_wr_en2 1 2 1 N 690
+preplace netloc das_rx_0_wr_en3 1 2 1 810 710n
+preplace netloc data_processor_0_bus_sel 1 2 2 N 1380 NJ
+preplace netloc data_processor_0_busy 1 0 3 60 1330 410J 1280 760
+preplace netloc data_processor_0_data_o 1 2 2 770 1370 1140J
+preplace netloc data_processor_0_last_data 1 2 2 N 1440 NJ
+preplace netloc data_processor_0_rd_en 1 2 1 790 170n
+preplace netloc data_processor_0_samples_o 1 2 2 780 1360 1230J
+preplace netloc data_processor_0_valid 1 2 2 N 1460 NJ
+preplace netloc event_builder_v0_0_busy 1 1 4 420 1560 NJ 1560 NJ 1560 1630
+preplace netloc event_builder_v0_0_data_ack 1 1 4 410 1570 NJ 1570 NJ 1570 1640
 preplace netloc event_builder_v0_0_event_commit 1 4 1 NJ 1480
 preplace netloc event_builder_v0_0_event_commit_len 1 4 1 NJ 1460
 preplace netloc event_builder_v0_0_event_offset 1 4 1 NJ 1420
 preplace netloc event_builder_v0_0_event_word 1 4 1 NJ 1400
 preplace netloc event_builder_v0_0_event_write 1 4 1 NJ 1440
-preplace netloc event_free_1 1 0 4 NJ 1520 NJ 1520 790J 1480 NJ
-preplace netloc event_reset_1 1 0 4 NJ 1360 410 1270 760J 1280 1150
-preplace netloc fifo_generator_0_empty 1 3 1 1220 160n
-preplace netloc fifo_generator_0_full 1 0 4 20 80 NJ 80 NJ 80 N
-preplace netloc fifo_generator_1_empty 1 3 1 1240 440n
-preplace netloc fifo_generator_1_full 1 0 4 30 90 NJ 90 NJ 90 1200J
-preplace netloc fifo_generator_2_empty 1 3 1 1230 720n
-preplace netloc fifo_generator_2_full 1 0 4 50 580 NJ 580 830J 620 1160J
-preplace netloc fifo_generator_3_empty 1 3 1 1240 960n
-preplace netloc fifo_generator_3_full 1 0 4 50 1120 350J 1080 NJ 1080 NJ
-preplace netloc user_clk_1 1 0 2 20 1130 340
-preplace netloc xlconcat_0_dout 1 1 1 330 780n
-preplace netloc probe_in1_1 1 0 2 NJ 720 NJ
-preplace netloc probe_in3_1 1 0 2 -10J 750 350J
-preplace netloc probe_in2_1 1 0 2 NJ 740 NJ
+preplace netloc event_free_1 1 0 4 NJ 1520 NJ 1520 800J 1480 NJ
+preplace netloc event_reset_1 1 0 4 NJ 1360 420 1270 770J 1280 1160
+preplace netloc fifo_generator_0_dout 1 0 4 -10 110 NJ 110 NJ 110 1220J
+preplace netloc fifo_generator_0_empty 1 3 1 1230 160n
+preplace netloc fifo_generator_0_full 1 0 4 10 80 NJ 80 NJ 80 N
+preplace netloc fifo_generator_1_dout 1 0 4 0 460 NJ 460 NJ 460 NJ
+preplace netloc fifo_generator_1_empty 1 3 1 1250 440n
+preplace netloc fifo_generator_1_full 1 0 4 20 90 NJ 90 NJ 90 1210J
+preplace netloc fifo_generator_2_dout 1 0 4 30 590 NJ 590 830J 600 1160
+preplace netloc fifo_generator_2_empty 1 3 1 1240 720n
+preplace netloc fifo_generator_2_full 1 0 4 40 580 NJ 580 840J 620 1170J
+preplace netloc fifo_generator_3_dout 1 0 4 50 1320 390J 1250 830J 1260 1240J
+preplace netloc fifo_generator_3_empty 1 3 1 1250 960n
+preplace netloc fifo_generator_3_full 1 0 4 40 1120 360J 1080 NJ 1080 NJ
 preplace netloc probe_in0_1 1 0 2 NJ 700 NJ
-preplace netloc fifo_generator_3_dout 1 0 4 60 1320 380J 1250 820J 1260 1230J
-preplace netloc fifo_generator_2_dout 1 0 4 40 590 NJ 590 820J 600 1150
-preplace netloc fifo_generator_1_dout 1 0 4 10 460 NJ 460 NJ 460 NJ
-preplace netloc fifo_generator_0_dout 1 0 4 0 110 NJ 110 NJ 110 1210J
+preplace netloc probe_in1_1 1 0 2 NJ 720 NJ
+preplace netloc probe_in2_1 1 0 2 NJ 740 NJ
+preplace netloc probe_in3_1 1 0 2 -20J 750 360J
+preplace netloc trigger_manager_0_busy 1 1 1 370 1020n
+preplace netloc trigger_manager_0_samples 1 1 1 340 1210n
+preplace netloc trigger_manager_0_trg 1 1 1 350 1230n
+preplace netloc user_clk_1 1 0 2 10 1130 350
+preplace netloc util_vector_logic_0_Res 1 3 1 1140 120n
+preplace netloc util_vector_logic_1_Res 1 3 1 1160 400n
+preplace netloc util_vector_logic_2_Res 1 3 1 1170 680n
+preplace netloc util_vector_logic_3_Res 1 3 1 1140 990n
+preplace netloc xlconcat_0_dout 1 1 1 340 780n
+preplace netloc xlconcat_1_dout 1 1 1 380 1030n
 preplace netloc xlconcat_3_dout 1 4 1 N 930
-preplace netloc trigger_manager_0_busy 1 1 1 360 1020n
-preplace netloc das_rx_0_wr_en0 1 2 1 760 370n
-preplace netloc das_rx_0_wr_en1 1 2 1 770 520n
-preplace netloc das_rx_0_wr_en2 1 2 1 N 690
-preplace netloc das_rx_0_wr_en3 1 2 1 800 710n
-preplace netloc xpm_cdc_gen_0_dest_out 1 2 1 810 390n
-preplace netloc util_vector_logic_0_Res 1 3 1 1130 120n
-preplace netloc util_vector_logic_1_Res 1 3 1 1150 400n
-preplace netloc util_vector_logic_2_Res 1 3 1 1160 680n
-preplace netloc util_vector_logic_3_Res 1 3 1 1130 990n
-preplace netloc data_processor_0_data_o 1 2 2 760 1370 1130J
-preplace netloc event_builder_v0_0_busy 1 1 4 410 1560 NJ 1560 NJ 1560 1620
-preplace netloc data_processor_0_bus_sel 1 2 2 N 1380 NJ
-preplace netloc data_processor_0_valid 1 2 2 N 1460 NJ
+preplace netloc xlslice_0_Dout 1 3 1 1180 170n
+preplace netloc xlslice_1_Dout 1 3 1 1200 270n
+preplace netloc xlslice_2_Dout 1 3 1 1150J 760n
 preplace netloc xlslice_3_Dout 1 3 1 NJ 1200
-preplace netloc xlslice_2_Dout 1 3 1 1140J 760n
-preplace netloc xlslice_1_Dout 1 3 1 1190 270n
-preplace netloc xlslice_0_Dout 1 3 1 1170 170n
-preplace netloc xlconcat_1_dout 1 1 1 370 1030n
-preplace netloc trigger_manager_0_trg 1 1 1 340 1230n
-preplace netloc trigger_manager_0_samples 1 1 1 330 1210n
-preplace netloc data_processor_0_busy 1 0 3 70 1330 400J 1280 750
-preplace netloc data_processor_0_samples_o 1 2 2 770 1360 1220J
-preplace netloc data_processor_0_last_data 1 2 2 N 1440 NJ
-preplace netloc data_processor_0_rd_en 1 2 1 780 170n
-preplace netloc event_builder_v0_0_data_ack 1 1 4 400 1570 NJ 1570 NJ 1570 1630
-levelinfo -pg 1 -30 200 580 980 1430 1650
-pagesize -pg 1 -db -bbox -sgen -170 0 1880 1580
+preplace netloc xpm_cdc_gen_0_dest_out 1 2 1 820 390n
+levelinfo -pg 1 -40 200 590 990 1440 1660
+pagesize -pg 1 -db -bbox -sgen -180 0 1890 1580
 "
 }
 0

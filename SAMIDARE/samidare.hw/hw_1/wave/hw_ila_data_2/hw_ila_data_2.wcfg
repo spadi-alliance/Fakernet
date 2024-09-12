@@ -9,146 +9,264 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,025"></ZoomEndTime>
-      <Cursor1Time time="377"></Cursor1Time>
+      <ZoomStartTime time="976"></ZoomStartTime>
+      <ZoomEndTime time="1,433"></ZoomEndTime>
+      <Cursor1Time time="1,106"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="551"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="17" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="top_block_i/appUnit/fifo_generator_0_dout">
+   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO0">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_0_dout[319:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_0_dout[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO0[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SO0[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO0[10]">
+      <obj_property name="ElementShortName">[10]</obj_property>
+      <obj_property name="ObjectShortName">[10]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="user_probe_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">user_probe_0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">user_probe_0[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">1.84467e+19</obj_property>
+      <obj_property name="AnalogYRRangeMax">3834</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO1[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SO1[10:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/fifo_generator_1_dout">
+   <wvobject type="vbus" fp_name="vbus1352">
+      <obj_property name="label">New Virtual Bus 38</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">203.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">424.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[10]">
+      <obj_property name="ElementShortName">[10]</obj_property>
+      <obj_property name="ObjectShortName">[10]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_1_dout[319:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_1_dout[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO2[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SO2[10:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/fifo_generator_2_dout">
+   <wvobject type="vbus" fp_name="vbus1602">
+      <obj_property name="label">so2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">556.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">600.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO2[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_2_dout[319:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_2_dout[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/SO3[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SO3[10:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/fifo_generator_3_dout">
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[10]">
+      <obj_property name="ElementShortName">[10]</obj_property>
+      <obj_property name="ObjectShortName">[10]</obj_property>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus1624">
+      <obj_property name="label">New Virtual Bus 55</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO3[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/wr_en0">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/fifo_generator_3_dout[319:0]</obj_property>
-      <obj_property name="ObjectShortName">fifo_generator_3_dout[319:0]</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/wr_en0</obj_property>
+      <obj_property name="ObjectShortName">wr_en0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/wr_en1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/wr_en1</obj_property>
+      <obj_property name="ObjectShortName">wr_en1</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/wr_en2">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/wr_en2</obj_property>
+      <obj_property name="ObjectShortName">wr_en2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/wr_en3">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/wr_en3</obj_property>
+      <obj_property name="ObjectShortName">wr_en3</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/full">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/full[3:0]</obj_property>
+      <obj_property name="ObjectShortName">full[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/event_commit">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/event_commit</obj_property>
-      <obj_property name="ObjectShortName">event_commit</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/event_commit_len">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/event_commit_len[10:0]</obj_property>
-      <obj_property name="ObjectShortName">event_commit_len[10:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/event_offset">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/event_offset[9:0]</obj_property>
-      <obj_property name="ObjectShortName">event_offset[9:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/event_word">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/event_word[29:28]</obj_property>
-      <obj_property name="ObjectShortName">event_word[29:28]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/event_builder_v0_0/event_write">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/event_write</obj_property>
-      <obj_property name="ObjectShortName">event_write</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/event_commit_len">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/event_commit_len[10:0]</obj_property>
-      <obj_property name="ObjectShortName">event_commit_len[10:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/event_offset">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/event_offset[9:0]</obj_property>
-      <obj_property name="ObjectShortName">event_offset[9:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/event_builder_v0_0/inst/event_word">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/event_builder_v0_0/inst/event_word[8:0]</obj_property>
-      <obj_property name="ObjectShortName">event_word[8:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_busy_i">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_busy_i</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_busy_i</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/data_processor_0/inst/busy">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/busy</obj_property>
-      <obj_property name="ObjectShortName">busy</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="top_block_i/appUnit/data_processor_0/inst/req">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/data_processor_0/inst/req[3:0]</obj_property>
-      <obj_property name="ObjectShortName">req[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="u_ila_1_state">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_state[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="u_ila_1_event_reset">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_1_event_reset</obj_property>
-      <obj_property name="ObjectShortName">u_ila_1_event_reset</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[10]">
+      <obj_property name="ElementShortName">[10]</obj_property>
+      <obj_property name="ObjectShortName">[10]</obj_property>
    </wvobject>
 </wave_config>
