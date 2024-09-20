@@ -149,7 +149,7 @@ module event_builder_v0 (
 //                    endcase
                     index <= 5'd0;
                     data_length <= 11'd0;
-                        data_ack_r <= 1'b0;
+                    data_ack_r <= 1'b0;
                 end
                 SENDING_EVENT: begin
 //                    rd_en_r <= 1'b0;
@@ -214,4 +214,12 @@ module event_builder_v0 (
             endcase
         end
     end
+    (*mark_debuig = "true"*) wire [9:0] probe [31:0];
+    
+    generate
+        genvar i;
+        for (i = 0; i < 31; i = i + 1) begin
+            assign probe[i] = busx_reg[319-i*10:320-(i+1)*10];
+        end
+    endgenerate
 endmodule

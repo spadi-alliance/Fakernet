@@ -25,6 +25,7 @@ module trigger_manager (
     input wire reg_trg,        // Register trigger value
     input wire external_trg,          // External trigger input
     input wire busy_i,         // Busy signal from downstream module
+    input wire [10:0] SO0,
     output reg [3:0] samples,  // Samples value to downstream module
     output reg trg,            // Trigger signal to data processor
     output wire en              // Enable signal for FIFO writing
@@ -34,7 +35,8 @@ module trigger_manager (
     reg busy_prev;             // Register to store previous busy signal state
     reg [16:0] trg_counter;    // Counter for 1ms trigger period (for 100MHz clock)
     reg trg_internal;          // Internal trigger signal
-    localparam TRG_PERIOD = 17'd100000;
+//    localparam TRG_PERIOD = 17'd100000;
+    localparam TRG_PERIOD = 17'd40;
     assign en = ~trg_active && ~busy_i;
     always @(posedge clk) begin
         // Default state
@@ -46,9 +48,11 @@ module trigger_manager (
             if (trg_counter >= TRG_PERIOD) begin
                 trg_counter <= 17'd0;
                 trg_internal <= 1'b1;  // Generate a trigger every 1ms
-            end else begin
+            end else if(trg_counter > 0)begin
                 trg_counter <= trg_counter + 1;
                 trg_internal <= 1'b0;
+            end else if(SO0[9:0]>10'd150)begin
+                trg_counter <= 1'b1;
             end
         end else begin
             trg_counter <= 17'd0;

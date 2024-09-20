@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Thu Aug 15 16:09:57 2024
+-- Date        : Thu Aug 15 16:09:56 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_5_0/top_block_util_ds_buf_5_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top top_block_util_ds_buf_5_0 -prefix
+--               top_block_util_ds_buf_5_0_ top_block_util_ds_buf_5_0_stub.vhdl
 -- Design      : top_block_util_ds_buf_5_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcau15p-sbvb484-1-i

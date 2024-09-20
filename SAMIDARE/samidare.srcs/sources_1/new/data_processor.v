@@ -121,14 +121,14 @@ module data_processor (
                         valid <= 1'b0;  // Clear valid signal when ack is received
                         if (counter == samples_i) begin
                             // If counter equals the set number of samples
-                            bus_sel_internal <= bus_sel_internal + 1;
-                            counter <= 8'd0;
                             if (bus_sel_internal == 2'd3) begin
                                 // If bus_sel equals 3, reset to WAIT state
                                 state <= WAIT;
                             end else begin
                                 state <= LOAD;
                             end
+                            bus_sel_internal <= bus_sel_internal + 1;
+                            counter <= 8'd0;
                         end else begin
                             // Continue reading data from the current FIFO
                             state <= LOAD;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Wed Aug 21 14:22:45 2024
+-- Date        : Wed Aug 21 14:22:44 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_1/top_block_xpm_cdc_gen_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_xpm_cdc_gen_0_1 -prefix
+--               top_block_xpm_cdc_gen_0_1_ top_block_xpm_cdc_gen_0_1_sim_netlist.vhdl
 -- Design      : top_block_xpm_cdc_gen_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity top_block_xpm_cdc_gen_0_1_xpm_cdc_single is
   attribute DEST_SYNC_FF of top_block_xpm_cdc_gen_0_1_xpm_cdc_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_block_xpm_cdc_gen_0_1_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xpm_cdc_gen_0_1_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_block_xpm_cdc_gen_0_1_xpm_cdc_single : entity is 1;
   attribute SRC_INPUT_REG : integer;
@@ -142,8 +140,6 @@ entity top_block_xpm_cdc_gen_0_1_xpm_cdc_gen_v1_0_2 is
   attribute INIT of top_block_xpm_cdc_gen_0_1_xpm_cdc_gen_v1_0_2 : entity is "1";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_block_xpm_cdc_gen_0_1_xpm_cdc_gen_v1_0_2 : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_xpm_cdc_gen_0_1_xpm_cdc_gen_v1_0_2 : entity is "xpm_cdc_gen_v1_0_2";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_block_xpm_cdc_gen_0_1_xpm_cdc_gen_v1_0_2 : entity is 0;
   attribute RST_ACTIVE_HIGH : integer;

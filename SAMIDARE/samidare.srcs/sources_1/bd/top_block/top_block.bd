@@ -97,10 +97,10 @@
         "xlslice_2": "",
         "xlslice_3": "",
         "xlconcat_1": "",
-        "event_builder_v0_0": "",
+        "das_rx_0": "",
         "data_processor_0": "",
-        "trigger_manager_0": "",
-        "das_rx_0": ""
+        "event_builder_v0_0": "",
+        "trigger_manager_0": ""
       },
       "util_vector_logic_4": "",
       "GainConfig": {
@@ -5324,6 +5324,9 @@
             "direction": "I",
             "left": "10",
             "right": "0"
+          },
+          "en": {
+            "direction": "I"
           }
         },
         "components": {
@@ -5340,7 +5343,7 @@
                 "value": "320"
               },
               "Input_Depth": {
-                "value": "16"
+                "value": "32"
               },
               "Performance_Options": {
                 "value": "First_Word_Fall_Through"
@@ -5587,6 +5590,263 @@
               }
             }
           },
+          "das_rx_0": {
+            "vlnv": "xilinx.com:module_ref:das_rx:1.0",
+            "xci_name": "top_block_das_rx_0_0",
+            "xci_path": "ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci",
+            "inst_hier_path": "appUnit/das_rx_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "das_rx",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_SO": {
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "320000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_1_0_clk_out1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "user_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_0_0_clk_out1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "en": {
+                "direction": "I"
+              },
+              "SO0": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "default_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "default_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_5_0_IBUF_OUT",
+                    "value_src": "default_prop"
+                  },
+                  "PortWidth": {
+                    "value": "11",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "SO1": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "11",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "SO2": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "11",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "SO3": {
+                "direction": "I",
+                "left": "10",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "11",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "full": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "wr_en0": {
+                "direction": "O",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "wr_en1": {
+                "direction": "O",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "wr_en2": {
+                "direction": "O",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "wr_en3": {
+                "direction": "O",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "bus0": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus1": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus2": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus3": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              }
+            }
+          },
+          "data_processor_0": {
+            "vlnv": "xilinx.com:module_ref:data_processor:1.0",
+            "xci_name": "top_block_data_processor_0_0",
+            "xci_path": "ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci",
+            "inst_hier_path": "appUnit/data_processor_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "data_processor",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "event_reset": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "trg": {
+                "direction": "I"
+              },
+              "ack": {
+                "direction": "I"
+              },
+              "busy_i": {
+                "direction": "I"
+              },
+              "fifo_data_i": {
+                "direction": "I",
+                "left": "1279",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "1280",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "samples_i": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "samples_o": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "data_out": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus_sel": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "req": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "busy": {
+                "direction": "O"
+              },
+              "last_data": {
+                "direction": "O"
+              },
+              "valid": {
+                "direction": "O"
+              }
+            }
+          },
           "event_builder_v0_0": {
             "vlnv": "xilinx.com:module_ref:event_builder_v0:1.0",
             "xci_name": "top_block_event_builder_v0_0_0",
@@ -5670,81 +5930,6 @@
               }
             }
           },
-          "data_processor_0": {
-            "vlnv": "xilinx.com:module_ref:data_processor:1.0",
-            "xci_name": "top_block_data_processor_0_0",
-            "xci_path": "ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci",
-            "inst_hier_path": "appUnit/data_processor_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "data_processor",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "event_reset": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "trg": {
-                "direction": "I"
-              },
-              "ack": {
-                "direction": "I"
-              },
-              "busy_i": {
-                "direction": "I"
-              },
-              "fifo_data_i": {
-                "direction": "I",
-                "left": "1279",
-                "right": "0",
-                "parameters": {
-                  "PortWidth": {
-                    "value": "1280",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "samples_i": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "samples_o": {
-                "direction": "O",
-                "left": "3",
-                "right": "0"
-              },
-              "data_out": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              },
-              "bus_sel": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "req": {
-                "direction": "O",
-                "left": "3",
-                "right": "0"
-              },
-              "busy": {
-                "direction": "O"
-              },
-              "last_data": {
-                "direction": "O"
-              },
-              "valid": {
-                "direction": "O"
-              }
-            }
-          },
           "trigger_manager_0": {
             "vlnv": "xilinx.com:module_ref:trigger_manager:1.0",
             "xci_name": "top_block_trigger_manager_0_0",
@@ -5758,13 +5943,7 @@
             "ports": {
               "clk": {
                 "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "CLK_DOMAIN": {
-                    "value": "top_block_clk_wiz_0_0_clk_out1",
-                    "value_src": "default_prop"
-                  }
-                }
+                "direction": "I"
               },
               "reg_trg": {
                 "direction": "I"
@@ -5774,6 +5953,11 @@
               },
               "busy_i": {
                 "direction": "I"
+              },
+              "SO0": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
               },
               "samples": {
                 "direction": "O",
@@ -5787,83 +5971,6 @@
                 "direction": "O"
               }
             }
-          },
-          "das_rx_0": {
-            "vlnv": "xilinx.com:module_ref:das_rx:1.0",
-            "xci_name": "top_block_das_rx_0_0",
-            "xci_path": "ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci",
-            "inst_hier_path": "appUnit/das_rx_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "das_rx",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk_SO": {
-                "direction": "I"
-              },
-              "user_clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "SO0": {
-                "direction": "I",
-                "left": "10",
-                "right": "0"
-              },
-              "SO1": {
-                "direction": "I",
-                "left": "10",
-                "right": "0"
-              },
-              "SO2": {
-                "direction": "I",
-                "left": "10",
-                "right": "0"
-              },
-              "SO3": {
-                "direction": "I",
-                "left": "10",
-                "right": "0"
-              },
-              "full": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "wr_en0": {
-                "direction": "O"
-              },
-              "wr_en1": {
-                "direction": "O"
-              },
-              "wr_en2": {
-                "direction": "O"
-              },
-              "wr_en3": {
-                "direction": "O"
-              },
-              "bus0": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              },
-              "bus1": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              },
-              "bus2": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              },
-              "bus3": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              }
-            }
           }
         },
         "nets": {
@@ -5874,8 +5981,8 @@
               "fifo_generator_2/rd_clk",
               "fifo_generator_1/rd_clk",
               "fifo_generator_0/rd_clk",
-              "event_builder_v0_0/clk",
-              "data_processor_0/clk"
+              "data_processor_0/clk",
+              "event_builder_v0_0/clk"
             ]
           },
           "clk_1": {
@@ -5982,6 +6089,12 @@
               "event_builder_v0_0/data_wr"
             ]
           },
+          "en_1": {
+            "ports": [
+              "en",
+              "das_rx_0/en"
+            ]
+          },
           "event_builder_v0_0_busy": {
             "ports": [
               "event_builder_v0_0/busy",
@@ -6033,8 +6146,8 @@
           "event_reset_1": {
             "ports": [
               "event_reset",
-              "event_builder_v0_0/event_reset",
-              "data_processor_0/event_reset"
+              "data_processor_0/event_reset",
+              "event_builder_v0_0/event_reset"
             ]
           },
           "fifo_generator_0_dout": {
@@ -6112,7 +6225,8 @@
           "probe_in0_1": {
             "ports": [
               "SO0",
-              "das_rx_0/SO0"
+              "das_rx_0/SO0",
+              "trigger_manager_0/SO0"
             ]
           },
           "probe_in1_1": {
@@ -6155,8 +6269,8 @@
             "ports": [
               "user_clk",
               "xpm_cdc_gen_0/src_clk",
-              "trigger_manager_0/clk",
-              "das_rx_0/user_clk"
+              "das_rx_0/user_clk",
+              "trigger_manager_0/clk"
             ]
           },
           "util_vector_logic_0_Res": {
@@ -8479,7 +8593,8 @@
       "fakernet_trg_en": {
         "ports": [
           "fakernet/trg_en",
-          "TRG_MODULE_0/en"
+          "TRG_MODULE_0/en",
+          "appUnit/en"
         ]
       },
       "fakernet_txn_0": {
@@ -8707,7 +8822,9 @@
     },
     "comments": {
       "/": {
-        "comment_0": "clk_out1: 40MHz\n\n"
+        "comment_0": "clk_out1: 40MHz\n\n",
+        "comment_1": "POL 1:Neg, 0:Pos\n\nGain: Shaping Time: (CTS,CG0,CG1)\n30mV/fC : 160ns : (low,high,high)\n20mV/fC : 160ns : (low,low,high)\n  4mV/fC : 300ns : (high,low,low)\n\nother modes are unsuppprted",
+        "comment_2": "some SO pins have inverse POL.\nproper not gate is added"
       }
     },
     "addressing": {

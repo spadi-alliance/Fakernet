@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Thu Aug 15 16:09:57 2024
+-- Date        : Thu Aug 15 16:09:56 2024
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_util_ds_buf_0_1 -prefix
+--               top_block_util_ds_buf_0_1_ top_block_util_ds_buf_0_1_sim_netlist.vhdl
 -- Design      : top_block_util_ds_buf_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -140,8 +140,6 @@ entity top_block_util_ds_buf_0_1_util_ds_buf is
   attribute C_SIM_DEVICE of top_block_util_ds_buf_0_1_util_ds_buf : entity is "VERSAL_AI_CORE_ES1";
   attribute C_SIZE : integer;
   attribute C_SIZE of top_block_util_ds_buf_0_1_util_ds_buf : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_util_ds_buf_0_1_util_ds_buf : entity is "util_ds_buf";
 end top_block_util_ds_buf_0_1_util_ds_buf;
 
 architecture STRUCTURE of top_block_util_ds_buf_0_1_util_ds_buf is

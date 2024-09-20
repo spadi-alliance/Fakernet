@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Thu Sep 12 19:03:26 2024
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_block_TRG_MODULE_0_0 -prefix
+//               top_block_TRG_MODULE_0_0_ top_block_TRG_MODULE_0_0_sim_netlist.v
 // Design      : top_block_TRG_MODULE_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
