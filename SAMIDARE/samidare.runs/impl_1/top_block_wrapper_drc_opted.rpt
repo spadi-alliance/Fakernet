@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sun Sep 15 02:37:37 2024
+| Date         : Mon Oct  7 11:40:36 2024
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_drc -file top_block_wrapper_drc_opted.rpt -pb top_block_wrapper_drc_opted.pb -rpx top_block_wrapper_drc_opted.rpx
 | Design       : top_block_wrapper
@@ -41,7 +41,7 @@ Related violations: <none>
 
 REQP-1852#1 Warning
 BUFGCE_cascade_from_clock_buf  
-Cascaded clock buffers exist in the design with constant CE pin. This may result in large clock skew and timing violations. Cell BUFGCE top_block_i/clk_wiz_1/inst/clkin1_bufg I pin is driven by another clock buffer top_block_i/clk_wiz_0/inst/clkout1_buf.
+Cascaded clock buffers exist in the design with constant CE pin. This may result in large clock skew and timing violations. Cell BUFGCE top_block_i/CLK_WRAPPER/clk_wiz_1/inst/clkin1_bufg I pin is driven by another clock buffer top_block_i/CLK_WRAPPER/clk_wiz_0/inst/clkout1_buf.
 Related violations: <none>
 
 

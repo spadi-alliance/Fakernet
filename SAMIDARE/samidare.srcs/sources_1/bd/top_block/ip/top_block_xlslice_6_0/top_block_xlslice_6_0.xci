@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_xlslice_6_0",
-    "cell_name": "SO_IN/slice_rev_concat1/xlslice_6",
+    "cell_name": "SO_IN/slice_rev_concat3/xlslice_6",
     "component_reference": "xilinx.com:ip:xlslice:1.0",
     "ip_revision": "2",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_xlslice_6_0",

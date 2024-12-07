@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_clk_wiz_1_0",
-    "cell_name": "clk_wiz_1",
+    "cell_name": "CLK_WRAPPER/clk_wiz_1",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "11",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0",

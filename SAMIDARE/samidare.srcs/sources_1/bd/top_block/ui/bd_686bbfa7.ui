@@ -1,0 +1,55 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-477,-49",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port m00_axi -pg 1 -lvl 2 -x 430 -y 70 -defaultsOSRD
+preplace port m00_axi1 -pg 1 -lvl 2 -x 430 -y 430 -defaultsOSRD
+preplace port m00_axi2 -pg 1 -lvl 2 -x 430 -y 90 -defaultsOSRD
+preplace port m00_axi3 -pg 1 -lvl 2 -x 430 -y 240 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace port port-id_S_I2C_SCL -pg 1 -lvl 2 -x 430 -y 490 -defaultsOSRD
+preplace port port-id_S_I2C_SDA -pg 1 -lvl 2 -x 430 -y 510 -defaultsOSRD
+preplace port port-id_SAMPA_EN_A -pg 1 -lvl 2 -x 430 -y 260 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_fnet_txn -pg 1 -lvl 0 -x -10 -y 110 -defaultsOSRD
+preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
+preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x -10 -y 460 -defaultsOSRD
+preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
+preplace port port-id_i2c_done -pg 1 -lvl 2 -x 430 -y 450 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 2 -x 430 -y 110 -defaultsOSRD
+preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
+preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
+preplace portBus i2c_rdata_o -pg 1 -lvl 2 -x 430 -y 470 -defaultsOSRD
+preplace inst led_module -pg 1 -lvl 1 -x 220 -y 90 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper -pg 1 -lvl 1 -x 220 -y 470 -defaultsOSRD
+preplace inst SAMPA_PON_v1_0_0 -pg 1 -lvl 1 -x 220 -y 270 -defaultsOSRD
+preplace netloc s_axi_aclk_1 1 0 1 NJ 540
+preplace netloc m00_axi_aclk_1 1 0 1 20 70n
+preplace netloc led_module_LED 1 1 1 NJ 110
+preplace netloc Net 1 1 1 NJ 490
+preplace netloc Net1 1 1 1 NJ 510
+preplace netloc SAMPA_PON_v1_0_0_sampa_power_on 1 0 2 30 180 410
+preplace netloc reset_1 1 0 1 NJ 50
+preplace netloc m00_axi_aresetn_1 1 0 1 10 90n
+preplace netloc fnet_txn_1 1 0 1 NJ 110
+preplace netloc start_i2c_read_1 1 0 1 NJ 440
+preplace netloc start_i2c_write_1 1 0 1 NJ 460
+preplace netloc start_i2c_write_all_1 1 0 1 NJ 480
+preplace netloc i2c_waddr_i_1 1 0 1 NJ 500
+preplace netloc i2c_raddr_i_1 1 0 1 NJ 520
+preplace netloc SAMPA_I2C_wrapper_i2c_rdata_o 1 1 1 NJ 470
+preplace netloc SAMPA_I2C_wrapper_i2c_done 1 1 1 NJ 450
+preplace netloc Conn1 1 1 1 NJ 70
+preplace netloc Conn2 1 1 1 NJ 430
+preplace netloc Conn3 1 1 1 NJ 90
+preplace netloc Conn4 1 1 1 NJ 240
+levelinfo -pg 1 -10 220 430
+pagesize -pg 1 -db -bbox -sgen -190 -10 610 590
+"
+}
+

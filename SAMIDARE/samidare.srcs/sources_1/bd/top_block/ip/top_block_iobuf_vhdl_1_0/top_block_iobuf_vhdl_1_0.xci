@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_iobuf_vhdl_1_0",
-    "cell_name": "iobuf_vhdl_1",
+    "cell_name": "SAMPA_I2C_wrapper/iobuf_vhdl_1",
     "component_reference": "xilinx.com:module_ref:iobuf_vhdl:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_iobuf_vhdl_1_0",

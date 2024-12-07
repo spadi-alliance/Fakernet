@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_fifo_generator_0_4",
-    "cell_name": "appUnit/fifo_generator_3",
+    "cell_name": "appUnit/FIFO_WRAPPER/fifo_generator_3",
     "component_reference": "xilinx.com:ip:fifo_generator:13.2",
     "ip_revision": "7",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_4",

@@ -34,7 +34,8 @@ module trigger_manager (
     reg trg_active;            // Register to indicate if trigger is active
     reg busy_prev;             // Register to store previous busy signal state
     reg [16:0] trg_counter;    // Counter for 1ms trigger period (for 100MHz clock)
-    reg trg_internal;          // Internal trigger signal
+    reg [3:0] trg_internal;          // Internal trigger signal. 
+    //TBD:0:clock, 1: self is planned
 //    localparam TRG_PERIOD = 17'd100000;
     localparam TRG_PERIOD = 17'd40;
     assign en = ~trg_active && ~busy_i;
