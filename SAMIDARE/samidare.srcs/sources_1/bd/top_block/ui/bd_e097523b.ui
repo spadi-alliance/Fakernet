@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.877589",
-   "Default View_TopLeft":"-366,-188",
+   "Default View_ScaleFactor":"0.540219",
+   "Default View_TopLeft":"-864,-257",
    "ExpandedHierarchyInLayout":"",
    "comment_0":"some SO pins have inverse POL.
 proper not gate is added",
@@ -47,10 +47,10 @@ preplace netloc util_ds_buf_7_IBUF_OUT 1 2 1 NJ 360
 preplace netloc util_ds_buf_8_IBUF_OUT 1 2 1 NJ 500
 preplace cgraphic comment_0 place top 376 -27 textcolor 4 linecolor 3 linewidth 2
 levelinfo -pg 1 0 130 400 700 850
-pagesize -pg 1 -db -bbox -sgen -140 -100 1030 580
+pagesize -pg 1 -db -bbox -sgen -120 -100 1010 580
 "
 }
 0
 {
-   "/comment_2":"comment_0"
+   "/comment_4":"comment_0"
 }

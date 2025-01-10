@@ -57,8 +57,8 @@
       },
       "appUnit": {
         "xlconcat_0": "",
-        "xlconcat_3": "",
-        "xlconcat_1": "",
+        "fifo_empty": "",
+        "fifo_dout": "",
         "das_rx_0": "",
         "data_processor_0": "",
         "event_builder_v0_0": "",
@@ -176,7 +176,7 @@
         "util_ds_buf_0": "",
         "xlconcat_0": ""
       },
-      "CONST_QRAPPER": {
+      "CONST_WRAPPER": {
         "clk_wiz_2": "",
         "util_ds_buf_2": "",
         "util_ds_buf_3": "",
@@ -206,6 +206,10 @@
           "iobuf_vhdl_1": ""
         },
         "SAMPA_PON_v1_0_0": ""
+      },
+      "gpio": {
+        "util_ds_buf_0": "",
+        "GPIO_Controller_0": ""
       }
     },
     "ports": {
@@ -3256,6 +3260,9 @@
           "rst": {
             "type": "rst",
             "direction": "I"
+          },
+          "external_trg": {
+            "direction": "I"
           }
         },
         "components": {
@@ -3270,22 +3277,22 @@
               }
             }
           },
-          "xlconcat_3": {
+          "fifo_empty": {
             "vlnv": "xilinx.com:ip:xlconcat:2.1",
             "xci_name": "top_block_xlconcat_0_2",
             "xci_path": "ip/top_block_xlconcat_0_2/top_block_xlconcat_0_2.xci",
-            "inst_hier_path": "appUnit/xlconcat_3",
+            "inst_hier_path": "appUnit/fifo_empty",
             "parameters": {
               "NUM_PORTS": {
                 "value": "4"
               }
             }
           },
-          "xlconcat_1": {
+          "fifo_dout": {
             "vlnv": "xilinx.com:ip:xlconcat:2.1",
             "xci_name": "top_block_xlconcat_1_2",
             "xci_path": "ip/top_block_xlconcat_1_2/top_block_xlconcat_1_2.xci",
-            "inst_hier_path": "appUnit/xlconcat_1",
+            "inst_hier_path": "appUnit/fifo_dout",
             "parameters": {
               "NUM_PORTS": {
                 "value": "4"
@@ -6243,49 +6250,49 @@
           "FIFO_WRAPPER_dout": {
             "ports": [
               "FIFO_WRAPPER/dout",
-              "xlconcat_1/In0"
+              "fifo_dout/In0"
             ]
           },
           "FIFO_WRAPPER_dout1": {
             "ports": [
               "FIFO_WRAPPER/dout1",
-              "xlconcat_1/In1"
+              "fifo_dout/In1"
             ]
           },
           "FIFO_WRAPPER_dout2": {
             "ports": [
               "FIFO_WRAPPER/dout2",
-              "xlconcat_1/In2"
+              "fifo_dout/In2"
             ]
           },
           "FIFO_WRAPPER_dout3": {
             "ports": [
               "FIFO_WRAPPER/dout3",
-              "xlconcat_1/In3"
+              "fifo_dout/In3"
             ]
           },
           "FIFO_WRAPPER_empty": {
             "ports": [
               "FIFO_WRAPPER/empty",
-              "xlconcat_3/In0"
+              "fifo_empty/In0"
             ]
           },
           "FIFO_WRAPPER_empty1": {
             "ports": [
               "FIFO_WRAPPER/empty1",
-              "xlconcat_3/In1"
+              "fifo_empty/In1"
             ]
           },
           "FIFO_WRAPPER_empty2": {
             "ports": [
               "FIFO_WRAPPER/empty2",
-              "xlconcat_3/In2"
+              "fifo_empty/In2"
             ]
           },
           "FIFO_WRAPPER_empty3": {
             "ports": [
               "FIFO_WRAPPER/empty3",
-              "xlconcat_3/In3"
+              "fifo_empty/In3"
             ]
           },
           "FIFO_WRAPPER_full": {
@@ -6559,6 +6566,12 @@
               "event_builder_v0_0/event_reset"
             ]
           },
+          "external_trg_1": {
+            "ports": [
+              "external_trg",
+              "trigger_manager_0/external_trg"
+            ]
+          },
           "probe_in0_1": {
             "ports": [
               "SO_IN/IBUF_OUT0",
@@ -6630,13 +6643,13 @@
           },
           "xlconcat_1_dout": {
             "ports": [
-              "xlconcat_1/dout",
+              "fifo_dout/dout",
               "data_processor_0/fifo_data_i"
             ]
           },
           "xlconcat_3_dout": {
             "ports": [
-              "xlconcat_3/dout"
+              "fifo_empty/dout"
             ]
           }
         }
@@ -6809,7 +6822,7 @@
           }
         }
       },
-      "CONST_QRAPPER": {
+      "CONST_WRAPPER": {
         "ports": {
           "clk_in1": {
             "type": "clk",
@@ -6862,7 +6875,7 @@
             "vlnv": "xilinx.com:ip:clk_wiz:6.0",
             "xci_name": "top_block_clk_wiz_2_0",
             "xci_path": "ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0.xci",
-            "inst_hier_path": "CONST_QRAPPER/clk_wiz_2",
+            "inst_hier_path": "CONST_WRAPPER/clk_wiz_2",
             "parameters": {
               "AUTO_PRIMITIVE": {
                 "value": "MMCM"
@@ -6933,7 +6946,7 @@
             "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
             "xci_name": "top_block_util_ds_buf_2_0",
             "xci_path": "ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0.xci",
-            "inst_hier_path": "CONST_QRAPPER/util_ds_buf_2",
+            "inst_hier_path": "CONST_WRAPPER/util_ds_buf_2",
             "parameters": {
               "C_BUF_TYPE": {
                 "value": "OBUFDS"
@@ -6947,7 +6960,7 @@
             "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
             "xci_name": "top_block_util_ds_buf_3_2",
             "xci_path": "ip/top_block_util_ds_buf_3_2/top_block_util_ds_buf_3_2.xci",
-            "inst_hier_path": "CONST_QRAPPER/util_ds_buf_3",
+            "inst_hier_path": "CONST_WRAPPER/util_ds_buf_3",
             "parameters": {
               "C_BUF_TYPE": {
                 "value": "OBUFDS"
@@ -6958,7 +6971,7 @@
             "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
             "xci_name": "top_block_util_vector_logic_1_3",
             "xci_path": "ip/top_block_util_vector_logic_1_3/top_block_util_vector_logic_1_3.xci",
-            "inst_hier_path": "CONST_QRAPPER/util_vector_logic_1",
+            "inst_hier_path": "CONST_WRAPPER/util_vector_logic_1",
             "parameters": {
               "C_OPERATION": {
                 "value": "not"
@@ -6972,7 +6985,7 @@
             "vlnv": "xilinx.com:ip:xlconcat:2.1",
             "xci_name": "top_block_xlconcat_2_1",
             "xci_path": "ip/top_block_xlconcat_2_1/top_block_xlconcat_2_1.xci",
-            "inst_hier_path": "CONST_QRAPPER/xlconcat_2",
+            "inst_hier_path": "CONST_WRAPPER/xlconcat_2",
             "parameters": {
               "IN0_WIDTH": {
                 "value": "1"
@@ -6995,13 +7008,13 @@
             "vlnv": "xilinx.com:ip:xlconstant:1.1",
             "xci_name": "top_block_xlconstant_1_4",
             "xci_path": "ip/top_block_xlconstant_1_4/top_block_xlconstant_1_4.xci",
-            "inst_hier_path": "CONST_QRAPPER/xlconstant_1"
+            "inst_hier_path": "CONST_WRAPPER/xlconstant_1"
           },
           "util_vector_logic_4": {
             "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
             "xci_name": "top_block_util_vector_logic_3_2",
             "xci_path": "ip/top_block_util_vector_logic_3_2/top_block_util_vector_logic_3_2.xci",
-            "inst_hier_path": "CONST_QRAPPER/util_vector_logic_4",
+            "inst_hier_path": "CONST_WRAPPER/util_vector_logic_4",
             "parameters": {
               "C_OPERATION": {
                 "value": "not"
@@ -7015,7 +7028,7 @@
             "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
             "xci_name": "top_block_util_ds_buf_4_1",
             "xci_path": "ip/top_block_util_ds_buf_4_1/top_block_util_ds_buf_4_1.xci",
-            "inst_hier_path": "CONST_QRAPPER/util_ds_buf_4",
+            "inst_hier_path": "CONST_WRAPPER/util_ds_buf_4",
             "parameters": {
               "C_BUF_TYPE": {
                 "value": "OBUFDS"
@@ -7029,7 +7042,7 @@
             "vlnv": "xilinx.com:ip:xlconstant:1.1",
             "xci_name": "top_block_xlconstant_0_3",
             "xci_path": "ip/top_block_xlconstant_0_3/top_block_xlconstant_0_3.xci",
-            "inst_hier_path": "CONST_QRAPPER/xlconstant_0",
+            "inst_hier_path": "CONST_WRAPPER/xlconstant_0",
             "parameters": {
               "CONST_VAL": {
                 "value": "0b1010011"
@@ -9599,6 +9612,145 @@
             ]
           }
         }
+      },
+      "gpio": {
+        "ports": {
+          "GPIOP": {
+            "direction": "IO",
+            "left": "7",
+            "right": "0"
+          },
+          "GPION": {
+            "direction": "IO",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "trgout": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "util_ds_buf_0": {
+            "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+            "xci_name": "top_block_util_ds_buf_0_2",
+            "xci_path": "ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2.xci",
+            "inst_hier_path": "gpio/util_ds_buf_0",
+            "parameters": {
+              "C_BUF_TYPE": {
+                "value": "IOBUFDS"
+              },
+              "C_SIZE": {
+                "value": "8"
+              }
+            }
+          },
+          "GPIO_Controller_0": {
+            "vlnv": "xilinx.com:module_ref:GPIO_Controller:1.0",
+            "xci_name": "top_block_GPIO_Controller_0_0",
+            "xci_path": "ip/top_block_GPIO_Controller_0_0/top_block_GPIO_Controller_0_0.xci",
+            "inst_hier_path": "gpio/GPIO_Controller_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "GPIO_Controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "CLK_DOMAIN": {
+                    "value": "top_block_clk_wiz_1_0_clk_out1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "GPIO_IN": {
+                "direction": "I",
+                "left": "7",
+                "right": "0",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "top_block_util_ds_buf_0_2_IOBUF_IO_O",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "GPIO_OUT": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "GPIO_T": {
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "trgout": {
+                "direction": "O"
+              },
+              "trgin": {
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "nets": {
+          "GPIO_Controller_0_GPIO_OUT": {
+            "ports": [
+              "GPIO_Controller_0/GPIO_OUT",
+              "util_ds_buf_0/IOBUF_IO_I"
+            ]
+          },
+          "GPIO_Controller_0_GPIO_T": {
+            "ports": [
+              "GPIO_Controller_0/GPIO_T",
+              "util_ds_buf_0/IOBUF_IO_T"
+            ]
+          },
+          "GPIO_Controller_0_trgout": {
+            "ports": [
+              "GPIO_Controller_0/trgout",
+              "trgout"
+            ]
+          },
+          "Net": {
+            "ports": [
+              "GPIOP",
+              "util_ds_buf_0/IOBUF_DS_P"
+            ]
+          },
+          "Net1": {
+            "ports": [
+              "GPION",
+              "util_ds_buf_0/IOBUF_DS_N"
+            ]
+          },
+          "clk_1": {
+            "ports": [
+              "clk",
+              "GPIO_Controller_0/clk"
+            ]
+          },
+          "util_ds_buf_0_IOBUF_IO_O": {
+            "ports": [
+              "util_ds_buf_0/IOBUF_IO_O",
+              "GPIO_Controller_0/GPIO_IN"
+            ]
+          }
+        }
       }
     },
     "interface_nets": {
@@ -9654,43 +9806,43 @@
       },
       "CONST_HRSTB_ETC_BX_SYNC_TRG_N": {
         "ports": [
-          "CONST_QRAPPER/BX_SYNC_TRG_N",
+          "CONST_WRAPPER/BX_SYNC_TRG_N",
           "BX_SYNC_TRG_N"
         ]
       },
       "CONST_HRSTB_ETC_BX_SYNC_TRG_P": {
         "ports": [
-          "CONST_QRAPPER/BX_SYNC_TRG_P",
+          "CONST_WRAPPER/BX_SYNC_TRG_P",
           "BX_SYNC_TRG_P"
         ]
       },
       "CONST_HRSTB_ETC_HBTRG_N": {
         "ports": [
-          "CONST_QRAPPER/HBTRG_N",
+          "CONST_WRAPPER/HBTRG_N",
           "HBTRG_N"
         ]
       },
       "CONST_HRSTB_ETC_HBTRG_P": {
         "ports": [
-          "CONST_QRAPPER/HBTRG_P",
+          "CONST_WRAPPER/HBTRG_P",
           "HBTRG_P"
         ]
       },
       "CONST_HRSTB_ETC_HRSTB_N": {
         "ports": [
-          "CONST_QRAPPER/HRSTB_N",
+          "CONST_WRAPPER/HRSTB_N",
           "HRSTB_N"
         ]
       },
       "CONST_HRSTB_ETC_HRSTB_P": {
         "ports": [
-          "CONST_QRAPPER/HRSTB_P",
+          "CONST_WRAPPER/HRSTB_P",
           "HRSTB_P"
         ]
       },
       "CONST_QRAPPER_CLK_CFG": {
         "ports": [
-          "CONST_QRAPPER/CLK_CFG",
+          "CONST_WRAPPER/CLK_CFG",
           "CLK_CFG"
         ]
       },
@@ -9728,6 +9880,18 @@
         "ports": [
           "S_I2C_SDA",
           "SC_WRAPPER/S_I2C_SDA"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "GPIOP",
+          "gpio/GPIOP"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "GPION",
+          "gpio/GPION"
         ]
       },
       "PUSH_SW_1": {
@@ -9829,7 +9993,7 @@
         "ports": [
           "CLK_WRAPPER/clk_out2",
           "appUnit/user_clk",
-          "CONST_QRAPPER/clk_in1",
+          "CONST_WRAPPER/clk_in1",
           "SC_WRAPPER/s_axi_aclk"
         ]
       },
@@ -9837,7 +10001,14 @@
         "ports": [
           "CLK_WRAPPER/clk_out1",
           "appUnit/clk",
-          "CLK_SO/In1"
+          "CLK_SO/In1",
+          "gpio/clk"
+        ]
+      },
+      "external_trg_1": {
+        "ports": [
+          "gpio/trgout",
+          "appUnit/external_trg"
         ]
       },
       "fakernet_i2c_raddr_o": {
@@ -9999,7 +10170,9 @@
       "/": {
         "comment_0": "clk_out1: 40MHz\n\n",
         "comment_1": "POL 1:Neg, 0:Pos\n\nGain: Shaping Time: (CTS,CG0,CG1)\n30mV/fC : 160ns : (low,high,high)\n20mV/fC : 160ns : (low,low,high)\n  4mV/fC : 300ns : (high,low,low)\n\nother modes are unsuppprted",
-        "comment_2": "some SO pins have inverse POL.\nproper not gate is added"
+        "comment_2": "some SO pins have inverse POL.\nproper not gate is added",
+        "comment_3": "IP core shold be replaced to XPM \nfor compatibility",
+        "comment_5": "GPIO2,3,4 is reversed"
       }
     },
     "addressing": {

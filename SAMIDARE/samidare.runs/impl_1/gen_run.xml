@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1728268748">
+<GenRun Id="impl_1" LaunchPart="xcau15p-sbvb484-1-i" LaunchTime="1733712939">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_block_wrapper_postroute_physopted.rqs"/>
@@ -525,6 +525,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/GPIO_Controller.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/top_block/top_block.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -672,13 +679,15 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_GPIO_Controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_fifo_generator_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_event_builder_v0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_util_ds_buf_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_data_processor_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_das_rx_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_gig_ethernet_pcs_pma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_block_trigger_manager_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_fakernet_top_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_trigger_manager_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_block_mii_initializer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_block_gig_ethernet_pcs_pma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="gig_ethernet_pcs_pma_0"/>
 </GenRun>

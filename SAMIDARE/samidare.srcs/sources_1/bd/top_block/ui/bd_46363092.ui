@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-237,-234",
+   "ExpandedHierarchyInLayout":"",
+   "comment_0":"GPIO2,3,4 is reversed",
+   "commentid":"comment_0|",
+   "font_comment_0":"10",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -60 -y 90 -defaultsOSRD
+preplace port port-id_trgout -pg 1 -lvl 3 -x 640 -y 20 -defaultsOSRD
+preplace portBus GPIOP -pg 1 -lvl 3 -x 640 -y 80 -defaultsOSRD
+preplace portBus GPION -pg 1 -lvl 3 -x 640 -y 100 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 440 -y 30 -defaultsOSRD
+preplace inst GPIO_Controller_0 -pg 1 -lvl 1 -x 120 -y 90 -defaultsOSRD
+preplace netloc Net 1 2 1 610J 10n
+preplace netloc Net1 1 2 1 600J 30n
+preplace netloc GPIO_Controller_0_GPIO_OUT 1 1 1 290 40n
+preplace netloc util_ds_buf_0_IOBUF_IO_O 1 0 3 -30 -60 NJ -60 590
+preplace netloc GPIO_Controller_0_GPIO_T 1 1 1 280 20n
+preplace netloc clk_1 1 0 1 -40 70n
+preplace netloc GPIO_Controller_0_trgout 1 1 2 270J -50 620J
+preplace cgraphic comment_0 place top 318 -72 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -60 120 440 640
+pagesize -pg 1 -db -bbox -sgen -130 -70 780 270
+"
+}
+
+{
+   "/comment_5":"comment_0"
+}

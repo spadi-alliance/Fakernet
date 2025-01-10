@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep 27 11:20:31 2024" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  9 10:59:51 2024" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="top_block" PACKAGE="sbvb484" SPEEDGRADE="-1"/>
 
@@ -94,8 +94,16 @@
         <CONNECTION INSTANCE="appUnit_TRG_util_ds_buf_1" PORT="OBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" LEFT="7" NAME="GPION" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="IO" LEFT="7" NAME="GPIOP" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="IO" LEFT="7" NAME="GPION" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPION">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="gpio_util_ds_buf_0" PORT="IOBUF_DS_N"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="7" NAME="GPIOP" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPIOP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="gpio_util_ds_buf_0" PORT="IOBUF_DS_P"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="SAMPA_EN_A" SIGIS="undef" SIGNAME="SC_WRAPPER_SAMPA_PON_v1_0_0_sampa_power_on">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SC_WRAPPER_SAMPA_PON_v1_0_0" PORT="sampa_power_on"/>
@@ -106,9 +114,9 @@
         <CONNECTION INSTANCE="SC_WRAPPER_SAMPA_PON_v1_0_0" PORT="sampa_power_on"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="6" NAME="CLK_CFG" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_xlconstant_0_dout">
+    <PORT DIR="O" LEFT="6" NAME="CLK_CFG" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_xlconstant_0_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_xlconstant_0" PORT="dout"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_xlconstant_0" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="320000000:320000000:320000000:320000000" DIR="O" LEFT="3" NAME="CLKSOIN_P" RIGHT="0" SIGIS="clk" SIGNAME="CLK_SO_util_ds_buf_0_OBUF_DS_P">
@@ -136,34 +144,34 @@
         <CONNECTION INSTANCE="SC_WRAPPER_SAMPA_I2C_wrapper_iobuf_vhdl_0" PORT="io"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="BX_SYNC_TRG_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_3_OBUF_DS_P">
+    <PORT DIR="O" LEFT="0" NAME="BX_SYNC_TRG_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_3_OBUF_DS_P">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_3" PORT="OBUF_DS_P"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_3" PORT="OBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="BX_SYNC_TRG_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_3_OBUF_DS_N">
+    <PORT DIR="O" LEFT="0" NAME="BX_SYNC_TRG_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_3_OBUF_DS_N">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_3" PORT="OBUF_DS_N"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_3" PORT="OBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="HBTRG_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_4_OBUF_DS_P">
+    <PORT DIR="O" LEFT="0" NAME="HBTRG_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_4_OBUF_DS_P">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_4" PORT="OBUF_DS_P"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_4" PORT="OBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="HBTRG_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_4_OBUF_DS_N">
+    <PORT DIR="O" LEFT="0" NAME="HBTRG_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_4_OBUF_DS_N">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_4" PORT="OBUF_DS_N"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_4" PORT="OBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="HRSTB_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_2_OBUF_DS_N">
+    <PORT DIR="O" LEFT="3" NAME="HRSTB_N" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_2_OBUF_DS_N">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_2" PORT="OBUF_DS_N"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_2" PORT="OBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="HRSTB_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_ds_buf_2_OBUF_DS_P">
+    <PORT DIR="O" LEFT="3" NAME="HRSTB_P" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_ds_buf_2_OBUF_DS_P">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_2" PORT="OBUF_DS_P"/>
+        <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_2" PORT="OBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="CTS" RIGHT="0" SIGIS="undef" SIGNAME="GainConfig_CTS_dout">
@@ -991,7 +999,7 @@
             <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="user_clk"/>
             <CONNECTION INSTANCE="appUnit_trigger_manager_0" PORT="clk"/>
             <CONNECTION INSTANCE="appUnit_ENABLE_SYNC_xpm_cdc_gen_0" PORT="src_clk"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_in1"/>
             <CONNECTION INSTANCE="SC_WRAPPER_SAMPA_I2C_wrapper_axi_iic_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="SC_WRAPPER_SAMPA_I2C_wrapper_I2C_Controller_v1_0_0" PORT="m01_axi_aclk"/>
             <CONNECTION INSTANCE="CLK_WRAPPER_clk_wiz_1" PORT="clk_in1"/>
@@ -1641,13 +1649,14 @@
             <CONNECTION INSTANCE="CLK_SO_xlconcat_0" PORT="In2"/>
             <CONNECTION INSTANCE="CLK_SO_xlconcat_0" PORT="In3"/>
             <CONNECTION INSTANCE="CLK_SO_xlconcat_0" PORT="In0"/>
+            <CONNECTION INSTANCE="gpio_GPIO_Controller_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="power_down" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="11" FULLNAME="/CONST_QRAPPER/clk_wiz_2" HWVERSION="6.0" INSTANCE="CONST_QRAPPER_clk_wiz_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
+    <MODULE COREREVISION="11" FULLNAME="/CONST_WRAPPER/clk_wiz_2" HWVERSION="6.0" INSTANCE="CONST_WRAPPER_clk_wiz_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
@@ -2232,26 +2241,26 @@
             <CONNECTION INSTANCE="CLK_WRAPPER_clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_4" PORT="OBUF_IN"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_vector_logic_1" PORT="Op1"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconcat_2" PORT="In1"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconcat_2" PORT="In2"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconcat_2" PORT="In3"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_vector_logic_4" PORT="Op1"/>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_3" PORT="OBUF_IN"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_4" PORT="OBUF_IN"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_vector_logic_1" PORT="Op1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconcat_2" PORT="In1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconcat_2" PORT="In2"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconcat_2" PORT="In3"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_vector_logic_4" PORT="Op1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_3" PORT="OBUF_IN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="power_down" SIGIS="undef" SIGNAME="CONST_QRAPPER_xlconstant_1_dout">
+        <PORT DIR="I" NAME="power_down" SIGIS="undef" SIGNAME="CONST_WRAPPER_xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconstant_1" PORT="dout"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconstant_1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="29" FULLNAME="/CONST_QRAPPER/util_ds_buf_2" HWVERSION="2.2" INSTANCE="CONST_QRAPPER_util_ds_buf_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
+    <MODULE COREREVISION="29" FULLNAME="/CONST_WRAPPER/util_ds_buf_2" HWVERSION="2.2" INSTANCE="CONST_WRAPPER_util_ds_buf_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_BUF_TYPE" VALUE="OBUFDS"/>
@@ -2269,17 +2278,17 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="I" LEFT="3" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_xlconcat_2_dout">
+        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="I" LEFT="3" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_xlconcat_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconcat_2" PORT="dout"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconcat_2" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="O" LEFT="3" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_2_OBUF_DS_P">
+        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="O" LEFT="3" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_2_OBUF_DS_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="HRSTB_P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="O" LEFT="3" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_2_OBUF_DS_N">
+        <PORT CLKFREQUENCY="100000000:100000000:100000000:100000000" DIR="O" LEFT="3" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_2_OBUF_DS_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="HRSTB_N"/>
           </CONNECTIONS>
@@ -2296,7 +2305,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="29" FULLNAME="/CONST_QRAPPER/util_ds_buf_3" HWVERSION="2.2" INSTANCE="CONST_QRAPPER_util_ds_buf_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
+    <MODULE COREREVISION="29" FULLNAME="/CONST_WRAPPER/util_ds_buf_3" HWVERSION="2.2" INSTANCE="CONST_WRAPPER_util_ds_buf_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_BUF_TYPE" VALUE="OBUFDS"/>
@@ -2314,17 +2323,17 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_3_OBUF_DS_P">
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_3_OBUF_DS_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="BX_SYNC_TRG_P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_3_OBUF_DS_N">
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_3_OBUF_DS_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="BX_SYNC_TRG_N"/>
           </CONNECTIONS>
@@ -2341,7 +2350,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="29" FULLNAME="/CONST_QRAPPER/util_ds_buf_4" HWVERSION="2.2" INSTANCE="CONST_QRAPPER_util_ds_buf_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
+    <MODULE COREREVISION="29" FULLNAME="/CONST_WRAPPER/util_ds_buf_4" HWVERSION="2.2" INSTANCE="CONST_WRAPPER_util_ds_buf_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_BUF_TYPE" VALUE="OBUFDS"/>
@@ -2359,17 +2368,17 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="OBUF_IN" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_4_OBUF_DS_P">
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_4_OBUF_DS_P">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="HBTRG_P"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_QRAPPER_util_ds_buf_4_OBUF_DS_N">
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="OBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="CONST_WRAPPER_util_ds_buf_4_OBUF_DS_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="HBTRG_N"/>
           </CONNECTIONS>
@@ -2386,7 +2395,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/CONST_QRAPPER/util_vector_logic_1" HWVERSION="2.0" INSTANCE="CONST_QRAPPER_util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+    <MODULE COREREVISION="2" FULLNAME="/CONST_WRAPPER/util_vector_logic_1" HWVERSION="2.0" INSTANCE="CONST_WRAPPER_util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_OPERATION" VALUE="not"/>
@@ -2396,20 +2405,20 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_vector_logic_1_Res">
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_vector_logic_1_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_xlconcat_2" PORT="In0"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_xlconcat_2" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/CONST_QRAPPER/util_vector_logic_4" HWVERSION="2.0" INSTANCE="CONST_QRAPPER_util_vector_logic_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+    <MODULE COREREVISION="2" FULLNAME="/CONST_WRAPPER/util_vector_logic_4" HWVERSION="2.0" INSTANCE="CONST_WRAPPER_util_vector_logic_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_OPERATION" VALUE="not"/>
@@ -2419,16 +2428,16 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/CONST_QRAPPER/xlconcat_2" HWVERSION="2.1" INSTANCE="CONST_QRAPPER_xlconcat_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+    <MODULE COREREVISION="4" FULLNAME="/CONST_WRAPPER/xlconcat_2" HWVERSION="2.1" INSTANCE="CONST_WRAPPER_xlconcat_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
@@ -2565,35 +2574,35 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_util_vector_logic_1_Res">
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_util_vector_logic_1_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_vector_logic_1" PORT="Res"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_vector_logic_1" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_clk_wiz_2_clk_out1">
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_clk_wiz_2_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="clk_out1"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_xlconcat_2_dout">
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_xlconcat_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_util_ds_buf_2" PORT="OBUF_IN"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_util_ds_buf_2" PORT="OBUF_IN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/CONST_QRAPPER/xlconstant_0" HWVERSION="1.1" INSTANCE="CONST_QRAPPER_xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+    <MODULE COREREVISION="7" FULLNAME="/CONST_WRAPPER/xlconstant_0" HWVERSION="1.1" INSTANCE="CONST_WRAPPER_xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="7"/>
@@ -2602,7 +2611,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="6" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_xlconstant_0_dout">
+        <PORT DIR="O" LEFT="6" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_xlconstant_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="CLK_CFG"/>
           </CONNECTIONS>
@@ -2610,7 +2619,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/CONST_QRAPPER/xlconstant_1" HWVERSION="1.1" INSTANCE="CONST_QRAPPER_xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+    <MODULE COREREVISION="7" FULLNAME="/CONST_WRAPPER/xlconstant_1" HWVERSION="1.1" INSTANCE="CONST_WRAPPER_xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
@@ -2619,9 +2628,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_QRAPPER_xlconstant_1_dout">
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CONST_WRAPPER_xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="CONST_QRAPPER_clk_wiz_2" PORT="power_down"/>
+            <CONNECTION INSTANCE="CONST_WRAPPER_clk_wiz_2" PORT="power_down"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4628,7 +4637,7 @@
         </PORT>
         <PORT DIR="O" LEFT="319" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_1" PORT="In0"/>
+            <CONNECTION INSTANCE="appUnit_fifo_dout" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_full">
@@ -4638,7 +4647,7 @@
         </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_3" PORT="In1"/>
+            <CONNECTION INSTANCE="appUnit_fifo_empty" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5063,7 +5072,7 @@
         </PORT>
         <PORT DIR="O" LEFT="319" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_1" PORT="In1"/>
+            <CONNECTION INSTANCE="appUnit_fifo_dout" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_full">
@@ -5073,7 +5082,7 @@
         </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_3" PORT="In0"/>
+            <CONNECTION INSTANCE="appUnit_fifo_empty" PORT="In0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5498,7 +5507,7 @@
         </PORT>
         <PORT DIR="O" LEFT="319" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_1" PORT="In2"/>
+            <CONNECTION INSTANCE="appUnit_fifo_dout" PORT="In2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_full">
@@ -5508,7 +5517,7 @@
         </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_3" PORT="In2"/>
+            <CONNECTION INSTANCE="appUnit_fifo_empty" PORT="In2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5933,7 +5942,7 @@
         </PORT>
         <PORT DIR="O" LEFT="319" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_1" PORT="In3"/>
+            <CONNECTION INSTANCE="appUnit_fifo_dout" PORT="In3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_full">
@@ -5943,7 +5952,7 @@
         </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_3" PORT="In3"/>
+            <CONNECTION INSTANCE="appUnit_fifo_empty" PORT="In3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8769,9 +8778,9 @@
             <CONNECTION INSTANCE="appUnit_event_builder_v0_0" PORT="busy"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1279" NAME="fifo_data_i" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_xlconcat_1_dout">
+        <PORT DIR="I" LEFT="1279" NAME="fifo_data_i" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_fifo_dout_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_xlconcat_1" PORT="dout"/>
+            <CONNECTION INSTANCE="appUnit_fifo_dout" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="samples_i" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_trigger_manager_0_samples">
@@ -8908,6 +8917,332 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/appUnit/fifo_dout" HWVERSION="2.1" INSTANCE="appUnit_fifo_dout" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="320"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="320"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="320"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="320"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="1280"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_xlconcat_1_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="319" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="319" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="319" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_2" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="319" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1279" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_fifo_dout_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_data_processor_0" PORT="fifo_data_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/appUnit/fifo_empty" HWVERSION="2.1" INSTANCE="appUnit_fifo_empty" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="4"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_xlconcat_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_1" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_0" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_2" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_3" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/appUnit/trigger_manager_0" HWVERSION="1.0" INSTANCE="appUnit_trigger_manager_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_manager" VLNV="xilinx.com:module_ref:trigger_manager:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -8921,7 +9256,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reg_trg" SIGIS="undef"/>
-        <PORT DIR="I" NAME="external_trg" SIGIS="undef"/>
+        <PORT DIR="I" NAME="external_trg" SIGIS="undef" SIGNAME="gpio_GPIO_Controller_0_trgout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_GPIO_Controller_0" PORT="trgout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="busy_i" SIGIS="undef" SIGNAME="appUnit_data_processor_0_busy">
           <CONNECTIONS>
             <CONNECTION INSTANCE="appUnit_data_processor_0" PORT="busy"/>
@@ -9112,332 +9451,6 @@
             <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="full"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/appUnit/xlconcat_1" HWVERSION="2.1" INSTANCE="appUnit_xlconcat_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="IN0_WIDTH" VALUE="320"/>
-        <PARAMETER NAME="IN1_WIDTH" VALUE="320"/>
-        <PARAMETER NAME="IN2_WIDTH" VALUE="320"/>
-        <PARAMETER NAME="IN3_WIDTH" VALUE="320"/>
-        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="1280"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="top_block_xlconcat_1_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="319" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_0" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="319" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_1" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="319" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_2" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="319" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_3" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1279" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_xlconcat_1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_data_processor_0" PORT="fifo_data_i"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/appUnit/xlconcat_3" HWVERSION="2.1" INSTANCE="appUnit_xlconcat_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN1_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="4"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="top_block_xlconcat_0_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_1_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_1" PORT="empty"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_0_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_0" PORT="empty"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_2_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_2" PORT="empty"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="appUnit_FIFO_WRAPPER_fifo_generator_3_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_FIFO_WRAPPER_fifo_generator_3" PORT="empty"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -10472,6 +10485,88 @@
         <PORT DIR="O" LEFT="4" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fakernet_xlconstant_3_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fakernet_gig_ethernet_pcs_pma_0" PORT="configuration_vector"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/gpio/GPIO_Controller_0" HWVERSION="1.0" INSTANCE="gpio_GPIO_Controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Controller" VLNV="xilinx.com:module_ref:GPIO_Controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_GPIO_Controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="320000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CLK_WRAPPER_clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLK_WRAPPER_clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="GPIO_IN" RIGHT="0" SIGIS="undef" SIGNAME="gpio_util_ds_buf_0_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_util_ds_buf_0" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="GPIO_OUT" RIGHT="0" SIGIS="undef" SIGNAME="gpio_GPIO_Controller_0_GPIO_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_util_ds_buf_0" PORT="IOBUF_IO_I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="GPIO_T" RIGHT="0" SIGIS="undef" SIGNAME="gpio_GPIO_Controller_0_GPIO_T">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_util_ds_buf_0" PORT="IOBUF_IO_T"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trgout" SIGIS="undef" SIGNAME="gpio_GPIO_Controller_0_trgout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_trigger_manager_0" PORT="external_trg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="trgin" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="29" FULLNAME="/gpio/util_ds_buf_0" HWVERSION="2.2" INSTANCE="gpio_util_ds_buf_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.2">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_BUF_TYPE" VALUE="IOBUFDS"/>
+        <PARAMETER NAME="C_SIZE" VALUE="8"/>
+        <PARAMETER NAME="C_BUFGCE_DIV" VALUE="1"/>
+        <PARAMETER NAME="C_BUFG_GT_SYNC" VALUE="0"/>
+        <PARAMETER NAME="C_SIM_DEVICE" VALUE="VERSAL_AI_CORE_ES1"/>
+        <PARAMETER NAME="C_OBUFDS_GTE5_ADV" VALUE="&quot;00&quot;"/>
+        <PARAMETER NAME="C_REFCLK_ICNTL_TX" VALUE="&quot;00000&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_util_ds_buf_0_2"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="BOARD_PARAMETER"/>
+        <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+        <PARAMETER NAME="DIFF_CLK_IN_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="IO" LEFT="7" NAME="IOBUF_DS_P" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPIOP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPIOP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" LEFT="7" NAME="IOBUF_DS_N" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_GPION">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GPION"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="IOBUF_IO_T" RIGHT="0" SIGIS="undef" SIGNAME="gpio_GPIO_Controller_0_GPIO_T">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_GPIO_Controller_0" PORT="GPIO_T"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="7" NAME="IOBUF_IO_I" RIGHT="0" SIGIS="clk" SIGNAME="gpio_GPIO_Controller_0_GPIO_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_GPIO_Controller_0" PORT="GPIO_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="7" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="gpio_util_ds_buf_0_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="gpio_GPIO_Controller_0" PORT="GPIO_IN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

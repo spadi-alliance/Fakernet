@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_I2C_Controller_v1_0_0_1",
-    "cell_name": "SAMPA_I2C_wrapper/I2C_Controller_v1_0_0",
+    "cell_name": "SC_WRAPPER/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0",
     "component_reference": "xilinx.com:module_ref:I2C_Controller_v1_0:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1",

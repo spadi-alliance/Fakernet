@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_xlconcat_1_2",
-    "cell_name": "appUnit/xlconcat_1",
+    "cell_name": "fifo_dout",
     "component_reference": "xilinx.com:ip:xlconcat:2.1",
     "ip_revision": "4",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_1_2",

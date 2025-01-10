@@ -48,6 +48,10 @@ connect_debug_port u_ila_2/clk [get_nets [list top_block_i/clk_wiz_0/inst/clk_ou
 connect_debug_port u_ila_2/probe0 [get_nets [list {top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[0]} {top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[1]}]]
 connect_debug_port u_ila_2/probe2 [get_nets [list top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/TXN_DONE]]
 
+
+connect_debug_port u_ila_2/probe1 [get_nets [list top_block_i/gpio/GPIO_Controller_0/inst/GPIO_IN]]
+
+
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

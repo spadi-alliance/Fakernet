@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xcau15p-sbvb484-1-i
 
@@ -150,6 +151,8 @@ set_property used_in_implementation false [get_files -all /home/nagafusa/work/sp
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axi_iic_0_0/top_block_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/top_block_ooc.xdc]
 
 read_ip -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci

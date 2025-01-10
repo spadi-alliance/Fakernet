@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_util_ds_buf_2_0",
-    "cell_name": "CONST_HRSTB_ETC/util_ds_buf_2",
+    "cell_name": "CONST_QRAPPER/util_ds_buf_2",
     "component_reference": "xilinx.com:ip:util_ds_buf:2.2",
     "ip_revision": "29",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_2_0",

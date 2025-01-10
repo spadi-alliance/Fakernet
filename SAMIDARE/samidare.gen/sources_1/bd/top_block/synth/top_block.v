@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Fri Sep 27 11:20:30 2024
+//Date        : Mon Dec  9 10:59:50 2024
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -76,7 +76,7 @@ module CLK_WRAPPER_imp_WW6PCK
         .power_down(1'b0));
 endmodule
 
-module CONST_QRAPPER_imp_1KMF8M0
+module CONST_WRAPPER_imp_189CPTO
    (BX_SYNC_TRG_N,
     BX_SYNC_TRG_P,
     CLK_CFG,
@@ -1246,6 +1246,7 @@ module appUnit_imp_1BHH9Z2
     event_reset,
     event_word,
     event_write,
+    external_trg,
     rst,
     user_clk);
   input [10:0]SO0N;
@@ -1268,6 +1269,7 @@ module appUnit_imp_1BHH9Z2
   input event_reset;
   output [31:0]event_word;
   output event_write;
+  input external_trg;
   input rst;
   input user_clk;
 
@@ -1323,6 +1325,7 @@ module appUnit_imp_1BHH9Z2
   wire event_builder_v0_0_event_write;
   wire event_free_1;
   wire event_reset_1;
+  wire external_trg_1;
   wire [10:0]probe_in0_1;
   wire rst_1;
   wire trigger_manager_0_en;
@@ -1357,6 +1360,7 @@ module appUnit_imp_1BHH9Z2
   assign event_reset_1 = event_reset;
   assign event_word[31:0] = event_builder_v0_0_event_word;
   assign event_write = event_builder_v0_0_event_write;
+  assign external_trg_1 = external_trg;
   assign rst_1 = rst;
   assign user_clk_1 = user_clk;
   ENABLE_SYNC_imp_10IRPR3 ENABLE_SYNC
@@ -1463,12 +1467,24 @@ module appUnit_imp_1BHH9Z2
         .event_write(event_builder_v0_0_event_write),
         .last_data(data_processor_0_last_data),
         .sample_cnt_i(data_processor_0_samples_o));
+  top_block_xlconcat_1_2 fifo_dout
+       (.In0(FIFO_WRAPPER_dout),
+        .In1(FIFO_WRAPPER_dout1),
+        .In2(FIFO_WRAPPER_dout2),
+        .In3(FIFO_WRAPPER_dout3),
+        .dout(xlconcat_1_dout));
+  top_block_xlconcat_0_2 fifo_empty
+       (.In0(FIFO_WRAPPER_empty),
+        .In1(FIFO_WRAPPER_empty1),
+        .In2(FIFO_WRAPPER_empty2),
+        .In3(FIFO_WRAPPER_empty3),
+        .dout(xlconcat_3_dout));
   top_block_trigger_manager_0_0 trigger_manager_0
        (.SO0(probe_in0_1),
         .busy_i(data_processor_0_busy),
         .clk(user_clk_1),
         .en(trigger_manager_0_en),
-        .external_trg(1'b0),
+        .external_trg(external_trg_1),
         .reg_trg(1'b0),
         .samples(trigger_manager_0_samples),
         .trg(trigger_manager_0_trg));
@@ -1478,18 +1494,6 @@ module appUnit_imp_1BHH9Z2
         .In2(FIFO_WRAPPER_full2),
         .In3(FIFO_WRAPPER_full3),
         .dout(xlconcat_0_dout));
-  top_block_xlconcat_1_2 xlconcat_1
-       (.In0(FIFO_WRAPPER_dout),
-        .In1(FIFO_WRAPPER_dout1),
-        .In2(FIFO_WRAPPER_dout2),
-        .In3(FIFO_WRAPPER_dout3),
-        .dout(xlconcat_1_dout));
-  top_block_xlconcat_0_2 xlconcat_3
-       (.In0(FIFO_WRAPPER_empty),
-        .In1(FIFO_WRAPPER_empty1),
-        .In2(FIFO_WRAPPER_empty2),
-        .In3(FIFO_WRAPPER_empty3),
-        .dout(xlconcat_3_dout));
 endmodule
 
 module fakernet_imp_CWUDB9
@@ -1858,6 +1862,41 @@ module fakernet_imp_CWUDB9
        (.dout(xlconstant_2_dout));
   top_block_xlconstant_1_3 xlconstant_3
        (.dout(xlconstant_3_dout));
+endmodule
+
+module gpio_imp_1S34O0Z
+   (GPION,
+    GPIOP,
+    clk,
+    trgout);
+  inout [7:0]GPION;
+  inout [7:0]GPIOP;
+  input clk;
+  output trgout;
+
+  wire [7:0]GPIO_Controller_0_GPIO_OUT;
+  wire [7:0]GPIO_Controller_0_GPIO_T;
+  wire GPIO_Controller_0_trgout;
+  wire [7:0]Net;
+  wire [7:0]Net1;
+  wire clk_1;
+  wire [7:0]util_ds_buf_0_IOBUF_IO_O;
+
+  assign clk_1 = clk;
+  assign trgout = GPIO_Controller_0_trgout;
+  top_block_GPIO_Controller_0_0 GPIO_Controller_0
+       (.GPIO_IN(util_ds_buf_0_IOBUF_IO_O),
+        .GPIO_OUT(GPIO_Controller_0_GPIO_OUT),
+        .GPIO_T(GPIO_Controller_0_GPIO_T),
+        .clk(clk_1),
+        .trgin(1'b0),
+        .trgout(GPIO_Controller_0_trgout));
+  top_block_util_ds_buf_0_2 util_ds_buf_0
+       (.IOBUF_DS_N(GPION[7:0]),
+        .IOBUF_DS_P(GPIOP[7:0]),
+        .IOBUF_IO_I(GPIO_Controller_0_GPIO_OUT),
+        .IOBUF_IO_O(util_ds_buf_0_IOBUF_IO_O),
+        .IOBUF_IO_T(GPIO_Controller_0_GPIO_T));
 endmodule
 
 module if_gate1_imp_OSPN
@@ -3938,8 +3977,11 @@ Gain: Shaping Time: (CTS,CG0,CG1)
 
 other modes are unsuppprted
 some SO pins have inverse POL.
-proper not gate is added */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=173,numReposBlks=146,numNonXlnxBlks=0,numHierBlks=27,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=19,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"da_axi4_cnt\"\"\"\"\"=24,\"\"\"\"\"da_board_cnt\"\"\"\"\"=4,\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+proper not gate is added
+IP core shold be replaced to XPM 
+for compatibility
+GPIO2,3,4 is reversed */
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=176,numReposBlks=148,numNonXlnxBlks=0,numHierBlks=28,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=20,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"=24,\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"=4,\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -4034,6 +4076,8 @@ module top_block
   wire [0:0]GainConfig_POL1;
   wire Net;
   wire Net1;
+  wire [7:0]Net2;
+  wire [7:0]Net3;
   wire PUSH_SW_1;
   wire [31:0]S00_AXI_1_ARADDR;
   wire [2:0]S00_AXI_1_ARPROT;
@@ -4127,6 +4171,7 @@ module top_block
   wire clk_in_0_1;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_1_clk_out1;
+  wire external_trg_1;
   wire [31:0]fakernet_i2c_raddr_o;
   wire [31:0]fakernet_i2c_waddr_o;
   wire [31:0]fakernet_m00_axi_ARADDR;
@@ -4217,7 +4262,7 @@ module top_block
         .clk_out3(clk25_in_0_1),
         .clk_out4(independent_clock_0_1),
         .clk_out5(clk_in_0_1));
-  CONST_QRAPPER_imp_1KMF8M0 CONST_QRAPPER
+  CONST_WRAPPER_imp_189CPTO CONST_WRAPPER
        (.BX_SYNC_TRG_N(CONST_HRSTB_ETC_BX_SYNC_TRG_N),
         .BX_SYNC_TRG_P(CONST_HRSTB_ETC_BX_SYNC_TRG_P),
         .CLK_CFG(CONST_QRAPPER_CLK_CFG),
@@ -4345,6 +4390,7 @@ module top_block
         .event_reset(fakernet_user_data_reset),
         .event_word(user_data_word_1),
         .event_write(user_data_write_1),
+        .external_trg(external_trg_1),
         .rst(vio_0_probe_out0),
         .user_clk(clk_wiz_0_clk_out1));
   fakernet_imp_CWUDB9 fakernet
@@ -4394,6 +4440,11 @@ module top_block
         .user_data_reset(fakernet_user_data_reset),
         .user_data_word(user_data_word_1),
         .user_data_write(user_data_write_1));
+  gpio_imp_1S34O0Z gpio
+       (.GPION(GPION[7:0]),
+        .GPIOP(GPIOP[7:0]),
+        .clk(clk_wiz_1_clk_out1),
+        .trgout(external_trg_1));
   reg_bram_imp_WBS55O reg_bram
        (.S00_AXI_araddr(S00_AXI_1_ARADDR),
         .S00_AXI_arprot(S00_AXI_1_ARPROT),
