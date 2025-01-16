@@ -88,7 +88,7 @@ module data_processor (
                 WAIT: begin
                     // Wait state, wait for the trigger signal
                     valid <= 1'b0;
-                    if (trg) begin
+                    if (trg & !busy_i) begin
                         counter <= 8'd0;
                         bus_sel_internal <= 2'd0;
                         busy <= 1'b1;

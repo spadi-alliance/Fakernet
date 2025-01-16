@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sun Sep 15 02:35:11 2024
-//Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
+//Date        : Thu Jan 16 11:19:10 2025
+//Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target top_block_wrapper.bd
 //Design      : top_block_wrapper
 //Purpose     : IP block netlist
@@ -19,6 +19,7 @@ module top_block_wrapper
     CLKSOIN_P,
     CLK_CFG,
     CTS,
+    DIP_SW,
     GPION,
     GPIOP,
     HBTRG_N,
@@ -57,6 +58,7 @@ module top_block_wrapper
   output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
   output [0:0]CTS;
+  input [3:0]DIP_SW;
   inout [7:0]GPION;
   inout [7:0]GPIOP;
   output [0:0]HBTRG_N;
@@ -96,6 +98,7 @@ module top_block_wrapper
   wire [3:0]CLKSOIN_P;
   wire [6:0]CLK_CFG;
   wire [0:0]CTS;
+  wire [3:0]DIP_SW;
   wire [7:0]GPION;
   wire [7:0]GPIOP;
   wire [0:0]HBTRG_N;
@@ -136,6 +139,7 @@ module top_block_wrapper
         .CLKSOIN_P(CLKSOIN_P),
         .CLK_CFG(CLK_CFG),
         .CTS(CTS),
+        .DIP_SW(DIP_SW),
         .GPION(GPION),
         .GPIOP(GPIOP),
         .HBTRG_N(HBTRG_N),

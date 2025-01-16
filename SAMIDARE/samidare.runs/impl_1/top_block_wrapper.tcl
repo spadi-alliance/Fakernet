@@ -116,6 +116,10 @@ OPTRACE "impl_1" END { }
 }
 
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -id {Timing 38-316}  -suppress 
+set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 
+set_msg_config  -id {Timing 38-316}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design toplevel has port PHY_HPD driven by constant 0}}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,13 +127,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param power.enableLutRouteBelPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 8
-  set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xcau15p-sbvb484-1-i
   set_property design_mode GateLvl [current_fileset]
@@ -139,6 +137,9 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/wt [current_project]
   set_property parent.project_path /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr [current_project]
   set_property ip_repo_paths {
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0
@@ -319,35 +320,4 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
-OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
-OPTRACE "write_bitstream setup" START { }
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-OPTRACE "read constraints: write_bitstream" START { }
-OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force -no_partial_mmi top_block_wrapper.mmi }
-OPTRACE "write_bitstream setup" END { }
-OPTRACE "write_bitstream" START { }
-  write_bitstream -force top_block_wrapper.bit 
-OPTRACE "write_bitstream" END { }
-OPTRACE "write_bitstream misc" START { }
-OPTRACE "read constraints: write_bitstream_post" START { }
-OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force top_block_wrapper}
-  catch {file copy -force top_block_wrapper.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "write_bitstream misc" END { }
-OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

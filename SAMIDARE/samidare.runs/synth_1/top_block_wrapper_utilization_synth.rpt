@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sun Sep 15 02:36:10 2024
-| Host         : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Thu Jan 16 11:20:18 2025
+| Host         : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
 | Design       : top_block_wrapper
 | Device       : xcau15p-sbvb484-1-i
@@ -95,7 +95,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   34 |     0 |          0 |       204 | 16.67 |
+| Bonded IOB |   18 |     0 |          0 |       204 |  8.82 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -154,8 +154,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   17 |                 I/O |
-| INBUF    |   17 |                 I/O |
-| IBUFCTRL |   17 |              Others |
+| INBUF    |    1 |                 I/O |
+| IBUFCTRL |    1 |              Others |
 +----------+------+---------------------+
 
 
@@ -187,6 +187,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_1_4    |    1 |
 | top_block_util_vector_logic_1_3    |    1 |
 | top_block_util_vector_logic_1_2    |    1 |
+| top_block_util_vector_logic_1_10   |    1 |
 | top_block_util_vector_logic_1_1    |    1 |
 | top_block_util_vector_logic_1_0    |    1 |
 | top_block_util_vector_logic_0_9    |    1 |
@@ -194,6 +195,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_0_7    |    1 |
 | top_block_util_vector_logic_0_3    |    1 |
 | top_block_util_vector_logic_0_2    |    1 |
+| top_block_util_vector_logic_0_19   |    1 |
+| top_block_util_vector_logic_0_18   |    1 |
 | top_block_util_vector_logic_0_17   |    1 |
 | top_block_util_vector_logic_0_15   |    1 |
 | top_block_util_vector_logic_0_14   |    1 |
@@ -211,6 +214,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_ds_buf_3_2          |    1 |
 | top_block_util_ds_buf_2_0          |    1 |
 | top_block_util_ds_buf_1_1          |    1 |
+| top_block_util_ds_buf_0_2          |    1 |
 | top_block_util_ds_buf_0_1          |    1 |
 | top_block_u_led_inst_0_0           |    1 |
 | top_block_trigger_manager_0_0      |    1 |
@@ -226,7 +230,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_fifo_generator_0_2       |    1 |
 | top_block_fifo_generator_0_1       |    1 |
 | top_block_fakernet_top_0_0         |    1 |
-| top_block_event_builder_v0_0_0     |    1 |
+| top_block_event_builder_v0_1_0_1   |    1 |
+| top_block_data_sender_v1_0_0_0     |    1 |
+| top_block_data_receiver_v1_0_0_0   |    1 |
 | top_block_data_processor_0_0       |    1 |
 | top_block_data_gen_user_0_0        |    1 |
 | top_block_das_rx_0_0               |    1 |
@@ -234,6 +240,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_clk_wiz_1_0              |    1 |
 | top_block_clk_wiz_0_0              |    1 |
 | top_block_blk_mem_gen_0_0          |    1 |
+| top_block_axis_data_fifo_0_0       |    1 |
 | top_block_axi_iic_0_0              |    1 |
 | top_block_axi_bram_ctrl_1_0        |    1 |
 | top_block_axi_bram_ctrl_0_0        |    1 |
@@ -243,6 +250,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_LED_REG_READ_SEPARAT_1_0 |    1 |
 | top_block_LED_REG_READ_SEPARAT_0_0 |    1 |
 | top_block_I2C_Controller_v1_0_0_1  |    1 |
+| top_block_GPIO_Controller_0_0      |    1 |
 +------------------------------------+------+
 
 

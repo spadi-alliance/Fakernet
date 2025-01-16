@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_util_vector_logic_2_0",
-    "cell_name": "fakernet/if_gate/util_vector_logic_2",
+    "cell_name": "fnet_wrapper/fakernet/if_gate/util_vector_logic_2",
     "component_reference": "xilinx.com:ip:util_vector_logic:2.0",
     "ip_revision": "2",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_util_vector_logic_2_0",

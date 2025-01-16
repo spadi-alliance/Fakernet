@@ -243,6 +243,7 @@ set_property IOSTANDARD LVDS [get_ports {GPIOP[7]}]
 # PUSH SW
 set_property PACKAGE_PIN AA10 [get_ports PUSH_SW]
 set_property IOSTANDARD LVCMOS18 [get_ports PUSH_SW]
+set_property PULLUP TRUE [get_ports PUSH_SW]
 #______________________________________________
 # PROGBON
 #set_property PULLUP TRUE [get_ports PROGBON]
@@ -263,7 +264,12 @@ set_property PACKAGE_PIN V11 [get_ports {LED[3]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {LED[*]}]
 #______________________________________________
 # DIP SW
-
+set_property PACKAGE_PIN AB8 [get_ports {DIP_SW[0]}]
+set_property PACKAGE_PIN AA8 [get_ports {DIP_SW[1]}]
+set_property PACKAGE_PIN AB7 [get_ports {DIP_SW[2]}]
+set_property PACKAGE_PIN AB6 [get_ports {DIP_SW[3]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {DIP_SW[*]}]
+set_property PULLUP TRUE [get_ports {DIP_SW[*]}]
 #______________________________________________
 # EEPROM_0
 #______________________________________________
