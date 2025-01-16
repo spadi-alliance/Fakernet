@@ -143,7 +143,19 @@
 						"TVALID": { "actual": "M_AXIS_data_tvalid"}
 					}
 				},
-				"/appUnit/axis_data_fifo_0/M_AXIS": {
+				"/appUnit/data_sender_wrapper/M_AXIS_data": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk125MHz"},
+						"ARESETN": { "actual": "s_axis_aresetn_0"},
+						"TDATA": { "actual": "M_AXIS_data_tdata"},
+						"TLAST": { "actual": "M_AXIS_data_tlast"},
+						"TREADY": { "actual": "M_AXIS_data_tready"},
+						"TSTRB": { "actual": "M_AXIS_data_tstrb"},
+						"TVALID": { "actual": "M_AXIS_data_tvalid"}
+					}
+				},
+				"/appUnit/data_sender_wrapper/axis_data_fifo_0/M_AXIS": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axis_aclk"},
@@ -155,7 +167,7 @@
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
-				"/appUnit/axis_data_fifo_0/S_AXIS": {
+				"/appUnit/data_sender_wrapper/axis_data_fifo_0/S_AXIS": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "s_axis_aclk"},
@@ -167,7 +179,7 @@
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
-				"/appUnit/data_sender_v1_0_0/m00_axis": {
+				"/appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "m00_axis_aclk"},
@@ -711,62 +723,36 @@
 						"TVALID": { "actual": "s00_axis_tvalid"}
 					}
 				},
-				"/fnet_wrapper/fakernet/m00_axi": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "clk_in_0"},
-						"ARADDR": { "actual": "m00_axi_araddr"},
-						"ARESETN": { "actual": "m00_axi_aresetn"},
-						"ARPROT": { "actual": "m00_axi_arprot"},
-						"ARREADY": { "actual": "m00_axi_arready"},
-						"ARVALID": { "actual": "m00_axi_arvalid"},
-						"AWADDR": { "actual": "m00_axi_awaddr"},
-						"AWPROT": { "actual": "m00_axi_awprot"},
-						"AWREADY": { "actual": "m00_axi_awready"},
-						"AWVALID": { "actual": "m00_axi_awvalid"},
-						"BREADY": { "actual": "m00_axi_bready"},
-						"BRESP": { "actual": "m00_axi_bresp"},
-						"BVALID": { "actual": "m00_axi_bvalid"},
-						"RDATA": { "actual": "m00_axi_rdata"},
-						"RREADY": { "actual": "m00_axi_rready"},
-						"RRESP": { "actual": "m00_axi_rresp"},
-						"RVALID": { "actual": "m00_axi_rvalid"},
-						"WDATA": { "actual": "m00_axi_wdata"},
-						"WREADY": { "actual": "m00_axi_wready"},
-						"WSTRB": { "actual": "m00_axi_wstrb"},
-						"WVALID": { "actual": "m00_axi_wvalid"}
-					}
-				},
-				"/fnet_wrapper/fakernet/native_to_axi_lite_v_0/m00_axi": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "m00_axi_aclk"},
-						"ARADDR": { "actual": "m00_axi_araddr"},
-						"ARESETN": { "actual": "m00_axi_aresetn"},
-						"ARPROT": { "actual": "m00_axi_arprot"},
-						"ARREADY": { "actual": "m00_axi_arready"},
-						"ARVALID": { "actual": "m00_axi_arvalid"},
-						"AWADDR": { "actual": "m00_axi_awaddr"},
-						"AWPROT": { "actual": "m00_axi_awprot"},
-						"AWREADY": { "actual": "m00_axi_awready"},
-						"AWVALID": { "actual": "m00_axi_awvalid"},
-						"BREADY": { "actual": "m00_axi_bready"},
-						"BRESP": { "actual": "m00_axi_bresp"},
-						"BVALID": { "actual": "m00_axi_bvalid"},
-						"RDATA": { "actual": "m00_axi_rdata"},
-						"RREADY": { "actual": "m00_axi_rready"},
-						"RRESP": { "actual": "m00_axi_rresp"},
-						"RVALID": { "actual": "m00_axi_rvalid"},
-						"WDATA": { "actual": "m00_axi_wdata"},
-						"WREADY": { "actual": "m00_axi_wready"},
-						"WSTRB": { "actual": "m00_axi_wstrb"},
-						"WVALID": { "actual": "m00_axi_wvalid"}
-					}
-				},
 				"/fnet_wrapper/m00_axi": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "clk_in_0"},
+						"ARADDR": { "actual": "m00_axi_araddr"},
+						"ARESETN": { "actual": "m00_axi_aresetn"},
+						"ARPROT": { "actual": "m00_axi_arprot"},
+						"ARREADY": { "actual": "m00_axi_arready"},
+						"ARVALID": { "actual": "m00_axi_arvalid"},
+						"AWADDR": { "actual": "m00_axi_awaddr"},
+						"AWPROT": { "actual": "m00_axi_awprot"},
+						"AWREADY": { "actual": "m00_axi_awready"},
+						"AWVALID": { "actual": "m00_axi_awvalid"},
+						"BREADY": { "actual": "m00_axi_bready"},
+						"BRESP": { "actual": "m00_axi_bresp"},
+						"BVALID": { "actual": "m00_axi_bvalid"},
+						"RDATA": { "actual": "m00_axi_rdata"},
+						"RREADY": { "actual": "m00_axi_rready"},
+						"RRESP": { "actual": "m00_axi_rresp"},
+						"RVALID": { "actual": "m00_axi_rvalid"},
+						"WDATA": { "actual": "m00_axi_wdata"},
+						"WREADY": { "actual": "m00_axi_wready"},
+						"WSTRB": { "actual": "m00_axi_wstrb"},
+						"WVALID": { "actual": "m00_axi_wvalid"}
+					}
+				},
+				"/fnet_wrapper/native_to_axi_lite_v_0/m00_axi": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "m00_axi_aclk"},
 						"ARADDR": { "actual": "m00_axi_araddr"},
 						"ARESETN": { "actual": "m00_axi_aresetn"},
 						"ARPROT": { "actual": "m00_axi_arprot"},

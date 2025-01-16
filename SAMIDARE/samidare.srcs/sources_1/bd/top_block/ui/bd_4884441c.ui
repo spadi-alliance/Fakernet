@@ -1,26 +1,26 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.877586",
-   "Default View_TopLeft":"-196,-8",
+   "Default View_ScaleFactor":"0.94485",
+   "Default View_TopLeft":"-208,91",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port m00_axi -pg 1 -lvl 3 -x 850 -y 200 -defaultsOSRD
-preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
-preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
-preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
-preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
-preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x -20 -y 220 -defaultsOSRD
+preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
+preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
+preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
+preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
 preplace port port-id_i2c_done -pg 1 -lvl 3 -x 850 -y 260 -defaultsOSRD
-preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x -20 -y 360 -defaultsOSRD
-preplace port port-id_scl_i -pg 1 -lvl 0 -x -20 -y 440 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x -30 -y 360 -defaultsOSRD
+preplace port port-id_scl_i -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
 preplace port port-id_scl_o -pg 1 -lvl 3 -x 850 -y 390 -defaultsOSRD
 preplace port port-id_scl_t -pg 1 -lvl 3 -x 850 -y 410 -defaultsOSRD
-preplace port port-id_sda_i -pg 1 -lvl 0 -x -20 -y 570 -defaultsOSRD
+preplace port port-id_sda_i -pg 1 -lvl 0 -x -30 -y 570 -defaultsOSRD
 preplace port port-id_sda_o -pg 1 -lvl 3 -x 850 -y 450 -defaultsOSRD
 preplace port port-id_sda_t -pg 1 -lvl 3 -x 850 -y 470 -defaultsOSRD
-preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
-preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
+preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
+preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
 preplace portBus i2c_rdata_o -pg 1 -lvl 3 -x 850 -y 240 -defaultsOSRD
 preplace inst axi_iic_0 -pg 1 -lvl 2 -x 610 -y 430 -defaultsOSRD
 preplace inst I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 210 -y 280 -defaultsOSRD
@@ -33,17 +33,17 @@ preplace netloc axi_iic_0_sda_t 1 2 1 N 470
 preplace netloc i2c_raddr_i_1 1 0 1 NJ 260
 preplace netloc i2c_waddr_i_1 1 0 1 NJ 240
 preplace netloc m00_axi_aclk_1 1 0 1 NJ 300
-preplace netloc m00_axi_aresetn_1 1 0 2 20J 440 410
-preplace netloc s_axi_aclk_1 1 0 2 10 460 420J
-preplace netloc scl_i_1 1 0 3 0J 450 400J 290 740
-preplace netloc sda_i_1 1 0 3 NJ 570 NJ 570 740
+preplace netloc m00_axi_aresetn_1 1 0 2 20J 450 N
+preplace netloc s_axi_aclk_1 1 0 2 10 440 400J
+preplace netloc scl_i_1 1 0 3 0J 570 NJ 570 750
+preplace netloc sda_i_1 1 0 3 -10J 580 NJ 580 740
 preplace netloc start_i2c_read_1 1 0 1 NJ 180
 preplace netloc start_i2c_write_1 1 0 1 NJ 200
 preplace netloc start_i2c_write_all_1 1 0 1 NJ 220
 preplace netloc Conn1 1 1 2 NJ 200 NJ
-preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 420 220n
-levelinfo -pg 1 -20 210 610 850
-pagesize -pg 1 -db -bbox -sgen -200 -10 1030 590
+preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 400 220n
+levelinfo -pg 1 -30 210 610 850
+pagesize -pg 1 -db -bbox -sgen -210 -10 1030 590
 "
 }
 0

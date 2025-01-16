@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Thu Jan 16 11:19:10 2025
+//Date        : Thu Jan 16 18:17:22 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -489,11 +489,8 @@ module appUnit_imp_1BHH9Z2
   input s_axis_aresetn_0;
   input user_clk;
 
-  wire [255:0]Conn1_TDATA;
-  wire Conn1_TLAST;
-  wire Conn1_TREADY;
-  wire [31:0]Conn1_TSTRB;
-  wire Conn1_TVALID;
+  wire [1279:0]async_fifos_dout;
+  wire [3:0]async_fifos_dout1;
   wire clk1_1;
   wire clk_1;
   wire [319:0]das_rx_0_bus0;
@@ -508,32 +505,20 @@ module appUnit_imp_1BHH9Z2
   wire data_processor_0_busy;
   wire [319:0]data_processor_0_data_o;
   wire data_processor_0_last_data;
-  wire [3:0]data_processor_0_rd_en;
+  wire [3:0]data_processor_0_req;
   wire [3:0]data_processor_0_samples_o;
-  wire data_sender_v1_0_0_full;
-  wire [31:0]data_sender_v1_0_0_m00_axis_TDATA;
-  wire data_sender_v1_0_0_m00_axis_TLAST;
-  wire data_sender_v1_0_0_m00_axis_TREADY;
-  wire [3:0]data_sender_v1_0_0_m00_axis_TSTRB;
-  wire data_sender_v1_0_0_m00_axis_TVALID;
+  wire [255:0]data_sender_wrapper_M_AXIS_data_TDATA;
+  wire data_sender_wrapper_M_AXIS_data_TLAST;
+  wire data_sender_wrapper_M_AXIS_data_TREADY;
+  wire [31:0]data_sender_wrapper_M_AXIS_data_TSTRB;
+  wire data_sender_wrapper_M_AXIS_data_TVALID;
+  wire data_sender_wrapper_full;
   wire en_1;
   wire event_builder_v0_1_0_busy;
   wire event_builder_v0_1_0_data_ack;
   wire [31:0]event_builder_v0_1_0_data_o;
   wire event_builder_v0_1_0_data_wr_o;
   wire event_reset_1;
-  wire [319:0]fifo_generator_0_dout;
-  wire fifo_generator_0_empty;
-  wire fifo_generator_0_full;
-  wire [319:0]fifo_generator_1_dout;
-  wire fifo_generator_1_empty;
-  wire fifo_generator_1_full;
-  wire [319:0]fifo_generator_2_dout;
-  wire fifo_generator_2_empty;
-  wire fifo_generator_2_full;
-  wire [319:0]fifo_generator_3_dout;
-  wire fifo_generator_3_empty;
-  wire fifo_generator_3_full;
   wire [10:0]probe_in0_1;
   wire [10:0]probe_in1_1;
   wire [10:0]probe_in2_1;
@@ -543,26 +528,15 @@ module appUnit_imp_1BHH9Z2
   wire [3:0]trigger_manager_0_samples;
   wire trigger_manager_0_trg;
   wire user_clk_1;
-  wire [0:0]util_vector_logic_0_Res;
-  wire [0:0]util_vector_logic_1_Res;
-  wire [0:0]util_vector_logic_2_Res;
-  wire [0:0]util_vector_logic_3_Res;
-  wire [3:0]xlconcat_0_dout;
-  wire [1279:0]xlconcat_1_dout;
-  wire [3:0]xlconcat_3_dout;
-  wire [0:0]xlslice_0_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [0:0]xlslice_2_Dout;
-  wire [0:0]xlslice_3_Dout;
   wire [0:0]xpm_cdc_gen_0_dest_out;
 
-  assign Conn1_TREADY = M_AXIS_data_tready;
-  assign M_AXIS_data_tdata[255:0] = Conn1_TDATA;
-  assign M_AXIS_data_tlast = Conn1_TLAST;
-  assign M_AXIS_data_tstrb[31:0] = Conn1_TSTRB;
-  assign M_AXIS_data_tvalid = Conn1_TVALID;
+  assign M_AXIS_data_tdata[255:0] = data_sender_wrapper_M_AXIS_data_TDATA;
+  assign M_AXIS_data_tlast = data_sender_wrapper_M_AXIS_data_TLAST;
+  assign M_AXIS_data_tstrb[31:0] = data_sender_wrapper_M_AXIS_data_TSTRB;
+  assign M_AXIS_data_tvalid = data_sender_wrapper_M_AXIS_data_TVALID;
   assign clk1_1 = clk125MHz;
   assign clk_1 = clk;
+  assign data_sender_wrapper_M_AXIS_data_TREADY = M_AXIS_data_tready;
   assign en_1 = en;
   assign event_reset_1 = event_reset;
   assign probe_in0_1 = SO0[10:0];
@@ -571,19 +545,22 @@ module appUnit_imp_1BHH9Z2
   assign probe_in3_1 = SO3[10:0];
   assign s_axis_aresetn_0_1 = s_axis_aresetn_0;
   assign user_clk_1 = user_clk;
-  top_block_axis_data_fifo_0_0 axis_data_fifo_0
-       (.m_axis_tdata(Conn1_TDATA),
-        .m_axis_tlast(Conn1_TLAST),
-        .m_axis_tready(Conn1_TREADY),
-        .m_axis_tstrb(Conn1_TSTRB),
-        .m_axis_tvalid(Conn1_TVALID),
-        .s_axis_aclk(clk1_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
-        .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,data_sender_v1_0_0_m00_axis_TDATA}),
-        .s_axis_tlast(data_sender_v1_0_0_m00_axis_TLAST),
-        .s_axis_tready(data_sender_v1_0_0_m00_axis_TREADY),
-        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,data_sender_v1_0_0_m00_axis_TSTRB}),
-        .s_axis_tvalid(data_sender_v1_0_0_m00_axis_TVALID));
+  async_fifos_imp_1HKIQFU async_fifos
+       (.clk(clk_1),
+        .clk125MHz(clk1_1),
+        .din(das_rx_0_bus2),
+        .din1(das_rx_0_bus1),
+        .din2(das_rx_0_bus0),
+        .din3(das_rx_0_bus3),
+        .dout(async_fifos_dout),
+        .full(async_fifos_dout1),
+        .req(data_processor_0_req),
+        .s_axis_aresetn_0(s_axis_aresetn_0_1),
+        .wr_en0(das_rx_0_wr_en0),
+        .wr_en1(das_rx_0_wr_en1),
+        .wr_en2(das_rx_0_wr_en2),
+        .wr_en3(das_rx_0_wr_en3),
+        .wr_gate(xpm_cdc_gen_0_dest_out));
   top_block_das_rx_0_0 das_rx_0
        (.SO0(probe_in0_1),
         .SO1(probe_in1_1),
@@ -595,7 +572,7 @@ module appUnit_imp_1BHH9Z2
         .bus3(das_rx_0_bus3),
         .clk_SO(clk_1),
         .en(en_1),
-        .full(xlconcat_0_dout),
+        .full(async_fifos_dout1),
         .user_clk(user_clk_1),
         .wr_en0(das_rx_0_wr_en0),
         .wr_en1(das_rx_0_wr_en1),
@@ -609,22 +586,22 @@ module appUnit_imp_1BHH9Z2
         .clk(clk1_1),
         .data_out(data_processor_0_data_o),
         .event_reset(event_reset_1),
-        .fifo_data_i(xlconcat_1_dout),
+        .fifo_data_i(async_fifos_dout),
         .last_data(data_processor_0_last_data),
-        .req(data_processor_0_rd_en),
+        .req(data_processor_0_req),
         .samples_i(trigger_manager_0_samples),
         .samples_o(data_processor_0_samples_o),
         .trg(trigger_manager_0_trg));
-  top_block_data_sender_v1_0_0_0 data_sender_v1_0_0
-       (.data(event_builder_v0_1_0_data_o),
-        .full(data_sender_v1_0_0_full),
-        .m00_axis_aclk(clk1_1),
-        .m00_axis_aresetn(s_axis_aresetn_0_1),
-        .m00_axis_tdata(data_sender_v1_0_0_m00_axis_TDATA),
-        .m00_axis_tlast(data_sender_v1_0_0_m00_axis_TLAST),
-        .m00_axis_tready(data_sender_v1_0_0_m00_axis_TREADY),
-        .m00_axis_tstrb(data_sender_v1_0_0_m00_axis_TSTRB),
-        .m00_axis_tvalid(data_sender_v1_0_0_m00_axis_TVALID),
+  data_sender_wrapper_imp_165VMFZ data_sender_wrapper
+       (.M_AXIS_data_tdata(data_sender_wrapper_M_AXIS_data_TDATA),
+        .M_AXIS_data_tlast(data_sender_wrapper_M_AXIS_data_TLAST),
+        .M_AXIS_data_tready(data_sender_wrapper_M_AXIS_data_TREADY),
+        .M_AXIS_data_tstrb(data_sender_wrapper_M_AXIS_data_TSTRB),
+        .M_AXIS_data_tvalid(data_sender_wrapper_M_AXIS_data_TVALID),
+        .clk125MHz(clk1_1),
+        .data(event_builder_v0_1_0_data_o),
+        .full(data_sender_wrapper_full),
+        .s_axis_aresetn_0(s_axis_aresetn_0_1),
         .wr(event_builder_v0_1_0_data_wr_o));
   top_block_event_builder_v0_1_0_1 event_builder_v0_1_0
        (.bus_sel_i(data_processor_0_bus_sel),
@@ -636,46 +613,10 @@ module appUnit_imp_1BHH9Z2
         .data_wr_i(1'b0),
         .data_wr_o(event_builder_v0_1_0_data_wr_o),
         .empty({1'b0,1'b0,1'b0,1'b0}),
-        .full_i(data_sender_v1_0_0_full),
+        .full_i(data_sender_wrapper_full),
         .last_data(data_processor_0_last_data),
         .rst(1'b0),
         .sample_cnt_i(data_processor_0_samples_o));
-  top_block_fifo_generator_0_1 fifo_generator_0
-       (.din(das_rx_0_bus0),
-        .dout(fifo_generator_0_dout),
-        .empty(fifo_generator_0_empty),
-        .full(fifo_generator_0_full),
-        .rd_clk(clk1_1),
-        .rd_en(xlslice_0_Dout),
-        .wr_clk(clk_1),
-        .wr_en(util_vector_logic_0_Res));
-  top_block_fifo_generator_0_2 fifo_generator_1
-       (.din(das_rx_0_bus1),
-        .dout(fifo_generator_1_dout),
-        .empty(fifo_generator_1_empty),
-        .full(fifo_generator_1_full),
-        .rd_clk(clk1_1),
-        .rd_en(xlslice_1_Dout),
-        .wr_clk(clk_1),
-        .wr_en(util_vector_logic_1_Res));
-  top_block_fifo_generator_0_3 fifo_generator_2
-       (.din(das_rx_0_bus2),
-        .dout(fifo_generator_2_dout),
-        .empty(fifo_generator_2_empty),
-        .full(fifo_generator_2_full),
-        .rd_clk(clk1_1),
-        .rd_en(xlslice_2_Dout),
-        .wr_clk(clk_1),
-        .wr_en(util_vector_logic_2_Res));
-  top_block_fifo_generator_0_4 fifo_generator_3
-       (.din(das_rx_0_bus3),
-        .dout(fifo_generator_3_dout),
-        .empty(fifo_generator_3_empty),
-        .full(fifo_generator_3_full),
-        .rd_clk(clk1_1),
-        .rd_en(xlslice_3_Dout),
-        .wr_clk(clk_1),
-        .wr_en(util_vector_logic_3_Res));
   top_block_trigger_manager_0_0 trigger_manager_0
        (.SO0(probe_in0_1),
         .busy_i(data_processor_0_busy),
@@ -685,52 +626,6 @@ module appUnit_imp_1BHH9Z2
         .reg_trg(1'b0),
         .samples(trigger_manager_0_samples),
         .trg(trigger_manager_0_trg));
-  top_block_util_vector_logic_0_3 util_vector_logic_0
-       (.Op1(das_rx_0_wr_en0),
-        .Op2(xpm_cdc_gen_0_dest_out),
-        .Res(util_vector_logic_0_Res));
-  top_block_util_vector_logic_0_7 util_vector_logic_1
-       (.Op1(das_rx_0_wr_en1),
-        .Op2(xpm_cdc_gen_0_dest_out),
-        .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_0_8 util_vector_logic_2
-       (.Op1(das_rx_0_wr_en2),
-        .Op2(xpm_cdc_gen_0_dest_out),
-        .Res(util_vector_logic_2_Res));
-  top_block_util_vector_logic_0_9 util_vector_logic_3
-       (.Op1(das_rx_0_wr_en3),
-        .Op2(xpm_cdc_gen_0_dest_out),
-        .Res(util_vector_logic_3_Res));
-  top_block_xlconcat_0_1 xlconcat_0
-       (.In0(fifo_generator_0_full),
-        .In1(fifo_generator_1_full),
-        .In2(fifo_generator_2_full),
-        .In3(fifo_generator_3_full),
-        .dout(xlconcat_0_dout));
-  top_block_xlconcat_1_2 xlconcat_1
-       (.In0(fifo_generator_0_dout),
-        .In1(fifo_generator_1_dout),
-        .In2(fifo_generator_2_dout),
-        .In3(fifo_generator_3_dout),
-        .dout(xlconcat_1_dout));
-  top_block_xlconcat_0_2 xlconcat_3
-       (.In0(fifo_generator_1_empty),
-        .In1(fifo_generator_0_empty),
-        .In2(fifo_generator_2_empty),
-        .In3(fifo_generator_3_empty),
-        .dout(xlconcat_3_dout));
-  top_block_xlslice_0_0 xlslice_0
-       (.Din(data_processor_0_rd_en),
-        .Dout(xlslice_0_Dout));
-  top_block_xlslice_0_1 xlslice_1
-       (.Din(data_processor_0_rd_en),
-        .Dout(xlslice_1_Dout));
-  top_block_xlslice_0_2 xlslice_2
-       (.Din(data_processor_0_rd_en),
-        .Dout(xlslice_2_Dout));
-  top_block_xlslice_0_3 xlslice_3
-       (.Din(data_processor_0_rd_en),
-        .Dout(xlslice_3_Dout));
   top_block_xpm_cdc_gen_0_1 xpm_cdc_gen_0
        (.dest_clk(clk_1),
         .dest_out(xpm_cdc_gen_0_dest_out),
@@ -738,44 +633,258 @@ module appUnit_imp_1BHH9Z2
         .src_in(trigger_manager_0_busy));
 endmodule
 
+module async_fifos_imp_1HKIQFU
+   (clk,
+    clk125MHz,
+    din,
+    din1,
+    din2,
+    din3,
+    dout,
+    empty,
+    full,
+    req,
+    s_axis_aresetn_0,
+    wr_en0,
+    wr_en1,
+    wr_en2,
+    wr_en3,
+    wr_gate);
+  input clk;
+  input clk125MHz;
+  input [319:0]din;
+  input [319:0]din1;
+  input [319:0]din2;
+  input [319:0]din3;
+  output [1279:0]dout;
+  output [3:0]empty;
+  output [3:0]full;
+  input [3:0]req;
+  input s_axis_aresetn_0;
+  input [0:0]wr_en0;
+  input [0:0]wr_en1;
+  input [0:0]wr_en2;
+  input [0:0]wr_en3;
+  input [0:0]wr_gate;
+
+  wire [3:0]Din_2;
+  wire Net;
+  wire [0:0]Op1_1;
+  wire [0:0]Op2_1;
+  wire [0:0]Op3_1;
+  wire [0:0]Op4_1;
+  wire [0:0]Op5_1;
+  wire clk125MHz_1;
+  wire clk_1;
+  wire [319:0]din1_1;
+  wire [319:0]din2_1;
+  wire [319:0]din3_1;
+  wire [319:0]din_1;
+  wire [0:0]rd_en_slice_Dout;
+  wire [0:0]rd_en_slice_Dout1;
+  wire [0:0]rd_en_slice_Dout2;
+  wire [0:0]rd_en_slice_Dout3;
+  wire [0:0]wr_en_gate_Res;
+  wire [0:0]wr_en_gate_Res1;
+  wire [0:0]wr_en_gate_Res2;
+  wire [0:0]wr_en_gate_Res3;
+  wire [3:0]xlconcat_0_dout;
+  wire [1279:0]xlconcat_1_dout;
+  wire [3:0]xlconcat_3_dout;
+  wire [319:0]xpm_afifo_wrapper_0_dout;
+  wire xpm_afifo_wrapper_0_empty;
+  wire xpm_afifo_wrapper_0_full;
+  wire [319:0]xpm_afifo_wrapper_1_dout;
+  wire xpm_afifo_wrapper_1_empty;
+  wire xpm_afifo_wrapper_1_full;
+  wire [319:0]xpm_afifo_wrapper_2_dout;
+  wire xpm_afifo_wrapper_2_empty;
+  wire xpm_afifo_wrapper_2_full;
+  wire [319:0]xpm_afifo_wrapper_3_dout;
+  wire xpm_afifo_wrapper_3_empty;
+  wire xpm_afifo_wrapper_3_full;
+
+  assign Din_2 = req[3:0];
+  assign Net = s_axis_aresetn_0;
+  assign Op1_1 = wr_en3[0];
+  assign Op2_1 = wr_gate[0];
+  assign Op3_1 = wr_en2[0];
+  assign Op4_1 = wr_en1[0];
+  assign Op5_1 = wr_en0[0];
+  assign clk125MHz_1 = clk125MHz;
+  assign clk_1 = clk;
+  assign din1_1 = din1[319:0];
+  assign din2_1 = din2[319:0];
+  assign din3_1 = din3[319:0];
+  assign din_1 = din[319:0];
+  assign dout[1279:0] = xlconcat_1_dout;
+  assign empty[3:0] = xlconcat_3_dout;
+  assign full[3:0] = xlconcat_0_dout;
+  rd_en_slice_imp_4U4C2Z rd_en_slice
+       (.Din(Din_2),
+        .Dout(rd_en_slice_Dout),
+        .Dout1(rd_en_slice_Dout1),
+        .Dout2(rd_en_slice_Dout2),
+        .Dout3(rd_en_slice_Dout3));
+  wr_en_gate_imp_6TUUSW wr_en_gate
+       (.Op1(Op1_1),
+        .Op2(Op2_1),
+        .Op3(Op3_1),
+        .Op4(Op4_1),
+        .Op5(Op5_1),
+        .Res(wr_en_gate_Res),
+        .Res1(wr_en_gate_Res1),
+        .Res2(wr_en_gate_Res2),
+        .Res3(wr_en_gate_Res3));
+  top_block_xlconcat_0_1 xlconcat_0
+       (.In0(xpm_afifo_wrapper_0_full),
+        .In1(xpm_afifo_wrapper_1_full),
+        .In2(xpm_afifo_wrapper_2_full),
+        .In3(xpm_afifo_wrapper_3_full),
+        .dout(xlconcat_0_dout));
+  top_block_xlconcat_1_2 xlconcat_1
+       (.In0(xpm_afifo_wrapper_0_dout),
+        .In1(xpm_afifo_wrapper_1_dout),
+        .In2(xpm_afifo_wrapper_2_dout),
+        .In3(xpm_afifo_wrapper_3_dout),
+        .dout(xlconcat_1_dout));
+  top_block_xlconcat_0_2 xlconcat_3
+       (.In0(xpm_afifo_wrapper_0_empty),
+        .In1(xpm_afifo_wrapper_1_empty),
+        .In2(xpm_afifo_wrapper_2_empty),
+        .In3(xpm_afifo_wrapper_3_empty),
+        .dout(xlconcat_3_dout));
+  top_block_xpm_async_fifo_wrapp_0_0 xpm_afifo_wrapper_0
+       (.din(din2_1),
+        .dout(xpm_afifo_wrapper_0_dout),
+        .empty(xpm_afifo_wrapper_0_empty),
+        .full(xpm_afifo_wrapper_0_full),
+        .rd_clk(clk125MHz_1),
+        .rd_en(rd_en_slice_Dout),
+        .rst(Net),
+        .wr_clk(clk_1),
+        .wr_en(wr_en_gate_Res3));
+  top_block_xpm_afifo_wrapper_0_0 xpm_afifo_wrapper_1
+       (.din(din1_1),
+        .dout(xpm_afifo_wrapper_1_dout),
+        .empty(xpm_afifo_wrapper_1_empty),
+        .full(xpm_afifo_wrapper_1_full),
+        .rd_clk(clk125MHz_1),
+        .rd_en(rd_en_slice_Dout1),
+        .rst(Net),
+        .wr_clk(clk_1),
+        .wr_en(wr_en_gate_Res1));
+  top_block_xpm_afifo_wrapper_1_0 xpm_afifo_wrapper_2
+       (.din(din_1),
+        .dout(xpm_afifo_wrapper_2_dout),
+        .empty(xpm_afifo_wrapper_2_empty),
+        .full(xpm_afifo_wrapper_2_full),
+        .rd_clk(clk125MHz_1),
+        .rd_en(rd_en_slice_Dout2),
+        .rst(Net),
+        .wr_clk(clk_1),
+        .wr_en(wr_en_gate_Res2));
+  top_block_xpm_afifo_wrapper_2_0 xpm_afifo_wrapper_3
+       (.din(din3_1),
+        .dout(xpm_afifo_wrapper_3_dout),
+        .empty(xpm_afifo_wrapper_3_empty),
+        .full(xpm_afifo_wrapper_3_full),
+        .rd_clk(clk125MHz_1),
+        .rd_en(rd_en_slice_Dout3),
+        .rst(Net),
+        .wr_clk(clk_1),
+        .wr_en(wr_en_gate_Res));
+endmodule
+
+module data_sender_wrapper_imp_165VMFZ
+   (M_AXIS_data_tdata,
+    M_AXIS_data_tlast,
+    M_AXIS_data_tready,
+    M_AXIS_data_tstrb,
+    M_AXIS_data_tvalid,
+    clk125MHz,
+    data,
+    full,
+    s_axis_aresetn_0,
+    wr);
+  output [255:0]M_AXIS_data_tdata;
+  output M_AXIS_data_tlast;
+  input M_AXIS_data_tready;
+  output [31:0]M_AXIS_data_tstrb;
+  output M_AXIS_data_tvalid;
+  input clk125MHz;
+  input [31:0]data;
+  output full;
+  input s_axis_aresetn_0;
+  input wr;
+
+  wire [255:0]Conn1_TDATA;
+  wire Conn1_TLAST;
+  wire Conn1_TREADY;
+  wire [31:0]Conn1_TSTRB;
+  wire Conn1_TVALID;
+  wire clk125MHz_1;
+  wire [31:0]data_1;
+  wire data_sender_v1_0_0_full;
+  wire [31:0]data_sender_v1_0_0_m00_axis_TDATA;
+  wire data_sender_v1_0_0_m00_axis_TLAST;
+  wire data_sender_v1_0_0_m00_axis_TREADY;
+  wire [3:0]data_sender_v1_0_0_m00_axis_TSTRB;
+  wire data_sender_v1_0_0_m00_axis_TVALID;
+  wire s_axis_aresetn_0_1;
+  wire wr_1;
+
+  assign Conn1_TREADY = M_AXIS_data_tready;
+  assign M_AXIS_data_tdata[255:0] = Conn1_TDATA;
+  assign M_AXIS_data_tlast = Conn1_TLAST;
+  assign M_AXIS_data_tstrb[31:0] = Conn1_TSTRB;
+  assign M_AXIS_data_tvalid = Conn1_TVALID;
+  assign clk125MHz_1 = clk125MHz;
+  assign data_1 = data[31:0];
+  assign full = data_sender_v1_0_0_full;
+  assign s_axis_aresetn_0_1 = s_axis_aresetn_0;
+  assign wr_1 = wr;
+  top_block_axis_data_fifo_0_0 axis_data_fifo_0
+       (.m_axis_tdata(Conn1_TDATA),
+        .m_axis_tlast(Conn1_TLAST),
+        .m_axis_tready(Conn1_TREADY),
+        .m_axis_tstrb(Conn1_TSTRB),
+        .m_axis_tvalid(Conn1_TVALID),
+        .s_axis_aclk(clk125MHz_1),
+        .s_axis_aresetn(s_axis_aresetn_0_1),
+        .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,data_sender_v1_0_0_m00_axis_TDATA}),
+        .s_axis_tlast(data_sender_v1_0_0_m00_axis_TLAST),
+        .s_axis_tready(data_sender_v1_0_0_m00_axis_TREADY),
+        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,data_sender_v1_0_0_m00_axis_TSTRB}),
+        .s_axis_tvalid(data_sender_v1_0_0_m00_axis_TVALID));
+  top_block_data_sender_v1_0_0_0 data_sender_v1_0_0
+       (.data(data_1),
+        .full(data_sender_v1_0_0_full),
+        .m00_axis_aclk(clk125MHz_1),
+        .m00_axis_aresetn(s_axis_aresetn_0_1),
+        .m00_axis_tdata(data_sender_v1_0_0_m00_axis_TDATA),
+        .m00_axis_tlast(data_sender_v1_0_0_m00_axis_TLAST),
+        .m00_axis_tready(data_sender_v1_0_0_m00_axis_TREADY),
+        .m00_axis_tstrb(data_sender_v1_0_0_m00_axis_TSTRB),
+        .m00_axis_tvalid(data_sender_v1_0_0_m00_axis_TVALID),
+        .wr(wr_1));
+endmodule
+
 module fakernet_imp_1GNS2XO
    (clk25_in_0,
     clk_in_0,
     gtrefclk_n_0,
     gtrefclk_p_0,
-    i2c_done,
-    i2c_raddr_o,
-    i2c_rdata_i,
-    i2c_waddr_o,
     independent_clock_0,
-    m00_axi_araddr,
-    m00_axi_aresetn,
-    m00_axi_arprot,
-    m00_axi_arready,
-    m00_axi_arvalid,
-    m00_axi_awaddr,
-    m00_axi_awprot,
-    m00_axi_awready,
-    m00_axi_awvalid,
-    m00_axi_bready,
-    m00_axi_bresp,
-    m00_axi_bvalid,
-    m00_axi_rdata,
-    m00_axi_rready,
-    m00_axi_rresp,
-    m00_axi_rvalid,
-    m00_axi_wdata,
-    m00_axi_wready,
-    m00_axi_wstrb,
-    m00_axi_wvalid,
-    regacc_done,
+    regacc_addr_o,
+    regacc_data_rd_i,
+    regacc_data_wr_o,
+    regacc_done_i,
+    regacc_read_o,
+    regacc_write_o,
     reset_vio_0,
     rxn_0,
     rxp_0,
-    start_i2c_read_o,
-    start_i2c_write_all_o,
-    start_i2c_write_o,
-    trg_en,
     txn_0,
     txp_0,
     user_data_commit,
@@ -789,39 +898,16 @@ module fakernet_imp_1GNS2XO
   input clk_in_0;
   input gtrefclk_n_0;
   input gtrefclk_p_0;
-  input i2c_done;
-  output [31:0]i2c_raddr_o;
-  input [31:0]i2c_rdata_i;
-  output [31:0]i2c_waddr_o;
   input independent_clock_0;
-  output [31:0]m00_axi_araddr;
-  input m00_axi_aresetn;
-  output [2:0]m00_axi_arprot;
-  input m00_axi_arready;
-  output m00_axi_arvalid;
-  output [31:0]m00_axi_awaddr;
-  output [2:0]m00_axi_awprot;
-  input m00_axi_awready;
-  output m00_axi_awvalid;
-  output m00_axi_bready;
-  input [1:0]m00_axi_bresp;
-  input m00_axi_bvalid;
-  input [31:0]m00_axi_rdata;
-  output m00_axi_rready;
-  input [1:0]m00_axi_rresp;
-  input m00_axi_rvalid;
-  output [31:0]m00_axi_wdata;
-  input m00_axi_wready;
-  output [3:0]m00_axi_wstrb;
-  output m00_axi_wvalid;
-  output regacc_done;
+  output [24:0]regacc_addr_o;
+  input [31:0]regacc_data_rd_i;
+  output [31:0]regacc_data_wr_o;
+  input regacc_done_i;
+  output regacc_read_o;
+  output regacc_write_o;
   input reset_vio_0;
   input rxn_0;
   input rxp_0;
-  output start_i2c_read_o;
-  output start_i2c_write_all_o;
-  output start_i2c_write_o;
-  output trg_en;
   output txn_0;
   output txp_0;
   input user_data_commit;
@@ -832,25 +918,6 @@ module fakernet_imp_1GNS2XO
   input [31:0]user_data_word;
   input user_data_write;
 
-  wire [31:0]Conn1_ARADDR;
-  wire [2:0]Conn1_ARPROT;
-  wire Conn1_ARREADY;
-  wire Conn1_ARVALID;
-  wire [31:0]Conn1_AWADDR;
-  wire [2:0]Conn1_AWPROT;
-  wire Conn1_AWREADY;
-  wire Conn1_AWVALID;
-  wire Conn1_BREADY;
-  wire [1:0]Conn1_BRESP;
-  wire Conn1_BVALID;
-  wire [31:0]Conn1_RDATA;
-  wire Conn1_RREADY;
-  wire [1:0]Conn1_RRESP;
-  wire Conn1_RVALID;
-  wire [31:0]Conn1_WDATA;
-  wire Conn1_WREADY;
-  wire [3:0]Conn1_WSTRB;
-  wire Conn1_WVALID;
   wire RESET_INST_0_sfp_reset_pulse;
   wire clk25_in_0_1;
   wire clk_in_0_1;
@@ -873,29 +940,14 @@ module fakernet_imp_1GNS2XO
   wire gig_ethernet_pcs_pma_0_txp;
   wire gtrefclk_n_0_1;
   wire gtrefclk_p_0_1;
-  wire i2c_done_1;
-  wire [31:0]i2c_rdata_i_1;
   wire [0:0]if_gate1_Res;
   wire [0:0]if_gate_Res;
   wire independent_clock_0_1;
-  wire m00_axi_aresetn_1;
   wire mii_initializer_0_COMPLETE;
   wire mii_initializer_0_MDC;
   wire mii_initializer_0_MDIO_OUT;
-  wire [31:0]native_to_axi_lite_v_0_regacc_data_rd;
-  wire native_to_axi_lite_v_0_regacc_done;
-  wire [31:0]reg_switch_0_i2c_raddr_o;
-  wire [31:0]reg_switch_0_i2c_waddr_o;
-  wire [24:0]reg_switch_0_regacc_addr_o;
-  wire [31:0]reg_switch_0_regacc_data_rd_o;
-  wire [31:0]reg_switch_0_regacc_data_wr_o;
   wire reg_switch_0_regacc_done_o;
-  wire reg_switch_0_regacc_read_o;
-  wire reg_switch_0_regacc_write_o;
-  wire reg_switch_0_start_i2c_read_o;
-  wire reg_switch_0_start_i2c_write_all_o;
-  wire reg_switch_0_start_i2c_write_o;
-  wire reg_switch_0_trg_en;
+  wire [31:0]regacc_data_rd_i_1;
   wire reset_vio_0_1;
   wire rxn_0_1;
   wire rxp_0_1;
@@ -909,43 +961,20 @@ module fakernet_imp_1GNS2XO
   wire [0:0]xlconstant_2_dout;
   wire [4:0]xlconstant_3_dout;
 
-  assign Conn1_ARREADY = m00_axi_arready;
-  assign Conn1_AWREADY = m00_axi_awready;
-  assign Conn1_BRESP = m00_axi_bresp[1:0];
-  assign Conn1_BVALID = m00_axi_bvalid;
-  assign Conn1_RDATA = m00_axi_rdata[31:0];
-  assign Conn1_RRESP = m00_axi_rresp[1:0];
-  assign Conn1_RVALID = m00_axi_rvalid;
-  assign Conn1_WREADY = m00_axi_wready;
   assign clk25_in_0_1 = clk25_in_0;
   assign clk_in_0_1 = clk_in_0;
   assign gtrefclk_n_0_1 = gtrefclk_n_0;
   assign gtrefclk_p_0_1 = gtrefclk_p_0;
-  assign i2c_done_1 = i2c_done;
-  assign i2c_raddr_o[31:0] = reg_switch_0_i2c_raddr_o;
-  assign i2c_rdata_i_1 = i2c_rdata_i[31:0];
-  assign i2c_waddr_o[31:0] = reg_switch_0_i2c_waddr_o;
   assign independent_clock_0_1 = independent_clock_0;
-  assign m00_axi_araddr[31:0] = Conn1_ARADDR;
-  assign m00_axi_aresetn_1 = m00_axi_aresetn;
-  assign m00_axi_arprot[2:0] = Conn1_ARPROT;
-  assign m00_axi_arvalid = Conn1_ARVALID;
-  assign m00_axi_awaddr[31:0] = Conn1_AWADDR;
-  assign m00_axi_awprot[2:0] = Conn1_AWPROT;
-  assign m00_axi_awvalid = Conn1_AWVALID;
-  assign m00_axi_bready = Conn1_BREADY;
-  assign m00_axi_rready = Conn1_RREADY;
-  assign m00_axi_wdata[31:0] = Conn1_WDATA;
-  assign m00_axi_wstrb[3:0] = Conn1_WSTRB;
-  assign m00_axi_wvalid = Conn1_WVALID;
-  assign regacc_done = reg_switch_0_regacc_done_o;
+  assign reg_switch_0_regacc_done_o = regacc_done_i;
+  assign regacc_addr_o[24:0] = fakernet_top_0_regacc_addr_o;
+  assign regacc_data_rd_i_1 = regacc_data_rd_i[31:0];
+  assign regacc_data_wr_o[31:0] = fakernet_top_0_regacc_data_wr_o;
+  assign regacc_read_o = fakernet_top_0_regacc_read_o;
+  assign regacc_write_o = fakernet_top_0_regacc_write_o;
   assign reset_vio_0_1 = reset_vio_0;
   assign rxn_0_1 = rxn_0;
   assign rxp_0_1 = rxp_0;
-  assign start_i2c_read_o = reg_switch_0_start_i2c_read_o;
-  assign start_i2c_write_all_o = reg_switch_0_start_i2c_write_all_o;
-  assign start_i2c_write_o = reg_switch_0_start_i2c_write_o;
-  assign trg_en = reg_switch_0_trg_en;
   assign txn_0 = gig_ethernet_pcs_pma_0_txn;
   assign txp_0 = gig_ethernet_pcs_pma_0_txp;
   assign user_data_commit_1 = user_data_commit;
@@ -983,7 +1012,7 @@ module fakernet_imp_1GNS2XO
         .jd0(1'b0),
         .jd2(1'b0),
         .regacc_addr_o(fakernet_top_0_regacc_addr_o),
-        .regacc_data_rd_i(reg_switch_0_regacc_data_rd_o),
+        .regacc_data_rd_i(regacc_data_rd_i_1),
         .regacc_data_wr_o(fakernet_top_0_regacc_data_wr_o),
         .regacc_done_i(reg_switch_0_regacc_done_o),
         .regacc_read_o(fakernet_top_0_regacc_read_o),
@@ -1040,58 +1069,6 @@ module fakernet_imp_1GNS2XO
         .MDIO_OUT(mii_initializer_0_MDIO_OUT),
         .PHYAD(xlconstant_0_dout),
         .RST(RESET_INST_0_sfp_reset_pulse));
-  top_block_native_to_axi_lite_v_0_0 native_to_axi_lite_v_0
-       (.m00_axi_aclk(clk_in_0_1),
-        .m00_axi_araddr(Conn1_ARADDR),
-        .m00_axi_aresetn(m00_axi_aresetn_1),
-        .m00_axi_arprot(Conn1_ARPROT),
-        .m00_axi_arready(Conn1_ARREADY),
-        .m00_axi_arvalid(Conn1_ARVALID),
-        .m00_axi_awaddr(Conn1_AWADDR),
-        .m00_axi_awprot(Conn1_AWPROT),
-        .m00_axi_awready(Conn1_AWREADY),
-        .m00_axi_awvalid(Conn1_AWVALID),
-        .m00_axi_bready(Conn1_BREADY),
-        .m00_axi_bresp(Conn1_BRESP),
-        .m00_axi_bvalid(Conn1_BVALID),
-        .m00_axi_init_axi_txn(reg_switch_0_regacc_write_o),
-        .m00_axi_rdata(Conn1_RDATA),
-        .m00_axi_rready(Conn1_RREADY),
-        .m00_axi_rresp(Conn1_RRESP),
-        .m00_axi_rvalid(Conn1_RVALID),
-        .m00_axi_wdata(Conn1_WDATA),
-        .m00_axi_wready(Conn1_WREADY),
-        .m00_axi_wstrb(Conn1_WSTRB),
-        .m00_axi_wvalid(Conn1_WVALID),
-        .regacc_addr(reg_switch_0_regacc_addr_o),
-        .regacc_data_rd(native_to_axi_lite_v_0_regacc_data_rd),
-        .regacc_data_wr(reg_switch_0_regacc_data_wr_o),
-        .regacc_done(native_to_axi_lite_v_0_regacc_done),
-        .regacc_read(reg_switch_0_regacc_read_o),
-        .regacc_write(reg_switch_0_regacc_write_o));
-  top_block_reg_switch_0_0 reg_switch_0
-       (.axi_aclk(clk_in_0_1),
-        .axi_aresetn(m00_axi_aresetn_1),
-        .i2c_done(i2c_done_1),
-        .i2c_raddr_o(reg_switch_0_i2c_raddr_o),
-        .i2c_rdata_i(i2c_rdata_i_1),
-        .i2c_waddr_o(reg_switch_0_i2c_waddr_o),
-        .regacc_addr_i(fakernet_top_0_regacc_addr_o),
-        .regacc_addr_o(reg_switch_0_regacc_addr_o),
-        .regacc_data_rd_i(native_to_axi_lite_v_0_regacc_data_rd),
-        .regacc_data_rd_o(reg_switch_0_regacc_data_rd_o),
-        .regacc_data_wr_i(fakernet_top_0_regacc_data_wr_o),
-        .regacc_data_wr_o(reg_switch_0_regacc_data_wr_o),
-        .regacc_done_i(native_to_axi_lite_v_0_regacc_done),
-        .regacc_done_o(reg_switch_0_regacc_done_o),
-        .regacc_read_i(fakernet_top_0_regacc_read_o),
-        .regacc_read_o(reg_switch_0_regacc_read_o),
-        .regacc_write_i(fakernet_top_0_regacc_write_o),
-        .regacc_write_o(reg_switch_0_regacc_write_o),
-        .start_i2c_read_o(reg_switch_0_start_i2c_read_o),
-        .start_i2c_write_all_o(reg_switch_0_start_i2c_write_all_o),
-        .start_i2c_write_o(reg_switch_0_start_i2c_write_o),
-        .trg_en(reg_switch_0_trg_en));
   top_block_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   top_block_xlconstant_0_1 xlconstant_1
@@ -1196,25 +1173,6 @@ module fnet_wrapper_imp_RWCR3V
   output user_data_free;
   output user_data_reset;
 
-  wire [31:0]Conn1_ARADDR;
-  wire [2:0]Conn1_ARPROT;
-  wire Conn1_ARREADY;
-  wire Conn1_ARVALID;
-  wire [31:0]Conn1_AWADDR;
-  wire [2:0]Conn1_AWPROT;
-  wire Conn1_AWREADY;
-  wire Conn1_AWVALID;
-  wire Conn1_BREADY;
-  wire [1:0]Conn1_BRESP;
-  wire Conn1_BVALID;
-  wire [31:0]Conn1_RDATA;
-  wire Conn1_RREADY;
-  wire [1:0]Conn1_RRESP;
-  wire Conn1_RVALID;
-  wire [31:0]Conn1_WDATA;
-  wire Conn1_WREADY;
-  wire [3:0]Conn1_WSTRB;
-  wire Conn1_WVALID;
   wire [255:0]Conn2_TDATA;
   wire Conn2_TLAST;
   wire Conn2_TREADY;
@@ -1227,13 +1185,10 @@ module fnet_wrapper_imp_RWCR3V
   wire [9:0]data_receiver_v1_0_0_event_offset;
   wire [31:0]data_receiver_v1_0_0_event_word;
   wire data_receiver_v1_0_0_event_write;
-  wire [31:0]fakernet_i2c_raddr_o;
-  wire [31:0]fakernet_i2c_waddr_o;
-  wire fakernet_regacc_done;
-  wire fakernet_start_i2c_read_o;
-  wire fakernet_start_i2c_write_all_o;
-  wire fakernet_start_i2c_write_o;
-  wire fakernet_trg_en;
+  wire [24:0]fakernet_regacc_addr_o;
+  wire [31:0]fakernet_regacc_data_wr_o;
+  wire fakernet_regacc_read_o;
+  wire fakernet_regacc_write_o;
   wire fakernet_txn_0;
   wire fakernet_txp_0;
   wire fakernet_user_data_free;
@@ -1244,18 +1199,43 @@ module fnet_wrapper_imp_RWCR3V
   wire [31:0]i2c_rdata_i_1;
   wire independent_clock_0_1;
   wire m00_axi_aresetn_1;
+  wire [31:0]native_to_axi_lite_v_0_m00_axi_ARADDR;
+  wire [2:0]native_to_axi_lite_v_0_m00_axi_ARPROT;
+  wire native_to_axi_lite_v_0_m00_axi_ARREADY;
+  wire native_to_axi_lite_v_0_m00_axi_ARVALID;
+  wire [31:0]native_to_axi_lite_v_0_m00_axi_AWADDR;
+  wire [2:0]native_to_axi_lite_v_0_m00_axi_AWPROT;
+  wire native_to_axi_lite_v_0_m00_axi_AWREADY;
+  wire native_to_axi_lite_v_0_m00_axi_AWVALID;
+  wire native_to_axi_lite_v_0_m00_axi_BREADY;
+  wire [1:0]native_to_axi_lite_v_0_m00_axi_BRESP;
+  wire native_to_axi_lite_v_0_m00_axi_BVALID;
+  wire [31:0]native_to_axi_lite_v_0_m00_axi_RDATA;
+  wire native_to_axi_lite_v_0_m00_axi_RREADY;
+  wire [1:0]native_to_axi_lite_v_0_m00_axi_RRESP;
+  wire native_to_axi_lite_v_0_m00_axi_RVALID;
+  wire [31:0]native_to_axi_lite_v_0_m00_axi_WDATA;
+  wire native_to_axi_lite_v_0_m00_axi_WREADY;
+  wire [3:0]native_to_axi_lite_v_0_m00_axi_WSTRB;
+  wire native_to_axi_lite_v_0_m00_axi_WVALID;
+  wire [31:0]native_to_axi_lite_v_0_regacc_data_rd;
+  wire native_to_axi_lite_v_0_regacc_done;
+  wire [31:0]reg_switch_0_i2c_raddr_o;
+  wire [31:0]reg_switch_0_i2c_waddr_o;
+  wire [24:0]reg_switch_0_regacc_addr_o;
+  wire [31:0]reg_switch_0_regacc_data_rd_o;
+  wire [31:0]reg_switch_0_regacc_data_wr_o;
+  wire reg_switch_0_regacc_done_o;
+  wire reg_switch_0_regacc_read_o;
+  wire reg_switch_0_regacc_write_o;
+  wire reg_switch_0_start_i2c_read_o;
+  wire reg_switch_0_start_i2c_write_all_o;
+  wire reg_switch_0_start_i2c_write_o;
+  wire reg_switch_0_trg_en;
   wire reset_vio_0_1;
   wire rxn_0_1;
   wire rxp_0_1;
 
-  assign Conn1_ARREADY = m00_axi_arready;
-  assign Conn1_AWREADY = m00_axi_awready;
-  assign Conn1_BRESP = m00_axi_bresp[1:0];
-  assign Conn1_BVALID = m00_axi_bvalid;
-  assign Conn1_RDATA = m00_axi_rdata[31:0];
-  assign Conn1_RRESP = m00_axi_rresp[1:0];
-  assign Conn1_RVALID = m00_axi_rvalid;
-  assign Conn1_WREADY = m00_axi_wready;
   assign Conn2_TDATA = s00_axis_data_tdata[255:0];
   assign Conn2_TLAST = s00_axis_data_tlast;
   assign Conn2_TSTRB = s00_axis_data_tstrb[31:0];
@@ -1267,31 +1247,40 @@ module fnet_wrapper_imp_RWCR3V
   assign gtrefclk_n_0_1 = SFP_CLK_N;
   assign gtrefclk_p_0_1 = SFP_CLK_P;
   assign i2c_done_1 = i2c_done;
-  assign i2c_raddr_o[31:0] = fakernet_i2c_raddr_o;
+  assign i2c_raddr_o[31:0] = reg_switch_0_i2c_raddr_o;
   assign i2c_rdata_i_1 = i2c_rdata_i[31:0];
-  assign i2c_waddr_o[31:0] = fakernet_i2c_waddr_o;
+  assign i2c_waddr_o[31:0] = reg_switch_0_i2c_waddr_o;
   assign independent_clock_0_1 = independent_clock_0;
-  assign m00_axi_araddr[31:0] = Conn1_ARADDR;
+  assign m00_axi_araddr[31:0] = native_to_axi_lite_v_0_m00_axi_ARADDR;
   assign m00_axi_aresetn_1 = m00_axi_aresetn;
-  assign m00_axi_arprot[2:0] = Conn1_ARPROT;
-  assign m00_axi_arvalid = Conn1_ARVALID;
-  assign m00_axi_awaddr[31:0] = Conn1_AWADDR;
-  assign m00_axi_awprot[2:0] = Conn1_AWPROT;
-  assign m00_axi_awvalid = Conn1_AWVALID;
-  assign m00_axi_bready = Conn1_BREADY;
-  assign m00_axi_rready = Conn1_RREADY;
-  assign m00_axi_wdata[31:0] = Conn1_WDATA;
-  assign m00_axi_wstrb[3:0] = Conn1_WSTRB;
-  assign m00_axi_wvalid = Conn1_WVALID;
-  assign regacc_done = fakernet_regacc_done;
+  assign m00_axi_arprot[2:0] = native_to_axi_lite_v_0_m00_axi_ARPROT;
+  assign m00_axi_arvalid = native_to_axi_lite_v_0_m00_axi_ARVALID;
+  assign m00_axi_awaddr[31:0] = native_to_axi_lite_v_0_m00_axi_AWADDR;
+  assign m00_axi_awprot[2:0] = native_to_axi_lite_v_0_m00_axi_AWPROT;
+  assign m00_axi_awvalid = native_to_axi_lite_v_0_m00_axi_AWVALID;
+  assign m00_axi_bready = native_to_axi_lite_v_0_m00_axi_BREADY;
+  assign m00_axi_rready = native_to_axi_lite_v_0_m00_axi_RREADY;
+  assign m00_axi_wdata[31:0] = native_to_axi_lite_v_0_m00_axi_WDATA;
+  assign m00_axi_wstrb[3:0] = native_to_axi_lite_v_0_m00_axi_WSTRB;
+  assign m00_axi_wvalid = native_to_axi_lite_v_0_m00_axi_WVALID;
+  assign native_to_axi_lite_v_0_m00_axi_ARREADY = m00_axi_arready;
+  assign native_to_axi_lite_v_0_m00_axi_AWREADY = m00_axi_awready;
+  assign native_to_axi_lite_v_0_m00_axi_BRESP = m00_axi_bresp[1:0];
+  assign native_to_axi_lite_v_0_m00_axi_BVALID = m00_axi_bvalid;
+  assign native_to_axi_lite_v_0_m00_axi_RDATA = m00_axi_rdata[31:0];
+  assign native_to_axi_lite_v_0_m00_axi_RRESP = m00_axi_rresp[1:0];
+  assign native_to_axi_lite_v_0_m00_axi_RVALID = m00_axi_rvalid;
+  assign native_to_axi_lite_v_0_m00_axi_WREADY = m00_axi_wready;
+  assign regacc_done = reg_switch_0_regacc_done_o;
   assign reset_vio_0_1 = reset_vio_0;
   assign rxn_0_1 = SFP0RXN;
   assign rxp_0_1 = SFP0RXP;
   assign s00_axis_data_tready = Conn2_TREADY;
-  assign start_i2c_read_o = fakernet_start_i2c_read_o;
-  assign start_i2c_write_all_o = fakernet_start_i2c_write_all_o;
-  assign start_i2c_write_o = fakernet_start_i2c_write_o;
-  assign trg_en = fakernet_trg_en;
+  assign start_i2c_read_o = reg_switch_0_start_i2c_read_o;
+  assign start_i2c_write_all_o = reg_switch_0_start_i2c_write_all_o;
+  assign start_i2c_write_o = reg_switch_0_start_i2c_write_o;
+  assign trg_en = reg_switch_0_trg_en;
+  assign user_data_free = fakernet_user_data_free;
   assign user_data_reset = fakernet_user_data_reset;
   top_block_data_receiver_v1_0_0_0 data_receiver_v1_0_0
        (.event_commit(data_receiver_v1_0_0_event_commit),
@@ -1312,39 +1301,16 @@ module fnet_wrapper_imp_RWCR3V
         .clk_in_0(clk_in_0_1),
         .gtrefclk_n_0(gtrefclk_n_0_1),
         .gtrefclk_p_0(gtrefclk_p_0_1),
-        .i2c_done(i2c_done_1),
-        .i2c_raddr_o(fakernet_i2c_raddr_o),
-        .i2c_rdata_i(i2c_rdata_i_1),
-        .i2c_waddr_o(fakernet_i2c_waddr_o),
         .independent_clock_0(independent_clock_0_1),
-        .m00_axi_araddr(Conn1_ARADDR),
-        .m00_axi_aresetn(m00_axi_aresetn_1),
-        .m00_axi_arprot(Conn1_ARPROT),
-        .m00_axi_arready(Conn1_ARREADY),
-        .m00_axi_arvalid(Conn1_ARVALID),
-        .m00_axi_awaddr(Conn1_AWADDR),
-        .m00_axi_awprot(Conn1_AWPROT),
-        .m00_axi_awready(Conn1_AWREADY),
-        .m00_axi_awvalid(Conn1_AWVALID),
-        .m00_axi_bready(Conn1_BREADY),
-        .m00_axi_bresp(Conn1_BRESP),
-        .m00_axi_bvalid(Conn1_BVALID),
-        .m00_axi_rdata(Conn1_RDATA),
-        .m00_axi_rready(Conn1_RREADY),
-        .m00_axi_rresp(Conn1_RRESP),
-        .m00_axi_rvalid(Conn1_RVALID),
-        .m00_axi_wdata(Conn1_WDATA),
-        .m00_axi_wready(Conn1_WREADY),
-        .m00_axi_wstrb(Conn1_WSTRB),
-        .m00_axi_wvalid(Conn1_WVALID),
-        .regacc_done(fakernet_regacc_done),
+        .regacc_addr_o(fakernet_regacc_addr_o),
+        .regacc_data_rd_i(reg_switch_0_regacc_data_rd_o),
+        .regacc_data_wr_o(fakernet_regacc_data_wr_o),
+        .regacc_done_i(reg_switch_0_regacc_done_o),
+        .regacc_read_o(fakernet_regacc_read_o),
+        .regacc_write_o(fakernet_regacc_write_o),
         .reset_vio_0(reset_vio_0_1),
         .rxn_0(rxn_0_1),
         .rxp_0(rxp_0_1),
-        .start_i2c_read_o(fakernet_start_i2c_read_o),
-        .start_i2c_write_all_o(fakernet_start_i2c_write_all_o),
-        .start_i2c_write_o(fakernet_start_i2c_write_o),
-        .trg_en(fakernet_trg_en),
         .txn_0(fakernet_txn_0),
         .txp_0(fakernet_txp_0),
         .user_data_commit(data_receiver_v1_0_0_event_commit),
@@ -1354,6 +1320,58 @@ module fnet_wrapper_imp_RWCR3V
         .user_data_reset(fakernet_user_data_reset),
         .user_data_word(data_receiver_v1_0_0_event_word),
         .user_data_write(data_receiver_v1_0_0_event_write));
+  top_block_native_to_axi_lite_v_0_0 native_to_axi_lite_v_0
+       (.m00_axi_aclk(clk_in_0_1),
+        .m00_axi_araddr(native_to_axi_lite_v_0_m00_axi_ARADDR),
+        .m00_axi_aresetn(m00_axi_aresetn_1),
+        .m00_axi_arprot(native_to_axi_lite_v_0_m00_axi_ARPROT),
+        .m00_axi_arready(native_to_axi_lite_v_0_m00_axi_ARREADY),
+        .m00_axi_arvalid(native_to_axi_lite_v_0_m00_axi_ARVALID),
+        .m00_axi_awaddr(native_to_axi_lite_v_0_m00_axi_AWADDR),
+        .m00_axi_awprot(native_to_axi_lite_v_0_m00_axi_AWPROT),
+        .m00_axi_awready(native_to_axi_lite_v_0_m00_axi_AWREADY),
+        .m00_axi_awvalid(native_to_axi_lite_v_0_m00_axi_AWVALID),
+        .m00_axi_bready(native_to_axi_lite_v_0_m00_axi_BREADY),
+        .m00_axi_bresp(native_to_axi_lite_v_0_m00_axi_BRESP),
+        .m00_axi_bvalid(native_to_axi_lite_v_0_m00_axi_BVALID),
+        .m00_axi_init_axi_txn(reg_switch_0_regacc_write_o),
+        .m00_axi_rdata(native_to_axi_lite_v_0_m00_axi_RDATA),
+        .m00_axi_rready(native_to_axi_lite_v_0_m00_axi_RREADY),
+        .m00_axi_rresp(native_to_axi_lite_v_0_m00_axi_RRESP),
+        .m00_axi_rvalid(native_to_axi_lite_v_0_m00_axi_RVALID),
+        .m00_axi_wdata(native_to_axi_lite_v_0_m00_axi_WDATA),
+        .m00_axi_wready(native_to_axi_lite_v_0_m00_axi_WREADY),
+        .m00_axi_wstrb(native_to_axi_lite_v_0_m00_axi_WSTRB),
+        .m00_axi_wvalid(native_to_axi_lite_v_0_m00_axi_WVALID),
+        .regacc_addr(reg_switch_0_regacc_addr_o),
+        .regacc_data_rd(native_to_axi_lite_v_0_regacc_data_rd),
+        .regacc_data_wr(reg_switch_0_regacc_data_wr_o),
+        .regacc_done(native_to_axi_lite_v_0_regacc_done),
+        .regacc_read(reg_switch_0_regacc_read_o),
+        .regacc_write(reg_switch_0_regacc_write_o));
+  top_block_reg_switch_0_0 reg_switch_0
+       (.axi_aclk(clk_in_0_1),
+        .axi_aresetn(m00_axi_aresetn_1),
+        .i2c_done(i2c_done_1),
+        .i2c_raddr_o(reg_switch_0_i2c_raddr_o),
+        .i2c_rdata_i(i2c_rdata_i_1),
+        .i2c_waddr_o(reg_switch_0_i2c_waddr_o),
+        .regacc_addr_i(fakernet_regacc_addr_o),
+        .regacc_addr_o(reg_switch_0_regacc_addr_o),
+        .regacc_data_rd_i(native_to_axi_lite_v_0_regacc_data_rd),
+        .regacc_data_rd_o(reg_switch_0_regacc_data_rd_o),
+        .regacc_data_wr_i(fakernet_regacc_data_wr_o),
+        .regacc_data_wr_o(reg_switch_0_regacc_data_wr_o),
+        .regacc_done_i(native_to_axi_lite_v_0_regacc_done),
+        .regacc_done_o(reg_switch_0_regacc_done_o),
+        .regacc_read_i(fakernet_regacc_read_o),
+        .regacc_read_o(reg_switch_0_regacc_read_o),
+        .regacc_write_i(fakernet_regacc_write_o),
+        .regacc_write_o(reg_switch_0_regacc_write_o),
+        .start_i2c_read_o(reg_switch_0_start_i2c_read_o),
+        .start_i2c_write_all_o(reg_switch_0_start_i2c_write_all_o),
+        .start_i2c_write_o(reg_switch_0_start_i2c_write_o),
+        .trg_en(reg_switch_0_trg_en));
 endmodule
 
 module if_gate1_imp_O68EJJ
@@ -1837,6 +1855,43 @@ module m00_couplers_imp_1AHYLJ8
   assign m00_couplers_to_m00_couplers_WREADY = M_AXI_wready[0];
   assign m00_couplers_to_m00_couplers_WSTRB = S_AXI_wstrb[3:0];
   assign m00_couplers_to_m00_couplers_WVALID = S_AXI_wvalid[0];
+endmodule
+
+module rd_en_slice_imp_4U4C2Z
+   (Din,
+    Dout,
+    Dout1,
+    Dout2,
+    Dout3);
+  input [3:0]Din;
+  output [0:0]Dout;
+  output [0:0]Dout1;
+  output [0:0]Dout2;
+  output [0:0]Dout3;
+
+  wire [3:0]Din_1;
+  wire [0:0]xlslice_0_Dout;
+  wire [0:0]xlslice_1_Dout;
+  wire [0:0]xlslice_2_Dout;
+  wire [0:0]xlslice_3_Dout;
+
+  assign Din_1 = Din[3:0];
+  assign Dout[0] = xlslice_0_Dout;
+  assign Dout1[0] = xlslice_1_Dout;
+  assign Dout2[0] = xlslice_2_Dout;
+  assign Dout3[0] = xlslice_3_Dout;
+  top_block_xlslice_0_0 xlslice_0
+       (.Din(Din_1),
+        .Dout(xlslice_0_Dout));
+  top_block_xlslice_0_1 xlslice_1
+       (.Din(Din_1),
+        .Dout(xlslice_1_Dout));
+  top_block_xlslice_0_2 xlslice_2
+       (.Din(Din_1),
+        .Dout(xlslice_2_Dout));
+  top_block_xlslice_0_3 xlslice_3
+       (.Din(Din_1),
+        .Dout(xlslice_3_Dout));
 endmodule
 
 module reg_bram_imp_WBS55O
@@ -3080,7 +3135,7 @@ Gain: Shaping Time: (CTS,CG0,CG1)
 other modes are unsuppprted
 some SO pins have inverse POL.
 proper not gate is added */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=185,numReposBlks=163,numNonXlnxBlks=0,numHierBlks=22,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=22,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=189,numReposBlks=163,numNonXlnxBlks=0,numHierBlks=26,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=26,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -4580,4 +4635,61 @@ module top_block_axi_mem_intercon_3
         .s_axi_wready({s03_couplers_to_xbar_WREADY,s02_couplers_to_xbar_WREADY,s01_couplers_to_xbar_WREADY,s00_couplers_to_xbar_WREADY}),
         .s_axi_wstrb({s03_couplers_to_xbar_WSTRB,s02_couplers_to_xbar_WSTRB,s01_couplers_to_xbar_WSTRB,s00_couplers_to_xbar_WSTRB}),
         .s_axi_wvalid({s03_couplers_to_xbar_WVALID,s02_couplers_to_xbar_WVALID,s01_couplers_to_xbar_WVALID,s00_couplers_to_xbar_WVALID}));
+endmodule
+
+module wr_en_gate_imp_6TUUSW
+   (Op1,
+    Op2,
+    Op3,
+    Op4,
+    Op5,
+    Res,
+    Res1,
+    Res2,
+    Res3);
+  input [0:0]Op1;
+  input [0:0]Op2;
+  input [0:0]Op3;
+  input [0:0]Op4;
+  input [0:0]Op5;
+  output [0:0]Res;
+  output [0:0]Res1;
+  output [0:0]Res2;
+  output [0:0]Res3;
+
+  wire [0:0]Op1_1;
+  wire [0:0]Op2_1;
+  wire [0:0]Op3_1;
+  wire [0:0]Op4_1;
+  wire [0:0]Op5_1;
+  wire [0:0]util_vector_logic_0_Res;
+  wire [0:0]util_vector_logic_1_Res;
+  wire [0:0]util_vector_logic_2_Res;
+  wire [0:0]util_vector_logic_3_Res;
+
+  assign Op1_1 = Op1[0];
+  assign Op2_1 = Op2[0];
+  assign Op3_1 = Op3[0];
+  assign Op4_1 = Op4[0];
+  assign Op5_1 = Op5[0];
+  assign Res[0] = util_vector_logic_3_Res;
+  assign Res1[0] = util_vector_logic_1_Res;
+  assign Res2[0] = util_vector_logic_2_Res;
+  assign Res3[0] = util_vector_logic_0_Res;
+  top_block_util_vector_logic_0_3 util_vector_logic_0
+       (.Op1(Op5_1),
+        .Op2(Op2_1),
+        .Res(util_vector_logic_0_Res));
+  top_block_util_vector_logic_0_7 util_vector_logic_1
+       (.Op1(Op4_1),
+        .Op2(Op2_1),
+        .Res(util_vector_logic_1_Res));
+  top_block_util_vector_logic_0_8 util_vector_logic_2
+       (.Op1(Op3_1),
+        .Op2(Op2_1),
+        .Res(util_vector_logic_2_Res));
+  top_block_util_vector_logic_0_9 util_vector_logic_3
+       (.Op1(Op1_1),
+        .Op2(Op2_1),
+        .Res(util_vector_logic_3_Res));
 endmodule

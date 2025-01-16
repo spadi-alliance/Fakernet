@@ -70,7 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
 set_param chipscope.maxJobs 8
+set_param power.BramSDPPropagationFix 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Timing 38-316}  -suppress 
 set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 
@@ -134,18 +138,6 @@ set_property used_in_implementation false [get_files -all /home/nagafusa/work/sp
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_1/top_block_util_ds_buf_4_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_4_1/top_block_util_ds_buf_4_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_1/top_block_fifo_generator_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_2/top_block_fifo_generator_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_2/top_block_fifo_generator_0_2_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_2/top_block_fifo_generator_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_3/top_block_fifo_generator_0_3.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_3/top_block_fifo_generator_0_3_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_3/top_block_fifo_generator_0_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_fifo_generator_0_4/top_block_fifo_generator_0_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_1/synth/top_block_xpm_cdc_gen_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xpm_cdc_gen_0_1/top_block_xpm_cdc_gen_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_axis_data_fifo_0_0/top_block_axis_data_fifo_0_0_ooc.xdc]

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_axis_data_fifo_0_0",
-    "cell_name": "appUnit/axis_data_fifo_0",
+    "cell_name": "appUnit/data_sender_wrapper/axis_data_fifo_0",
     "component_reference": "xilinx.com:ip:axis_data_fifo:2.0",
     "ip_revision": "9",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_axis_data_fifo_0_0",
