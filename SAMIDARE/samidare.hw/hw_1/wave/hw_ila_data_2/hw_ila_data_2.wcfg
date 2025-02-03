@@ -9,15 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="262"></ZoomStartTime>
-      <ZoomEndTime time="727"></ZoomEndTime>
-      <Cursor1Time time="412"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="9,321"></ZoomEndTime>
+      <Cursor1Time time="1,486"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="133"></NameColumnWidth>
+      <NameColumnWidth column_width="129"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wave_markers>
    </wave_markers>
    <wvobject type="array" fp_name="top_block_i/appUnit/das_rx_0/inst/SO0">
@@ -206,5 +206,12 @@
    <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/SO1[10]">
       <obj_property name="ElementShortName">[10]</obj_property>
       <obj_property name="ObjectShortName">[10]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="top_block_i/appUnit/das_rx_0/inst/wr_en0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">top_block_i/appUnit/das_rx_0/inst/wr_en0</obj_property>
+      <obj_property name="ObjectShortName">wr_en0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>

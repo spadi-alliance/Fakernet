@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Jan 16 18:17:56 2025
+| Date         : Wed Jan 29 09:01:08 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
 | Design       : top_block_wrapper
@@ -178,7 +178,6 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_3_7    |    1 |
 | top_block_util_vector_logic_3_4    |    1 |
 | top_block_util_vector_logic_3_3    |    1 |
-| top_block_util_vector_logic_3_2    |    1 |
 | top_block_util_vector_logic_3_10   |    1 |
 | top_block_util_vector_logic_3_0    |    1 |
 | top_block_util_vector_logic_2_5    |    1 |
