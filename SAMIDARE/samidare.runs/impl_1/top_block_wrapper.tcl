@@ -115,6 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Timing 38-316}  -suppress 
 set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 
 set_msg_config  -id {Timing 38-316}  -suppress 
@@ -129,6 +131,8 @@ set rc [catch {
   set_param power.enableLutRouteBelPower 1
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableUnconnectedCarry8PinPower 1
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 8
   set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }

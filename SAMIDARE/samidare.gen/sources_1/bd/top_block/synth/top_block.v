@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Jan 22 16:44:35 2025
+//Date        : Sat Feb  8 19:51:55 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -438,7 +438,7 @@ module SOCLK_wrapper_imp_FLFIZ9
         .dout(xlconcat_0_dout));
 endmodule
 
-module SO_IN_imp_OV5C5C
+module SO_receiver_imp_J5HCEK
    (IBUF_OUT0,
     IBUF_OUT1,
     IBUF_OUT2,
@@ -450,7 +450,10 @@ module SO_IN_imp_OV5C5C
     SO2N,
     SO2P,
     SO3N,
-    SO3P);
+    SO3P,
+    clk,
+    idelay_refclk,
+    reset);
   output [10:0]IBUF_OUT0;
   output [10:0]IBUF_OUT1;
   output [10:0]IBUF_OUT2;
@@ -463,9 +466,10 @@ module SO_IN_imp_OV5C5C
   input [10:0]SO2P;
   input [10:0]SO3N;
   input [10:0]SO3P;
+  input clk;
+  input idelay_refclk;
+  input reset;
 
-  wire [10:0]Din_1;
-  wire [10:0]Din_2;
   wire [10:0]SO0N_1;
   wire [10:0]SO0P_1;
   wire [10:0]SO1N_1;
@@ -474,17 +478,20 @@ module SO_IN_imp_OV5C5C
   wire [10:0]SO2P_1;
   wire [10:0]SO3N_1;
   wire [10:0]SO3P_1;
-  wire [10:0]slice_rev_concat1_IBUF_OUT0;
-  wire [10:0]slice_rev_concat2_IBUF_OUT0;
-  wire [10:0]slice_rev_concat3_IBUF_OUT0;
-  wire [10:0]slice_rev_concat_IBUF_OUT0;
-  wire [10:0]util_ds_buf_7_IBUF_OUT;
-  wire [10:0]util_ds_buf_8_IBUF_OUT;
+  wire clk_1;
+  wire idelay_refclk_1;
+  wire [10:0]idelay_top_v2_0_SO0_out;
+  wire [10:0]idelay_top_v2_0_SO1_out;
+  wire [10:0]idelay_top_v2_0_SO2_out;
+  wire [10:0]idelay_top_v2_0_SO3_out;
+  wire [3:0]idelay_top_v2_0_overall_state;
+  wire reset_1;
+  wire [0:0]vio_0_probe_out0;
 
-  assign IBUF_OUT0[10:0] = slice_rev_concat_IBUF_OUT0;
-  assign IBUF_OUT1[10:0] = slice_rev_concat1_IBUF_OUT0;
-  assign IBUF_OUT2[10:0] = slice_rev_concat2_IBUF_OUT0;
-  assign IBUF_OUT3[10:0] = slice_rev_concat3_IBUF_OUT0;
+  assign IBUF_OUT0[10:0] = idelay_top_v2_0_SO0_out;
+  assign IBUF_OUT1[10:0] = idelay_top_v2_0_SO1_out;
+  assign IBUF_OUT2[10:0] = idelay_top_v2_0_SO2_out;
+  assign IBUF_OUT3[10:0] = idelay_top_v2_0_SO3_out;
   assign SO0N_1 = SO0N[10:0];
   assign SO0P_1 = SO0P[10:0];
   assign SO1N_1 = SO1N[10:0];
@@ -493,34 +500,36 @@ module SO_IN_imp_OV5C5C
   assign SO2P_1 = SO2P[10:0];
   assign SO3N_1 = SO3N[10:0];
   assign SO3P_1 = SO3P[10:0];
-  slice_rev_concat_imp_186T6LY slice_rev_concat
-       (.Din(Din_1),
-        .IBUF_OUT0(slice_rev_concat_IBUF_OUT0));
-  slice_rev_concat1_imp_EHHF1U slice_rev_concat1
-       (.Din(Din_2),
-        .IBUF_OUT0(slice_rev_concat1_IBUF_OUT0));
-  slice_rev_concat2_imp_1PVL94H slice_rev_concat2
-       (.Din(util_ds_buf_7_IBUF_OUT),
-        .IBUF_OUT0(slice_rev_concat2_IBUF_OUT0));
-  slice_rev_concat3_imp_DIZFIN slice_rev_concat3
-       (.Din(util_ds_buf_8_IBUF_OUT),
-        .IBUF_OUT0(slice_rev_concat3_IBUF_OUT0));
-  top_block_util_ds_buf_5_0 util_ds_buf_5
-       (.IBUF_DS_N(SO0N_1),
-        .IBUF_DS_P(SO0P_1),
-        .IBUF_OUT(Din_1));
-  top_block_util_ds_buf_6_0 util_ds_buf_6
-       (.IBUF_DS_N(SO1N_1),
-        .IBUF_DS_P(SO1P_1),
-        .IBUF_OUT(Din_2));
-  top_block_util_ds_buf_6_1 util_ds_buf_7
-       (.IBUF_DS_N(SO2N_1),
-        .IBUF_DS_P(SO2P_1),
-        .IBUF_OUT(util_ds_buf_7_IBUF_OUT));
-  top_block_util_ds_buf_7_0 util_ds_buf_8
-       (.IBUF_DS_N(SO3N_1),
-        .IBUF_DS_P(SO3P_1),
-        .IBUF_OUT(util_ds_buf_8_IBUF_OUT));
+  assign clk_1 = clk;
+  assign idelay_refclk_1 = idelay_refclk;
+  assign reset_1 = reset;
+  top_block_idelay_top_v2_0_0 idelay_top_v2_0
+       (.SO0_n(SO0N_1),
+        .SO0_out(idelay_top_v2_0_SO0_out),
+        .SO0_p(SO0P_1),
+        .SO1_n(SO1N_1),
+        .SO1_out(idelay_top_v2_0_SO1_out),
+        .SO1_p(SO1P_1),
+        .SO2_n(SO2N_1),
+        .SO2_out(idelay_top_v2_0_SO2_out),
+        .SO2_p(SO2P_1),
+        .SO3_n(SO3N_1),
+        .SO3_out(idelay_top_v2_0_SO3_out),
+        .SO3_p(SO3P_1),
+        .S_AXI_ARADDR({1'b0,1'b0,1'b0,1'b0}),
+        .S_AXI_ARVALID(1'b0),
+        .S_AXI_RREADY(1'b0),
+        .clk(clk_1),
+        .idelay_refclk(idelay_refclk_1),
+        .overall_state(idelay_top_v2_0_overall_state),
+        .reg_change(vio_0_probe_out0),
+        .reset(reset_1));
+  top_block_vio_0_1 vio_0
+       (.clk(clk_1),
+        .probe_out0(vio_0_probe_out0));
+  top_block_vio_0_2 vio_1
+       (.clk(clk_1),
+        .probe_in0(idelay_top_v2_0_overall_state));
 endmodule
 
 module appUnit_imp_1BHH9Z2
@@ -880,13 +889,15 @@ module clock_wrapper_imp_153XBA
     clk_out2,
     clk_out3,
     clk_out4,
-    clk_out5);
+    clk_out5,
+    clk_out6);
   input BASECLK;
   output clk_out1;
   output clk_out2;
   output clk_out3;
   output clk_out4;
   output clk_out5;
+  output clk_out6;
 
   wire BASECLK_1;
   wire clk_wiz_0_clk_out1;
@@ -894,6 +905,7 @@ module clock_wrapper_imp_153XBA
   wire clk_wiz_0_clk_out4;
   wire clk_wiz_0_clk_out5;
   wire clk_wiz_1_clk_out1;
+  wire clk_wiz_1_clk_out2;
 
   assign BASECLK_1 = BASECLK;
   assign clk_out1 = clk_wiz_0_clk_out1;
@@ -901,6 +913,7 @@ module clock_wrapper_imp_153XBA
   assign clk_out3 = clk_wiz_0_clk_out3;
   assign clk_out4 = clk_wiz_0_clk_out4;
   assign clk_out5 = clk_wiz_0_clk_out5;
+  assign clk_out6 = clk_wiz_1_clk_out2;
   top_block_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(BASECLK_1),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -910,6 +923,7 @@ module clock_wrapper_imp_153XBA
   top_block_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(clk_wiz_0_clk_out1),
         .clk_out1(clk_wiz_1_clk_out1),
+        .clk_out2(clk_wiz_1_clk_out2),
         .power_down(1'b0));
 endmodule
 
@@ -3384,362 +3398,6 @@ module s03_couplers_imp_U1S6LY
   assign s03_couplers_to_s03_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-module slice_rev_concat1_imp_EHHF1U
-   (Din,
-    IBUF_OUT0);
-  input [10:0]Din;
-  output [10:0]IBUF_OUT0;
-
-  wire [10:0]Net;
-  wire [0:0]util_vector_logic_0_Res;
-  wire [0:0]util_vector_logic_1_Res;
-  wire [0:0]util_vector_logic_2_Res;
-  wire [0:0]util_vector_logic_3_Res;
-  wire [10:0]xlconcat_0_dout;
-  wire [0:0]xlslice_0_Dout;
-  wire [0:0]xlslice_10_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [0:0]xlslice_2_Dout;
-  wire [0:0]xlslice_3_Dout;
-  wire [0:0]xlslice_4_Dout;
-  wire [0:0]xlslice_5_Dout;
-  wire [0:0]xlslice_6_Dout;
-  wire [0:0]xlslice_7_Dout;
-  wire [0:0]xlslice_8_Dout;
-  wire [0:0]xlslice_9_Dout;
-
-  assign IBUF_OUT0[10:0] = xlconcat_0_dout;
-  assign Net = Din[10:0];
-  top_block_util_vector_logic_0_13 util_vector_logic_0
-       (.Op1(xlslice_1_Dout),
-        .Res(util_vector_logic_0_Res));
-  top_block_util_vector_logic_0_14 util_vector_logic_1
-       (.Op1(xlslice_3_Dout),
-        .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_0_15 util_vector_logic_2
-       (.Op1(xlslice_4_Dout),
-        .Res(util_vector_logic_2_Res));
-  top_block_util_vector_logic_3_4 util_vector_logic_3
-       (.Op1(xlslice_8_Dout),
-        .Res(util_vector_logic_3_Res));
-  top_block_xlconcat_0_5 xlconcat_0
-       (.In0(xlslice_0_Dout),
-        .In1(util_vector_logic_0_Res),
-        .In10(xlslice_10_Dout),
-        .In2(xlslice_2_Dout),
-        .In3(util_vector_logic_1_Res),
-        .In4(util_vector_logic_2_Res),
-        .In5(xlslice_5_Dout),
-        .In6(xlslice_6_Dout),
-        .In7(xlslice_7_Dout),
-        .In8(util_vector_logic_3_Res),
-        .In9(xlslice_9_Dout),
-        .dout(xlconcat_0_dout));
-  top_block_xlslice_0_7 xlslice_0
-       (.Din(Net),
-        .Dout(xlslice_0_Dout));
-  top_block_xlslice_1_10 xlslice_1
-       (.Din(Net),
-        .Dout(xlslice_1_Dout));
-  top_block_xlslice_10_1 xlslice_10
-       (.Din(Net),
-        .Dout(xlslice_10_Dout));
-  top_block_xlslice_2_1 xlslice_2
-       (.Din(Net),
-        .Dout(xlslice_2_Dout));
-  top_block_xlslice_3_1 xlslice_3
-       (.Din(Net),
-        .Dout(xlslice_3_Dout));
-  top_block_xlslice_4_1 xlslice_4
-       (.Din(Net),
-        .Dout(xlslice_4_Dout));
-  top_block_xlslice_5_1 xlslice_5
-       (.Din(Net),
-        .Dout(xlslice_5_Dout));
-  top_block_xlslice_6_1 xlslice_6
-       (.Din(Net),
-        .Dout(xlslice_6_Dout));
-  top_block_xlslice_7_1 xlslice_7
-       (.Din(Net),
-        .Dout(xlslice_7_Dout));
-  top_block_xlslice_8_1 xlslice_8
-       (.Din(Net),
-        .Dout(xlslice_8_Dout));
-  top_block_xlslice_9_1 xlslice_9
-       (.Din(Net),
-        .Dout(xlslice_9_Dout));
-endmodule
-
-module slice_rev_concat2_imp_1PVL94H
-   (Din,
-    IBUF_OUT0);
-  input [10:0]Din;
-  output [10:0]IBUF_OUT0;
-
-  wire [10:0]Net;
-  wire [0:0]util_vector_logic_0_Res;
-  wire [0:0]util_vector_logic_1_Res;
-  wire [0:0]util_vector_logic_2_Res;
-  wire [10:0]xlconcat_0_dout;
-  wire [0:0]xlslice_0_Dout;
-  wire [0:0]xlslice_10_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [0:0]xlslice_2_Dout;
-  wire [0:0]xlslice_3_Dout;
-  wire [0:0]xlslice_4_Dout;
-  wire [0:0]xlslice_5_Dout;
-  wire [0:0]xlslice_6_Dout;
-  wire [0:0]xlslice_7_Dout;
-  wire [0:0]xlslice_8_Dout;
-  wire [0:0]xlslice_9_Dout;
-
-  assign IBUF_OUT0[10:0] = xlconcat_0_dout;
-  assign Net = Din[10:0];
-  top_block_util_vector_logic_0_17 util_vector_logic_0
-       (.Op1(xlslice_0_Dout),
-        .Res(util_vector_logic_0_Res));
-  top_block_util_vector_logic_1_9 util_vector_logic_1
-       (.Op1(xlslice_5_Dout),
-        .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_2_5 util_vector_logic_2
-       (.Op1(xlslice_9_Dout),
-        .Res(util_vector_logic_2_Res));
-  top_block_xlconcat_0_7 xlconcat_0
-       (.In0(util_vector_logic_0_Res),
-        .In1(xlslice_1_Dout),
-        .In10(xlslice_10_Dout),
-        .In2(xlslice_2_Dout),
-        .In3(xlslice_3_Dout),
-        .In4(xlslice_4_Dout),
-        .In5(util_vector_logic_1_Res),
-        .In6(xlslice_6_Dout),
-        .In7(xlslice_7_Dout),
-        .In8(xlslice_8_Dout),
-        .In9(util_vector_logic_2_Res),
-        .dout(xlconcat_0_dout));
-  top_block_xlslice_0_9 xlslice_0
-       (.Din(Net),
-        .Dout(xlslice_0_Dout));
-  top_block_xlslice_1_12 xlslice_1
-       (.Din(Net),
-        .Dout(xlslice_1_Dout));
-  top_block_xlslice_10_3 xlslice_10
-       (.Din(Net),
-        .Dout(xlslice_10_Dout));
-  top_block_xlslice_2_3 xlslice_2
-       (.Din(Net),
-        .Dout(xlslice_2_Dout));
-  top_block_xlslice_3_3 xlslice_3
-       (.Din(Net),
-        .Dout(xlslice_3_Dout));
-  top_block_xlslice_4_3 xlslice_4
-       (.Din(Net),
-        .Dout(xlslice_4_Dout));
-  top_block_xlslice_5_3 xlslice_5
-       (.Din(Net),
-        .Dout(xlslice_5_Dout));
-  top_block_xlslice_6_3 xlslice_6
-       (.Din(Net),
-        .Dout(xlslice_6_Dout));
-  top_block_xlslice_7_3 xlslice_7
-       (.Din(Net),
-        .Dout(xlslice_7_Dout));
-  top_block_xlslice_8_3 xlslice_8
-       (.Din(Net),
-        .Dout(xlslice_8_Dout));
-  top_block_xlslice_9_3 xlslice_9
-       (.Din(Net),
-        .Dout(xlslice_9_Dout));
-endmodule
-
-module slice_rev_concat3_imp_DIZFIN
-   (Din,
-    IBUF_OUT0);
-  input [10:0]Din;
-  output [10:0]IBUF_OUT0;
-
-  wire [10:0]Net;
-  wire [0:0]util_vector_logic_0_Res;
-  wire [0:0]util_vector_logic_1_Res;
-  wire [0:0]util_vector_logic_2_Res;
-  wire [0:0]util_vector_logic_3_Res;
-  wire [0:0]util_vector_logic_4_Res;
-  wire [0:0]util_vector_logic_5_Res;
-  wire [0:0]util_vector_logic_6_Res;
-  wire [0:0]util_vector_logic_7_Res;
-  wire [10:0]xlconcat_0_dout;
-  wire [0:0]xlslice_0_Dout;
-  wire [0:0]xlslice_10_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [0:0]xlslice_2_Dout;
-  wire [0:0]xlslice_3_Dout;
-  wire [0:0]xlslice_4_Dout;
-  wire [0:0]xlslice_5_Dout;
-  wire [0:0]xlslice_6_Dout;
-  wire [0:0]xlslice_7_Dout;
-  wire [0:0]xlslice_8_Dout;
-  wire [0:0]xlslice_9_Dout;
-
-  assign IBUF_OUT0[10:0] = xlconcat_0_dout;
-  assign Net = Din[10:0];
-  top_block_util_vector_logic_0_12 util_vector_logic_0
-       (.Op1(xlslice_0_Dout),
-        .Res(util_vector_logic_0_Res));
-  top_block_util_vector_logic_1_6 util_vector_logic_1
-       (.Op1(xlslice_2_Dout),
-        .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_2_2 util_vector_logic_2
-       (.Op1(xlslice_4_Dout),
-        .Res(util_vector_logic_2_Res));
-  top_block_util_vector_logic_3_3 util_vector_logic_3
-       (.Op1(xlslice_5_Dout),
-        .Res(util_vector_logic_3_Res));
-  top_block_util_vector_logic_3_7 util_vector_logic_4
-       (.Op1(xlslice_6_Dout),
-        .Res(util_vector_logic_4_Res));
-  top_block_util_vector_logic_3_8 util_vector_logic_5
-       (.Op1(xlslice_7_Dout),
-        .Res(util_vector_logic_5_Res));
-  top_block_util_vector_logic_3_9 util_vector_logic_6
-       (.Op1(xlslice_8_Dout),
-        .Res(util_vector_logic_6_Res));
-  top_block_util_vector_logic_3_10 util_vector_logic_7
-       (.Op1(xlslice_10_Dout),
-        .Res(util_vector_logic_7_Res));
-  top_block_xlconcat_0_4 xlconcat_0
-       (.In0(util_vector_logic_0_Res),
-        .In1(xlslice_1_Dout),
-        .In10(util_vector_logic_7_Res),
-        .In2(util_vector_logic_1_Res),
-        .In3(xlslice_3_Dout),
-        .In4(util_vector_logic_2_Res),
-        .In5(util_vector_logic_3_Res),
-        .In6(util_vector_logic_4_Res),
-        .In7(util_vector_logic_5_Res),
-        .In8(util_vector_logic_6_Res),
-        .In9(xlslice_9_Dout),
-        .dout(xlconcat_0_dout));
-  top_block_xlslice_0_6 xlslice_0
-       (.Din(Net),
-        .Dout(xlslice_0_Dout));
-  top_block_xlslice_1_9 xlslice_1
-       (.Din(Net),
-        .Dout(xlslice_1_Dout));
-  top_block_xlslice_10_0 xlslice_10
-       (.Din(Net),
-        .Dout(xlslice_10_Dout));
-  top_block_xlslice_2_0 xlslice_2
-       (.Din(Net),
-        .Dout(xlslice_2_Dout));
-  top_block_xlslice_3_0 xlslice_3
-       (.Din(Net),
-        .Dout(xlslice_3_Dout));
-  top_block_xlslice_4_0 xlslice_4
-       (.Din(Net),
-        .Dout(xlslice_4_Dout));
-  top_block_xlslice_5_0 xlslice_5
-       (.Din(Net),
-        .Dout(xlslice_5_Dout));
-  top_block_xlslice_6_0 xlslice_6
-       (.Din(Net),
-        .Dout(xlslice_6_Dout));
-  top_block_xlslice_7_0 xlslice_7
-       (.Din(Net),
-        .Dout(xlslice_7_Dout));
-  top_block_xlslice_8_0 xlslice_8
-       (.Din(Net),
-        .Dout(xlslice_8_Dout));
-  top_block_xlslice_9_0 xlslice_9
-       (.Din({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Dout(xlslice_9_Dout));
-endmodule
-
-module slice_rev_concat_imp_186T6LY
-   (Din,
-    IBUF_OUT0);
-  input [10:0]Din;
-  output [10:0]IBUF_OUT0;
-
-  wire [10:0]Net;
-  wire [0:0]util_vector_logic_0_Res;
-  wire [0:0]util_vector_logic_1_Res;
-  wire [0:0]util_vector_logic_2_Res;
-  wire [0:0]util_vector_logic_3_Res;
-  wire [10:0]xlconcat_0_dout;
-  wire [0:0]xlslice_0_Dout;
-  wire [0:0]xlslice_10_Dout;
-  wire [0:0]xlslice_1_Dout;
-  wire [0:0]xlslice_2_Dout;
-  wire [0:0]xlslice_3_Dout;
-  wire [0:0]xlslice_4_Dout;
-  wire [0:0]xlslice_5_Dout;
-  wire [0:0]xlslice_6_Dout;
-  wire [0:0]xlslice_7_Dout;
-  wire [0:0]xlslice_8_Dout;
-  wire [0:0]xlslice_9_Dout;
-
-  assign IBUF_OUT0[10:0] = xlconcat_0_dout;
-  assign Net = Din[10:0];
-  top_block_util_vector_logic_0_10 util_vector_logic_0
-       (.Op1(xlslice_1_Dout),
-        .Res(util_vector_logic_0_Res));
-  top_block_util_vector_logic_0_11 util_vector_logic_1
-       (.Op1(xlslice_10_Dout),
-        .Res(util_vector_logic_1_Res));
-  top_block_util_vector_logic_1_4 util_vector_logic_2
-       (.Op1(xlslice_9_Dout),
-        .Res(util_vector_logic_2_Res));
-  top_block_util_vector_logic_1_5 util_vector_logic_3
-       (.Op1(xlslice_8_Dout),
-        .Res(util_vector_logic_3_Res));
-  top_block_xlconcat_0_3 xlconcat_0
-       (.In0(xlslice_0_Dout),
-        .In1(util_vector_logic_0_Res),
-        .In10(util_vector_logic_1_Res),
-        .In2(xlslice_2_Dout),
-        .In3(xlslice_3_Dout),
-        .In4(xlslice_4_Dout),
-        .In5(xlslice_5_Dout),
-        .In6(xlslice_6_Dout),
-        .In7(xlslice_7_Dout),
-        .In8(util_vector_logic_3_Res),
-        .In9(util_vector_logic_2_Res),
-        .dout(xlconcat_0_dout));
-  top_block_xlslice_0_4 xlslice_0
-       (.Din(Net),
-        .Dout(xlslice_0_Dout));
-  top_block_xlslice_0_5 xlslice_1
-       (.Din(Net),
-        .Dout(xlslice_1_Dout));
-  top_block_xlslice_1_8 xlslice_10
-       (.Din(Net),
-        .Dout(xlslice_10_Dout));
-  top_block_xlslice_1_0 xlslice_2
-       (.Din(Net),
-        .Dout(xlslice_2_Dout));
-  top_block_xlslice_1_1 xlslice_3
-       (.Din(Net),
-        .Dout(xlslice_3_Dout));
-  top_block_xlslice_1_2 xlslice_4
-       (.Din(Net),
-        .Dout(xlslice_4_Dout));
-  top_block_xlslice_1_3 xlslice_5
-       (.Din(Net),
-        .Dout(xlslice_5_Dout));
-  top_block_xlslice_1_4 xlslice_6
-       (.Din(Net),
-        .Dout(xlslice_6_Dout));
-  top_block_xlslice_1_5 xlslice_7
-       (.Din(Net),
-        .Dout(xlslice_7_Dout));
-  top_block_xlslice_1_6 xlslice_8
-       (.Din(Net),
-        .Dout(xlslice_8_Dout));
-  top_block_xlslice_1_7 xlslice_9
-       (.Din(Net),
-        .Dout(xlslice_9_Dout));
-endmodule
-
 /* clk_out1: 40MHz
 
 
@@ -3753,7 +3411,7 @@ Gain: Shaping Time: (CTS,CG0,CG1)
 other modes are unsuppprted
 some SO pins have inverse POL.
 proper not gate is added */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=193,numReposBlks=162,numNonXlnxBlks=0,numHierBlks=31,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=26,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"=20,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=122,numReposBlks=95,numNonXlnxBlks=0,numHierBlks=27,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=27,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"da_board_cnt\"=1,\"da_clkrst_cnt\"=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -3965,6 +3623,7 @@ module top_block
   wire fnet_wrapper_SFP0TXP;
   wire [31:0]i2c_raddr_i_1;
   wire [31:0]i2c_waddr_i_1;
+  wire idelay_refclk_1;
   wire independent_clock_0_1;
   wire [3:0]led_module_LED;
   wire [31:0]led_module_m00_axi1_ARADDR;
@@ -4006,6 +3665,7 @@ module top_block
   wire [3:0]led_module_m00_axi_WSTRB;
   wire [0:0]led_module_m00_axi_WVALID;
   wire [0:0]rst_clk_wiz_0_125M_peripheral_aresetn;
+  wire [0:0]rst_clk_wiz_1_320M_peripheral_aresetn;
   wire start_i2c_read_1;
   wire start_i2c_write_1;
   wire start_i2c_write_all_1;
@@ -4136,7 +3796,7 @@ module top_block
        (.CLKSOIN_N(SOCLK_wrapper_CLKSOIN_N),
         .CLKSOIN_P(SOCLK_wrapper_CLKSOIN_P),
         .In1(clk_wiz_1_clk_out1));
-  SO_IN_imp_OV5C5C SO_IN
+  SO_receiver_imp_J5HCEK SO_receiver
        (.IBUF_OUT0(SO0_1),
         .IBUF_OUT1(SO1_1),
         .IBUF_OUT2(SO2_1),
@@ -4148,7 +3808,10 @@ module top_block
         .SO2N(SO2N_1),
         .SO2P(SO2P_1),
         .SO3N(SO3N_1),
-        .SO3P(SO3P_1));
+        .SO3P(SO3P_1),
+        .clk(clk_wiz_1_clk_out1),
+        .idelay_refclk(idelay_refclk_1),
+        .reset(rst_clk_wiz_1_320M_peripheral_aresetn));
   top_block_TRG_MODULE_0_0 TRG_MODULE_0
        (.clk(clk_in_0_1),
         .en(fakernet_trg_en),
@@ -4177,7 +3840,8 @@ module top_block
         .clk_out2(clk_wiz_1_clk_out1),
         .clk_out3(clk25_in_0_1),
         .clk_out4(independent_clock_0_1),
-        .clk_out5(clk_in_0_1));
+        .clk_out5(clk_in_0_1),
+        .clk_out6(idelay_refclk_1));
   top_block_data_gen_user_0_0 data_gen_user_0
        (.clk(clk_in_0_1),
         .event_free(1'b0),
@@ -4418,6 +4082,13 @@ module top_block
         .peripheral_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
         .probe_out0(vio_0_probe_out0),
         .slowest_sync_clk(clk_in_0_1));
+  top_block_rst_clk_wiz_1_320M_0 rst_clk_wiz_1_320M
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(event_reset_1),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_clk_wiz_1_320M_peripheral_aresetn),
+        .slowest_sync_clk(clk_wiz_1_clk_out1));
   top_block_util_ds_buf_1_1 util_ds_buf_1
        (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
         .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),

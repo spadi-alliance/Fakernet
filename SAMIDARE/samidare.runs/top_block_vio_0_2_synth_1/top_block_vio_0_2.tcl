@@ -70,13 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_block_vio_0_2_synth_1" START { ROLLUP_AUTO }
-set_param power.enableLutRouteBelPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 8
-set_param power.BramSDPPropagationFix 1
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -id {Timing 38-316}  -suppress 
+set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 
+set_msg_config  -id {Timing 38-316}  -suppress 
+set_msg_config  -id {Synth 8-3917}  -string {{WARNING: [Synth 8-3917] design toplevel has port PHY_HPD driven by constant 0}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -92,7 +90,9 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0

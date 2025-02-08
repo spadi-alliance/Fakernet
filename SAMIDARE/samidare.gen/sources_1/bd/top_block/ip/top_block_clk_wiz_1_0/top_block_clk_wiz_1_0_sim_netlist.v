@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Aug  5 12:30:16 2024
-// Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top top_block_clk_wiz_1_0 -prefix
-//               top_block_clk_wiz_1_0_ top_block_clk_wiz_1_0_sim_netlist.v
+// Date        : Fri Feb  7 23:38:38 2025
+// Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0_sim_netlist.v
 // Design      : top_block_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,27 +15,33 @@
 (* NotValidForBitStream *)
 module top_block_clk_wiz_1_0
    (clk_out1,
+    clk_out2,
     power_down,
     clk_in1);
   output clk_out1;
+  output clk_out2;
   input power_down;
   input clk_in1;
 
   wire clk_in1;
   wire clk_out1;
+  wire clk_out2;
   wire power_down;
 
-  top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz inst
+  top_block_clk_wiz_1_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
+        .clk_out2(clk_out2),
         .power_down(power_down));
 endmodule
 
-module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
+module top_block_clk_wiz_1_0_clk_wiz
    (clk_out1,
+    clk_out2,
     power_down,
     clk_in1);
   output clk_out1;
+  output clk_out2;
   input power_down;
   input clk_in1;
 
@@ -43,6 +49,8 @@ module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
   wire clk_in1_top_block_clk_wiz_1_0;
   wire clk_out1;
   wire clk_out1_top_block_clk_wiz_1_0;
+  wire clk_out2;
+  wire clk_out2_top_block_clk_wiz_1_0;
   wire power_down;
   wire NLW_mmcme4_adv_inst_CDDCDONE_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKFBIN_UNCONNECTED;
@@ -51,7 +59,6 @@ module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
   wire NLW_mmcme4_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED;
-  wire NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -86,6 +93,16 @@ module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
         .I(clk_out1_top_block_clk_wiz_1_0),
         .O(clk_out1));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFG" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
+  BUFGCE #(
+    .CE_TYPE("ASYNC"),
+    .SIM_DEVICE("ULTRASCALE_PLUS")) 
+    clkout2_buf
+       (.CE(1'b1),
+        .I(clk_out2_top_block_clk_wiz_1_0),
+        .O(clk_out2));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* OPT_MODIFIED = "MLO" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -98,7 +115,7 @@ module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(6),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -152,7 +169,7 @@ module top_block_clk_wiz_1_0_top_block_clk_wiz_1_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_out1_top_block_clk_wiz_1_0),
         .CLKOUT0B(NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(NLW_mmcme4_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(clk_out2_top_block_clk_wiz_1_0),
         .CLKOUT1B(NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED),

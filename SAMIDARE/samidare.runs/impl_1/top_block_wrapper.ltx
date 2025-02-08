@@ -11,7 +11,81 @@
                         "type": "XSDB_V3",
                         "name": "dbg_hub",
                         "spec": "labtools_xsdbm_v3",
-                        "clk_input_freq_hz": "125000017"
+                        "clk_input_freq_hz": "319999996"
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "top_block_i/SO_receiver/vio_0",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "BE3824A72E965DFD92DB1648A88B6217",
+                        "pins": [
+                            {
+                                "name": "probe_out0",
+                                "id": 0,
+                                "type": "DATA",
+                                "direction": "OUT",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/vio_0_probe_out0",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "top_block_i/SO_receiver/vio_1",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "ABA8CDB1B32C58C2A63C1D45CF7EDD95",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 1,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0_overall_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0_overall_state[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0_overall_state[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0_overall_state[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0_overall_state[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "VIO_V2",
@@ -20,14 +94,14 @@
                         "ipName": "vio",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 0,
+                            "slave_index": 2,
                             "bscan_switch_index": 0
                         },
                         "uuid": "499384B9F3095737B91FDB55CCC11929",
                         "pins": [
                             {
                                 "name": "probe_out0",
-                                "id": 0,
+                                "id": 2,
                                 "type": "DATA",
                                 "direction": "OUT",
                                 "isVector": false,
@@ -49,14 +123,397 @@
                         "spec": "labtools_ila_v6",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 1,
+                            "slave_index": 3,
                             "bscan_switch_index": 0
                         },
                         "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 1,
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_aggregate_state_return[2]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_aggregate_state_return[1]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_overall_state[1]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_overall_state[0]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 2,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state[2]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 9,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[9]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 10,
+                                "rightIndex": 10,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO0_out[10]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 10,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/SO1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[10]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[9]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 10,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/SO0",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[10]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[9]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 4,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/full",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/ch0_cnt",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en0",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en3",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila_1",
+                        "spec": "labtools_ila_v6",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 4,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "3b505a030738513c98471d25f5b1f848",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 17,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -65,112 +522,138 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[31]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[30]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[29]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[28]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[27]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[26]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[25]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[24]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[23]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[22]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[21]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[20]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[19]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[18]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[17]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[16]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[15]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[14]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[13]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[12]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[11]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[10]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[0]"
-                                            }
-                                        ]
+                                        "name": "u_ila_1_data_o[31]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[30]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[29]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[28]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[27]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[26]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[25]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[24]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[23]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[22]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[21]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[20]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[19]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[18]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[17]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[16]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[15]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[14]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[13]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[12]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[11]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[10]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[9]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[8]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[7]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[6]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[5]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[4]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[3]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[2]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[1]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_o[0]",
+                                        "isBus": false
                                     }
                                 ]
                             },
                             {
                                 "name": "probe1",
-                                "id": 2,
+                                "id": 18,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -179,75 +662,69 @@
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[0]"
-                                            }
-                                        ]
+                                        "name": "u_ila_1_sample_cnt[3]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_sample_cnt[2]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_sample_cnt[1]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_sample_cnt[0]",
+                                        "isBus": false
                                     }
                                 ]
                             },
                             {
                                 "name": "probe2",
-                                "id": 3,
+                                "id": 19,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 3,
+                                "rightIndex": 2,
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[3]",
-                                                "parentNetId": 37
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[2]",
-                                                "parentNetId": 38
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[1]",
-                                                "parentNetId": 39
-                                            },
-                                            {
-                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[0]",
-                                                "parentNetId": 40
-                                            }
-                                        ]
+                                        "name": "u_ila_1_state[2]",
+                                        "isBus": false,
+                                        "parentNetId": 68
+                                    },
+                                    {
+                                        "name": "u_ila_1_state[1]",
+                                        "isBus": false,
+                                        "parentNetId": 69
+                                    },
+                                    {
+                                        "name": "u_ila_1_state[0]",
+                                        "isBus": false,
+                                        "parentNetId": 70
                                     }
                                 ]
                             },
                             {
                                 "name": "probe3",
-                                "id": 4,
+                                "id": 20,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 1,
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel_internal",
+                                        "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel_internal[1]"
+                                                "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel[0]"
                                             }
                                         ]
                                     }
@@ -255,7 +732,7 @@
                             },
                             {
                                 "name": "probe4",
-                                "id": 5,
+                                "id": 21,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -264,22 +741,22 @@
                                 "portIndex": 4,
                                 "nets": [
                                     {
-                                        "name": "u_ila_0_counter[6]",
+                                        "name": "u_ila_1_counter[6]",
                                         "isBus": false
                                     },
                                     {
-                                        "name": "u_ila_0_counter[5]",
+                                        "name": "u_ila_1_counter[5]",
                                         "isBus": false
                                     },
                                     {
-                                        "name": "u_ila_0_counter[4]",
+                                        "name": "u_ila_1_counter[4]",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
                                 "name": "probe4",
-                                "id": 6,
+                                "id": 22,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -300,33 +777,58 @@
                             },
                             {
                                 "name": "probe5",
-                                "id": 7,
+                                "id": 23,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": true,
+                                "isVector": false,
                                 "leftIndex": 0,
-                                "rightIndex": 1,
+                                "rightIndex": 0,
                                 "portIndex": 5,
                                 "nets": [
                                     {
-                                        "name": "u_ila_0_bus_sel[1]",
-                                        "isBus": false
-                                    },
-                                    {
-                                        "name": "u_ila_0_bus_sel[0]",
-                                        "isBus": false
+                                        "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel_internal",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/data_processor_0/inst/bus_sel_internal[1]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                             {
                                 "name": "probe6",
-                                "id": 8,
+                                "id": 24,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/bus_sel_i",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/bus_sel_i[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/bus_sel_i[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 25,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 31,
-                                "portIndex": 6,
+                                "portIndex": 7,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SAMPA_PON_v1_0_0/inst/m00_axi_rdata",
@@ -433,14 +935,1370 @@
                                 ]
                             },
                             {
-                                "name": "probe7",
-                                "id": 9,
+                                "name": "probe8",
+                                "id": 26,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 319,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_1_data_i[319]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[318]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[317]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[316]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[315]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[314]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[313]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[312]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[311]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[310]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[309]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[308]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[307]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[306]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[305]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[304]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[303]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[302]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[301]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[300]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[299]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[298]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[297]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[296]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[295]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[294]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[293]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[292]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[291]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[290]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[289]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[288]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[287]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[286]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[285]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[284]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[283]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[282]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[281]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[280]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[279]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[278]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[277]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[276]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[275]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[274]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[273]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[272]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[271]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[270]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[269]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[268]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[267]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[266]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[265]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[264]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[263]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[262]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[261]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[260]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[259]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[258]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[257]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[256]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[255]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[254]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[253]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[252]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[251]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[250]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[249]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[248]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[247]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[246]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[245]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[244]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[243]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[242]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[241]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[240]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[239]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[238]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[237]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[236]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[235]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[234]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[233]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[232]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[231]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[230]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[229]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[228]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[227]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[226]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[225]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[224]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[223]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[222]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[221]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[220]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[219]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[218]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[217]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[216]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[215]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[214]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[213]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[212]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[211]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[210]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[209]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[208]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[207]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[206]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[205]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[204]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[203]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[202]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[201]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[200]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[199]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[198]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[197]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[196]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[195]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[194]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[193]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[192]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[191]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[190]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[189]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[188]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[187]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[186]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[185]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[184]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[183]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[182]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[181]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[180]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[179]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[178]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[177]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[176]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[175]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[174]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[173]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[172]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[171]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[170]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[169]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[168]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[167]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[166]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[165]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[164]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[163]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[162]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[161]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[160]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[159]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[158]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[157]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[156]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[155]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[154]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[153]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[152]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[151]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[150]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[149]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[148]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[147]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[146]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[145]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[144]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[143]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[142]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[141]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[140]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[139]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[138]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[137]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[136]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[135]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[134]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[133]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[132]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[131]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[130]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[129]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[128]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[127]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[126]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[125]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[124]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[123]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[122]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[121]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[120]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[119]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[118]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[117]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[116]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[115]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[114]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[113]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[112]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[111]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[110]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[109]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[108]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[107]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[106]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[105]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[104]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[103]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[102]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[101]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[100]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[99]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[98]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[97]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[96]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[95]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[94]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[93]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[92]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[91]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[90]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[89]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[88]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[87]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[86]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[85]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[84]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[83]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[82]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[81]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[80]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[79]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[78]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[77]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[76]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[75]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[74]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[73]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[72]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[71]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[70]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[69]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[68]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[67]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[66]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[65]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[64]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[63]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[62]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[61]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[60]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[59]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[58]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[57]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[56]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[55]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[54]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[53]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[52]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[51]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[50]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[49]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[48]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[47]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[46]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[45]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[44]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[43]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[42]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[41]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[40]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[39]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[38]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[37]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[36]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[35]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[34]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[33]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[32]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[31]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[30]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[29]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[28]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[27]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[26]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[25]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[24]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[23]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[22]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[21]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[20]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[19]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[18]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[17]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[16]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[15]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[14]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[13]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[12]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[11]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[10]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[9]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[8]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[7]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[6]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[5]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[4]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[3]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[2]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[1]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_1_data_i[0]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 27,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_bram[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 28,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[3]",
+                                                "parentNetId": 434
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[2]",
+                                                "parentNetId": 435
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[1]",
+                                                "parentNetId": 436
+                                            },
+                                            {
+                                                "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[0]",
+                                                "parentNetId": 437
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 29,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 31,
-                                "portIndex": 7,
+                                "portIndex": 11,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SAMPA_PON_v1_0_0/inst/m00_axi_araddr",
@@ -547,89 +2405,122 @@
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 10,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 8,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/bram_read_done",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe9",
-                                "id": 11,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 9,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/en",
-                                        "isBus": false,
-                                        "parentNetId": 113
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe10",
-                                "id": 12,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 10,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_RD",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe11",
-                                "id": 13,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 11,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_WR",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
                                 "name": "probe12",
-                                "id": 14,
+                                "id": 30,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 31,
                                 "portIndex": 12,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/data_processor_0/inst/last_data",
-                                        "isBus": false
+                                        "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[31]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[30]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[29]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[28]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[27]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[26]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[25]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[24]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[23]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[22]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[21]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[20]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[19]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[18]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[17]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[16]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[15]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[14]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[13]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[12]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[11]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[10]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[9]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/led_module/LED_REG_READ_SEPARAT_0/inst/LED_REG_READ_SEPARATE_v1_0_M00_AXI_inst/axi_araddr[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                             {
                                 "name": "probe13",
-                                "id": 15,
+                                "id": 31,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -638,14 +2529,14 @@
                                 "portIndex": 13,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SAMPA_PON_v1_0_0/inst/sampa_power_on",
+                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/bram_read_done",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
                                 "name": "probe14",
-                                "id": 16,
+                                "id": 32,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -654,265 +2545,88 @@
                                 "portIndex": 14,
                                 "nets": [
                                     {
-                                        "name": "u_ila_0_valid",
-                                        "isBus": false
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "ILA_V3",
-                        "name": "u_ila_1",
-                        "spec": "labtools_ila_v6",
-                        "core_location": {
-                            "user_chain": 1,
-                            "slave_index": 2,
-                            "bscan_switch_index": 0
-                        },
-                        "uuid": "3b505a030738513c98471d25f5b1f848",
-                        "pins": [
-                            {
-                                "name": "probe0",
-                                "id": 17,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 10,
-                                "portIndex": 0,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/SO1",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[10]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO1[0]"
-                                            }
-                                        ]
+                                        "name": "top_block_i/appUnit/das_rx_0/inst/en",
+                                        "isBus": false,
+                                        "parentNetId": 503
                                     }
                                 ]
                             },
                             {
-                                "name": "probe1",
-                                "id": 18,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 10,
-                                "portIndex": 1,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/SO0",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[10]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/SO0[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe2",
-                                "id": 19,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 4,
-                                "portIndex": 2,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0]",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/genblk1[0].clk_cnt_reg[0][0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe3",
-                                "id": 20,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 3,
-                                "portIndex": 3,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/full",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/appUnit/das_rx_0/inst/full[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe4",
-                                "id": 21,
+                                "name": "probe15",
+                                "id": 33,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 4,
+                                "portIndex": 15,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/ch0_cnt",
+                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_RD",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe5",
-                                "id": 22,
+                                "name": "probe16",
+                                "id": 34,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 5,
+                                "portIndex": 16,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en0",
+                                        "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/I2C_WR",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe6",
-                                "id": 23,
+                                "name": "probe17",
+                                "id": 35,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 6,
+                                "portIndex": 17,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en1",
+                                        "name": "top_block_i/appUnit/data_processor_0/inst/last_data",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe7",
-                                "id": 24,
+                                "name": "probe18",
+                                "id": 36,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 7,
+                                "portIndex": 18,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en2",
+                                        "name": "top_block_i/SAMPA_PON_v1_0_0/inst/sampa_power_on",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 25,
+                                "name": "probe19",
+                                "id": 37,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 8,
+                                "portIndex": 19,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/appUnit/das_rx_0/inst/wr_en3",
+                                        "name": "u_ila_1_valid",
                                         "isBus": false
                                     }
                                 ]
@@ -925,14 +2639,14 @@
                         "spec": "labtools_ila_v6",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 3,
+                            "slave_index": 5,
                             "bscan_switch_index": 0
                         },
                         "uuid": "b13c981ac2d554bfb4fbe0eecea5cfd7",
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 26,
+                                "id": 38,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -946,11 +2660,11 @@
                                         "subnets": [
                                             {
                                                 "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[1]",
-                                                "parentNetId": 155
+                                                "parentNetId": 509
                                             },
                                             {
                                                 "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[0]",
-                                                "parentNetId": 156
+                                                "parentNetId": 510
                                             }
                                         ]
                                     }
@@ -958,7 +2672,7 @@
                             },
                             {
                                 "name": "probe1",
-                                "id": 27,
+                                "id": 39,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -974,7 +2688,7 @@
                             },
                             {
                                 "name": "probe2",
-                                "id": 28,
+                                "id": 40,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -993,7 +2707,124 @@
                 ],
                 "parent_nets": [
                     {
-                        "id": 37,
+                        "id": 68,
+                        "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/state[2]",
+                        "state_reg": [
+                            {
+                                "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/FSM_sequential_state_reg[2]",
+                                "states": [
+                                    {
+                                        "name": "IDLE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "SEND_HEADER",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "SENDING_EVENT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "SEND_FOOTER",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "END_EVENT",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "WAIT",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "REST",
+                                        "val": "101"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 69,
+                        "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/state[1]",
+                        "state_reg": [
+                            {
+                                "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/FSM_sequential_state_reg[1]",
+                                "states": [
+                                    {
+                                        "name": "IDLE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "SEND_HEADER",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "SENDING_EVENT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "SEND_FOOTER",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "END_EVENT",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "WAIT",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "REST",
+                                        "val": "101"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 70,
+                        "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/state[0]",
+                        "state_reg": [
+                            {
+                                "name": "top_block_i/appUnit/event_builder_v0_1_0/inst/FSM_sequential_state_reg[0]",
+                                "states": [
+                                    {
+                                        "name": "IDLE",
+                                        "val": "000"
+                                    },
+                                    {
+                                        "name": "SEND_HEADER",
+                                        "val": "001"
+                                    },
+                                    {
+                                        "name": "SENDING_EVENT",
+                                        "val": "010"
+                                    },
+                                    {
+                                        "name": "SEND_FOOTER",
+                                        "val": "011"
+                                    },
+                                    {
+                                        "name": "END_EVENT",
+                                        "val": "100"
+                                    },
+                                    {
+                                        "name": "WAIT",
+                                        "val": "110"
+                                    },
+                                    {
+                                        "name": "REST",
+                                        "val": "101"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 434,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[3]",
                         "state_reg": [
                             {
@@ -1024,7 +2855,7 @@
                         ]
                     },
                     {
-                        "id": 38,
+                        "id": 435,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[2]",
                         "state_reg": [
                             {
@@ -1055,7 +2886,7 @@
                         ]
                     },
                     {
-                        "id": 39,
+                        "id": 436,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[1]",
                         "state_reg": [
                             {
@@ -1086,7 +2917,7 @@
                         ]
                     },
                     {
-                        "id": 40,
+                        "id": 437,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_i2c[0]",
                         "state_reg": [
                             {
@@ -1117,7 +2948,7 @@
                         ]
                     },
                     {
-                        "id": 113,
+                        "id": 503,
                         "name": "top_block_i/fnet_wrapper/reg_switch_0/inst/trg_en",
                         "state_reg": [
                             {
@@ -1140,7 +2971,7 @@
                         ]
                     },
                     {
-                        "id": 155,
+                        "id": 509,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[1]",
                         "state_reg": [
                             {
@@ -1163,7 +2994,7 @@
                         ]
                     },
                     {
-                        "id": 156,
+                        "id": 510,
                         "name": "top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/mst_exec_state[0]",
                         "state_reg": [
                             {

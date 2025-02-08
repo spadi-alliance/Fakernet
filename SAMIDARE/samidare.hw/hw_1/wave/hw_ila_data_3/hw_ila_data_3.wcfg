@@ -10,41 +10,20 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,024"></ZoomEndTime>
-      <Cursor1Time time="512"></Cursor1Time>
+      <ZoomEndTime time="1,025"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="209"></NameColumnWidth>
-      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="4" />
+   <WVObjectSize size="1" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="top_block_i/appUnit/trigger_manager_0/inst/clear">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">top_block_i/appUnit/trigger_manager_0/inst/clear</obj_property>
-      <obj_property name="ObjectShortName">clear</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="u_ila_2_trg">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">u_ila_2_trg</obj_property>
       <obj_property name="ObjectShortName">u_ila_2_trg</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="u_ila_2_trg_internal">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_2_trg_internal</obj_property>
-      <obj_property name="ObjectShortName">u_ila_2_trg_internal</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="u_ila_2_en">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">u_ila_2_en</obj_property>
-      <obj_property name="ObjectShortName">u_ila_2_en</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
