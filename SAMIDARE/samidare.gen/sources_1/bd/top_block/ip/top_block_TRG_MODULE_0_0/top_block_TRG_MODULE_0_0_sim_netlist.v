@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Sep 12 19:03:26 2024
-// Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top top_block_TRG_MODULE_0_0 -prefix
-//               top_block_TRG_MODULE_0_0_ top_block_TRG_MODULE_0_0_sim_netlist.v
+// Date        : Tue Feb 11 15:15:51 2025
+// Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0_sim_netlist.v
 // Design      : top_block_TRG_MODULE_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,24 +19,33 @@ module top_block_TRG_MODULE_0_0
    (clk,
     rst,
     en,
+    init_trg,
     trg);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   input en;
+  input init_trg;
   output [3:0]trg;
 
   wire en;
-  wire [0:0]\^trg ;
+  wire init_trg;
+  wire [3:2]\^trg ;
 
-  assign trg[3] = \^trg [0];
-  assign trg[2] = en;
-  assign trg[1] = en;
-  assign trg[0] = \^trg [0];
-  LUT1 #(
-    .INIT(2'h1)) 
+  assign trg[3:2] = \^trg [3:2];
+  assign trg[1] = \^trg [2];
+  assign trg[0] = \^trg [3];
+  LUT2 #(
+    .INIT(4'h7)) 
     \trg[0]_INST_0 
        (.I0(en),
-        .O(\^trg ));
+        .I1(init_trg),
+        .O(\^trg [3]));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \trg[1]_INST_0 
+       (.I0(en),
+        .I1(init_trg),
+        .O(\^trg [2]));
 endmodule
 `ifndef GLBL
 `define GLBL

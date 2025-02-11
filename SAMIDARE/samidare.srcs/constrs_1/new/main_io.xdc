@@ -147,7 +147,6 @@ set_property IOSTANDARD SLVS_400_18 [get_ports {SO3P[*]}]
 set_property PACKAGE_PIN AB17 [get_ports {HBTRG_P[0]}]
 set_property PACKAGE_PIN AB18 [get_ports {HBTRG_N[0]}]
 set_property PACKAGE_PIN AA18 [get_ports {BX_SYNC_TRG_P[0]}]
-set_property PACKAGE_PIN AB19 [get_ports {BX_SYNX_TRG_N[0]}]
 set_property PACKAGE_PIN AA16 [get_ports {TRG_P[0]}]
 set_property PACKAGE_PIN AA17 [get_ports {TRG_N[0]}]
 set_property PACKAGE_PIN T20 [get_ports {TRG_P[1]}]
@@ -311,6 +310,11 @@ set_property IOSTANDARD LVCMOS12 [get_ports {POL[0]}]
 set_property IOSTANDARD LVCMOS12 [get_ports {CTS[0]}]
 set_property IOSTANDARD LVCMOS12 [get_ports {CG0[0]}]
 set_property IOSTANDARD LVCMOS12 [get_ports {CG1[0]}]
+
+
+
+
+
 
 
 

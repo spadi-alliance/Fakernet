@@ -1,0 +1,624 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Feb  9 22:11:24 2025
+# Process ID: 3230494
+# Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE
+# Command line: vivado
+# Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.log
+# Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/vivado.jou
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-08:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2025 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+set_property PROGRAM.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.bit} [get_hw_devices xcau15p_0]
+set_property PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+set_property FULL_PROBES.FILE {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/top_block_wrapper.ltx} [get_hw_devices xcau15p_0]
+current_hw_device [get_hw_devices xcau15p_0]
+refresh_hw_device [lindex [get_hw_devices xcau15p_0] 0]
+INFO: [Labtools 27-2302] Device xcau15p (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+INFO: [Labtools 27-2302] Device xcau15p (JTAG device index = 0) is programmed with a design that has 4 VIO core(s).
+WARNING: [Labtools 27-1952] VIO hw_probe OUTPUT_VALUE properties for hw_vio(s) [hw_vio_4] differ from output values in the VIO core(s).
+Resolution: 
+To synchronize the hw_probes properties and the VIO core outputs choose one of the following alternatives:
+  1) Execute the command 'Commit Output Values to VIO Core', to write down the hw_probe values to the core.
+  2) Execute the command 'Refresh Input and Output Values from VIO Core', to update the hw_probe properties with the core values.
+  3) First restore initial values in the core with the command 'Reset VIO Core Outputs', and then execute the command 'Refresh Input and Output Values from VIO Core'.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object u_ila_2_trg was not found in the design.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_1"}]]
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/decrement_count was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/elapsed_time_idelay was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/idle_patt_count_reg was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/overall_state was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO0_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO0_out_1 was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO1_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO2_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO3_out was not found in the design.
+WARNING: Simulation object u_ila_0_aggregate_state_return was not found in the design.
+WARNING: Simulation object u_ila_0_overall_state was not found in the design.
+WARNING: Simulation object u_ila_0_reset was not found in the design.
+WARNING: Simulation object u_ila_0_SO0_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO0_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO1_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO2_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO3_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO1_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO3_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO1_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO3_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO0_out_1 was not found in the design.
+WARNING: Simulation object u_ila_0_SO0_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO0_out was not found in the design.
+WARNING: Simulation object u_ila_0_SO0_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO1_out was not found in the design.
+WARNING: Simulation object top_block_i/SO_receiver/idelay_top_v2_0/SO3_out was not found in the design.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_2"}]]
+update_compile_order -fileset sources_1
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {top_block_i/SO_receiver/idelay_top_v2_0/SO1_out} {top_block_i/SO_receiver/idelay_top_v2_0/SO2_out} {top_block_i/SO_receiver/idelay_top_v2_0/SO3_out} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:12:32
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:12:32
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:12:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:12:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:12:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:12:53
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:12:59
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:12:59
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq10'h100 [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:13:08
+set_property TRIGGER_COMPARE_VALUE eq10'h1XX [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq10'hXX1 [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2025-Feb-09 22:13:50
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:13:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:13:50
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:13:59
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:13:59
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:14:06
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:14:09
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq10'h002 [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:14:29
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2025-Feb-09 22:14:33
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+set_property TRIGGER_COMPARE_VALUE eq10'hXX1 [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:14:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:14:40
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:14:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:14:48
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:15:09
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:15:09
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:15:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:15:26
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:16:06
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:16:06
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:16:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:16:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:16:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:16:31
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ila_0_SO1_out} {u_ila_0_SO2_out} {u_ila_0_SO3_out} }
+open_bd_design {/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd}
+Reading block design file </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>...
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:module_ref:u_led_inst:1.0 - u_led_inst_0
+Adding component instance block -- xilinx.com:module_ref:LED_REG_READ_SEPARATE_v1_0:1.0 - LED_REG_READ_SEPARAT_0
+Adding component instance block -- xilinx.com:module_ref:LED_REG_READ_SEPARATE_v1_0:1.0 - LED_REG_READ_SEPARAT_1
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_125M
+Adding component instance block -- xilinx.com:ip:xpm_cdc_gen:1.0 - xpm_cdc_gen_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_1
+Adding component instance block -- xilinx.com:module_ref:data_gen_user:1.0 - data_gen_user_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.1 - axi_iic_0
+Adding component instance block -- xilinx.com:module_ref:I2C_Controller_v1_0:1.0 - I2C_Controller_v1_0_0
+Adding component instance block -- xilinx.com:module_ref:iobuf_vhdl:1.0 - iobuf_vhdl_0
+Adding component instance block -- xilinx.com:module_ref:iobuf_vhdl:1.0 - iobuf_vhdl_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_1
+Adding component instance block -- xilinx.com:module_ref:SAMPA_PON_v1_0:1.0 - SAMPA_PON_v1_0_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_4
+Adding component instance block -- xilinx.com:ip:xpm_cdc_gen:1.0 - xpm_cdc_gen_0
+Adding component instance block -- xilinx.com:module_ref:das_rx:1.0 - das_rx_0
+Adding component instance block -- xilinx.com:module_ref:trigger_manager:1.0 - trigger_manager_0
+Adding component instance block -- xilinx.com:module_ref:event_builder_v0_1:1.0 - event_builder_v0_1_0
+Adding component instance block -- xilinx.com:module_ref:data_processor:1.0 - data_processor_0
+Adding component instance block -- xilinx.com:module_ref:xpm_async_fifo_wrapper:1.0 - xpm_afifo_wrapper_1
+Adding component instance block -- xilinx.com:module_ref:xpm_async_fifo_wrapper:1.0 - xpm_afifo_wrapper_2
+Adding component instance block -- xilinx.com:module_ref:xpm_async_fifo_wrapper:1.0 - xpm_afifo_wrapper_3
+Adding component instance block -- xilinx.com:module_ref:xpm_async_fifo_wrapper:1.0 - xpm_afifo_wrapper_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_3
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:module_ref:data_sender_v1_0:1.0 - data_sender_v1_0_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - POL
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - CTS
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - CG0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - CG1
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_3
+Adding component instance block -- xilinx.com:module_ref:TRG_MODULE:1.0 - TRG_MODULE_0
+Adding component instance block -- xilinx.com:module_ref:mii_initializer:1.0 - mii_initializer_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_3
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding component instance block -- xilinx.com:module_ref:RESET_INST:1.0 - RESET_INST_0
+Adding component instance block -- xilinx.com:module_ref:gig_ethernet_pcs_pma_0_example_design:1.0 - gig_ethernet_pcs_pma_0
+Adding component instance block -- xilinx.com:module_ref:fakernet_top:1.0 - fakernet_top_0
+Adding component instance block -- xilinx.com:module_ref:data_receiver_v1_0:1.0 - data_receiver_v1_0_0
+Adding component instance block -- xilinx.com:module_ref:reg_switch:1.0 - reg_switch_0
+Adding component instance block -- xilinx.com:module_ref:native_to_axi_lite_v1_0:1.0 - native_to_axi_lite_v_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_4
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_6
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_7
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:module_ref:GPIO_Controller:1.0 - GPIO_Controller_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.2 - util_ds_buf_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_2
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_2
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_1
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_2
+Adding component instance block -- xilinx.com:module_ref:idelay_top_v2:1.0 - idelay_top_v2_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_320M
+Successfully read diagram <top_block> from block design file </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd>
+regenerate_bd_layout
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:17:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:17:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:17:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:17:53
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq10'h2B5 [get_hw_probes top_block_i/SO_receiver/idelay_top_v2_0/SO1_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:18:29
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:18:33
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:32:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:32:16
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:33:26
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:33:26
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:33:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:33:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-09 22:36:22
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xcau15p_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-09 22:36:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+add_files -norecurse /home/nagafusa/idelay_top_v2.v
+WARNING: [filemgmt 56-12] File '/home/nagafusa/idelay_top_v2.v' cannot be added to the project because it already exists in the project, skipping this file
+update_module_reference top_block_idelay_top_v2_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd'
+INFO: [IP_Flow 19-3420] Updated top_block_idelay_top_v2_0_0 to use current project options
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_1f0ccaf.ui> 
+add_files -norecurse /home/nagafusa/idelay_impl_v2.v
+update_compile_order -fileset sources_1
+update_module_reference top_block_idelay_top_v2_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd'
+INFO: [IP_Flow 19-3420] Updated top_block_idelay_top_v2_0_0 to use current project options
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_1f0ccaf.ui> 
+update_module_reference top_block_idelay_top_v2_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+Upgrading '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd'
+INFO: [IP_Flow 19-3420] Updated top_block_idelay_top_v2_0_0 to use current project options
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_1f0ccaf.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/utils_1/imports/synth_1/top_level.dcp with file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp
+launch_runs synth_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+srcPin /GPIO_IOBUF/util_ds_buf_5/IOBUF_IO_I dstPin /GPIO_IOBUF/util_ds_buf_5/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In3_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In2_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In1_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+srcPin /GPIO_IOBUF/util_ds_buf_5/IOBUF_IO_I dstPin /GPIO_IOBUF/util_ds_buf_5/IOBUF_IO_O freq 100000000 phase 0.0 clkdomain 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In3_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In2_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In1_width(1) on '/HRSTB_wrapper/xlconcat_2' with propagated value(16). Command ignored
+CRITICAL WARNING: [BD 41-1343] Reset pin /SAMPA_I2C_wrapper/axi_iic_0/s_axi_aresetn (associated clock /SAMPA_I2C_wrapper/axi_iic_0/s_axi_aclk) is connected to reset source /reset/rst_clk_wiz_0_125M/peripheral_aresetn (synchronous to clock source /clock_wrapper/clk_wiz_0/clk_out5).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clock_wrapper/clk_wiz_0/clk_out1.
+CRITICAL WARNING: [BD 41-1343] Reset pin /SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_aresetn (associated clock /SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_aclk) is connected to reset source /reset/rst_clk_wiz_0_125M/peripheral_aresetn (synchronous to clock source /clock_wrapper/clk_wiz_0/clk_out5).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clock_wrapper/clk_wiz_0/clk_out1.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clock_wrapper/clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clock_wrapper/clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /Const_wrapper/clk_wiz_2 clk_wiz propagate
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /appUnit/data_sender_wrapper/axis_data_fifo_0/S_AXIS(32) and /appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis(4)
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /fnet_wrapper/data_receiver_v1_0_0/s00_axis(4) and /appUnit/data_sender_wrapper/axis_data_fifo_0/M_AXIS(32)
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/led_module/u_led_inst_0/LED_REG0
+/led_module/u_led_inst_0/LED_REG1
+/data_gen_user_0/event_free
+/data_gen_user_0/event_reset
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m00_axi_init_axi_txn
+/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/m01_axi_init_axi_txn
+/SAMPA_PON_v1_0_0/m00_axi_init_axi_txn
+/appUnit/trigger_manager_0/reg_trg
+/appUnit/trigger_manager_0/external_trg
+/appUnit/event_builder_v0_1_0/rst
+/appUnit/event_builder_v0_1_0/empty
+/appUnit/event_builder_v0_1_0/data_wr_i
+/fnet_wrapper/fakernet/gig_ethernet_pcs_pma_0/io_refclk
+/fnet_wrapper/fakernet/gig_ethernet_pcs_pma_0/gmii_tx_er
+/fnet_wrapper/fakernet/fakernet_top_0/spi_sdi
+/fnet_wrapper/fakernet/fakernet_top_0/sw
+/fnet_wrapper/fakernet/fakernet_top_0/btn
+/fnet_wrapper/fakernet/fakernet_top_0/ja0
+/fnet_wrapper/fakernet/fakernet_top_0/ja2
+/fnet_wrapper/fakernet/fakernet_top_0/ja3
+/fnet_wrapper/fakernet/fakernet_top_0/jd0
+/fnet_wrapper/fakernet/fakernet_top_0/jd2
+/fnet_wrapper/fakernet/fakernet_top_0/uart_rx
+/GPIO_Controller_0/rst
+/clock_wrapper/clk_wiz_1/power_down
+/SO_receiver/idelay_top_v2_0/S_AXI_ARADDR
+/SO_receiver/idelay_top_v2_0/S_AXI_ARVALID
+/SO_receiver/idelay_top_v2_0/S_AXI_RREADY
+
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/top_block.bd> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_1f0ccaf.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/appUnit/data_sender_wrapper/axis_data_fifo_0/s_axis_tdata'(256) to pin: '/appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/appUnit/data_sender_wrapper/axis_data_fifo_0/s_axis_tstrb'(32) to pin: '/appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fnet_wrapper/data_receiver_v1_0_0/s00_axis_tdata'(32) to pin: '/fnet_wrapper/s00_axis_data_tdata'(256) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fnet_wrapper/data_receiver_v1_0_0/s00_axis_tstrb'(4) to pin: '/fnet_wrapper/s00_axis_data_tstrb'(32) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addra'(32) to pin: '/reg_bram/axi_bram_ctrl_0/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/reg_bram/blk_mem_gen_0/addrb'(32) to pin: '/reg_bram/axi_bram_ctrl_1/bram_addr_a'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/appUnit/data_sender_wrapper/axis_data_fifo_0/s_axis_tdata'(256) to pin: '/appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis_tdata'(32) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/appUnit/data_sender_wrapper/axis_data_fifo_0/s_axis_tstrb'(32) to pin: '/appUnit/data_sender_wrapper/data_sender_v1_0_0/m00_axis_tstrb'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fnet_wrapper/data_receiver_v1_0_0/s00_axis_tdata'(32) to pin: '/fnet_wrapper/s00_axis_data_tdata'(256) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/fnet_wrapper/data_receiver_v1_0_0/s00_axis_tstrb'(4) to pin: '/fnet_wrapper/s00_axis_data_tstrb'(32) - Only lower order bits will be connected.
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/sim/top_block.v
+Verilog Output written to : /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_3e573403.ui> 
+Wrote  : </home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ui/bd_1f0ccaf.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SO_receiver/idelay_top_v2_0 .
+Exporting to file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hw_handoff/top_block.hwh
+Generated Hardware Definition File /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_idelay_top_v2_0_0
+[Sun Feb  9 23:22:43 2025] Launched top_block_idelay_top_v2_0_0_synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_idelay_top_v2_0_0_synth_1/runme.log
+[Sun Feb  9 23:22:43 2025] Launched synth_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:51 ; elapsed = 00:00:14 . Memory (MB): peak = 11931.559 ; gain = 0.000 ; free physical = 31155 ; free virtual = 61266
+launch_runs impl_1 -jobs 32
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/ip/gig_ethernet_pcs_pma_0_2/gig_ethernet_pcs_pma_0.xci' is already up-to-date
+[Sun Feb  9 23:25:14 2025] Launched impl_1...
+Run output will be captured here: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/runme.log
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtools 27-1435] Device xcau15p (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtools 27-1435] Device xcau15p (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+INFO: [Labtools 27-1435] Device xcau15p (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/000013e24a8f01
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:71]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:72]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'u_idelay_impl_SO0' [/home/nagafusa/idelay_top_v2.v:77]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:90]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:110]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:123]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:143]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:156]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:176]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:189]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:260]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:71]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:72]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'u_idelay_impl_SO0' [/home/nagafusa/idelay_top_v2.v:77]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:90]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:110]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:123]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:143]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:156]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:176]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:189]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:260]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:71]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:72]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'u_idelay_impl_SO0' [/home/nagafusa/idelay_top_v2.v:77]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:90]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:110]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:123]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:143]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:156]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:176]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:189]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:260]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:71]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'input' [/home/nagafusa/idelay_top_v2.v:72]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'u_idelay_impl_SO0' [/home/nagafusa/idelay_top_v2.v:77]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:90]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:110]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:123]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:143]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:156]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:176]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:189]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ';' [/home/nagafusa/idelay_top_v2.v:260]
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 11 14:40:22 2025...

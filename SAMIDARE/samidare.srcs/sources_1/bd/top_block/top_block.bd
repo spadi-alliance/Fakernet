@@ -79,7 +79,6 @@
         "CG1": ""
       },
       "util_ds_buf_3": "",
-      "TRG_MODULE_0": "",
       "fnet_wrapper": {
         "fakernet": {
           "mii_initializer_0": "",
@@ -153,9 +152,11 @@
       "SO_receiver": {
         "vio_0": "",
         "vio_1": "",
+        "vio_2": "",
         "idelay_top_v2_0": ""
       },
-      "rst_clk_wiz_1_320M": ""
+      "rst_clk_wiz_1_320M": "",
+      "TRG_MODULE_0": ""
     },
     "ports": {
       "SFP0RXN": {
@@ -4678,47 +4679,6 @@
           }
         }
       },
-      "TRG_MODULE_0": {
-        "vlnv": "xilinx.com:module_ref:TRG_MODULE:1.0",
-        "xci_name": "top_block_TRG_MODULE_0_0",
-        "xci_path": "ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0.xci",
-        "inst_hier_path": "TRG_MODULE_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "TRG_MODULE",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "en": {
-            "direction": "I"
-          },
-          "trg": {
-            "direction": "O",
-            "left": "3",
-            "right": "0",
-            "parameters": {
-              "PortWidth": {
-                "value": "4",
-                "value_src": "default_prop"
-              }
-            }
-          }
-        }
-      },
       "fnet_wrapper": {
         "interface_ports": {
           "m00_axi": {
@@ -8550,6 +8510,9 @@
           "idelay_refclk": {
             "type": "clk",
             "direction": "I"
+          },
+          "trg": {
+            "direction": "O"
           }
         },
         "components": {
@@ -8577,6 +8540,12 @@
                 "value": "0"
               }
             }
+          },
+          "vio_2": {
+            "vlnv": "xilinx.com:ip:vio:3.0",
+            "xci_name": "top_block_vio_2_0",
+            "xci_path": "ip/top_block_vio_2_0/top_block_vio_2_0.xci",
+            "inst_hier_path": "SO_receiver/vio_2"
           },
           "idelay_top_v2_0": {
             "vlnv": "xilinx.com:module_ref:idelay_top_v2:1.0",
@@ -8802,6 +8771,9 @@
               },
               "S_AXI_RREADY": {
                 "direction": "I"
+              },
+              "trg": {
+                "direction": "O"
               }
             }
           }
@@ -8860,6 +8832,7 @@
               "clk",
               "vio_0/clk",
               "vio_1/clk",
+              "vio_2/clk",
               "idelay_top_v2_0/clk"
             ]
           },
@@ -8899,16 +8872,28 @@
               "vio_1/probe_in0"
             ]
           },
+          "idelay_top_v2_0_trg": {
+            "ports": [
+              "idelay_top_v2_0/trg",
+              "trg"
+            ]
+          },
           "reset_1": {
             "ports": [
               "reset",
-              "idelay_top_v2_0/reset"
+              "vio_2/probe_in0"
             ]
           },
           "vio_0_probe_out0": {
             "ports": [
               "vio_0/probe_out0",
               "idelay_top_v2_0/reg_change"
+            ]
+          },
+          "vio_2_probe_out0": {
+            "ports": [
+              "vio_2/probe_out0",
+              "idelay_top_v2_0/reset"
             ]
           }
         }
@@ -8918,6 +8903,50 @@
         "xci_name": "top_block_rst_clk_wiz_1_320M_0",
         "xci_path": "ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xci",
         "inst_hier_path": "rst_clk_wiz_1_320M"
+      },
+      "TRG_MODULE_0": {
+        "vlnv": "xilinx.com:module_ref:TRG_MODULE:1.0",
+        "xci_name": "top_block_TRG_MODULE_0_0",
+        "xci_path": "ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0.xci",
+        "inst_hier_path": "TRG_MODULE_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TRG_MODULE",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "init_trg": {
+            "direction": "I"
+          },
+          "trg": {
+            "direction": "O",
+            "left": "3",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "4",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -9183,6 +9212,12 @@
           "CLKSOIN_P"
         ]
       },
+      "SO_receiver_trg": {
+        "ports": [
+          "SO_receiver/trg",
+          "TRG_MODULE_0/init_trg"
+        ]
+      },
       "TRG_MODULE_0_trg": {
         "ports": [
           "TRG_MODULE_0/trg",
@@ -9205,9 +9240,9 @@
           "SAMPA_I2C_wrapper/m00_axi_aclk",
           "SAMPA_PON_v1_0_0/m00_axi_aclk",
           "appUnit/clk125MHz",
-          "TRG_MODULE_0/clk",
           "fnet_wrapper/clk_in_0",
-          "intercon_wrapper/M00_ACLK"
+          "intercon_wrapper/M00_ACLK",
+          "TRG_MODULE_0/clk"
         ]
       },
       "clk_wiz_0_clk_out1": {
@@ -9252,8 +9287,8 @@
       "fakernet_trg_en": {
         "ports": [
           "fnet_wrapper/trg_en",
-          "TRG_MODULE_0/en",
-          "appUnit/en"
+          "appUnit/en",
+          "TRG_MODULE_0/en"
         ]
       },
       "fnet_txn_1": {
@@ -9380,8 +9415,8 @@
         "ports": [
           "reset/probe_out0",
           "led_module/reset",
-          "TRG_MODULE_0/rst",
-          "fnet_wrapper/reset_vio_0"
+          "fnet_wrapper/reset_vio_0",
+          "TRG_MODULE_0/rst"
         ]
       },
       "xlconstant_0_dout": {

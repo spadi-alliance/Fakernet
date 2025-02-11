@@ -78,7 +78,8 @@ module top_block_idelay_top_v2_0_0 (
   S_AXI_RDATA,
   S_AXI_RRESP,
   S_AXI_RVALID,
-  S_AXI_RREADY
+  S_AXI_RREADY,
+  trg
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
@@ -109,6 +110,7 @@ output wire [31 : 0] S_AXI_RDATA;
 output wire [1 : 0] S_AXI_RRESP;
 output wire S_AXI_RVALID;
 input wire S_AXI_RREADY;
+output wire trg;
 
   idelay_top_v2 inst (
     .clk(clk),
@@ -134,6 +136,7 @@ input wire S_AXI_RREADY;
     .S_AXI_RDATA(S_AXI_RDATA),
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
-    .S_AXI_RREADY(S_AXI_RREADY)
+    .S_AXI_RREADY(S_AXI_RREADY),
+    .trg(trg)
   );
 endmodule

@@ -1,47 +1,51 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.953846",
-   "Default View_TopLeft":"-165,4",
+   "Default View_ScaleFactor":"0.807937",
+   "Default View_TopLeft":"-189,1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x -20 -y 20 -defaultsOSRD
-preplace port port-id_reset -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
-preplace port port-id_idelay_refclk -pg 1 -lvl 0 -x -20 -y 40 -defaultsOSRD
-preplace portBus SO1P -pg 1 -lvl 0 -x -20 -y 220 -defaultsOSRD
-preplace portBus SO1N -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
-preplace portBus SO0N -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
-preplace portBus SO0P -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
-preplace portBus SO2N -pg 1 -lvl 0 -x -20 -y 280 -defaultsOSRD
-preplace portBus SO2P -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
-preplace portBus SO3N -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
-preplace portBus SO3P -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
-preplace portBus IBUF_OUT1 -pg 1 -lvl 4 -x 880 -y 180 -defaultsOSRD
-preplace portBus IBUF_OUT3 -pg 1 -lvl 4 -x 880 -y 220 -defaultsOSRD
-preplace portBus IBUF_OUT2 -pg 1 -lvl 4 -x 880 -y 200 -defaultsOSRD
-preplace portBus IBUF_OUT0 -pg 1 -lvl 4 -x 880 -y 160 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 1 -x 130 -y 120 -defaultsOSRD
-preplace inst vio_1 -pg 1 -lvl 3 -x 760 -y 450 -defaultsOSRD
-preplace inst idelay_top_v2_0 -pg 1 -lvl 2 -x 460 -y 240 -defaultsOSRD
-preplace netloc clk_1 1 0 3 20 50 260 40 660J
-preplace netloc idelay_refclk_1 1 0 2 NJ 40 250J
-preplace netloc idelay_top_v2_0_SO0_out 1 2 2 NJ 160 NJ
-preplace netloc idelay_top_v2_0_SO1_out 1 2 2 NJ 180 NJ
-preplace netloc idelay_top_v2_0_SO2_out 1 2 2 NJ 200 NJ
-preplace netloc idelay_top_v2_0_SO3_out 1 2 2 NJ 220 NJ
-preplace netloc idelay_top_v2_0_overall_state 1 2 1 650 240n
-preplace netloc reset_1 1 0 2 10J 180 250J
-preplace netloc vio_0_probe_out0 1 1 1 240J 120n
-preplace netloc SO3N_1 1 0 2 NJ 320 NJ
-preplace netloc SO3P_1 1 0 2 NJ 300 NJ
-preplace netloc SO0P_1 1 0 2 0J 190 260J
-preplace netloc SO0N_1 1 0 2 NJ 200 NJ
-preplace netloc SO1P_1 1 0 2 NJ 220 NJ
-preplace netloc SO1N_1 1 0 2 NJ 240 NJ
-preplace netloc SO2P_1 1 0 2 NJ 260 NJ
-preplace netloc SO2N_1 1 0 2 NJ 280 NJ
-levelinfo -pg 1 -20 130 460 760 880
-pagesize -pg 1 -db -bbox -sgen -160 0 1060 520
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_idelay_refclk -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_trg -pg 1 -lvl 4 -x 950 -y 440 -defaultsOSRD
+preplace portBus SO1P -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace portBus SO1N -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace portBus SO0N -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus SO0P -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace portBus SO2N -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace portBus SO2P -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace portBus SO3N -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace portBus SO3P -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace portBus IBUF_OUT1 -pg 1 -lvl 4 -x 950 -y 290 -defaultsOSRD
+preplace portBus IBUF_OUT3 -pg 1 -lvl 4 -x 950 -y 330 -defaultsOSRD
+preplace portBus IBUF_OUT2 -pg 1 -lvl 4 -x 950 -y 310 -defaultsOSRD
+preplace portBus IBUF_OUT0 -pg 1 -lvl 4 -x 950 -y 270 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -x 160 -y 230 -defaultsOSRD
+preplace inst vio_1 -pg 1 -lvl 3 -x 830 -y 560 -defaultsOSRD
+preplace inst vio_2 -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
+preplace inst idelay_top_v2_0 -pg 1 -lvl 2 -x 530 -y 350 -defaultsOSRD
+preplace netloc SO0N_1 1 0 2 NJ 20 310J
+preplace netloc SO0P_1 1 0 2 NJ 290 NJ
+preplace netloc SO1N_1 1 0 2 NJ 350 NJ
+preplace netloc SO1P_1 1 0 2 NJ 330 NJ
+preplace netloc SO2N_1 1 0 2 NJ 390 NJ
+preplace netloc SO2P_1 1 0 2 NJ 370 NJ
+preplace netloc SO3N_1 1 0 2 NJ 430 NJ
+preplace netloc SO3P_1 1 0 2 NJ 410 NJ
+preplace netloc clk_1 1 0 3 20 160 340 150 730J
+preplace netloc idelay_refclk_1 1 0 2 NJ 170 320J
+preplace netloc idelay_top_v2_0_SO0_out 1 2 2 NJ 260 930J
+preplace netloc idelay_top_v2_0_SO1_out 1 2 2 NJ 280 930J
+preplace netloc idelay_top_v2_0_SO2_out 1 2 2 NJ 300 930J
+preplace netloc idelay_top_v2_0_SO3_out 1 2 2 NJ 320 930J
+preplace netloc idelay_top_v2_0_overall_state 1 2 1 720 340n
+preplace netloc idelay_top_v2_0_trg 1 2 2 NJ 440 NJ
+preplace netloc reset_1 1 0 1 NJ 100
+preplace netloc vio_0_probe_out0 1 1 1 300J 230n
+preplace netloc vio_2_probe_out0 1 1 1 330 90n
+levelinfo -pg 1 0 160 530 830 950
+pagesize -pg 1 -db -bbox -sgen -140 0 1130 630
 "
 }
 0

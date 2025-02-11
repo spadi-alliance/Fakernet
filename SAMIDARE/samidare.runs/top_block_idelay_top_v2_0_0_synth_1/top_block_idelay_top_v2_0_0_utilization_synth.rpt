@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sat Feb  8 19:52:25 2025
+| Date         : Tue Feb 11 18:56:11 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file top_block_idelay_top_v2_0_0_utilization_synth.rpt -pb top_block_idelay_top_v2_0_0_utilization_synth.pb
 | Design       : top_block_idelay_top_v2_0_0
@@ -32,13 +32,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 3077 |     0 |          0 |     77760 |  3.96 |
-|   LUT as Logic          | 3077 |     0 |          0 |     77760 |  3.96 |
+| CLB LUTs*               | 1871 |     0 |          0 |     77760 |  2.41 |
+|   LUT as Logic          | 1871 |     0 |          0 |     77760 |  2.41 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
-| CLB Registers           | 3921 |     0 |          0 |    155520 |  2.52 |
-|   Register as Flip Flop | 3921 |     0 |          0 |    155520 |  2.52 |
+| CLB Registers           | 1770 |     0 |          0 |    155520 |  1.14 |
+|   Register as Flip Flop | 1770 |     0 |          0 |    155520 |  1.14 |
 |   Register as Latch     |    0 |     0 |          0 |    155520 |  0.00 |
-| CARRY8                  |  352 |     0 |          0 |      9720 |  3.62 |
+| CARRY8                  |   44 |     0 |          0 |      9720 |  0.45 |
 | F7 Muxes                |    0 |     0 |          0 |     38880 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     19440 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |      9720 |  0.00 |
@@ -59,10 +59,10 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 88    |          Yes |           - |          Set |
-| 3569  |          Yes |           - |        Reset |
+| 209   |          Yes |           - |          Set |
+| 1561  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 264   |          Yes |       Reset |            - |
+| 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,19 +153,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDCE       | 3569 |            Register |
-| LUT2       | 3083 |                 CLB |
-| LUT6       |  832 |                 CLB |
-| CARRY8     |  352 |                 CLB |
-| LUT3       |  321 |                 CLB |
-| LUT5       |  285 |                 CLB |
-| FDRE       |  264 |            Register |
-| LUT4       |  236 |                 CLB |
-| LUT1       |   89 |                 CLB |
-| FDPE       |   88 |            Register |
+| FDCE       | 1561 |            Register |
+| LUT4       |  706 |                 CLB |
+| LUT6       |  577 |                 CLB |
+| LUT2       |  562 |                 CLB |
+| LUT5       |  434 |                 CLB |
+| LUT3       |  287 |                 CLB |
+| FDPE       |  209 |            Register |
+| LUT1       |  101 |                 CLB |
 | IDELAYE3   |   44 |                 I/O |
 | IBUFCTRL   |   44 |              Others |
 | DIFFINBUF  |   44 |                 I/O |
+| CARRY8     |   44 |                 CLB |
 | IDELAYCTRL |    1 |                 I/O |
 +------------+------+---------------------+
 

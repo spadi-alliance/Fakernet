@@ -30,77 +30,193 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p
 INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2230040
+INFO: [Synth 8-7075] Helper process launched with PID 399625
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'internal_data', assumed default net type 'wire' [/home/nagafusa/idelay_impl.v:286]
-INFO: [Synth 8-11241] undeclared symbol 'ld_signal', assumed default net type 'wire' [/home/nagafusa/idelay_impl.v:290]
-INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:43]
+INFO: [Synth 8-11241] undeclared symbol 'buf_data', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:57]
+INFO: [Synth 8-11241] undeclared symbol 'raw_data_out', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:58]
+WARNING: [Synth 8-8895] 'buf_data' is already implicitly declared on line 57 [/home/nagafusa/idelay_impl_v2_normal.v:65]
+INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:190]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2147.766 ; gain = 363.758 ; free physical = 28095 ; free virtual = 57670
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3122.215; parent = 2153.707; children = 968.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.215 ; gain = 365.695 ; free physical = 21679 ; free virtual = 52176
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 187.470
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.695; parent = 2153.188; children = 968.508
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_block_idelay_top_v2_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/synth/top_block_idelay_top_v2_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'idelay_top_v2' [/home/nagafusa/idelay_top_v2.v:3]
-INFO: [Synth 8-6157] synthesizing module 'idelay_impl' [/home/nagafusa/idelay_impl.v:9]
-INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
-INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2_normal' [/home/nagafusa/idelay_impl_v2_normal.v:11]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYE3' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
-INFO: [Synth 8-6155] done synthesizing module 'idelay_impl' (0#1) [/home/nagafusa/idelay_impl.v:9]
-INFO: [Synth 8-6157] synthesizing module 'idelay_impl__parameterized0' [/home/nagafusa/idelay_impl.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'idelay_impl__parameterized0' (0#1) [/home/nagafusa/idelay_impl.v:9]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2_normal' (0#1) [/home/nagafusa/idelay_impl_v2_normal.v:11]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2' [/home/nagafusa/idelay_impl_v2.v:8]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYE3__parameterized0' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3__parameterized0' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2' (0#1) [/home/nagafusa/idelay_impl_v2.v:8]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:118]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:154]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:190]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
-INFO: [Synth 8-6157] synthesizing module 'idelay_controller' [/home/nagafusa/idelay_controller.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'idelay_controller' (0#1) [/home/nagafusa/idelay_controller.v:7]
+INFO: [Synth 8-6157] synthesizing module 'idelay_controller_v2' [/home/nagafusa/idelay_controller_v2.v:10]
+INFO: [Synth 8-226] default block is never used [/home/nagafusa/idelay_controller_v2.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_controller_v2' (0#1) [/home/nagafusa/idelay_controller_v2.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'idelay_top_v2' (0#1) [/home/nagafusa/idelay_top_v2.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_idelay_top_v2_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/synth/top_block_idelay_top_v2_0_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element num_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:95]
-WARNING: [Synth 8-6014] Unused sequential element en_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:97]
-WARNING: [Synth 8-6014] Unused sequential element sig_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:159]
-WARNING: [Synth 8-6014] Unused sequential element num_patt_check_reg was removed.  [/home/nagafusa/idelay_impl.v:183]
-WARNING: [Synth 8-6014] Unused sequential element en_bitslip_reg was removed.  [/home/nagafusa/idelay_impl.v:184]
-WARNING: [Synth 8-6014] Unused sequential element bit_aligned_reg was removed.  [/home/nagafusa/idelay_impl.v:185]
-WARNING: [Synth 8-6014] Unused sequential element bitslip_failure_reg was removed.  [/home/nagafusa/idelay_impl.v:186]
-WARNING: [Synth 8-7137] Register en_idle_check_reg in module idelay_impl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/idelay_impl.v:195]
-WARNING: [Synth 8-3848] Net idelay_check_count in module/entity idelay_impl does not have driver. [/home/nagafusa/idelay_impl.v:64]
-WARNING: [Synth 8-3848] Net internal_data in module/entity idelay_impl does not have driver. [/home/nagafusa/idelay_impl.v:286]
-WARNING: [Synth 8-3848] Net ld_signal in module/entity idelay_impl does not have driver. [/home/nagafusa/idelay_impl.v:290]
-WARNING: [Synth 8-6014] Unused sequential element num_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:95]
-WARNING: [Synth 8-6014] Unused sequential element en_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:97]
-WARNING: [Synth 8-6014] Unused sequential element sig_idelay_check_reg was removed.  [/home/nagafusa/idelay_impl.v:159]
-WARNING: [Synth 8-6014] Unused sequential element num_patt_check_reg was removed.  [/home/nagafusa/idelay_impl.v:183]
-WARNING: [Synth 8-6014] Unused sequential element en_bitslip_reg was removed.  [/home/nagafusa/idelay_impl.v:184]
-WARNING: [Synth 8-6014] Unused sequential element bit_aligned_reg was removed.  [/home/nagafusa/idelay_impl.v:185]
-WARNING: [Synth 8-6014] Unused sequential element bitslip_failure_reg was removed.  [/home/nagafusa/idelay_impl.v:186]
-WARNING: [Synth 8-7137] Register en_idle_check_reg in module idelay_impl__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/idelay_impl.v:195]
-WARNING: [Synth 8-3848] Net idelay_check_count in module/entity idelay_impl__parameterized0 does not have driver. [/home/nagafusa/idelay_impl.v:64]
-WARNING: [Synth 8-3848] Net internal_data in module/entity idelay_impl__parameterized0 does not have driver. [/home/nagafusa/idelay_impl.v:286]
-WARNING: [Synth 8-3848] Net ld_signal in module/entity idelay_impl__parameterized0 does not have driver. [/home/nagafusa/idelay_impl.v:290]
-WARNING: [Synth 8-7129] Port init in module idelay_impl__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port init in module idelay_impl is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element normal_cycle_counter_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:104]
+WARNING: [Synth 8-6014] Unused sequential element success_count_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:106]
+WARNING: [Synth 8-6014] Unused sequential element pattern_shift_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:108]
+WARNING: [Synth 8-6014] Unused sequential element max_cnt_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:110]
+WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:111]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'idelay_inst'. This will prevent further optimization [/home/nagafusa/idelay_impl_v2.v:101]
+WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/nagafusa/idelay_impl_v2.v:142]
+WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:152]
+WARNING: [Synth 8-6014] Unused sequential element trial_counter_history_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:263]
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:264]
+WARNING: [Synth 8-3848] Net gen_SO0[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO0[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
+WARNING: [Synth 8-3848] Net gen_SO1[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO1[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:118]
+WARNING: [Synth 8-3848] Net gen_SO2[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO2[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:154]
+WARNING: [Synth 8-3848] Net gen_SO3[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-3848] Net gen_SO3[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:190]
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.672 ; gain = 443.664 ; free physical = 28179 ; free virtual = 57754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3196.184; parent = 2227.676; children = 968.508
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2226.152 ; gain = 442.633 ; free physical = 21766 ; free virtual = 52264
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3194.664; parent = 2226.156; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.484 ; gain = 461.477 ; free physical = 28178 ; free virtual = 57754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.996; parent = 2245.488; children = 968.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2243.965 ; gain = 460.445 ; free physical = 21766 ; free virtual = 52264
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.477; parent = 2243.969; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.484 ; gain = 461.477 ; free physical = 28178 ; free virtual = 57754
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.996; parent = 2245.488; children = 968.508
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2243.965 ; gain = 460.445 ; free physical = 21766 ; free virtual = 52264
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.477; parent = 2243.969; children = 968.508
 ---------------------------------------------------------------------------------
 WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst' of module 'IDELAYCTRL'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2251.422 ; gain = 0.000 ; free physical = 28174 ; free virtual = 57750
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2249.902 ; gain = 0.000 ; free physical = 21761 ; free virtual = 52260
 INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -109,18 +225,18 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2373.422 ; gain = 0.000 ; free physical = 28138 ; free virtual = 57714
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.902 ; gain = 0.000 ; free physical = 21729 ; free virtual = 52228
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 44 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 44 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2395.234 ; gain = 21.812 ; free physical = 28133 ; free virtual = 57709
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2395.715 ; gain = 23.812 ; free physical = 21729 ; free virtual = 52227
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.234 ; gain = 611.227 ; free physical = 28164 ; free virtual = 57740
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.730; parent = 2363.223; children = 968.508
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.715 ; gain = 612.195 ; free physical = 21742 ; free virtual = 52240
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3332.211; parent = 2363.703; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -128,104 +244,90 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-sbvb484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.234 ; gain = 611.227 ; free physical = 28164 ; free virtual = 57740
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.730; parent = 2363.223; children = 968.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.715 ; gain = 612.195 ; free physical = 21742 ; free virtual = 52240
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3332.211; parent = 2363.703; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.234 ; gain = 611.227 ; free physical = 28164 ; free virtual = 57740
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.730; parent = 2363.223; children = 968.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.715 ; gain = 612.195 ; free physical = 21742 ; free virtual = 52240
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3332.211; parent = 2363.703; children = 968.508
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_idelay_reg' in module 'idelay_impl'
-INFO: [Synth 8-802] inferred FSM for state register 'state_bitslip_reg' in module 'idelay_impl'
-INFO: [Synth 8-802] inferred FSM for state register 'state_idelay_reg' in module 'idelay_impl__parameterized0'
-INFO: [Synth 8-802] inferred FSM for state register 'state_bitslip_reg' in module 'idelay_impl__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'normal_state_reg' in module 'idelay_impl_v2_normal'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-          ST_IDELAY_INIT |                              000 |                              000
-       ST_IDELAY_WAITPLL |                              001 |                              001
-         ST_IDELAY_CHECK |                              010 |                              010
-      ST_IDELAY_NUMTRIAL |                              011 |                              011
-     ST_IDELAY_DECREMENT |                              100 |                              101
-      ST_IDELAY_ADJUSTED |                              101 |                              110
-     ST_IDELAY_INCREMENT |                              110 |                              100
+*
+            SPECIAL_IDLE |                             0001 |                             0001
+     SPECIAL_DETECT_EDGE |                             0010 |                             0010
+      SPECIAL_CHECK_EDGE |                             0100 |                             0100
+            SPECIAL_DONE |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_idelay_reg' using encoding 'sequential' in module 'idelay_impl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 BS_INIT |                            00001 |                              000
-            BS_WAITSTART |                            00010 |                              001
-           BS_CHECK_IDLE |                            00100 |                              010
-             BS_FINISHED |                            01000 |                              100
-              BS_BITSLIP |                            10000 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_bitslip_reg' using encoding 'one-hot' in module 'idelay_impl'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'special_state_reg' in module 'idelay_impl_v2'
+INFO: [Synth 8-802] inferred FSM for state register 'controller_state_reg' in module 'idelay_controller_v2'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-          ST_IDELAY_INIT |                              000 |                              000
-       ST_IDELAY_WAITPLL |                              001 |                              001
-         ST_IDELAY_CHECK |                              010 |                              010
-      ST_IDELAY_NUMTRIAL |                              011 |                              011
-     ST_IDELAY_DECREMENT |                              100 |                              101
-      ST_IDELAY_ADJUSTED |                              101 |                              110
-     ST_IDELAY_INCREMENT |                              110 |                              100
+             NORMAL_IDLE |                            00001 |                              000
+        NORMAL_ADJUSTING |                            00010 |                              001
+     NORMAL_WAIT_PATTERN |                            00100 |                              010
+   NORMAL_DETECT_PATTERN |                            01000 |                              011
+        NORMAL_STEP_DONE |                            10000 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_idelay_reg' using encoding 'sequential' in module 'idelay_impl__parameterized0'
+INFO: [Synth 8-3354] encoded FSM with state register 'normal_state_reg' using encoding 'one-hot' in module 'idelay_impl_v2_normal'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                 BS_INIT |                            00001 |                              000
-            BS_WAITSTART |                            00010 |                              001
-           BS_CHECK_IDLE |                            00100 |                              010
-             BS_FINISHED |                            01000 |                              100
-              BS_BITSLIP |                            10000 |                              011
+              STATE_IDLE |                             0001 |                               00
+        STATE_ADJUST_CLK |                             0010 |                               01
+       STATE_ADJUST_DATA |                             0100 |                               10
+              STATE_DONE |                             1000 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_bitslip_reg' using encoding 'one-hot' in module 'idelay_impl__parameterized0'
+INFO: [Synth 8-3354] encoded FSM with state register 'controller_state_reg' using encoding 'one-hot' in module 'idelay_controller_v2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.234 ; gain = 611.227 ; free physical = 28159 ; free virtual = 57736
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.730; parent = 2363.223; children = 968.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2395.715 ; gain = 612.195 ; free physical = 21736 ; free virtual = 52235
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3332.211; parent = 2363.703; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 132   
-	   2 Input    6 Bit       Adders := 44    
-	   2 Input    5 Bit       Adders := 88    
+	   2 Input    9 Bit       Adders := 84    
+	   2 Input    8 Bit       Adders := 13    
+	   2 Input    7 Bit       Adders := 40    
+	   2 Input    4 Bit       Adders := 40    
 +---Registers : 
-	               32 Bit    Registers := 133   
-	                6 Bit    Registers := 44    
-	                5 Bit    Registers := 88    
-	                4 Bit    Registers := 44    
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 84    
+	                8 Bit    Registers := 13    
+	                7 Bit    Registers := 40    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 88    
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 179   
+	                1 Bit    Registers := 92    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 44    
-	   7 Input   32 Bit        Muxes := 44    
-	   5 Input   32 Bit        Muxes := 44    
-	   7 Input    6 Bit        Muxes := 44    
-	   2 Input    5 Bit        Muxes := 88    
+	   6 Input    9 Bit        Muxes := 4     
+	   5 Input    8 Bit        Muxes := 12    
+	   2 Input    8 Bit        Muxes := 20    
+	   2 Input    7 Bit        Muxes := 40    
 	   5 Input    5 Bit        Muxes := 44    
-	   2 Input    4 Bit        Muxes := 14    
+	   2 Input    5 Bit        Muxes := 16    
+	   5 Input    4 Bit        Muxes := 80    
+	   2 Input    4 Bit        Muxes := 26    
+	   3 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 6     
 	  11 Input    4 Bit        Muxes := 8     
-	   7 Input    3 Bit        Muxes := 44    
-	   2 Input    3 Bit        Muxes := 88    
-	   3 Input    3 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 4     
 	  11 Input    3 Bit        Muxes := 4     
-	   2 Input    2 Bit        Muxes := 44    
-	   2 Input    1 Bit        Muxes := 309   
-	   7 Input    1 Bit        Muxes := 352   
-	   3 Input    1 Bit        Muxes := 44    
-	   5 Input    1 Bit        Muxes := 176   
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 425   
+	   5 Input    1 Bit        Muxes := 184   
+	   4 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -242,36 +344,38 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port init in module idelay_impl__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port init in module idelay_impl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_controller_state_reg[3]) is unused and will be removed from module idelay_controller_v2.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2395.234 ; gain = 611.227 ; free physical = 28131 ; free virtual = 57713
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1583.979; parent = 1373.781; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.730; parent = 2363.223; children = 968.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2395.715 ; gain = 612.195 ; free physical = 21715 ; free virtual = 52219
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1512.917; parent = 1325.447; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3332.211; parent = 2363.703; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2441.977 ; gain = 657.969 ; free physical = 27911 ; free virtual = 57493
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.614; parent = 1584.990; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.488; parent = 2441.980; children = 968.508
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2442.457 ; gain = 658.938 ; free physical = 21499 ; free virtual = 52003
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1715.938; parent = 1528.155; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.969; parent = 2442.461; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2441.977 ; gain = 657.969 ; free physical = 27905 ; free virtual = 57487
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1799.825; parent = 1590.201; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.488; parent = 2441.980; children = 968.508
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2442.457 ; gain = 658.938 ; free physical = 21496 ; free virtual = 52000
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1718.426; parent = 1530.644; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.969; parent = 2442.461; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2470.000 ; gain = 685.992 ; free physical = 27894 ; free virtual = 57476
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.411; parent = 1598.787; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3438.512; parent = 2470.004; children = 968.508
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2453.480 ; gain = 669.961 ; free physical = 21487 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1725.992; parent = 1538.210; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3421.992; parent = 2453.484; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -289,49 +393,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1809.251; parent = 1599.627; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.012; parent = 1538.229; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1809.302; parent = 1599.678; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.047; parent = 1538.265; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.829; parent = 1601.205; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.527; parent = 1538.745; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.829; parent = 1601.205; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.527; parent = 1538.745; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.923; parent = 1601.299; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.527; parent = 1538.745; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.923; parent = 1601.299; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21486 ; free virtual = 51990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.527; parent = 1538.745; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -347,49 +451,48 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |CARRY8     |   352|
+|1     |CARRY8     |    44|
 |2     |IDELAYCTRL |     1|
 |3     |IDELAYE3   |    44|
-|4     |LUT1       |    89|
-|5     |LUT2       |  3083|
-|6     |LUT3       |   321|
-|7     |LUT4       |   236|
-|8     |LUT5       |   285|
-|9     |LUT6       |   832|
-|10    |FDCE       |  3569|
-|11    |FDPE       |    88|
-|12    |FDRE       |   264|
+|5     |LUT1       |   101|
+|6     |LUT2       |   562|
+|7     |LUT3       |   287|
+|8     |LUT4       |   706|
+|9     |LUT5       |   434|
+|10    |LUT6       |   577|
+|11    |FDCE       |  1561|
+|12    |FDPE       |   209|
 |13    |IBUFDS     |    44|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 691.930 ; free physical = 27894 ; free virtual = 57475
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.954; parent = 1601.330; children = 210.198
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3444.449; parent = 2475.941; children = 968.508
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 683.836 ; free physical = 21485 ; free virtual = 51989
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1726.527; parent = 1538.745; children = 188.104
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3435.867; parent = 2467.359; children = 968.508
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.938 ; gain = 542.180 ; free physical = 27906 ; free virtual = 57487
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2475.945 ; gain = 691.930 ; free physical = 27906 ; free virtual = 57487
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.355 ; gain = 532.086 ; free physical = 21504 ; free virtual = 52008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2467.363 ; gain = 683.836 ; free physical = 21504 ; free virtual = 52008
 INFO: [Project 1-571] Translating synthesized netlist
 WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst' of module 'IDELAYCTRL'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2475.945 ; gain = 0.000 ; free physical = 28013 ; free virtual = 57594
-INFO: [Netlist 29-17] Analyzing 440 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2467.363 ; gain = 0.000 ; free physical = 21609 ; free virtual = 52113
+INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2521.730 ; gain = 0.000 ; free physical = 27976 ; free virtual = 57557
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2513.180 ; gain = 0.000 ; free physical = 21570 ; free virtual = 52074
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 44 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 44 instances
 
-Synth Design complete, checksum: 47c6b1a9
+Synth Design complete, checksum: 466a2da2
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+99 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2521.730 ; gain = 1196.195 ; free physical = 28187 ; free virtual = 57769
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2513.180 ; gain = 1219.586 ; free physical = 21783 ; free virtual = 52287
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_idelay_top_v2_0_0_synth_1/top_block_idelay_top_v2_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_idelay_top_v2_0_0, cache-ID = fc89d95238dac2db
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_idelay_top_v2_0_0, cache-ID = 0b074548e86ea043
 INFO: [Coretcl 2-1174] Renamed 46 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_idelay_top_v2_0_0_synth_1/top_block_idelay_top_v2_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_idelay_top_v2_0_0_utilization_synth.rpt -pb top_block_idelay_top_v2_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Feb  8 19:52:26 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 11 18:56:11 2025...

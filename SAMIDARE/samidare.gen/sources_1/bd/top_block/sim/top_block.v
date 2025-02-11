@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sat Feb  8 19:51:55 2025
+//Date        : Tue Feb 11 18:55:42 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -453,7 +453,8 @@ module SO_receiver_imp_J5HCEK
     SO3P,
     clk,
     idelay_refclk,
-    reset);
+    reset,
+    trg);
   output [10:0]IBUF_OUT0;
   output [10:0]IBUF_OUT1;
   output [10:0]IBUF_OUT2;
@@ -469,6 +470,7 @@ module SO_receiver_imp_J5HCEK
   input clk;
   input idelay_refclk;
   input reset;
+  output trg;
 
   wire [10:0]SO0N_1;
   wire [10:0]SO0P_1;
@@ -485,8 +487,10 @@ module SO_receiver_imp_J5HCEK
   wire [10:0]idelay_top_v2_0_SO2_out;
   wire [10:0]idelay_top_v2_0_SO3_out;
   wire [3:0]idelay_top_v2_0_overall_state;
+  wire idelay_top_v2_0_trg;
   wire reset_1;
   wire [0:0]vio_0_probe_out0;
+  wire [0:0]vio_2_probe_out0;
 
   assign IBUF_OUT0[10:0] = idelay_top_v2_0_SO0_out;
   assign IBUF_OUT1[10:0] = idelay_top_v2_0_SO1_out;
@@ -503,6 +507,7 @@ module SO_receiver_imp_J5HCEK
   assign clk_1 = clk;
   assign idelay_refclk_1 = idelay_refclk;
   assign reset_1 = reset;
+  assign trg = idelay_top_v2_0_trg;
   top_block_idelay_top_v2_0_0 idelay_top_v2_0
        (.SO0_n(SO0N_1),
         .SO0_out(idelay_top_v2_0_SO0_out),
@@ -523,13 +528,18 @@ module SO_receiver_imp_J5HCEK
         .idelay_refclk(idelay_refclk_1),
         .overall_state(idelay_top_v2_0_overall_state),
         .reg_change(vio_0_probe_out0),
-        .reset(reset_1));
+        .reset(vio_2_probe_out0),
+        .trg(idelay_top_v2_0_trg));
   top_block_vio_0_1 vio_0
        (.clk(clk_1),
         .probe_out0(vio_0_probe_out0));
   top_block_vio_0_2 vio_1
        (.clk(clk_1),
         .probe_in0(idelay_top_v2_0_overall_state));
+  top_block_vio_2_0 vio_2
+       (.clk(clk_1),
+        .probe_in0(reset_1),
+        .probe_out0(vio_2_probe_out0));
 endmodule
 
 module appUnit_imp_1BHH9Z2
@@ -3411,7 +3421,7 @@ Gain: Shaping Time: (CTS,CG0,CG1)
 other modes are unsuppprted
 some SO pins have inverse POL.
 proper not gate is added */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=122,numReposBlks=95,numNonXlnxBlks=0,numHierBlks=27,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=27,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"da_board_cnt\"=1,\"da_clkrst_cnt\"=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=123,numReposBlks=96,numNonXlnxBlks=0,numHierBlks=27,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=27,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"\"\"\"\"da_board_cnt\"\"\"\"\"=1,\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"=1,\"\"\"da_clkrst_cnt\"\"\"=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -3566,6 +3576,7 @@ module top_block
   wire [10:0]SO3_1;
   wire [3:0]SOCLK_wrapper_CLKSOIN_N;
   wire [3:0]SOCLK_wrapper_CLKSOIN_P;
+  wire SO_receiver_trg;
   wire [31:0]S_AXI1_1_ARADDR;
   wire [2:0]S_AXI1_1_ARPROT;
   wire [0:0]S_AXI1_1_ARREADY;
@@ -3811,10 +3822,12 @@ module top_block
         .SO3P(SO3P_1),
         .clk(clk_wiz_1_clk_out1),
         .idelay_refclk(idelay_refclk_1),
-        .reset(rst_clk_wiz_1_320M_peripheral_aresetn));
+        .reset(rst_clk_wiz_1_320M_peripheral_aresetn),
+        .trg(SO_receiver_trg));
   top_block_TRG_MODULE_0_0 TRG_MODULE_0
        (.clk(clk_in_0_1),
         .en(fakernet_trg_en),
+        .init_trg(SO_receiver_trg),
         .rst(vio_0_probe_out0),
         .trg(TRG_MODULE_0_trg));
   appUnit_imp_1BHH9Z2 appUnit

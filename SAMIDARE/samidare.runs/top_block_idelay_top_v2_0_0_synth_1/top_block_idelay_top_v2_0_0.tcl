@@ -112,8 +112,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/nagafusa/idelay_controller.v
-  /home/nagafusa/idelay_impl.v
+  /home/nagafusa/idelay_controller_v2.v
+  /home/nagafusa/idelay_impl_v2.v
+  /home/nagafusa/idelay_impl_v2_normal.v
   /home/nagafusa/idelay_top_v2.v
 }
 read_ip -quiet /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/top_block_idelay_top_v2_0_0.xci

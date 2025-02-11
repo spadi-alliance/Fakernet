@@ -153,6 +153,8 @@ set_property used_in_implementation false [get_files -all /home/nagafusa/work/sp
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_2/top_block_vio_0_2.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_2/top_block_vio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0.xdc]
+set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0_ooc.xdc]

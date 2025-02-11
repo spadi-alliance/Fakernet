@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Sat Feb  8 19:52:25 2025
+// Date        : Tue Feb 11 18:56:11 2025
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/top_block_idelay_top_v2_0_0_stub.v
@@ -17,8 +17,8 @@
 module top_block_idelay_top_v2_0_0(clk, idelay_refclk, reset, reg_change, SO0_p, 
   SO0_n, SO1_p, SO1_n, SO2_p, SO2_n, SO3_p, SO3_n, SO0_out, SO1_out, SO2_out, SO3_out, overall_state, 
   S_AXI_ARADDR, S_AXI_ARVALID, S_AXI_ARREADY, S_AXI_RDATA, S_AXI_RRESP, S_AXI_RVALID, 
-  S_AXI_RREADY)
-/* synthesis syn_black_box black_box_pad_pin="clk,idelay_refclk,reset,reg_change,SO0_p[10:0],SO0_n[10:0],SO1_p[10:0],SO1_n[10:0],SO2_p[10:0],SO2_n[10:0],SO3_p[10:0],SO3_n[10:0],SO0_out[10:0],SO1_out[10:0],SO2_out[10:0],SO3_out[10:0],overall_state[3:0],S_AXI_ARADDR[3:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY" */;
+  S_AXI_RREADY, trg)
+/* synthesis syn_black_box black_box_pad_pin="clk,idelay_refclk,reset,reg_change,SO0_p[10:0],SO0_n[10:0],SO1_p[10:0],SO1_n[10:0],SO2_p[10:0],SO2_n[10:0],SO3_p[10:0],SO3_n[10:0],SO0_out[10:0],SO1_out[10:0],SO2_out[10:0],SO3_out[10:0],overall_state[3:0],S_AXI_ARADDR[3:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY,trg" */;
   input clk;
   input idelay_refclk;
   input reset;
@@ -43,4 +43,5 @@ module top_block_idelay_top_v2_0_0(clk, idelay_refclk, reset, reg_change, SO0_p,
   output [1:0]S_AXI_RRESP;
   output S_AXI_RVALID;
   input S_AXI_RREADY;
+  output trg;
 endmodule

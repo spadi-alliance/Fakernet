@@ -154,9 +154,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_x
 # IP: bd/top_block/ip/top_block_util_ds_buf_3_2/top_block_util_ds_buf_3_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_util_ds_buf_3_2 || ORIG_REF_NAME==top_block_util_ds_buf_3_2} -quiet] -quiet
 
-# IP: bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_TRG_MODULE_0_0 || ORIG_REF_NAME==top_block_TRG_MODULE_0_0} -quiet] -quiet
-
 # IP: bd/top_block/ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_mii_initializer_0_0 || ORIG_REF_NAME==top_block_mii_initializer_0_0} -quiet] -quiet
 
@@ -301,11 +298,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_v
 # IP: bd/top_block/ip/top_block_vio_0_2/top_block_vio_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_vio_0_2 || ORIG_REF_NAME==top_block_vio_0_2} -quiet] -quiet
 
+# IP: bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_vio_2_0 || ORIG_REF_NAME==top_block_vio_2_0} -quiet] -quiet
+
 # IP: bd/top_block/ip/top_block_idelay_top_v2_0_0/top_block_idelay_top_v2_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_idelay_top_v2_0_0 || ORIG_REF_NAME==top_block_idelay_top_v2_0_0} -quiet] -quiet
 
 # IP: bd/top_block/ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_rst_clk_wiz_1_320M_0 || ORIG_REF_NAME==top_block_rst_clk_wiz_1_320M_0} -quiet] -quiet
+
+# IP: bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_block_TRG_MODULE_0_0 || ORIG_REF_NAME==top_block_TRG_MODULE_0_0} -quiet] -quiet
 
 # XDC: ip/gig_ethernet_pcs_pma_0_gt/synth/gig_ethernet_pcs_pma_0_gt_ooc.xdc
 

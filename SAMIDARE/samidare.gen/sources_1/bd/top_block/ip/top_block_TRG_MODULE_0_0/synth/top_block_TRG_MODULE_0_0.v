@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -59,6 +59,7 @@ module top_block_TRG_MODULE_0_0 (
   clk,
   rst,
   en,
+  init_trg,
   trg
 );
 
@@ -69,12 +70,14 @@ input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
 input wire en;
+input wire init_trg;
 output wire [3 : 0] trg;
 
   TRG_MODULE inst (
     .clk(clk),
     .rst(rst),
     .en(en),
+    .init_trg(init_trg),
     .trg(trg)
   );
 endmodule

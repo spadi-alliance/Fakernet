@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.750115",
-   "Default View_TopLeft":"1120,245",
+   "Default View_ScaleFactor":"0.284242",
+   "Default View_TopLeft":"-1330,-56",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"",
    "PinnedPorts":"",
@@ -24,213 +24,147 @@ proper not gate is added",
    "font_comment_2":"14",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_SFP0RXN -pg 1 -lvl 0 -x -30 -y 990 -defaultsOSRD
-preplace port port-id_SFP0TXP -pg 1 -lvl 8 -x 5920 -y 910 -defaultsOSRD
-preplace port port-id_SFP_CLK_P -pg 1 -lvl 0 -x -30 -y 1010 -defaultsOSRD
-preplace port port-id_SFP_CLK_N -pg 1 -lvl 0 -x -30 -y 1030 -defaultsOSRD
-preplace port port-id_SFP0TXN -pg 1 -lvl 8 -x 5920 -y 930 -defaultsOSRD
-preplace port port-id_SFP0RXP -pg 1 -lvl 0 -x -30 -y 1050 -defaultsOSRD
-preplace port port-id_BASECLK -pg 1 -lvl 0 -x -30 -y 690 -defaultsOSRD
-preplace port port-id_SAMPA_EN_A -pg 1 -lvl 8 -x 5920 -y 1390 -defaultsOSRD
-preplace port port-id_SAMPA_EN_D -pg 1 -lvl 8 -x 5920 -y 1410 -defaultsOSRD
-preplace port port-id_PUSH_SW -pg 1 -lvl 0 -x -30 -y 940 -defaultsOSRD
-preplace port port-id_S_I2C_SDA -pg 1 -lvl 8 -x 5920 -y 1110 -defaultsOSRD
-preplace port port-id_S_I2C_SCL -pg 1 -lvl 8 -x 5920 -y 950 -defaultsOSRD
-preplace portBus LED -pg 1 -lvl 8 -x 5920 -y 1290 -defaultsOSRD
-preplace portBus SO1P -pg 1 -lvl 0 -x -30 -y 290 -defaultsOSRD
-preplace portBus SO1N -pg 1 -lvl 0 -x -30 -y 310 -defaultsOSRD
-preplace portBus SO0N -pg 1 -lvl 0 -x -30 -y 330 -defaultsOSRD
-preplace portBus SO0P -pg 1 -lvl 0 -x -30 -y 350 -defaultsOSRD
-preplace portBus SO2N -pg 1 -lvl 0 -x -30 -y 370 -defaultsOSRD
-preplace portBus SO2P -pg 1 -lvl 0 -x -30 -y 390 -defaultsOSRD
-preplace portBus SO3N -pg 1 -lvl 0 -x -30 -y 410 -defaultsOSRD
-preplace portBus SO3P -pg 1 -lvl 0 -x -30 -y 430 -defaultsOSRD
-preplace portBus TRG_N -pg 1 -lvl 8 -x 5920 -y 1050 -defaultsOSRD
-preplace portBus TRG_P -pg 1 -lvl 8 -x 5920 -y 1030 -defaultsOSRD
-preplace portBus GPION -pg 1 -lvl 8 -x 5920 -y 200 -defaultsOSRD
-preplace portBus GPIOP -pg 1 -lvl 8 -x 5920 -y 180 -defaultsOSRD
-preplace portBus CLK_CFG -pg 1 -lvl 8 -x 5920 -y 1350 -defaultsOSRD
-preplace portBus CLKSOIN_P -pg 1 -lvl 8 -x 5920 -y 620 -defaultsOSRD
-preplace portBus CLKSOIN_N -pg 1 -lvl 8 -x 5920 -y 640 -defaultsOSRD
-preplace portBus BX_SYNC_TRG_P -pg 1 -lvl 8 -x 5920 -y 360 -defaultsOSRD
-preplace portBus BX_SYNC_TRG_N -pg 1 -lvl 8 -x 5920 -y 380 -defaultsOSRD
-preplace portBus HBTRG_P -pg 1 -lvl 8 -x 5920 -y 500 -defaultsOSRD
-preplace portBus HBTRG_N -pg 1 -lvl 8 -x 5920 -y 520 -defaultsOSRD
-preplace portBus HRSTB_N -pg 1 -lvl 8 -x 5920 -y 730 -defaultsOSRD
-preplace portBus HRSTB_P -pg 1 -lvl 8 -x 5920 -y 750 -defaultsOSRD
-preplace portBus CTS -pg 1 -lvl 8 -x 5920 -y 90 -defaultsOSRD
-preplace portBus POL -pg 1 -lvl 8 -x 5920 -y 110 -defaultsOSRD
-preplace portBus CG0 -pg 1 -lvl 8 -x 5920 -y 45 -defaultsOSRD
-preplace portBus CG1 -pg 1 -lvl 8 -x 5920 -y 70 -defaultsOSRD
-preplace portBus DIP_SW -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
-preplace inst led_module -pg 1 -lvl 4 -x 2480 -y 1614 -defaultsOSRD
-preplace inst reset -pg 1 -lvl 3 -x 1020 -y 1160 -defaultsOSRD
-preplace inst reg_bram -pg 1 -lvl 6 -x 5440 -y 1200 -defaultsOSRD
-preplace inst data_gen_user_0 -pg 1 -lvl 3 -x 1020 -y 1004 -defaultsOSRD
-preplace inst SAMPA_I2C_wrapper -pg 1 -lvl 4 -x 2480 -y 1274 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 7 -x 5730 -y 1350 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 7 -x 5730 -y 1030 -defaultsOSRD
-preplace inst SAMPA_PON_v1_0_0 -pg 1 -lvl 4 -x 2480 -y 1794 -defaultsOSRD
-preplace inst util_ds_buf_4 -pg 1 -lvl 7 -x 5730 -y 500 -defaultsOSRD
-preplace inst appUnit -pg 1 -lvl 4 -x 2480 -y 512 -defaultsOSRD
-preplace inst GainConfig -pg 1 -lvl 7 -x 5730 -y 70 -defaultsOSRD -resize 140 103
-preplace inst util_ds_buf_3 -pg 1 -lvl 7 -x 5730 -y 360 -defaultsOSRD
-preplace inst TRG_MODULE_0 -pg 1 -lvl 6 -x 5440 -y 1030 -defaultsOSRD
-preplace inst fnet_wrapper -pg 1 -lvl 5 -x 5020 -y 820 -defaultsOSRD
-preplace inst GPIO_IOBUF -pg 1 -lvl 7 -x 5730 -y 200 -defaultsOSRD
-preplace inst GPIO_Controller_0 -pg 1 -lvl 6 -x 5440 -y 200 -defaultsOSRD
-preplace inst intercon_wrapper -pg 1 -lvl 5 -x 5020 -y 1190 -defaultsOSRD
-preplace inst SOCLK_wrapper -pg 1 -lvl 7 -x 5730 -y 630 -defaultsOSRD
-preplace inst HRSTB_wrapper -pg 1 -lvl 7 -x 5730 -y 740 -defaultsOSRD
-preplace inst Const_wrapper -pg 1 -lvl 6 -x 5440 -y 360 -defaultsOSRD
-preplace inst clock_wrapper -pg 1 -lvl 1 -x 120 -y 690 -defaultsOSRD
-preplace inst SO_receiver -pg 1 -lvl 3 -x 1020 -y 392 -defaultsOSRD
-preplace inst rst_clk_wiz_1_320M -pg 1 -lvl 2 -x 440 -y 540 -defaultsOSRD
-preplace inst appUnit|xpm_cdc_gen_0 -pg 1 -lvl 2 -x 2880 -y 832 -defaultsOSRD
-preplace inst appUnit|das_rx_0 -pg 1 -lvl 2 -x 2880 -y 592 -defaultsOSRD
-preplace inst appUnit|trigger_manager_0 -pg 1 -lvl 1 -x 2530 -y 952 -defaultsOSRD
-preplace inst appUnit|event_builder_v0_1_0 -pg 1 -lvl 5 -x 3980 -y 872 -defaultsOSRD
-preplace inst appUnit|data_processor_0 -pg 1 -lvl 4 -x 3600 -y 872 -defaultsOSRD
-preplace inst appUnit|async_fifos -pg 1 -lvl 3 -x 3250 -y 562 -defaultsOSRD
-preplace inst appUnit|data_sender_wrapper -pg 1 -lvl 6 -x 4310 -y 892 -defaultsOSRD
-preplace inst SO_receiver|vio_0 -pg 1 -lvl 1 -x 1050 -y 592 -defaultsOSRD
-preplace inst SO_receiver|vio_1 -pg 1 -lvl 3 -x 1740 -y 672 -defaultsOSRD
-preplace inst SO_receiver|idelay_top_v2_0 -pg 1 -lvl 2 -x 1430 -y 462 -defaultsOSRD
-preplace netloc BASECLK_1 1 0 1 NJ 690
+preplace port port-id_SFP0RXN -pg 1 -lvl 0 -x -70 -y 1050 -defaultsOSRD
+preplace port port-id_SFP0TXP -pg 1 -lvl 8 -x 3670 -y 1020 -defaultsOSRD
+preplace port port-id_SFP_CLK_P -pg 1 -lvl 0 -x -70 -y 1090 -defaultsOSRD
+preplace port port-id_SFP_CLK_N -pg 1 -lvl 0 -x -70 -y 1070 -defaultsOSRD
+preplace port port-id_SFP0TXN -pg 1 -lvl 8 -x 3670 -y 1040 -defaultsOSRD
+preplace port port-id_SFP0RXP -pg 1 -lvl 0 -x -70 -y 1110 -defaultsOSRD
+preplace port port-id_BASECLK -pg 1 -lvl 0 -x -70 -y 800 -defaultsOSRD
+preplace port port-id_SAMPA_EN_A -pg 1 -lvl 8 -x 3670 -y 1430 -defaultsOSRD
+preplace port port-id_SAMPA_EN_D -pg 1 -lvl 8 -x 3670 -y 1450 -defaultsOSRD
+preplace port port-id_PUSH_SW -pg 1 -lvl 0 -x -70 -y 1360 -defaultsOSRD
+preplace port port-id_S_I2C_SDA -pg 1 -lvl 8 -x 3670 -y 1230 -defaultsOSRD
+preplace port port-id_S_I2C_SCL -pg 1 -lvl 8 -x 3670 -y 1060 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 8 -x 3670 -y 1410 -defaultsOSRD
+preplace portBus SO1P -pg 1 -lvl 0 -x -70 -y 300 -defaultsOSRD
+preplace portBus SO1N -pg 1 -lvl 0 -x -70 -y 320 -defaultsOSRD
+preplace portBus SO0N -pg 1 -lvl 0 -x -70 -y 340 -defaultsOSRD
+preplace portBus SO0P -pg 1 -lvl 0 -x -70 -y 360 -defaultsOSRD
+preplace portBus SO2N -pg 1 -lvl 0 -x -70 -y 380 -defaultsOSRD
+preplace portBus SO2P -pg 1 -lvl 0 -x -70 -y 400 -defaultsOSRD
+preplace portBus SO3N -pg 1 -lvl 0 -x -70 -y 420 -defaultsOSRD
+preplace portBus SO3P -pg 1 -lvl 0 -x -70 -y 440 -defaultsOSRD
+preplace portBus TRG_N -pg 1 -lvl 8 -x 3670 -y 1330 -defaultsOSRD
+preplace portBus TRG_P -pg 1 -lvl 8 -x 3670 -y 1310 -defaultsOSRD
+preplace portBus GPION -pg 1 -lvl 8 -x 3670 -y 200 -defaultsOSRD
+preplace portBus GPIOP -pg 1 -lvl 8 -x 3670 -y 180 -defaultsOSRD
+preplace portBus CLK_CFG -pg 1 -lvl 8 -x 3670 -y 1490 -defaultsOSRD
+preplace portBus CLKSOIN_P -pg 1 -lvl 8 -x 3670 -y 730 -defaultsOSRD
+preplace portBus CLKSOIN_N -pg 1 -lvl 8 -x 3670 -y 750 -defaultsOSRD
+preplace portBus BX_SYNC_TRG_P -pg 1 -lvl 8 -x 3670 -y 360 -defaultsOSRD
+preplace portBus BX_SYNC_TRG_N -pg 1 -lvl 8 -x 3670 -y 380 -defaultsOSRD
+preplace portBus HBTRG_P -pg 1 -lvl 8 -x 3670 -y 500 -defaultsOSRD
+preplace portBus HBTRG_N -pg 1 -lvl 8 -x 3670 -y 520 -defaultsOSRD
+preplace portBus HRSTB_N -pg 1 -lvl 8 -x 3670 -y 620 -defaultsOSRD
+preplace portBus HRSTB_P -pg 1 -lvl 8 -x 3670 -y 640 -defaultsOSRD
+preplace portBus CTS -pg 1 -lvl 8 -x 3670 -y 90 -defaultsOSRD
+preplace portBus POL -pg 1 -lvl 8 -x 3670 -y 110 -defaultsOSRD
+preplace portBus CG0 -pg 1 -lvl 8 -x 3670 -y 45 -defaultsOSRD
+preplace portBus CG1 -pg 1 -lvl 8 -x 3670 -y 70 -defaultsOSRD
+preplace portBus DIP_SW -pg 1 -lvl 0 -x -70 -y 20 -defaultsOSRD
+preplace inst led_module -pg 1 -lvl 4 -x 2280 -y 1300 -defaultsOSRD
+preplace inst reset -pg 1 -lvl 3 -x 900 -y 1350 -defaultsOSRD
+preplace inst reg_bram -pg 1 -lvl 6 -x 3190 -y 1320 -defaultsOSRD
+preplace inst data_gen_user_0 -pg 1 -lvl 3 -x 900 -y 1200 -defaultsOSRD
+preplace inst SAMPA_I2C_wrapper -pg 1 -lvl 4 -x 2280 -y 950 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 7 -x 3480 -y 1490 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 7 -x 3480 -y 1310 -defaultsOSRD
+preplace inst SAMPA_PON_v1_0_0 -pg 1 -lvl 4 -x 2280 -y 1480 -defaultsOSRD
+preplace inst util_ds_buf_4 -pg 1 -lvl 7 -x 3480 -y 500 -defaultsOSRD
+preplace inst appUnit -pg 1 -lvl 4 -x 2280 -y 610 -defaultsOSRD
+preplace inst GainConfig -pg 1 -lvl 7 -x 3480 -y 70 -defaultsOSRD -resize 140 103
+preplace inst util_ds_buf_3 -pg 1 -lvl 7 -x 3480 -y 360 -defaultsOSRD
+preplace inst fnet_wrapper -pg 1 -lvl 5 -x 2750 -y 940 -defaultsOSRD
+preplace inst GPIO_IOBUF -pg 1 -lvl 7 -x 3480 -y 200 -defaultsOSRD
+preplace inst GPIO_Controller_0 -pg 1 -lvl 6 -x 3190 -y 200 -defaultsOSRD
+preplace inst intercon_wrapper -pg 1 -lvl 5 -x 2750 -y 1310 -defaultsOSRD
+preplace inst SOCLK_wrapper -pg 1 -lvl 7 -x 3480 -y 740 -defaultsOSRD
+preplace inst HRSTB_wrapper -pg 1 -lvl 7 -x 3480 -y 630 -defaultsOSRD
+preplace inst Const_wrapper -pg 1 -lvl 6 -x 3190 -y 450 -defaultsOSRD
+preplace inst clock_wrapper -pg 1 -lvl 1 -x 120 -y 800 -defaultsOSRD
+preplace inst SO_receiver -pg 1 -lvl 3 -x 900 -y 300 -defaultsOSRD
+preplace inst rst_clk_wiz_1_320M -pg 1 -lvl 2 -x 440 -y 660 -defaultsOSRD
+preplace inst TRG_MODULE_0 -pg 1 -lvl 6 -x 3190 -y 1140 -defaultsOSRD
+preplace netloc BASECLK_1 1 0 1 NJ 800
 preplace netloc GPIO_Controller_0_gpio_o 1 6 1 N 190
 preplace netloc GPIO_Controller_0_gpio_t 1 6 1 N 210
-preplace netloc GPIO_IOBUF_IOBUF_IO_O 1 5 3 5310 280 NJ 280 5890
-preplace netloc GainConfig_CG2 1 7 1 5900J 45n
-preplace netloc GainConfig_CG3 1 7 1 5900J 65n
-preplace netloc GainConfig_CTS1 1 7 1 5890J 73n
-preplace netloc GainConfig_POL1 1 7 1 5880J 82n
-preplace netloc HRSTB_wrapper_HRSTB_N 1 7 1 NJ 730
-preplace netloc HRSTB_wrapper_HRSTB_P 1 7 1 NJ 750
-preplace netloc Net 1 4 4 4720J 1080 5200J 1110 NJ 1110 NJ
-preplace netloc Net1 1 4 4 4700J 980 5280J 950 NJ 950 NJ
+preplace netloc GPIO_IOBUF_IOBUF_IO_O 1 5 3 3060 280 NJ 280 3640
+preplace netloc GainConfig_CG2 1 7 1 3650J 45n
+preplace netloc GainConfig_CG3 1 7 1 3650J 65n
+preplace netloc GainConfig_CTS1 1 7 1 3640J 73n
+preplace netloc GainConfig_POL1 1 7 1 3630J 82n
+preplace netloc HRSTB_wrapper_HRSTB_N 1 7 1 NJ 620
+preplace netloc HRSTB_wrapper_HRSTB_P 1 7 1 NJ 640
+preplace netloc Net 1 4 4 2470J 1200 2930J 1230 NJ 1230 NJ
+preplace netloc Net1 1 4 4 2540J 1100 3020J 1050 NJ 1050 3640J
 preplace netloc Net2 1 7 1 NJ 180
 preplace netloc Net3 1 7 1 NJ 200
-preplace netloc PUSH_SW_1 1 0 3 NJ 940 NJ 940 620J
-preplace netloc SAMPA_I2C_wrapper_i2c_done 1 4 1 4640 790n
-preplace netloc SAMPA_I2C_wrapper_i2c_rdata_o 1 4 1 4670 810n
-preplace netloc SAMPA_PON_v1_0_0_sampa_power_on 1 3 5 2180 1884 4780 1410 NJ 1410 NJ 1410 5890J
-preplace netloc SFP0RXN_1 1 0 5 10J 182 NJ 182 NJ 182 NJ 182 4710J
-preplace netloc SFP0RXP_1 1 0 5 20J 192 NJ 192 NJ 192 NJ 192 4680J
-preplace netloc SFP_CLK_N_1 1 0 5 -10J 162 NJ 162 NJ 162 NJ 162 4730J
-preplace netloc SFP_CLK_P_1 1 0 5 0J 172 NJ 172 NJ 172 NJ 172 4720J
-preplace netloc SO0N_1 1 0 3 NJ 330 NJ 330 680J
-preplace netloc SO0P_1 1 0 3 NJ 350 NJ 350 670J
-preplace netloc SO0_1 1 3 1 2020 442n
-preplace netloc SO1N_1 1 0 3 NJ 310 NJ 310 690J
-preplace netloc SO1P_1 1 0 3 NJ 290 NJ 290 700J
-preplace netloc SO1_1 1 3 1 2080 382n
-preplace netloc SO2N_1 1 0 3 NJ 370 NJ 370 660J
-preplace netloc SO2P_1 1 0 3 NJ 390 NJ 390 650J
-preplace netloc SO2_1 1 3 1 2030 422n
-preplace netloc SO3N_1 1 0 3 NJ 410 NJ 410 630J
-preplace netloc SO3P_1 1 0 3 NJ 430 NJ 430 620J
-preplace netloc SO3_1 1 3 1 2040 402n
-preplace netloc SOCLK_wrapper_CLKSOIN_N 1 7 1 NJ 640
-preplace netloc SOCLK_wrapper_CLKSOIN_P 1 7 1 NJ 620
-preplace netloc TRG_MODULE_0_trg 1 6 1 N 1030
-preplace netloc clk25_in_0_1 1 1 4 220J 212 NJ 212 NJ 212 4700
-preplace netloc clk_in_0_1 1 1 5 220J 750 640 780 2050 352 4660 1010 5280
-preplace netloc clk_wiz_0_clk_out1 1 1 5 240 730 660J 762 2070 252 NJ 252 5300
-preplace netloc clk_wiz_1_clk_out1 1 1 6 250 640 640 202 2100 120 NJ 120 NJ 120 5570J
-preplace netloc clk_wiz_2_clk_out1 1 6 1 5580 360n
-preplace netloc event_free_1 1 3 3 2150 292 NJ 292 5220
-preplace netloc event_reset_1 1 1 5 260 222 NJ 222 2090 262 NJ 262 5230
-preplace netloc fakernet_trg_en 1 3 3 2140 282 NJ 282 5290
-preplace netloc fnet_txn_1 1 3 3 2110 272 NJ 272 5240
-preplace netloc fnet_wrapper_SFP0TXN 1 5 3 NJ 930 NJ 930 NJ
-preplace netloc fnet_wrapper_SFP0TXP 1 5 3 NJ 910 NJ 910 NJ
-preplace netloc i2c_raddr_i_1 1 3 3 2120 302 NJ 302 5260
-preplace netloc i2c_waddr_i_1 1 3 3 2130 312 NJ 312 5250
-preplace netloc idelay_refclk_1 1 1 2 NJ 740 690
-preplace netloc independent_clock_0_1 1 1 4 230J 232 NJ 232 NJ 232 4690
-preplace netloc led_module_LED 1 4 4 4770J 1400 5310J 1290 NJ 1290 NJ
-preplace netloc rst_clk_wiz_0_125M_peripheral_aresetn 1 3 3 2060 1100 4740 1290 5300J
-preplace netloc rst_clk_wiz_1_320M_peripheral_aresetn 1 2 1 620 580n
-preplace netloc start_i2c_read_1 1 3 3 2180 342 NJ 342 5190
-preplace netloc start_i2c_write_1 1 3 3 2160 322 NJ 322 5210
-preplace netloc start_i2c_write_all_1 1 3 3 2170 332 NJ 332 5200
-preplace netloc util_ds_buf_1_OBUF_DS_N 1 7 1 NJ 1050
-preplace netloc util_ds_buf_1_OBUF_DS_P 1 7 1 NJ 1030
+preplace netloc PUSH_SW_1 1 0 3 NJ 1360 NJ 1360 NJ
+preplace netloc SAMPA_I2C_wrapper_i2c_done 1 4 1 2490 910n
+preplace netloc SAMPA_I2C_wrapper_i2c_rdata_o 1 4 1 2500 930n
+preplace netloc SAMPA_PON_v1_0_0_sampa_power_on 1 3 5 1200 1390 2470 1420 NJ 1420 NJ 1420 3650J
+preplace netloc SFP0RXN_1 1 0 5 NJ 1050 NJ 1050 NJ 1050 1100J 1070 2550J
+preplace netloc SFP0RXP_1 1 0 5 -10J 1100 NJ 1100 NJ 1100 NJ 1100 2530J
+preplace netloc SFP_CLK_N_1 1 0 5 -20J 1080 NJ 1080 NJ 1080 NJ 1080 2580J
+preplace netloc SFP_CLK_P_1 1 0 5 NJ 1090 NJ 1090 NJ 1090 NJ 1090 2570J
+preplace netloc SO0N_1 1 0 3 -30J 240 NJ 240 NJ
+preplace netloc SO0P_1 1 0 3 -20J 260 NJ 260 NJ
+preplace netloc SO0_1 1 3 1 1080 320n
+preplace netloc SO1N_1 1 0 3 -40J 220 NJ 220 NJ
+preplace netloc SO1P_1 1 0 3 -50J 200 NJ 200 NJ
+preplace netloc SO1_1 1 3 1 1170 260n
+preplace netloc SO2N_1 1 0 3 -10J 280 NJ 280 NJ
+preplace netloc SO2P_1 1 0 3 0J 300 NJ 300 NJ
+preplace netloc SO2_1 1 3 1 1100 300n
+preplace netloc SO3N_1 1 0 3 10J 320 NJ 320 NJ
+preplace netloc SO3P_1 1 0 3 20J 340 NJ 340 NJ
+preplace netloc SO3_1 1 3 1 1110 280n
+preplace netloc SOCLK_wrapper_CLKSOIN_N 1 7 1 NJ 750
+preplace netloc SOCLK_wrapper_CLKSOIN_P 1 7 1 NJ 730
+preplace netloc SO_receiver_trg 1 3 3 NJ 340 NJ 340 3030
+preplace netloc TRG_MODULE_0_trg 1 6 1 3330 1140n
+preplace netloc clk25_in_0_1 1 1 4 NJ 770 NJ 770 NJ 770 2560
+preplace netloc clk_in_0_1 1 1 5 NJ 810 630 810 1130 1130 2520 1190 3050
+preplace netloc clk_wiz_0_clk_out1 1 1 5 220J 760 NJ 760 1120 430 NJ 430 3050
+preplace netloc clk_wiz_1_clk_out1 1 1 6 240 780 620 450 1200 450 NJ 450 3040J 500 3320J
+preplace netloc clk_wiz_2_clk_out1 1 6 1 3330 360n
+preplace netloc event_free_1 1 3 3 1200 760 NJ 760 2920
+preplace netloc event_reset_1 1 1 5 250 560 NJ 560 1090 440 NJ 440 2930
+preplace netloc fakernet_trg_en 1 3 3 1170 1110 NJ 1110 3010
+preplace netloc fnet_txn_1 1 3 3 1200 1180 NJ 1180 2970
+preplace netloc fnet_wrapper_SFP0TXN 1 5 3 3000J 1040 NJ 1040 NJ
+preplace netloc fnet_wrapper_SFP0TXP 1 5 3 2980J 1020 NJ 1020 NJ
+preplace netloc i2c_raddr_i_1 1 3 3 1200 1120 NJ 1120 2920
+preplace netloc i2c_waddr_i_1 1 3 3 1190 1140 NJ 1140 2930
+preplace netloc idelay_refclk_1 1 1 2 230J 550 640
+preplace netloc independent_clock_0_1 1 1 4 NJ 790 NJ 790 NJ 790 2520
+preplace netloc led_module_LED 1 4 4 2480J 1430 NJ 1430 NJ 1430 3630J
+preplace netloc rst_clk_wiz_0_125M_peripheral_aresetn 1 3 3 1140 820 2510 1410 3060J
+preplace netloc rst_clk_wiz_1_320M_peripheral_aresetn 1 2 1 630 380n
+preplace netloc start_i2c_read_1 1 3 3 1160 1150 NJ 1150 2950
+preplace netloc start_i2c_write_1 1 3 3 1150 1170 NJ 1170 2960
+preplace netloc start_i2c_write_all_1 1 3 3 1180 1160 NJ 1160 2940
+preplace netloc util_ds_buf_1_OBUF_DS_N 1 7 1 NJ 1330
+preplace netloc util_ds_buf_1_OBUF_DS_P 1 7 1 NJ 1310
 preplace netloc util_ds_buf_3_OBUF_DS_N 1 7 1 NJ 380
 preplace netloc util_ds_buf_3_OBUF_DS_P 1 7 1 NJ 360
 preplace netloc util_ds_buf_4_OBUF_DS_N 1 7 1 NJ 520
 preplace netloc util_ds_buf_4_OBUF_DS_P 1 7 1 NJ 500
-preplace netloc vio_0_probe_out0 1 3 3 2090 1120 4650 1030 NJ
-preplace netloc xlconstant_0_dout 1 7 1 NJ 1350
-preplace netloc SAMPA_I2C_wrapper_m00_axi 1 4 1 4630 1140n
-preplace netloc SAMPA_PON_v1_0_0_m00_axi 1 4 1 4760 1200n
-preplace netloc S_AXI1_1 1 5 1 N 1190
-preplace netloc S_AXI_1 1 5 1 5270 710n
-preplace netloc appUnit_event_data 1 4 1 4630 710n
-preplace netloc led_module_m00_axi 1 4 1 4730 1160n
-preplace netloc led_module_m00_axi1 1 4 1 4750 1180n
-preplace netloc appUnit|async_fifos_dout 1 3 1 3400 542n
-preplace netloc appUnit|async_fifos_dout1 1 1 3 2690 742 NJ 742 3390
-preplace netloc appUnit|clk1_1 1 0 6 NJ 752 NJ 752 3080 752 3420 752 3790 732 4160J
-preplace netloc appUnit|clk_1 1 0 3 NJ 462 2670 462 NJ
-preplace netloc appUnit|das_rx_0_bus0 1 2 1 3040 522n
-preplace netloc appUnit|das_rx_0_bus1 1 2 1 3020 502n
-preplace netloc appUnit|das_rx_0_bus2 1 2 1 3010 482n
-preplace netloc appUnit|das_rx_0_bus3 1 2 1 3100 542n
-preplace netloc appUnit|das_rx_0_wr_en0 1 2 1 3030 522n
-preplace netloc appUnit|das_rx_0_wr_en1 1 2 1 3090 542n
-preplace netloc appUnit|das_rx_0_wr_en2 1 2 1 3050 562n
-preplace netloc appUnit|das_rx_0_wr_en3 1 2 1 N 582
-preplace netloc appUnit|data_processor_0_bus_sel 1 4 1 N 852
-preplace netloc appUnit|data_processor_0_busy 1 0 5 2390 1052 NJ 1052 NJ 1052 NJ 1052 3770
-preplace netloc appUnit|data_processor_0_data_o 1 4 1 3780 832n
-preplace netloc appUnit|data_processor_0_last_data 1 4 1 N 912
-preplace netloc appUnit|data_processor_0_req 1 2 3 3110 732 NJ 732 3770
-preplace netloc appUnit|data_processor_0_samples_o 1 4 1 3790 812n
-preplace netloc appUnit|data_sender_wrapper_full 1 4 3 3790 1032 NJ 1032 4460
-preplace netloc appUnit|en_1 1 0 2 2350J 562 N
-preplace netloc appUnit|event_builder_v0_1_0_busy 1 3 3 3420 1012 NJ 1012 4140
-preplace netloc appUnit|event_builder_v0_1_0_data_ack 1 3 3 3410 1022 NJ 1022 4150
-preplace netloc appUnit|event_builder_v0_1_0_data_o 1 5 1 N 862
-preplace netloc appUnit|event_builder_v0_1_0_data_wr_o 1 5 1 N 882
-preplace netloc appUnit|event_reset_1 1 0 4 NJ 732 NJ 732 3070J 832 N
-preplace netloc appUnit|probe_in0_1 1 0 2 2370 582 N
-preplace netloc appUnit|probe_in1_1 1 0 2 2340J 602 N
-preplace netloc appUnit|probe_in2_1 1 0 2 2380J 622 N
-preplace netloc appUnit|probe_in3_1 1 0 2 2390J 642 N
-preplace netloc appUnit|s_axis_aresetn_0_1 1 0 6 NJ 1062 2680J 1042 3100 1042 NJ 1042 NJ 1042 4160J
-preplace netloc appUnit|trigger_manager_0_busy 1 1 1 2680 852n
-preplace netloc appUnit|trigger_manager_0_samples 1 1 3 NJ 932 NJ 932 N
-preplace netloc appUnit|trigger_manager_0_trg 1 1 3 NJ 952 3040J 852 N
-preplace netloc appUnit|user_clk_1 1 0 2 2360 722 2680
-preplace netloc appUnit|xpm_cdc_gen_0_dest_out 1 2 1 3060 562n
-preplace netloc appUnit|data_sender_wrapper_M_AXIS_data 1 6 1 N 882
-preplace netloc SO_receiver|clk_1 1 0 3 930 532 1180 662 NJ
-preplace netloc SO_receiver|idelay_refclk_1 1 0 2 910J 342 N
-preplace netloc SO_receiver|idelay_top_v2_0_SO0_out 1 2 2 N 382 1840J
-preplace netloc SO_receiver|idelay_top_v2_0_SO1_out 1 2 2 1620 392 1850J
-preplace netloc SO_receiver|idelay_top_v2_0_SO2_out 1 2 2 N 422 NJ
-preplace netloc SO_receiver|idelay_top_v2_0_SO3_out 1 2 2 1630 402 NJ
-preplace netloc SO_receiver|idelay_top_v2_0_overall_state 1 2 1 1620 462n
-preplace netloc SO_receiver|reset_1 1 0 2 920J 362 N
-preplace netloc SO_receiver|vio_0_probe_out0 1 1 1 1200 382n
-preplace netloc SO_receiver|SO3N_1 1 0 2 NJ 502 1160
-preplace netloc SO_receiver|SO3P_1 1 0 2 NJ 522 N
-preplace netloc SO_receiver|SO0P_1 1 0 2 940J 402 N
-preplace netloc SO_receiver|SO0N_1 1 0 2 NJ 422 N
-preplace netloc SO_receiver|SO1P_1 1 0 2 NJ 382 1190
-preplace netloc SO_receiver|SO1N_1 1 0 2 930J 412 1210
-preplace netloc SO_receiver|SO2P_1 1 0 2 NJ 482 N
-preplace netloc SO_receiver|SO2N_1 1 0 2 NJ 462 1170
+preplace netloc vio_0_probe_out0 1 3 3 1180 1190 2560 1130 NJ
+preplace netloc xlconstant_0_dout 1 7 1 NJ 1490
+preplace netloc SAMPA_I2C_wrapper_m00_axi 1 4 1 2480 910n
+preplace netloc SAMPA_PON_v1_0_0_m00_axi 1 4 1 2570 1320n
+preplace netloc S_AXI1_1 1 5 1 N 1310
+preplace netloc S_AXI_1 1 5 1 2990 830n
+preplace netloc appUnit_event_data 1 4 1 2580 560n
+preplace netloc led_module_m00_axi 1 4 1 N 1280
+preplace netloc led_module_m00_axi1 1 4 1 N 1300
 preplace cgraphic comment_2 place top 0 0 textcolor 4 linecolor 3
 preplace cgraphic comment_1 place top 190 39 textcolor 4 linecolor 3
 preplace cgraphic comment_0 place left 408 1700 textcolor 4 linecolor 3 linewidth 2
-levelinfo -pg 1 -30 120 440 1020 2480 5020 5440 5730 5920
-levelinfo -hier appUnit * 2530 2880 3250 3600 3980 4310 *
-levelinfo -hier SO_receiver * 1050 1430 1740 *
-pagesize -pg 1 -db -bbox -sgen -170 0 6130 1900
-pagesize -hier appUnit -db -bbox -sgen 2310 382 4490 1072
-pagesize -hier SO_receiver -db -bbox -sgen 880 262 1880 742
+levelinfo -pg 1 -70 120 440 900 2280 2750 3190 3480 3670
+pagesize -pg 1 -db -bbox -sgen -210 0 3880 1570
 ",
    "linktoobj_comment_1":"",
    "linktoobj_comment_2":"",
@@ -238,11 +172,12 @@ pagesize -hier SO_receiver -db -bbox -sgen 880 262 1880 742
    "linktotype_comment_2":"bd_design"
 }
 {
-   """"""""""""""da_axi4_cnt"""""""""""""":"24",
-   """"""""""""""da_board_cnt"""""""""""""":"4",
-   """"""""""""""da_clkrst_cnt"""""""""""""":"20",
-   ""da_board_cnt"":"1",
-   ""da_clkrst_cnt"":"1"
+   """"""""""""""""""da_axi4_cnt"""""""""""""""""":"24",
+   """"""""""""""""""da_board_cnt"""""""""""""""""":"4",
+   """"""""""""""""""da_clkrst_cnt"""""""""""""""""":"20",
+   """"""da_board_cnt"""""":"1",
+   """"""da_clkrst_cnt"""""":"1",
+   """"da_clkrst_cnt"""":"1"
 }
 {
    "/comment_0":"comment_0",

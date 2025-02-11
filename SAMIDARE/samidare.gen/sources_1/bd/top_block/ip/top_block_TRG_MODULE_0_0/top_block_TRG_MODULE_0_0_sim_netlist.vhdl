@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Thu Sep 12 19:03:26 2024
--- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top top_block_TRG_MODULE_0_0 -prefix
---               top_block_TRG_MODULE_0_0_ top_block_TRG_MODULE_0_0_sim_netlist.vhdl
+-- Date        : Tue Feb 11 15:15:51 2025
+-- Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0_sim_netlist.vhdl
 -- Design      : top_block_TRG_MODULE_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,6 +19,7 @@ entity top_block_TRG_MODULE_0_0 is
     clk : in STD_LOGIC;
     rst : in STD_LOGIC;
     en : in STD_LOGIC;
+    init_trg : in STD_LOGIC;
     trg : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -34,8 +35,7 @@ entity top_block_TRG_MODULE_0_0 is
 end top_block_TRG_MODULE_0_0;
 
 architecture STRUCTURE of top_block_TRG_MODULE_0_0 is
-  signal \^en\ : STD_LOGIC;
-  signal \^trg\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^trg\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -43,17 +43,25 @@ architecture STRUCTURE of top_block_TRG_MODULE_0_0 is
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-  \^en\ <= en;
-  trg(3) <= \^trg\(0);
-  trg(2) <= \^en\;
-  trg(1) <= \^en\;
-  trg(0) <= \^trg\(0);
-\trg[0]_INST_0\: unisim.vcomponents.LUT1
+  trg(3 downto 2) <= \^trg\(3 downto 2);
+  trg(1) <= \^trg\(2);
+  trg(0) <= \^trg\(3);
+\trg[0]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"7"
     )
         port map (
-      I0 => \^en\,
-      O => \^trg\(0)
+      I0 => en,
+      I1 => init_trg,
+      O => \^trg\(3)
+    );
+\trg[1]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => en,
+      I1 => init_trg,
+      O => \^trg\(2)
     );
 end STRUCTURE;
