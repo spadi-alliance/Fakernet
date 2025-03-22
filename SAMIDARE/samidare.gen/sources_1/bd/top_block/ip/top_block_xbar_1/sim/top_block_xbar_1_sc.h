@@ -1,7 +1,7 @@
 #ifndef IP_TOP_BLOCK_XBAR_1_SC_H_
 #define IP_TOP_BLOCK_XBAR_1_SC_H_
 
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -86,6 +86,10 @@ public:
   xtlm::xtlm_aximm_target_socket* target_2_wr_socket;
   xtlm::xtlm_aximm_target_socket* target_3_rd_socket;
   xtlm::xtlm_aximm_target_socket* target_3_wr_socket;
+  xtlm::xtlm_aximm_target_socket* target_4_rd_socket;
+  xtlm::xtlm_aximm_target_socket* target_4_wr_socket;
+  xtlm::xtlm_aximm_target_socket* target_5_rd_socket;
+  xtlm::xtlm_aximm_target_socket* target_5_wr_socket;
 
   // module socket-to-socket TLM interfaces
 

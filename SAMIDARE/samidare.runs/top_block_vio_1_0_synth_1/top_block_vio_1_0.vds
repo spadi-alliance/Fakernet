@@ -2,17 +2,20 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Aug 15 16:10:09 2024
-# Process ID: 1333016
+# Start of session at: Mon Feb 17 16:42:13 2025
+# Process ID: 551383
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1
 # Command line: vivado -log top_block_vio_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_vio_1_0.tcl
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0.vds
 # Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/vivado.jou
-# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 4500.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
 #-----------------------------------------------------------
 source top_block_vio_1_0.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Timing 38-316}  -suppress '. The existing rule will be replaced.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
@@ -22,11 +25,393 @@ WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/wor
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_vio_1_0
-INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 176be72d6edaaa40 to dir: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/1/7/176be72d6edaaa40/top_block_vio_2_0_stub.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0_stub.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/1/7/176be72d6edaaa40/top_block_vio_2_0.dcp to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0.dcp.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/1/7/176be72d6edaaa40/top_block_vio_2_0_stub.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0_stub.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/1/7/176be72d6edaaa40/top_block_vio_2_0_sim_netlist.v to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0_sim_netlist.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.cache/ip/2022.2/1/7/176be72d6edaaa40/top_block_vio_2_0_sim_netlist.vhdl to /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0_sim_netlist.vhdl.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP top_block_vio_1_0, cache-ID = 176be72d6edaaa40.
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 15 16:10:14 2024...
+Command: synth_design -top top_block_vio_1_0 -part xcau15p-sbvb484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 551505
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/c420/hdl/vio_v3_0_syn_rfs.v:1365]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2151.688 ; gain = 363.727 ; free physical = 52950 ; free virtual = 65431
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3130.105; parent = 2161.598; children = 968.508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_block_vio_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/synth/top_block_vio_1_0.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/synth/top_block_vio_1_0.v:49]
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity top_block_vio_1_0 does not have driver. [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/synth/top_block_vio_1_0.v:72]
+WARNING: [Synth 8-7129] Port Bus_rst in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Read in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[15] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[14] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[13] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[12] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[11] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[10] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[9] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[8] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[7] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[6] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[5] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[4] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[3] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[2] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_Data_in[1] in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Internal_cnt_rst in module vio_v3_0_23_probe_out_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Internal_cnt_rst in module vio_v3_0_23_probe_in_one is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in1[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in2[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in3[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in4[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in5[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in6[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in7[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in8[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in9[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in10[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in11[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in12[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in13[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in14[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in15[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in16[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in17[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in18[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in19[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in20[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in21[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in22[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in23[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in24[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in25[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in26[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in27[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in28[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in29[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in30[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in31[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in32[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in33[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in34[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in35[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in36[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in37[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in38[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in39[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in40[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in41[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in42[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in43[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in44[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in45[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in46[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in47[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in48[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in49[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in50[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in51[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in52[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in53[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in54[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in55[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in56[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in57[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in58[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in59[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in60[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in61[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in62[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in63[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in64[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in65[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in66[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in67[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in68[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in69[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in70[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in71[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in72[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in73[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in74[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in75[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in76[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in77[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in78[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in79[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in80[0] in module vio_v3_0_23_vio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port probe_in81[0] in module vio_v3_0_23_vio is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2231.562 ; gain = 443.602 ; free physical = 53035 ; free virtual = 65519
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3200.074; parent = 2231.566; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2249.375 ; gain = 461.414 ; free physical = 53034 ; free virtual = 65518
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3217.887; parent = 2249.379; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2249.375 ; gain = 461.414 ; free physical = 53034 ; free virtual = 65518
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3217.887; parent = 2249.379; children = 968.508
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2249.375 ; gain = 0.000 ; free physical = 53028 ; free virtual = 65512
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/top_block_vio_1_0_ooc.xdc]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/top_block_vio_1_0_ooc.xdc]
+Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/top_block_vio_1_0.xdc]
+Finished Parsing XDC File [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/top_block_vio_1_0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_1_0/top_block_vio_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_block_vio_1_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_block_vio_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2394.125 ; gain = 0.000 ; free physical = 52976 ; free virtual = 65466
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2394.125 ; gain = 0.000 ; free physical = 52975 ; free virtual = 65465
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2394.125 ; gain = 606.164 ; free physical = 53007 ; free virtual = 65497
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.621; parent = 2362.113; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-sbvb484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2394.125 ; gain = 606.164 ; free physical = 53010 ; free virtual = 65500
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.621; parent = 2362.113; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2394.125 ; gain = 606.164 ; free physical = 53010 ; free virtual = 65500
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.621; parent = 2362.113; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2394.125 ; gain = 606.164 ; free physical = 53000 ; free virtual = 65491
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.621; parent = 2362.113; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               16 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2394.125 ; gain = 606.164 ; free physical = 52982 ; free virtual = 65480
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1593.394; parent = 1382.722; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.621; parent = 2362.113; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2440.867 ; gain = 652.906 ; free physical = 52727 ; free virtual = 65258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.725; parent = 1600.875; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3409.379; parent = 2440.871; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2440.867 ; gain = 652.906 ; free physical = 52727 ; free virtual = 65258
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1810.936; parent = 1601.096; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3409.379; parent = 2440.871; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52724 ; free virtual = 65255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.443; parent = 1602.604; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[36] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[35] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[34] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[33] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[32] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52726 ; free virtual = 65257
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.540; parent = 1602.701; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.556; parent = 1602.717; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.583; parent = 1602.744; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.583; parent = 1602.744; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65255
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.583; parent = 1602.744; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65254
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.603; parent = 1602.764; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |    22|
+|4     |LUT4 |    17|
+|5     |LUT5 |    14|
+|6     |LUT6 |    62|
+|7     |FDRE |   242|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.883 ; gain = 668.922 ; free physical = 52723 ; free virtual = 65254
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1812.634; parent = 1602.795; children = 210.672
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3425.395; parent = 2456.887; children = 968.508
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 293 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2456.883 ; gain = 524.172 ; free physical = 52737 ; free virtual = 65268
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2456.891 ; gain = 668.922 ; free physical = 52737 ; free virtual = 65268
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2459.852 ; gain = 0.000 ; free physical = 52841 ; free virtual = 65373
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2506.645 ; gain = 0.000 ; free physical = 52805 ; free virtual = 65336
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 28a1499f
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 144 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:01:14 . Memory (MB): peak = 2506.645 ; gain = 1212.625 ; free physical = 53006 ; free virtual = 65538
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_vio_1_0, cache-ID = 6ab4743599d862bc
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_vio_1_0_synth_1/top_block_vio_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_block_vio_1_0_utilization_synth.rpt -pb top_block_vio_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 17 16:43:32 2025...

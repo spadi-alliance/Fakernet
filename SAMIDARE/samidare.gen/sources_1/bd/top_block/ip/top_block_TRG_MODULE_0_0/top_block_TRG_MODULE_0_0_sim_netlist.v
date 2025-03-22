@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Tue Feb 11 15:15:51 2025
+// Date        : Tue Feb 11 22:26:23 2025
 // Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0_sim_netlist.v
@@ -29,23 +29,23 @@ module top_block_TRG_MODULE_0_0
 
   wire en;
   wire init_trg;
-  wire [3:2]\^trg ;
+  wire [1:0]\^trg ;
 
-  assign trg[3:2] = \^trg [3:2];
-  assign trg[1] = \^trg [2];
-  assign trg[0] = \^trg [3];
+  assign trg[3] = \^trg [0];
+  assign trg[2] = \^trg [1];
+  assign trg[1:0] = \^trg [1:0];
   LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(4'h1)) 
     \trg[0]_INST_0 
-       (.I0(en),
-        .I1(init_trg),
-        .O(\^trg [3]));
+       (.I0(init_trg),
+        .I1(en),
+        .O(\^trg [0]));
   LUT2 #(
     .INIT(4'hE)) 
     \trg[1]_INST_0 
        (.I0(en),
         .I1(init_trg),
-        .O(\^trg [2]));
+        .O(\^trg [1]));
 endmodule
 `ifndef GLBL
 `define GLBL

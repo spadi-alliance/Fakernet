@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Mon Aug  5 12:13:52 2024
-// Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top top_block_xbar_1 -prefix
-//               top_block_xbar_1_ top_block_xbar_1_stub.v
+// Date        : Fri Mar 21 11:50:03 2025
+// Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xbar_1/top_block_xbar_1_stub.v
 // Design      : top_block_xbar_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i
@@ -21,28 +21,28 @@ module top_block_xbar_1(aclk, aresetn, s_axi_awaddr, s_axi_awprot,
   m_axi_awprot, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wvalid, 
   m_axi_wready, m_axi_bresp, m_axi_bvalid, m_axi_bready, m_axi_araddr, m_axi_arprot, 
   m_axi_arvalid, m_axi_arready, m_axi_rdata, m_axi_rresp, m_axi_rvalid, m_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awaddr[127:0],s_axi_awprot[11:0],s_axi_awvalid[3:0],s_axi_awready[3:0],s_axi_wdata[127:0],s_axi_wstrb[15:0],s_axi_wvalid[3:0],s_axi_wready[3:0],s_axi_bresp[7:0],s_axi_bvalid[3:0],s_axi_bready[3:0],s_axi_araddr[127:0],s_axi_arprot[11:0],s_axi_arvalid[3:0],s_axi_arready[3:0],s_axi_rdata[127:0],s_axi_rresp[7:0],s_axi_rvalid[3:0],s_axi_rready[3:0],m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid[0:0],m_axi_awready[0:0],m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid[0:0],m_axi_wready[0:0],m_axi_bresp[1:0],m_axi_bvalid[0:0],m_axi_bready[0:0],m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid[0:0],m_axi_arready[0:0],m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid[0:0],m_axi_rready[0:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axi_awaddr[191:0],s_axi_awprot[17:0],s_axi_awvalid[5:0],s_axi_awready[5:0],s_axi_wdata[191:0],s_axi_wstrb[23:0],s_axi_wvalid[5:0],s_axi_wready[5:0],s_axi_bresp[11:0],s_axi_bvalid[5:0],s_axi_bready[5:0],s_axi_araddr[191:0],s_axi_arprot[17:0],s_axi_arvalid[5:0],s_axi_arready[5:0],s_axi_rdata[191:0],s_axi_rresp[11:0],s_axi_rvalid[5:0],s_axi_rready[5:0],m_axi_awaddr[31:0],m_axi_awprot[2:0],m_axi_awvalid[0:0],m_axi_awready[0:0],m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wvalid[0:0],m_axi_wready[0:0],m_axi_bresp[1:0],m_axi_bvalid[0:0],m_axi_bready[0:0],m_axi_araddr[31:0],m_axi_arprot[2:0],m_axi_arvalid[0:0],m_axi_arready[0:0],m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rvalid[0:0],m_axi_rready[0:0]" */;
   input aclk;
   input aresetn;
-  input [127:0]s_axi_awaddr;
-  input [11:0]s_axi_awprot;
-  input [3:0]s_axi_awvalid;
-  output [3:0]s_axi_awready;
-  input [127:0]s_axi_wdata;
-  input [15:0]s_axi_wstrb;
-  input [3:0]s_axi_wvalid;
-  output [3:0]s_axi_wready;
-  output [7:0]s_axi_bresp;
-  output [3:0]s_axi_bvalid;
-  input [3:0]s_axi_bready;
-  input [127:0]s_axi_araddr;
-  input [11:0]s_axi_arprot;
-  input [3:0]s_axi_arvalid;
-  output [3:0]s_axi_arready;
-  output [127:0]s_axi_rdata;
-  output [7:0]s_axi_rresp;
-  output [3:0]s_axi_rvalid;
-  input [3:0]s_axi_rready;
+  input [191:0]s_axi_awaddr;
+  input [17:0]s_axi_awprot;
+  input [5:0]s_axi_awvalid;
+  output [5:0]s_axi_awready;
+  input [191:0]s_axi_wdata;
+  input [23:0]s_axi_wstrb;
+  input [5:0]s_axi_wvalid;
+  output [5:0]s_axi_wready;
+  output [11:0]s_axi_bresp;
+  output [5:0]s_axi_bvalid;
+  input [5:0]s_axi_bready;
+  input [191:0]s_axi_araddr;
+  input [17:0]s_axi_arprot;
+  input [5:0]s_axi_arvalid;
+  output [5:0]s_axi_arready;
+  output [191:0]s_axi_rdata;
+  output [11:0]s_axi_rresp;
+  output [5:0]s_axi_rvalid;
+  input [5:0]s_axi_rready;
   output [31:0]m_axi_awaddr;
   output [2:0]m_axi_awprot;
   output [0:0]m_axi_awvalid;

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Tue Feb 11 15:15:51 2025
+-- Date        : Tue Feb 11 22:26:23 2025
 -- Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0_sim_netlist.vhdl
@@ -35,7 +35,7 @@ entity top_block_TRG_MODULE_0_0 is
 end top_block_TRG_MODULE_0_0;
 
 architecture STRUCTURE of top_block_TRG_MODULE_0_0 is
-  signal \^trg\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \^trg\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -43,17 +43,17 @@ architecture STRUCTURE of top_block_TRG_MODULE_0_0 is
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-  trg(3 downto 2) <= \^trg\(3 downto 2);
-  trg(1) <= \^trg\(2);
-  trg(0) <= \^trg\(3);
+  trg(3) <= \^trg\(0);
+  trg(2) <= \^trg\(1);
+  trg(1 downto 0) <= \^trg\(1 downto 0);
 \trg[0]_INST_0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"7"
+      INIT => X"1"
     )
         port map (
-      I0 => en,
-      I1 => init_trg,
-      O => \^trg\(3)
+      I0 => init_trg,
+      I1 => en,
+      O => \^trg\(0)
     );
 \trg[1]_INST_0\: unisim.vcomponents.LUT2
     generic map(
@@ -62,6 +62,6 @@ begin
         port map (
       I0 => en,
       I1 => init_trg,
-      O => \^trg\(2)
+      O => \^trg\(1)
     );
 end STRUCTURE;

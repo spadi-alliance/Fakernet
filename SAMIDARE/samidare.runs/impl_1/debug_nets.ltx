@@ -165,44 +165,99 @@
                         ]
                     },
                     {
+                        "type": "VIO_V2",
+                        "name": "top_block_i/reset/vio_1",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 4,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "F7CA93D40A8D514C81902306D827FC5C",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 5,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/reset/RST_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_out0",
+                                "id": 6,
+                                "type": "DATA",
+                                "direction": "OUT",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/reset/vio_1_probe_out0",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "type": "ILA_V3",
                         "name": "u_ila_0",
                         "spec": "labtools_ila_v6",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 4,
+                            "slave_index": 5,
                             "bscan_switch_index": 0
                         },
                         "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 5,
+                                "id": 7,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 4,
+                                "rightIndex": 0,
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt",
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_normal_1",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[4]"
-                                            },
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_normal_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe0",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_normal",
+                                        "isBus": true,
+                                        "subnets": [
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[0]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_normal[3]"
                                             }
                                         ]
                                     }
@@ -210,65 +265,82 @@
                             },
                             {
                                 "name": "probe1",
-                                "id": 6,
+                                "id": 9,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/SO0_out",
+                                        "name": "u_ila_0_overall_state[0]_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/overall_state",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/SO0_out[0]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/overall_state[1]"
                                             }
                                         ]
                                     }
                                 ]
                             },
                             {
+                                "name": "probe1",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 2,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_overall_state[3]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "probe2",
-                                "id": 7,
+                                "id": 12,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 8,
+                                "rightIndex": 3,
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay",
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_special",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[8]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_special[3]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[7]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_special[2]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[6]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_special[1]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[0]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_special[0]"
                                             }
                                         ]
                                     }
@@ -276,29 +348,271 @@
                             },
                             {
                                 "name": "probe3",
-                                "id": 8,
+                                "id": 13,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "u_ila_0_aggregate_state_return[0]",
-                                        "isBus": false
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_normal_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_normal_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_normal",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch2_normal[3]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
                             {
                                 "name": "probe4",
-                                "id": 9,
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_special",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_special[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_special[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_special[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_special[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_normal_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_normal_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 17,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_normal",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_normal[3]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 18,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_special",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_special[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_special[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_special[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch3_special[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_normal_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_normal_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 20,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_normal",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch1_normal[3]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 21,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_special",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_special[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_special[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_special[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/ch0_special[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 22,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 23,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 8,
-                                "portIndex": 4,
+                                "portIndex": 10,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/check_delay",
@@ -336,108 +650,353 @@
                                 ]
                             },
                             {
-                                "name": "probe5",
-                                "id": 10,
+                                "name": "probe11",
+                                "id": 24,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 3,
-                                "portIndex": 5,
+                                "rightIndex": 0,
+                                "portIndex": 11,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/ch0_special_state",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/ch0_special_state[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/ch0_special_state[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/ch0_special_state[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/ch0_special_state[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe6",
-                                "id": 11,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 9,
-                                "portIndex": 6,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe6",
-                                "id": 12,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 10,
-                                "rightIndex": 10,
-                                "portIndex": 6,
-                                "nets": [
-                                    {
-                                        "name": "u_ila_0_SO2_out[10]",
+                                        "name": "u_ila_0_SO3_out[0]",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe7",
-                                "id": 13,
+                                "name": "probe11",
+                                "id": 25,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out_1[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 26,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 2,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO3_out[2]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 27,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 3,
+                                "rightIndex": 3,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out_2",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out_2[3]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 28,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 4,
+                                "rightIndex": 8,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO3_out[8]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO3_out[7]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO3_out[6]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO3_out[5]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO3_out[4]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 29,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 9,
+                                "rightIndex": 9,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[9]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 30,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 10,
+                                "rightIndex": 10,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO3_out[10]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 31,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
+                                "rightIndex": 8,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/current_idelay[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 32,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 33,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 34,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO1_out[1]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 35,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 2,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_2",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_2[2]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 36,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 3,
+                                "rightIndex": 4,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO1_out[4]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO1_out[3]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 37,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 5,
+                                "rightIndex": 7,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_3",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_3[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_3[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out_3[5]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 38,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 8,
+                                "rightIndex": 8,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO1_out[8]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 39,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 9,
                                 "rightIndex": 9,
-                                "portIndex": 7,
+                                "portIndex": 14,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out",
@@ -445,47 +1004,20 @@
                                         "subnets": [
                                             {
                                                 "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO1_out[0]"
                                             }
                                         ]
                                     }
                                 ]
                             },
                             {
-                                "name": "probe7",
-                                "id": 14,
+                                "name": "probe14",
+                                "id": 40,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 10,
                                 "rightIndex": 10,
-                                "portIndex": 7,
+                                "portIndex": 14,
                                 "nets": [
                                     {
                                         "name": "u_ila_0_SO1_out[10]",
@@ -494,14 +1026,14 @@
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 15,
+                                "name": "probe15",
+                                "id": 41,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 8,
+                                "portIndex": 15,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO0_out_1",
@@ -515,30 +1047,30 @@
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 16,
+                                "name": "probe15",
+                                "id": 42,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 1,
                                 "rightIndex": 1,
-                                "portIndex": 8,
+                                "portIndex": 15,
                                 "nets": [
                                     {
-                                        "name": "u_ila_0_SO0_out[1]",
+                                        "name": "u_ila_0_SO0_out[1]_1",
                                         "isBus": false
                                     }
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 17,
+                                "name": "probe15",
+                                "id": 43,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 2,
                                 "rightIndex": 7,
-                                "portIndex": 8,
+                                "portIndex": 15,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO0_out",
@@ -567,14 +1099,327 @@
                                 ]
                             },
                             {
-                                "name": "probe8",
-                                "id": 18,
+                                "name": "probe15",
+                                "id": 44,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 8,
                                 "rightIndex": 10,
-                                "portIndex": 8,
+                                "portIndex": 15,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO0_out[10]_1",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO0_out[10]_1",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO0_out[10]_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 45,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO2_out[0]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 46,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 4,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out_1[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out_1[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out_1[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out_1[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 47,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 5,
+                                "rightIndex": 5,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO2_out[5]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 48,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 6,
+                                "rightIndex": 8,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[8]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO2_out[6]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 49,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 9,
+                                "rightIndex": 10,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO2_out[10]",
+                                        "isBus": false
+                                    },
+                                    {
+                                        "name": "u_ila_0_SO2_out[9]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe17",
+                                "id": 50,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 4,
+                                "portIndex": 17,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[2]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[1]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/max_cnt[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe18",
+                                "id": 51,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 18,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_overall_state[0]_2",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe18",
+                                "id": 52,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 18,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe19",
+                                "id": 53,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 19,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_overall_state[0]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe19",
+                                "id": 54,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 19,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/overall_state",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/overall_state[1]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 55,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 20,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out_1",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out_1[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 56,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 1,
+                                "rightIndex": 1,
+                                "portIndex": 20,
+                                "nets": [
+                                    {
+                                        "name": "u_ila_0_SO0_out[1]",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 57,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 2,
+                                "rightIndex": 7,
+                                "portIndex": 20,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[7]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[6]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[5]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[4]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[3]"
+                                            },
+                                            {
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/SO0_out[2]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 58,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 8,
+                                "rightIndex": 10,
+                                "portIndex": 20,
                                 "nets": [
                                     {
                                         "name": "u_ila_0_SO0_out[10]",
@@ -591,224 +1436,60 @@
                                 ]
                             },
                             {
-                                "name": "probe9",
-                                "id": 19,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 9,
-                                "nets": [
-                                    {
-                                        "name": "u_ila_0_overall_state[0]_1",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe9",
-                                "id": 20,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 1,
-                                "rightIndex": 1,
-                                "portIndex": 9,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/overall_state[1]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe10",
-                                "id": 21,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 10,
-                                "nets": [
-                                    {
-                                        "name": "u_ila_0_overall_state[0]",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe10",
-                                "id": 22,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 1,
-                                "rightIndex": 1,
-                                "portIndex": 10,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/overall_state",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/overall_state[1]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe11",
-                                "id": 23,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 9,
-                                "portIndex": 11,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[9]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[8]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/SO3_out[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe11",
-                                "id": 24,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 10,
-                                "rightIndex": 10,
-                                "portIndex": 11,
-                                "nets": [
-                                    {
-                                        "name": "u_ila_0_SO3_out[10]",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe12",
-                                "id": 25,
+                                "name": "probe21",
+                                "id": 59,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
                                 "rightIndex": 3,
-                                "portIndex": 12,
+                                "portIndex": 21,
                                 "nets": [
                                     {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state",
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/state",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[3]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/state[3]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[2]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/state[2]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[1]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/state[1]"
                                             },
                                             {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/special_state[0]"
+                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/state[0]"
                                             }
                                         ]
                                     }
                                 ]
                             },
                             {
-                                "name": "probe13",
-                                "id": 26,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 7,
-                                "portIndex": 13,
-                                "nets": [
-                                    {
-                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[7]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[6]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[5]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[4]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[3]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[2]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[1]"
-                                            },
-                                            {
-                                                "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/cycle_counter[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe14",
-                                "id": 27,
+                                "name": "probe22",
+                                "id": 60,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 14,
+                                "portIndex": 22,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[0].normal_inst.u_idelay_impl_SO0/all_zero",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe23",
+                                "id": 61,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 23,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/prev_data",
@@ -817,14 +1498,14 @@
                                 ]
                             },
                             {
-                                "name": "probe15",
-                                "id": 28,
+                                "name": "probe24",
+                                "id": 62,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 15,
+                                "portIndex": 24,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO0[10].special_inst.u_idelay_impl_SO0/raw_data_out",
@@ -833,34 +1514,50 @@
                                 ]
                             },
                             {
-                                "name": "probe16",
-                                "id": 29,
+                                "name": "probe25",
+                                "id": 63,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 16,
+                                "portIndex": 25,
                                 "nets": [
                                     {
                                         "name": "u_ila_0_reset",
                                         "isBus": false,
-                                        "parentNetId": 96
+                                        "parentNetId": 123
                                     }
                                 ]
                             },
                             {
-                                "name": "probe17",
-                                "id": 30,
+                                "name": "probe26",
+                                "id": 64,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
                                 "rightIndex": 0,
-                                "portIndex": 17,
+                                "portIndex": 26,
                                 "nets": [
                                     {
                                         "name": "top_block_i/SO_receiver/idelay_top_v2_0/trg",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe27",
+                                "id": 65,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 27,
+                                "nets": [
+                                    {
+                                        "name": "top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/normal_done",
                                         "isBus": false
                                     }
                                 ]
@@ -873,14 +1570,14 @@
                         "spec": "labtools_ila_v6",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 5,
+                            "slave_index": 6,
                             "bscan_switch_index": 0
                         },
                         "uuid": "3b505a030738513c98471d25f5b1f848",
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 31,
+                                "id": 66,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -902,14 +1599,14 @@
                         "spec": "labtools_ila_v6",
                         "core_location": {
                             "user_chain": 1,
-                            "slave_index": 6,
+                            "slave_index": 7,
                             "bscan_switch_index": 0
                         },
                         "uuid": "b13c981ac2d554bfb4fbe0eecea5cfd7",
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 32,
+                                "id": 67,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -955,7 +1652,7 @@
                         ]
                     },
                     {
-                        "id": 96,
+                        "id": 123,
                         "name": "top_block_i/SO_receiver/vio_2/inst/PROBE_OUT_ALL_INST/G_PROBE_OUT[0].PROBE_OUT0_INST/probe_out0[0]",
                         "state_reg": [
                             {

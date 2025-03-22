@@ -29,10 +29,10 @@ module TRG_MODULE(
     );
     
     wire [3:0]trg_i;
-    assign trg_i[0] = !en || !init_trg;
+    assign trg_i[0] = !(en || init_trg);
     assign trg_i[1] = en || init_trg;
     assign trg_i[2] = en || init_trg;
-    assign trg_i[3] = en || init_trg;
+    assign trg_i[3] = !(en || init_trg);
     
     assign trg = trg_i;
     

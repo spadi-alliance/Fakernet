@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_GPIO_Controller_0_0",
-    "cell_name": "GPIO_Controller_0",
+    "cell_name": "GPIO/GPIO_Controller_0",
     "component_reference": "xilinx.com:module_ref:GPIO_Controller:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_GPIO_Controller_0_0",

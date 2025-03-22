@@ -46,6 +46,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/init_i2c_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/INIT_I2C_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/SAMPA_TRG_EN_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/data_receiver_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/data_sender_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/SAMPA_PON_2_0"/>
@@ -119,24 +122,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lib/fakernet/vhdl/fnet_records.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../lib/fakernet/vhdl/fnet_util_pkg.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../lib/fakernet/data_gen_user.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/imports/I2C_Controller_v1_0_M00_AXI.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -161,6 +146,20 @@
       <File Path="$PSRCDIR/sources_1/new/iobuf_vhdl.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -305,6 +304,18 @@
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../lib/fakernet/vhdl/fnet_records.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../lib/fakernet/vhdl/fnet_util_pkg.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -577,10 +588,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/GPIO_Controller.v">
+      <File Path="$PPRDIR/../lib/fakernet/data_gen_user.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -612,7 +622,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/GPIO_Controller.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/TRG_MODULE.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -625,14 +649,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_gig_ethernet_pcs_pma_0_0/top_block_gig_ethernet_pcs_pma_0_0.xci">
+          <Proxy FileSetName="top_block_gig_ethernet_pcs_pma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.xci">
+          <Proxy FileSetName="top_block_fakernet_top_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_receiver_v1_0_0_0/top_block_data_receiver_v1_0_0_0.xci">
           <Proxy FileSetName="top_block_data_receiver_v1_0_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2.xci">
-          <Proxy FileSetName="top_block_util_ds_buf_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_GPIO_Controller_0_0/top_block_GPIO_Controller_0_0.xci">
-          <Proxy FileSetName="top_block_GPIO_Controller_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_xbar_1/top_block_xbar_1.xci">
           <Proxy FileSetName="top_block_xbar_1"/>
@@ -655,23 +679,23 @@
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xci">
           <Proxy FileSetName="top_block_rst_clk_wiz_1_320M_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2.xci">
+          <Proxy FileSetName="top_block_util_ds_buf_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_vio_1_0/top_block_vio_1_0.xci">
+          <Proxy FileSetName="top_block_vio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_init_i2c_v1_0_0_0/top_block_init_i2c_v1_0_0_0.xci">
+          <Proxy FileSetName="top_block_init_i2c_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_GPIO_Controller_0_0/top_block_GPIO_Controller_0_0.xci">
+          <Proxy FileSetName="top_block_GPIO_Controller_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_TRG_MODULE_0_0/top_block_TRG_MODULE_0_0.xci">
           <Proxy FileSetName="top_block_TRG_MODULE_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_sender_v1_0_0_0/top_block_data_sender_v1_0_0_0.xci">
-          <Proxy FileSetName="top_block_data_sender_v1_0_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_axis_data_fifo_0_0/top_block_axis_data_fifo_0_0.xci">
-          <Proxy FileSetName="top_block_axis_data_fifo_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.xci">
-          <Proxy FileSetName="top_block_mii_initializer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_gig_ethernet_pcs_pma_0_0/top_block_gig_ethernet_pcs_pma_0_0.xci">
-          <Proxy FileSetName="top_block_gig_ethernet_pcs_pma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_fakernet_top_0_0/top_block_fakernet_top_0_0.xci">
-          <Proxy FileSetName="top_block_fakernet_top_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_SAMPA_TRG_EN_v1_0_0_0/top_block_SAMPA_TRG_EN_v1_0_0_0.xci">
+          <Proxy FileSetName="top_block_SAMPA_TRG_EN_v1_0_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci">
           <Proxy FileSetName="top_block_das_rx_0_0"/>
@@ -687,6 +711,15 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_xpm_async_fifo_wrapp_0_0/top_block_xpm_async_fifo_wrapp_0_0.xci">
           <Proxy FileSetName="top_block_xpm_async_fifo_wrapp_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_sender_v1_0_0_0/top_block_data_sender_v1_0_0_0.xci">
+          <Proxy FileSetName="top_block_data_sender_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_axis_data_fifo_0_0/top_block_axis_data_fifo_0_0.xci">
+          <Proxy FileSetName="top_block_axis_data_fifo_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_mii_initializer_0_0/top_block_mii_initializer_0_0.xci">
+          <Proxy FileSetName="top_block_mii_initializer_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/top_block/hdl/top_block_wrapper.v">
@@ -805,6 +838,14 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../idelay_top.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0_M00_AXI.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1078,9 +1119,30 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="top_block_vio_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_block_vio_1_0" RelGenDir="$PGENDIR/top_block_vio_1_0">
+      <Config>
+        <Option Name="TopModule" Val="top_block_vio_1_0"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="top_block_idelay_top_v2_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_block_idelay_top_v2_0_0" RelGenDir="$PGENDIR/top_block_idelay_top_v2_0_0">
       <Config>
         <Option Name="TopModule" Val="top_block_idelay_top_v2_0_0"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_block_SAMPA_TRG_EN_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_block_SAMPA_TRG_EN_v1_0_0_0" RelGenDir="$PGENDIR/top_block_SAMPA_TRG_EN_v1_0_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_block_SAMPA_TRG_EN_v1_0_0_0"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_block_init_i2c_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_block_init_i2c_v1_0_0_0" RelGenDir="$PGENDIR/top_block_init_i2c_v1_0_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_block_init_i2c_v1_0_0_0"/>
         <Option Name="dataflowViewerSettings" Val="min_width=16"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
@@ -1340,9 +1402,17 @@
     </Run>
     <Run Id="top_block_TRG_MODULE_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_TRG_MODULE_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_TRG_MODULE_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_TRG_MODULE_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_TRG_MODULE_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_TRG_MODULE_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_vio_1_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_vio_1_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_vio_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_vio_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_vio_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_vio_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1351,6 +1421,26 @@
       <RQSFiles/>
     </Run>
     <Run Id="top_block_idelay_top_v2_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_idelay_top_v2_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_idelay_top_v2_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_idelay_top_v2_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_idelay_top_v2_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_idelay_top_v2_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_init_i2c_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_init_i2c_v1_0_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_init_i2c_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_init_i2c_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -1756,9 +1846,24 @@
     </Run>
     <Run Id="top_block_TRG_MODULE_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_TRG_MODULE_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_TRG_MODULE_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_TRG_MODULE_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_TRG_MODULE_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_vio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_vio_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_vio_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_vio_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_vio_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1774,6 +1879,40 @@
       <RQSFiles/>
     </Run>
     <Run Id="top_block_idelay_top_v2_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_idelay_top_v2_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_idelay_top_v2_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_idelay_top_v2_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_idelay_top_v2_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="top_block_init_i2c_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_init_i2c_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_init_i2c_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>

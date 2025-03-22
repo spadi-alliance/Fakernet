@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Feb 11 19:14:05 2025
+| Date         : Fri Mar 21 12:08:19 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_drc -file top_block_wrapper_drc_routed.rpt -pb top_block_wrapper_drc_routed.pb -rpx top_block_wrapper_drc_routed.rpx
 | Design       : top_block_wrapper
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_top_block_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
@@ -41,42 +41,42 @@ Table of Contents
 -----------------
 BUFC-1#1 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[0].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[0].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[0].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[0].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#2 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[1].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[1].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[1].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[1].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#3 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[2].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[2].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[2].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[2].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#4 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[3].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[3].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[3].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[3].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#5 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[4].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[4].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[4].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[4].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#6 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[5].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[5].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[5].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[5].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#7 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[6].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[6].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[6].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[6].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 BUFC-1#8 Warning
 Input Buffer Connections  
-Input buffer top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[7].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[7].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Input buffer top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[7].IOBUFDS_I/IBUFCTRL (in top_block_i/GPIO/GPIO_IOBUF/util_ds_buf_5/U0/USE_IOBUFDS.GEN_IOBUFDS[7].IOBUFDS_I macro) has no loads. It is recommended to have an input buffer drive an internal load.
 Related violations: <none>
 
 LVDS-1#1 Warning
@@ -86,17 +86,17 @@ Related violations: <none>
 
 PDCN-1569#1 Warning
 LUT equation term check  
-Used physical LUT pin 'A3' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A4*A2)+(A4*(~A2)*(~A1))+((~A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A5*A2)+(A5*(~A2)*(~A4))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#2 Warning
 LUT equation term check  
-Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A4*A2)+(A4*(~A2)*(~A1))+((~A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A3' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A5*A2)+(A5*(~A2)*(~A4))+((~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#3 Warning
 LUT equation term check  
-Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A1))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 REQP-1852#1 Warning

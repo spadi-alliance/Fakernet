@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Tue Feb 11 19:14:13 2025
+| Date             : Fri Mar 21 12:08:28 2025
 | Host             : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
 | Design           : top_block_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.120        |
+| Total On-Chip Power (W)  | 1.132        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.854        |
+| Dynamic (W)              | 0.867        |
 | Device Static (W)        | 0.265        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 96.9         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.105 |       17 |       --- |             --- |
-| CLB Logic                |     0.038 |    32465 |       --- |             --- |
-|   LUT as Logic           |     0.027 |    10185 |     77760 |           13.10 |
-|   LUT as Shift Register  |     0.005 |      400 |     40320 |            0.99 |
-|   Register               |     0.003 |    17174 |    155520 |           11.04 |
+| Clocks                   |     0.111 |       17 |       --- |             --- |
+| CLB Logic                |     0.041 |    33321 |       --- |             --- |
+|   LUT as Logic           |     0.030 |    10529 |     77760 |           13.54 |
+|   LUT as Shift Register  |     0.006 |      477 |     40320 |            1.18 |
+|   Register               |     0.004 |    17706 |    155520 |           11.39 |
 |   LUT as Distributed RAM |     0.002 |       54 |     40320 |            0.13 |
-|   CARRY8                 |    <0.001 |      265 |      9720 |            2.73 |
-|   Others                 |     0.000 |     1197 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      169 |     77760 |            0.22 |
-| Signals                  |     0.026 |    23654 |       --- |             --- |
-| Block RAM                |     0.047 |     34.5 |       144 |           23.96 |
+|   CARRY8                 |    <0.001 |      237 |      9720 |            2.44 |
+|   Others                 |     0.000 |     1233 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      177 |     77760 |            0.23 |
+| Signals                  |     0.026 |    24859 |       --- |             --- |
+| Block RAM                |     0.050 |     35.5 |       144 |           24.65 |
 | MMCM                     |     0.199 |        0 |       --- |             --- |
 | I/O                      |     0.291 |      153 |       204 |           75.00 |
 | GTH                      |     0.148 |        1 |        12 |            8.33 |
 | Static Power             |     0.265 |          |           |                 |
-| Total                    |     1.120 |          |           |                 |
+| Total                    |     1.132 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.850 |     0.312 |       0.258 |      0.054 |       NA    | Unspecified | NA         |
+| Vccint    |       0.850 |     0.326 |       0.272 |      0.054 |       NA    | Unspecified | NA         |
 | Vccint_io |       0.850 |     0.050 |       0.023 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram   |       0.850 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.174 |       0.110 |      0.064 |       NA    | Unspecified | NA         |
@@ -163,21 +163,21 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| top_block_wrapper         |     0.854 |
+| top_block_wrapper         |     0.867 |
 |   dbg_hub                 |     0.006 |
 |     inst                  |     0.006 |
 |       BSCANID.u_xsdbm_id  |     0.006 |
-|   top_block_i             |     0.794 |
-|     GPIO_IOBUF            |     0.016 |
-|       util_ds_buf_5       |     0.016 |
-|     HRSTB_wrapper         |     0.051 |
+|   top_block_i             |     0.797 |
+|     GPIO                  |     0.016 |
+|       GPIO_IOBUF          |     0.016 |
+|     HRSTB_wrapper         |     0.050 |
 |       util_ds_buf_2       |     0.050 |
 |     SAMPA_I2C_wrapper     |     0.002 |
 |       axi_iic_0           |     0.001 |
 |     SOCLK_wrapper         |     0.080 |
 |       util_ds_buf_0       |     0.080 |
-|     SO_receiver           |     0.119 |
-|       idelay_top_v2_0     |     0.111 |
+|     SO_receiver           |     0.118 |
+|       idelay_top_v2_0     |     0.110 |
 |       vio_0               |     0.003 |
 |       vio_1               |     0.003 |
 |       vio_2               |     0.003 |
@@ -194,19 +194,20 @@ Table of Contents
 |     led_module            |     0.001 |
 |     reg_bram              |     0.022 |
 |       blk_mem_gen_0       |     0.022 |
-|     reset                 |     0.003 |
+|     reset                 |     0.006 |
 |       vio_0               |     0.003 |
-|     util_ds_buf_1         |     0.019 |
-|       U0                  |     0.019 |
+|       vio_1               |     0.003 |
+|     util_ds_buf_1         |     0.020 |
+|       U0                  |     0.020 |
 |     util_ds_buf_3         |     0.013 |
 |       U0                  |     0.013 |
 |     util_ds_buf_4         |     0.013 |
 |       U0                  |     0.013 |
-|   u_ila_0                 |     0.033 |
-|     inst                  |     0.033 |
-|       ila_core_inst       |     0.033 |
-|   u_ila_1                 |     0.011 |
-|     inst                  |     0.011 |
+|   u_ila_0                 |     0.043 |
+|     inst                  |     0.043 |
+|       ila_core_inst       |     0.043 |
+|   u_ila_1                 |     0.010 |
+|     inst                  |     0.010 |
 |       ila_core_inst       |     0.010 |
 |   u_ila_2                 |     0.010 |
 |     inst                  |     0.010 |
