@@ -171,7 +171,7 @@ wire [31:0] rdata;
 
 	// Add user logic here
 	
-	
+
     parameter STATE_INIT      = 4'b0001;
     parameter STATE_IDLE      = 4'b0010;
     parameter STATE_WAIT_NEXT = 4'b0100;

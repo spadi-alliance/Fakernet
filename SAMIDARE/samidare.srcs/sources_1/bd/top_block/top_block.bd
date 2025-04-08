@@ -8,8 +8,7 @@
       "pfm_name": "vendor:lib:top_block:1.0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
-      "validated": "true"
+      "tool_version": "2022.2"
     },
     "design_tree": {
       "led_module": {
@@ -101,10 +100,10 @@
           "xlconstant_3": "",
           "RESET_INST_0": "",
           "gig_ethernet_pcs_pma_0": "",
-          "fakernet_top_0": ""
+          "fakernet_top_0": "",
+          "reg_switch_0": ""
         },
         "data_receiver_v1_0_0": "",
-        "reg_switch_0": "",
         "native_to_axi_lite_v_0": "",
         "data_gen_user_0": ""
       },
@@ -190,24 +189,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_block_BASECLK",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "40000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
           }
         }
       },
@@ -220,97 +203,49 @@
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO1N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO0N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO0P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO2N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO2P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO3N": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "SO3P": {
         "type": "data",
         "direction": "I",
         "left": "10",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "TRG_N": {
         "direction": "O",
@@ -333,30 +268,10 @@
         "right": "0"
       },
       "SAMPA_EN_A": {
-        "direction": "O",
-        "parameters": {
-          "PortType": {
-            "value": "undef",
-            "value_src": "ip_prop"
-          },
-          "PortType.PROP_SRC": {
-            "value": "false",
-            "value_src": "ip_prop"
-          }
-        }
+        "direction": "O"
       },
       "SAMPA_EN_D": {
-        "direction": "O",
-        "parameters": {
-          "PortType": {
-            "value": "undef",
-            "value_src": "ip_prop"
-          },
-          "PortType.PROP_SRC": {
-            "value": "false",
-            "value_src": "ip_prop"
-          }
-        }
+        "direction": "O"
       },
       "CLK_CFG": {
         "direction": "O",
@@ -367,63 +282,17 @@
         "type": "clk",
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "FREQ_HZ": {
-            "value": "320000000:320000000:320000000:320000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "CLKSOIN_N": {
         "type": "clk",
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "FREQ_HZ": {
-            "value": "320000000:320000000:320000000:320000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
-            "value_src": "default"
-          }
-        }
+        "right": "0"
       },
       "PUSH_SW": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "S_I2C_SDA": {
         "direction": "IO"
@@ -434,108 +303,32 @@
       "BX_SYNC_TRG_P": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_block_clk_wiz_2_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "BX_SYNC_TRG_N": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_block_clk_wiz_2_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "HBTRG_P": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_block_clk_wiz_2_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "HBTRG_N": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "top_block_clk_wiz_2_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "HRSTB_N": {
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "FREQ_HZ": {
-            "value": "100000000:100000000:100000000:NULL",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0:0.0:0.0:NULL",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "HRSTB_P": {
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "FREQ_HZ": {
-            "value": "100000000:100000000:100000000:NULL",
-            "value_src": "ip_prop"
-          },
-          "PHASE": {
-            "value": "0.0:0.0:0.0:NULL",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "CTS": {
         "direction": "O",
@@ -2692,12 +2485,6 @@
               "axi_iic_0/s_axi_aclk",
               "I2C_Controller_v1_0_0/m01_axi_aclk"
             ]
-          },
-          "start_i2c_write_all_1": {
-            "ports": [
-              "start_i2c_write_all",
-              "I2C_Controller_v1_0_0/start_i2c_write_all"
-            ]
           }
         }
       },
@@ -3068,30 +2855,6 @@
           },
           "en": {
             "direction": "I"
-          },
-          "event_free": {
-            "direction": "I"
-          },
-          "event_commit": {
-            "direction": "O"
-          },
-          "event_commit_len": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "event_write": {
-            "direction": "O"
-          },
-          "event_offset": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "event_word": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           },
           "s_axis_aresetn_0": {
             "type": "rst",
@@ -4980,36 +4743,6 @@
           "regacc_done": {
             "direction": "O"
           },
-          "trg_en": {
-            "direction": "O"
-          },
-          "start_i2c_read_o": {
-            "direction": "O"
-          },
-          "start_i2c_write_o": {
-            "direction": "O"
-          },
-          "start_i2c_write_all_o": {
-            "direction": "O"
-          },
-          "i2c_waddr_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "i2c_raddr_o": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "i2c_done": {
-            "direction": "I"
-          },
-          "i2c_rdata_i": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
           "reset_vio_0": {
             "type": "rst",
             "direction": "I"
@@ -5100,10 +4833,12 @@
                 "left": "31",
                 "right": "0"
               },
-              "regacc_addr_o": {
-                "direction": "O",
-                "left": "24",
-                "right": "0"
+              "m00_axi_aresetn": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "regacc_done": {
+                "direction": "O"
               },
               "regacc_data_rd_i": {
                 "direction": "I",
@@ -5115,14 +4850,19 @@
                 "left": "31",
                 "right": "0"
               },
-              "regacc_write_o": {
-                "direction": "O"
+              "regacc_done_i": {
+                "direction": "I"
               },
               "regacc_read_o": {
                 "direction": "O"
               },
-              "regacc_done_i": {
-                "direction": "I"
+              "regacc_addr_o": {
+                "direction": "O",
+                "left": "24",
+                "right": "0"
+              },
+              "regacc_write_o": {
+                "direction": "O"
               }
             },
             "components": {
@@ -5944,6 +5684,117 @@
                     "direction": "I"
                   }
                 }
+              },
+              "reg_switch_0": {
+                "vlnv": "xilinx.com:module_ref:reg_switch:1.0",
+                "xci_name": "top_block_reg_switch_0_0",
+                "xci_path": "ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.xci",
+                "inst_hier_path": "fnet_wrapper/fakernet/reg_switch_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "reg_switch",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "axi_aclk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_RESET": {
+                        "value": "axi_aresetn",
+                        "value_src": "constant"
+                      }
+                    }
+                  },
+                  "axi_aresetn": {
+                    "type": "rst",
+                    "direction": "I",
+                    "parameters": {
+                      "POLARITY": {
+                        "value": "ACTIVE_LOW",
+                        "value_src": "constant"
+                      }
+                    }
+                  },
+                  "regacc_addr_i": {
+                    "direction": "I",
+                    "left": "24",
+                    "right": "0"
+                  },
+                  "regacc_addr_o": {
+                    "direction": "O",
+                    "left": "24",
+                    "right": "0"
+                  },
+                  "regacc_data_wr_i": {
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "regacc_data_wr_o": {
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "regacc_write_i": {
+                    "direction": "I"
+                  },
+                  "regacc_write_o": {
+                    "direction": "O"
+                  },
+                  "regacc_read_i": {
+                    "direction": "I"
+                  },
+                  "regacc_read_o": {
+                    "direction": "O"
+                  },
+                  "regacc_data_rd_i": {
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "regacc_data_rd_o": {
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "regacc_done_i": {
+                    "direction": "I"
+                  },
+                  "regacc_done_o": {
+                    "direction": "O"
+                  },
+                  "start_i2c_write_o": {
+                    "direction": "O"
+                  },
+                  "start_i2c_write_all_o": {
+                    "direction": "O"
+                  },
+                  "start_i2c_read_o": {
+                    "direction": "O"
+                  },
+                  "i2c_raddr_o": {
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "i2c_waddr_o": {
+                    "direction": "O",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "i2c_rdata_i": {
+                    "direction": "I",
+                    "left": "31",
+                    "right": "0"
+                  },
+                  "i2c_done": {
+                    "direction": "I"
+                  },
+                  "trg_en": {
+                    "direction": "O"
+                  }
+                }
               }
             },
             "nets": {
@@ -5965,7 +5816,8 @@
                   "clk_in_0",
                   "mii_initializer_0/CLK",
                   "RESET_INST_0/clk125",
-                  "fakernet_top_0/clk_in"
+                  "fakernet_top_0/clk_in",
+                  "reg_switch_0/axi_aclk"
                 ]
               },
               "fakernet_top_0_eth_mdc": {
@@ -5995,25 +5847,25 @@
               "fakernet_top_0_regacc_addr_o": {
                 "ports": [
                   "fakernet_top_0/regacc_addr_o",
-                  "regacc_addr_o"
+                  "reg_switch_0/regacc_addr_i"
                 ]
               },
               "fakernet_top_0_regacc_data_wr_o": {
                 "ports": [
                   "fakernet_top_0/regacc_data_wr_o",
-                  "regacc_data_wr_o"
+                  "reg_switch_0/regacc_data_wr_i"
                 ]
               },
               "fakernet_top_0_regacc_read_o": {
                 "ports": [
                   "fakernet_top_0/regacc_read_o",
-                  "regacc_read_o"
+                  "reg_switch_0/regacc_read_i"
                 ]
               },
               "fakernet_top_0_regacc_write_o": {
                 "ports": [
                   "fakernet_top_0/regacc_write_o",
-                  "regacc_write_o"
+                  "reg_switch_0/regacc_write_i"
                 ]
               },
               "fakernet_top_0_user_data_free": {
@@ -6102,6 +5954,12 @@
                   "gig_ethernet_pcs_pma_0/independent_clock"
                 ]
               },
+              "m00_axi_aresetn_1": {
+                "ports": [
+                  "m00_axi_aresetn",
+                  "reg_switch_0/axi_aresetn"
+                ]
+              },
               "mii_initializer_0_COMPLETE": {
                 "ports": [
                   "mii_initializer_0/COMPLETE",
@@ -6121,16 +5979,53 @@
                   "if_gate1/Op3"
                 ]
               },
+              "reg_switch_0_regacc_addr_o": {
+                "ports": [
+                  "reg_switch_0/regacc_addr_o",
+                  "regacc_addr_o"
+                ]
+              },
+              "reg_switch_0_regacc_data_rd_o": {
+                "ports": [
+                  "reg_switch_0/regacc_data_rd_o",
+                  "fakernet_top_0/regacc_data_rd_i"
+                ]
+              },
+              "reg_switch_0_regacc_data_wr_o": {
+                "ports": [
+                  "reg_switch_0/regacc_data_wr_o",
+                  "regacc_data_wr_o"
+                ]
+              },
               "reg_switch_0_regacc_done_o": {
                 "ports": [
-                  "regacc_done_i",
+                  "reg_switch_0/regacc_done_o",
+                  "regacc_done",
                   "fakernet_top_0/regacc_done_i"
+                ]
+              },
+              "reg_switch_0_regacc_read_o": {
+                "ports": [
+                  "reg_switch_0/regacc_read_o",
+                  "regacc_read_o"
+                ]
+              },
+              "reg_switch_0_regacc_write_o": {
+                "ports": [
+                  "reg_switch_0/regacc_write_o",
+                  "regacc_write_o"
                 ]
               },
               "regacc_data_rd_i_1": {
                 "ports": [
                   "regacc_data_rd_i",
-                  "fakernet_top_0/regacc_data_rd_i"
+                  "reg_switch_0/regacc_data_rd_i"
+                ]
+              },
+              "regacc_done_i_1": {
+                "ports": [
+                  "regacc_done_i",
+                  "reg_switch_0/regacc_done_i"
                 ]
               },
               "reset_vio_0_1": {
@@ -6337,117 +6232,6 @@
                     "value_src": "constant"
                   }
                 }
-              }
-            }
-          },
-          "reg_switch_0": {
-            "vlnv": "xilinx.com:module_ref:reg_switch:1.0",
-            "xci_name": "top_block_reg_switch_0_0",
-            "xci_path": "ip/top_block_reg_switch_0_0/top_block_reg_switch_0_0.xci",
-            "inst_hier_path": "fnet_wrapper/reg_switch_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "reg_switch",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "axi_aclk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "axi_aresetn",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "axi_aresetn": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "regacc_addr_i": {
-                "direction": "I",
-                "left": "24",
-                "right": "0"
-              },
-              "regacc_addr_o": {
-                "direction": "O",
-                "left": "24",
-                "right": "0"
-              },
-              "regacc_data_wr_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_data_wr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_write_i": {
-                "direction": "I"
-              },
-              "regacc_write_o": {
-                "direction": "O"
-              },
-              "regacc_read_i": {
-                "direction": "I"
-              },
-              "regacc_read_o": {
-                "direction": "O"
-              },
-              "regacc_data_rd_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_data_rd_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "regacc_done_i": {
-                "direction": "I"
-              },
-              "regacc_done_o": {
-                "direction": "O"
-              },
-              "start_i2c_write_o": {
-                "direction": "O"
-              },
-              "start_i2c_write_all_o": {
-                "direction": "O"
-              },
-              "start_i2c_read_o": {
-                "direction": "O"
-              },
-              "i2c_raddr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_waddr_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_rdata_i": {
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "i2c_done": {
-                "direction": "I"
-              },
-              "trg_en": {
-                "direction": "O"
               }
             }
           },
@@ -6810,7 +6594,6 @@
               "fakernet/clk_in_0",
               "data_receiver_v1_0_0/s00_axis_aclk",
               "native_to_axi_lite_v_0/m00_axi_aclk",
-              "reg_switch_0/axi_aclk",
               "data_gen_user_0/clk"
             ]
           },
@@ -6847,25 +6630,19 @@
           "fakernet_regacc_addr_o": {
             "ports": [
               "fakernet/regacc_addr_o",
-              "reg_switch_0/regacc_addr_i"
+              "native_to_axi_lite_v_0/regacc_addr"
             ]
           },
           "fakernet_regacc_data_wr_o": {
             "ports": [
               "fakernet/regacc_data_wr_o",
-              "reg_switch_0/regacc_data_wr_i"
+              "native_to_axi_lite_v_0/regacc_data_wr"
             ]
           },
           "fakernet_regacc_read_o": {
             "ports": [
               "fakernet/regacc_read_o",
-              "reg_switch_0/regacc_read_i"
-            ]
-          },
-          "fakernet_regacc_write_o": {
-            "ports": [
-              "fakernet/regacc_write_o",
-              "reg_switch_0/regacc_write_i"
+              "native_to_axi_lite_v_0/regacc_read"
             ]
           },
           "fakernet_txn_0": {
@@ -6905,18 +6682,6 @@
               "fakernet/gtrefclk_p_0"
             ]
           },
-          "i2c_done_1": {
-            "ports": [
-              "i2c_done",
-              "reg_switch_0/i2c_done"
-            ]
-          },
-          "i2c_rdata_i_1": {
-            "ports": [
-              "i2c_rdata_i",
-              "reg_switch_0/i2c_rdata_i"
-            ]
-          },
           "independent_clock_0_1": {
             "ports": [
               "independent_clock_0",
@@ -6928,93 +6693,32 @@
               "m00_axi_aresetn",
               "data_receiver_v1_0_0/s00_axis_aresetn",
               "native_to_axi_lite_v_0/m00_axi_aresetn",
-              "reg_switch_0/axi_aresetn"
+              "fakernet/m00_axi_aresetn"
             ]
           },
           "native_to_axi_lite_v_0_regacc_data_rd": {
             "ports": [
               "native_to_axi_lite_v_0/regacc_data_rd",
-              "reg_switch_0/regacc_data_rd_i"
+              "fakernet/regacc_data_rd_i"
             ]
           },
           "native_to_axi_lite_v_0_regacc_done": {
             "ports": [
               "native_to_axi_lite_v_0/regacc_done",
-              "reg_switch_0/regacc_done_i"
-            ]
-          },
-          "reg_switch_0_i2c_raddr_o": {
-            "ports": [
-              "reg_switch_0/i2c_raddr_o",
-              "i2c_raddr_o"
-            ]
-          },
-          "reg_switch_0_i2c_waddr_o": {
-            "ports": [
-              "reg_switch_0/i2c_waddr_o",
-              "i2c_waddr_o"
-            ]
-          },
-          "reg_switch_0_regacc_addr_o": {
-            "ports": [
-              "reg_switch_0/regacc_addr_o",
-              "native_to_axi_lite_v_0/regacc_addr"
-            ]
-          },
-          "reg_switch_0_regacc_data_rd_o": {
-            "ports": [
-              "reg_switch_0/regacc_data_rd_o",
-              "fakernet/regacc_data_rd_i"
-            ]
-          },
-          "reg_switch_0_regacc_data_wr_o": {
-            "ports": [
-              "reg_switch_0/regacc_data_wr_o",
-              "native_to_axi_lite_v_0/regacc_data_wr"
+              "fakernet/regacc_done_i"
             ]
           },
           "reg_switch_0_regacc_done_o": {
             "ports": [
-              "reg_switch_0/regacc_done_o",
-              "fakernet/regacc_done_i",
+              "fakernet/regacc_done",
               "regacc_done"
-            ]
-          },
-          "reg_switch_0_regacc_read_o": {
-            "ports": [
-              "reg_switch_0/regacc_read_o",
-              "native_to_axi_lite_v_0/regacc_read"
             ]
           },
           "reg_switch_0_regacc_write_o": {
             "ports": [
-              "reg_switch_0/regacc_write_o",
+              "fakernet/regacc_write_o",
               "native_to_axi_lite_v_0/regacc_write",
               "native_to_axi_lite_v_0/m00_axi_init_axi_txn"
-            ]
-          },
-          "reg_switch_0_start_i2c_read_o": {
-            "ports": [
-              "reg_switch_0/start_i2c_read_o",
-              "start_i2c_read_o"
-            ]
-          },
-          "reg_switch_0_start_i2c_write_all_o": {
-            "ports": [
-              "reg_switch_0/start_i2c_write_all_o",
-              "start_i2c_write_all_o"
-            ]
-          },
-          "reg_switch_0_start_i2c_write_o": {
-            "ports": [
-              "reg_switch_0/start_i2c_write_o",
-              "start_i2c_write_o"
-            ]
-          },
-          "reg_switch_0_trg_en": {
-            "ports": [
-              "reg_switch_0/trg_en",
-              "trg_en"
             ]
           },
           "reset_vio_0_1": {
@@ -10015,18 +9719,6 @@
           "reset/RST"
         ]
       },
-      "SAMPA_I2C_wrapper_i2c_done": {
-        "ports": [
-          "SAMPA_I2C_wrapper/i2c_done",
-          "fnet_wrapper/i2c_done"
-        ]
-      },
-      "SAMPA_I2C_wrapper_i2c_rdata_o": {
-        "ports": [
-          "SAMPA_I2C_wrapper/i2c_rdata_o",
-          "fnet_wrapper/i2c_rdata_i"
-        ]
-      },
       "SAMPA_PON_v1_0_0_sampa_power_on": {
         "ports": [
           "SAMPA_PON_v1_0_0/sampa_power_on",
@@ -10196,23 +9888,11 @@
           "reset/clk"
         ]
       },
-      "event_free_1": {
-        "ports": [
-          "fnet_wrapper/user_data_free",
-          "appUnit/event_free"
-        ]
-      },
       "event_reset_1": {
         "ports": [
           "fnet_wrapper/user_data_reset",
           "appUnit/event_reset",
           "rst_clk_wiz_1_320M/ext_reset_in"
-        ]
-      },
-      "fakernet_trg_en": {
-        "ports": [
-          "fnet_wrapper/trg_en",
-          "appUnit/en"
         ]
       },
       "fnet_txn_1": {
@@ -10231,18 +9911,6 @@
         "ports": [
           "fnet_wrapper/SFP0TXP",
           "SFP0TXP"
-        ]
-      },
-      "i2c_raddr_i_1": {
-        "ports": [
-          "fnet_wrapper/i2c_raddr_o",
-          "SAMPA_I2C_wrapper/i2c_raddr_i"
-        ]
-      },
-      "i2c_waddr_i_1": {
-        "ports": [
-          "fnet_wrapper/i2c_waddr_o",
-          "SAMPA_I2C_wrapper/i2c_waddr_i"
         ]
       },
       "idelay_refclk_1": {
@@ -10280,24 +9948,6 @@
         "ports": [
           "rst_clk_wiz_1_320M/peripheral_aresetn",
           "SO_receiver/reset"
-        ]
-      },
-      "start_i2c_read_1": {
-        "ports": [
-          "fnet_wrapper/start_i2c_read_o",
-          "SAMPA_I2C_wrapper/start_i2c_read"
-        ]
-      },
-      "start_i2c_write_1": {
-        "ports": [
-          "fnet_wrapper/start_i2c_write_o",
-          "SAMPA_I2C_wrapper/start_i2c_write"
-        ]
-      },
-      "start_i2c_write_all_1": {
-        "ports": [
-          "fnet_wrapper/start_i2c_write_all_o",
-          "SAMPA_I2C_wrapper/start_i2c_write_all"
         ]
       },
       "trg_en_trg": {

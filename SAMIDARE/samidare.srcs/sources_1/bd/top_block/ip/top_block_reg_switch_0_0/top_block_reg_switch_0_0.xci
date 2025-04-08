@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_reg_switch_0_0",
-    "cell_name": "fnet_wrapper/reg_switch_0",
+    "cell_name": "fnet_wrapper/fakernet/reg_switch_0",
     "component_reference": "xilinx.com:module_ref:reg_switch:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_reg_switch_0_0",

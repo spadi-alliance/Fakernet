@@ -5,45 +5,47 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port m00_axi -pg 1 -lvl 3 -x 850 -y 200 -defaultsOSRD
-preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
-preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x -30 -y 300 -defaultsOSRD
-preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
-preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x -30 -y 200 -defaultsOSRD
-preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x -30 -y 220 -defaultsOSRD
-preplace port port-id_i2c_done -pg 1 -lvl 3 -x 850 -y 260 -defaultsOSRD
-preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x -30 -y 360 -defaultsOSRD
-preplace port port-id_scl_i -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
-preplace port port-id_scl_o -pg 1 -lvl 3 -x 850 -y 390 -defaultsOSRD
-preplace port port-id_scl_t -pg 1 -lvl 3 -x 850 -y 410 -defaultsOSRD
-preplace port port-id_sda_i -pg 1 -lvl 0 -x -30 -y 570 -defaultsOSRD
-preplace port port-id_sda_o -pg 1 -lvl 3 -x 850 -y 450 -defaultsOSRD
-preplace port port-id_sda_t -pg 1 -lvl 3 -x 850 -y 470 -defaultsOSRD
-preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x -30 -y 240 -defaultsOSRD
-preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x -30 -y 260 -defaultsOSRD
-preplace portBus i2c_rdata_o -pg 1 -lvl 3 -x 850 -y 240 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 2 -x 610 -y 430 -defaultsOSRD
-preplace inst I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 210 -y 280 -defaultsOSRD
-preplace netloc I2C_Controller_v1_0_0_i2c_done 1 1 2 NJ 260 NJ
-preplace netloc I2C_Controller_v1_0_0_i2c_rdata_o 1 1 2 NJ 240 NJ
-preplace netloc axi_iic_0_scl_o 1 2 1 N 390
-preplace netloc axi_iic_0_scl_t 1 2 1 N 410
-preplace netloc axi_iic_0_sda_o 1 2 1 N 450
-preplace netloc axi_iic_0_sda_t 1 2 1 N 470
-preplace netloc i2c_raddr_i_1 1 0 1 NJ 260
-preplace netloc i2c_waddr_i_1 1 0 1 NJ 240
-preplace netloc m00_axi_aclk_1 1 0 1 NJ 300
-preplace netloc m00_axi_aresetn_1 1 0 2 20J 450 N
-preplace netloc s_axi_aclk_1 1 0 2 10 440 400J
-preplace netloc scl_i_1 1 0 3 0J 570 NJ 570 750
-preplace netloc sda_i_1 1 0 3 -10J 580 NJ 580 740
-preplace netloc start_i2c_read_1 1 0 1 NJ 180
-preplace netloc start_i2c_write_1 1 0 1 NJ 200
-preplace netloc start_i2c_write_all_1 1 0 1 NJ 220
-preplace netloc Conn1 1 1 2 NJ 200 NJ
-preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 400 220n
-levelinfo -pg 1 -30 210 610 850
-pagesize -pg 1 -db -bbox -sgen -210 -10 1030 590
+preplace port m00_axi -pg 1 -lvl 5 -x 980 -y 200 -defaultsOSRD
+preplace port m00_axi1 -pg 1 -lvl 5 -x 980 -y 80 -defaultsOSRD
+preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_start_i2c_read -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_start_i2c_write -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_start_i2c_write_all -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_i2c_done -pg 1 -lvl 5 -x 980 -y 260 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port port-id_S_I2C_SDA -pg 1 -lvl 5 -x 980 -y 490 -defaultsOSRD
+preplace port port-id_S_I2C_SCL -pg 1 -lvl 5 -x 980 -y 320 -defaultsOSRD
+preplace portBus i2c_waddr_i -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace portBus i2c_raddr_i -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace portBus i2c_rdata_o -pg 1 -lvl 5 -x 980 -y 230 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 2 -x 620 -y 430 -defaultsOSRD
+preplace inst I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 260 -y 360 -defaultsOSRD
+preplace inst iobuf_vhdl_0 -pg 1 -lvl 4 -x 880 -y 330 -defaultsOSRD
+preplace inst iobuf_vhdl_1 -pg 1 -lvl 4 -x 880 -y 500 -defaultsOSRD
+preplace inst init_i2c_v1_0_0 -pg 1 -lvl 1 -x 260 -y 120 -defaultsOSRD
+preplace netloc I2C_Controller_v1_0_0_i2c_done 1 1 4 470J 260 NJ 260 NJ 260 NJ
+preplace netloc I2C_Controller_v1_0_0_i2c_rdata_o 1 1 4 450J 230 NJ 230 NJ 230 NJ
+preplace netloc Net 1 4 1 NJ 490
+preplace netloc Net1 1 4 1 NJ 320
+preplace netloc axi_iic_0_scl_o 1 2 2 750 320 NJ
+preplace netloc axi_iic_0_scl_t 1 2 2 NJ 410 800
+preplace netloc axi_iic_0_sda_o 1 2 2 NJ 450 800
+preplace netloc axi_iic_0_sda_t 1 2 2 NJ 470 790
+preplace netloc i2c_raddr_i_1 1 0 1 20J 260n
+preplace netloc i2c_waddr_i_1 1 0 1 50J 230n
+preplace netloc init_i2c_v1_0_0_init_i2c_rd 1 0 2 60 10 470
+preplace netloc init_i2c_v1_0_0_init_i2c_wr 1 0 2 70 20 440
+preplace netloc iobuf_vhdl_0_o 1 2 3 740J 420 NJ 420 960
+preplace netloc iobuf_vhdl_1_o 1 2 3 NJ 430 NJ 430 960
+preplace netloc m00_axi_aclk_1 1 0 1 30J 120n
+preplace netloc m00_axi_aresetn_1 1 0 2 40J 520 470J
+preplace netloc s_axi_aclk_1 1 0 2 20 530 450J
+preplace netloc Conn1 1 1 4 440J 200 NJ 200 NJ 200 NJ
+preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 460 300n
+preplace netloc init_i2c_v1_0_0_m00_axi 1 1 4 NJ 80 NJ 80 NJ 80 NJ
+levelinfo -pg 1 0 260 620 770 880 980
+pagesize -pg 1 -db -bbox -sgen -170 -10 1150 590
 "
 }
 0
