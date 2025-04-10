@@ -1,6 +1,8 @@
 
 `timescale 1 ns / 1 ps
 
+
+    wire [31:0] read_reg;
 	module SAMPA_PON_v1_0 #
 	(
 		// Users to add parameters here
@@ -25,6 +27,11 @@
 	(
 		// Users to add ports here
         (*mark_debug = "true"*) output wire sampa_power_on,
+        (*mark_debug = "true"*) output wire cg0,
+        (*mark_debug = "true"*) output wire cg1,
+        (*mark_debug = "true"*) output wire cts,
+        (*mark_debug = "true"*) output wire pol,
+//        output wire read_reg
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -64,7 +71,8 @@
 		.C_M_AXI_DATA_WIDTH(C_M00_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M00_AXI_TRANSACTIONS_NUM)
 	) SAMPA_PON_v1_0_M00_AXI_inst (
-	    .PON(sampa_power_on),
+//	    .PON(sampa_power_on),
+	    .PON(read_reg),
 //		.INIT_AXI_TXN(m00_axi_init_axi_txn),
 		.INIT_AXI_TXN(txn),
 		.ERROR(m00_axi_error),
@@ -96,6 +104,11 @@
 	// Add user logic here
 	reg [31:0] cnt;
 	reg txn;
+	assign sampa_power_on = read_reg[0];
+	assign cg0 = read_reg[4];
+	assign cg1 = read_reg[5];
+	assign cts = read_reg[6];
+	assign pol = read_reg[7];
 	always @(posedge m00_axi_aclk)                                                      
 	  begin
 	    cnt <= cnt+1;                                                                             

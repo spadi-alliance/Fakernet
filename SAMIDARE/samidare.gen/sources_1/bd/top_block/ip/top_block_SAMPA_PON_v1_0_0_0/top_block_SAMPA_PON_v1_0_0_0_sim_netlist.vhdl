@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Fri Aug  9 10:56:06 2024
--- Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top top_block_SAMPA_PON_v1_0_0_0 -prefix
---               top_block_SAMPA_PON_v1_0_0_0_ top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl
+-- Date        : Wed Apr  9 00:09:26 2025
+-- Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0/top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl
 -- Design      : top_block_SAMPA_PON_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   port (
-    PON : out STD_LOGIC;
+    PON : out STD_LOGIC_VECTOR ( 31 downto 0 );
     INIT_AXI_TXN : in STD_LOGIC;
     ERROR : out STD_LOGIC;
     TXN_DONE : out STD_LOGIC;
@@ -60,6 +60,8 @@ entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   attribute INIT_READ of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b10";
   attribute INIT_WRITE : string;
   attribute INIT_WRITE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "2'b01";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is "SAMPA_PON_v1_0_M00_AXI";
   attribute POWER_ON_ADDRESS : integer;
   attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI : entity is 2048;
   attribute TRANS_NUM_BITS : integer;
@@ -72,7 +74,7 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   signal \^m_axi_arvalid\ : STD_LOGIC;
   signal \^m_axi_bready\ : STD_LOGIC;
   signal \^m_axi_rready\ : STD_LOGIC;
-  signal \^pon\ : STD_LOGIC;
+  signal \^pon\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^txn_done\ : STD_LOGIC;
   signal axi_arvalid_i_1_n_0 : STD_LOGIC;
   signal axi_bready_i_1_n_0 : STD_LOGIC;
@@ -84,7 +86,6 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0_M00_AXI is
   signal mst_exec_state : STD_LOGIC;
   signal \mst_exec_state__0\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal \pon_r[0]_i_1_n_0\ : STD_LOGIC;
   signal read_index : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal read_issued_i_1_n_0 : STD_LOGIC;
   signal read_issued_reg_n_0 : STD_LOGIC;
@@ -213,7 +214,35 @@ begin
   M_AXI_WSTRB(1) <= \<const0>\;
   M_AXI_WSTRB(0) <= \<const0>\;
   M_AXI_WVALID <= \<const0>\;
-  PON <= \^pon\;
+  PON(31) <= \<const0>\;
+  PON(30) <= \<const0>\;
+  PON(29) <= \<const0>\;
+  PON(28) <= \<const0>\;
+  PON(27) <= \<const0>\;
+  PON(26) <= \<const0>\;
+  PON(25) <= \<const0>\;
+  PON(24) <= \<const0>\;
+  PON(23) <= \<const0>\;
+  PON(22) <= \<const0>\;
+  PON(21) <= \<const0>\;
+  PON(20) <= \<const0>\;
+  PON(19) <= \<const0>\;
+  PON(18) <= \<const0>\;
+  PON(17) <= \<const0>\;
+  PON(16) <= \<const0>\;
+  PON(15) <= \<const0>\;
+  PON(14) <= \<const0>\;
+  PON(13) <= \<const0>\;
+  PON(12) <= \<const0>\;
+  PON(11) <= \<const0>\;
+  PON(10) <= \<const0>\;
+  PON(9) <= \<const0>\;
+  PON(8) <= \<const0>\;
+  PON(7 downto 4) <= \^pon\(7 downto 4);
+  PON(3) <= \<const0>\;
+  PON(2) <= \<const0>\;
+  PON(1) <= \<const0>\;
+  PON(0) <= \^pon\(0);
   TXN_DONE <= \^txn_done\;
 FSM_sequential_mst_exec_state_i_1: unisim.vcomponents.LUT1
     generic map(
@@ -334,22 +363,44 @@ last_read_reg: unisim.vcomponents.FDRE
       Q => last_read,
       R => reads_done_i_1_n_0
     );
-\pon_r[0]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => M_AXI_RDATA(0),
-      I1 => M_AXI_RVALID,
-      I2 => \^pon\,
-      O => \pon_r[0]_i_1_n_0\
-    );
 \pon_r_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => M_AXI_ACLK,
-      CE => '1',
-      D => \pon_r[0]_i_1_n_0\,
-      Q => \^pon\,
+      CE => M_AXI_RVALID,
+      D => M_AXI_RDATA(0),
+      Q => \^pon\(0),
+      R => '0'
+    );
+\pon_r_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => M_AXI_RVALID,
+      D => M_AXI_RDATA(4),
+      Q => \^pon\(4),
+      R => '0'
+    );
+\pon_r_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => M_AXI_RVALID,
+      D => M_AXI_RDATA(5),
+      Q => \^pon\(5),
+      R => '0'
+    );
+\pon_r_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => M_AXI_RVALID,
+      D => M_AXI_RDATA(6),
+      Q => \^pon\(6),
+      R => '0'
+    );
+\pon_r_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => M_AXI_ACLK,
+      CE => M_AXI_RVALID,
+      D => M_AXI_RDATA(7),
+      Q => \^pon\(7),
       R => '0'
     );
 \read_index[0]_i_1\: unisim.vcomponents.LUT1
@@ -492,6 +543,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   port (
     sampa_power_on : out STD_LOGIC;
+    cg0 : out STD_LOGIC;
+    cg1 : out STD_LOGIC;
+    cts : out STD_LOGIC;
+    pol : out STD_LOGIC;
     m00_axi_init_axi_txn : in STD_LOGIC;
     m00_axi_error : out STD_LOGIC;
     m00_axi_txn_done : out STD_LOGIC;
@@ -527,6 +582,8 @@ entity top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is -1073741824;
   attribute C_M00_AXI_TRANSACTIONS_NUM : integer;
   attribute C_M00_AXI_TRANSACTIONS_NUM of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 4;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is "SAMPA_PON_v1_0";
   attribute POWER_ON_ADDRESS : integer;
   attribute POWER_ON_ADDRESS of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 : entity is 2048;
   attribute keep_hierarchy : string;
@@ -608,6 +665,7 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_AWPROT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_SAMPA_PON_v1_0_M00_AXI_inst_PON_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 1 );
   signal \NLW_cnt_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_cnt_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 4 );
   attribute C_M_AXI_ADDR_WIDTH : integer;
@@ -633,6 +691,10 @@ architecture STRUCTURE of top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0 is
   attribute TRANS_NUM_BITS : integer;
   attribute TRANS_NUM_BITS of SAMPA_PON_v1_0_M00_AXI_inst : label is 2;
   attribute mark_debug : string;
+  attribute mark_debug of cg0 : signal is "true";
+  attribute mark_debug of cg1 : signal is "true";
+  attribute mark_debug of cts : signal is "true";
+  attribute mark_debug of pol : signal is "true";
   attribute mark_debug of sampa_power_on : signal is "true";
   attribute mark_debug of m00_axi_araddr : signal is "true";
   attribute mark_debug of m00_axi_rdata : signal is "true";
@@ -735,7 +797,9 @@ SAMPA_PON_v1_0_M00_AXI_inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_
       M_AXI_BREADY => m00_axi_bready,
       M_AXI_BRESP(1 downto 0) => B"00",
       M_AXI_BVALID => m00_axi_bvalid,
-      M_AXI_RDATA(31 downto 1) => B"0000000000000000000000000000000",
+      M_AXI_RDATA(31 downto 8) => B"000000000000000000000000",
+      M_AXI_RDATA(7 downto 4) => m00_axi_rdata(7 downto 4),
+      M_AXI_RDATA(3 downto 1) => B"000",
       M_AXI_RDATA(0) => m00_axi_rdata(0),
       M_AXI_RREADY => m00_axi_rready,
       M_AXI_RRESP(1 downto 0) => B"00",
@@ -744,7 +808,13 @@ SAMPA_PON_v1_0_M00_AXI_inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_
       M_AXI_WREADY => '0',
       M_AXI_WSTRB(3 downto 0) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WSTRB_UNCONNECTED(3 downto 0),
       M_AXI_WVALID => NLW_SAMPA_PON_v1_0_M00_AXI_inst_M_AXI_WVALID_UNCONNECTED,
-      PON => sampa_power_on,
+      PON(31 downto 8) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_PON_UNCONNECTED(31 downto 8),
+      PON(7) => pol,
+      PON(6) => cts,
+      PON(5) => cg1,
+      PON(4) => cg0,
+      PON(3 downto 1) => NLW_SAMPA_PON_v1_0_M00_AXI_inst_PON_UNCONNECTED(3 downto 1),
+      PON(0) => sampa_power_on,
       TXN_DONE => m00_axi_txn_done
     );
 \cnt[0]_i_2\: unisim.vcomponents.LUT1
@@ -1413,6 +1483,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity top_block_SAMPA_PON_v1_0_0_0 is
   port (
     sampa_power_on : out STD_LOGIC;
+    cg0 : out STD_LOGIC;
+    cg1 : out STD_LOGIC;
+    cts : out STD_LOGIC;
+    pol : out STD_LOGIC;
     m00_axi_init_axi_txn : in STD_LOGIC;
     m00_axi_error : out STD_LOGIC;
     m00_axi_txn_done : out STD_LOGIC;
@@ -1589,6 +1663,9 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0
      port map (
+      cg0 => cg0,
+      cg1 => cg1,
+      cts => cts,
       m00_axi_aclk => m00_axi_aclk,
       m00_axi_araddr(31 downto 0) => m00_axi_araddr(31 downto 0),
       m00_axi_aresetn => m00_axi_aresetn,
@@ -1613,6 +1690,7 @@ inst: entity work.top_block_SAMPA_PON_v1_0_0_0_SAMPA_PON_v1_0
       m00_axi_wready => '0',
       m00_axi_wstrb(3 downto 0) => NLW_inst_m00_axi_wstrb_UNCONNECTED(3 downto 0),
       m00_axi_wvalid => NLW_inst_m00_axi_wvalid_UNCONNECTED,
+      pol => pol,
       sampa_power_on => sampa_power_on
     );
 end STRUCTURE;

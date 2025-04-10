@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "init_i2c_v1_0,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_init_i2c_v1_0_0_0,init_i2c_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "top_block_init_i2c_v1_0_0_0,init_i2c_v1_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=init_i2c_v1_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,TARGET_ADDRESS=0x00006000,C_M00_AXI_START_DATA_VALUE=0xAA000000,C_M00_AXI_TARGET_SLAVE_BASE_ADDR=0x40000000,C_M00_AXI_ADDR_WIDTH=32,C_M00_AXI_DATA_WIDTH=32,C_M00_AXI_TRANSACTIONS_NUM=4}" *)
+(* CORE_GENERATION_INFO = "top_block_init_i2c_v1_0_0_0,init_i2c_v1_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=init_i2c_v1_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,TARGET_ADDRESS=0x00000400,TXN_TIMING=0x0100000,C_M00_AXI_START_DATA_VALUE=0xAA000000,C_M00_AXI_TARGET_SLAVE_BASE_ADDR=0xC0000000,C_M00_AXI_ADDR_WIDTH=32,C_M00_AXI_DATA_WIDTH=32,C_M00_AXI_TRANSACTIONS_NUM=4}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_init_i2c_v1_0_0_0 (
@@ -137,9 +137,10 @@ ITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 output wire m00_axi_rready;
 
   init_i2c_v1_0 #(
-    .TARGET_ADDRESS(32'H00006000),
+    .TARGET_ADDRESS(32'H00000400),
+    .TXN_TIMING(28'H0100000),
     .C_M00_AXI_START_DATA_VALUE(32'HAA000000),
-    .C_M00_AXI_TARGET_SLAVE_BASE_ADDR(32'H40000000),
+    .C_M00_AXI_TARGET_SLAVE_BASE_ADDR(32'HC0000000),
     .C_M00_AXI_ADDR_WIDTH(32),
     .C_M00_AXI_DATA_WIDTH(32),
     .C_M00_AXI_TRANSACTIONS_NUM(4)

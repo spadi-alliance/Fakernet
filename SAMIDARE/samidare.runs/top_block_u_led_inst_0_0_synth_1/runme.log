@@ -1,0 +1,388 @@
+
+*** Running vivado
+    with args -log top_block_u_led_inst_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_u_led_inst_0_0.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_block_u_led_inst_0_0.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Timing 38-316}  -suppress '. The existing rule will be replaced.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/INIT_I2C_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_u_led_inst_0_0
+Command: synth_design -top top_block_u_led_inst_0_0 -part xcau15p-sbvb484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 267547
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2150.086 ; gain = 366.688 ; free physical = 49995 ; free virtual = 62184
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.457; parent = 2153.059; children = 968.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_block_u_led_inst_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/synth/top_block_u_led_inst_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'u_led_inst' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'u_led_inst' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_u_led_inst_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_u_led_inst_0_0/synth/top_block_u_led_inst_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element led_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:65]
+WARNING: [Synth 8-6014] Unused sequential element r0_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:70]
+WARNING: [Synth 8-6014] Unused sequential element r1_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:71]
+WARNING: [Synth 8-6014] Unused sequential element r2_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:72]
+WARNING: [Synth 8-6014] Unused sequential element course_counter_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:83]
+WARNING: [Synth 8-6014] Unused sequential element fnet_txn_acc_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:119]
+WARNING: [Synth 8-7137] Register counter_reg in module u_led_inst has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:81]
+WARNING: [Synth 8-7137] Register axi_txn_reg in module u_led_inst has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:88]
+WARNING: [Synth 8-7137] Register axi_txn_sub_reg in module u_led_inst has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:94]
+WARNING: [Synth 8-7137] Register txn_acc_reg in module u_led_inst has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/u_led_inst.v:113]
+WARNING: [Synth 8-7129] Port fnet_txn in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[31] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[30] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[29] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[28] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[27] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[26] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[25] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[24] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[23] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[22] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[21] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[20] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[19] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[18] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[17] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[16] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[15] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[14] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[13] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[12] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[11] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[10] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[9] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[8] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[7] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[6] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[5] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[4] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[3] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[2] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[1] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG0[0] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[31] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[30] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[29] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[28] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[27] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[26] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[25] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[24] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[23] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[22] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[21] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[20] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[19] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[18] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[17] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[16] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[15] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[14] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[13] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[12] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[11] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[10] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[9] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[8] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[7] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[6] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[5] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[4] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[3] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[2] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[1] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG1[0] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[31] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[30] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[29] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[28] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[27] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[26] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[25] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[24] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[23] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[22] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[21] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[20] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[19] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[18] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[17] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[16] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[15] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[14] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[13] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[12] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[11] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[10] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[9] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[8] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[7] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[6] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[5] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[4] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[3] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[2] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[1] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED_REG2[0] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIPSW[3] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIPSW[2] in module u_led_inst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIPSW[1] in module u_led_inst is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2221.023 ; gain = 437.625 ; free physical = 50086 ; free virtual = 62276
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3189.426; parent = 2221.027; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2235.867 ; gain = 452.469 ; free physical = 50087 ; free virtual = 62278
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3204.270; parent = 2235.871; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2235.867 ; gain = 452.469 ; free physical = 50087 ; free virtual = 62277
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3204.270; parent = 2235.871; children = 968.398
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2235.867 ; gain = 0.000 ; free physical = 50082 ; free virtual = 62273
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2355.805 ; gain = 0.000 ; free physical = 50052 ; free virtual = 62243
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2378.617 ; gain = 22.812 ; free physical = 50052 ; free virtual = 62243
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2378.617 ; gain = 595.219 ; free physical = 50063 ; free virtual = 62253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3315.004; parent = 2346.605; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-sbvb484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2378.617 ; gain = 595.219 ; free physical = 50063 ; free virtual = 62253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3315.004; parent = 2346.605; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2378.617 ; gain = 595.219 ; free physical = 50063 ; free virtual = 62253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3315.004; parent = 2346.605; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2378.617 ; gain = 595.219 ; free physical = 50053 ; free virtual = 62244
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3315.004; parent = 2346.605; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2378.617 ; gain = 595.219 ; free physical = 50037 ; free virtual = 62232
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1582.999; parent = 1373.113; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3315.004; parent = 2346.605; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2425.359 ; gain = 641.961 ; free physical = 49820 ; free virtual = 62015
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1784.810; parent = 1575.471; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3393.762; parent = 2425.363; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2425.359 ; gain = 641.961 ; free physical = 49820 ; free virtual = 62015
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1784.856; parent = 1575.518; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3393.762; parent = 2425.363; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2434.375 ; gain = 650.977 ; free physical = 49818 ; free virtual = 62013
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.329; parent = 1575.990; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3402.777; parent = 2434.379; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.505; parent = 1576.166; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.521; parent = 1576.182; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.560; parent = 1576.221; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.560; parent = 1576.221; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.560; parent = 1576.221; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.591; parent = 1576.252; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |     3|
+|3     |LUT2   |     2|
+|4     |LUT3   |     4|
+|5     |LUT4   |     7|
+|6     |LUT5   |    32|
+|7     |LUT6   |     4|
+|8     |FDCE   |    32|
+|9     |FDRE   |    34|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 656.914 ; free physical = 49818 ; free virtual = 62012
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1785.606; parent = 1576.268; children = 209.886
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.715; parent = 2440.316; children = 968.398
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.312 ; gain = 514.164 ; free physical = 49831 ; free virtual = 62026
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.320 ; gain = 656.914 ; free physical = 49831 ; free virtual = 62026
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.250 ; gain = 0.000 ; free physical = 49933 ; free virtual = 62128
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2492.074 ; gain = 0.000 ; free physical = 49900 ; free virtual = 62095
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9f224d85
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:58 . Memory (MB): peak = 2492.074 ; gain = 1198.578 ; free physical = 50117 ; free virtual = 62312
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_u_led_inst_0_0_synth_1/top_block_u_led_inst_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_u_led_inst_0_0, cache-ID = d833f16564da0efb
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_u_led_inst_0_0_synth_1/top_block_u_led_inst_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_block_u_led_inst_0_0_utilization_synth.rpt -pb top_block_u_led_inst_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  8 18:28:59 2025...

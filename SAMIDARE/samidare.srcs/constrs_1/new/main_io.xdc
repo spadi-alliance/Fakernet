@@ -320,3 +320,8 @@ set_property IOSTANDARD LVCMOS12 [get_ports {CG1[0]}]
 
 
 
+
+
+
+
+

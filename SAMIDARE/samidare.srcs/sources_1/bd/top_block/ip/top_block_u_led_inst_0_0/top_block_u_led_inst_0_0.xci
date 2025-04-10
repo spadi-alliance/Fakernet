@@ -47,6 +47,7 @@
         "LED_REG1": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "LED_REG2": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "LED_REG3": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "DIPSW": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "INIT_AXI_TXN": [ { "direction": "out" } ],
         "INIT_AXI_TXN_SUB": [ { "direction": "out" } ],
         "LED_TXN_DONE": [ { "direction": "in" } ],

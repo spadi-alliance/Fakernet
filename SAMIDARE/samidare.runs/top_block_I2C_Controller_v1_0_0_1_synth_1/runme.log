@@ -1,0 +1,466 @@
+
+*** Running vivado
+    with args -log top_block_I2C_Controller_v1_0_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_I2C_Controller_v1_0_0_1.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_block_I2C_Controller_v1_0_0_1.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Timing 38-316}  -suppress '. The existing rule will be replaced.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/INIT_I2C_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/start_i2c_write_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/I2C_controller_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_block_I2C_Controller_v1_0_0_1
+Command: synth_design -top top_block_I2C_Controller_v1_0_0_1 -part xcau15p-sbvb484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
+INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2637516
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:118]
+WARNING: [Synth 8-11065] parameter 'INIT_WRITE' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:121]
+WARNING: [Synth 8-11065] parameter 'INIT_READ' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:124]
+WARNING: [Synth 8-11065] parameter 'INIT_COMPARE' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:127]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'I2C_Controller_v1_0_M01_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:117]
+WARNING: [Synth 8-11065] parameter 'INIT_WRITE' becomes localparam in 'I2C_Controller_v1_0_M01_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:120]
+WARNING: [Synth 8-11065] parameter 'INIT_READ' becomes localparam in 'I2C_Controller_v1_0_M01_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:123]
+WARNING: [Synth 8-11065] parameter 'INIT_COMPARE' becomes localparam in 'I2C_Controller_v1_0_M01_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:126]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_wr', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:177]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_rd', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:178]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_waddr', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:179]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_raddr', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:180]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_wdata', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:181]
+WARNING: [Synth 8-8895] 'i2c_wr' is already implicitly declared on line 177 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:268]
+WARNING: [Synth 8-8895] 'i2c_rd' is already implicitly declared on line 178 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:269]
+WARNING: [Synth 8-8895] 'i2c_waddr' is already implicitly declared on line 179 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:275]
+WARNING: [Synth 8-8895] 'i2c_wdata' is already implicitly declared on line 181 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:276]
+WARNING: [Synth 8-8895] 'i2c_raddr' is already implicitly declared on line 180 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:277]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_rdata_o', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:282]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_done', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:291]
+WARNING: [Synth 8-11065] parameter 'STATE_R_IDLE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:213]
+WARNING: [Synth 8-11065] parameter 'STATE_R_RESET_TX_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:214]
+WARNING: [Synth 8-11065] parameter 'STATE_R_RESET_TX_FIFO1' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:215]
+WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:216]
+WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_FIFO1' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:217]
+WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_FIFO2' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:218]
+WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_FIFO3' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:219]
+WARNING: [Synth 8-11065] parameter 'STATE_R_SEND' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:220]
+WARNING: [Synth 8-11065] parameter 'STATE_R_READ_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:221]
+WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_BRAM' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:222]
+WARNING: [Synth 8-11065] parameter 'STATE_R_END' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:223]
+WARNING: [Synth 8-11065] parameter 'STATE_W_IDLE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:225]
+WARNING: [Synth 8-11065] parameter 'STATE_W_RESET_TX_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:226]
+WARNING: [Synth 8-11065] parameter 'STATE_W_RESET_TX_FIFO1' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:227]
+WARNING: [Synth 8-11065] parameter 'STATE_W_WRITE_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:228]
+WARNING: [Synth 8-11065] parameter 'STATE_W_WRITE_FIFO1' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:229]
+WARNING: [Synth 8-11065] parameter 'STATE_W_WRITE_FIFO2' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:230]
+WARNING: [Synth 8-11065] parameter 'STATE_W_WRITE_FIFO3' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:231]
+WARNING: [Synth 8-11065] parameter 'STATE_W_SEND' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:232]
+WARNING: [Synth 8-11065] parameter 'STATE_W_END' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:233]
+WARNING: [Synth 8-11065] parameter 'STATE_INIT' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:236]
+WARNING: [Synth 8-11065] parameter 'STATE_IDLE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:237]
+WARNING: [Synth 8-11065] parameter 'STATE_WAIT_NEXT' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:238]
+WARNING: [Synth 8-11065] parameter 'STATE_READ' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:239]
+WARNING: [Synth 8-11065] parameter 'STATE_WRITE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:240]
+WARNING: [Synth 8-11065] parameter 'STATE_READ_DONE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:241]
+WARNING: [Synth 8-11065] parameter 'STATE_WRITE_DONE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:242]
+WARNING: [Synth 8-11065] parameter 'WCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:244]
+WARNING: [Synth 8-11065] parameter 'RCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:245]
+WARNING: [Synth 8-11065] parameter 'SCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:246]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2147.699 ; gain = 363.719 ; free physical = 46333 ; free virtual = 60181
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3122.043; parent = 2153.641; children = 968.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_block_I2C_Controller_v1_0_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/synth/top_block_I2C_Controller_v1_0_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'I2C_Controller_v1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'I2C_Controller_v1_0_M00_AXI' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0_M00_AXI' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:5]
+WARNING: [Synth 8-689] width (39) of port connection 'regacc_addr' does not match port width (32) of module 'I2C_Controller_v1_0_M00_AXI' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:131]
+INFO: [Synth 8-6157] synthesizing module 'I2C_Controller_v1_0_M01_AXI' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0_M01_AXI' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:324]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:652]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_I2C_Controller_v1_0_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/synth/top_block_I2C_Controller_v1_0_0_1.v:53]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'I2C_Controller_v1_0_M01_AXI_inst'. This will prevent further optimization [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:176]
+WARNING: [Synth 8-6014] Unused sequential element expected_rdata_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:509]
+WARNING: [Synth 8-6014] Unused sequential element compare_done_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:530]
+WARNING: [Synth 8-6014] Unused sequential element read_mismatch_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:708]
+WARNING: [Synth 8-6014] Unused sequential element error_reg_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:721]
+WARNING: [Synth 8-6014] Unused sequential element start_reg_read_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:315]
+WARNING: [Synth 8-6014] Unused sequential element init_txn_bram_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:317]
+WARNING: [Synth 8-6014] Unused sequential element ack_data_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:329]
+WARNING: [Synth 8-6014] Unused sequential element i2c_done_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:291]
+WARNING: [Synth 8-6014] Unused sequential element i2c_rdata_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:282]
+WARNING: [Synth 8-7129] Port INIT_AXI_TXN in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INIT_AXI_TXN in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2229.605 ; gain = 445.625 ; free physical = 46417 ; free virtual = 60265
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3198.012; parent = 2229.609; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2244.449 ; gain = 460.469 ; free physical = 46416 ; free virtual = 60265
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.855; parent = 2244.453; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2244.449 ; gain = 460.469 ; free physical = 46416 ; free virtual = 60265
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.855; parent = 2244.453; children = 968.402
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2244.449 ; gain = 0.000 ; free physical = 46412 ; free virtual = 60261
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.387 ; gain = 0.000 ; free physical = 46380 ; free virtual = 60229
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2395.199 ; gain = 22.812 ; free physical = 46380 ; free virtual = 60229
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.199 ; gain = 611.219 ; free physical = 46397 ; free virtual = 60245
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.590; parent = 2363.188; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau15p-sbvb484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.199 ; gain = 611.219 ; free physical = 46397 ; free virtual = 60245
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.590; parent = 2363.188; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.199 ; gain = 611.219 ; free physical = 46397 ; free virtual = 60245
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.590; parent = 2363.188; children = 968.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'I2C_Controller_v1_0_M00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'I2C_Controller_v1_0_M01_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_bram_reg' in module 'I2C_Controller_v1_0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_i2c_reg' in module 'I2C_Controller_v1_0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'I2C_Controller_v1_0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+              INIT_WRITE |                               01 |                               01
+               INIT_READ |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using encoding 'sequential' in module 'I2C_Controller_v1_0_M00_AXI'
+INFO: [Synth 8-6159] Found Keep on FSM register 'mst_exec_state_reg' in module 'I2C_Controller_v1_0_M01_AXI', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                               00 |                               00
+              INIT_WRITE |                               01 |                               01
+               INIT_READ |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_read_reg' in module 'I2C_Controller_v1_0', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_INIT |                             0001 |                             0001
+            STATE_R_IDLE |                             0010 |                             0010
+  STATE_R_RESET_TX_FIFO0 |                             0011 |                             0011
+  STATE_R_RESET_TX_FIFO1 |                             0100 |                             0100
+     STATE_R_WRITE_FIFO0 |                             0101 |                             0101
+     STATE_R_WRITE_FIFO1 |                             0110 |                             0110
+     STATE_R_WRITE_FIFO2 |                             0111 |                             0111
+     STATE_R_WRITE_FIFO3 |                             1000 |                             1000
+            STATE_R_SEND |                             1001 |                             1001
+      STATE_R_READ_FIFO0 |                             1010 |                             1010
+      STATE_R_WRITE_BRAM |                             1011 |                             1011
+             STATE_R_END |                             1100 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_bram_reg' in module 'I2C_Controller_v1_0', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_INIT |                             0001 |                             0001
+              STATE_IDLE |                             0010 |                             0010
+              STATE_READ |                             1000 |                             1000
+         STATE_READ_DONE |                             1010 |                             1010
+             STATE_WRITE |                             1001 |                             1001
+        STATE_WRITE_DONE |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_i2c_reg' in module 'I2C_Controller_v1_0', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              STATE_INIT |                             0001 |                             0001
+              STATE_IDLE |                             0010 |                             0010
+             STATE_WRITE |                             1001 |                             1001
+              STATE_READ |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.199 ; gain = 611.219 ; free physical = 46389 ; free virtual = 60238
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.590; parent = 2363.188; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 12    
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 51    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	  13 Input   32 Bit        Muxes := 2     
+	  11 Input   32 Bit        Muxes := 2     
+	   8 Input   32 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 9     
+	   5 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 16    
+	  13 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	  13 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 12    
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 39    
+	   3 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 9     
+	   5 Input    1 Bit        Muxes := 4     
+	   6 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 8     
+	  11 Input    1 Bit        Muxes := 5     
+	  13 Input    1 Bit        Muxes := 10    
+	  14 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 576 (col length:72)
+BRAMs: 288 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_awprot[2] driven by constant 0
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_awprot[1] driven by constant 0
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_awprot[0] driven by constant 0
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_wstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_wstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_wstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_wstrb[0] driven by constant 1
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_arprot[2] driven by constant 0
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_arprot[1] driven by constant 0
+INFO: [Synth 8-3917] design top_block_I2C_Controller_v1_0_0_1 has port m00_axi_arprot[0] driven by constant 1
+WARNING: [Synth 8-7129] Port INIT_AXI_TXN in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_init_axi_txn in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_bresp[1] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_bresp[0] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_rresp[1] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_rresp[0] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2395.199 ; gain = 611.219 ; free physical = 46372 ; free virtual = 60226
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.052; parent = 1374.115; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3331.590; parent = 2363.188; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2441.941 ; gain = 657.961 ; free physical = 46151 ; free virtual = 60005
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1790.364; parent = 1581.008; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.348; parent = 2441.945; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2441.941 ; gain = 657.961 ; free physical = 46150 ; free virtual = 60005
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1790.661; parent = 1581.305; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3410.348; parent = 2441.945; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46147 ; free virtual = 60001
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1792.974; parent = 1583.617; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46148 ; free virtual = 60002
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.364; parent = 1584.008; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46148 ; free virtual = 60002
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.364; parent = 1584.008; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46148 ; free virtual = 60002
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.423; parent = 1584.066; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46148 ; free virtual = 60002
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.427; parent = 1584.070; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46147 ; free virtual = 60001
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.427; parent = 1584.070; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46147 ; free virtual = 60001
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.442; parent = 1584.086; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |     3|
+|3     |LUT2   |    28|
+|4     |LUT3   |    35|
+|5     |LUT4   |    86|
+|6     |LUT5   |    47|
+|7     |LUT6   |    74|
+|8     |FDRE   |   355|
+|9     |FDSE   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 665.969 ; free physical = 46147 ; free virtual = 60001
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.442; parent = 1584.086; children = 209.937
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.355; parent = 2449.953; children = 968.402
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.949 ; gain = 515.219 ; free physical = 46160 ; free virtual = 60014
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2449.957 ; gain = 665.969 ; free physical = 46161 ; free virtual = 60015
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2455.887 ; gain = 0.000 ; free physical = 46266 ; free virtual = 60120
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2497.711 ; gain = 0.000 ; free physical = 46235 ; free virtual = 60089
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ab0702fd
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:01:01 . Memory (MB): peak = 2497.711 ; gain = 1204.008 ; free physical = 46447 ; free virtual = 60301
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1/top_block_I2C_Controller_v1_0_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_I2C_Controller_v1_0_0_1, cache-ID = d7ee72ecd59ae227
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1/top_block_I2C_Controller_v1_0_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_block_I2C_Controller_v1_0_0_1_utilization_synth.rpt -pb top_block_I2C_Controller_v1_0_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 10 11:09:31 2025...

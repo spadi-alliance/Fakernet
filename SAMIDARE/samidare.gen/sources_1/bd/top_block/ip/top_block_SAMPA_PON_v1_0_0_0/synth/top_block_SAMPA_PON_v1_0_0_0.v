@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -57,6 +57,10 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_SAMPA_PON_v1_0_0_0 (
   sampa_power_on,
+  cg0,
+  cg1,
+  cts,
+  pol,
   m00_axi_init_axi_txn,
   m00_axi_error,
   m00_axi_txn_done,
@@ -84,6 +88,10 @@ module top_block_SAMPA_PON_v1_0_0_0 (
 );
 
 output wire sampa_power_on;
+output wire cg0;
+output wire cg1;
+output wire cts;
+output wire pol;
 input wire m00_axi_init_axi_txn;
 output wire m00_axi_error;
 output wire m00_axi_txn_done;
@@ -143,6 +151,10 @@ output wire m00_axi_rready;
     .C_M00_AXI_TRANSACTIONS_NUM(4)
   ) inst (
     .sampa_power_on(sampa_power_on),
+    .cg0(cg0),
+    .cg1(cg1),
+    .cts(cts),
+    .pol(pol),
     .m00_axi_init_axi_txn(m00_axi_init_axi_txn),
     .m00_axi_error(m00_axi_error),
     .m00_axi_txn_done(m00_axi_txn_done),

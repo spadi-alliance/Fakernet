@@ -32,6 +32,8 @@ module u_led_inst(
     input [31:0] LED_REG1,
     input [31:0] LED_REG2,
     input [31:0] LED_REG3,
+    
+    input [3:0] DIPSW,
     output INIT_AXI_TXN,
     output INIT_AXI_TXN_SUB,
     input LED_TXN_DONE,
@@ -127,7 +129,8 @@ module u_led_inst(
     assign LED[0] = txn_acc[0];
     assign LED[1] = power_on;    
 //    assign LED[1] = fnet_txn_acc[0];    
-    assign LED[2] = r2[0];
+//    assign LED[2] = r2[0];
+    assign LED[2] = DIPSW[0];
     assign LED[3] = r3[0];
     assign INIT_AXI_TXN = axi_txn;
     assign INIT_AXI_TXN_SUB = axi_txn_sub;

@@ -578,7 +578,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:81724c54</spirit:value>
+            <spirit:value>9:d8fe6df0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -589,7 +589,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:81724c54</spirit:value>
+            <spirit:value>9:d8fe6df0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -605,11 +605,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 03 09:51:51 UTC 2025</spirit:value>
+            <spirit:value>Wed Apr 09 13:20:44 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:81724c54</spirit:value>
+            <spirit:value>9:d8fe6df0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -621,7 +621,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7faac603</spirit:value>
+            <spirit:value>9:fdb95b9a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -637,11 +637,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 03 09:51:51 UTC 2025</spirit:value>
+            <spirit:value>Wed Apr 09 13:20:44 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7faac603</spirit:value>
+            <spirit:value>9:fdb95b9a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -655,11 +655,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 03 09:53:18 UTC 2025</spirit:value>
+            <spirit:value>Wed Apr 09 13:21:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:81724c54</spirit:value>
+            <spirit:value>9:d8fe6df0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1055,7 +1055,12 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>TARGET_ADDRESS</spirit:name>
         <spirit:displayName>Target Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00005000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00000500</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>TXN_TIMING</spirit:name>
+        <spirit:displayName>Txn Timing</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TXN_TIMING" spirit:bitStringLength="28">0x0200000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -1065,7 +1070,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M00_AXI_TARGET_SLAVE_BASE_ADDR</spirit:name>
         <spirit:displayName>C M00 Axi Target Slave Base Addr</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x40000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0xC0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M00_AXI_ADDR_WIDTH</spirit:name>
@@ -1150,7 +1155,12 @@
     <spirit:parameter>
       <spirit:name>TARGET_ADDRESS</spirit:name>
       <spirit:displayName>Target Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00005000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00000500</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>TXN_TIMING</spirit:name>
+      <spirit:displayName>Txn Timing</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TXN_TIMING" spirit:bitStringLength="28">0x0200000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -1160,7 +1170,7 @@
     <spirit:parameter>
       <spirit:name>C_M00_AXI_TARGET_SLAVE_BASE_ADDR</spirit:name>
       <spirit:displayName>C M00 Axi Target Slave Base Addr</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x40000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0xC0000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M00_AXI_ADDR_WIDTH</spirit:name>
@@ -1189,35 +1199,35 @@
       <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.MAX_BURST_LENGTH" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.PHASE" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
@@ -1226,6 +1236,9 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ACLK.PHASE" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI_ARESETN.POLARITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TARGET_ADDRESS" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TXN_TIMING" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

@@ -28,7 +28,7 @@
 	(
 		// Users to add ports here
 		
-        output wire PON,
+        output wire [31:0] PON,
 //        output wire [32:0] LED_REG1,
 //        output wire [32:0] LED_REG2,
 //        output wire [32:0] LED_REG3,
@@ -735,7 +735,7 @@
 	    end 
 	  end    
 
-	  assign PON = pon_r[0];
+	  assign PON = pon_r;
 //	  assign LED_REG1 = led_r1;
 //	  assign LED_REG2 = led_r2;
 //	  assign LED_REG3 = led_r3;

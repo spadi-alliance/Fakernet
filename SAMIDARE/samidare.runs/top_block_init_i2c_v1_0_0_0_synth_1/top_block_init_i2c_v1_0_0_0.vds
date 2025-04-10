@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Mar 21 11:48:41 2025
-# Process ID: 9184
+# Start of session at: Wed Apr  9 22:16:30 2025
+# Process ID: 2032348
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_init_i2c_v1_0_0_0_synth_1
 # Command line: vivado -log top_block_init_i2c_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_init_i2c_v1_0_0_0.tcl
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_init_i2c_v1_0_0_0_synth_1/top_block_init_i2c_v1_0_0_0.vds
@@ -35,18 +35,19 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p
 INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9291
+INFO: [Synth 8-7075] Helper process launched with PID 2032461
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:207]
 WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'SAMPA_REGREAD_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:118]
 WARNING: [Synth 8-11065] parameter 'INIT_WRITE' becomes localparam in 'SAMPA_REGREAD_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:121]
 WARNING: [Synth 8-11065] parameter 'INIT_READ' becomes localparam in 'SAMPA_REGREAD_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:124]
 WARNING: [Synth 8-11065] parameter 'INIT_COMPARE' becomes localparam in 'SAMPA_REGREAD_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:127]
-INFO: [Synth 8-11241] undeclared symbol 'init_i2c_reg', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:64]
+INFO: [Synth 8-11241] undeclared symbol 'txn', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:70]
+WARNING: [Synth 8-8895] 'txn' is already implicitly declared on line 70 [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:99]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.188 ; gain = 364.727 ; free physical = 55315 ; free virtual = 65845
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3127.633; parent = 2153.160; children = 974.473
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2147.492 ; gain = 363.719 ; free physical = 46784 ; free virtual = 59959
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 170.876
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.836; parent = 2153.434; children = 968.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_block_init_i2c_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_init_i2c_v1_0_0_0/synth/top_block_init_i2c_v1_0_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'init_i2c_v1_0' [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:4]
@@ -59,10 +60,8 @@ WARNING: [Synth 8-6014] Unused sequential element read_mismatch_reg was removed.
 WARNING: [Synth 8-6014] Unused sequential element error_reg_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:719]
 WARNING: [Synth 8-3848] Net axi_awaddr in module/entity SAMPA_REGREAD_v1_0_M00_AXI does not have driver. [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:144]
 WARNING: [Synth 8-3848] Net axi_wdata in module/entity SAMPA_REGREAD_v1_0_M00_AXI does not have driver. [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:146]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_init_i2c_v1_0_0_0/synth/top_block_init_i2c_v1_0_0_0.v:146]
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:97]
-WARNING: [Synth 8-6014] Unused sequential element txn_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:99]
-WARNING: [Synth 8-3848] Net init_i2c in module/entity init_i2c_v1_0 does not have driver. [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:54]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inst'. This will prevent further optimization [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_init_i2c_v1_0_0_0/synth/top_block_init_i2c_v1_0_0_0.v:147]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SAMPA_REGREAD_v1_0_M00_AXI_inst'. This will prevent further optimization [/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v:67]
 WARNING: [Synth 8-7129] Port M_AXI_WDATA[31] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_WDATA[30] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_WDATA[29] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
@@ -99,42 +98,43 @@ WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module SAMPA_REGREAD_v1_0_M00_AXI
 WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_init_axi_txn in module init_i2c_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2223.125 ; gain = 438.664 ; free physical = 55383 ; free virtual = 65932
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3197.602; parent = 2223.129; children = 974.473
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2222.398 ; gain = 438.625 ; free physical = 47076 ; free virtual = 60251
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3190.805; parent = 2222.402; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2237.969 ; gain = 453.508 ; free physical = 55383 ; free virtual = 65933
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.445; parent = 2237.973; children = 974.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2237.242 ; gain = 453.469 ; free physical = 47077 ; free virtual = 60252
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.648; parent = 2237.246; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2237.969 ; gain = 453.508 ; free physical = 55383 ; free virtual = 65933
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3212.445; parent = 2237.973; children = 974.473
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2237.242 ; gain = 453.469 ; free physical = 47077 ; free virtual = 60253
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3205.648; parent = 2237.246; children = 968.402
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2237.969 ; gain = 0.000 ; free physical = 55377 ; free virtual = 65927
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2237.242 ; gain = 0.000 ; free physical = 47073 ; free virtual = 60249
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2361.906 ; gain = 0.000 ; free physical = 55268 ; free virtual = 65822
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.180 ; gain = 0.000 ; free physical = 47043 ; free virtual = 60218
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2383.719 ; gain = 21.812 ; free physical = 55264 ; free virtual = 65818
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2381.992 ; gain = 21.812 ; free physical = 47043 ; free virtual = 60218
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2383.719 ; gain = 599.258 ; free physical = 55436 ; free virtual = 65992
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3326.180; parent = 2351.707; children = 974.473
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.992 ; gain = 598.219 ; free physical = 47056 ; free virtual = 60231
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3318.383; parent = 2349.980; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -142,19 +142,18 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-sbvb484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2383.719 ; gain = 599.258 ; free physical = 55431 ; free virtual = 65988
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3326.180; parent = 2351.707; children = 974.473
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.992 ; gain = 598.219 ; free physical = 47056 ; free virtual = 60231
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3318.383; parent = 2349.980; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2383.719 ; gain = 599.258 ; free physical = 55431 ; free virtual = 65988
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3326.180; parent = 2351.707; children = 974.473
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.992 ; gain = 598.219 ; free physical = 47056 ; free virtual = 60231
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3318.383; parent = 2349.980; children = 968.402
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 'regval_r_reg' and it is trimmed from '32' to '1' bits. [/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v:733]
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'SAMPA_REGREAD_v1_0_M00_AXI'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -164,9 +163,9 @@ INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in modu
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using encoding 'sequential' in module 'SAMPA_REGREAD_v1_0_M00_AXI'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2383.719 ; gain = 599.258 ; free physical = 55411 ; free virtual = 65968
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3326.180; parent = 2351.707; children = 974.473
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.992 ; gain = 598.219 ; free physical = 47049 ; free virtual = 60225
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3318.383; parent = 2349.980; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,7 +175,7 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit       Adders := 2     
 	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 21    
 +---Muxes : 
@@ -197,99 +196,71 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port m00_axi_wdata[31] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[30] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[29] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[28] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[27] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[26] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[25] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[24] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[23] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[22] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[21] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[20] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[19] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[18] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[17] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[16] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[15] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[14] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[13] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[12] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[11] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[10] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[9] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[8] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[7] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[6] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[5] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[4] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[3] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[2] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[1] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_wdata[0] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_bresp[1] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_bresp[0] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[31] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[30] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[29] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[28] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[27] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[26] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[25] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[24] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[23] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[22] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[21] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[20] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[19] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[18] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[17] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[16] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[15] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[14] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[13] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[12] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[11] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[10] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[9] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[8] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[7] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[6] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[5] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[4] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[3] in module init_i2c_v1_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m00_axi_rdata[2] in module init_i2c_v1_0 is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[31] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[30] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[29] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[28] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[27] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[26] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[25] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[24] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[23] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[22] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[21] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[20] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[19] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[18] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[17] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[16] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[15] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[14] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[13] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[12] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[11] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[10] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[9] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[8] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[7] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[6] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[5] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[4] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[3] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[2] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[1] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_WDATA[0] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module SAMPA_REGREAD_v1_0_M00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axi_init_axi_txn in module init_i2c_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2383.719 ; gain = 599.258 ; free physical = 55366 ; free virtual = 65929
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.967; parent = 1311.788; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3326.180; parent = 2351.707; children = 974.473
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2381.992 ; gain = 598.219 ; free physical = 47034 ; free virtual = 60214
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1481.750; parent = 1310.874; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3318.383; parent = 2349.980; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2430.461 ; gain = 646.000 ; free physical = 55108 ; free virtual = 65705
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.486; parent = 1519.769; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3404.938; parent = 2430.465; children = 974.473
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2428.734 ; gain = 644.961 ; free physical = 46809 ; free virtual = 59989
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1713.519; parent = 1525.439; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3397.141; parent = 2428.738; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2430.461 ; gain = 646.000 ; free physical = 55108 ; free virtual = 65705
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.494; parent = 1519.776; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3404.938; parent = 2430.465; children = 974.473
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2428.734 ; gain = 644.961 ; free physical = 46809 ; free virtual = 59989
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1713.612; parent = 1525.533; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3397.141; parent = 2428.738; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55107 ; free virtual = 65703
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2436.742 ; gain = 652.969 ; free physical = 46807 ; free virtual = 59987
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.089; parent = 1526.010; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3405.148; parent = 2436.746; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -307,49 +278,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55090 ; free virtual = 65687
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.247; parent = 1526.168; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55083 ; free virtual = 65681
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.263; parent = 1526.184; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55077 ; free virtual = 65674
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.278; parent = 1526.199; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55070 ; free virtual = 65668
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.294; parent = 1526.215; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55063 ; free virtual = 65661
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.294; parent = 1526.215; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55057 ; free virtual = 65654
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.294; parent = 1526.215; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -362,40 +333,44 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT1 |     4|
-|2     |LUT2 |     3|
-|3     |LUT3 |     3|
-|4     |LUT4 |     2|
-|5     |LUT5 |     4|
-|6     |FDRE |    13|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |    35|
+|3     |LUT2   |     5|
+|4     |LUT3   |     3|
+|5     |LUT4   |     3|
+|6     |LUT5   |     5|
+|7     |LUT6   |     4|
+|8     |FDRE   |    78|
++------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 654.008 ; free physical = 55053 ; free virtual = 65650
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1689.916; parent = 1520.202; children = 170.179
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3412.945; parent = 2438.473; children = 974.473
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 655.938 ; free physical = 46808 ; free virtual = 59988
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1714.329; parent = 1526.250; children = 188.494
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3408.117; parent = 2439.715; children = 968.402
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 70 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.469 ; gain = 508.258 ; free physical = 55072 ; free virtual = 65670
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2438.477 ; gain = 654.008 ; free physical = 55113 ; free virtual = 65710
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.711 ; gain = 511.188 ; free physical = 46822 ; free virtual = 60002
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2439.719 ; gain = 655.938 ; free physical = 46822 ; free virtual = 60002
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.375 ; gain = 0.000 ; free physical = 55261 ; free virtual = 65859
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.617 ; gain = 0.000 ; free physical = 46927 ; free virtual = 60107
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2494.168 ; gain = 0.000 ; free physical = 55213 ; free virtual = 65811
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2489.473 ; gain = 0.000 ; free physical = 46897 ; free virtual = 60077
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 28d1a8c9
+Synth Design complete, checksum: 6bc6239c
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+40 Infos, 90 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:01:10 . Memory (MB): peak = 2494.168 ; gain = 1200.602 ; free physical = 55426 ; free virtual = 66025
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:58 . Memory (MB): peak = 2489.473 ; gain = 1195.945 ; free physical = 47111 ; free virtual = 60291
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_init_i2c_v1_0_0_0_synth_1/top_block_init_i2c_v1_0_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_init_i2c_v1_0_0_0, cache-ID = dcff08fb8b8385d7
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_init_i2c_v1_0_0_0, cache-ID = c7a75d67204170e2
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_init_i2c_v1_0_0_0_synth_1/top_block_init_i2c_v1_0_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_init_i2c_v1_0_0_0_utilization_synth.rpt -pb top_block_init_i2c_v1_0_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 21 11:49:56 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  9 22:17:32 2025...

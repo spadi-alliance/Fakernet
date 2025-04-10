@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Fri Aug  9 12:48:20 2024
-// Host        : e16fpga01 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top top_block_I2C_Controller_v1_0_0_1 -prefix
-//               top_block_I2C_Controller_v1_0_0_1_ top_block_I2C_Controller_v1_0_0_1_stub.v
+// Date        : Thu Apr 10 11:09:31 2025
+// Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1_stub.v
 // Design      : top_block_I2C_Controller_v1_0_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i
@@ -14,8 +14,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "I2C_Controller_v1_0,Vivado 2022.2" *)
-module top_block_I2C_Controller_v1_0_0_1(start_i2c_read, start_i2c_write, 
-  start_i2c_write_all, i2c_waddr_i, i2c_raddr_i, i2c_rdata_o, i2c_done, i2c_busy, 
+module top_block_I2C_Controller_v1_0_0_1(start_i2c_read, start_i2c_write, i2c_busy, 
   m00_axi_init_axi_txn, m00_axi_error, m00_axi_txn_done, m00_axi_aclk, m00_axi_aresetn, 
   m00_axi_awaddr, m00_axi_awprot, m00_axi_awvalid, m00_axi_awready, m00_axi_wdata, 
   m00_axi_wstrb, m00_axi_wvalid, m00_axi_wready, m00_axi_bresp, m00_axi_bvalid, 
@@ -26,14 +25,9 @@ module top_block_I2C_Controller_v1_0_0_1(start_i2c_read, start_i2c_write,
   m01_axi_wvalid, m01_axi_wready, m01_axi_bresp, m01_axi_bvalid, m01_axi_bready, 
   m01_axi_araddr, m01_axi_arprot, m01_axi_arvalid, m01_axi_arready, m01_axi_rdata, 
   m01_axi_rresp, m01_axi_rvalid, m01_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="start_i2c_read,start_i2c_write,start_i2c_write_all,i2c_waddr_i[31:0],i2c_raddr_i[31:0],i2c_rdata_o[31:0],i2c_done,i2c_busy,m00_axi_init_axi_txn,m00_axi_error,m00_axi_txn_done,m00_axi_aclk,m00_axi_aresetn,m00_axi_awaddr[31:0],m00_axi_awprot[2:0],m00_axi_awvalid,m00_axi_awready,m00_axi_wdata[31:0],m00_axi_wstrb[3:0],m00_axi_wvalid,m00_axi_wready,m00_axi_bresp[1:0],m00_axi_bvalid,m00_axi_bready,m00_axi_araddr[31:0],m00_axi_arprot[2:0],m00_axi_arvalid,m00_axi_arready,m00_axi_rdata[31:0],m00_axi_rresp[1:0],m00_axi_rvalid,m00_axi_rready,m01_axi_init_axi_txn,m01_axi_error,m01_axi_txn_done,m01_axi_aclk,m01_axi_aresetn,m01_axi_awaddr[31:0],m01_axi_awprot[2:0],m01_axi_awvalid,m01_axi_awready,m01_axi_wdata[31:0],m01_axi_wstrb[3:0],m01_axi_wvalid,m01_axi_wready,m01_axi_bresp[1:0],m01_axi_bvalid,m01_axi_bready,m01_axi_araddr[31:0],m01_axi_arprot[2:0],m01_axi_arvalid,m01_axi_arready,m01_axi_rdata[31:0],m01_axi_rresp[1:0],m01_axi_rvalid,m01_axi_rready" */;
+/* synthesis syn_black_box black_box_pad_pin="start_i2c_read,start_i2c_write,i2c_busy,m00_axi_init_axi_txn,m00_axi_error,m00_axi_txn_done,m00_axi_aclk,m00_axi_aresetn,m00_axi_awaddr[31:0],m00_axi_awprot[2:0],m00_axi_awvalid,m00_axi_awready,m00_axi_wdata[31:0],m00_axi_wstrb[3:0],m00_axi_wvalid,m00_axi_wready,m00_axi_bresp[1:0],m00_axi_bvalid,m00_axi_bready,m00_axi_araddr[31:0],m00_axi_arprot[2:0],m00_axi_arvalid,m00_axi_arready,m00_axi_rdata[31:0],m00_axi_rresp[1:0],m00_axi_rvalid,m00_axi_rready,m01_axi_init_axi_txn,m01_axi_error,m01_axi_txn_done,m01_axi_aclk,m01_axi_aresetn,m01_axi_awaddr[31:0],m01_axi_awprot[2:0],m01_axi_awvalid,m01_axi_awready,m01_axi_wdata[31:0],m01_axi_wstrb[3:0],m01_axi_wvalid,m01_axi_wready,m01_axi_bresp[1:0],m01_axi_bvalid,m01_axi_bready,m01_axi_araddr[31:0],m01_axi_arprot[2:0],m01_axi_arvalid,m01_axi_arready,m01_axi_rdata[31:0],m01_axi_rresp[1:0],m01_axi_rvalid,m01_axi_rready" */;
   input start_i2c_read;
   input start_i2c_write;
-  input start_i2c_write_all;
-  input [31:0]i2c_waddr_i;
-  input [31:0]i2c_raddr_i;
-  output [31:0]i2c_rdata_o;
-  output i2c_done;
   output i2c_busy;
   input m00_axi_init_axi_txn;
   output m00_axi_error;

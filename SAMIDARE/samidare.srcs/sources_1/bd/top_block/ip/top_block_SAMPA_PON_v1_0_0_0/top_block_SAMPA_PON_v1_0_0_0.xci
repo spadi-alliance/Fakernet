@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_SAMPA_PON_v1_0_0_0",
-    "cell_name": "SAMPA_PON_v1_0_0",
+    "cell_name": "Config_wrapper/SAMPA_PON_v1_0_0",
     "component_reference": "xilinx.com:module_ref:SAMPA_PON_v1_0:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_SAMPA_PON_v1_0_0_0",
@@ -53,6 +53,10 @@
     "boundary": {
       "ports": {
         "sampa_power_on": [ { "direction": "out" } ],
+        "cg0": [ { "direction": "out" } ],
+        "cg1": [ { "direction": "out" } ],
+        "cts": [ { "direction": "out" } ],
+        "pol": [ { "direction": "out" } ],
         "m00_axi_init_axi_txn": [ { "direction": "in" } ],
         "m00_axi_error": [ { "direction": "out" } ],
         "m00_axi_txn_done": [ { "direction": "out" } ],

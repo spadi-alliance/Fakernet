@@ -1,6 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
+//	module native_to_axi_lite_v1_0_M00_AXI #// the same module as the Fnet
 	module I2C_Controller_v1_0_M00_AXI #
 	(
 		// Users to add parameters here
@@ -21,13 +22,17 @@
 		parameter integer C_M_AXI_DATA_WIDTH	= 32,
 		// Transaction number is the number of write 
     // and read transactions the master will perform as a part of this example memory test.
-//		parameter integer C_M_TRANSACTIONS_NUM	= 4
-		parameter integer C_M_TRANSACTIONS_NUM	= 1
+		parameter integer C_M_TRANSACTIONS_NUM	= 4
 	)
 	(
 		// Users to add ports here
-        input wire [31:0] bram_addr,
-		input wire bram_txn,
+        
+        input wire [31:0] regacc_addr,
+        output wire [31:0] regacc_data_rd,
+        input wire [31:0] regacc_data_wr,
+        input wire regacc_write,
+        input wire regacc_read,
+        output wire regacc_done,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -177,6 +182,10 @@
 	reg  	init_txn_ff2;
 	reg  	init_txn_edge;
 	wire  	init_txn_pulse;
+	wire  	init_txn;
+	
+	reg   regacc_rd_r;
+	reg   regacc_wr_r;
 
 
 	// I/O Connections assignments
@@ -194,8 +203,7 @@
 	//Write Response (B)
 	assign M_AXI_BREADY	= axi_bready;
 	//Read Address (AR)
-//	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_araddr;
-	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + {axi_araddr[C_M_AXI_ADDR_WIDTH-3 : 0] , 2'b00};
+	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_araddr;
 	assign M_AXI_ARVALID	= axi_arvalid;
 	assign M_AXI_ARPROT	= 3'b001;
 	//Read and Read Response (R)
@@ -203,7 +211,7 @@
 	//Example design I/O
 	assign TXN_DONE	= compare_done;
 	assign init_txn_pulse	= (!init_txn_ff2) && init_txn_ff;
-
+    assign init_txn = regacc_write || regacc_read;
 
 	//Generate a pulse to initiate AXI transaction.
 	always @(posedge M_AXI_ACLK)										      
@@ -212,13 +220,28 @@
 	    if (M_AXI_ARESETN == 0 )                                                   
 	      begin                                                                    
 	        init_txn_ff <= 1'b0;                                                   
-	        init_txn_ff2 <= 1'b0;                                                   
+	        init_txn_ff2 <= 1'b0;  
+            
+            regacc_wr_r <= 1'b0;
+            regacc_rd_r <= 1'b0;                                                 
 	      end                                                                               
 	    else                                                                       
 	      begin  
 //	        init_txn_ff <= INIT_AXI_TXN;
-	        init_txn_ff <= bram_txn;
-	        init_txn_ff2 <= init_txn_ff;                                                                 
+	        init_txn_ff <= init_txn;
+	        init_txn_ff2 <= init_txn_ff;           
+	        
+	        if(init_txn_ff2==1'b1)
+	        begin
+	           regacc_wr_r <= 1'b0;
+	           regacc_rd_r <= 1'b0;
+	        end else if(regacc_write == 1'b1)
+	        begin
+	           regacc_wr_r <= 1'b1;
+	        end else if(regacc_read == 1'b1)
+	        begin
+	           regacc_rd_r <= 1'b1;
+	        end                                                      
 	      end                                                                      
 	  end     
 
@@ -440,6 +463,12 @@
 	//User Logic
 	//--------------------------------
 
+
+
+    reg [31:0] regacc_data_rd_r;
+    reg regacc_done_rd;
+    reg regacc_done_wr;
+    
 	//Address/Data Stimulus
 
 	//Address/data pairs for this example. The read and write values should
@@ -451,13 +480,15 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
 	          begin                                                 
-	            axi_awaddr <= 0;                                    
+//	            axi_awaddr <= 0;                                    
+	            axi_awaddr <= regacc_addr;                                    
 	          end                                                   
 	          // Signals a new write address/ write data is         
 	          // available by user logic                            
 	        else if (M_AXI_AWREADY && axi_awvalid)                  
 	          begin                                                 
-	            axi_awaddr <= axi_awaddr + 32'h00000004;            
+//	            axi_awaddr <= axi_awaddr + 32'h00000004;            
+	            axi_awaddr <= regacc_addr;           
 	                                                                
 	          end                                                   
 	      end                                                       
@@ -467,13 +498,15 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0 || init_txn_pulse == 1'b1 )                                
 	          begin                                                 
-	            axi_wdata <= C_M_START_DATA_VALUE;                  
+//	            axi_wdata <= C_M_START_DATA_VALUE;                  
+	            axi_wdata <= regacc_data_wr;                  
 	          end                                                   
 	        // Signals a new write address/ write data is           
 	        // available by user logic                              
 	        else if (M_AXI_WREADY && axi_wvalid)                    
 	          begin                                                 
-	            axi_wdata <= C_M_START_DATA_VALUE + write_index;    
+	            axi_wdata <= regacc_data_wr;                  
+//	            axi_wdata <= C_M_START_DATA_VALUE + write_index;    
 	          end                                                   
 	        end          	                                       
 	                                                                
@@ -482,32 +515,33 @@
 	      begin                                                     
 	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
 	          begin                                                 
-	            axi_araddr <= bram_addr;                                    
+//	            axi_araddr <= 0;                                    
+	            axi_araddr <= regacc_addr;                                    
 	          end                                                   
 	          // Signals a new write address/ write data is         
 	          // available by user logic                            
 	        else if (M_AXI_ARREADY && axi_arvalid)                  
 	          begin                                                 
 //	            axi_araddr <= axi_araddr + 32'h00000004;            
-	            axi_araddr <= axi_araddr;            
+	            axi_araddr <= regacc_addr;            
 	          end                                                   
 	      end                                                       
 	                                                                
 	                                                                
 	                                                                
-	  always @(posedge M_AXI_ACLK)                                  
-	      begin                                                     
-	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
-	          begin                                                 
-	            expected_rdata <= C_M_START_DATA_VALUE;             
-	          end                                                   
-	          // Signals a new write address/ write data is         
-	          // available by user logic                            
-	        else if (M_AXI_RVALID && axi_rready)                    
-	          begin                                                 
-	            expected_rdata <= C_M_START_DATA_VALUE + read_index;
-	          end                                                   
-	      end                                                       
+//	  always @(posedge M_AXI_ACLK)                                  
+//	      begin                                                     
+//	        if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                
+//	          begin                                                 
+//	            expected_rdata <= C_M_START_DATA_VALUE;             
+//	          end                                                   
+//	          // Signals a new write address/ write data is         
+//	          // available by user logic                            
+//	        else if (M_AXI_RVALID && axi_rready)                    
+//	          begin                                                 
+//	            expected_rdata <= C_M_START_DATA_VALUE + read_index;
+//	          end                                                   
+//	      end                                                       
 	  //implement master command interface state machine                         
 	  always @ ( posedge M_AXI_ACLK)                                                    
 	  begin                                                                             
@@ -531,45 +565,49 @@
 	          IDLE:                                                             
 	          // This state is responsible to initiate 
 	          // AXI transaction when init_txn_pulse is asserted 
-	            if ( init_txn_pulse == 1'b1)                                     
+	            if ( init_txn_pulse == 1'b1 && regacc_wr_r ==1'b1)                                     
 	              begin                                                                 
-//	                mst_exec_state  <= INIT_WRITE;                                      
-	                mst_exec_state  <= INIT_READ;                                      
+	                mst_exec_state  <= INIT_WRITE;                                      
 	                ERROR <= 1'b0;
 	                compare_done <= 1'b0;
 	              end                                                                   
-	            else                                                                    
+	            else if(init_txn_pulse == 1'b1 && regacc_rd_r ==1'b1)
+	              begin                    
+	                mst_exec_state  <= INIT_READ;
+	              end                                         
+	            else 
 	              begin                                                                 
 	                mst_exec_state  <= IDLE;                                    
 	              end                                                                   
 	                                                                                    
-//	          INIT_WRITE:                                                               
-//	            // This state is responsible to issue start_single_write pulse to       
-//	            // initiate a write transaction. Write transactions will be             
-//	            // issued until last_write signal is asserted.                          
-//	            // write controller                                                     
-//	            if (writes_done)                                                        
-//	              begin                                                                 
+	          INIT_WRITE:                                                               
+	            // This state is responsible to issue start_single_write pulse to       
+	            // initiate a write transaction. Write transactions will be             
+	            // issued until last_write signal is asserted.                          
+	            // write controller                                                     
+	            if (writes_done)                                                        
+	              begin                                                                 
 //	                mst_exec_state <= INIT_READ;//                                      
-//	              end                                                                   
-//	            else                                                                    
-//	              begin                                                                 
-//	                mst_exec_state  <= INIT_WRITE;                                      
+	                mst_exec_state <= IDLE;//                                      
+	              end                                                                   
+	            else                                                                    
+	              begin                                                                 
+	                mst_exec_state  <= INIT_WRITE;                                      
 	                                                                                    
-//	                  if (~axi_awvalid && ~axi_wvalid && ~M_AXI_BVALID && ~last_write && ~start_single_write && ~write_issued)
-//	                    begin                                                           
-//	                      start_single_write <= 1'b1;                                   
-//	                      write_issued  <= 1'b1;                                        
-//	                    end                                                             
-//	                  else if (axi_bready)                                              
-//	                    begin                                                           
-//	                      write_issued  <= 1'b0;                                        
-//	                    end                                                             
-//	                  else                                                              
-//	                    begin                                                           
-//	                      start_single_write <= 1'b0; //Negate to generate a pulse      
-//	                    end                                                             
-//	              end                                                                   
+	                  if (~axi_awvalid && ~axi_wvalid && ~M_AXI_BVALID && ~last_write && ~start_single_write && ~write_issued)
+	                    begin                                                           
+	                      start_single_write <= 1'b1;                                   
+	                      write_issued  <= 1'b1;                                        
+	                    end                                                             
+	                  else if (axi_bready)                                              
+	                    begin                                                           
+	                      write_issued  <= 1'b0;                                        
+	                    end                                                             
+	                  else                                                              
+	                    begin                                                           
+	                      start_single_write <= 1'b0; //Negate to generate a pulse      
+	                    end                                                             
+	              end                                                                   
 	                                                                                    
 	          INIT_READ:                                                                
 	            // This state is responsible to issue start_single_read pulse to        
@@ -578,7 +616,6 @@
 	             // read controller                                                     
 	             if (reads_done)                                                        
 	               begin                                                                
-//	                 mst_exec_state <= INIT_COMPARE;                                    
 	                 mst_exec_state <= IDLE;                                    
 	               end                                                                  
 	             else                                                                   
@@ -608,7 +645,7 @@
 //	                 ERROR <= error_reg; 
 //	                 mst_exec_state <= IDLE;                                    
 //	                 compare_done <= 1'b1;                                              
-//	             end                                                                  
+//	             end                                                     
 	           default :                                                                
 	             begin                                                                  
 	               mst_exec_state  <= IDLE;                                     
@@ -625,7 +662,7 @@
 	      last_write <= 1'b0;                                                           
 	                                                                                    
 	    //The last write should be associated with a write address ready response       
-	    else if ((write_index == C_M_TRANSACTIONS_NUM) && M_AXI_AWREADY)                
+	    else if ((write_index == 1) && M_AXI_AWREADY)                
 	      last_write <= 1'b1;                                                           
 	    else                                                                            
 	      last_write <= last_write;                                                     
@@ -661,7 +698,8 @@
 	      last_read <= 1'b0;                                                            
 	                                                                                    
 	    //The last read should be associated with a read address ready response         
-	    else if ((read_index == C_M_TRANSACTIONS_NUM) && (M_AXI_ARREADY) )              
+//	    else if ((read_index == C_M_TRANSACTIONS_NUM) && (M_AXI_ARREADY) )              
+	    else if ((read_index == 1'b1) && (M_AXI_ARREADY) )              
 	      last_read <= 1'b1;                                                            
 	    else                                                                            
 	      last_read <= last_read;                                                       
@@ -689,33 +727,57 @@
 	//Example design error register                                                     
 	//-----------------------------                                                     
 	                                                                                    
-	//Data Comparison                                                                   
-	  always @(posedge M_AXI_ACLK)                                                      
-	  begin                                                                             
-	    if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                                         
-	    read_mismatch <= 1'b0;                                                          
+//	//Data Comparison                                                                   
+//	  always @(posedge M_AXI_ACLK)                                                      
+//	  begin                                                                             
+//	    if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                                         
+//	    read_mismatch <= 1'b0;                                                          
 	                                                                                    
-	    //The read data when available (on axi_rready) is compared with the expected data
-	    else if ((M_AXI_RVALID && axi_rready) && (M_AXI_RDATA != expected_rdata))         
-	      read_mismatch <= 1'b1;                                                        
-	    else                                                                            
-	      read_mismatch <= read_mismatch;                                               
-	  end                                                                               
+//	    //The read data when available (on axi_rready) is compared with the expected data
+//	    else if ((M_AXI_RVALID && axi_rready) && (M_AXI_RDATA != expected_rdata))         
+//	      read_mismatch <= 1'b1;                                                        
+//	    else                                                                            
+//	      read_mismatch <= read_mismatch;                                               
+//	  end                                                                               
 	                                                                                    
-	// Register and hold any data mismatches, or read/write interface errors            
-	  always @(posedge M_AXI_ACLK)                                                      
-	  begin                                                                             
-	    if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                                         
-	      error_reg <= 1'b0;                                                            
+//	// Register and hold any data mismatches, or read/write interface errors            
+//	  always @(posedge M_AXI_ACLK)                                                      
+//	  begin                                                                             
+//	    if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                                         
+//	      error_reg <= 1'b0;                                                            
 	                                                                                    
-	    //Capture any error types                                                       
-	    else if (read_mismatch || write_resp_error || read_resp_error)                  
-	      error_reg <= 1'b1;                                                            
-	    else                                                                            
-	      error_reg <= error_reg;                                                       
-	  end                                                                               
+//	    //Capture any error types                                                       
+//	    else if (read_mismatch || write_resp_error || read_resp_error)                  
+//	      error_reg <= 1'b1;                                                            
+//	    else                                                                            
+//	      error_reg <= error_reg;                                                       
+//	  end                                                                               
 	// Add user logic here
-
+	  always @(posedge M_AXI_ACLK)                                                      
+	  begin                                 
+	  
+    	//regacc_done_wr <= regacc_write;                                            
+	    if(last_write && M_AXI_BVALID && axi_bready)
+	       regacc_done_wr <= 1'b1;
+	    else
+	       regacc_done_wr <= 1'b0;
+	    
+	    
+	    if (M_AXI_ARESETN == 0  || init_txn_pulse == 1'b1)                                                           
+	      regacc_done_rd <= 1'b0;                              
+	                                                                                    
+	    //read data
+	    else if ((M_AXI_RVALID && axi_rready)) begin  
+	      regacc_data_rd_r <= M_AXI_RDATA;
+	      regacc_done_rd <= 1'b1;
+	                                                     
+	    end else                                                                            
+	      regacc_done_rd <= 1'b0;
+	                                                     
+	  end          
+	  
+	  assign regacc_data_rd = regacc_data_rd_r;
+	  assign regacc_done = regacc_done_rd || regacc_done_wr; 
 	// User logic ends
 
 	endmodule

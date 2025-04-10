@@ -95,6 +95,8 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/INIT_I2C_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0

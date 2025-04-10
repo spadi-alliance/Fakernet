@@ -235,7 +235,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a667f4cc</spirit:value>
+            <spirit:value>640cd015</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -248,7 +248,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a667f4cc</spirit:value>
+            <spirit:value>640cd015</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -652,7 +652,12 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>TARGET_ADDRESS</spirit:name>
         <spirit:displayName>Target Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00005000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00000500</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>TXN_TIMING</spirit:name>
+        <spirit:displayName>Txn Timing</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TXN_TIMING" spirit:bitStringLength="28">0x0000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -694,7 +699,7 @@
       <spirit:file>
         <spirit:name>xgui/SAMPA_TRG_EN_v1_0_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f38898a5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_93ec6cff</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -704,7 +709,12 @@
     <spirit:parameter>
       <spirit:name>TARGET_ADDRESS</spirit:name>
       <spirit:displayName>Target Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00005000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TARGET_ADDRESS" spirit:bitStringLength="32">0x00000500</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>TXN_TIMING</spirit:name>
+      <spirit:displayName>Txn Timing</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TXN_TIMING" spirit:bitStringLength="28">0x0000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
@@ -751,7 +761,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-03-03T09:50:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-04-09T13:20:10Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

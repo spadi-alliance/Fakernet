@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -59,11 +59,6 @@
 module top_block_I2C_Controller_v1_0_0_1 (
   start_i2c_read,
   start_i2c_write,
-  start_i2c_write_all,
-  i2c_waddr_i,
-  i2c_raddr_i,
-  i2c_rdata_o,
-  i2c_done,
   i2c_busy,
   m00_axi_init_axi_txn,
   m00_axi_error,
@@ -117,11 +112,6 @@ module top_block_I2C_Controller_v1_0_0_1 (
 
 input wire start_i2c_read;
 input wire start_i2c_write;
-input wire start_i2c_write_all;
-input wire [31 : 0] i2c_waddr_i;
-input wire [31 : 0] i2c_raddr_i;
-output wire [31 : 0] i2c_rdata_o;
-output wire i2c_done;
 output wire i2c_busy;
 input wire m00_axi_init_axi_txn;
 output wire m00_axi_error;
@@ -237,11 +227,6 @@ output wire m01_axi_rready;
   ) inst (
     .start_i2c_read(start_i2c_read),
     .start_i2c_write(start_i2c_write),
-    .start_i2c_write_all(start_i2c_write_all),
-    .i2c_waddr_i(i2c_waddr_i),
-    .i2c_raddr_i(i2c_raddr_i),
-    .i2c_rdata_o(i2c_rdata_o),
-    .i2c_done(i2c_done),
     .i2c_busy(i2c_busy),
     .m00_axi_init_axi_txn(m00_axi_init_axi_txn),
     .m00_axi_error(m00_axi_error),

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -65,6 +65,7 @@ module top_block_u_led_inst_0_0 (
   LED_REG1,
   LED_REG2,
   LED_REG3,
+  DIPSW,
   INIT_AXI_TXN,
   INIT_AXI_TXN_SUB,
   LED_TXN_DONE,
@@ -82,6 +83,7 @@ input wire [31 : 0] LED_REG0;
 input wire [31 : 0] LED_REG1;
 input wire [31 : 0] LED_REG2;
 input wire [31 : 0] LED_REG3;
+input wire [3 : 0] DIPSW;
 output wire INIT_AXI_TXN;
 output wire INIT_AXI_TXN_SUB;
 input wire LED_TXN_DONE;
@@ -97,6 +99,7 @@ output wire [3 : 0] LED;
     .LED_REG1(LED_REG1),
     .LED_REG2(LED_REG2),
     .LED_REG3(LED_REG3),
+    .DIPSW(DIPSW),
     .INIT_AXI_TXN(INIT_AXI_TXN),
     .INIT_AXI_TXN_SUB(INIT_AXI_TXN_SUB),
     .LED_TXN_DONE(LED_TXN_DONE),

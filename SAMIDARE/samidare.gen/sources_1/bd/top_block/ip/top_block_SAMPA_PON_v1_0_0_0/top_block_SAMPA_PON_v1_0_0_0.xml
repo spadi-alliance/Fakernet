@@ -578,7 +578,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:90756fb9</spirit:value>
+            <spirit:value>9:88b8242e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -589,7 +589,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:90756fb9</spirit:value>
+            <spirit:value>9:88b8242e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -605,11 +605,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 09 01:55:41 UTC 2024</spirit:value>
+            <spirit:value>Tue Apr 08 15:08:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:90756fb9</spirit:value>
+            <spirit:value>9:88b8242e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -621,7 +621,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c168dcb1</spirit:value>
+            <spirit:value>9:f7dad495</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -637,11 +637,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 09 01:55:41 UTC 2024</spirit:value>
+            <spirit:value>Tue Apr 08 15:08:13 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c168dcb1</spirit:value>
+            <spirit:value>9:f7dad495</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -655,11 +655,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 12 12:12:26 UTC 2024</spirit:value>
+            <spirit:value>Tue Apr 08 15:09:26 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:90756fb9</spirit:value>
+            <spirit:value>9:88b8242e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -667,6 +667,58 @@
     <spirit:ports>
       <spirit:port>
         <spirit:name>sampa_power_on</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>cg0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>cg1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>cts</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pol</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1111,6 +1163,13 @@
     <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>top_block_SAMPA_PON_v1_0_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>top_block_SAMPA_PON_v1_0_0_0_stub.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
@@ -1123,13 +1182,6 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>top_block_SAMPA_PON_v1_0_0_0_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -1137,10 +1189,10 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>top_block_SAMPA_PON_v1_0_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:name>top_block_SAMPA_PON_v1_0_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
