@@ -1,0 +1,30 @@
+{
+    "Report Information": {
+        "Copyright": "Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.",
+        "Tool Version": "Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022",
+        "Date": "Thu Apr 10 23:11:25 2025",
+        "Host": "e16fpga01 running 64-bit Ubuntu 24.04.2 LTS",
+        "Command": "report_design_analysis -qor_summary -disable_device_warning -json /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/impl_1/.Xil/Vivado-4069971-e16fpga01/dc_drv.0/dc/prj_ip.runs/u_ila_2_synth_1/.Xil/Vivado-4071138-e16fpga01/dcp0/u_ila_2_rda.json",
+        "Design": "u_ila_2",
+        "Device": "xcau15p",
+        "Design State": "Synthesized"
+    },
+    "Design QoR Summary": [{
+            "Task Name": "synth_design",
+            "Options": "-incremental_mode off",
+            "Directives": "",
+            "Runtime(mins)": "1",
+            "Wns(ns)": "",
+            "Tns(ns)": "",
+            "Whs(ns)": "",
+            "Ths(ns)": "",
+            "RQA": "",
+            "Global Cong Level N-E-S-W": "",
+            "Global Cong Tile% N-E-S-W": "",
+            "Long Cong Level N-E-S-W": "",
+            "Long Cong Tile% N-E-S-W": "",
+            "Short Cong Level N-E-S-W": "",
+            "Short Cong Tile% N-E-S-W": "",
+            "Number of threads": "4"
+        }]
+}

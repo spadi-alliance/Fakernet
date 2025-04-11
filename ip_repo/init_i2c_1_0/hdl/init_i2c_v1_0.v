@@ -5,6 +5,8 @@
 	(
 		// Users to add parameters here
         parameter  TARGET_ADDRESS = 32'h00005000,
+        parameter  TXN_TIMING     = 28'h000_0000,
+        
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -42,7 +44,7 @@
 		input wire [1 : 0] m00_axi_bresp,
 		input wire  m00_axi_bvalid,
 		output wire  m00_axi_bready,
-		output wire [C_M00_AXI_ADDR_WIDTH-1 : 0] m00_axi_araddr,
+		(*mark_debug = "true"*)output wire [C_M00_AXI_ADDR_WIDTH-1 : 0] m00_axi_araddr,
 		output wire [2 : 0] m00_axi_arprot,
 		output wire  m00_axi_arvalid,
 		input wire  m00_axi_arready,
@@ -51,7 +53,9 @@
 		input wire  m00_axi_rvalid,
 		output wire  m00_axi_rready
 	);
-	wire[31:0] init_i2c;
+	(*mark_debug = "true"*)wire[31:0] init_i2c;
+//	(*mark_debug = "true"*)reg [31:0] init_i2c_reg;
+//	assign init_i2c = init_i2c_reg;
 // Instantiation of Axi Bus Interface M00_AXI
 	SAMPA_REGREAD_v1_0_M00_AXI # ( 
 	    .TARGET_ADDRESS(TARGET_ADDRESS),
@@ -61,8 +65,9 @@
 		.C_M_AXI_DATA_WIDTH(C_M00_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M00_AXI_TRANSACTIONS_NUM)
 	) SAMPA_REGREAD_v1_0_M00_AXI_inst (
-	    .REGVAL(init_i2c_reg),
-		.INIT_AXI_TXN(m00_axi_init_axi_txn),
+	    .REGVAL(init_i2c),
+//		.INIT_AXI_TXN(m00_axi_init_axi_txn),
+		.INIT_AXI_TXN(txn),
 		.ERROR(m00_axi_error),
 		.TXN_DONE(m00_axi_txn_done),
 		.M_AXI_ACLK(m00_axi_aclk),
@@ -91,22 +96,23 @@
 	// Add user logic here
 
 	reg [31:0] cnt;
-	reg txn;
+	(*mark_debug = "true"*) reg txn;
 	always @(posedge m00_axi_aclk)                                                      
 	  begin
 	    cnt <= cnt+1;                                                                             
-	    if (cnt[27:0]==28'h00000000)
+	    if (cnt[27:0]==TXN_TIMING)
 	       txn <= 1'b1;
 	    else
 	       txn <= 1'b0;   
 	    end  
 	    
-	reg init_i2c_wr_r;
-	reg init_i2c_wr_rr;
-	reg init_i2c_rd_r;
-	reg init_i2c_rd_rr;
+	(*mark_debug = "true"*)reg init_i2c_wr_r;
+	(*mark_debug = "true"*)reg init_i2c_wr_rr;
+	(*mark_debug = "true"*)reg init_i2c_rd_r;
+	(*mark_debug = "true"*)reg init_i2c_rd_rr;
 	always @(posedge m00_axi_aclk)                                                      
 	  begin                 
+//	    init_i2c_reg <= init_i2c;
 	    init_i2c_wr_r  <= init_i2c[0];
 	    init_i2c_wr_rr <= init_i2c_wr_r;
 	    init_i2c_rd_r  <= init_i2c[1];

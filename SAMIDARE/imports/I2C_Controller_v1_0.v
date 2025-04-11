@@ -99,22 +99,22 @@
 		input wire  m01_axi_rvalid,
 		output wire  m01_axi_rready
 	);
-// Instantiation of Axi Bus Interface M00_AXI
-wire [31:0] regacc_addr;
-reg  [31:0] regacc_addr_r;
-wire [31:0] bram_rdata;
-wire [31:0] bram_wdata;
-reg  [31:0] bram_rdata_r;
-reg  [31:0] bram_wdata_r;
-reg  regacc_write_r;
-reg  regacc_read_r;
-wire regacc_write;
-wire regacc_read;
-wire regacc_done;
-assign bram_wdata   = bram_wdata_r;
-assign regacc_addr  = regacc_addr_r; 
-assign regacc_write = regacc_write_r;
-assign regacc_read  = regacc_read_r;
+    // Instantiation of Axi Bus Interface M00_AXI
+    wire [31:0] regacc_addr;
+    reg  [31:0] regacc_addr_r;
+    wire [31:0] bram_rdata;
+    wire [31:0] bram_wdata;
+    reg  [31:0] bram_rdata_r;
+    reg  [31:0] bram_wdata_r;
+    reg  regacc_write_r;
+    reg  regacc_read_r;
+    wire regacc_write;
+    wire regacc_read;
+    wire regacc_done;
+    assign bram_wdata   = bram_wdata_r;
+    assign regacc_addr  = regacc_addr_r; 
+    assign regacc_write = regacc_write_r;
+    assign regacc_read  = regacc_read_r;
 	I2C_Controller_v1_0_M00_AXI # ( 
 		.C_M_START_DATA_VALUE(C_M00_AXI_START_DATA_VALUE),
 		.C_M_TARGET_SLAVE_BASE_ADDR(C_M00_AXI_TARGET_SLAVE_BASE_ADDR),
@@ -210,27 +210,29 @@ wire [31:0] rdata;
 	// Add user logic here
 	
 	//read sequence
-	parameter STATE_R_IDLE           = 4'd2;
-	parameter STATE_R_RESET_TX_FIFO0 = 4'd3; //reset by setting status register. addr0x100, 02
-	parameter STATE_R_RESET_TX_FIFO1 = 4'd4; //addr0x100, 04
-	parameter STATE_R_WRITE_FIFO0    = 4'd5; //header
-	parameter STATE_R_WRITE_FIFO1    = 4'd6; //body
-	parameter STATE_R_WRITE_FIFO2    = 4'd7; //footer0
-	parameter STATE_R_WRITE_FIFO3    = 4'd8; //footer1
-	parameter STATE_R_SEND           = 4'd9; //status register
-	parameter STATE_R_READ_FIFO0     = 4'd10; //
-	parameter STATE_R_WRITE_BRAM     = 4'd11; //
-	parameter STATE_R_END            = 4'd12;
+//	parameter STATE_R_IDLE           = 5'd2;
+	parameter STATE_R_RESET_TX_FIFO0 = 5'd3; //reset by setting status register. addr0x100, 02
+	parameter STATE_R_RESET_TX_FIFO1 = 5'd4; //addr0x100, 04
+	parameter STATE_R_WRITE_FIFO0    = 5'd5; //header
+	parameter STATE_R_WRITE_FIFO1    = 5'd6; //body
+	parameter STATE_R_WRITE_FIFO2    = 5'd7; //footer0
+	parameter STATE_R_WRITE_FIFO3    = 5'd8; //footer1
+	parameter STATE_R_SEND           = 5'd9; //status register
+	parameter STATE_R_READ_STATUS    = 5'd10; //
+	parameter STATE_R_READ_FIFO0     = 5'd11; //
+	parameter STATE_R_WRITE_BRAM     = 5'd12; //
+	parameter STATE_R_END            = 5'd13;
 	//write sequence
-	parameter STATE_W_IDLE           = 4'd2;
-	parameter STATE_W_RESET_TX_FIFO0 = 4'd3; //reset by setting status register
-	parameter STATE_W_RESET_TX_FIFO1 = 4'd4;
-	parameter STATE_W_WRITE_FIFO0    = 4'd5; //header
-	parameter STATE_W_WRITE_FIFO1    = 4'd6; //address
-	parameter STATE_W_WRITE_FIFO2    = 4'd7; //body
-	parameter STATE_W_WRITE_FIFO3    = 4'd8; //footer
-	parameter STATE_W_SEND           = 4'd9; //set status register
-	parameter STATE_W_END            = 4'd12;
+//	parameter STATE_W_IDLE           = 5'd2;
+	parameter STATE_W_RESET_TX_FIFO0 = 5'd14; //reset by setting status register
+	parameter STATE_W_RESET_TX_FIFO1 = 5'd15;
+	parameter STATE_W_WRITE_FIFO0    = 5'd16; //header
+	parameter STATE_W_WRITE_FIFO1    = 5'd17; //address
+	parameter STATE_W_READ_BRAM      = 5'd18; //address
+	parameter STATE_W_WRITE_FIFO2    = 5'd19; //body
+	parameter STATE_W_WRITE_FIFO3    = 5'd20; //footer
+	parameter STATE_W_SEND           = 5'd21; //set status register
+	parameter STATE_W_END            = 5'd22;
 	
 //	parameter STATE_WRITE_FIFO3    = 8'd9; //footer1
     parameter STATE_INIT      = 4'b0001;
@@ -259,16 +261,20 @@ wire [31:0] rdata;
     
     reg ack_data;
     
+    wire i2c_txn_done;
+    reg  i2c_txn_done_r;
+    assign i2c_txn_done = !i2c_txn_done_r && m01_axi_txn_done;
     
     (*mark_debug = "true"*) reg [3:0] state_i2c;
-    (*mark_debug = "true"*) reg [3:0] state_write;
-    (*mark_debug = "true"*) reg [3:0] state_read;
+//    (*mark_debug = "true"*) reg [3:0] state_write;
+//    (*mark_debug = "true"*) reg [3:0] state_read;
+    (*mark_debug = "true"*) reg [4:0] state_w_r;
     
     reg init_txn_bram;
-    reg i2c_wr;
-    reg i2c_rd;
-    (*mark_debug = "true"*) reg bram_read_done;
-    (*mark_debug = "true"*) reg bram_write_done;
+    (*mark_debug = "true"*) reg i2c_wr;
+    (*mark_debug = "true"*) reg i2c_rd;
+//    (*mark_debug = "true"*) reg bram_read_done;
+//    (*mark_debug = "true"*) reg bram_write_done;
     reg all_write_end;
     
     reg [31:0] bram_raddr; //bram read address. to be confirmed: the same with i2c_waddr?
@@ -286,6 +292,8 @@ wire [31:0] rdata;
     (*mark_debug = "true"*)reg [7:0] rcnt;// read  address
     (*mark_debug = "true"*)reg [1:0] scnt;// SAMPA number
     (*mark_debug = "true"*)reg [31:0] wait_cnt;
+    (*mark_debug = "true"*)reg [3:0] trans_cnt;
+    
     
     assign i2c_busy = busy;
     assign i2c_done = i2c_done_r;
@@ -310,15 +318,16 @@ wire [31:0] rdata;
 	           // reset signals          
 	           state_bram <= STATE_INIT;              
 	           state_i2c  <= STATE_INIT;      
-	           state_read <= STATE_INIT;      
-	           state_write <= STATE_INIT;        
+//	           state_read <= STATE_INIT;      
+//	           state_write <= STATE_INIT;        
+               state_w_r  <= STATE_INIT;
 	           start_reg_read_r <= 1'b0;
-
                init_txn_bram <= 1'b0;
 	      end                                                                       
 	    else                                                                       
 	      begin                                                                    
 
+	        i2c_txn_done_r <= m01_axi_txn_done;
 	                                
 	                                             
 	        case (state_i2c)//state machine for I2C                                                     
@@ -352,33 +361,9 @@ wire [31:0] rdata;
 //	                           cnt <= 4'b1000;
 	                       end 
 	               end                                                                
-	          STATE_WRITE:
-//	               begin
-//	                   if(state_bram == STATE_READ && start_bram_read == 1'b1)
-//	                       begin
-//	                           start_bram_read <= 1'b0;
-//	                       end else 
-//	                   if(bram_read_done == 1'b1)//start write to address
-//	                       begin
-//	                           ack_data <= 1'b1;
-//	                           i2c_wr <= 1'b1;
-//	                           i2c_wdata <= m00_axi_rdata;
-//	                           i2c_waddr <= bram_raddr;//to be confirmed
-//	                       end
-//	                   else if(m01_axi_txn_done == 1'b1)
-//	                       begin
-//	                           i2c_done_r <= 1'b1;
-//	                           i2c_wr <= 1'b0;
-//	                           state_i2c <= STATE_INIT;
-//	                       end
-//	                   else 
-//	                       begin
-//	                           i2c_wr <= i2c_wr;
-//	                       end
-                       
-//	               end               
+	          STATE_WRITE:         
                    begin
-                        if(state_write == STATE_W_WRITE_FIFO0)
+                        if(state_w_r == STATE_W_WRITE_FIFO2 && i2c_txn_done==1'b1)
                             begin
                                 wcnt <= wcnt + 1;
                             end
@@ -396,38 +381,8 @@ wire [31:0] rdata;
                             end
                    end                                          
 	          STATE_READ:
-//	               begin
-////                       if(m01_axi_rready==1'b0)//ok?
-////                        begin
-////                            i2c_rd  <= 1'b1;
-                            
-////                        end else begin
-////                            i2c_rd <= 1'b0;
-////                        end
-//                       if(cnt != 4'b0000)
-//                            begin
-//                                i2c_rd <= 1'b1;
-//                                cnt <= cnt-1;
-//                       end else
-//	                   if(m01_axi_txn_done == 1'b1)//end of read
-//	                       begin
-//	                           i2c_done_r <= 1'b1;
-//	                           i2c_rd <= 1'b0;
-//	                           state_i2c <= STATE_INIT;
-//	                       end else	                   
-//                       if(m01_axi_rvalid == 1'b1)
-//                            begin
-////                                i2c_rdata <= m01_axi_rdata;
-//                                i2c_rd <= 1'b0;
-//                                i2c_rdata <= rdata;
-//                            end
-//                        else
-//                            begin
-//                                i2c_rd <= i2c_rd;
-//                            end
-//	               end    
                    begin
-                        if(state_read == STATE_R_WRITE_FIFO0)
+                        if(state_w_r == STATE_R_WRITE_FIFO2 && i2c_txn_done==1'b1)
                             begin
                                 rcnt <= rcnt + 1;
                             end
@@ -447,203 +402,354 @@ wire [31:0] rdata;
 	        endcase//state_i2c
 	        
 	           
-	        case (state_write)
+	        case (state_w_r) 
+	        // i2c_wr, i2c_rd, state_w_r, cnt, start_bramr_read, start_bram_write
 	             STATE_INIT:
 	               begin
-	                   state_write <= STATE_W_IDLE;
-	                   i2c_wr <= 1'b0;
+	                   state_w_r <= STATE_IDLE;
+	                   i2c_wr  <= 1'b0;
+	                   i2c_rd  <= 1'b0;
+	                   cnt     <= 'b0;
 	               end
-                 STATE_W_IDLE           :
+                 STATE_IDLE           :
 	               begin
 	                   if(state_i2c == STATE_WRITE)
 	                       begin
-	                           
-	                           i2c_waddr <= 32'h0100;
-	                           i2c_wdata <= 32'h0002;
-	                           i2c_wr    <= 1'b1;
-	                           state_write <= STATE_W_RESET_TX_FIFO0;
+	                           i2c_wr    <= 1'b0;
+	                           i2c_rd <= 1'b0;
+	                           trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_W_RESET_TX_FIFO0;
+	                   end else 
+	                   if(state_i2c == STATE_READ)
+	                       begin
+	                           i2c_wr <= 1'b0;
+	                           i2c_rd <= 1'b0;
+	                           trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_R_RESET_TX_FIFO0;
 	                   end
 	               end
                  STATE_W_RESET_TX_FIFO0 : //reset by setting status register
 	               begin
-                       i2c_waddr <= 32'h0100;
-                       i2c_wdata <= 32'h0004;
-                       i2c_wr    <= 1'b1;
-	                   state_write <= STATE_W_RESET_TX_FIFO1;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+                               i2c_wr    <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_W_RESET_TX_FIFO1;
+                           end else begin
+	                           i2c_wr    <= 1'b1;
+	                           i2c_waddr <= 32'h0100;
+	                           i2c_wdata <= 32'h0002;
+                           end
 	               end
                  STATE_W_RESET_TX_FIFO1 :
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= 32'h01f0;
-                       i2c_wr    <= 1'b1;
-	                   state_write <= STATE_W_WRITE_FIFO0;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+                               i2c_wr    <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_W_WRITE_FIFO0;
+                           end else begin
+                               i2c_wr <= 1'b1;
+                               i2c_waddr <= 32'h0100;
+                               i2c_wdata <= 32'h0004;
+                           end
 	               end
                  STATE_W_WRITE_FIFO0    : //header
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= {scnt, wcnt[5:0]};//some address should be skipped
-                       bram_raddr_r <= {scnt, wcnt[5:0]};
-                       i2c_wr    <= 1'b1;
-                       start_bram_read <= 1'b1;
-	                   state_write <= STATE_W_WRITE_FIFO1;//address
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+                               i2c_wr    <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               start_bram_read <= 1'b0;
+                               state_w_r <= STATE_W_READ_BRAM;//address
+                           end else begin
+                               i2c_wr <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= 32'h01f0;
+                           end
+	               end
+	             STATE_W_READ_BRAM:
+	               begin 
+	                   if(state_bram == STATE_READ_DONE)
+	                       begin
+	                           i2c_wr    <= 1'b0;
+                               start_bram_read <= 1'b0;
+                               trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_W_WRITE_FIFO1;//body
+	                       end else begin
+                               start_bram_read <= 1'b1;
+	                           i2c_wr    <= 1'b0;
+	                       end
 	               end
                  STATE_W_WRITE_FIFO1    : //address
 	               begin
-//                       start_bram_read <= 1'b0;
-	                   if(state_bram == STATE_READ_DONE)
+	                   if(trans_cnt!=4'd0)
 	                       begin
-                               start_bram_read <= 1'b0;
-                               i2c_waddr <= 32'h0108;
-                               i2c_wdata <= bram_rdata;
-                               i2c_wr    <= 1'b1;
-	                           state_write <= STATE_W_WRITE_FIFO2;//body
-	                       end else begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+//                               start_bram_read <= 1'b0;
 	                           i2c_wr    <= 1'b0;
-	                   end
+                               trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_W_WRITE_FIFO2;
+	                       end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= {scnt, wcnt[5:0]};//some address should be skipped
+                               bram_raddr_r <= {scnt, wcnt[5:0]};
+//                               i2c_wdata <= bram_rdata;
+	                       end
 	                       
 	               end
                  STATE_W_WRITE_FIFO2    : //body
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= 32'h0200;
-                       i2c_wr    <= 1'b1;
-	                   state_write <= STATE_W_WRITE_FIFO3;//fotter
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+//                               start_bram_read <= 1'b0;
+	                           i2c_wr    <= 1'b0;
+                               trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_W_WRITE_FIFO3;
+	                       end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= bram_rdata;
+	                       end
 	                   //write to FIFO
 	               end
                  STATE_W_WRITE_FIFO3    : //footer
 	               begin
-                       i2c_waddr <= 32'h0100;
-                       i2c_wdata <= 32'h0005;
-                       i2c_wr    <= 1'b1;
-	                   state_write <= STATE_W_SEND;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+                               i2c_wr    <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_W_SEND;
+	                       end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= 32'h0200;
+	                       end
 	               end
                  STATE_W_SEND           : //set status register
 	               begin
-	                   i2c_wr    <= 1'b0;
-	                   state_write <= STATE_W_END;
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+                               i2c_wr    <= 1'b0;
+                               wait_cnt <= 'b0;
+                               state_w_r <= STATE_W_END;
+                           end else begin
+                               i2c_wr <= 1'b1;
+                               i2c_waddr <= 32'h0100;
+                               i2c_wdata <= 32'h0005;
+                           end
 	               end
                  STATE_W_END            :
 	               begin
-	                   i2c_wr <= 1'b0;
-	                   state_write <= STATE_W_IDLE;
-	               end
-	             default:
-	               begin
-	                   state_write <= STATE_INIT;
-	               end
-	        endcase     //state_write
-	        
-	        case (state_read)
-	             STATE_INIT:
-	               begin
-	                   state_read <= STATE_R_IDLE;
-	                   i2c_wr <= 1'b0;
-	                   i2c_rd <= 1'b0;
-	               end
-                 STATE_R_IDLE           :
-	               begin
-	                   if(state_i2c == STATE_READ)
+	                   if(wait_cnt <= 32'd100000)
 	                       begin
-                               i2c_waddr <= 32'h0100;
-                               i2c_wdata <= 32'h0002;
-                               i2c_wr    <= 1'b1;
-                               state_read <= STATE_R_RESET_TX_FIFO0;
+	                           wait_cnt <= wait_cnt+1;
+                           end else
+                           begin
+                               i2c_wr <= 1'b0;
+                               state_w_r <= STATE_IDLE;
                            end
 	               end
+//	             default:
+//	               begin
+//	                   state_write <= STATE_INIT;
+//	               end
+//	        endcase     //state_write
+	        
+	        
+//	        case (state_read)
+//	             STATE_INIT:
+//	               begin
+//	                   state_read <= STATE_R_IDLE;
+////	                   i2c_wr <= 1'b0;
+////	                   i2c_rd <= 1'b0;
+//	               end
+//                 STATE_R_IDLE           :
+//	               begin
+//	                   if(state_i2c == STATE_READ)
+//	                       begin
+//	                           i2c_wr <= 1'b0;
+//                               state_read <= STATE_R_RESET_TX_FIFO0;
+//                           end
+//	               end
                  STATE_R_RESET_TX_FIFO0 : //reset by setting control register
 	               begin
-                       i2c_waddr <= 32'h0100;
-                       i2c_wdata <= 32'h0004;
-                       i2c_wr    <= 1'b1;
-	                   state_read <= STATE_R_RESET_TX_FIFO1;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+	                           state_w_r <= STATE_R_RESET_TX_FIFO1;
+                           end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0100;
+                               i2c_wdata <= 32'h0002;
+                           end
 	               end
                  STATE_R_RESET_TX_FIFO1 :
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= 32'h01f0;
-                       i2c_wr    <= 1'b1;
-                       state_read <= STATE_R_WRITE_FIFO0;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_WRITE_FIFO0;
+	                       end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0100;
+                               i2c_wdata <= 32'h0004;
+	                       end
 	               end
                  STATE_R_WRITE_FIFO0    : //header
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= {scnt, rcnt[5:0]};//address
-                       bram_waddr_r <= {scnt, rcnt[5:0]};
-                       i2c_wr    <= 1'b1;
-                       state_read <= STATE_R_WRITE_FIFO1;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_WRITE_FIFO1;
+	                       end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= 32'h01f0;
+	                       end
 	               end
                  STATE_R_WRITE_FIFO1    : //address
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= 32'h01f1;
-                       i2c_wr    <= 1'b1;
-                       state_read <= STATE_R_WRITE_FIFO2;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_WRITE_FIFO2;
+                           end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= {scnt, rcnt[5:0]};//address
+                               bram_waddr_r <= {scnt, rcnt[5:0]};
+                           end
 	               end
                  STATE_R_WRITE_FIFO2    : //body
 	               begin
-                       i2c_waddr <= 32'h0108;
-                       i2c_wdata <= 32'h0201;
-                       i2c_wr    <= 1'b1;
-                       state_read <= STATE_R_WRITE_FIFO3;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_WRITE_FIFO3;
+                           end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= 32'h01f1;
+                           end
 	               end
                  STATE_R_WRITE_FIFO3    : //footer
 	               begin
-                       i2c_waddr <= 32'h0100;
-                       i2c_wdata <= 32'h0005;
-                       i2c_wr    <= 1'b1;
-                       wait_cnt <= 'b0;
-                       state_read <= STATE_R_SEND;
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_SEND;
+                           end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0108;
+                               i2c_wdata <= 32'h0201;
+                           end
 	               end
                  STATE_R_SEND           : 
 	               begin
-	                   i2c_wr <= 1'b0;
-	                   // wait for I2C end
-	                   wait_cnt <= wait_cnt+1;
-	                   if(wait_cnt >= 32'd100000)
+	                   if(trans_cnt!=4'd0)
 	                       begin
-                               i2c_rd <= 1'b1;
-                               i2c_raddr <= 32'h010c;
-                               state_read <= STATE_R_READ_FIFO0;
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
+	                   if(i2c_txn_done == 1'b1)
+	                       begin
+	                           i2c_wr <= 1'b0;
+                               wait_cnt <= 'b0;
+                               trans_cnt <= 4'd10;
+                               state_w_r <= STATE_R_READ_FIFO0;
+                           end else begin
+                               i2c_wr    <= 1'b1;
+                               i2c_waddr <= 32'h0100;
+                               i2c_wdata <= 32'h0005;
                            end
 	               end
                  STATE_R_READ_FIFO0    : 
 	               begin
-//	                   i2c_rd <= 1'b0;
-//                       if(cnt != 4'b0000)
-//                            begin
-//                                cnt <= cnt-1;
-//                       end else
-//	                   if(m01_axi_txn_done == 1'b1)//end of read
-//	                       begin
-//	                           i2c_done_r <= 1'b1;
-//	                           i2c_rd <= 1'b0;
-//	                           state_i2c <= STATE_INIT;
-//	                       end else	                   
+	                   if(wait_cnt <= 32'd100000)
+	                       begin
+	                           wait_cnt <= wait_cnt+1;
+                           end else
                        if(m01_axi_rvalid == 1'b1)
-                            begin
-//                                i2c_rdata <= m01_axi_rdata;
+                           begin
                                 i2c_rd <= 1'b0;
                                 i2c_rdata <= rdata;
                                 bram_wdata_r <= rdata;
                                 start_bram_write <= 1'b1;
-                                state_read <= STATE_R_WRITE_BRAM;
-                            end
+                                state_w_r <= STATE_R_WRITE_BRAM;
+                           end else begin
+                                i2c_rd <= 1'b1;
+                                i2c_raddr <= 32'h010c;
+                           end  
 	               end
 	             STATE_R_WRITE_BRAM://wait bram write done
 	               begin
 	                   if(state_bram == STATE_WRITE_DONE)
 	                       begin
 	                           start_bram_write <= 1'b0;
-	                           state_read <= STATE_R_END;
+	                           state_w_r <= STATE_R_END;
 	                       end
 	               end
                  STATE_R_END            :
 	               begin
-	                   state_read <= STATE_R_IDLE;
+	                   state_w_r <= STATE_IDLE;
 	               end
 	             default:
 	               begin
-	                   state_write <= STATE_INIT;
+	                   state_w_r <= STATE_INIT;
 	               end
 	        endcase        
 	        
@@ -654,8 +760,8 @@ wire [31:0] rdata;
 	               begin
 	                   state_bram <= STATE_IDLE;
 //	                   init_txn_bram <= 1'b0;
-	                   bram_read_done <= 1'b0;
-	                   bram_write_done <= 1'b0;
+//	                   bram_read_done <= 1'b0;
+//	                   bram_write_done <= 1'b0;
 	                   regacc_read_r <= 1'b0;
 	                   regacc_write_r <= 1'b0;
 	               end
@@ -668,7 +774,7 @@ wire [31:0] rdata;
 	                           regacc_addr_r <= {2'b01,bram_raddr_r[7:0]};
 //	                           regacc_addr_r <= raddr;
 //	                           init_txn_bram <= 1'b1;
-	                           bram_read_done <= 1'b0;
+//	                           bram_read_done <= 1'b0;
 	                           state_bram <= STATE_READ;
 	                       end else
 //	                       begin
@@ -678,32 +784,29 @@ wire [31:0] rdata;
 	                       begin
 	                           regacc_write_r <= 1'b1;
 	                           regacc_addr_r <= {2'b10,bram_waddr_r[7:0]};
-	                           bram_write_done <= 1'b0;
+//	                           bram_write_done <= 1'b0;
 	                           state_bram <= STATE_WRITE;
 	                       end //else
 //	                       begin
 //	                           init_txn_bram <= 1'b0;
 //	                       end
 	               end                                                               
-	          STATE_READ:
+	          STATE_READ:// SAMPA <-- data <-- BRAM
 	               begin
 //	                   if(m00_axi_txn_done==1'b1)
 	                           regacc_read_r <= 1'b0;
 	                   if(regacc_done == 1'b1)//end of read
 	                       begin
-//	                           state_bram <= STATE_IDLE;
 	                           state_bram <= STATE_READ_DONE;
-	                           bram_read_done <= 1'b0;
-//	                           init_txn_bram <= 1'b0;
 	                       end else 
 	                   if(m00_axi_rvalid==1'b1)
 	                       begin
-	                           bram_read_done <= 1'b1;
+//	                           bram_read_done <= 1'b1;
 	                       end
 	               end
-	           STATE_READ_DONE: // SAMPA <-- data <-- BRAM
+	           STATE_READ_DONE: 
 	               begin
-	                   if(state_write == STATE_W_WRITE_FIFO2) 
+	                   if(state_w_r == STATE_W_WRITE_FIFO2) 
 	                       begin
 	                           state_bram <= STATE_IDLE;
 	                       end
@@ -718,7 +821,7 @@ wire [31:0] rdata;
 	               end
                STATE_WRITE_DONE:
                    begin
-	                   if(state_read == STATE_R_END) 
+	                   if(state_w_r == STATE_R_END) 
 	                       begin
 	                           state_bram <= STATE_IDLE;
 	                       end

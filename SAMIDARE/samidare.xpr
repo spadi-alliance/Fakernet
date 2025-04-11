@@ -128,6 +128,20 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/imports/I2C_Controller_v1_0_M00_AXI.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -143,20 +157,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/imports/I2C_Controller_v1_0.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -649,6 +649,33 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.xci">
+          <Proxy FileSetName="top_block_u_led_inst_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xci">
+          <Proxy FileSetName="top_block_rst_clk_wiz_1_320M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_init_i2c_v1_0_0_0/top_block_init_i2c_v1_0_0_0.xci">
+          <Proxy FileSetName="top_block_init_i2c_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1.xci">
+          <Proxy FileSetName="top_block_I2C_Controller_v1_0_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci">
+          <Proxy FileSetName="top_block_das_rx_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0.xci">
+          <Proxy FileSetName="top_block_trigger_manager_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_event_builder_v0_1_0_1/top_block_event_builder_v0_1_0_1.xci">
+          <Proxy FileSetName="top_block_event_builder_v0_1_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci">
+          <Proxy FileSetName="top_block_data_processor_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_xpm_async_fifo_wrapp_0_0/top_block_xpm_async_fifo_wrapp_0_0.xci">
+          <Proxy FileSetName="top_block_xpm_async_fifo_wrapp_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_sender_v1_0_0_0/top_block_data_sender_v1_0_0_0.xci">
           <Proxy FileSetName="top_block_data_sender_v1_0_0_0"/>
         </CompFileExtendedInfo>
@@ -670,30 +697,6 @@
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_receiver_v1_0_0_0/top_block_data_receiver_v1_0_0_0.xci">
           <Proxy FileSetName="top_block_data_receiver_v1_0_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_u_led_inst_0_0/top_block_u_led_inst_0_0.xci">
-          <Proxy FileSetName="top_block_u_led_inst_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1.xci">
-          <Proxy FileSetName="top_block_I2C_Controller_v1_0_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_init_i2c_v1_0_0_0/top_block_init_i2c_v1_0_0_0.xci">
-          <Proxy FileSetName="top_block_init_i2c_v1_0_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_das_rx_0_0/top_block_das_rx_0_0.xci">
-          <Proxy FileSetName="top_block_das_rx_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_trigger_manager_0_0/top_block_trigger_manager_0_0.xci">
-          <Proxy FileSetName="top_block_trigger_manager_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_event_builder_v0_1_0_1/top_block_event_builder_v0_1_0_1.xci">
-          <Proxy FileSetName="top_block_event_builder_v0_1_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci">
-          <Proxy FileSetName="top_block_data_processor_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_xpm_async_fifo_wrapp_0_0/top_block_xpm_async_fifo_wrapp_0_0.xci">
-          <Proxy FileSetName="top_block_xpm_async_fifo_wrapp_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_clk_wiz_1_0/top_block_clk_wiz_1_0.xci">
           <Proxy FileSetName="top_block_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
@@ -708,9 +711,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_idelay_top_v2_0_0/top_block_idelay_top_v2_0_0.xci">
           <Proxy FileSetName="top_block_idelay_top_v2_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_rst_clk_wiz_1_320M_0/top_block_rst_clk_wiz_1_320M_0.xci">
-          <Proxy FileSetName="top_block_rst_clk_wiz_1_320M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_block.bd" FileRelPathName="ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2.xci">
           <Proxy FileSetName="top_block_util_ds_buf_0_2"/>
@@ -1452,9 +1452,7 @@
     </Run>
     <Run Id="top_block_reg_switch_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_reg_switch_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_reg_switch_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_reg_switch_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_reg_switch_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_reg_switch_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1464,9 +1462,7 @@
     </Run>
     <Run Id="top_block_init_i2c_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_init_i2c_v1_0_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_init_i2c_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_init_i2c_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1476,9 +1472,7 @@
     </Run>
     <Run Id="top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1943,9 +1937,7 @@
     </Run>
     <Run Id="top_block_reg_switch_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_reg_switch_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_reg_switch_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_reg_switch_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_reg_switch_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1962,9 +1954,7 @@
     </Run>
     <Run Id="top_block_init_i2c_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_init_i2c_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_init_i2c_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_init_i2c_v1_0_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1981,9 +1971,7 @@
     </Run>
     <Run Id="top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcau15p-sbvb484-1-i" ConstrsSet="top_block_SAMPA_TRG_EN_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_block_SAMPA_TRG_EN_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/top_block_SAMPA_TRG_EN_v1_0_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

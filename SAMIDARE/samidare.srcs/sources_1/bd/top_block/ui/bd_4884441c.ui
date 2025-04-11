@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-1094,-472",
+   "Default View_TopLeft":"-1094,-470",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -20,20 +20,20 @@ preplace inst I2C_Controller_v1_0_0 -pg 1 -lvl 1 -x 240 -y 360 -defaultsOSRD
 preplace netloc Net 1 4 1 NJ 490
 preplace netloc Net1 1 4 1 NJ 320
 preplace netloc axi_iic_0_scl_o 1 2 2 710 320 NJ
-preplace netloc axi_iic_0_scl_t 1 2 2 NJ 410 760
-preplace netloc axi_iic_0_sda_o 1 2 2 NJ 450 760
-preplace netloc axi_iic_0_sda_t 1 2 2 NJ 470 750
+preplace netloc axi_iic_0_scl_t 1 2 2 NJ 410 770
+preplace netloc axi_iic_0_sda_o 1 2 2 NJ 450 770
+preplace netloc axi_iic_0_sda_t 1 2 2 NJ 470 760
+preplace netloc init_i2c_v1_0_0_init_i2c_rd 1 0 2 60 20 440
+preplace netloc init_i2c_v1_0_0_init_i2c_wr 1 0 2 50 10 450
 preplace netloc iobuf_vhdl_0_o 1 2 3 700J 420 NJ 420 960
 preplace netloc iobuf_vhdl_1_o 1 2 3 NJ 430 NJ 430 960
 preplace netloc m00_axi_aclk_1 1 0 1 30J 120n
 preplace netloc m00_axi_aresetn_1 1 0 2 20J 220 440J
 preplace netloc s_axi_aclk_1 1 0 2 40 230 430J
-preplace netloc init_i2c_v1_0_0_init_i2c_rd 1 0 2 60 20 440
-preplace netloc init_i2c_v1_0_0_init_i2c_wr 1 0 2 50 10 450
 preplace netloc Conn1 1 1 4 450J 200 NJ 200 NJ 200 NJ
 preplace netloc I2C_Controller_v1_0_0_m01_axi 1 1 1 420 320n
 preplace netloc init_i2c_v1_0_0_m00_axi 1 1 4 NJ 80 NJ 80 NJ 80 NJ
-levelinfo -pg 1 0 240 580 730 880 980
+levelinfo -pg 1 0 240 580 740 880 980
 pagesize -pg 1 -db -bbox -sgen -170 -10 1110 890
 "
 }

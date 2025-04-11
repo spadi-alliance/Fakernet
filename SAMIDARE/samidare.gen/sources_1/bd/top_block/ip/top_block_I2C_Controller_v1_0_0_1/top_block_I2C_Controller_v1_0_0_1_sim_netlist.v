@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Apr 10 11:09:31 2025
+// Date        : Fri Apr 11 09:07:59 2025
 // Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/top_block_I2C_Controller_v1_0_0_1_sim_netlist.v
@@ -367,8 +367,8 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
     m00_axi_wready,
     m00_axi_awready,
     m00_axi_bvalid,
-    start_i2c_write,
-    start_i2c_read);
+    start_i2c_read,
+    start_i2c_write);
   output m01_axi_txn_done;
   output [0:0]m01_axi_awaddr;
   output m01_axi_awvalid;
@@ -402,75 +402,60 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   input m00_axi_wready;
   input m00_axi_awready;
   input m00_axi_bvalid;
-  input start_i2c_write;
   input start_i2c_read;
+  input start_i2c_write;
 
   wire I2C_Controller_v1_0_M00_AXI_inst_n_0;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_18;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_19;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_20;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_21;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_22;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_23;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_24;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_25;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_26;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_27;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_28;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_29;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_30;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_31;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_32;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_33;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_34;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_35;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_36;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_37;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_38;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_39;
-  wire I2C_Controller_v1_0_M00_AXI_inst_n_40;
+  wire I2C_Controller_v1_0_M00_AXI_inst_n_10;
+  wire I2C_Controller_v1_0_M00_AXI_inst_n_7;
+  wire I2C_Controller_v1_0_M00_AXI_inst_n_8;
   wire axi_arvalid_reg;
   wire axi_awvalid_reg;
   wire axi_rready_reg;
   wire axi_wvalid_reg;
   wire [7:0]bram_raddr_r;
-  wire \bram_raddr_r[7]_i_1_n_0 ;
-  (* MARK_DEBUG *) wire bram_read_done;
-  wire bram_read_done_i_2_n_0;
-  wire bram_read_done_i_4_n_0;
+  wire \bram_raddr_r[7]_i_2_n_0 ;
+  wire bram_raddr_r_2;
   wire [7:0]bram_waddr_r;
+  wire \bram_waddr_r[7]_i_2_n_0 ;
+  wire \bram_waddr_r[7]_i_3_n_0 ;
   wire bram_waddr_r_1;
   wire [31:0]bram_wdata_r;
-  wire bram_wdata_r_0;
-  (* MARK_DEBUG *) wire bram_write_done;
-  wire bram_write_done_i_1_n_0;
-  wire bram_write_done_i_2_n_0;
-  wire bram_write_done_i_3_n_0;
+  wire \bram_wdata_r[31]_i_10_n_0 ;
+  wire \bram_wdata_r[31]_i_2_n_0 ;
+  wire \bram_wdata_r[31]_i_3_n_0 ;
+  wire \bram_wdata_r[31]_i_4_n_0 ;
+  wire \bram_wdata_r[31]_i_5_n_0 ;
+  wire \bram_wdata_r[31]_i_6_n_0 ;
+  wire \bram_wdata_r[31]_i_7_n_0 ;
+  wire \bram_wdata_r[31]_i_8_n_0 ;
+  wire \bram_wdata_r[31]_i_9_n_0 ;
+  wire bram_wdata_r_3;
   wire busy_i_1_n_0;
   wire busy_i_2_n_0;
   wire busy_i_3_n_0;
+  wire g0_b0_n_0;
   wire i2c_busy;
+  (* MARK_DEBUG *) wire i2c_rd;
   wire i2c_rd_i_1_n_0;
   wire i2c_rd_i_2_n_0;
-  wire i2c_rd_reg_n_0;
-  wire i2c_waddr;
-  wire \i2c_waddr[3]_i_1_n_0 ;
-  wire \i2c_waddr[3]_i_2_n_0 ;
-  wire \i2c_waddr_reg_n_0_[3] ;
+  wire i2c_rd_i_3_n_0;
+  wire i2c_rd_i_4_n_0;
+  wire i2c_txn_done_r;
+  wire i2c_txn_done_r_i_1_n_0;
+  wire \i2c_waddr[1]_i_1_n_0 ;
+  wire \i2c_waddr[1]_i_2_n_0 ;
+  wire \i2c_waddr[1]_i_3_n_0 ;
+  wire \i2c_waddr[1]_i_4_n_0 ;
+  wire \i2c_waddr_reg_n_0_[1] ;
   wire [9:0]i2c_wdata;
-  wire \i2c_wdata[0]_i_3_n_0 ;
-  wire \i2c_wdata[0]_i_4_n_0 ;
-  wire \i2c_wdata[0]_i_5_n_0 ;
-  wire \i2c_wdata[1]_i_3_n_0 ;
+  wire \i2c_wdata[1]_i_2_n_0 ;
+  wire \i2c_wdata[2]_i_2_n_0 ;
   wire \i2c_wdata[2]_i_3_n_0 ;
   wire \i2c_wdata[31]_i_1_n_0 ;
-  wire \i2c_wdata[31]_i_3_n_0 ;
   wire \i2c_wdata[7]_i_2_n_0 ;
+  wire \i2c_wdata[7]_i_3_n_0 ;
   wire \i2c_wdata[7]_i_4_n_0 ;
-  wire \i2c_wdata[8]_i_2_n_0 ;
-  wire \i2c_wdata[8]_i_3_n_0 ;
-  wire \i2c_wdata[9]_i_3_n_0 ;
-  wire \i2c_wdata[9]_i_4_n_0 ;
   wire \i2c_wdata_reg_n_0_[0] ;
   wire \i2c_wdata_reg_n_0_[10] ;
   wire \i2c_wdata_reg_n_0_[11] ;
@@ -503,13 +488,15 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \i2c_wdata_reg_n_0_[7] ;
   wire \i2c_wdata_reg_n_0_[8] ;
   wire \i2c_wdata_reg_n_0_[9] ;
-  wire i2c_wr1_out;
+  (* MARK_DEBUG *) wire i2c_wr;
   wire i2c_wr_i_1_n_0;
   wire i2c_wr_i_2_n_0;
   wire i2c_wr_i_3_n_0;
+  wire i2c_wr_i_4_n_0;
   wire i2c_wr_i_5_n_0;
   wire i2c_wr_i_6_n_0;
-  wire i2c_wr_reg_n_0;
+  wire i2c_wr_i_7_n_0;
+  wire i2c_wr_i_8_n_0;
   wire m00_axi_aclk;
   wire [9:0]m00_axi_araddr;
   wire m00_axi_aresetn;
@@ -539,22 +526,28 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire m01_axi_wready;
   wire m01_axi_wvalid;
   wire [3:0]p_0_in__0;
-  wire [3:0]p_0_in__1;
+  wire [4:0]p_0_in__1;
   wire [3:0]p_0_in__2;
+  wire [3:0]p_1_in;
   (* MARK_DEBUG *) wire [7:0]rcnt;
   wire \rcnt[0]_i_1_n_0 ;
-  wire \rcnt[0]_i_2_n_0 ;
-  wire \rcnt[0]_i_3_n_0 ;
   wire \rcnt[1]_i_1_n_0 ;
   wire \rcnt[1]_i_2_n_0 ;
   wire \rcnt[2]_i_1_n_0 ;
+  wire \rcnt[2]_i_2_n_0 ;
+  wire \rcnt[2]_i_3_n_0 ;
   wire \rcnt[3]_i_1_n_0 ;
+  wire \rcnt[3]_i_2_n_0 ;
+  wire \rcnt[3]_i_3_n_0 ;
   wire \rcnt[4]_i_1_n_0 ;
-  wire \rcnt[4]_i_2_n_0 ;
   wire \rcnt[5]_i_1_n_0 ;
   wire \rcnt[5]_i_2_n_0 ;
   wire \rcnt[5]_i_3_n_0 ;
+  wire \rcnt[5]_i_4_n_0 ;
   wire \rcnt[6]_i_1_n_0 ;
+  wire \rcnt[6]_i_2_n_0 ;
+  wire \rcnt[6]_i_3_n_0 ;
+  wire \rcnt[6]_i_4_n_0 ;
   wire \rcnt[7]_i_1_n_0 ;
   wire \rcnt[7]_i_2_n_0 ;
   wire \rcnt[7]_i_3_n_0 ;
@@ -572,14 +565,16 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \regacc_addr_r[6]_i_1_n_0 ;
   wire \regacc_addr_r[7]_i_1_n_0 ;
   wire \regacc_addr_r[9]_i_2_n_0 ;
+  wire \regacc_addr_r[9]_i_3_n_0 ;
+  wire [31:10]regacc_data_rd_r;
   wire regacc_read;
   wire regacc_read_r_i_1_n_0;
-  wire regacc_read_r_i_2_n_0;
   wire regacc_write;
   wire regacc_write_r_i_1_n_0;
   wire regacc_write_r_i_2_n_0;
   (* MARK_DEBUG *) wire [1:0]scnt;
   wire \scnt[0]_i_1_n_0 ;
+  wire \scnt[0]_i_2_n_0 ;
   wire \scnt[1]_i_1_n_0 ;
   wire \scnt[1]_i_2_n_0 ;
   wire \scnt[1]_i_3_n_0 ;
@@ -587,11 +582,11 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire start_bram_read_i_2_n_0;
   wire start_bram_read_i_3_n_0;
   wire start_bram_read_i_4_n_0;
-  wire start_bram_read_i_5_n_0;
   wire start_bram_read_reg_n_0;
-  wire start_bram_write;
   wire start_bram_write_i_1_n_0;
   wire start_bram_write_i_2_n_0;
+  wire start_bram_write_i_3_n_0;
+  wire start_bram_write_reg_n_0;
   wire start_i2c_read;
   wire start_i2c_write;
   (* MARK_DEBUG *) wire [3:0]state_bram;
@@ -604,32 +599,55 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \state_i2c[0]_i_2_n_0 ;
   wire \state_i2c[3]_i_1_n_0 ;
   wire \state_i2c[3]_i_3_n_0 ;
-  wire \state_i2c[3]_i_4_n_0 ;
-  wire \state_i2c[3]_i_5_n_0 ;
-  wire \state_i2c[3]_i_6_n_0 ;
-  wire \state_i2c[3]_i_7_n_0 ;
-  (* MARK_DEBUG *) wire [3:0]state_read;
-  wire \state_read[0]_i_2_n_0 ;
-  wire \state_read[0]_i_3_n_0 ;
-  wire \state_read[1]_i_2_n_0 ;
-  wire \state_read[1]_i_3_n_0 ;
-  wire \state_read[1]_i_4_n_0 ;
-  wire \state_read[1]_i_5_n_0 ;
-  wire \state_read[1]_i_6_n_0 ;
-  wire \state_read[1]_i_7_n_0 ;
-  wire \state_read[1]_i_8_n_0 ;
-  wire \state_read[2]_i_2_n_0 ;
-  wire \state_read[3]_i_1_n_0 ;
-  (* MARK_DEBUG *) wire [3:0]state_write;
-  wire \state_write[0]_i_1_n_0 ;
-  wire \state_write[0]_i_2_n_0 ;
-  wire \state_write[0]_i_3_n_0 ;
-  wire \state_write[1]_i_1_n_0 ;
-  wire \state_write[2]_i_1_n_0 ;
-  wire \state_write[3]_i_1_n_0 ;
+  (* MARK_DEBUG *) wire [4:0]state_w_r;
+  wire \state_w_r[0]_i_10_n_0 ;
+  wire \state_w_r[0]_i_11_n_0 ;
+  wire \state_w_r[0]_i_12_n_0 ;
+  wire \state_w_r[0]_i_13_n_0 ;
+  wire \state_w_r[0]_i_2_n_0 ;
+  wire \state_w_r[0]_i_3_n_0 ;
+  wire \state_w_r[0]_i_4_n_0 ;
+  wire \state_w_r[0]_i_5_n_0 ;
+  wire \state_w_r[0]_i_6_n_0 ;
+  wire \state_w_r[0]_i_7_n_0 ;
+  wire \state_w_r[0]_i_8_n_0 ;
+  wire \state_w_r[0]_i_9_n_0 ;
+  wire \state_w_r[1]_i_2_n_0 ;
+  wire \state_w_r[1]_i_3_n_0 ;
+  wire \state_w_r[1]_i_4_n_0 ;
+  wire \state_w_r[1]_i_5_n_0 ;
+  wire \state_w_r[1]_i_6_n_0 ;
+  wire \state_w_r[1]_i_7_n_0 ;
+  wire \state_w_r[2]_i_2_n_0 ;
+  wire \state_w_r[2]_i_3_n_0 ;
+  wire \state_w_r[2]_i_4_n_0 ;
+  wire \state_w_r[2]_i_5_n_0 ;
+  wire \state_w_r[2]_i_6_n_0 ;
+  wire \state_w_r[2]_i_7_n_0 ;
+  wire \state_w_r[2]_i_8_n_0 ;
+  wire \state_w_r[2]_i_9_n_0 ;
+  wire \state_w_r[3]_i_2_n_0 ;
+  wire \state_w_r[3]_i_3_n_0 ;
+  wire \state_w_r[3]_i_4_n_0 ;
+  wire \state_w_r[3]_i_5_n_0 ;
+  wire \state_w_r[4]_i_2_n_0 ;
+  wire \state_w_r[4]_i_3_n_0 ;
+  wire \state_w_r[4]_i_4_n_0 ;
+  wire \state_w_r[4]_i_5_n_0 ;
+  wire \state_w_r[4]_i_6_n_0 ;
+  (* MARK_DEBUG *) wire [3:0]trans_cnt;
+  wire \trans_cnt[0]_i_2_n_0 ;
+  wire \trans_cnt[1]_i_2_n_0 ;
+  wire \trans_cnt[1]_i_3_n_0 ;
+  wire \trans_cnt[2]_i_2_n_0 ;
+  wire \trans_cnt[2]_i_3_n_0 ;
+  wire \trans_cnt[3]_i_2_n_0 ;
+  wire \trans_cnt[3]_i_3_n_0 ;
+  wire \trans_cnt[3]_i_4_n_0 ;
+  wire \trans_cnt[3]_i_5_n_0 ;
+  wire \trans_cnt[3]_i_6_n_0 ;
   (* MARK_DEBUG *) wire [31:0]wait_cnt;
-  wire [31:1]wait_cnt0;
-  wire wait_cnt0_carry__0_n_0;
+  wire [16:1]wait_cnt0;
   wire wait_cnt0_carry__0_n_1;
   wire wait_cnt0_carry__0_n_2;
   wire wait_cnt0_carry__0_n_3;
@@ -637,20 +655,6 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire wait_cnt0_carry__0_n_5;
   wire wait_cnt0_carry__0_n_6;
   wire wait_cnt0_carry__0_n_7;
-  wire wait_cnt0_carry__1_n_0;
-  wire wait_cnt0_carry__1_n_1;
-  wire wait_cnt0_carry__1_n_2;
-  wire wait_cnt0_carry__1_n_3;
-  wire wait_cnt0_carry__1_n_4;
-  wire wait_cnt0_carry__1_n_5;
-  wire wait_cnt0_carry__1_n_6;
-  wire wait_cnt0_carry__1_n_7;
-  wire wait_cnt0_carry__2_n_2;
-  wire wait_cnt0_carry__2_n_3;
-  wire wait_cnt0_carry__2_n_4;
-  wire wait_cnt0_carry__2_n_5;
-  wire wait_cnt0_carry__2_n_6;
-  wire wait_cnt0_carry__2_n_7;
   wire wait_cnt0_carry_n_0;
   wire wait_cnt0_carry_n_1;
   wire wait_cnt0_carry_n_2;
@@ -665,26 +669,18 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \wait_cnt[12]_i_1_n_0 ;
   wire \wait_cnt[13]_i_1_n_0 ;
   wire \wait_cnt[14]_i_1_n_0 ;
+  wire \wait_cnt[14]_i_2_n_0 ;
+  wire \wait_cnt[14]_i_3_n_0 ;
+  wire \wait_cnt[14]_i_4_n_0 ;
   wire \wait_cnt[15]_i_1_n_0 ;
+  wire \wait_cnt[15]_i_2_n_0 ;
   wire \wait_cnt[16]_i_1_n_0 ;
-  wire \wait_cnt[17]_i_1_n_0 ;
-  wire \wait_cnt[18]_i_1_n_0 ;
-  wire \wait_cnt[19]_i_1_n_0 ;
+  wire \wait_cnt[16]_i_2_n_0 ;
+  wire \wait_cnt[16]_i_3_n_0 ;
+  wire \wait_cnt[16]_i_4_n_0 ;
   wire \wait_cnt[1]_i_1_n_0 ;
-  wire \wait_cnt[20]_i_1_n_0 ;
-  wire \wait_cnt[21]_i_1_n_0 ;
-  wire \wait_cnt[22]_i_1_n_0 ;
-  wire \wait_cnt[23]_i_1_n_0 ;
-  wire \wait_cnt[24]_i_1_n_0 ;
-  wire \wait_cnt[25]_i_1_n_0 ;
-  wire \wait_cnt[26]_i_1_n_0 ;
-  wire \wait_cnt[27]_i_1_n_0 ;
-  wire \wait_cnt[28]_i_1_n_0 ;
-  wire \wait_cnt[29]_i_1_n_0 ;
   wire \wait_cnt[2]_i_1_n_0 ;
-  wire \wait_cnt[30]_i_1_n_0 ;
   wire \wait_cnt[31]_i_1_n_0 ;
-  wire \wait_cnt[31]_i_2_n_0 ;
   wire \wait_cnt[3]_i_1_n_0 ;
   wire \wait_cnt[4]_i_1_n_0 ;
   wire \wait_cnt[5]_i_1_n_0 ;
@@ -698,9 +694,11 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \wcnt[1]_i_1_n_0 ;
   wire \wcnt[1]_i_2_n_0 ;
   wire \wcnt[1]_i_3_n_0 ;
+  wire \wcnt[1]_i_4_n_0 ;
+  wire \wcnt[1]_i_5_n_0 ;
   wire \wcnt[2]_i_1_n_0 ;
+  wire \wcnt[2]_i_2_n_0 ;
   wire \wcnt[3]_i_1_n_0 ;
-  wire \wcnt[3]_i_2_n_0 ;
   wire \wcnt[4]_i_1_n_0 ;
   wire \wcnt[5]_i_1_n_0 ;
   wire \wcnt[5]_i_2_n_0 ;
@@ -710,87 +708,55 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   wire \wcnt[7]_i_3_n_0 ;
   wire \wcnt[7]_i_4_n_0 ;
   wire \wcnt[7]_i_5_n_0 ;
+  wire \wcnt[7]_i_6_n_0 ;
   wire NLW_I2C_Controller_v1_0_M01_AXI_inst_ERROR_UNCONNECTED;
   wire [31:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_ARADDR_UNCONNECTED;
   wire [2:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_ARPROT_UNCONNECTED;
   wire [31:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_AWADDR_UNCONNECTED;
   wire [2:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_AWPROT_UNCONNECTED;
   wire [3:0]NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_WSTRB_UNCONNECTED;
-  wire [7:6]NLW_wait_cnt0_carry__2_CO_UNCONNECTED;
-  wire [7:7]NLW_wait_cnt0_carry__2_O_UNCONNECTED;
+  wire [7:7]NLW_wait_cnt0_carry__0_CO_UNCONNECTED;
 
   top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI I2C_Controller_v1_0_M00_AXI_inst
-       (.D(p_0_in__1[2:1]),
-        .Q(state_bram[3:1]),
-        .SR(I2C_Controller_v1_0_M00_AXI_inst_n_0),
+       (.D({i2c_wdata[9:8],I2C_Controller_v1_0_M00_AXI_inst_n_7,I2C_Controller_v1_0_M00_AXI_inst_n_8,i2c_wdata[5],I2C_Controller_v1_0_M00_AXI_inst_n_10,i2c_wdata[3:0]}),
+        .Q(regacc_data_rd_r),
         .axi_arvalid_reg_0(axi_arvalid_reg),
         .\axi_awaddr_reg[11]_0 (regacc_addr),
         .axi_awvalid_reg_0(axi_awvalid_reg),
+        .axi_bready_reg_0(m00_axi_bready),
         .axi_rready_reg_0(axi_rready_reg),
         .\axi_wdata_reg[31]_0 (bram_wdata_r),
         .axi_wvalid_reg_0(axi_wvalid_reg),
-        .bram_read_done_reg(bram_read_done),
-        .bram_read_done_reg_0(state_bram[3]),
-        .bram_read_done_reg_1(bram_read_done_i_2_n_0),
-        .bram_read_done_reg_2(bram_read_done_i_4_n_0),
-        .\i2c_wdata_reg[0] (state_write),
-        .\i2c_wdata_reg[0]_0 (\i2c_wdata[0]_i_3_n_0 ),
-        .\i2c_wdata_reg[0]_1 (\i2c_wdata[0]_i_4_n_0 ),
-        .\i2c_wdata_reg[0]_2 (\i2c_wdata[0]_i_5_n_0 ),
-        .\i2c_wdata_reg[1] (\rcnt[0]_i_3_n_0 ),
-        .\i2c_wdata_reg[1]_0 (\i2c_wdata[7]_i_4_n_0 ),
-        .\i2c_wdata_reg[1]_1 (\i2c_wdata[9]_i_4_n_0 ),
-        .\i2c_wdata_reg[1]_2 (\i2c_wdata[1]_i_3_n_0 ),
-        .\i2c_wdata_reg[2] (\i2c_wdata[2]_i_3_n_0 ),
-        .\i2c_wdata_reg[5] (wcnt[5:0]),
+        .\i2c_wdata_reg[1] (\i2c_wdata[1]_i_2_n_0 ),
+        .\i2c_wdata_reg[2] (\i2c_wdata[2]_i_2_n_0 ),
+        .\i2c_wdata_reg[2]_0 (\i2c_wdata[2]_i_3_n_0 ),
+        .\i2c_wdata_reg[5] ({rcnt[5:2],rcnt[0]}),
+        .\i2c_wdata_reg[5]_0 (\i2c_wdata[7]_i_4_n_0 ),
+        .\i2c_wdata_reg[5]_1 ({wcnt[5:3],wcnt[0]}),
         .\i2c_wdata_reg[6] (\i2c_wdata[7]_i_2_n_0 ),
-        .\i2c_wdata_reg[8] (\i2c_wdata[8]_i_3_n_0 ),
-        .\i2c_wdata_reg[8]_0 (\i2c_wdata[8]_i_2_n_0 ),
-        .in0(bram_read_done),
+        .\i2c_wdata_reg[6]_0 (\i2c_wdata[7]_i_3_n_0 ),
+        .\i2c_wdata_reg[7] (scnt),
         .m00_axi_aclk(m00_axi_aclk),
         .m00_axi_araddr(m00_axi_araddr),
         .m00_axi_aresetn(m00_axi_aresetn),
-        .m00_axi_aresetn_0(I2C_Controller_v1_0_M00_AXI_inst_n_40),
+        .m00_axi_aresetn_0(I2C_Controller_v1_0_M00_AXI_inst_n_0),
         .m00_axi_arready(m00_axi_arready),
         .m00_axi_awaddr(m00_axi_awaddr),
         .m00_axi_awready(m00_axi_awready),
-        .m00_axi_bready(m00_axi_bready),
         .m00_axi_bvalid(m00_axi_bvalid),
         .m00_axi_rdata(m00_axi_rdata),
         .m00_axi_rvalid(m00_axi_rvalid),
         .m00_axi_wdata(m00_axi_wdata),
         .m00_axi_wready(m00_axi_wready),
-        .out(state_read),
-        .p_2_in({scnt,rcnt[5:0]}),
-        .\regacc_data_rd_r_reg[10]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_18),
-        .\regacc_data_rd_r_reg[11]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_19),
-        .\regacc_data_rd_r_reg[12]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_20),
-        .\regacc_data_rd_r_reg[13]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_21),
-        .\regacc_data_rd_r_reg[14]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_22),
-        .\regacc_data_rd_r_reg[15]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_23),
-        .\regacc_data_rd_r_reg[16]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_24),
-        .\regacc_data_rd_r_reg[17]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_25),
-        .\regacc_data_rd_r_reg[18]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_26),
-        .\regacc_data_rd_r_reg[19]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_27),
-        .\regacc_data_rd_r_reg[20]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_28),
-        .\regacc_data_rd_r_reg[21]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_29),
-        .\regacc_data_rd_r_reg[22]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_30),
-        .\regacc_data_rd_r_reg[23]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_31),
-        .\regacc_data_rd_r_reg[24]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_32),
-        .\regacc_data_rd_r_reg[25]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_33),
-        .\regacc_data_rd_r_reg[26]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_34),
-        .\regacc_data_rd_r_reg[27]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_35),
-        .\regacc_data_rd_r_reg[28]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_36),
-        .\regacc_data_rd_r_reg[29]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_37),
-        .\regacc_data_rd_r_reg[30]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_38),
-        .\regacc_data_rd_r_reg[31]_0 (I2C_Controller_v1_0_M00_AXI_inst_n_39),
+        .out(state_w_r),
         .regacc_read(regacc_read),
         .regacc_write(regacc_write),
-        .start_bram_write(start_bram_write),
         .\state_bram_reg[1] (start_bram_read_reg_n_0),
-        .\state_bram_reg[2] (\state_bram[2]_i_2_n_0 ),
-        .\state_bram_reg[2]_0 (\state_bram[3]_i_3_n_0 ),
-        .\state_read_reg[1] (i2c_wdata));
+        .\state_bram_reg[1]_0 (start_bram_write_reg_n_0),
+        .\state_bram_reg[2] (p_0_in__0[2:1]),
+        .\state_bram_reg[2]_0 (state_bram[3:1]),
+        .\state_bram_reg[2]_1 (\state_bram[2]_i_2_n_0 ),
+        .\state_bram_reg[2]_2 (\state_bram[3]_i_3_n_0 ));
   (* C_M_AXI_ADDR_WIDTH = "32" *) 
   (* C_M_AXI_DATA_WIDTH = "32" *) 
   (* C_M_START_DATA_VALUE = "-1442840576" *) 
@@ -804,8 +770,8 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* TRANS_NUM_BITS = "0" *) 
   top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M01_AXI I2C_Controller_v1_0_M01_AXI_inst
        (.ERROR(NLW_I2C_Controller_v1_0_M01_AXI_inst_ERROR_UNCONNECTED),
-        .I2C_RD(i2c_rd_reg_n_0),
-        .I2C_WR(i2c_wr_reg_n_0),
+        .I2C_RD(i2c_rd),
+        .I2C_WR(i2c_wr),
         .INIT_AXI_TXN(1'b0),
         .M_AXI_ACLK(m01_axi_aclk),
         .M_AXI_ARADDR(NLW_I2C_Controller_v1_0_M01_AXI_inst_M_AXI_ARADDR_UNCONNECTED[31:0]),
@@ -831,97 +797,98 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .RADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b0,1'b0}),
         .RDATA(rdata),
         .TXN_DONE(m01_axi_txn_done),
-        .WADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,\i2c_waddr_reg_n_0_[3] ,1'b0,1'b0,1'b0}),
+        .WADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,\i2c_waddr_reg_n_0_[1] ,1'b0,1'b0,1'b0}),
         .WDATA({\i2c_wdata_reg_n_0_[31] ,\i2c_wdata_reg_n_0_[30] ,\i2c_wdata_reg_n_0_[29] ,\i2c_wdata_reg_n_0_[28] ,\i2c_wdata_reg_n_0_[27] ,\i2c_wdata_reg_n_0_[26] ,\i2c_wdata_reg_n_0_[25] ,\i2c_wdata_reg_n_0_[24] ,\i2c_wdata_reg_n_0_[23] ,\i2c_wdata_reg_n_0_[22] ,\i2c_wdata_reg_n_0_[21] ,\i2c_wdata_reg_n_0_[20] ,\i2c_wdata_reg_n_0_[19] ,\i2c_wdata_reg_n_0_[18] ,\i2c_wdata_reg_n_0_[17] ,\i2c_wdata_reg_n_0_[16] ,\i2c_wdata_reg_n_0_[15] ,\i2c_wdata_reg_n_0_[14] ,\i2c_wdata_reg_n_0_[13] ,\i2c_wdata_reg_n_0_[12] ,\i2c_wdata_reg_n_0_[11] ,\i2c_wdata_reg_n_0_[10] ,\i2c_wdata_reg_n_0_[9] ,\i2c_wdata_reg_n_0_[8] ,\i2c_wdata_reg_n_0_[7] ,\i2c_wdata_reg_n_0_[6] ,\i2c_wdata_reg_n_0_[5] ,\i2c_wdata_reg_n_0_[4] ,\i2c_wdata_reg_n_0_[3] ,\i2c_wdata_reg_n_0_[2] ,\i2c_wdata_reg_n_0_[1] ,\i2c_wdata_reg_n_0_[0] }));
-  LUT5 #(
-    .INIT(32'h00200000)) 
+  LUT6 #(
+    .INIT(64'h0000000000800000)) 
     \bram_raddr_r[7]_i_1 
-       (.I0(m00_axi_aresetn),
-        .I1(state_write[3]),
-        .I2(state_write[2]),
-        .I3(state_write[1]),
-        .I4(state_write[0]),
-        .O(\bram_raddr_r[7]_i_1_n_0 ));
+       (.I0(\bram_waddr_r[7]_i_2_n_0 ),
+        .I1(m00_axi_aresetn),
+        .I2(state_w_r[4]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[0]),
+        .I5(\bram_raddr_r[7]_i_2_n_0 ),
+        .O(bram_raddr_r_2));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \bram_raddr_r[7]_i_2 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[2]),
+        .O(\bram_raddr_r[7]_i_2_n_0 ));
   FDRE \bram_raddr_r_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[0]),
         .Q(bram_raddr_r[0]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[1]),
         .Q(bram_raddr_r[1]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[2]),
         .Q(bram_raddr_r[2]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[3]),
         .Q(bram_raddr_r[3]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[4]),
         .Q(bram_raddr_r[4]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(wcnt[5]),
         .Q(bram_raddr_r[5]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(scnt[0]),
         .Q(bram_raddr_r[6]),
         .R(1'b0));
   FDRE \bram_raddr_r_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(\bram_raddr_r[7]_i_1_n_0 ),
+        .CE(bram_raddr_r_2),
         .D(scnt[1]),
         .Q(bram_raddr_r[7]),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    bram_read_done_i_2
-       (.I0(state_bram[1]),
-        .I1(start_bram_read_reg_n_0),
-        .O(bram_read_done_i_2_n_0));
-  LUT5 #(
-    .INIT(32'h0016FFFF)) 
-    bram_read_done_i_4
-       (.I0(state_bram[3]),
-        .I1(state_bram[0]),
-        .I2(state_bram[1]),
-        .I3(state_bram[2]),
-        .I4(m00_axi_aresetn),
-        .O(bram_read_done_i_4_n_0));
-  (* KEEP = "yes" *) 
-  (* mark_debug = "true" *) 
-  FDRE bram_read_done_reg
-       (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_40),
-        .Q(bram_read_done),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'h00200000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000080)) 
     \bram_waddr_r[7]_i_1 
-       (.I0(m00_axi_aresetn),
-        .I1(state_read[3]),
-        .I2(state_read[2]),
-        .I3(state_read[1]),
-        .I4(state_read[0]),
+       (.I0(\bram_waddr_r[7]_i_2_n_0 ),
+        .I1(\bram_waddr_r[7]_i_3_n_0 ),
+        .I2(m00_axi_aresetn),
+        .I3(state_w_r[4]),
+        .I4(state_w_r[3]),
+        .I5(state_w_r[0]),
         .O(bram_waddr_r_1));
+  LUT6 #(
+    .INIT(64'h0001000100000001)) 
+    \bram_waddr_r[7]_i_2 
+       (.I0(trans_cnt[3]),
+        .I1(trans_cnt[0]),
+        .I2(trans_cnt[1]),
+        .I3(trans_cnt[2]),
+        .I4(m01_axi_txn_done),
+        .I5(i2c_txn_done_r),
+        .O(\bram_waddr_r[7]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \bram_waddr_r[7]_i_3 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[2]),
+        .O(\bram_waddr_r[7]_i_3_n_0 ));
   FDRE \bram_waddr_r_reg[0] 
        (.C(m00_axi_aclk),
         .CE(bram_waddr_r_1),
@@ -971,263 +938,306 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(bram_waddr_r[7]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0400000000000000)) 
+    .INIT(64'h0000000077750000)) 
     \bram_wdata_r[31]_i_1 
-       (.I0(state_read[0]),
-        .I1(m01_axi_rvalid),
-        .I2(state_read[2]),
-        .I3(m00_axi_aresetn),
-        .I4(state_read[1]),
-        .I5(state_read[3]),
-        .O(bram_wdata_r_0));
+       (.I0(\bram_wdata_r[31]_i_2_n_0 ),
+        .I1(\bram_wdata_r[31]_i_3_n_0 ),
+        .I2(\bram_wdata_r[31]_i_4_n_0 ),
+        .I3(\bram_wdata_r[31]_i_5_n_0 ),
+        .I4(m01_axi_rvalid),
+        .I5(\bram_wdata_r[31]_i_6_n_0 ),
+        .O(bram_wdata_r_3));
+  LUT6 #(
+    .INIT(64'h00000001FFFFFFFF)) 
+    \bram_wdata_r[31]_i_10 
+       (.I0(wait_cnt[2]),
+        .I1(wait_cnt[3]),
+        .I2(wait_cnt[1]),
+        .I3(wait_cnt[0]),
+        .I4(wait_cnt[4]),
+        .I5(wait_cnt[5]),
+        .O(\bram_wdata_r[31]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    \bram_wdata_r[31]_i_2 
+       (.I0(\bram_wdata_r[31]_i_7_n_0 ),
+        .I1(\bram_wdata_r[31]_i_8_n_0 ),
+        .I2(\bram_wdata_r[31]_i_9_n_0 ),
+        .I3(wait_cnt[22]),
+        .I4(wait_cnt[26]),
+        .I5(wait_cnt[24]),
+        .O(\bram_wdata_r[31]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \bram_wdata_r[31]_i_3 
+       (.I0(wait_cnt[15]),
+        .I1(wait_cnt[16]),
+        .O(\bram_wdata_r[31]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF8A000000000000)) 
+    \bram_wdata_r[31]_i_4 
+       (.I0(wait_cnt[7]),
+        .I1(wait_cnt[6]),
+        .I2(\bram_wdata_r[31]_i_10_n_0 ),
+        .I3(wait_cnt[8]),
+        .I4(wait_cnt[10]),
+        .I5(wait_cnt[9]),
+        .O(\bram_wdata_r[31]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \bram_wdata_r[31]_i_5 
+       (.I0(wait_cnt[13]),
+        .I1(wait_cnt[12]),
+        .I2(wait_cnt[14]),
+        .I3(wait_cnt[11]),
+        .O(\bram_wdata_r[31]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFBFFFFFFFFFFFFF)) 
+    \bram_wdata_r[31]_i_6 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[3]),
+        .I2(m00_axi_aresetn),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[0]),
+        .I5(state_w_r[1]),
+        .O(\bram_wdata_r[31]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \bram_wdata_r[31]_i_7 
+       (.I0(wait_cnt[23]),
+        .I1(wait_cnt[17]),
+        .I2(wait_cnt[25]),
+        .I3(wait_cnt[18]),
+        .O(\bram_wdata_r[31]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \bram_wdata_r[31]_i_8 
+       (.I0(wait_cnt[30]),
+        .I1(wait_cnt[19]),
+        .I2(wait_cnt[27]),
+        .I3(wait_cnt[21]),
+        .O(\bram_wdata_r[31]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \bram_wdata_r[31]_i_9 
+       (.I0(wait_cnt[28]),
+        .I1(wait_cnt[20]),
+        .I2(wait_cnt[31]),
+        .I3(wait_cnt[29]),
+        .O(\bram_wdata_r[31]_i_9_n_0 ));
   FDRE \bram_wdata_r_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[0]),
         .Q(bram_wdata_r[0]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[10] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[10]),
         .Q(bram_wdata_r[10]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[11] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[11]),
         .Q(bram_wdata_r[11]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[12] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[12]),
         .Q(bram_wdata_r[12]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[13] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[13]),
         .Q(bram_wdata_r[13]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[14] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[14]),
         .Q(bram_wdata_r[14]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[15] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[15]),
         .Q(bram_wdata_r[15]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[16] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[16]),
         .Q(bram_wdata_r[16]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[17] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[17]),
         .Q(bram_wdata_r[17]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[18] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[18]),
         .Q(bram_wdata_r[18]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[19] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[19]),
         .Q(bram_wdata_r[19]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[1]),
         .Q(bram_wdata_r[1]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[20] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[20]),
         .Q(bram_wdata_r[20]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[21] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[21]),
         .Q(bram_wdata_r[21]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[22] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[22]),
         .Q(bram_wdata_r[22]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[23] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[23]),
         .Q(bram_wdata_r[23]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[24] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[24]),
         .Q(bram_wdata_r[24]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[25] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[25]),
         .Q(bram_wdata_r[25]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[26] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[26]),
         .Q(bram_wdata_r[26]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[27] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[27]),
         .Q(bram_wdata_r[27]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[28] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[28]),
         .Q(bram_wdata_r[28]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[29] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[29]),
         .Q(bram_wdata_r[29]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[2]),
         .Q(bram_wdata_r[2]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[30] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[30]),
         .Q(bram_wdata_r[30]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[31] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[31]),
         .Q(bram_wdata_r[31]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[3]),
         .Q(bram_wdata_r[3]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[4]),
         .Q(bram_wdata_r[4]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[5]),
         .Q(bram_wdata_r[5]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[6]),
         .Q(bram_wdata_r[6]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[7]),
         .Q(bram_wdata_r[7]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[8] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[8]),
         .Q(bram_wdata_r[8]),
         .R(1'b0));
   FDRE \bram_wdata_r_reg[9] 
        (.C(m00_axi_aclk),
-        .CE(bram_wdata_r_0),
+        .CE(bram_wdata_r_3),
         .D(rdata[9]),
         .Q(bram_wdata_r[9]),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'hEFAA20AA)) 
-    bram_write_done_i_1
-       (.I0(bram_write_done_i_2_n_0),
-        .I1(state_bram[3]),
-        .I2(bram_write_done_i_3_n_0),
-        .I3(m00_axi_aresetn),
-        .I4(bram_write_done),
-        .O(bram_write_done_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h80AA88AA)) 
-    bram_write_done_i_2
-       (.I0(bram_write_done),
-        .I1(state_bram[1]),
-        .I2(start_bram_read_reg_n_0),
-        .I3(m00_axi_aresetn),
-        .I4(start_bram_write),
-        .O(bram_write_done_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h06)) 
-    bram_write_done_i_3
-       (.I0(state_bram[0]),
-        .I1(state_bram[1]),
-        .I2(state_bram[2]),
-        .O(bram_write_done_i_3_n_0));
-  (* KEEP = "yes" *) 
-  (* mark_debug = "true" *) 
-  FDRE bram_write_done_reg
-       (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(bram_write_done_i_1_n_0),
-        .Q(bram_write_done),
-        .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFBFFFFF00A00000)) 
+    .INIT(64'hFF3FFFFF04000000)) 
     busy_i_1
        (.I0(busy_i_2_n_0),
-        .I1(state_i2c[0]),
-        .I2(m00_axi_aresetn),
-        .I3(state_i2c[3]),
+        .I1(m00_axi_aresetn),
+        .I2(state_i2c[0]),
+        .I3(state_i2c[1]),
         .I4(busy_i_3_n_0),
         .I5(i2c_busy),
         .O(busy_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hA8)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     busy_i_2
-       (.I0(state_i2c[1]),
+       (.I0(start_i2c_read),
         .I1(start_i2c_write),
-        .I2(start_i2c_read),
         .O(busy_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h07)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     busy_i_3
-       (.I0(state_i2c[1]),
-        .I1(state_i2c[0]),
-        .I2(state_i2c[2]),
+       (.I0(state_i2c[3]),
+        .I1(state_i2c[2]),
         .O(busy_i_3_n_0));
   FDRE busy_reg
        (.C(m00_axi_aclk),
@@ -1236,543 +1246,624 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(i2c_busy),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h3330753000004500)) 
+    .INIT(64'h001FC3FCFFFFFFFF)) 
+    g0_b0
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[4]),
+        .I5(m00_axi_aresetn),
+        .O(g0_b0_n_0));
+  LUT6 #(
+    .INIT(64'hBFB0FFFFBFB00000)) 
     i2c_rd_i_1
-       (.I0(state_read[1]),
-        .I1(bram_wdata_r_0),
-        .I2(i2c_rd_i_2_n_0),
-        .I3(state_read[3]),
-        .I4(\state_read[1]_i_2_n_0 ),
-        .I5(i2c_rd_reg_n_0),
+       (.I0(i2c_rd_i_2_n_0),
+        .I1(i2c_rd_i_3_n_0),
+        .I2(m00_axi_aresetn),
+        .I3(i2c_rd),
+        .I4(i2c_rd_i_4_n_0),
+        .I5(i2c_rd),
         .O(i2c_rd_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
+  LUT6 #(
+    .INIT(64'h4040404040004040)) 
     i2c_rd_i_2
-       (.I0(m00_axi_aresetn),
-        .I1(state_read[2]),
-        .I2(state_read[0]),
-        .I3(state_read[1]),
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[1]),
+        .I2(i2c_rd),
+        .I3(state_i2c[1]),
+        .I4(state_i2c[3]),
+        .I5(state_i2c[2]),
         .O(i2c_rd_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h7777F377F3F3F3F3)) 
+    i2c_rd_i_3
+       (.I0(i2c_rd),
+        .I1(state_w_r[3]),
+        .I2(m01_axi_rvalid),
+        .I3(\state_w_r[2]_i_7_n_0 ),
+        .I4(\bram_wdata_r[31]_i_3_n_0 ),
+        .I5(\bram_wdata_r[31]_i_2_n_0 ),
+        .O(i2c_rd_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h00000094FFFFFFFF)) 
+    i2c_rd_i_4
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[1]),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[4]),
+        .I5(m00_axi_aresetn),
+        .O(i2c_rd_i_4_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE i2c_rd_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(i2c_rd_i_1_n_0),
-        .Q(i2c_rd_reg_n_0),
+        .Q(i2c_rd),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hAAAAAAAACFCCAAAA)) 
-    \i2c_waddr[3]_i_1 
-       (.I0(\i2c_waddr_reg_n_0_[3] ),
-        .I1(\i2c_waddr[3]_i_2_n_0 ),
-        .I2(state_read[3]),
-        .I3(state_read[2]),
-        .I4(m00_axi_aresetn),
-        .I5(\i2c_wdata[9]_i_3_n_0 ),
-        .O(\i2c_waddr[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAAA0AA08A)) 
-    \i2c_waddr[3]_i_2 
-       (.I0(state_write[2]),
-        .I1(\i2c_wdata[9]_i_4_n_0 ),
-        .I2(state_read[1]),
-        .I3(state_read[3]),
-        .I4(state_read[0]),
-        .I5(state_read[2]),
-        .O(\i2c_waddr[3]_i_2_n_0 ));
-  FDRE \i2c_waddr_reg[3] 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    i2c_txn_done_r_i_1
+       (.I0(m01_axi_txn_done),
+        .I1(m00_axi_aresetn),
+        .I2(i2c_txn_done_r),
+        .O(i2c_txn_done_r_i_1_n_0));
+  FDRE i2c_txn_done_r_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(\i2c_waddr[3]_i_1_n_0 ),
-        .Q(\i2c_waddr_reg_n_0_[3] ),
+        .D(i2c_txn_done_r_i_1_n_0),
+        .Q(i2c_txn_done_r),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'hCCDFCCDD)) 
-    \i2c_wdata[0]_i_3 
-       (.I0(state_read[1]),
-        .I1(state_read[3]),
-        .I2(state_read[0]),
-        .I3(state_read[2]),
-        .I4(\i2c_wdata[9]_i_4_n_0 ),
-        .O(\i2c_wdata[0]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \i2c_wdata[0]_i_4 
-       (.I0(state_write[1]),
-        .I1(state_write[0]),
-        .O(\i2c_wdata[0]_i_4_n_0 ));
-  LUT3 #(
-    .INIT(8'hDF)) 
-    \i2c_wdata[0]_i_5 
-       (.I0(state_write[2]),
-        .I1(state_write[0]),
-        .I2(state_write[1]),
-        .O(\i2c_wdata[0]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h0004)) 
-    \i2c_wdata[1]_i_3 
-       (.I0(state_read[3]),
-        .I1(state_read[1]),
-        .I2(state_read[2]),
-        .I3(state_read[0]),
-        .O(\i2c_wdata[1]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000400)) 
-    \i2c_wdata[2]_i_3 
-       (.I0(state_read[3]),
-        .I1(state_read[1]),
-        .I2(state_i2c[1]),
-        .I3(state_i2c[3]),
-        .I4(state_i2c[2]),
-        .I5(state_i2c[0]),
-        .O(\i2c_wdata[2]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \i2c_wdata[31]_i_1 
-       (.I0(\i2c_wdata[31]_i_3_n_0 ),
-        .I1(m00_axi_aresetn),
-        .O(\i2c_wdata[31]_i_1_n_0 ));
+    .INIT(64'h00000000003BC3F8)) 
+    \i2c_waddr[1]_i_1 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[4]),
+        .I5(\i2c_waddr[1]_i_3_n_0 ),
+        .O(\i2c_waddr[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00FD03CC)) 
-    \i2c_wdata[31]_i_3 
-       (.I0(\i2c_wdata[9]_i_4_n_0 ),
-        .I1(state_read[2]),
-        .I2(state_read[0]),
-        .I3(state_read[3]),
-        .I4(state_read[1]),
-        .O(\i2c_wdata[31]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h0008)) 
-    \i2c_wdata[7]_i_2 
-       (.I0(\i2c_wdata[9]_i_4_n_0 ),
-        .I1(state_read[1]),
-        .I2(state_read[3]),
-        .I3(state_read[0]),
-        .O(\i2c_wdata[7]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hF0ED)) 
-    \i2c_wdata[7]_i_4 
-       (.I0(state_read[2]),
-        .I1(state_read[0]),
-        .I2(state_read[3]),
-        .I3(state_read[1]),
-        .O(\i2c_wdata[7]_i_4_n_0 ));
+    .INIT(32'h4D6DFD6D)) 
+    \i2c_waddr[1]_i_2 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[4]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[3]),
+        .O(\i2c_waddr[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h37777777FFFFFFFF)) 
+    \i2c_waddr[1]_i_3 
+       (.I0(\trans_cnt[1]_i_3_n_0 ),
+        .I1(\wcnt[1]_i_4_n_0 ),
+        .I2(state_w_r[0]),
+        .I3(state_w_r[4]),
+        .I4(\i2c_waddr[1]_i_4_n_0 ),
+        .I5(m00_axi_aresetn),
+        .O(\i2c_waddr[1]_i_3_n_0 ));
   LUT3 #(
     .INIT(8'h04)) 
-    \i2c_wdata[8]_i_2 
-       (.I0(state_read[0]),
-        .I1(state_read[2]),
-        .I2(state_read[3]),
-        .O(\i2c_wdata[8]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hF3E5F0E5)) 
-    \i2c_wdata[8]_i_3 
-       (.I0(state_read[2]),
-        .I1(state_read[0]),
-        .I2(state_read[3]),
-        .I3(state_read[1]),
-        .I4(\i2c_wdata[9]_i_4_n_0 ),
-        .O(\i2c_wdata[8]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \i2c_wdata[9]_i_1 
-       (.I0(m00_axi_aresetn),
-        .I1(\i2c_wdata[9]_i_3_n_0 ),
-        .O(i2c_waddr));
+    \i2c_waddr[1]_i_4 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[3]),
+        .O(\i2c_waddr[1]_i_4_n_0 ));
+  FDRE \i2c_waddr_reg[1] 
+       (.C(m00_axi_aclk),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(\i2c_waddr[1]_i_2_n_0 ),
+        .Q(\i2c_waddr_reg_n_0_[1] ),
+        .R(1'b0));
   LUT6 #(
-    .INIT(64'h3301330033013033)) 
-    \i2c_wdata[9]_i_3 
-       (.I0(\state_write[0]_i_2_n_0 ),
-        .I1(\i2c_wdata[31]_i_3_n_0 ),
-        .I2(state_write[0]),
-        .I3(state_write[3]),
-        .I4(state_write[1]),
-        .I5(state_write[2]),
-        .O(\i2c_wdata[9]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    \i2c_wdata[9]_i_4 
-       (.I0(state_i2c[0]),
-        .I1(state_i2c[2]),
-        .I2(state_i2c[3]),
-        .I3(state_i2c[1]),
-        .O(\i2c_wdata[9]_i_4_n_0 ));
+    .INIT(64'h4444006044000060)) 
+    \i2c_wdata[1]_i_2 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(wcnt[1]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[2]),
+        .I5(rcnt[1]),
+        .O(\i2c_wdata[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAA0A8AAAA0008)) 
+    \i2c_wdata[2]_i_2 
+       (.I0(state_w_r[0]),
+        .I1(wcnt[2]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[3]),
+        .I5(state_w_r[4]),
+        .O(\i2c_wdata[2]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \i2c_wdata[2]_i_3 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[3]),
+        .O(\i2c_wdata[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000000033C3F8)) 
+    \i2c_wdata[31]_i_1 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[4]),
+        .I5(\i2c_waddr[1]_i_3_n_0 ),
+        .O(\i2c_wdata[31]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \i2c_wdata[7]_i_2 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[2]),
+        .O(\i2c_wdata[7]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \i2c_wdata[7]_i_3 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[4]),
+        .O(\i2c_wdata[7]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'hBC)) 
+    \i2c_wdata[7]_i_4 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[0]),
+        .O(\i2c_wdata[7]_i_4_n_0 ));
   FDRE \i2c_wdata_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[0]),
         .Q(\i2c_wdata_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[10] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_18),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[10]),
         .Q(\i2c_wdata_reg_n_0_[10] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[11] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_19),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[11]),
         .Q(\i2c_wdata_reg_n_0_[11] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[12] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_20),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[12]),
         .Q(\i2c_wdata_reg_n_0_[12] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[13] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_21),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[13]),
         .Q(\i2c_wdata_reg_n_0_[13] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[14] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_22),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[14]),
         .Q(\i2c_wdata_reg_n_0_[14] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[15] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_23),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[15]),
         .Q(\i2c_wdata_reg_n_0_[15] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[16] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_24),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[16]),
         .Q(\i2c_wdata_reg_n_0_[16] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[17] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_25),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[17]),
         .Q(\i2c_wdata_reg_n_0_[17] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[18] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_26),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[18]),
         .Q(\i2c_wdata_reg_n_0_[18] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[19] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_27),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[19]),
         .Q(\i2c_wdata_reg_n_0_[19] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[1]),
         .Q(\i2c_wdata_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[20] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_28),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[20]),
         .Q(\i2c_wdata_reg_n_0_[20] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[21] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_29),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[21]),
         .Q(\i2c_wdata_reg_n_0_[21] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[22] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_30),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[22]),
         .Q(\i2c_wdata_reg_n_0_[22] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[23] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_31),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[23]),
         .Q(\i2c_wdata_reg_n_0_[23] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[24] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_32),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[24]),
         .Q(\i2c_wdata_reg_n_0_[24] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[25] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_33),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[25]),
         .Q(\i2c_wdata_reg_n_0_[25] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[26] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_34),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[26]),
         .Q(\i2c_wdata_reg_n_0_[26] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[27] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_35),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[27]),
         .Q(\i2c_wdata_reg_n_0_[27] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[28] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_36),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[28]),
         .Q(\i2c_wdata_reg_n_0_[28] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[29] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_37),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[29]),
         .Q(\i2c_wdata_reg_n_0_[29] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[2]),
         .Q(\i2c_wdata_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[30] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_38),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[30]),
         .Q(\i2c_wdata_reg_n_0_[30] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[31] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(I2C_Controller_v1_0_M00_AXI_inst_n_39),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(regacc_data_rd_r[31]),
         .Q(\i2c_wdata_reg_n_0_[31] ),
         .R(\i2c_wdata[31]_i_1_n_0 ));
   FDRE \i2c_wdata_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[3]),
         .Q(\i2c_wdata_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(i2c_wdata[4]),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(I2C_Controller_v1_0_M00_AXI_inst_n_10),
         .Q(\i2c_wdata_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[5]),
         .Q(\i2c_wdata_reg_n_0_[5] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(i2c_wdata[6]),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(I2C_Controller_v1_0_M00_AXI_inst_n_8),
         .Q(\i2c_wdata_reg_n_0_[6] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
-        .D(i2c_wdata[7]),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
+        .D(I2C_Controller_v1_0_M00_AXI_inst_n_7),
         .Q(\i2c_wdata_reg_n_0_[7] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[8] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[8]),
         .Q(\i2c_wdata_reg_n_0_[8] ),
         .R(1'b0));
   FDRE \i2c_wdata_reg[9] 
        (.C(m00_axi_aclk),
-        .CE(i2c_waddr),
+        .CE(\i2c_waddr[1]_i_1_n_0 ),
         .D(i2c_wdata[9]),
         .Q(\i2c_wdata_reg_n_0_[9] ),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hBFAAFFFFBFAA0000)) 
+    .INIT(64'hE0EEFFFFE0EE0000)) 
     i2c_wr_i_1
-       (.I0(\i2c_wdata[31]_i_3_n_0 ),
-        .I1(i2c_wr_i_2_n_0),
-        .I2(state_read[0]),
+       (.I0(i2c_wr),
+        .I1(m00_axi_aresetn),
+        .I2(i2c_wr_i_2_n_0),
         .I3(i2c_wr_i_3_n_0),
-        .I4(i2c_wr1_out),
-        .I5(i2c_wr_reg_n_0),
+        .I4(i2c_wr_i_4_n_0),
+        .I5(i2c_wr),
         .O(i2c_wr_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i2c_wr_i_2
-       (.I0(state_read[2]),
-        .I1(state_read[1]),
-        .O(i2c_wr_i_2_n_0));
   LUT5 #(
-    .INIT(32'hFF4F505F)) 
-    i2c_wr_i_3
-       (.I0(state_write[3]),
-        .I1(start_bram_read_i_5_n_0),
-        .I2(state_write[2]),
-        .I3(state_write[0]),
-        .I4(state_write[1]),
-        .O(i2c_wr_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h888A8A8888888A88)) 
-    i2c_wr_i_4
+    .INIT(32'hDFDFDFDD)) 
+    i2c_wr_i_2
        (.I0(m00_axi_aresetn),
         .I1(i2c_wr_i_5_n_0),
-        .I2(\state_bram[3]_i_4_n_0 ),
-        .I3(state_write[3]),
-        .I4(state_write[1]),
-        .I5(\state_write[0]_i_3_n_0 ),
-        .O(i2c_wr1_out));
+        .I2(i2c_wr_i_6_n_0),
+        .I3(i2c_wr),
+        .I4(\trans_cnt[1]_i_3_n_0 ),
+        .O(i2c_wr_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFF0033FFF4)) 
+    .INIT(64'h04555555FFFFFFFF)) 
+    i2c_wr_i_3
+       (.I0(i2c_wr_i_7_n_0),
+        .I1(\state_w_r[2]_i_7_n_0 ),
+        .I2(\bram_wdata_r[31]_i_3_n_0 ),
+        .I3(\bram_wdata_r[31]_i_2_n_0 ),
+        .I4(i2c_wr_i_8_n_0),
+        .I5(state_w_r[2]),
+        .O(i2c_wr_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h1FFF3F3F3F3F3FEF)) 
+    i2c_wr_i_4
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[3]),
+        .I2(m00_axi_aresetn),
+        .I3(state_w_r[4]),
+        .I4(state_w_r[2]),
+        .I5(state_w_r[1]),
+        .O(i2c_wr_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000200)) 
     i2c_wr_i_5
-       (.I0(\i2c_wdata[9]_i_4_n_0 ),
-        .I1(state_read[1]),
-        .I2(state_read[0]),
-        .I3(state_read[2]),
-        .I4(state_read[3]),
-        .I5(i2c_wr_i_6_n_0),
+       (.I0(i2c_wr),
+        .I1(state_w_r[4]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[0]),
+        .I5(\trans_cnt[2]_i_3_n_0 ),
         .O(i2c_wr_i_5_n_0));
-  LUT3 #(
-    .INIT(8'h0E)) 
+  LUT6 #(
+    .INIT(64'hABBAAAAAAABAABBA)) 
     i2c_wr_i_6
-       (.I0(state_write[2]),
-        .I1(state_write[0]),
-        .I2(state_write[3]),
+       (.I0(\state_w_r[4]_i_6_n_0 ),
+        .I1(state_w_r[3]),
+        .I2(state_w_r[1]),
+        .I3(state_w_r[0]),
+        .I4(state_w_r[4]),
+        .I5(state_w_r[2]),
         .O(i2c_wr_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hD000)) 
+    i2c_wr_i_7
+       (.I0(m01_axi_txn_done),
+        .I1(i2c_txn_done_r),
+        .I2(state_w_r[4]),
+        .I3(state_w_r[0]),
+        .O(i2c_wr_i_7_n_0));
+  LUT3 #(
+    .INIT(8'h80)) 
+    i2c_wr_i_8
+       (.I0(i2c_wr),
+        .I1(state_w_r[4]),
+        .I2(state_w_r[1]),
+        .O(i2c_wr_i_8_n_0));
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
   FDRE i2c_wr_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(i2c_wr_i_1_n_0),
-        .Q(i2c_wr_reg_n_0),
+        .Q(i2c_wr),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h7070705370707050)) 
+  LUT4 #(
+    .INIT(16'hC744)) 
     \rcnt[0]_i_1 
        (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(\rcnt[7]_i_4_n_0 ),
-        .I2(rcnt[0]),
-        .I3(\rcnt[0]_i_2_n_0 ),
-        .I4(\rcnt[0]_i_3_n_0 ),
-        .I5(m00_axi_aresetn),
+        .I1(rcnt[0]),
+        .I2(\rcnt[1]_i_2_n_0 ),
+        .I3(\rcnt[5]_i_3_n_0 ),
         .O(\rcnt[0]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \rcnt[0]_i_2 
-       (.I0(state_read[1]),
-        .I1(state_read[0]),
-        .O(\rcnt[0]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \rcnt[0]_i_3 
-       (.I0(state_read[3]),
-        .I1(state_read[2]),
-        .O(\rcnt[0]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'h70537050)) 
+    .INIT(32'hCC7C4444)) 
     \rcnt[1]_i_1 
        (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(\rcnt[7]_i_4_n_0 ),
-        .I2(rcnt[1]),
+        .I1(rcnt[1]),
+        .I2(rcnt[0]),
         .I3(\rcnt[1]_i_2_n_0 ),
-        .I4(m00_axi_aresetn),
+        .I4(\rcnt[5]_i_3_n_0 ),
         .O(\rcnt[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFBFFFFFF)) 
+  LUT6 #(
+    .INIT(64'hFFFFFBFFFFFFFFFF)) 
     \rcnt[1]_i_2 
-       (.I0(state_read[3]),
-        .I1(state_read[2]),
-        .I2(state_read[1]),
-        .I3(state_read[0]),
-        .I4(rcnt[0]),
+       (.I0(\wcnt[1]_i_4_n_0 ),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[3]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[4]),
+        .I5(state_w_r[2]),
         .O(\rcnt[1]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h7053)) 
+  LUT6 #(
+    .INIT(64'hDFD0000FFFFF0000)) 
     \rcnt[2]_i_1 
-       (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(\rcnt[5]_i_2_n_0 ),
-        .I2(rcnt[2]),
-        .I3(\rcnt[4]_i_2_n_0 ),
+       (.I0(start_i2c_read),
+        .I1(start_i2c_write),
+        .I2(state_i2c[1]),
+        .I3(\rcnt[2]_i_2_n_0 ),
+        .I4(rcnt[2]),
+        .I5(m00_axi_aresetn),
         .O(\rcnt[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h70537070)) 
+  LUT6 #(
+    .INIT(64'hFFDFFFFFFFFFFFFF)) 
+    \rcnt[2]_i_2 
+       (.I0(rcnt[0]),
+        .I1(\wcnt[1]_i_4_n_0 ),
+        .I2(state_w_r[0]),
+        .I3(\rcnt[2]_i_3_n_0 ),
+        .I4(\rcnt[3]_i_3_n_0 ),
+        .I5(rcnt[1]),
+        .O(\rcnt[2]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \rcnt[2]_i_3 
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[1]),
+        .O(\rcnt[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD5DDDDD00C00000)) 
     \rcnt[3]_i_1 
        (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(\rcnt[5]_i_2_n_0 ),
-        .I2(rcnt[3]),
-        .I3(\rcnt[4]_i_2_n_0 ),
+        .I1(\rcnt[5]_i_3_n_0 ),
+        .I2(rcnt[1]),
+        .I3(\rcnt[3]_i_2_n_0 ),
         .I4(rcnt[2]),
+        .I5(rcnt[3]),
         .O(\rcnt[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h55550000F7FF0C00)) 
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    \rcnt[3]_i_2 
+       (.I0(\rcnt[3]_i_3_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[3]),
+        .I3(state_w_r[0]),
+        .I4(\wcnt[1]_i_4_n_0 ),
+        .I5(rcnt[0]),
+        .O(\rcnt[3]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \rcnt[3]_i_3 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[4]),
+        .O(\rcnt[3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hF70C5500)) 
     \rcnt[4]_i_1 
        (.I0(\rcnt[7]_i_3_n_0 ),
         .I1(rcnt[3]),
-        .I2(\rcnt[4]_i_2_n_0 ),
-        .I3(rcnt[2]),
-        .I4(rcnt[4]),
-        .I5(\rcnt[5]_i_2_n_0 ),
+        .I2(\rcnt[5]_i_2_n_0 ),
+        .I3(rcnt[4]),
+        .I4(\rcnt[5]_i_3_n_0 ),
         .O(\rcnt[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFF7FFFFFFFFFF)) 
-    \rcnt[4]_i_2 
-       (.I0(rcnt[0]),
-        .I1(state_read[0]),
-        .I2(state_read[1]),
-        .I3(state_read[2]),
-        .I4(state_read[3]),
-        .I5(rcnt[1]),
-        .O(\rcnt[4]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h7053)) 
+    .INIT(64'hF07CF0F050505050)) 
     \rcnt[5]_i_1 
        (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(\rcnt[5]_i_2_n_0 ),
+        .I1(rcnt[4]),
         .I2(rcnt[5]),
-        .I3(\rcnt[5]_i_3_n_0 ),
+        .I3(\rcnt[5]_i_2_n_0 ),
+        .I4(rcnt[3]),
+        .I5(\rcnt[5]_i_3_n_0 ),
         .O(\rcnt[5]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'hEF)) 
+  LUT6 #(
+    .INIT(64'hFFF7FFFFFFFFFFFF)) 
     \rcnt[5]_i_2 
-       (.I0(\state_i2c[3]_i_5_n_0 ),
-        .I1(state_i2c[1]),
-        .I2(m00_axi_aresetn),
+       (.I0(rcnt[1]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[4]),
+        .I3(\rcnt[5]_i_4_n_0 ),
+        .I4(rcnt[0]),
+        .I5(rcnt[2]),
         .O(\rcnt[5]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hDFFF)) 
+  LUT3 #(
+    .INIT(8'h02)) 
     \rcnt[5]_i_3 
-       (.I0(rcnt[3]),
-        .I1(\rcnt[4]_i_2_n_0 ),
-        .I2(rcnt[2]),
-        .I3(rcnt[4]),
+       (.I0(m00_axi_aresetn),
+        .I1(\rcnt[6]_i_3_n_0 ),
+        .I2(state_i2c[1]),
         .O(\rcnt[5]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'h5500F50C)) 
+    .INIT(32'hFFDFFFFF)) 
+    \rcnt[5]_i_4 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[3]),
+        .I2(state_w_r[0]),
+        .I3(i2c_txn_done_r),
+        .I4(m01_axi_txn_done),
+        .O(\rcnt[5]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h8C8C8C8C8C8CCCBC)) 
     \rcnt[6]_i_1 
-       (.I0(\rcnt[7]_i_3_n_0 ),
-        .I1(m00_axi_aresetn),
-        .I2(\rcnt[7]_i_5_n_0 ),
-        .I3(rcnt[6]),
-        .I4(\rcnt[7]_i_4_n_0 ),
+       (.I0(\rcnt[6]_i_2_n_0 ),
+        .I1(rcnt[6]),
+        .I2(m00_axi_aresetn),
+        .I3(\rcnt[7]_i_5_n_0 ),
+        .I4(\rcnt[6]_i_3_n_0 ),
+        .I5(state_i2c[1]),
         .O(\rcnt[6]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h8A)) 
+    \rcnt[6]_i_2 
+       (.I0(state_i2c[1]),
+        .I1(start_i2c_write),
+        .I2(start_i2c_read),
+        .O(\rcnt[6]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
+    \rcnt[6]_i_3 
+       (.I0(rcnt[3]),
+        .I1(\rcnt[6]_i_4_n_0 ),
+        .I2(rcnt[7]),
+        .I3(rcnt[6]),
+        .I4(rcnt[0]),
+        .O(\rcnt[6]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \rcnt[6]_i_4 
+       (.I0(rcnt[1]),
+        .I1(rcnt[2]),
+        .I2(rcnt[5]),
+        .I3(rcnt[4]),
+        .O(\rcnt[6]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h0110FFFF)) 
     \rcnt[7]_i_1 
-       (.I0(state_i2c[0]),
-        .I1(state_i2c[2]),
+       (.I0(state_i2c[2]),
+        .I1(state_i2c[0]),
         .I2(state_i2c[3]),
         .I3(state_i2c[1]),
         .I4(m00_axi_aresetn),
         .O(\rcnt[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h44CC447444CC44CC)) 
+    .INIT(64'h4C4C4C4C47444C4C)) 
     \rcnt[7]_i_2 
        (.I0(\rcnt[7]_i_3_n_0 ),
         .I1(rcnt[7]),
-        .I2(m00_axi_aresetn),
-        .I3(\rcnt[7]_i_4_n_0 ),
-        .I4(\rcnt[7]_i_5_n_0 ),
-        .I5(rcnt[6]),
+        .I2(\rcnt[7]_i_4_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(rcnt[6]),
+        .I5(\rcnt[7]_i_5_n_0 ),
         .O(\rcnt[7]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h08AA)) 
@@ -1786,16 +1877,17 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
     .INIT(4'hE)) 
     \rcnt[7]_i_4 
        (.I0(state_i2c[1]),
-        .I1(\state_i2c[3]_i_5_n_0 ),
+        .I1(\rcnt[6]_i_3_n_0 ),
         .O(\rcnt[7]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hF7FFFFFF)) 
+  LUT6 #(
+    .INIT(64'hF7FFFFFFFFFFFFFF)) 
     \rcnt[7]_i_5 
-       (.I0(rcnt[4]),
-        .I1(rcnt[2]),
-        .I2(\rcnt[4]_i_2_n_0 ),
-        .I3(rcnt[3]),
+       (.I0(rcnt[3]),
+        .I1(rcnt[1]),
+        .I2(\rcnt[3]_i_2_n_0 ),
+        .I3(rcnt[2]),
         .I4(rcnt[5]),
+        .I5(rcnt[4]),
         .O(\rcnt[7]_i_5_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
@@ -1868,7 +1960,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[0]),
         .O(\regacc_addr_r[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[1]_i_1 
@@ -1876,7 +1968,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[1]),
         .O(\regacc_addr_r[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[2]_i_1 
@@ -1884,7 +1976,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[2]),
         .O(\regacc_addr_r[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[3]_i_1 
@@ -1892,7 +1984,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[3]),
         .O(\regacc_addr_r[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[4]_i_1 
@@ -1900,7 +1992,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[4]),
         .O(\regacc_addr_r[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[5]_i_1 
@@ -1908,7 +2000,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[5]),
         .O(\regacc_addr_r[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[6]_i_1 
@@ -1916,7 +2008,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I1(start_bram_read_reg_n_0),
         .I2(bram_waddr_r[6]),
         .O(\regacc_addr_r[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \regacc_addr_r[7]_i_1 
@@ -1925,21 +2017,27 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I2(bram_waddr_r[7]),
         .O(\regacc_addr_r[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000400000000)) 
+    .INIT(64'h000000000000E000)) 
     \regacc_addr_r[9]_i_1 
-       (.I0(state_bram[3]),
-        .I1(m00_axi_aresetn),
-        .I2(state_bram[2]),
-        .I3(\state_bram[2]_i_2_n_0 ),
-        .I4(state_bram[0]),
-        .I5(state_bram[1]),
+       (.I0(start_bram_read_reg_n_0),
+        .I1(start_bram_write_reg_n_0),
+        .I2(state_bram[1]),
+        .I3(\regacc_addr_r[9]_i_3_n_0 ),
+        .I4(state_bram[3]),
+        .I5(state_bram[0]),
         .O(regacc_addr_r));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \regacc_addr_r[9]_i_2 
        (.I0(start_bram_read_reg_n_0),
         .O(\regacc_addr_r[9]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \regacc_addr_r[9]_i_3 
+       (.I0(m00_axi_aresetn),
+        .I1(state_bram[2]),
+        .O(\regacc_addr_r[9]_i_3_n_0 ));
   FDRE \regacc_addr_r_reg[0] 
        (.C(m00_axi_aclk),
         .CE(regacc_addr_r),
@@ -2001,21 +2099,15 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(regacc_addr[11]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFD7FFD702000000)) 
+    .INIT(64'hFFC3FFFF02000000)) 
     regacc_read_r_i_1
-       (.I0(regacc_read_r_i_2_n_0),
+       (.I0(start_bram_read_reg_n_0),
         .I1(state_bram[0]),
         .I2(state_bram[3]),
         .I3(state_bram[1]),
-        .I4(start_bram_read_reg_n_0),
+        .I4(\regacc_addr_r[9]_i_3_n_0 ),
         .I5(regacc_read),
         .O(regacc_read_r_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    regacc_read_r_i_2
-       (.I0(m00_axi_aresetn),
-        .I1(state_bram[2]),
-        .O(regacc_read_r_i_2_n_0));
   FDRE regacc_read_r_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
@@ -2025,7 +2117,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   LUT6 #(
     .INIT(64'hFFFFF8FF00000800)) 
     regacc_write_r_i_1
-       (.I0(start_bram_write),
+       (.I0(start_bram_write_reg_n_0),
         .I1(state_bram[1]),
         .I2(state_bram[2]),
         .I3(m00_axi_aresetn),
@@ -2033,11 +2125,11 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I5(regacc_write),
         .O(regacc_write_r_i_1_n_0));
   LUT5 #(
-    .INIT(32'hF0F0FFDF)) 
+    .INIT(32'hCCCCFFBF)) 
     regacc_write_r_i_2
-       (.I0(start_bram_write),
-        .I1(start_bram_read_reg_n_0),
-        .I2(state_bram[1]),
+       (.I0(start_bram_read_reg_n_0),
+        .I1(state_bram[1]),
+        .I2(start_bram_write_reg_n_0),
         .I3(state_bram[3]),
         .I4(state_bram[0]),
         .O(regacc_write_r_i_2_n_0));
@@ -2048,40 +2140,50 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(regacc_write),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0A9A0A9A0A9AAA9A)) 
+    .INIT(64'h1F10FFFF0F000000)) 
     \scnt[0]_i_1 
-       (.I0(scnt[0]),
-        .I1(\scnt[1]_i_3_n_0 ),
-        .I2(m00_axi_aresetn),
-        .I3(state_i2c[1]),
-        .I4(start_i2c_write),
-        .I5(start_i2c_read),
+       (.I0(start_i2c_write),
+        .I1(start_i2c_read),
+        .I2(state_i2c[1]),
+        .I3(\scnt[0]_i_2_n_0 ),
+        .I4(m00_axi_aresetn),
+        .I5(scnt[0]),
         .O(\scnt[0]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h4B78)) 
+    \scnt[0]_i_2 
+       (.I0(\wcnt[1]_i_3_n_0 ),
+        .I1(state_i2c[0]),
+        .I2(scnt[0]),
+        .I3(\rcnt[6]_i_3_n_0 ),
+        .O(\scnt[0]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'h0026FFFF)) 
+    .INIT(32'h0510FFFF)) 
     \scnt[1]_i_1 
-       (.I0(state_i2c[3]),
-        .I1(state_i2c[1]),
-        .I2(state_i2c[0]),
-        .I3(state_i2c[2]),
+       (.I0(state_i2c[2]),
+        .I1(state_i2c[0]),
+        .I2(state_i2c[1]),
+        .I3(state_i2c[3]),
         .I4(m00_axi_aresetn),
         .O(\scnt[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000CCC6CCCCCCCC)) 
+    .INIT(64'h1F10FFFF0F000000)) 
     \scnt[1]_i_2 
-       (.I0(scnt[0]),
-        .I1(scnt[1]),
+       (.I0(start_i2c_write),
+        .I1(start_i2c_read),
         .I2(state_i2c[1]),
         .I3(\scnt[1]_i_3_n_0 ),
-        .I4(busy_i_2_n_0),
-        .I5(m00_axi_aresetn),
+        .I4(m00_axi_aresetn),
+        .I5(scnt[1]),
         .O(\scnt[1]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h47)) 
+  LUT5 #(
+    .INIT(32'h4BF078F0)) 
     \scnt[1]_i_3 
-       (.I0(\state_i2c[3]_i_4_n_0 ),
+       (.I0(\wcnt[1]_i_3_n_0 ),
         .I1(state_i2c[0]),
-        .I2(\state_i2c[3]_i_5_n_0 ),
+        .I2(scnt[1]),
+        .I3(scnt[0]),
+        .I4(\rcnt[6]_i_3_n_0 ),
         .O(\scnt[1]_i_3_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
@@ -2099,48 +2201,42 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .D(\scnt[1]_i_2_n_0 ),
         .Q(scnt[1]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h7F7F7F7740404044)) 
+  LUT5 #(
+    .INIT(32'hFF2F0020)) 
     start_bram_read_i_1
        (.I0(start_bram_read_i_2_n_0),
-        .I1(m00_axi_aresetn),
-        .I2(start_bram_read_i_3_n_0),
-        .I3(state_i2c[3]),
-        .I4(start_bram_read_i_4_n_0),
-        .I5(start_bram_read_reg_n_0),
+        .I1(\trans_cnt[3]_i_5_n_0 ),
+        .I2(m00_axi_aresetn),
+        .I3(start_bram_read_i_3_n_0),
+        .I4(start_bram_read_reg_n_0),
         .O(start_bram_read_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    start_bram_read_i_2
-       (.I0(state_write[0]),
-        .I1(state_write[1]),
-        .I2(state_write[2]),
-        .I3(state_write[3]),
-        .O(start_bram_read_i_2_n_0));
   LUT5 #(
-    .INIT(32'h14001000)) 
+    .INIT(32'h00000008)) 
+    start_bram_read_i_2
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[4]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[0]),
+        .I4(state_w_r[3]),
+        .O(start_bram_read_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hF1F1F1F100F1F1F1)) 
     start_bram_read_i_3
-       (.I0(state_write[3]),
-        .I1(state_write[1]),
-        .I2(state_write[0]),
-        .I3(state_write[2]),
-        .I4(start_bram_read_i_5_n_0),
+       (.I0(\state_w_r[4]_i_6_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(start_bram_read_i_4_n_0),
+        .I3(busy_i_3_n_0),
+        .I4(state_i2c[0]),
+        .I5(state_i2c[1]),
         .O(start_bram_read_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hEF)) 
-    start_bram_read_i_4
-       (.I0(state_i2c[1]),
-        .I1(state_i2c[2]),
-        .I2(state_i2c[0]),
-        .O(start_bram_read_i_4_n_0));
   LUT4 #(
-    .INIT(16'h0400)) 
-    start_bram_read_i_5
-       (.I0(state_bram[0]),
-        .I1(state_bram[1]),
-        .I2(state_bram[2]),
-        .I3(state_bram[3]),
-        .O(start_bram_read_i_5_n_0));
+    .INIT(16'hFEFF)) 
+    start_bram_read_i_4
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[4]),
+        .O(start_bram_read_i_4_n_0));
   FDRE start_bram_read_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
@@ -2148,52 +2244,61 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(start_bram_read_reg_n_0),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'hFFCF0202)) 
+    .INIT(32'h222F2220)) 
     start_bram_write_i_1
        (.I0(m01_axi_rvalid),
-        .I1(start_bram_write_i_2_n_0),
-        .I2(state_read[0]),
-        .I3(\state_read[2]_i_2_n_0 ),
-        .I4(start_bram_write),
+        .I1(state_w_r[2]),
+        .I2(bram_wdata_r_3),
+        .I3(start_bram_write_i_2_n_0),
+        .I4(start_bram_write_reg_n_0),
         .O(start_bram_write_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
+  LUT5 #(
+    .INIT(32'h00200000)) 
     start_bram_write_i_2
-       (.I0(state_read[3]),
-        .I1(state_read[1]),
-        .I2(m00_axi_aresetn),
-        .I3(state_read[2]),
+       (.I0(start_bram_write_i_3_n_0),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[0]),
+        .I4(\state_w_r[0]_i_9_n_0 ),
         .O(start_bram_write_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h08)) 
+    start_bram_write_i_3
+       (.I0(m00_axi_aresetn),
+        .I1(state_w_r[3]),
+        .I2(state_w_r[4]),
+        .O(start_bram_write_i_3_n_0));
   FDRE start_bram_write_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(start_bram_write_i_1_n_0),
-        .Q(start_bram_write),
+        .Q(start_bram_write_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFF0F000050504040)) 
+    .INIT(64'hFF0F000030302020)) 
     \state_bram[0]_i_1 
-       (.I0(start_bram_read_reg_n_0),
-        .I1(start_bram_write),
+       (.I0(start_bram_write_reg_n_0),
+        .I1(start_bram_read_reg_n_0),
         .I2(state_bram[1]),
         .I3(\state_bram[0]_i_2_n_0 ),
         .I4(state_bram[0]),
         .I5(state_bram[3]),
-        .O(p_0_in__1[0]));
-  LUT4 #(
-    .INIT(16'hFFF7)) 
+        .O(p_0_in__0[0]));
+  LUT5 #(
+    .INIT(32'hFFFFBFFF)) 
     \state_bram[0]_i_2 
-       (.I0(state_read[3]),
-        .I1(state_read[2]),
-        .I2(state_read[1]),
-        .I3(state_read[0]),
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[3]),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[4]),
         .O(\state_bram[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \state_bram[2]_i_2 
        (.I0(start_bram_read_reg_n_0),
-        .I1(start_bram_write),
+        .I1(start_bram_write_reg_n_0),
         .O(\state_bram[2]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h00F6)) 
@@ -2203,31 +2308,32 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I2(state_bram[3]),
         .I3(state_bram[2]),
         .O(\state_bram[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'h7D7D7D5D)) 
     \state_bram[3]_i_2 
        (.I0(\state_bram[3]_i_3_n_0 ),
         .I1(state_bram[3]),
         .I2(state_bram[1]),
-        .I3(start_bram_write),
+        .I3(start_bram_write_reg_n_0),
         .I4(start_bram_read_reg_n_0),
-        .O(p_0_in__1[3]));
-  LUT6 #(
-    .INIT(64'h0040FFFFFF40FFFF)) 
+        .O(p_0_in__0[3]));
+  LUT4 #(
+    .INIT(16'h1FDF)) 
     \state_bram[3]_i_3 
-       (.I0(state_write[3]),
-        .I1(state_write[1]),
-        .I2(\state_bram[3]_i_4_n_0 ),
-        .I3(state_bram[0]),
-        .I4(state_bram[3]),
-        .I5(\state_bram[0]_i_2_n_0 ),
+       (.I0(\state_bram[3]_i_4_n_0 ),
+        .I1(state_bram[0]),
+        .I2(state_bram[3]),
+        .I3(\state_bram[0]_i_2_n_0 ),
         .O(\state_bram[3]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT5 #(
+    .INIT(32'hFFFFF7FF)) 
     \state_bram[3]_i_4 
-       (.I0(state_write[0]),
-        .I1(state_write[2]),
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[0]),
+        .I4(state_w_r[3]),
         .O(\state_bram[3]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_IDLE:0010,STATE_READ:1000,STATE_READ_DONE:1010,STATE_WRITE:1001,STATE_WRITE_DONE:1011" *) 
   (* KEEP = "yes" *) 
@@ -2235,7 +2341,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   FDSE \state_bram_reg[0] 
        (.C(m00_axi_aclk),
         .CE(\state_bram[3]_i_1_n_0 ),
-        .D(p_0_in__1[0]),
+        .D(p_0_in__0[0]),
         .Q(state_bram[0]),
         .S(I2C_Controller_v1_0_M00_AXI_inst_n_0));
   (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_IDLE:0010,STATE_READ:1000,STATE_READ_DONE:1010,STATE_WRITE:1001,STATE_WRITE_DONE:1011" *) 
@@ -2244,7 +2350,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   FDRE \state_bram_reg[1] 
        (.C(m00_axi_aclk),
         .CE(\state_bram[3]_i_1_n_0 ),
-        .D(p_0_in__1[1]),
+        .D(p_0_in__0[1]),
         .Q(state_bram[1]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
   (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_IDLE:0010,STATE_READ:1000,STATE_READ_DONE:1010,STATE_WRITE:1001,STATE_WRITE_DONE:1011" *) 
@@ -2253,7 +2359,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   FDRE \state_bram_reg[2] 
        (.C(m00_axi_aclk),
         .CE(\state_bram[3]_i_1_n_0 ),
-        .D(p_0_in__1[2]),
+        .D(p_0_in__0[2]),
         .Q(state_bram[2]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
   (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_IDLE:0010,STATE_READ:1000,STATE_READ_DONE:1010,STATE_WRITE:1001,STATE_WRITE_DONE:1011" *) 
@@ -2262,29 +2368,29 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   FDRE \state_bram_reg[3] 
        (.C(m00_axi_aclk),
         .CE(\state_bram[3]_i_1_n_0 ),
-        .D(p_0_in__1[3]),
+        .D(p_0_in__0[3]),
         .Q(state_bram[3]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
   LUT6 #(
-    .INIT(64'hAAAAFBAAAAAAFAAA)) 
+    .INIT(64'hAEAEAAAAAEAEAEAA)) 
     \state_i2c[0]_i_1 
        (.I0(\state_i2c[0]_i_2_n_0 ),
-        .I1(start_i2c_read),
-        .I2(start_i2c_write),
-        .I3(state_i2c[1]),
-        .I4(state_i2c[3]),
-        .I5(state_i2c[0]),
+        .I1(state_i2c[1]),
+        .I2(state_i2c[3]),
+        .I3(state_i2c[0]),
+        .I4(start_i2c_write),
+        .I5(start_i2c_read),
         .O(p_0_in__2[0]));
   LUT5 #(
     .INIT(32'h7F000000)) 
     \state_i2c[0]_i_2 
-       (.I0(\state_i2c[3]_i_4_n_0 ),
+       (.I0(\wcnt[1]_i_3_n_0 ),
         .I1(scnt[0]),
         .I2(scnt[1]),
         .I3(state_i2c[0]),
         .I4(state_i2c[3]),
         .O(\state_i2c[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h00005557)) 
     \state_i2c[1]_i_1 
@@ -2305,14 +2411,14 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I5(state_i2c[3]),
         .O(p_0_in__2[2]));
   LUT4 #(
-    .INIT(16'h010E)) 
+    .INIT(16'h0036)) 
     \state_i2c[3]_i_1 
        (.I0(state_i2c[3]),
-        .I1(state_i2c[0]),
-        .I2(state_i2c[2]),
-        .I3(state_i2c[1]),
+        .I1(state_i2c[1]),
+        .I2(state_i2c[0]),
+        .I3(state_i2c[2]),
         .O(\state_i2c[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'hFFFF4440)) 
     \state_i2c[3]_i_2 
@@ -2323,49 +2429,15 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .I4(\state_i2c[3]_i_3_n_0 ),
         .O(p_0_in__2[3]));
   LUT6 #(
-    .INIT(64'h40F0F0F070F0F0F0)) 
+    .INIT(64'h5FFF00003FFF0000)) 
     \state_i2c[3]_i_3 
-       (.I0(\state_i2c[3]_i_4_n_0 ),
-        .I1(state_i2c[0]),
-        .I2(state_i2c[3]),
-        .I3(scnt[1]),
-        .I4(scnt[0]),
-        .I5(\state_i2c[3]_i_5_n_0 ),
+       (.I0(\wcnt[1]_i_3_n_0 ),
+        .I1(\rcnt[6]_i_3_n_0 ),
+        .I2(scnt[1]),
+        .I3(scnt[0]),
+        .I4(state_i2c[3]),
+        .I5(state_i2c[0]),
         .O(\state_i2c[3]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000001)) 
-    \state_i2c[3]_i_4 
-       (.I0(wcnt[2]),
-        .I1(wcnt[1]),
-        .I2(wcnt[7]),
-        .I3(wcnt[6]),
-        .I4(\state_i2c[3]_i_6_n_0 ),
-        .O(\state_i2c[3]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000001)) 
-    \state_i2c[3]_i_5 
-       (.I0(rcnt[0]),
-        .I1(rcnt[7]),
-        .I2(rcnt[2]),
-        .I3(rcnt[6]),
-        .I4(\state_i2c[3]_i_7_n_0 ),
-        .O(\state_i2c[3]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFF7)) 
-    \state_i2c[3]_i_6 
-       (.I0(wcnt[5]),
-        .I1(wcnt[4]),
-        .I2(wcnt[0]),
-        .I3(wcnt[3]),
-        .O(\state_i2c[3]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    \state_i2c[3]_i_7 
-       (.I0(rcnt[5]),
-        .I1(rcnt[3]),
-        .I2(rcnt[4]),
-        .I3(rcnt[1]),
-        .O(\state_i2c[3]_i_7_n_0 ));
   (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_IDLE:0010,STATE_WRITE:1001,STATE_READ:1000" *) 
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
@@ -2403,260 +2475,572 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
         .Q(state_i2c[3]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
   LUT6 #(
-    .INIT(64'h545554FF54555455)) 
-    \state_read[0]_i_1 
-       (.I0(\state_read[0]_i_2_n_0 ),
-        .I1(\state_read[1]_i_2_n_0 ),
-        .I2(state_read[1]),
-        .I3(state_read[0]),
-        .I4(state_read[3]),
-        .I5(\state_read[0]_i_3_n_0 ),
-        .O(p_0_in__0[0]));
+    .INIT(64'h00000000AAAAFFAE)) 
+    \state_w_r[0]_i_1 
+       (.I0(\state_w_r[0]_i_2_n_0 ),
+        .I1(\state_w_r[0]_i_3_n_0 ),
+        .I2(\state_w_r[0]_i_4_n_0 ),
+        .I3(state_w_r[2]),
+        .I4(\state_w_r[0]_i_5_n_0 ),
+        .I5(\state_w_r[0]_i_6_n_0 ),
+        .O(p_0_in__1[0]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT5 #(
+    .INIT(32'h5D5D5DFF)) 
+    \state_w_r[0]_i_10 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[3]),
+        .I3(\trans_cnt[3]_i_5_n_0 ),
+        .I4(state_w_r[0]),
+        .O(\state_w_r[0]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'hDFDDDFFFDDDDDDDD)) 
-    \state_read[0]_i_2 
-       (.I0(state_read[3]),
-        .I1(state_read[2]),
-        .I2(\state_read[2]_i_2_n_0 ),
-        .I3(state_read[0]),
-        .I4(m01_axi_rvalid),
-        .I5(state_read[1]),
-        .O(\state_read[0]_i_2_n_0 ));
+    .INIT(64'h5D5D00005D005D5D)) 
+    \state_w_r[0]_i_11 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[3]),
+        .I3(\wcnt[1]_i_4_n_0 ),
+        .I4(state_w_r[0]),
+        .I5(state_w_r[1]),
+        .O(\state_w_r[0]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \state_w_r[0]_i_12 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[3]),
+        .O(\state_w_r[0]_i_12_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \state_w_r[0]_i_13 
+       (.I0(state_i2c[1]),
+        .I1(state_i2c[3]),
+        .O(\state_w_r[0]_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAABAAAAAAAAAA)) 
-    \state_read[0]_i_3 
-       (.I0(state_read[2]),
-        .I1(state_i2c[0]),
-        .I2(state_i2c[2]),
-        .I3(state_i2c[3]),
-        .I4(state_i2c[1]),
-        .I5(state_read[1]),
-        .O(\state_read[0]_i_3_n_0 ));
+    .INIT(64'hBEBEBFBFAAAABFAF)) 
+    \state_w_r[0]_i_2 
+       (.I0(state_w_r[4]),
+        .I1(\state_w_r[4]_i_6_n_0 ),
+        .I2(state_w_r[0]),
+        .I3(state_w_r[1]),
+        .I4(\state_w_r[0]_i_7_n_0 ),
+        .I5(\state_w_r[0]_i_8_n_0 ),
+        .O(\state_w_r[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hA8FFDD99A8FFFF99)) 
-    \state_read[1]_i_1 
-       (.I0(state_read[3]),
-        .I1(state_read[2]),
-        .I2(\state_read[2]_i_2_n_0 ),
-        .I3(state_read[0]),
-        .I4(state_read[1]),
-        .I5(\state_read[1]_i_2_n_0 ),
-        .O(p_0_in__0[1]));
+    .INIT(64'hEAEAEAEEFFFFFFFF)) 
+    \state_w_r[0]_i_3 
+       (.I0(\state_w_r[2]_i_8_n_0 ),
+        .I1(\bram_wdata_r[31]_i_2_n_0 ),
+        .I2(\bram_wdata_r[31]_i_3_n_0 ),
+        .I3(\bram_wdata_r[31]_i_4_n_0 ),
+        .I4(\bram_wdata_r[31]_i_5_n_0 ),
+        .I5(m01_axi_rvalid),
+        .O(\state_w_r[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \state_w_r[0]_i_4 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[0]),
+        .I2(\state_w_r[4]_i_6_n_0 ),
+        .O(\state_w_r[0]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hAB006700FFFFFFFF)) 
+    \state_w_r[0]_i_5 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(\state_w_r[0]_i_9_n_0 ),
+        .I3(state_w_r[2]),
+        .I4(\state_w_r[4]_i_6_n_0 ),
+        .I5(state_w_r[3]),
+        .O(\state_w_r[0]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h00E000A000B0B0B0)) 
+    \state_w_r[0]_i_6 
+       (.I0(\state_w_r[0]_i_10_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(\state_w_r[4]_i_5_n_0 ),
+        .I3(\state_w_r[0]_i_11_n_0 ),
+        .I4(\state_w_r[4]_i_6_n_0 ),
+        .I5(state_w_r[0]),
+        .O(\state_w_r[0]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFEAAAA)) 
+    \state_w_r[0]_i_7 
+       (.I0(\state_w_r[0]_i_12_n_0 ),
+        .I1(\state_w_r[0]_i_13_n_0 ),
+        .I2(state_i2c[0]),
+        .I3(state_i2c[2]),
+        .I4(state_w_r[1]),
+        .I5(state_w_r[0]),
+        .O(\state_w_r[0]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \state_w_r[0]_i_8 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[3]),
+        .O(\state_w_r[0]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'h007F)) 
-    \state_read[1]_i_2 
-       (.I0(\state_read[1]_i_3_n_0 ),
+    .INIT(16'h4000)) 
+    \state_w_r[0]_i_9 
+       (.I0(state_bram[2]),
+        .I1(state_bram[3]),
+        .I2(state_bram[0]),
+        .I3(state_bram[1]),
+        .O(\state_w_r[0]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF0000FF51)) 
+    \state_w_r[1]_i_1 
+       (.I0(\state_w_r[1]_i_2_n_0 ),
+        .I1(\state_w_r[1]_i_3_n_0 ),
+        .I2(\state_w_r[1]_i_4_n_0 ),
+        .I3(\state_w_r[1]_i_5_n_0 ),
+        .I4(state_w_r[4]),
+        .I5(\state_w_r[1]_i_6_n_0 ),
+        .O(p_0_in__1[1]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT5 #(
+    .INIT(32'h8202FFFF)) 
+    \state_w_r[1]_i_2 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[1]),
+        .I3(\state_w_r[4]_i_6_n_0 ),
+        .I4(state_w_r[3]),
+        .O(\state_w_r[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF77750000)) 
+    \state_w_r[1]_i_3 
+       (.I0(\bram_wdata_r[31]_i_2_n_0 ),
+        .I1(\bram_wdata_r[31]_i_3_n_0 ),
+        .I2(\bram_wdata_r[31]_i_4_n_0 ),
+        .I3(\bram_wdata_r[31]_i_5_n_0 ),
+        .I4(m01_axi_rvalid),
+        .I5(\state_w_r[2]_i_8_n_0 ),
+        .O(\state_w_r[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'hBAAA)) 
+    \state_w_r[1]_i_4 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[0]),
+        .I3(\state_w_r[4]_i_6_n_0 ),
+        .O(\state_w_r[1]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT5 #(
+    .INIT(32'h00006A6E)) 
+    \state_w_r[1]_i_5 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[0]),
+        .I2(\state_w_r[4]_i_6_n_0 ),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[3]),
+        .O(\state_w_r[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000BEBABEFE)) 
+    \state_w_r[1]_i_6 
+       (.I0(\state_w_r[4]_i_3_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(\state_w_r[4]_i_6_n_0 ),
+        .I3(state_w_r[0]),
+        .I4(\trans_cnt[3]_i_5_n_0 ),
+        .I5(\state_w_r[1]_i_7_n_0 ),
+        .O(\state_w_r[1]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFD900FFFFFFFF)) 
+    \state_w_r[1]_i_7 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[0]),
+        .I2(\wcnt[1]_i_4_n_0 ),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[3]),
+        .I5(state_w_r[4]),
+        .O(\state_w_r[1]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h00F1FFFF00F100F1)) 
+    \state_w_r[2]_i_1 
+       (.I0(\state_w_r[2]_i_2_n_0 ),
+        .I1(\state_w_r[2]_i_3_n_0 ),
+        .I2(\state_w_r[2]_i_4_n_0 ),
+        .I3(state_w_r[4]),
+        .I4(\state_w_r[2]_i_5_n_0 ),
+        .I5(\state_w_r[2]_i_6_n_0 ),
+        .O(p_0_in__1[2]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT5 #(
+    .INIT(32'hC400FFFF)) 
+    \state_w_r[2]_i_2 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[0]),
+        .I2(\state_w_r[4]_i_6_n_0 ),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[3]),
+        .O(\state_w_r[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000FFFFF755)) 
+    \state_w_r[2]_i_3 
+       (.I0(m01_axi_rvalid),
+        .I1(\state_w_r[2]_i_7_n_0 ),
+        .I2(\bram_wdata_r[31]_i_3_n_0 ),
+        .I3(\bram_wdata_r[31]_i_2_n_0 ),
+        .I4(\state_w_r[2]_i_8_n_0 ),
+        .I5(state_w_r[2]),
+        .O(\state_w_r[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h1454144454544444)) 
+    \state_w_r[2]_i_4 
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[1]),
+        .I3(\state_w_r[4]_i_6_n_0 ),
+        .I4(\state_w_r[3]_i_4_n_0 ),
+        .I5(state_w_r[0]),
+        .O(\state_w_r[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF007FFFFFFFFF)) 
+    \state_w_r[2]_i_5 
+       (.I0(\state_w_r[4]_i_6_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[0]),
+        .I3(state_w_r[2]),
+        .I4(state_w_r[3]),
+        .I5(state_w_r[4]),
+        .O(\state_w_r[2]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555F755FFFFFFFF)) 
+    \state_w_r[2]_i_6 
+       (.I0(state_w_r[1]),
+        .I1(\state_w_r[2]_i_7_n_0 ),
+        .I2(\bram_wdata_r[31]_i_3_n_0 ),
+        .I3(\bram_wdata_r[31]_i_2_n_0 ),
+        .I4(state_w_r[0]),
+        .I5(state_w_r[2]),
+        .O(\state_w_r[2]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF55454444)) 
+    \state_w_r[2]_i_7 
+       (.I0(\state_w_r[2]_i_9_n_0 ),
+        .I1(wait_cnt[8]),
+        .I2(\bram_wdata_r[31]_i_10_n_0 ),
+        .I3(wait_cnt[6]),
+        .I4(wait_cnt[7]),
+        .I5(\bram_wdata_r[31]_i_5_n_0 ),
+        .O(\state_w_r[2]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \state_w_r[2]_i_8 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .O(\state_w_r[2]_i_8_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \state_w_r[2]_i_9 
+       (.I0(wait_cnt[9]),
+        .I1(wait_cnt[10]),
+        .O(\state_w_r[2]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAEFAAEAAAAAAAAA)) 
+    \state_w_r[3]_i_1 
+       (.I0(\state_w_r[3]_i_2_n_0 ),
+        .I1(\state_w_r[3]_i_3_n_0 ),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[3]),
+        .I4(\state_w_r[3]_i_4_n_0 ),
+        .I5(\state_w_r[3]_i_5_n_0 ),
+        .O(p_0_in__1[3]));
+  LUT6 #(
+    .INIT(64'h002200A2008A008A)) 
+    \state_w_r[3]_i_2 
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[1]),
+        .I3(state_w_r[4]),
+        .I4(\state_w_r[4]_i_6_n_0 ),
+        .I5(state_w_r[0]),
+        .O(\state_w_r[3]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \state_w_r[3]_i_3 
+       (.I0(\state_w_r[4]_i_6_n_0 ),
+        .I1(state_w_r[0]),
+        .O(\state_w_r[3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000400)) 
+    \state_w_r[3]_i_4 
+       (.I0(state_i2c[1]),
+        .I1(state_i2c[3]),
+        .I2(state_i2c[2]),
+        .I3(state_i2c[0]),
+        .I4(state_w_r[0]),
+        .O(\state_w_r[3]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \state_w_r[3]_i_5 
+       (.I0(state_w_r[1]),
+        .I1(state_w_r[4]),
+        .O(\state_w_r[3]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFBFFFBFAAAAAAAA)) 
+    \state_w_r[4]_i_1 
+       (.I0(\state_w_r[4]_i_2_n_0 ),
+        .I1(\state_w_r[4]_i_3_n_0 ),
+        .I2(state_w_r[1]),
+        .I3(\state_w_r[4]_i_4_n_0 ),
+        .I4(state_w_r[0]),
+        .I5(\state_w_r[4]_i_5_n_0 ),
+        .O(p_0_in__1[4]));
+  LUT6 #(
+    .INIT(64'h2000000000000000)) 
+    \state_w_r[4]_i_2 
+       (.I0(\state_w_r[4]_i_6_n_0 ),
+        .I1(state_w_r[4]),
+        .I2(state_w_r[1]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[0]),
+        .I5(state_w_r[2]),
+        .O(\state_w_r[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'h4F)) 
+    \state_w_r[4]_i_3 
+       (.I0(state_w_r[3]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[4]),
+        .O(\state_w_r[4]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h2A2A2AAA)) 
+    \state_w_r[4]_i_4 
+       (.I0(\bram_wdata_r[31]_i_2_n_0 ),
         .I1(wait_cnt[15]),
         .I2(wait_cnt[16]),
-        .I3(\state_read[1]_i_4_n_0 ),
-        .O(\state_read[1]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFEFFFF)) 
-    \state_read[1]_i_3 
-       (.I0(wait_cnt[11]),
-        .I1(wait_cnt[12]),
-        .I2(wait_cnt[13]),
-        .I3(wait_cnt[14]),
-        .I4(\state_read[1]_i_5_n_0 ),
-        .O(\state_read[1]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \state_read[1]_i_4 
-       (.I0(\state_read[1]_i_6_n_0 ),
-        .I1(\state_read[1]_i_7_n_0 ),
-        .I2(\state_read[1]_i_8_n_0 ),
-        .I3(wait_cnt[27]),
-        .I4(wait_cnt[28]),
-        .I5(wait_cnt[20]),
-        .O(\state_read[1]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h777777777F7F7FFF)) 
-    \state_read[1]_i_5 
-       (.I0(wait_cnt[10]),
-        .I1(wait_cnt[9]),
-        .I2(wait_cnt[7]),
-        .I3(wait_cnt[6]),
-        .I4(wait_cnt[5]),
-        .I5(wait_cnt[8]),
-        .O(\state_read[1]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \state_read[1]_i_6 
-       (.I0(wait_cnt[19]),
-        .I1(wait_cnt[17]),
-        .I2(wait_cnt[31]),
-        .I3(wait_cnt[24]),
-        .O(\state_read[1]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \state_read[1]_i_7 
-       (.I0(wait_cnt[23]),
-        .I1(wait_cnt[22]),
-        .I2(wait_cnt[26]),
-        .I3(wait_cnt[21]),
-        .O(\state_read[1]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \state_read[1]_i_8 
-       (.I0(wait_cnt[29]),
-        .I1(wait_cnt[18]),
-        .I2(wait_cnt[30]),
-        .I3(wait_cnt[25]),
-        .O(\state_read[1]_i_8_n_0 ));
+        .I3(\bram_wdata_r[31]_i_4_n_0 ),
+        .I4(\bram_wdata_r[31]_i_5_n_0 ),
+        .O(\state_w_r[4]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT5 #(
-    .INIT(32'h00087878)) 
-    \state_read[2]_i_1 
-       (.I0(state_read[0]),
-        .I1(state_read[1]),
-        .I2(state_read[2]),
-        .I3(\state_read[2]_i_2_n_0 ),
-        .I4(state_read[3]),
-        .O(p_0_in__0[2]));
-  LUT4 #(
-    .INIT(16'hDFFF)) 
-    \state_read[2]_i_2 
-       (.I0(state_bram[1]),
-        .I1(state_bram[2]),
-        .I2(state_bram[3]),
-        .I3(state_bram[0]),
-        .O(\state_read[2]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h1FFE)) 
-    \state_read[3]_i_1 
-       (.I0(state_read[0]),
-        .I1(state_read[1]),
-        .I2(state_read[2]),
-        .I3(state_read[3]),
-        .O(\state_read[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT4 #(
-    .INIT(16'h40AA)) 
-    \state_read[3]_i_2 
-       (.I0(state_read[3]),
-        .I1(state_read[1]),
-        .I2(state_read[0]),
-        .I3(state_read[2]),
-        .O(p_0_in__0[3]));
-  (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_R_IDLE:0010,STATE_R_RESET_TX_FIFO0:0011,STATE_R_RESET_TX_FIFO1:0100,STATE_R_WRITE_FIFO0:0101,STATE_R_WRITE_FIFO1:0110,STATE_R_WRITE_FIFO2:0111,STATE_R_WRITE_FIFO3:1000,STATE_R_SEND:1001,STATE_R_READ_FIFO0:1010,STATE_R_WRITE_BRAM:1011,STATE_R_END:1100" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \state_w_r[4]_i_5 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[3]),
+        .O(\state_w_r[4]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000010000)) 
+    \state_w_r[4]_i_6 
+       (.I0(trans_cnt[3]),
+        .I1(trans_cnt[0]),
+        .I2(trans_cnt[1]),
+        .I3(trans_cnt[2]),
+        .I4(m01_axi_txn_done),
+        .I5(i2c_txn_done_r),
+        .O(\state_w_r[4]_i_6_n_0 ));
+  (* FSM_ENCODED_STATES = "STATE_INIT:00001,STATE_IDLE:00010,STATE_W_RESET_TX_FIFO0:01110,STATE_W_RESET_TX_FIFO1:01111,STATE_W_WRITE_FIFO0:10000,STATE_W_READ_BRAM:10010,STATE_W_WRITE_FIFO1:10001,STATE_W_WRITE_FIFO2:10011,STATE_W_WRITE_FIFO3:10100,STATE_W_SEND:10101,STATE_W_END:10110,STATE_R_RESET_TX_FIFO0:00011,STATE_R_RESET_TX_FIFO1:00100,STATE_R_WRITE_FIFO0:00101,STATE_R_WRITE_FIFO1:00110,STATE_R_WRITE_FIFO2:00111,STATE_R_WRITE_FIFO3:01000,STATE_R_SEND:01001,STATE_R_READ_FIFO0:01011,STATE_R_WRITE_BRAM:01100,STATE_R_END:01101" *) 
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
-  FDSE \state_read_reg[0] 
+  FDSE \state_w_r_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(\state_read[3]_i_1_n_0 ),
-        .D(p_0_in__0[0]),
-        .Q(state_read[0]),
+        .CE(1'b1),
+        .D(p_0_in__1[0]),
+        .Q(state_w_r[0]),
         .S(I2C_Controller_v1_0_M00_AXI_inst_n_0));
-  (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_R_IDLE:0010,STATE_R_RESET_TX_FIFO0:0011,STATE_R_RESET_TX_FIFO1:0100,STATE_R_WRITE_FIFO0:0101,STATE_R_WRITE_FIFO1:0110,STATE_R_WRITE_FIFO2:0111,STATE_R_WRITE_FIFO3:1000,STATE_R_SEND:1001,STATE_R_READ_FIFO0:1010,STATE_R_WRITE_BRAM:1011,STATE_R_END:1100" *) 
+  (* FSM_ENCODED_STATES = "STATE_INIT:00001,STATE_IDLE:00010,STATE_W_RESET_TX_FIFO0:01110,STATE_W_RESET_TX_FIFO1:01111,STATE_W_WRITE_FIFO0:10000,STATE_W_READ_BRAM:10010,STATE_W_WRITE_FIFO1:10001,STATE_W_WRITE_FIFO2:10011,STATE_W_WRITE_FIFO3:10100,STATE_W_SEND:10101,STATE_W_END:10110,STATE_R_RESET_TX_FIFO0:00011,STATE_R_RESET_TX_FIFO1:00100,STATE_R_WRITE_FIFO0:00101,STATE_R_WRITE_FIFO1:00110,STATE_R_WRITE_FIFO2:00111,STATE_R_WRITE_FIFO3:01000,STATE_R_SEND:01001,STATE_R_READ_FIFO0:01011,STATE_R_WRITE_BRAM:01100,STATE_R_END:01101" *) 
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
-  FDRE \state_read_reg[1] 
+  FDRE \state_w_r_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(\state_read[3]_i_1_n_0 ),
-        .D(p_0_in__0[1]),
-        .Q(state_read[1]),
+        .CE(1'b1),
+        .D(p_0_in__1[1]),
+        .Q(state_w_r[1]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
-  (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_R_IDLE:0010,STATE_R_RESET_TX_FIFO0:0011,STATE_R_RESET_TX_FIFO1:0100,STATE_R_WRITE_FIFO0:0101,STATE_R_WRITE_FIFO1:0110,STATE_R_WRITE_FIFO2:0111,STATE_R_WRITE_FIFO3:1000,STATE_R_SEND:1001,STATE_R_READ_FIFO0:1010,STATE_R_WRITE_BRAM:1011,STATE_R_END:1100" *) 
+  (* FSM_ENCODED_STATES = "STATE_INIT:00001,STATE_IDLE:00010,STATE_W_RESET_TX_FIFO0:01110,STATE_W_RESET_TX_FIFO1:01111,STATE_W_WRITE_FIFO0:10000,STATE_W_READ_BRAM:10010,STATE_W_WRITE_FIFO1:10001,STATE_W_WRITE_FIFO2:10011,STATE_W_WRITE_FIFO3:10100,STATE_W_SEND:10101,STATE_W_END:10110,STATE_R_RESET_TX_FIFO0:00011,STATE_R_RESET_TX_FIFO1:00100,STATE_R_WRITE_FIFO0:00101,STATE_R_WRITE_FIFO1:00110,STATE_R_WRITE_FIFO2:00111,STATE_R_WRITE_FIFO3:01000,STATE_R_SEND:01001,STATE_R_READ_FIFO0:01011,STATE_R_WRITE_BRAM:01100,STATE_R_END:01101" *) 
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
-  FDRE \state_read_reg[2] 
+  FDRE \state_w_r_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(\state_read[3]_i_1_n_0 ),
-        .D(p_0_in__0[2]),
-        .Q(state_read[2]),
+        .CE(1'b1),
+        .D(p_0_in__1[2]),
+        .Q(state_w_r[2]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
-  (* FSM_ENCODED_STATES = "STATE_INIT:0001,STATE_R_IDLE:0010,STATE_R_RESET_TX_FIFO0:0011,STATE_R_RESET_TX_FIFO1:0100,STATE_R_WRITE_FIFO0:0101,STATE_R_WRITE_FIFO1:0110,STATE_R_WRITE_FIFO2:0111,STATE_R_WRITE_FIFO3:1000,STATE_R_SEND:1001,STATE_R_READ_FIFO0:1010,STATE_R_WRITE_BRAM:1011,STATE_R_END:1100" *) 
+  (* FSM_ENCODED_STATES = "STATE_INIT:00001,STATE_IDLE:00010,STATE_W_RESET_TX_FIFO0:01110,STATE_W_RESET_TX_FIFO1:01111,STATE_W_WRITE_FIFO0:10000,STATE_W_READ_BRAM:10010,STATE_W_WRITE_FIFO1:10001,STATE_W_WRITE_FIFO2:10011,STATE_W_WRITE_FIFO3:10100,STATE_W_SEND:10101,STATE_W_END:10110,STATE_R_RESET_TX_FIFO0:00011,STATE_R_RESET_TX_FIFO1:00100,STATE_R_WRITE_FIFO0:00101,STATE_R_WRITE_FIFO1:00110,STATE_R_WRITE_FIFO2:00111,STATE_R_WRITE_FIFO3:01000,STATE_R_SEND:01001,STATE_R_READ_FIFO0:01011,STATE_R_WRITE_BRAM:01100,STATE_R_END:01101" *) 
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
-  FDRE \state_read_reg[3] 
+  FDRE \state_w_r_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(\state_read[3]_i_1_n_0 ),
-        .D(p_0_in__0[3]),
-        .Q(state_read[3]),
+        .CE(1'b1),
+        .D(p_0_in__1[3]),
+        .Q(state_w_r[3]),
         .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+  (* FSM_ENCODED_STATES = "STATE_INIT:00001,STATE_IDLE:00010,STATE_W_RESET_TX_FIFO0:01110,STATE_W_RESET_TX_FIFO1:01111,STATE_W_WRITE_FIFO0:10000,STATE_W_READ_BRAM:10010,STATE_W_WRITE_FIFO1:10001,STATE_W_WRITE_FIFO2:10011,STATE_W_WRITE_FIFO3:10100,STATE_W_SEND:10101,STATE_W_END:10110,STATE_R_RESET_TX_FIFO0:00011,STATE_R_RESET_TX_FIFO1:00100,STATE_R_WRITE_FIFO0:00101,STATE_R_WRITE_FIFO1:00110,STATE_R_WRITE_FIFO2:00111,STATE_R_WRITE_FIFO3:01000,STATE_R_SEND:01001,STATE_R_READ_FIFO0:01011,STATE_R_WRITE_BRAM:01100,STATE_R_END:01101" *) 
+  (* KEEP = "yes" *) 
+  (* mark_debug = "true" *) 
+  FDRE \state_w_r_reg[4] 
+       (.C(m00_axi_aclk),
+        .CE(1'b1),
+        .D(p_0_in__1[4]),
+        .Q(state_w_r[4]),
+        .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+  LUT5 #(
+    .INIT(32'h8BFF8800)) 
+    \trans_cnt[0]_i_1 
+       (.I0(\trans_cnt[0]_i_2_n_0 ),
+        .I1(\trans_cnt[3]_i_4_n_0 ),
+        .I2(\trans_cnt[3]_i_5_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(trans_cnt[0]),
+        .O(p_1_in[0]));
   LUT6 #(
-    .INIT(64'hA8F7A8A7FFFFFFFF)) 
-    \state_write[0]_i_1 
-       (.I0(state_write[3]),
-        .I1(state_write[2]),
-        .I2(state_write[1]),
-        .I3(state_write[0]),
-        .I4(\state_write[0]_i_2_n_0 ),
-        .I5(\state_read[3]_i_1_n_0 ),
-        .O(\state_write[0]_i_1_n_0 ));
+    .INIT(64'h0000040033333433)) 
+    \trans_cnt[0]_i_2 
+       (.I0(\trans_cnt[2]_i_3_n_0 ),
+        .I1(trans_cnt[0]),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[0]),
+        .I5(\trans_cnt[1]_i_3_n_0 ),
+        .O(\trans_cnt[0]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hBBFFB800)) 
+    \trans_cnt[1]_i_1 
+       (.I0(\trans_cnt[1]_i_2_n_0 ),
+        .I1(\trans_cnt[3]_i_4_n_0 ),
+        .I2(\trans_cnt[3]_i_5_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(trans_cnt[1]),
+        .O(p_1_in[1]));
   LUT6 #(
-    .INIT(64'h0400FFFF04000000)) 
-    \state_write[0]_i_2 
-       (.I0(state_bram[0]),
-        .I1(state_bram[1]),
-        .I2(state_bram[2]),
-        .I3(state_bram[3]),
-        .I4(state_write[2]),
-        .I5(\state_write[0]_i_3_n_0 ),
-        .O(\state_write[0]_i_2_n_0 ));
+    .INIT(64'hFCB8FCB8FFB8FCBB)) 
+    \trans_cnt[1]_i_2 
+       (.I0(\trans_cnt[2]_i_3_n_0 ),
+        .I1(\trans_cnt[3]_i_6_n_0 ),
+        .I2(\state_w_r[4]_i_6_n_0 ),
+        .I3(trans_cnt[1]),
+        .I4(trans_cnt[0]),
+        .I5(\trans_cnt[1]_i_3_n_0 ),
+        .O(\trans_cnt[1]_i_2_n_0 ));
   LUT4 #(
-    .INIT(16'h0008)) 
-    \state_write[0]_i_3 
-       (.I0(state_i2c[3]),
-        .I1(state_i2c[0]),
-        .I2(state_i2c[2]),
+    .INIT(16'h0001)) 
+    \trans_cnt[1]_i_3 
+       (.I0(trans_cnt[2]),
+        .I1(trans_cnt[1]),
+        .I2(trans_cnt[0]),
+        .I3(trans_cnt[3]),
+        .O(\trans_cnt[1]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h8BFF8800)) 
+    \trans_cnt[2]_i_1 
+       (.I0(\trans_cnt[2]_i_2_n_0 ),
+        .I1(\trans_cnt[3]_i_4_n_0 ),
+        .I2(\trans_cnt[3]_i_5_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(trans_cnt[2]),
+        .O(p_1_in[2]));
+  LUT6 #(
+    .INIT(64'h7777774400000030)) 
+    \trans_cnt[2]_i_2 
+       (.I0(\trans_cnt[2]_i_3_n_0 ),
+        .I1(\trans_cnt[3]_i_6_n_0 ),
+        .I2(trans_cnt[3]),
+        .I3(trans_cnt[0]),
+        .I4(trans_cnt[1]),
+        .I5(trans_cnt[2]),
+        .O(\trans_cnt[2]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \trans_cnt[2]_i_3 
+       (.I0(state_i2c[2]),
+        .I1(state_i2c[3]),
+        .I2(state_i2c[1]),
+        .O(\trans_cnt[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFFFF1F100000)) 
+    \trans_cnt[3]_i_1 
+       (.I0(\trans_cnt[3]_i_2_n_0 ),
+        .I1(\trans_cnt[3]_i_3_n_0 ),
+        .I2(\trans_cnt[3]_i_4_n_0 ),
+        .I3(\trans_cnt[3]_i_5_n_0 ),
+        .I4(m00_axi_aresetn),
+        .I5(trans_cnt[3]),
+        .O(p_1_in[3]));
+  LUT6 #(
+    .INIT(64'h0404040404000404)) 
+    \trans_cnt[3]_i_2 
+       (.I0(state_w_r[2]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[0]),
         .I3(state_i2c[1]),
-        .O(\state_write[0]_i_3_n_0 ));
+        .I4(state_i2c[3]),
+        .I5(state_i2c[2]),
+        .O(\trans_cnt[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000005557)) 
+    \trans_cnt[3]_i_3 
+       (.I0(trans_cnt[3]),
+        .I1(trans_cnt[2]),
+        .I2(trans_cnt[1]),
+        .I3(trans_cnt[0]),
+        .I4(\trans_cnt[3]_i_6_n_0 ),
+        .I5(\state_w_r[4]_i_6_n_0 ),
+        .O(\trans_cnt[3]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'h02280208)) 
-    \state_write[1]_i_1 
-       (.I0(\state_read[3]_i_1_n_0 ),
-        .I1(state_write[1]),
-        .I2(state_write[3]),
-        .I3(state_write[0]),
-        .I4(state_write[2]),
-        .O(\state_write[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h020A0880)) 
-    \state_write[2]_i_1 
-       (.I0(\state_read[3]_i_1_n_0 ),
-        .I1(state_write[0]),
-        .I2(state_write[3]),
-        .I3(state_write[1]),
-        .I4(state_write[2]),
-        .O(\state_write[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h20080008)) 
-    \state_write[3]_i_1 
-       (.I0(\state_read[3]_i_1_n_0 ),
-        .I1(state_write[3]),
-        .I2(state_write[1]),
-        .I3(state_write[2]),
-        .I4(state_write[0]),
-        .O(\state_write[3]_i_1_n_0 ));
+    .INIT(32'hFD070DFB)) 
+    \trans_cnt[3]_i_4 
+       (.I0(state_w_r[4]),
+        .I1(state_w_r[0]),
+        .I2(state_w_r[3]),
+        .I3(state_w_r[1]),
+        .I4(state_w_r[2]),
+        .O(\trans_cnt[3]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'h0040)) 
+    \trans_cnt[3]_i_5 
+       (.I0(state_bram[2]),
+        .I1(state_bram[3]),
+        .I2(state_bram[1]),
+        .I3(state_bram[0]),
+        .O(\trans_cnt[3]_i_5_n_0 ));
+  LUT3 #(
+    .INIT(8'h04)) 
+    \trans_cnt[3]_i_6 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[1]),
+        .I2(state_w_r[2]),
+        .O(\trans_cnt[3]_i_6_n_0 ));
   (* KEEP = "yes" *) 
-  FDSE \state_write_reg[0] 
+  (* mark_debug = "true" *) 
+  FDRE \trans_cnt_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(\state_write[0]_i_1_n_0 ),
-        .Q(state_write[0]),
-        .S(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+        .CE(g0_b0_n_0),
+        .D(p_1_in[0]),
+        .Q(trans_cnt[0]),
+        .R(1'b0));
   (* KEEP = "yes" *) 
-  FDRE \state_write_reg[1] 
+  (* mark_debug = "true" *) 
+  FDRE \trans_cnt_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(\state_write[1]_i_1_n_0 ),
-        .Q(state_write[1]),
-        .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+        .CE(g0_b0_n_0),
+        .D(p_1_in[1]),
+        .Q(trans_cnt[1]),
+        .R(1'b0));
   (* KEEP = "yes" *) 
-  FDRE \state_write_reg[2] 
+  (* mark_debug = "true" *) 
+  FDRE \trans_cnt_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(\state_write[2]_i_1_n_0 ),
-        .Q(state_write[2]),
-        .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+        .CE(g0_b0_n_0),
+        .D(p_1_in[2]),
+        .Q(trans_cnt[2]),
+        .R(1'b0));
   (* KEEP = "yes" *) 
-  FDRE \state_write_reg[3] 
+  (* mark_debug = "true" *) 
+  FDRE \trans_cnt_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(1'b1),
-        .D(\state_write[3]_i_1_n_0 ),
-        .Q(state_write[3]),
-        .R(I2C_Controller_v1_0_M00_AXI_inst_n_0));
+        .CE(g0_b0_n_0),
+        .D(p_1_in[3]),
+        .Q(trans_cnt[3]),
+        .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY8 wait_cnt0_carry
        (.CI(wait_cnt[0]),
@@ -2669,294 +3053,224 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   CARRY8 wait_cnt0_carry__0
        (.CI(wait_cnt0_carry_n_0),
         .CI_TOP(1'b0),
-        .CO({wait_cnt0_carry__0_n_0,wait_cnt0_carry__0_n_1,wait_cnt0_carry__0_n_2,wait_cnt0_carry__0_n_3,wait_cnt0_carry__0_n_4,wait_cnt0_carry__0_n_5,wait_cnt0_carry__0_n_6,wait_cnt0_carry__0_n_7}),
+        .CO({NLW_wait_cnt0_carry__0_CO_UNCONNECTED[7],wait_cnt0_carry__0_n_1,wait_cnt0_carry__0_n_2,wait_cnt0_carry__0_n_3,wait_cnt0_carry__0_n_4,wait_cnt0_carry__0_n_5,wait_cnt0_carry__0_n_6,wait_cnt0_carry__0_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O(wait_cnt0[16:9]),
         .S(wait_cnt[16:9]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY8 wait_cnt0_carry__1
-       (.CI(wait_cnt0_carry__0_n_0),
-        .CI_TOP(1'b0),
-        .CO({wait_cnt0_carry__1_n_0,wait_cnt0_carry__1_n_1,wait_cnt0_carry__1_n_2,wait_cnt0_carry__1_n_3,wait_cnt0_carry__1_n_4,wait_cnt0_carry__1_n_5,wait_cnt0_carry__1_n_6,wait_cnt0_carry__1_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(wait_cnt0[24:17]),
-        .S(wait_cnt[24:17]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY8 wait_cnt0_carry__2
-       (.CI(wait_cnt0_carry__1_n_0),
-        .CI_TOP(1'b0),
-        .CO({NLW_wait_cnt0_carry__2_CO_UNCONNECTED[7:6],wait_cnt0_carry__2_n_2,wait_cnt0_carry__2_n_3,wait_cnt0_carry__2_n_4,wait_cnt0_carry__2_n_5,wait_cnt0_carry__2_n_6,wait_cnt0_carry__2_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_wait_cnt0_carry__2_O_UNCONNECTED[7],wait_cnt0[31:25]}),
-        .S({1'b0,wait_cnt[31:25]}));
   LUT3 #(
-    .INIT(8'h62)) 
+    .INIT(8'h47)) 
     \wait_cnt[0]_i_1 
-       (.I0(wait_cnt[0]),
-        .I1(m00_axi_aresetn),
-        .I2(state_read[0]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[0]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
         .O(\wait_cnt[0]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[10]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[10]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[10]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[10]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[10]),
         .O(\wait_cnt[10]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[11]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[11]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[11]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[11]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[11]),
         .O(\wait_cnt[11]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[12]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[12]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[12]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[12]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[12]),
         .O(\wait_cnt[12]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[13]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[13]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[13]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[13]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[13]),
         .O(\wait_cnt[13]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[14]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[14]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[14]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[14]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[14]),
         .O(\wait_cnt[14]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[15]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[15]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[15]),
-        .O(\wait_cnt[15]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[16]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[16]),
-        .I2(m00_axi_aresetn),
+  LUT6 #(
+    .INIT(64'hA222A222A222A2A2)) 
+    \wait_cnt[14]_i_2 
+       (.I0(\wait_cnt[16]_i_4_n_0 ),
+        .I1(state_w_r[1]),
+        .I2(\bram_wdata_r[31]_i_2_n_0 ),
+        .I3(\bram_wdata_r[31]_i_3_n_0 ),
+        .I4(\bram_wdata_r[31]_i_4_n_0 ),
+        .I5(\bram_wdata_r[31]_i_5_n_0 ),
+        .O(\wait_cnt[14]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFEAAAAAAFFFFFFFF)) 
+    \wait_cnt[14]_i_3 
+       (.I0(\wait_cnt[14]_i_4_n_0 ),
+        .I1(\bram_wdata_r[31]_i_5_n_0 ),
+        .I2(\bram_wdata_r[31]_i_4_n_0 ),
         .I3(wait_cnt[16]),
+        .I4(wait_cnt[15]),
+        .I5(\bram_wdata_r[31]_i_2_n_0 ),
+        .O(\wait_cnt[14]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \wait_cnt[14]_i_4 
+       (.I0(m00_axi_aresetn),
+        .I1(state_w_r[1]),
+        .O(\wait_cnt[14]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0EEE0E0E0E0E0)) 
+    \wait_cnt[15]_i_1 
+       (.I0(\bram_wdata_r[31]_i_2_n_0 ),
+        .I1(wait_cnt[15]),
+        .I2(\wait_cnt[15]_i_2_n_0 ),
+        .I3(state_w_r[1]),
+        .I4(\state_w_r[4]_i_4_n_0 ),
+        .I5(m00_axi_aresetn),
+        .O(\wait_cnt[15]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hF4444444)) 
+    \wait_cnt[15]_i_2 
+       (.I0(\wait_cnt[16]_i_4_n_0 ),
+        .I1(wait_cnt[15]),
+        .I2(m00_axi_aresetn),
+        .I3(state_w_r[1]),
+        .I4(wait_cnt0[15]),
+        .O(\wait_cnt[15]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00482200FFFFFFFF)) 
+    \wait_cnt[16]_i_1 
+       (.I0(state_w_r[0]),
+        .I1(state_w_r[2]),
+        .I2(state_w_r[1]),
+        .I3(state_w_r[3]),
+        .I4(state_w_r[4]),
+        .I5(m00_axi_aresetn),
         .O(\wait_cnt[16]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[17]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[17]),
+  LUT6 #(
+    .INIT(64'hE0E0EEE0E0E0E0E0)) 
+    \wait_cnt[16]_i_2 
+       (.I0(\bram_wdata_r[31]_i_2_n_0 ),
+        .I1(wait_cnt[16]),
+        .I2(\wait_cnt[16]_i_3_n_0 ),
+        .I3(state_w_r[1]),
+        .I4(\state_w_r[4]_i_4_n_0 ),
+        .I5(m00_axi_aresetn),
+        .O(\wait_cnt[16]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hF4444444)) 
+    \wait_cnt[16]_i_3 
+       (.I0(\wait_cnt[16]_i_4_n_0 ),
+        .I1(wait_cnt[16]),
         .I2(m00_axi_aresetn),
-        .I3(wait_cnt[17]),
-        .O(\wait_cnt[17]_i_1_n_0 ));
+        .I3(state_w_r[1]),
+        .I4(wait_cnt0[16]),
+        .O(\wait_cnt[16]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF222000000000)) 
+    \wait_cnt[16]_i_4 
+       (.I0(m01_axi_txn_done),
+        .I1(i2c_txn_done_r),
+        .I2(state_w_r[2]),
+        .I3(\trans_cnt[1]_i_3_n_0 ),
+        .I4(state_w_r[1]),
+        .I5(m00_axi_aresetn),
+        .O(\wait_cnt[16]_i_4_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[18]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[18]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[18]),
-        .O(\wait_cnt[18]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[19]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[19]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[19]),
-        .O(\wait_cnt[19]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[1]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[1]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[1]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[1]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[1]),
         .O(\wait_cnt[1]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[20]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[20]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[20]),
-        .O(\wait_cnt[20]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[21]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[21]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[21]),
-        .O(\wait_cnt[21]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[22]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[22]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[22]),
-        .O(\wait_cnt[22]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[23]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[23]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[23]),
-        .O(\wait_cnt[23]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[24]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[24]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[24]),
-        .O(\wait_cnt[24]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[25]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[25]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[25]),
-        .O(\wait_cnt[25]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[26]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[26]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[26]),
-        .O(\wait_cnt[26]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[27]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[27]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[27]),
-        .O(\wait_cnt[27]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[28]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[28]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[28]),
-        .O(\wait_cnt[28]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[29]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[29]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[29]),
-        .O(\wait_cnt[29]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[2]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[2]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[2]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[2]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[2]),
         .O(\wait_cnt[2]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[30]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[30]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[30]),
-        .O(\wait_cnt[30]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h04FF)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \wait_cnt[31]_i_1 
-       (.I0(state_read[2]),
-        .I1(state_read[3]),
-        .I2(state_read[1]),
-        .I3(m00_axi_aresetn),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(\wait_cnt[16]_i_1_n_0 ),
         .O(\wait_cnt[31]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
-    \wait_cnt[31]_i_2 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[31]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[31]),
-        .O(\wait_cnt[31]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[3]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[3]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[3]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[3]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[3]),
         .O(\wait_cnt[3]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[4]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[4]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[4]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[4]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[4]),
         .O(\wait_cnt[4]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[5]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[5]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[5]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[5]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[5]),
         .O(\wait_cnt[5]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[6]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[6]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[6]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[6]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[6]),
         .O(\wait_cnt[6]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[7]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[7]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[7]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[7]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[7]),
         .O(\wait_cnt[7]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[8]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[8]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[8]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[8]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[8]),
         .O(\wait_cnt[8]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h8F80)) 
+    .INIT(16'h4F44)) 
     \wait_cnt[9]_i_1 
-       (.I0(state_read[0]),
-        .I1(wait_cnt0[9]),
-        .I2(m00_axi_aresetn),
-        .I3(wait_cnt[9]),
+       (.I0(\wait_cnt[14]_i_2_n_0 ),
+        .I1(wait_cnt[9]),
+        .I2(\wait_cnt[14]_i_3_n_0 ),
+        .I3(wait_cnt0[9]),
         .O(\wait_cnt[9]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[0]_i_1_n_0 ),
         .Q(wait_cnt[0]),
         .R(1'b0));
@@ -2964,7 +3278,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[10] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[10]_i_1_n_0 ),
         .Q(wait_cnt[10]),
         .R(1'b0));
@@ -2972,7 +3286,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[11] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[11]_i_1_n_0 ),
         .Q(wait_cnt[11]),
         .R(1'b0));
@@ -2980,7 +3294,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[12] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[12]_i_1_n_0 ),
         .Q(wait_cnt[12]),
         .R(1'b0));
@@ -2988,7 +3302,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[13] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[13]_i_1_n_0 ),
         .Q(wait_cnt[13]),
         .R(1'b0));
@@ -2996,7 +3310,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[14] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[14]_i_1_n_0 ),
         .Q(wait_cnt[14]),
         .R(1'b0));
@@ -3004,7 +3318,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[15] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[15]_i_1_n_0 ),
         .Q(wait_cnt[15]),
         .R(1'b0));
@@ -3012,39 +3326,39 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[16] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[16]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(\wait_cnt[16]_i_2_n_0 ),
         .Q(wait_cnt[16]),
         .R(1'b0));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[17] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[17]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[17]),
         .Q(wait_cnt[17]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[18] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[18]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[18]),
         .Q(wait_cnt[18]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[19] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[19]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[19]),
         .Q(wait_cnt[19]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[1]_i_1_n_0 ),
         .Q(wait_cnt[1]),
         .R(1'b0));
@@ -3052,87 +3366,87 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[20] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[20]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[20]),
         .Q(wait_cnt[20]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[21] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[21]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[21]),
         .Q(wait_cnt[21]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[22] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[22]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[22]),
         .Q(wait_cnt[22]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[23] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[23]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[23]),
         .Q(wait_cnt[23]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[24] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[24]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[24]),
         .Q(wait_cnt[24]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[25] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[25]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[25]),
         .Q(wait_cnt[25]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[26] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[26]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[26]),
         .Q(wait_cnt[26]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[27] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[27]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[27]),
         .Q(wait_cnt[27]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[28] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[28]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[28]),
         .Q(wait_cnt[28]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[29] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[29]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[29]),
         .Q(wait_cnt[29]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[2]_i_1_n_0 ),
         .Q(wait_cnt[2]),
         .R(1'b0));
@@ -3140,23 +3454,23 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[30] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[30]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[30]),
         .Q(wait_cnt[30]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[31] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
-        .D(\wait_cnt[31]_i_2_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
+        .D(wait_cnt[31]),
         .Q(wait_cnt[31]),
-        .R(1'b0));
+        .R(\wait_cnt[31]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[3]_i_1_n_0 ),
         .Q(wait_cnt[3]),
         .R(1'b0));
@@ -3164,7 +3478,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[4]_i_1_n_0 ),
         .Q(wait_cnt[4]),
         .R(1'b0));
@@ -3172,7 +3486,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[5]_i_1_n_0 ),
         .Q(wait_cnt[5]),
         .R(1'b0));
@@ -3180,7 +3494,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[6]_i_1_n_0 ),
         .Q(wait_cnt[6]),
         .R(1'b0));
@@ -3188,7 +3502,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[7]_i_1_n_0 ),
         .Q(wait_cnt[7]),
         .R(1'b0));
@@ -3196,7 +3510,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[8] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[8]_i_1_n_0 ),
         .Q(wait_cnt[8]),
         .R(1'b0));
@@ -3204,137 +3518,154 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
   (* mark_debug = "true" *) 
   FDRE \wait_cnt_reg[9] 
        (.C(m00_axi_aclk),
-        .CE(\wait_cnt[31]_i_1_n_0 ),
+        .CE(\wait_cnt[16]_i_1_n_0 ),
         .D(\wait_cnt[9]_i_1_n_0 ),
         .Q(wait_cnt[9]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000F800F8F8F8F8)) 
+    .INIT(64'h0050C350F0F0F0F0)) 
     \wcnt[0]_i_1 
-       (.I0(\bram_raddr_r[7]_i_1_n_0 ),
-        .I1(state_i2c[0]),
+       (.I0(start_i2c_write),
+        .I1(\wcnt[0]_i_2_n_0 ),
         .I2(wcnt[0]),
-        .I3(\wcnt[0]_i_2_n_0 ),
+        .I3(state_i2c[0]),
         .I4(\wcnt[1]_i_3_n_0 ),
-        .I5(\wcnt[7]_i_3_n_0 ),
+        .I5(m00_axi_aresetn),
         .O(\wcnt[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFDFFFFFF)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFDFF)) 
     \wcnt[0]_i_2 
-       (.I0(state_write[2]),
-        .I1(state_write[3]),
-        .I2(state_write[1]),
-        .I3(state_write[0]),
-        .I4(wcnt[0]),
+       (.I0(m01_axi_txn_done),
+        .I1(i2c_txn_done_r),
+        .I2(state_w_r[3]),
+        .I3(state_w_r[0]),
+        .I4(state_w_r[2]),
+        .I5(\i2c_wdata[7]_i_3_n_0 ),
         .O(\wcnt[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000F800F8F8F8F8)) 
+    .INIT(64'h0C0C4C4C3CCC4C4C)) 
     \wcnt[1]_i_1 
-       (.I0(wcnt[0]),
-        .I1(\wcnt[1]_i_2_n_0 ),
-        .I2(wcnt[1]),
-        .I3(\wcnt[3]_i_2_n_0 ),
-        .I4(\wcnt[1]_i_3_n_0 ),
-        .I5(\wcnt[7]_i_3_n_0 ),
+       (.I0(start_i2c_write),
+        .I1(wcnt[1]),
+        .I2(m00_axi_aresetn),
+        .I3(\wcnt[1]_i_2_n_0 ),
+        .I4(state_i2c[0]),
+        .I5(\wcnt[1]_i_3_n_0 ),
         .O(\wcnt[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0020000000000000)) 
+    .INIT(64'h0000000000000200)) 
     \wcnt[1]_i_2 
-       (.I0(state_write[0]),
-        .I1(state_write[1]),
-        .I2(state_write[2]),
-        .I3(state_write[3]),
-        .I4(m00_axi_aresetn),
-        .I5(state_i2c[0]),
+       (.I0(wcnt[0]),
+        .I1(\i2c_wdata[7]_i_3_n_0 ),
+        .I2(state_w_r[2]),
+        .I3(state_w_r[0]),
+        .I4(state_w_r[3]),
+        .I5(\wcnt[1]_i_4_n_0 ),
         .O(\wcnt[1]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
+    \wcnt[1]_i_3 
+       (.I0(wcnt[3]),
+        .I1(\wcnt[1]_i_5_n_0 ),
+        .I2(wcnt[7]),
+        .I3(wcnt[6]),
+        .I4(wcnt[0]),
+        .O(\wcnt[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'hB)) 
-    \wcnt[1]_i_3 
-       (.I0(\state_i2c[3]_i_4_n_0 ),
-        .I1(state_i2c[0]),
-        .O(\wcnt[1]_i_3_n_0 ));
+    \wcnt[1]_i_4 
+       (.I0(i2c_txn_done_r),
+        .I1(m01_axi_txn_done),
+        .O(\wcnt[1]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \wcnt[1]_i_5 
+       (.I0(wcnt[1]),
+        .I1(wcnt[2]),
+        .I2(wcnt[5]),
+        .I3(wcnt[4]),
+        .O(\wcnt[1]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h57FF0000575700FF)) 
+    .INIT(64'h5757000057FFFF00)) 
     \wcnt[2]_i_1 
        (.I0(m00_axi_aresetn),
         .I1(state_i2c[0]),
         .I2(start_i2c_write),
-        .I3(\wcnt[7]_i_4_n_0 ),
+        .I3(\wcnt[2]_i_2_n_0 ),
         .I4(wcnt[2]),
-        .I5(\wcnt[3]_i_2_n_0 ),
+        .I5(\wcnt[7]_i_4_n_0 ),
         .O(\wcnt[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h70537070)) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \wcnt[2]_i_2 
+       (.I0(\wcnt[1]_i_2_n_0 ),
+        .I1(wcnt[1]),
+        .O(\wcnt[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h5757000057FFFF00)) 
     \wcnt[3]_i_1 
-       (.I0(\wcnt[7]_i_3_n_0 ),
-        .I1(\wcnt[7]_i_4_n_0 ),
-        .I2(wcnt[3]),
-        .I3(\wcnt[3]_i_2_n_0 ),
-        .I4(wcnt[2]),
-        .O(\wcnt[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFF7FFFFFFFFFFFF)) 
-    \wcnt[3]_i_2 
-       (.I0(wcnt[0]),
-        .I1(state_write[0]),
-        .I2(state_write[1]),
-        .I3(state_write[3]),
-        .I4(state_write[2]),
-        .I5(wcnt[1]),
-        .O(\wcnt[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h57FF0000575700FF)) 
-    \wcnt[4]_i_1 
        (.I0(m00_axi_aresetn),
         .I1(state_i2c[0]),
         .I2(start_i2c_write),
-        .I3(\wcnt[7]_i_4_n_0 ),
-        .I4(wcnt[4]),
-        .I5(\wcnt[5]_i_2_n_0 ),
-        .O(\wcnt[4]_i_1_n_0 ));
+        .I3(\wcnt[5]_i_2_n_0 ),
+        .I4(wcnt[3]),
+        .I5(\wcnt[7]_i_4_n_0 ),
+        .O(\wcnt[3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h75770300)) 
-    \wcnt[5]_i_1 
+    .INIT(32'h57773000)) 
+    \wcnt[4]_i_1 
        (.I0(\wcnt[7]_i_3_n_0 ),
         .I1(\wcnt[7]_i_4_n_0 ),
         .I2(\wcnt[5]_i_2_n_0 ),
+        .I3(wcnt[3]),
+        .I4(wcnt[4]),
+        .O(\wcnt[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h555500007FFFC000)) 
+    \wcnt[5]_i_1 
+       (.I0(\wcnt[7]_i_3_n_0 ),
+        .I1(\wcnt[5]_i_2_n_0 ),
+        .I2(wcnt[3]),
         .I3(wcnt[4]),
         .I4(wcnt[5]),
+        .I5(\wcnt[7]_i_4_n_0 ),
         .O(\wcnt[5]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'hDF)) 
+    .INIT(8'h80)) 
     \wcnt[5]_i_2 
-       (.I0(wcnt[2]),
-        .I1(\wcnt[3]_i_2_n_0 ),
-        .I2(wcnt[3]),
+       (.I0(wcnt[1]),
+        .I1(\wcnt[1]_i_2_n_0 ),
+        .I2(wcnt[2]),
         .O(\wcnt[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h57005700FF0057FF)) 
+    .INIT(64'h555500007FFFC000)) 
     \wcnt[6]_i_1 
-       (.I0(m00_axi_aresetn),
-        .I1(state_i2c[0]),
-        .I2(start_i2c_write),
-        .I3(wcnt[6]),
-        .I4(\wcnt[7]_i_5_n_0 ),
+       (.I0(\wcnt[7]_i_3_n_0 ),
+        .I1(wcnt[5]),
+        .I2(wcnt[4]),
+        .I3(\wcnt[7]_i_6_n_0 ),
+        .I4(wcnt[6]),
         .I5(\wcnt[7]_i_4_n_0 ),
         .O(\wcnt[6]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h55555D75)) 
+    .INIT(32'h0018FFFF)) 
     \wcnt[7]_i_1 
-       (.I0(m00_axi_aresetn),
+       (.I0(state_i2c[0]),
         .I1(state_i2c[3]),
         .I2(state_i2c[1]),
-        .I3(state_i2c[0]),
-        .I4(state_i2c[2]),
+        .I3(state_i2c[2]),
+        .I4(m00_axi_aresetn),
         .O(\wcnt[7]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h77570030)) 
+  LUT6 #(
+    .INIT(64'h5370707070707070)) 
     \wcnt[7]_i_2 
        (.I0(\wcnt[7]_i_3_n_0 ),
         .I1(\wcnt[7]_i_4_n_0 ),
-        .I2(wcnt[6]),
+        .I2(wcnt[7]),
         .I3(\wcnt[7]_i_5_n_0 ),
-        .I4(wcnt[7]),
+        .I4(\wcnt[7]_i_6_n_0 ),
+        .I5(wcnt[6]),
         .O(\wcnt[7]_i_2_n_0 ));
   LUT3 #(
     .INIT(8'hA8)) 
@@ -3347,18 +3678,23 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0
     .INIT(8'hDF)) 
     \wcnt[7]_i_4 
        (.I0(state_i2c[0]),
-        .I1(\state_i2c[3]_i_4_n_0 ),
+        .I1(\wcnt[1]_i_3_n_0 ),
         .I2(m00_axi_aresetn),
         .O(\wcnt[7]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF7FFFFF)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \wcnt[7]_i_5 
-       (.I0(wcnt[5]),
-        .I1(wcnt[4]),
-        .I2(wcnt[3]),
-        .I3(\wcnt[3]_i_2_n_0 ),
-        .I4(wcnt[2]),
+       (.I0(wcnt[4]),
+        .I1(wcnt[5]),
         .O(\wcnt[7]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \wcnt[7]_i_6 
+       (.I0(wcnt[2]),
+        .I1(\wcnt[1]_i_2_n_0 ),
+        .I2(wcnt[1]),
+        .I3(wcnt[3]),
+        .O(\wcnt[7]_i_6_n_0 ));
   (* KEEP = "yes" *) 
   (* mark_debug = "true" *) 
   FDRE \wcnt_reg[0] 
@@ -3427,41 +3763,25 @@ endmodule
 
 (* ORIG_REF_NAME = "I2C_Controller_v1_0_M00_AXI" *) 
 module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
-   (SR,
-    m00_axi_bready,
+   (m00_axi_aresetn_0,
+    axi_bready_reg_0,
     axi_wvalid_reg_0,
     axi_awvalid_reg_0,
     axi_arvalid_reg_0,
-    axi_rready_reg_0,
     D,
-    \state_read_reg[1] ,
-    \regacc_data_rd_r_reg[10]_0 ,
-    \regacc_data_rd_r_reg[11]_0 ,
-    \regacc_data_rd_r_reg[12]_0 ,
-    \regacc_data_rd_r_reg[13]_0 ,
-    \regacc_data_rd_r_reg[14]_0 ,
-    \regacc_data_rd_r_reg[15]_0 ,
-    \regacc_data_rd_r_reg[16]_0 ,
-    \regacc_data_rd_r_reg[17]_0 ,
-    \regacc_data_rd_r_reg[18]_0 ,
-    \regacc_data_rd_r_reg[19]_0 ,
-    \regacc_data_rd_r_reg[20]_0 ,
-    \regacc_data_rd_r_reg[21]_0 ,
-    \regacc_data_rd_r_reg[22]_0 ,
-    \regacc_data_rd_r_reg[23]_0 ,
-    \regacc_data_rd_r_reg[24]_0 ,
-    \regacc_data_rd_r_reg[25]_0 ,
-    \regacc_data_rd_r_reg[26]_0 ,
-    \regacc_data_rd_r_reg[27]_0 ,
-    \regacc_data_rd_r_reg[28]_0 ,
-    \regacc_data_rd_r_reg[29]_0 ,
-    \regacc_data_rd_r_reg[30]_0 ,
-    \regacc_data_rd_r_reg[31]_0 ,
-    m00_axi_aresetn_0,
+    Q,
+    axi_rready_reg_0,
+    \state_bram_reg[2] ,
     m00_axi_awaddr,
     m00_axi_wdata,
     m00_axi_araddr,
     m00_axi_aclk,
+    out,
+    \i2c_wdata_reg[5] ,
+    \i2c_wdata_reg[6] ,
+    \i2c_wdata_reg[7] ,
+    \i2c_wdata_reg[6]_0 ,
+    \i2c_wdata_reg[5]_0 ,
     regacc_write,
     regacc_read,
     m00_axi_arready,
@@ -3470,69 +3790,37 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
     m00_axi_awready,
     m00_axi_rvalid,
     m00_axi_bvalid,
-    Q,
-    \state_bram_reg[2] ,
-    \state_bram_reg[2]_0 ,
-    \i2c_wdata_reg[1] ,
-    p_2_in,
-    \i2c_wdata_reg[1]_0 ,
-    \i2c_wdata_reg[1]_1 ,
-    \i2c_wdata_reg[1]_2 ,
-    out,
-    \i2c_wdata_reg[6] ,
-    \i2c_wdata_reg[8] ,
-    \i2c_wdata_reg[0] ,
-    \i2c_wdata_reg[5] ,
-    \i2c_wdata_reg[8]_0 ,
-    \i2c_wdata_reg[0]_0 ,
-    \i2c_wdata_reg[0]_1 ,
-    \i2c_wdata_reg[0]_2 ,
+    \i2c_wdata_reg[5]_1 ,
     \i2c_wdata_reg[2] ,
+    \i2c_wdata_reg[2]_0 ,
+    \state_bram_reg[2]_0 ,
+    \state_bram_reg[2]_1 ,
+    \state_bram_reg[2]_2 ,
+    \i2c_wdata_reg[1] ,
     \state_bram_reg[1] ,
-    start_bram_write,
-    bram_read_done_reg,
-    bram_read_done_reg_0,
-    bram_read_done_reg_1,
-    bram_read_done_reg_2,
-    in0,
+    \state_bram_reg[1]_0 ,
     \axi_awaddr_reg[11]_0 ,
     \axi_wdata_reg[31]_0 ,
     m00_axi_rdata);
-  output [0:0]SR;
-  output m00_axi_bready;
+  output m00_axi_aresetn_0;
+  output axi_bready_reg_0;
   output axi_wvalid_reg_0;
   output axi_awvalid_reg_0;
   output axi_arvalid_reg_0;
+  output [9:0]D;
+  output [21:0]Q;
   output axi_rready_reg_0;
-  output [1:0]D;
-  output [9:0]\state_read_reg[1] ;
-  output \regacc_data_rd_r_reg[10]_0 ;
-  output \regacc_data_rd_r_reg[11]_0 ;
-  output \regacc_data_rd_r_reg[12]_0 ;
-  output \regacc_data_rd_r_reg[13]_0 ;
-  output \regacc_data_rd_r_reg[14]_0 ;
-  output \regacc_data_rd_r_reg[15]_0 ;
-  output \regacc_data_rd_r_reg[16]_0 ;
-  output \regacc_data_rd_r_reg[17]_0 ;
-  output \regacc_data_rd_r_reg[18]_0 ;
-  output \regacc_data_rd_r_reg[19]_0 ;
-  output \regacc_data_rd_r_reg[20]_0 ;
-  output \regacc_data_rd_r_reg[21]_0 ;
-  output \regacc_data_rd_r_reg[22]_0 ;
-  output \regacc_data_rd_r_reg[23]_0 ;
-  output \regacc_data_rd_r_reg[24]_0 ;
-  output \regacc_data_rd_r_reg[25]_0 ;
-  output \regacc_data_rd_r_reg[26]_0 ;
-  output \regacc_data_rd_r_reg[27]_0 ;
-  output \regacc_data_rd_r_reg[28]_0 ;
-  output \regacc_data_rd_r_reg[29]_0 ;
-  output \regacc_data_rd_r_reg[30]_0 ;
-  output \regacc_data_rd_r_reg[31]_0 ;
-  output m00_axi_aresetn_0;
+  output [1:0]\state_bram_reg[2] ;
   output [9:0]m00_axi_awaddr;
   output [31:0]m00_axi_wdata;
   output [9:0]m00_axi_araddr;
   input m00_axi_aclk;
+  input [4:0]out;
+  input [4:0]\i2c_wdata_reg[5] ;
+  input \i2c_wdata_reg[6] ;
+  input [1:0]\i2c_wdata_reg[7] ;
+  input \i2c_wdata_reg[6]_0 ;
+  input \i2c_wdata_reg[5]_0 ;
   input regacc_write;
   input regacc_read;
   input m00_axi_arready;
@@ -3541,39 +3829,22 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   input m00_axi_awready;
   input m00_axi_rvalid;
   input m00_axi_bvalid;
-  input [2:0]Q;
-  input \state_bram_reg[2] ;
-  input \state_bram_reg[2]_0 ;
-  input \i2c_wdata_reg[1] ;
-  input [7:0]p_2_in;
-  input \i2c_wdata_reg[1]_0 ;
-  input \i2c_wdata_reg[1]_1 ;
-  input \i2c_wdata_reg[1]_2 ;
-  input [3:0]out;
-  input \i2c_wdata_reg[6] ;
-  input \i2c_wdata_reg[8] ;
-  input [3:0]\i2c_wdata_reg[0] ;
-  input [5:0]\i2c_wdata_reg[5] ;
-  input \i2c_wdata_reg[8]_0 ;
-  input \i2c_wdata_reg[0]_0 ;
-  input \i2c_wdata_reg[0]_1 ;
-  input \i2c_wdata_reg[0]_2 ;
+  input [3:0]\i2c_wdata_reg[5]_1 ;
   input \i2c_wdata_reg[2] ;
+  input \i2c_wdata_reg[2]_0 ;
+  input [2:0]\state_bram_reg[2]_0 ;
+  input \state_bram_reg[2]_1 ;
+  input \state_bram_reg[2]_2 ;
+  input \i2c_wdata_reg[1] ;
   input \state_bram_reg[1] ;
-  input start_bram_write;
-  input bram_read_done_reg;
-  input [0:0]bram_read_done_reg_0;
-  input bram_read_done_reg_1;
-  input bram_read_done_reg_2;
-  input in0;
+  input \state_bram_reg[1]_0 ;
   input [9:0]\axi_awaddr_reg[11]_0 ;
   input [31:0]\axi_wdata_reg[31]_0 ;
   input [31:0]m00_axi_rdata;
 
-  wire [1:0]D;
+  wire [9:0]D;
   wire \FSM_sequential_mst_exec_state[1]_i_3_n_0 ;
-  wire [2:0]Q;
-  wire [0:0]SR;
+  wire [21:0]Q;
   wire \axi_araddr[11]_i_1_n_0 ;
   wire axi_arvalid_i_1_n_0;
   wire axi_arvalid_reg_0;
@@ -3583,40 +3854,26 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire axi_awvalid_i_2_n_0;
   wire axi_awvalid_reg_0;
   wire axi_bready0;
+  wire axi_bready_reg_0;
   wire axi_rready_i_1_n_0;
   wire axi_rready_reg_0;
   wire \axi_wdata[31]_i_1_n_0 ;
   wire [31:0]\axi_wdata_reg[31]_0 ;
   wire axi_wvalid_i_1_n_0;
   wire axi_wvalid_reg_0;
-  wire bram_read_done_i_3_n_0;
-  wire bram_read_done_reg;
-  wire [0:0]bram_read_done_reg_0;
-  wire bram_read_done_reg_1;
-  wire bram_read_done_reg_2;
   wire \i2c_wdata[0]_i_2_n_0 ;
-  wire \i2c_wdata[1]_i_2_n_0 ;
-  wire \i2c_wdata[2]_i_2_n_0 ;
   wire \i2c_wdata[3]_i_2_n_0 ;
   wire \i2c_wdata[4]_i_2_n_0 ;
   wire \i2c_wdata[5]_i_2_n_0 ;
-  wire \i2c_wdata[6]_i_2_n_0 ;
-  wire \i2c_wdata[7]_i_3_n_0 ;
-  wire \i2c_wdata[9]_i_5_n_0 ;
-  wire [3:0]\i2c_wdata_reg[0] ;
-  wire \i2c_wdata_reg[0]_0 ;
-  wire \i2c_wdata_reg[0]_1 ;
-  wire \i2c_wdata_reg[0]_2 ;
   wire \i2c_wdata_reg[1] ;
-  wire \i2c_wdata_reg[1]_0 ;
-  wire \i2c_wdata_reg[1]_1 ;
-  wire \i2c_wdata_reg[1]_2 ;
   wire \i2c_wdata_reg[2] ;
-  wire [5:0]\i2c_wdata_reg[5] ;
+  wire \i2c_wdata_reg[2]_0 ;
+  wire [4:0]\i2c_wdata_reg[5] ;
+  wire \i2c_wdata_reg[5]_0 ;
+  wire [3:0]\i2c_wdata_reg[5]_1 ;
   wire \i2c_wdata_reg[6] ;
-  wire \i2c_wdata_reg[8] ;
-  wire \i2c_wdata_reg[8]_0 ;
-  wire in0;
+  wire \i2c_wdata_reg[6]_0 ;
+  wire [1:0]\i2c_wdata_reg[7] ;
   wire init_txn;
   wire init_txn_ff;
   wire init_txn_ff2;
@@ -3631,7 +3888,6 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire m00_axi_arready;
   wire [9:0]m00_axi_awaddr;
   wire m00_axi_awready;
-  wire m00_axi_bready;
   wire m00_axi_bvalid;
   wire [31:0]m00_axi_rdata;
   wire m00_axi_rvalid;
@@ -3639,38 +3895,15 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire m00_axi_wready;
   wire [1:0]mst_exec_state;
   wire [1:0]mst_exec_state__0;
-  wire [3:0]out;
-  wire [7:0]p_2_in;
+  wire [4:0]out;
   wire read_index;
   wire \read_index[0]_i_1_n_0 ;
   wire read_issued_i_1_n_0;
   wire read_issued_reg_n_0;
   wire reads_done;
   wire reads_done_i_1_n_0;
-  wire [31:0]regacc_data_rd_r;
+  wire [9:0]regacc_data_rd_r;
   wire regacc_data_rd_r_0;
-  wire \regacc_data_rd_r_reg[10]_0 ;
-  wire \regacc_data_rd_r_reg[11]_0 ;
-  wire \regacc_data_rd_r_reg[12]_0 ;
-  wire \regacc_data_rd_r_reg[13]_0 ;
-  wire \regacc_data_rd_r_reg[14]_0 ;
-  wire \regacc_data_rd_r_reg[15]_0 ;
-  wire \regacc_data_rd_r_reg[16]_0 ;
-  wire \regacc_data_rd_r_reg[17]_0 ;
-  wire \regacc_data_rd_r_reg[18]_0 ;
-  wire \regacc_data_rd_r_reg[19]_0 ;
-  wire \regacc_data_rd_r_reg[20]_0 ;
-  wire \regacc_data_rd_r_reg[21]_0 ;
-  wire \regacc_data_rd_r_reg[22]_0 ;
-  wire \regacc_data_rd_r_reg[23]_0 ;
-  wire \regacc_data_rd_r_reg[24]_0 ;
-  wire \regacc_data_rd_r_reg[25]_0 ;
-  wire \regacc_data_rd_r_reg[26]_0 ;
-  wire \regacc_data_rd_r_reg[27]_0 ;
-  wire \regacc_data_rd_r_reg[28]_0 ;
-  wire \regacc_data_rd_r_reg[29]_0 ;
-  wire \regacc_data_rd_r_reg[30]_0 ;
-  wire \regacc_data_rd_r_reg[31]_0 ;
   wire regacc_done_rd;
   wire regacc_done_rd0;
   wire regacc_done_wr;
@@ -3681,7 +3914,6 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire regacc_wr_r;
   wire regacc_wr_r_i_2_n_0;
   wire regacc_write;
-  wire start_bram_write;
   wire start_single_read0;
   wire start_single_read_i_1_n_0;
   wire start_single_read_reg_n_0;
@@ -3690,9 +3922,11 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
   wire start_single_write_reg_n_0;
   wire \state_bram[2]_i_3_n_0 ;
   wire \state_bram_reg[1] ;
-  wire \state_bram_reg[2] ;
-  wire \state_bram_reg[2]_0 ;
-  wire [9:0]\state_read_reg[1] ;
+  wire \state_bram_reg[1]_0 ;
+  wire [1:0]\state_bram_reg[2] ;
+  wire [2:0]\state_bram_reg[2]_0 ;
+  wire \state_bram_reg[2]_1 ;
+  wire \state_bram_reg[2]_2 ;
   wire write_index;
   wire \write_index[0]_i_1_n_0 ;
   wire write_issued_i_1_n_0;
@@ -3715,7 +3949,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
     .INIT(2'h1)) 
     \FSM_sequential_mst_exec_state[1]_i_1 
        (.I0(m00_axi_aresetn),
-        .O(SR));
+        .O(m00_axi_aresetn_0));
   LUT6 #(
     .INIT(64'h1010101013101010)) 
     \FSM_sequential_mst_exec_state[1]_i_2 
@@ -3738,14 +3972,14 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(mst_exec_state__0[0]),
         .Q(mst_exec_state[0]),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   (* FSM_ENCODED_STATES = "INIT_WRITE:01,INIT_READ:10,IDLE:00" *) 
   FDRE \FSM_sequential_mst_exec_state_reg[1] 
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(mst_exec_state__0[1]),
         .Q(mst_exec_state[1]),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   LUT5 #(
     .INIT(32'h88F8FFFF)) 
     \axi_araddr[11]_i_1 
@@ -3815,7 +4049,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(\axi_awaddr_reg[11]_0 [7]),
         .Q(m00_axi_araddr[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     axi_arvalid_i_1
@@ -3905,7 +4139,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .I1(init_txn_ff2),
         .I2(m00_axi_aresetn),
         .O(axi_awvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     axi_awvalid_i_2
@@ -3919,18 +4153,18 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(axi_awvalid_i_2_n_0),
         .Q(axi_awvalid_reg_0),
         .R(axi_awvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_bready_i_1
        (.I0(m00_axi_bvalid),
-        .I1(m00_axi_bready),
+        .I1(axi_bready_reg_0),
         .O(axi_bready0));
   FDRE axi_bready_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(axi_bready0),
-        .Q(m00_axi_bready),
+        .Q(axi_bready_reg_0),
         .R(axi_awvalid_i_1_n_0));
   LUT2 #(
     .INIT(4'h4)) 
@@ -4145,7 +4379,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(\axi_wdata_reg[31]_0 [9]),
         .Q(m00_axi_wdata[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     axi_wvalid_i_1
@@ -4159,417 +4393,148 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(axi_wvalid_i_1_n_0),
         .Q(axi_wvalid_reg_0),
         .R(axi_awvalid_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFD0FFFFFFD00000)) 
-    bram_read_done_i_1
-       (.I0(m00_axi_aresetn),
-        .I1(bram_read_done_reg_1),
-        .I2(bram_read_done_reg),
-        .I3(bram_read_done_i_3_n_0),
-        .I4(bram_read_done_reg_2),
-        .I5(in0),
-        .O(m00_axi_aresetn_0));
-  LUT6 #(
-    .INIT(64'h000000000000F800)) 
-    bram_read_done_i_3
-       (.I0(m00_axi_rvalid),
-        .I1(m00_axi_aresetn),
-        .I2(bram_read_done_reg),
-        .I3(bram_read_done_reg_0),
-        .I4(regacc_done_wr),
-        .I5(regacc_done_rd),
-        .O(bram_read_done_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFAAAEBAAFAAAABA)) 
+  LUT5 #(
+    .INIT(32'h0000FFF8)) 
     \i2c_wdata[0]_i_1 
-       (.I0(\i2c_wdata[0]_i_2_n_0 ),
-        .I1(out[0]),
+       (.I0(out[1]),
+        .I1(\i2c_wdata_reg[5] [0]),
+        .I2(out[0]),
+        .I3(out[3]),
+        .I4(\i2c_wdata[0]_i_2_n_0 ),
+        .O(D[0]));
+  LUT6 #(
+    .INIT(64'h00001013CCCC3C3F)) 
+    \i2c_wdata[0]_i_2 
+       (.I0(regacc_data_rd_r[0]),
+        .I1(out[2]),
+        .I2(out[1]),
+        .I3(\i2c_wdata_reg[5]_1 [0]),
+        .I4(out[3]),
+        .I5(out[4]),
+        .O(\i2c_wdata[0]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hAAAAFBAA)) 
+    \i2c_wdata[1]_i_1 
+       (.I0(\i2c_wdata_reg[1] ),
+        .I1(out[4]),
+        .I2(regacc_data_rd_r[1]),
+        .I3(out[1]),
+        .I4(out[2]),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hFBFAABABABAAABAB)) 
+    \i2c_wdata[2]_i_1 
+       (.I0(\i2c_wdata_reg[2] ),
+        .I1(\i2c_wdata_reg[2]_0 ),
+        .I2(out[4]),
+        .I3(\i2c_wdata_reg[5] [1]),
+        .I4(out[1]),
+        .I5(regacc_data_rd_r[2]),
+        .O(D[2]));
+  LUT6 #(
+    .INIT(64'h8B88888888888888)) 
+    \i2c_wdata[3]_i_1 
+       (.I0(\i2c_wdata[3]_i_2_n_0 ),
+        .I1(out[1]),
+        .I2(out[2]),
+        .I3(out[4]),
+        .I4(\i2c_wdata_reg[5]_1 [1]),
+        .I5(out[0]),
+        .O(D[3]));
+  LUT5 #(
+    .INIT(32'hFF101010)) 
+    \i2c_wdata[3]_i_2 
+       (.I0(out[0]),
+        .I1(out[3]),
+        .I2(\i2c_wdata_reg[5] [2]),
+        .I3(regacc_data_rd_r[3]),
+        .I4(out[4]),
+        .O(\i2c_wdata[3]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h45444455)) 
+    \i2c_wdata[4]_i_1 
+       (.I0(out[3]),
+        .I1(\i2c_wdata[4]_i_2_n_0 ),
+        .I2(out[4]),
+        .I3(out[2]),
+        .I4(out[0]),
+        .O(D[4]));
+  LUT6 #(
+    .INIT(64'hFF00C000C0AAC0AA)) 
+    \i2c_wdata[4]_i_2 
+       (.I0(\i2c_wdata_reg[5]_1 [2]),
+        .I1(regacc_data_rd_r[4]),
+        .I2(out[4]),
+        .I3(out[1]),
+        .I4(\i2c_wdata_reg[5] [3]),
+        .I5(out[2]),
+        .O(\i2c_wdata[4]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAEAAAAFFFF)) 
+    \i2c_wdata[5]_i_1 
+       (.I0(\i2c_wdata[5]_i_2_n_0 ),
+        .I1(\i2c_wdata_reg[5]_1 [3]),
+        .I2(out[1]),
+        .I3(out[2]),
+        .I4(out[3]),
+        .I5(\i2c_wdata_reg[5]_0 ),
+        .O(D[5]));
+  LUT6 #(
+    .INIT(64'h5500400040004000)) 
+    \i2c_wdata[5]_i_2 
+       (.I0(out[3]),
+        .I1(\i2c_wdata_reg[5] [4]),
+        .I2(out[2]),
+        .I3(out[1]),
+        .I4(out[4]),
+        .I5(regacc_data_rd_r[5]),
+        .O(\i2c_wdata[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h1055101055555555)) 
+    \i2c_wdata[6]_i_1 
+       (.I0(out[3]),
+        .I1(\i2c_wdata_reg[6] ),
+        .I2(\i2c_wdata_reg[7] [0]),
+        .I3(\i2c_wdata_reg[6]_0 ),
+        .I4(regacc_data_rd_r[6]),
+        .I5(\i2c_wdata_reg[5]_0 ),
+        .O(D[6]));
+  LUT6 #(
+    .INIT(64'h1055101055555555)) 
+    \i2c_wdata[7]_i_1 
+       (.I0(out[3]),
+        .I1(\i2c_wdata_reg[6] ),
+        .I2(\i2c_wdata_reg[7] [1]),
+        .I3(\i2c_wdata_reg[6]_0 ),
+        .I4(regacc_data_rd_r[7]),
+        .I5(\i2c_wdata_reg[5]_0 ),
+        .O(D[7]));
+  LUT6 #(
+    .INIT(64'h808080808F8080FF)) 
+    \i2c_wdata[8]_i_1 
+       (.I0(out[1]),
+        .I1(regacc_data_rd_r[8]),
+        .I2(out[4]),
+        .I3(out[2]),
+        .I4(out[0]),
+        .I5(out[3]),
+        .O(D[8]));
+  LUT6 #(
+    .INIT(64'hAAF80000AAF8AAF0)) 
+    \i2c_wdata[9]_i_1 
+       (.I0(out[4]),
+        .I1(regacc_data_rd_r[9]),
         .I2(out[3]),
         .I3(out[2]),
         .I4(out[1]),
-        .I5(p_2_in[0]),
-        .O(\state_read_reg[1] [0]));
-  LUT6 #(
-    .INIT(64'h8A88AAAA8A888A88)) 
-    \i2c_wdata[0]_i_2 
-       (.I0(\i2c_wdata_reg[0]_0 ),
-        .I1(\i2c_wdata_reg[0] [3]),
-        .I2(\i2c_wdata_reg[0]_1 ),
-        .I3(\i2c_wdata_reg[5] [0]),
-        .I4(\i2c_wdata_reg[0]_2 ),
-        .I5(regacc_data_rd_r[0]),
-        .O(\i2c_wdata[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[10]_i_1 
-       (.I0(regacc_data_rd_r[10]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[10]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[11]_i_1 
-       (.I0(regacc_data_rd_r[11]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[11]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[12]_i_1 
-       (.I0(regacc_data_rd_r[12]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[12]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[13]_i_1 
-       (.I0(regacc_data_rd_r[13]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[13]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[14]_i_1 
-       (.I0(regacc_data_rd_r[14]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[14]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[15]_i_1 
-       (.I0(regacc_data_rd_r[15]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[15]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[16]_i_1 
-       (.I0(regacc_data_rd_r[16]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[16]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[17]_i_1 
-       (.I0(regacc_data_rd_r[17]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[17]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[18]_i_1 
-       (.I0(regacc_data_rd_r[18]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[18]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[19]_i_1 
-       (.I0(regacc_data_rd_r[19]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[19]_0 ));
-  LUT6 #(
-    .INIT(64'h40FFFFFF4040E0E0)) 
-    \i2c_wdata[1]_i_1 
-       (.I0(\i2c_wdata_reg[1] ),
-        .I1(p_2_in[1]),
-        .I2(\i2c_wdata_reg[1]_0 ),
-        .I3(\i2c_wdata_reg[1]_1 ),
-        .I4(\i2c_wdata[1]_i_2_n_0 ),
-        .I5(\i2c_wdata_reg[1]_2 ),
-        .O(\state_read_reg[1] [1]));
-  LUT5 #(
-    .INIT(32'hF02FFF2F)) 
-    \i2c_wdata[1]_i_2 
-       (.I0(\i2c_wdata_reg[0] [2]),
-        .I1(regacc_data_rd_r[1]),
-        .I2(\i2c_wdata_reg[0] [1]),
-        .I3(\i2c_wdata_reg[0] [0]),
-        .I4(\i2c_wdata_reg[5] [1]),
-        .O(\i2c_wdata[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[20]_i_1 
-       (.I0(regacc_data_rd_r[20]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[20]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[21]_i_1 
-       (.I0(regacc_data_rd_r[21]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[21]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[22]_i_1 
-       (.I0(regacc_data_rd_r[22]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[22]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[23]_i_1 
-       (.I0(regacc_data_rd_r[23]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[23]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[24]_i_1 
-       (.I0(regacc_data_rd_r[24]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[24]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[25]_i_1 
-       (.I0(regacc_data_rd_r[25]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[25]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[26]_i_1 
-       (.I0(regacc_data_rd_r[26]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[26]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[27]_i_1 
-       (.I0(regacc_data_rd_r[27]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[27]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[28]_i_1 
-       (.I0(regacc_data_rd_r[28]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[28]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[29]_i_1 
-       (.I0(regacc_data_rd_r[29]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[29]_0 ));
-  LUT6 #(
-    .INIT(64'h8BBA8A8E8B8A8A8E)) 
-    \i2c_wdata[2]_i_1 
-       (.I0(\i2c_wdata[2]_i_2_n_0 ),
-        .I1(out[3]),
-        .I2(out[2]),
-        .I3(out[1]),
-        .I4(out[0]),
-        .I5(p_2_in[2]),
-        .O(\state_read_reg[1] [2]));
-  LUT6 #(
-    .INIT(64'h0000000030CC88FF)) 
-    \i2c_wdata[2]_i_2 
-       (.I0(\i2c_wdata_reg[5] [2]),
-        .I1(\i2c_wdata_reg[0] [0]),
-        .I2(regacc_data_rd_r[2]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .I4(\i2c_wdata_reg[0] [1]),
-        .I5(\i2c_wdata_reg[2] ),
-        .O(\i2c_wdata[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[30]_i_1 
-       (.I0(regacc_data_rd_r[30]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[30]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \i2c_wdata[31]_i_2 
-       (.I0(regacc_data_rd_r[31]),
-        .I1(\i2c_wdata_reg[0] [1]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(\i2c_wdata_reg[0] [2]),
-        .O(\regacc_data_rd_r_reg[31]_0 ));
-  LUT6 #(
-    .INIT(64'h00EF00EF00CF0000)) 
-    \i2c_wdata[3]_i_1 
-       (.I0(p_2_in[3]),
-        .I1(out[3]),
-        .I2(out[2]),
-        .I3(\i2c_wdata[3]_i_2_n_0 ),
-        .I4(\i2c_wdata_reg[6] ),
-        .I5(\i2c_wdata_reg[1]_0 ),
-        .O(\state_read_reg[1] [3]));
-  LUT6 #(
-    .INIT(64'hF0F0707000F0F0F0)) 
-    \i2c_wdata[3]_i_2 
-       (.I0(regacc_data_rd_r[3]),
-        .I1(\i2c_wdata_reg[0] [2]),
-        .I2(\i2c_wdata_reg[1] ),
-        .I3(\i2c_wdata_reg[5] [3]),
-        .I4(\i2c_wdata_reg[0] [0]),
-        .I5(\i2c_wdata_reg[0] [1]),
-        .O(\i2c_wdata[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAABFAFAAAAAAAA)) 
-    \i2c_wdata[4]_i_1 
-       (.I0(\i2c_wdata[4]_i_2_n_0 ),
-        .I1(out[1]),
-        .I2(out[0]),
-        .I3(p_2_in[4]),
-        .I4(out[3]),
-        .I5(out[2]),
-        .O(\state_read_reg[1] [4]));
-  LUT6 #(
-    .INIT(64'h2A220A0200000000)) 
-    \i2c_wdata[4]_i_2 
-       (.I0(\i2c_wdata_reg[8] ),
-        .I1(\i2c_wdata_reg[0] [0]),
-        .I2(\i2c_wdata_reg[0] [1]),
-        .I3(\i2c_wdata_reg[5] [4]),
-        .I4(regacc_data_rd_r[4]),
-        .I5(\i2c_wdata_reg[0] [2]),
-        .O(\i2c_wdata[4]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAABFAFAAAAAAAA)) 
-    \i2c_wdata[5]_i_1 
-       (.I0(\i2c_wdata[5]_i_2_n_0 ),
-        .I1(out[1]),
-        .I2(out[0]),
-        .I3(p_2_in[5]),
-        .I4(out[3]),
-        .I5(out[2]),
-        .O(\state_read_reg[1] [5]));
-  LUT6 #(
-    .INIT(64'h2A220A0200000000)) 
-    \i2c_wdata[5]_i_2 
-       (.I0(\i2c_wdata_reg[8] ),
-        .I1(\i2c_wdata_reg[0] [0]),
-        .I2(\i2c_wdata_reg[0] [1]),
-        .I3(\i2c_wdata_reg[5] [5]),
-        .I4(regacc_data_rd_r[5]),
-        .I5(\i2c_wdata_reg[0] [2]),
-        .O(\i2c_wdata[5]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0C0F0CFF5D5D5D)) 
-    \i2c_wdata[6]_i_1 
-       (.I0(out[0]),
-        .I1(\i2c_wdata_reg[6] ),
-        .I2(\i2c_wdata[6]_i_2_n_0 ),
-        .I3(\i2c_wdata_reg[1]_0 ),
-        .I4(p_2_in[6]),
-        .I5(\i2c_wdata_reg[1] ),
-        .O(\state_read_reg[1] [6]));
-  LUT5 #(
-    .INIT(32'hFF5F7755)) 
-    \i2c_wdata[6]_i_2 
-       (.I0(\i2c_wdata_reg[0] [2]),
-        .I1(regacc_data_rd_r[6]),
-        .I2(p_2_in[6]),
-        .I3(\i2c_wdata_reg[0] [1]),
-        .I4(\i2c_wdata_reg[0] [0]),
-        .O(\i2c_wdata[6]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0C0F0C0FFD5D5D5)) 
-    \i2c_wdata[7]_i_1 
-       (.I0(out[0]),
-        .I1(\i2c_wdata_reg[6] ),
-        .I2(\i2c_wdata[7]_i_3_n_0 ),
-        .I3(\i2c_wdata_reg[1]_0 ),
-        .I4(p_2_in[7]),
-        .I5(\i2c_wdata_reg[1] ),
-        .O(\state_read_reg[1] [7]));
-  LUT5 #(
-    .INIT(32'h00A088AA)) 
-    \i2c_wdata[7]_i_3 
-       (.I0(\i2c_wdata_reg[0] [2]),
-        .I1(regacc_data_rd_r[7]),
-        .I2(p_2_in[7]),
-        .I3(\i2c_wdata_reg[0] [1]),
-        .I4(\i2c_wdata_reg[0] [0]),
-        .O(\i2c_wdata[7]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hBABAAABAAAAAAAAA)) 
-    \i2c_wdata[8]_i_1 
-       (.I0(\i2c_wdata_reg[8]_0 ),
-        .I1(\i2c_wdata_reg[0] [0]),
-        .I2(\i2c_wdata_reg[0] [2]),
-        .I3(\i2c_wdata_reg[0] [1]),
-        .I4(regacc_data_rd_r[8]),
-        .I5(\i2c_wdata_reg[8] ),
-        .O(\state_read_reg[1] [8]));
-  LUT6 #(
-    .INIT(64'hFFF8F3CB0C000000)) 
-    \i2c_wdata[9]_i_2 
-       (.I0(\i2c_wdata_reg[1]_1 ),
-        .I1(out[1]),
-        .I2(out[3]),
-        .I3(out[0]),
-        .I4(out[2]),
-        .I5(\i2c_wdata[9]_i_5_n_0 ),
-        .O(\state_read_reg[1] [9]));
-  LUT6 #(
-    .INIT(64'hDDD0000000000000)) 
-    \i2c_wdata[9]_i_5 
-       (.I0(out[2]),
-        .I1(out[3]),
-        .I2(\i2c_wdata_reg[0] [0]),
-        .I3(regacc_data_rd_r[9]),
-        .I4(\i2c_wdata_reg[0] [1]),
-        .I5(\i2c_wdata_reg[0] [2]),
-        .O(\i2c_wdata[9]_i_5_n_0 ));
+        .I5(out[0]),
+        .O(D[9]));
   FDRE init_txn_ff2_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(init_txn_ff),
         .Q(init_txn_ff2),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   LUT2 #(
     .INIT(4'hE)) 
     init_txn_ff_i_1
@@ -4581,7 +4546,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(init_txn),
         .Q(init_txn_ff),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   LUT3 #(
     .INIT(8'hF8)) 
     last_read_i_1
@@ -4595,7 +4560,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(last_read_i_1_n_0),
         .Q(last_read),
         .R(axi_awvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     last_write_i_1
@@ -4609,7 +4574,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(last_write_i_1_n_0),
         .Q(last_write),
         .R(axi_awvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \read_index[0]_i_1 
@@ -4637,8 +4602,8 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(read_issued_i_1_n_0),
         .Q(read_issued_reg_n_0),
-        .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+        .R(m00_axi_aresetn_0));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hFF80)) 
     reads_done_i_1
@@ -4672,61 +4637,61 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[10]),
-        .Q(regacc_data_rd_r[10]),
+        .Q(Q[0]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[11] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[11]),
-        .Q(regacc_data_rd_r[11]),
+        .Q(Q[1]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[12] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[12]),
-        .Q(regacc_data_rd_r[12]),
+        .Q(Q[2]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[13] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[13]),
-        .Q(regacc_data_rd_r[13]),
+        .Q(Q[3]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[14] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[14]),
-        .Q(regacc_data_rd_r[14]),
+        .Q(Q[4]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[15] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[15]),
-        .Q(regacc_data_rd_r[15]),
+        .Q(Q[5]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[16] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[16]),
-        .Q(regacc_data_rd_r[16]),
+        .Q(Q[6]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[17] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[17]),
-        .Q(regacc_data_rd_r[17]),
+        .Q(Q[7]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[18] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[18]),
-        .Q(regacc_data_rd_r[18]),
+        .Q(Q[8]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[19] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[19]),
-        .Q(regacc_data_rd_r[19]),
+        .Q(Q[9]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[1] 
        (.C(m00_axi_aclk),
@@ -4738,61 +4703,61 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[20]),
-        .Q(regacc_data_rd_r[20]),
+        .Q(Q[10]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[21] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[21]),
-        .Q(regacc_data_rd_r[21]),
+        .Q(Q[11]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[22] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[22]),
-        .Q(regacc_data_rd_r[22]),
+        .Q(Q[12]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[23] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[23]),
-        .Q(regacc_data_rd_r[23]),
+        .Q(Q[13]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[24] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[24]),
-        .Q(regacc_data_rd_r[24]),
+        .Q(Q[14]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[25] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[25]),
-        .Q(regacc_data_rd_r[25]),
+        .Q(Q[15]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[26] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[26]),
-        .Q(regacc_data_rd_r[26]),
+        .Q(Q[16]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[27] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[27]),
-        .Q(regacc_data_rd_r[27]),
+        .Q(Q[17]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[28] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[28]),
-        .Q(regacc_data_rd_r[28]),
+        .Q(Q[18]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[29] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[29]),
-        .Q(regacc_data_rd_r[29]),
+        .Q(Q[19]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[2] 
        (.C(m00_axi_aclk),
@@ -4804,13 +4769,13 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[30]),
-        .Q(regacc_data_rd_r[30]),
+        .Q(Q[20]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[31] 
        (.C(m00_axi_aclk),
         .CE(regacc_data_rd_r_0),
         .D(m00_axi_rdata[31]),
-        .Q(regacc_data_rd_r[31]),
+        .Q(Q[21]),
         .R(1'b0));
   FDRE \regacc_data_rd_r_reg[3] 
        (.C(m00_axi_aclk),
@@ -4854,7 +4819,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(m00_axi_rdata[9]),
         .Q(regacc_data_rd_r[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h8)) 
     regacc_done_rd_i_1
@@ -4871,7 +4836,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
     .INIT(8'h80)) 
     regacc_done_wr_i_1
        (.I0(last_write),
-        .I1(m00_axi_bready),
+        .I1(axi_bready_reg_0),
         .I2(m00_axi_bvalid),
         .O(writes_done0));
   FDRE regacc_done_wr_reg
@@ -4880,7 +4845,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .D(writes_done0),
         .Q(regacc_done_wr),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     regacc_rd_r_i_1
@@ -4900,7 +4865,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
        (.I0(init_txn_ff2),
         .I1(m00_axi_aresetn),
         .O(regacc_rd_r));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'hE)) 
     regacc_wr_r_i_2
@@ -4937,7 +4902,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(start_single_read_i_1_n_0),
         .Q(start_single_read_reg_n_0),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   LUT6 #(
     .INIT(64'hFFFFFFFB04000400)) 
     start_single_write_i_1
@@ -4945,7 +4910,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .I1(mst_exec_state[0]),
         .I2(mst_exec_state[1]),
         .I3(start_single_write0),
-        .I4(m00_axi_bready),
+        .I4(axi_bready_reg_0),
         .I5(start_single_write_reg_n_0),
         .O(start_single_write_i_1_n_0));
   LUT6 #(
@@ -4963,36 +4928,36 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(start_single_write_i_1_n_0),
         .Q(start_single_write_reg_n_0),
-        .R(SR));
+        .R(m00_axi_aresetn_0));
   LUT6 #(
     .INIT(64'hFFFF1111FFF0FFFF)) 
     \state_bram[1]_i_1 
        (.I0(\state_bram_reg[1] ),
-        .I1(start_bram_write),
+        .I1(\state_bram_reg[1]_0 ),
         .I2(regacc_done_wr),
         .I3(regacc_done_rd),
-        .I4(Q[2]),
-        .I5(Q[0]),
-        .O(D[0]));
+        .I4(\state_bram_reg[2]_0 [2]),
+        .I5(\state_bram_reg[2]_0 [0]),
+        .O(\state_bram_reg[2] [0]));
   LUT6 #(
     .INIT(64'hAAAA2000AAAAA0A0)) 
     \state_bram[2]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .I3(\state_bram_reg[2] ),
+       (.I0(\state_bram_reg[2]_0 [1]),
+        .I1(\state_bram_reg[2]_0 [2]),
+        .I2(\state_bram_reg[2]_0 [0]),
+        .I3(\state_bram_reg[2]_1 ),
         .I4(\state_bram[2]_i_3_n_0 ),
-        .I5(\state_bram_reg[2]_0 ),
-        .O(D[1]));
+        .I5(\state_bram_reg[2]_2 ),
+        .O(\state_bram_reg[2] [1]));
   LUT4 #(
     .INIT(16'h0004)) 
     \state_bram[2]_i_3 
-       (.I0(Q[0]),
-        .I1(Q[2]),
+       (.I0(\state_bram_reg[2]_0 [0]),
+        .I1(\state_bram_reg[2]_0 [2]),
         .I2(regacc_done_rd),
         .I3(regacc_done_wr),
         .O(\state_bram[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \write_index[0]_i_1 
@@ -5012,7 +4977,7 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .I1(mst_exec_state[0]),
         .I2(mst_exec_state[1]),
         .I3(start_single_write0),
-        .I4(m00_axi_bready),
+        .I4(axi_bready_reg_0),
         .I5(write_issued_reg_n_0),
         .O(write_issued_i_1_n_0));
   FDRE write_issued_reg
@@ -5020,13 +4985,13 @@ module top_block_I2C_Controller_v1_0_0_1_I2C_Controller_v1_0_M00_AXI
         .CE(1'b1),
         .D(write_issued_i_1_n_0),
         .Q(write_issued_reg_n_0),
-        .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+        .R(m00_axi_aresetn_0));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFF80)) 
     writes_done_i_1
        (.I0(m00_axi_bvalid),
-        .I1(m00_axi_bready),
+        .I1(axi_bready_reg_0),
         .I2(last_write),
         .I3(writes_done),
         .O(writes_done_i_1_n_0));

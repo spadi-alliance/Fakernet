@@ -1,19 +1,15 @@
 {
+   "/comment_4":"comment_0",
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-1093,-484",
+   "Default View_TopLeft":"-1098,-430",
    "ExpandedHierarchyInLayout":"",
-   "comment_0":"some SO pins have inverse POL.
-proper not gate is added",
-   "commentid":"comment_0|",
-   "fillcolor_comment_0":"",
-   "font_comment_0":"14",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x -40 -y 70 -defaultsOSRD
 preplace port port-id_reset -pg 1 -lvl 0 -x -40 -y 100 -defaultsOSRD
 preplace port port-id_idelay_refclk -pg 1 -lvl 0 -x -40 -y 170 -defaultsOSRD
-preplace port port-id_trg -pg 1 -lvl 4 -x 950 -y 440 -defaultsOSRD
+preplace port port-id_trg -pg 1 -lvl 4 -x 940 -y 630 -defaultsOSRD
 preplace portBus SO1P -pg 1 -lvl 0 -x -40 -y 280 -defaultsOSRD
 preplace portBus SO1N -pg 1 -lvl 0 -x -40 -y 310 -defaultsOSRD
 preplace portBus SO0N -pg 1 -lvl 0 -x -40 -y 20 -defaultsOSRD
@@ -22,41 +18,35 @@ preplace portBus SO2N -pg 1 -lvl 0 -x -40 -y 370 -defaultsOSRD
 preplace portBus SO2P -pg 1 -lvl 0 -x -40 -y 340 -defaultsOSRD
 preplace portBus SO3N -pg 1 -lvl 0 -x -40 -y 430 -defaultsOSRD
 preplace portBus SO3P -pg 1 -lvl 0 -x -40 -y 400 -defaultsOSRD
-preplace portBus IBUF_OUT1 -pg 1 -lvl 4 -x 950 -y 270 -defaultsOSRD
-preplace portBus IBUF_OUT3 -pg 1 -lvl 4 -x 950 -y 330 -defaultsOSRD
-preplace portBus IBUF_OUT2 -pg 1 -lvl 4 -x 950 -y 300 -defaultsOSRD
-preplace portBus IBUF_OUT0 -pg 1 -lvl 4 -x 950 -y 240 -defaultsOSRD
+preplace portBus IBUF_OUT1 -pg 1 -lvl 4 -x 940 -y 260 -defaultsOSRD
+preplace portBus IBUF_OUT3 -pg 1 -lvl 4 -x 940 -y 320 -defaultsOSRD
+preplace portBus IBUF_OUT2 -pg 1 -lvl 4 -x 940 -y 290 -defaultsOSRD
+preplace portBus IBUF_OUT0 -pg 1 -lvl 4 -x 940 -y 230 -defaultsOSRD
 preplace inst vio_0 -pg 1 -lvl 1 -x 160 -y 230 -defaultsOSRD
-preplace inst vio_1 -pg 1 -lvl 3 -x 830 -y 560 -defaultsOSRD
+preplace inst vio_1 -pg 1 -lvl 3 -x 820 -y 560 -defaultsOSRD
 preplace inst vio_2 -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
-preplace inst idelay_top_v2_0 -pg 1 -lvl 2 -x 540 -y 350 -defaultsOSRD
-preplace netloc SO0N_1 1 0 2 NJ 20 340J
+preplace inst idelay_top_v2_0 -pg 1 -lvl 2 -x 520 -y 350 -defaultsOSRD
+preplace netloc SO0N_1 1 0 2 NJ 20 330J
 preplace netloc SO0P_1 1 0 2 -10J 290 NJ
 preplace netloc SO1N_1 1 0 2 NJ 310 320J
-preplace netloc SO1P_1 1 0 2 -20J 300 330J
+preplace netloc SO1P_1 1 0 2 -20J 330 NJ
 preplace netloc SO2N_1 1 0 2 NJ 370 300J
 preplace netloc SO2P_1 1 0 2 NJ 340 310J
 preplace netloc SO3N_1 1 0 2 NJ 430 NJ
 preplace netloc SO3P_1 1 0 2 NJ 400 330J
-preplace netloc clk_1 1 0 3 -10 160 370 150 720J
-preplace netloc idelay_refclk_1 1 0 2 NJ 170 350J
-preplace netloc idelay_top_v2_0_SO0_out 1 2 2 710J 240 NJ
-preplace netloc idelay_top_v2_0_SO1_out 1 2 2 730J 270 NJ
-preplace netloc idelay_top_v2_0_SO2_out 1 2 2 NJ 300 NJ
-preplace netloc idelay_top_v2_0_SO3_out 1 2 2 NJ 320 930J
-preplace netloc idelay_top_v2_0_overall_state 1 2 1 710 340n
-preplace netloc idelay_top_v2_0_trg 1 2 2 NJ 440 NJ
+preplace netloc clk_1 1 0 3 0 300 310 150 710J
+preplace netloc idelay_refclk_1 1 0 2 NJ 170 340J
+preplace netloc idelay_top_v2_0_SO0_out 1 2 2 690J 230 NJ
+preplace netloc idelay_top_v2_0_SO1_out 1 2 2 700J 260 NJ
+preplace netloc idelay_top_v2_0_SO2_out 1 2 2 720J 290 NJ
+preplace netloc idelay_top_v2_0_SO3_out 1 2 2 NJ 320 NJ
+preplace netloc idelay_top_v2_0_overall_state 1 2 1 690 340n
+preplace netloc idelay_top_v2_0_trg 1 2 2 NJ 440 920J
 preplace netloc reset_1 1 0 1 NJ 100
 preplace netloc vio_0_probe_out0 1 1 1 320J 230n
-preplace netloc vio_2_probe_out0 1 1 1 360 90n
-preplace cgraphic comment_0 place top -48 -75 textcolor 4 linecolor 3 linewidth 1
-levelinfo -pg 1 -40 160 540 830 950
-pagesize -pg 1 -db -bbox -sgen -180 0 1120 630
-",
-   "linecolor_comment_0":"",
-   "textcolor_comment_0":""
+preplace netloc vio_2_probe_out0 1 1 1 350 90n
+levelinfo -pg 1 -40 160 520 820 940
+pagesize -pg 1 -db -bbox -sgen -180 0 1110 650
+"
 }
 0
-{
-   "/comment_4":"comment_0"
-}

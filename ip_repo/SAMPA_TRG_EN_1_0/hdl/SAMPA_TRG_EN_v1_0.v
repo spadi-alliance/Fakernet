@@ -4,7 +4,8 @@
 	module SAMPA_TRG_EN_v1_0 #
 	(
 		// Users to add parameters here
-        parameter  TARGET_ADDRESS = 32'h00005000,
+        parameter  TARGET_ADDRESS = 32'h00000500,
+        parameter  TXN_TIMING     = 28'h000_0000,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -50,6 +51,8 @@
 		input wire  m00_axi_rvalid,
 		output wire  m00_axi_rready
 	);
+	wire [31:0] regval;
+	assign sampa_trg_en = regval[0];
 // Instantiation of Axi Bus Interface M00_AXI
 	SAMPA_REGREAD_v1_0_M00_AXI # ( 
 	    .TARGET_ADDRESS(TARGET_ADDRESS),
@@ -59,8 +62,9 @@
 		.C_M_AXI_DATA_WIDTH(C_M00_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M00_AXI_TRANSACTIONS_NUM)
 	) SAMPA_REGREAD_v1_0_M00_AXI_inst (
-	    .REGVAL(sampa_trg_en),
-		.INIT_AXI_TXN(m00_axi_init_axi_txn),
+	    .REGVAL(regval),
+//		.INIT_AXI_TXN(m00_axi_init_axi_txn),
+		.INIT_AXI_TXN(txn),
 		.ERROR(m00_axi_error),
 		.TXN_DONE(m00_axi_txn_done),
 		.M_AXI_ACLK(m00_axi_aclk),
@@ -93,7 +97,7 @@
 	always @(posedge m00_axi_aclk)                                                      
 	  begin
 	    cnt <= cnt+1;                                                                             
-	    if (cnt[27:0]==28'h00000000)
+	    if (cnt[27:0]==TXN_TIMING)
 	       txn <= 1'b1;
 	    else
 	       txn <= 1'b0;   
