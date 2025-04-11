@@ -242,6 +242,7 @@ wire [31:0] rdata;
     parameter STATE_WRITE     = 4'b1001;
     parameter STATE_READ_DONE = 4'b1010;
     parameter STATE_WRITE_DONE= 4'b1011;
+    parameter STATE_CLEAR     = 4'b1100;
     
     parameter WCNT_MAX = 8'h2F;
     parameter RCNT_MAX = 8'h2F;
@@ -473,7 +474,8 @@ wire [31:0] rdata;
                                i2c_wr    <= 1'b0;
                                trans_cnt <= 4'd10;
                                start_bram_read <= 1'b0;
-                               state_w_r <= STATE_W_READ_BRAM;//address
+                               bram_raddr_r <= {scnt, wcnt[5:0]};
+                               state_w_r <= STATE_W_READ_BRAM;
                            end else begin
                                i2c_wr <= 1'b1;
                                i2c_waddr <= 32'h0108;
@@ -482,14 +484,21 @@ wire [31:0] rdata;
 	               end
 	             STATE_W_READ_BRAM:
 	               begin 
-	                   if(state_bram == STATE_READ_DONE)
+	               
+	                   if(regacc_done == 1'b1)
 	                       begin
 	                           i2c_wr    <= 1'b0;
-                               start_bram_read <= 1'b0;
+	                           regacc_read_r <= 1'b0;
                                trans_cnt <= 4'd10;
 	                           state_w_r <= STATE_W_WRITE_FIFO1;//body
-	                       end else begin
-                               start_bram_read <= 1'b1;
+	                       end else
+//	                   if(m00_axi_rvalid)
+//	                       begin
+//	                           regacc_rdata_r <= regacc_rdata;
+//	                       end else
+	                       begin
+	                           regacc_read_r <= 1'b1;
+	                           regacc_addr_r <= {2'b01,bram_raddr_r[7:0]};
 	                           i2c_wr    <= 1'b0;
 	                       end
 	               end
@@ -509,7 +518,6 @@ wire [31:0] rdata;
                                i2c_wr    <= 1'b1;
                                i2c_waddr <= 32'h0108;
                                i2c_wdata <= {scnt, wcnt[5:0]};//some address should be skipped
-                               bram_raddr_r <= {scnt, wcnt[5:0]};
 //                               i2c_wdata <= bram_rdata;
 	                       end
 	                       
@@ -552,6 +560,10 @@ wire [31:0] rdata;
 	               end
                  STATE_W_SEND           : //set status register
 	               begin
+	                   if(trans_cnt!=4'd0)
+	                       begin
+	                           trans_cnt <= trans_cnt -4'd1;
+	                       end else
 	                   if(i2c_txn_done == 1'b1)
 	                       begin
                                i2c_wr    <= 1'b0;
@@ -574,28 +586,8 @@ wire [31:0] rdata;
                                state_w_r <= STATE_IDLE;
                            end
 	               end
-//	             default:
-//	               begin
-//	                   state_write <= STATE_INIT;
-//	               end
-//	        endcase     //state_write
-	        
-	        
-//	        case (state_read)
-//	             STATE_INIT:
-//	               begin
-//	                   state_read <= STATE_R_IDLE;
-////	                   i2c_wr <= 1'b0;
-////	                   i2c_rd <= 1'b0;
-//	               end
-//                 STATE_R_IDLE           :
-//	               begin
-//	                   if(state_i2c == STATE_READ)
-//	                       begin
-//	                           i2c_wr <= 1'b0;
-//                               state_read <= STATE_R_RESET_TX_FIFO0;
-//                           end
-//	               end
+	               
+	               
                  STATE_R_RESET_TX_FIFO0 : //reset by setting control register
 	               begin
 	                   if(trans_cnt!=4'd0)
@@ -728,7 +720,6 @@ wire [31:0] rdata;
                                 i2c_rd <= 1'b0;
                                 i2c_rdata <= rdata;
                                 bram_wdata_r <= rdata;
-                                start_bram_write <= 1'b1;
                                 state_w_r <= STATE_R_WRITE_BRAM;
                            end else begin
                                 i2c_rd <= 1'b1;
@@ -737,11 +728,16 @@ wire [31:0] rdata;
 	               end
 	             STATE_R_WRITE_BRAM://wait bram write done
 	               begin
-	                   if(state_bram == STATE_WRITE_DONE)
+	                   if(regacc_done == 1'b1)
 	                       begin
-	                           start_bram_write <= 1'b0;
+	                           regacc_write_r <= 1'b0;
 	                           state_w_r <= STATE_R_END;
+	                       end else
+	                       begin
+	                            regacc_write_r <= 1'b1;
+ 	                            regacc_addr_r <= {2'b10,bram_waddr_r[7:0]};
 	                       end
+	                   
 	               end
                  STATE_R_END            :
 	               begin
@@ -755,78 +751,72 @@ wire [31:0] rdata;
 	        
 	        
 	        
-	        case (state_bram)//state machine for w/r reg from bram                                                  
-	          STATE_INIT:
-	               begin
-	                   state_bram <= STATE_IDLE;
-//	                   init_txn_bram <= 1'b0;
-//	                   bram_read_done <= 1'b0;
-//	                   bram_write_done <= 1'b0;
-	                   regacc_read_r <= 1'b0;
-	                   regacc_write_r <= 1'b0;
-	               end
-	          STATE_IDLE://set read addr from bram
-	               begin
-	                   if(start_bram_read == 1'b1)// start reading from bram to send data to SAMPA
-	                       begin
-//	                           start_reg_read_r <= 1'b0;
-	                           regacc_read_r <= 1'b1;
-	                           regacc_addr_r <= {2'b01,bram_raddr_r[7:0]};
-//	                           regacc_addr_r <= raddr;
-//	                           init_txn_bram <= 1'b1;
-//	                           bram_read_done <= 1'b0;
-	                           state_bram <= STATE_READ;
-	                       end else
+//	        case (state_bram)//state machine for w/r reg from bram                                                  
+//	          STATE_INIT:
+//	               begin
+//	                   state_bram <= STATE_IDLE;
+//	                   regacc_read_r <= 1'b0;
+//	                   regacc_write_r <= 1'b0;
+//	               end
+//	          STATE_IDLE://set read addr from bram
+//	               begin
+//	                   if(start_bram_read == 1'b1)// start reading from bram to send data to SAMPA
 //	                       begin
-//	                           init_txn_bram <= 1'b0;
-//	                       end
-	                   if(start_bram_write == 1'b1)
-	                       begin
-	                           regacc_write_r <= 1'b1;
-	                           regacc_addr_r <= {2'b10,bram_waddr_r[7:0]};
-//	                           bram_write_done <= 1'b0;
-	                           state_bram <= STATE_WRITE;
-	                       end //else
+//	                           regacc_read_r <= 1'b1;
+//	                           regacc_addr_r <= {2'b01,bram_raddr_r[7:0]};
+//	                           state_bram <= STATE_READ;
+//	                       end 
+//	                   if(start_bram_write == 1'b1)
 //	                       begin
-//	                           init_txn_bram <= 1'b0;
+//	                           regacc_write_r <= 1'b1;
+//	                           regacc_addr_r <= {2'b10,bram_waddr_r[7:0]};
+//	                           state_bram <= STATE_WRITE;
+//	                       end 
+//	               end                                                               
+//	          STATE_READ:// SAMPA <-- data <-- BRAM
+//	               begin
+//	                           regacc_read_r <= 1'b0;
+//	                   if(regacc_done == 1'b1)//end of read
+//	                       begin
+//	                           state_bram <= STATE_READ_DONE;
+//	                       end else 
+//	                   if(m00_axi_rvalid==1'b1)
+//	                       begin
+////	                           bram_read_done <= 1'b1;
 //	                       end
-	               end                                                               
-	          STATE_READ:// SAMPA <-- data <-- BRAM
-	               begin
-//	                   if(m00_axi_txn_done==1'b1)
-	                           regacc_read_r <= 1'b0;
-	                   if(regacc_done == 1'b1)//end of read
-	                       begin
-	                           state_bram <= STATE_READ_DONE;
-	                       end else 
-	                   if(m00_axi_rvalid==1'b1)
-	                       begin
-//	                           bram_read_done <= 1'b1;
-	                       end
-	               end
-	           STATE_READ_DONE: 
-	               begin
-	                   if(state_w_r == STATE_W_WRITE_FIFO2) 
-	                       begin
-	                           state_bram <= STATE_IDLE;
-	                       end
-	               end
-	           STATE_WRITE:// SAMPA --> data --> BRAM
-	               begin
-	                   regacc_write_r <= 1'b0;
-	                   if(regacc_done == 1'b1)
-	                       begin
-	                           state_bram <= STATE_WRITE_DONE;
-	                       end 
-	               end
-               STATE_WRITE_DONE:
-                   begin
-	                   if(state_w_r == STATE_R_END) 
-	                       begin
-	                           state_bram <= STATE_IDLE;
-	                       end
-                   end
-	        endcase//state_read    
+//	               end
+//	           STATE_READ_DONE: 
+//	               begin
+//	                   if(state_w_r == STATE_W_WRITE_FIFO2) 
+//	                       begin
+//	                           state_bram <= STATE_IDLE;
+//	                       end
+//	               end
+//	           STATE_WRITE:// SAMPA --> data --> BRAM
+//	               begin
+//	                   regacc_write_r <= 1'b0;
+//	                   if(regacc_done == 1'b1)
+//	                       begin
+//	                           state_bram <= STATE_WRITE_DONE;
+//	                       end 
+//	               end
+//               STATE_WRITE_DONE:
+//                   begin
+//	                   if(state_w_r == STATE_R_END) 
+//	                       begin
+//	                           state_bram <= STATE_IDLE;
+//	                       end
+//                   end
+//               STATE_CLEAR:
+//                    begin
+//	                   regacc_write_r <= 1'b0;
+//	                   if(regacc_done == 1'b1)
+//	                       begin
+//	                           state_bram <= STATE_WRITE_DONE;
+//	                       end 
+                        
+//                    end
+//	        endcase//state_read    
 	                                       
 	      end                                                        
 	  end                                        

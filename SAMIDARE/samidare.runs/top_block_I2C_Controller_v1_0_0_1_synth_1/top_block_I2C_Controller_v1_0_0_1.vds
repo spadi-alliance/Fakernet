@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Apr 11 09:06:54 2025
-# Process ID: 211240
+# Start of session at: Fri Apr 11 15:48:57 2025
+# Process ID: 486231
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1
 # Command line: vivado -log top_block_I2C_Controller_v1_0_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_I2C_Controller_v1_0_0_1.tcl
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1/top_block_I2C_Controller_v1_0_0_1.vds
@@ -35,7 +35,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p
 INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 211515
+INFO: [Synth 8-7075] Helper process launched with PID 486506
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:118]
 WARNING: [Synth 8-11065] parameter 'INIT_WRITE' becomes localparam in 'I2C_Controller_v1_0_M00_AXI' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M00_AXI.v:121]
@@ -50,13 +50,13 @@ INFO: [Synth 8-11241] undeclared symbol 'i2c_rd', assumed default net type 'wire
 INFO: [Synth 8-11241] undeclared symbol 'i2c_waddr', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:179]
 INFO: [Synth 8-11241] undeclared symbol 'i2c_raddr', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:180]
 INFO: [Synth 8-11241] undeclared symbol 'i2c_wdata', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:181]
-WARNING: [Synth 8-8895] 'i2c_wr' is already implicitly declared on line 177 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:274]
-WARNING: [Synth 8-8895] 'i2c_rd' is already implicitly declared on line 178 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:275]
-WARNING: [Synth 8-8895] 'i2c_waddr' is already implicitly declared on line 179 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:281]
-WARNING: [Synth 8-8895] 'i2c_wdata' is already implicitly declared on line 181 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:282]
-WARNING: [Synth 8-8895] 'i2c_raddr' is already implicitly declared on line 180 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:283]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_rdata_o', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:288]
-INFO: [Synth 8-11241] undeclared symbol 'i2c_done', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:299]
+WARNING: [Synth 8-8895] 'i2c_wr' is already implicitly declared on line 177 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:275]
+WARNING: [Synth 8-8895] 'i2c_rd' is already implicitly declared on line 178 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:276]
+WARNING: [Synth 8-8895] 'i2c_waddr' is already implicitly declared on line 179 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:282]
+WARNING: [Synth 8-8895] 'i2c_wdata' is already implicitly declared on line 181 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:283]
+WARNING: [Synth 8-8895] 'i2c_raddr' is already implicitly declared on line 180 [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:284]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_rdata_o', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:289]
+INFO: [Synth 8-11241] undeclared symbol 'i2c_done', assumed default net type 'wire' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:300]
 WARNING: [Synth 8-11065] parameter 'STATE_R_RESET_TX_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:214]
 WARNING: [Synth 8-11065] parameter 'STATE_R_RESET_TX_FIFO1' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:215]
 WARNING: [Synth 8-11065] parameter 'STATE_R_WRITE_FIFO0' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:216]
@@ -84,13 +84,14 @@ WARNING: [Synth 8-11065] parameter 'STATE_READ' becomes localparam in 'I2C_Contr
 WARNING: [Synth 8-11065] parameter 'STATE_WRITE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:242]
 WARNING: [Synth 8-11065] parameter 'STATE_READ_DONE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:243]
 WARNING: [Synth 8-11065] parameter 'STATE_WRITE_DONE' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:244]
-WARNING: [Synth 8-11065] parameter 'WCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:246]
-WARNING: [Synth 8-11065] parameter 'RCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:247]
-WARNING: [Synth 8-11065] parameter 'SCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:248]
+WARNING: [Synth 8-11065] parameter 'STATE_CLEAR' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:245]
+WARNING: [Synth 8-11065] parameter 'WCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:247]
+WARNING: [Synth 8-11065] parameter 'RCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:248]
+WARNING: [Synth 8-11065] parameter 'SCNT_MAX' becomes localparam in 'I2C_Controller_v1_0' with formal parameter declaration list [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:249]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.496 ; gain = 365.688 ; free physical = 45772 ; free virtual = 61667
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.867; parent = 2153.469; children = 968.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2147.703 ; gain = 363.719 ; free physical = 44252 ; free virtual = 60995
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3122.047; parent = 2153.645; children = 968.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_block_I2C_Controller_v1_0_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/synth/top_block_I2C_Controller_v1_0_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'I2C_Controller_v1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:13]
@@ -99,8 +100,7 @@ INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0_M00_AXI' (0#1
 WARNING: [Synth 8-689] width (39) of port connection 'regacc_addr' does not match port width (32) of module 'I2C_Controller_v1_0_M00_AXI' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:131]
 INFO: [Synth 8-6157] synthesizing module 'I2C_Controller_v1_0_M01_AXI' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0_M01_AXI' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:333]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:758]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:334]
 INFO: [Synth 8-6155] done synthesizing module 'I2C_Controller_v1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_I2C_Controller_v1_0_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_I2C_Controller_v1_0_0_1/synth/top_block_I2C_Controller_v1_0_0_1.v:53]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'I2C_Controller_v1_0_M01_AXI_inst'. This will prevent further optimization [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:176]
@@ -108,12 +108,13 @@ WARNING: [Synth 8-6014] Unused sequential element expected_rdata_reg was removed
 WARNING: [Synth 8-6014] Unused sequential element compare_done_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:530]
 WARNING: [Synth 8-6014] Unused sequential element read_mismatch_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:708]
 WARNING: [Synth 8-6014] Unused sequential element error_reg_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0_M01_AXI.v:721]
-WARNING: [Synth 8-6014] Unused sequential element start_reg_read_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:324]
-WARNING: [Synth 8-6014] Unused sequential element init_txn_bram_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:325]
-WARNING: [Synth 8-6014] Unused sequential element ack_data_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:338]
-WARNING: [Synth 8-6014] Unused sequential element i2c_done_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:299]
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:412]
-WARNING: [Synth 8-6014] Unused sequential element i2c_rdata_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:288]
+WARNING: [Synth 8-6014] Unused sequential element start_reg_read_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:325]
+WARNING: [Synth 8-6014] Unused sequential element init_txn_bram_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:326]
+WARNING: [Synth 8-6014] Unused sequential element start_bram_read_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:338]
+WARNING: [Synth 8-6014] Unused sequential element ack_data_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:339]
+WARNING: [Synth 8-6014] Unused sequential element i2c_done_r_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:300]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:413]
+WARNING: [Synth 8-6014] Unused sequential element i2c_rdata_reg was removed.  [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v:289]
 WARNING: [Synth 8-7129] Port INIT_AXI_TXN in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module I2C_Controller_v1_0_M01_AXI is either unconnected or has no load
@@ -125,41 +126,41 @@ WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module I2C_Controller_v1_0_M00_AX
 WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module I2C_Controller_v1_0_M00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2230.434 ; gain = 446.625 ; free physical = 45853 ; free virtual = 61749
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3198.836; parent = 2230.438; children = 968.398
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2230.609 ; gain = 446.625 ; free physical = 44337 ; free virtual = 61081
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3199.016; parent = 2230.613; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.277 ; gain = 461.469 ; free physical = 45853 ; free virtual = 61749
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.680; parent = 2245.281; children = 968.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.453 ; gain = 461.469 ; free physical = 44336 ; free virtual = 61081
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.859; parent = 2245.457; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.277 ; gain = 461.469 ; free physical = 45853 ; free virtual = 61749
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.680; parent = 2245.281; children = 968.398
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.453 ; gain = 461.469 ; free physical = 44336 ; free virtual = 61081
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.859; parent = 2245.457; children = 968.402
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.277 ; gain = 0.000 ; free physical = 45848 ; free virtual = 61744
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.453 ; gain = 0.000 ; free physical = 44331 ; free virtual = 61076
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2381.215 ; gain = 0.000 ; free physical = 45818 ; free virtual = 61714
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.391 ; gain = 0.000 ; free physical = 44300 ; free virtual = 61045
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2405.027 ; gain = 23.812 ; free physical = 45818 ; free virtual = 61714
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2400.203 ; gain = 23.812 ; free physical = 44300 ; free virtual = 61045
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2405.027 ; gain = 621.219 ; free physical = 45836 ; free virtual = 61732
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3341.414; parent = 2373.016; children = 968.398
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2400.203 ; gain = 616.219 ; free physical = 44321 ; free virtual = 61066
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.594; parent = 2368.191; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -167,21 +168,20 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-sbvb484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2405.027 ; gain = 621.219 ; free physical = 45836 ; free virtual = 61732
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3341.414; parent = 2373.016; children = 968.398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2400.203 ; gain = 616.219 ; free physical = 44321 ; free virtual = 61066
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.594; parent = 2368.191; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2405.027 ; gain = 621.219 ; free physical = 45836 ; free virtual = 61732
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3341.414; parent = 2373.016; children = 968.398
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2400.203 ; gain = 616.219 ; free physical = 44321 ; free virtual = 61066
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.594; parent = 2368.191; children = 968.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'I2C_Controller_v1_0_M00_AXI'
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'I2C_Controller_v1_0_M01_AXI'
-INFO: [Synth 8-802] inferred FSM for state register 'state_bram_reg' in module 'I2C_Controller_v1_0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_i2c_reg' in module 'I2C_Controller_v1_0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_w_r_reg' in module 'I2C_Controller_v1_0'
 ---------------------------------------------------------------------------------------------------
@@ -200,18 +200,6 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'mst_exec_state_reg' in module '
                     IDLE |                               00 |                               00
               INIT_WRITE |                               01 |                               01
                INIT_READ |                               10 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'state_bram_reg' in module 'I2C_Controller_v1_0', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-              STATE_INIT |                             0001 |                             0001
-              STATE_IDLE |                             0010 |                             0010
-              STATE_READ |                             1000 |                             1000
-         STATE_READ_DONE |                             1010 |                             1010
-             STATE_WRITE |                             1001 |                             1001
-        STATE_WRITE_DONE |                             1011 |                             1011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-6159] Found Keep on FSM register 'state_w_r_reg' in module 'I2C_Controller_v1_0', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
@@ -251,9 +239,9 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'state_i2c_reg' in module 'I2C_C
               STATE_READ |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2405.027 ; gain = 621.219 ; free physical = 45830 ; free virtual = 61727
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3341.414; parent = 2373.016; children = 968.398
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2400.203 ; gain = 616.219 ; free physical = 44312 ; free virtual = 61058
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.594; parent = 2368.191; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -267,40 +255,34 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit       Adders := 1     
 	   2 Input    1 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               32 Bit    Registers := 12    
 	               24 Bit    Registers := 1     
-	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 4     
-	                4 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 50    
+	                1 Bit    Registers := 48    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
-	  22 Input   32 Bit        Muxes := 2     
-	   2 Input   10 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
+	  22 Input   32 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 9     
 	   5 Input    8 Bit        Muxes := 2     
 	  22 Input    5 Bit        Muxes := 1     
 	   3 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 32    
-	   2 Input    4 Bit        Muxes := 16    
-	   7 Input    4 Bit        Muxes := 1     
-	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 33    
+	   2 Input    4 Bit        Muxes := 12    
 	   5 Input    4 Bit        Muxes := 1     
 	  22 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 12    
 	   4 Input    2 Bit        Muxes := 1     
-	  22 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 35    
-	   3 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 31    
+	   3 Input    1 Bit        Muxes := 5     
 	   4 Input    1 Bit        Muxes := 9     
-	   5 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 3     
 	   6 Input    1 Bit        Muxes := 3     
-	   7 Input    1 Bit        Muxes := 6     
-	  23 Input    1 Bit        Muxes := 4     
-	  22 Input    1 Bit        Muxes := 7     
+	  23 Input    1 Bit        Muxes := 3     
+	  22 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -338,9 +320,9 @@ WARNING: [Synth 8-7129] Port m00_axi_bresp[0] in module top_block_I2C_Controller
 WARNING: [Synth 8-7129] Port m00_axi_rresp[1] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m00_axi_rresp[0] in module top_block_I2C_Controller_v1_0_0_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2405.027 ; gain = 621.219 ; free physical = 45806 ; free virtual = 61708
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.129; parent = 1374.143; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3341.414; parent = 2373.016; children = 968.398
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2400.203 ; gain = 616.219 ; free physical = 44292 ; free virtual = 61043
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1584.149; parent = 1374.153; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.594; parent = 2368.191; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -361,25 +343,25 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45578 ; free virtual = 61480
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1791.254; parent = 1581.848; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2446.945 ; gain = 662.961 ; free physical = 44075 ; free virtual = 60826
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1790.978; parent = 1581.562; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3415.352; parent = 2446.949; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45578 ; free virtual = 61480
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1791.527; parent = 1582.121; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2446.945 ; gain = 662.961 ; free physical = 44075 ; free virtual = 60825
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1791.247; parent = 1581.831; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3415.352; parent = 2446.949; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45575 ; free virtual = 61476
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1793.867; parent = 1584.461; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44070 ; free virtual = 60820
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.438; parent = 1585.022; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -397,49 +379,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45586 ; free virtual = 61488
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.262; parent = 1584.855; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.063; parent = 1585.647; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45586 ; free virtual = 61488
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.262; parent = 1584.855; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.063; parent = 1585.647; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45586 ; free virtual = 61488
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.336; parent = 1584.930; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.122; parent = 1585.706; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45586 ; free virtual = 61488
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.340; parent = 1584.934; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.126; parent = 1585.710; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45586 ; free virtual = 61488
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.340; parent = 1584.934; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.126; parent = 1585.710; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45585 ; free virtual = 61487
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.355; parent = 1584.949; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.142; parent = 1585.726; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -457,40 +439,41 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY8 |     2|
 |2     |LUT1   |     3|
-|3     |LUT2   |    42|
-|4     |LUT3   |    37|
-|5     |LUT4   |    40|
-|6     |LUT5   |    47|
-|7     |LUT6   |   113|
-|8     |FDRE   |   356|
-|9     |FDSE   |     3|
+|3     |LUT2   |    37|
+|4     |LUT3   |    36|
+|5     |LUT4   |    30|
+|6     |LUT5   |    41|
+|7     |LUT6   |   118|
+|8     |MUXF7  |     1|
+|9     |FDRE   |   354|
+|10    |FDSE   |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 667.961 ; free physical = 45585 ; free virtual = 61487
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1794.355; parent = 1584.949; children = 209.986
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.172; parent = 2451.773; children = 968.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 670.969 ; free physical = 44072 ; free virtual = 60822
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.142; parent = 1585.726; children = 209.996
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.359; parent = 2454.957; children = 968.402
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.770 ; gain = 508.211 ; free physical = 45599 ; free virtual = 61501
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2451.777 ; gain = 667.961 ; free physical = 45599 ; free virtual = 61501
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2454.953 ; gain = 516.219 ; free physical = 44086 ; free virtual = 60836
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2454.961 ; gain = 670.969 ; free physical = 44086 ; free virtual = 60836
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2457.707 ; gain = 0.000 ; free physical = 45701 ; free virtual = 61603
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2457.922 ; gain = 0.000 ; free physical = 44190 ; free virtual = 60940
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2497.562 ; gain = 0.000 ; free physical = 45669 ; free virtual = 61571
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2497.809 ; gain = 0.000 ; free physical = 44157 ; free virtual = 60907
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 2698b187
+Synth Design complete, checksum: df5fa8c7
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+64 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:01:00 . Memory (MB): peak = 2497.562 ; gain = 1204.031 ; free physical = 45881 ; free virtual = 61783
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:01:01 . Memory (MB): peak = 2497.809 ; gain = 1204.758 ; free physical = 44370 ; free virtual = 61121
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1/top_block_I2C_Controller_v1_0_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_I2C_Controller_v1_0_0_1, cache-ID = 9d2c4c8c1a988b18
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_I2C_Controller_v1_0_0_1, cache-ID = 441cb7c7bc41827d
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_I2C_Controller_v1_0_0_1_synth_1/top_block_I2C_Controller_v1_0_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_I2C_Controller_v1_0_0_1_utilization_synth.rpt -pb top_block_I2C_Controller_v1_0_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 09:07:59 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 15:50:02 2025...

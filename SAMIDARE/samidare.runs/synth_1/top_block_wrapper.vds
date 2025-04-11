@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Apr 11 09:08:10 2025
-# Process ID: 212157
+# Start of session at: Fri Apr 11 15:50:13 2025
+# Process ID: 486939
 # Current directory: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1
 # Command line: vivado -log top_block_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_block_wrapper.tcl
 # Log file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.vds
 # Journal file: /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/vivado.jou
-# Running On: e16fpga01, OS: Linux, CPU Frequency: 4500.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
+# Running On: e16fpga01, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 66513 MB
 #-----------------------------------------------------------
 source top_block_wrapper.tcl -notrace
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Timing 38-316}  -suppress '. The existing rule will be replaced.
@@ -39,33 +39,33 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 212843
+INFO: [Synth 8-7075] Helper process launched with PID 487890
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2212.742 ; gain = 48.285 ; free physical = 45709 ; free virtual = 61606
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3191.051; parent = 2222.652; children = 968.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2212.445 ; gain = 53.426 ; free physical = 44212 ; free virtual = 60958
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3190.758; parent = 2222.355; children = 968.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_block_wrapper' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/hdl/top_block_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'top_block' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:4280]
 INFO: [Synth 8-6157] synthesizing module 'Config_wrapper_imp_O559AZ' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Const_wrapper_imp_V3PZLN' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:192]
 INFO: [Synth 8-6157] synthesizing module 'HRSTB_wrapper_imp_YQOCHV' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:391]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_2_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_2_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_1_3' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_1_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_3' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_1_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_2_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_1_3' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_1_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_3' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_1_3_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconcat_2_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_2_1/synth/top_block_xlconcat_2_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlconcat_2_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_2_1/synth/top_block_xlconcat_2_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'HRSTB_wrapper_imp_YQOCHV' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:391]
-INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_2_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_2_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_3_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_3_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_3_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_3_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_4_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_4_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_4_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_4_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_2_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_3_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_3_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_3_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_3_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_4_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_4_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_4_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_4_1_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconstant_1_4' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconstant_1_4/synth/top_block_xlconstant_1_4.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -89,24 +89,24 @@ WARNING: [Synth 8-7071] port 'CG3' of module 'GainConfig_imp_1YQ4DCE' is unconne
 WARNING: [Synth 8-7071] port 'CTS1' of module 'GainConfig_imp_1YQ4DCE' is unconnected for instance 'GainConfig' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:160]
 WARNING: [Synth 8-7071] port 'POL1' of module 'GainConfig_imp_1YQ4DCE' is unconnected for instance 'GainConfig' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:160]
 WARNING: [Synth 8-7023] instance 'GainConfig' of module 'GainConfig_imp_1YQ4DCE' has 4 connections declared, but only 0 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:160]
-INFO: [Synth 8-6157] synthesizing module 'top_block_SAMPA_PON_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_SAMPA_PON_v1_0_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_SAMPA_PON_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_SAMPA_PON_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_SAMPA_PON_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_SAMPA_PON_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_SAMPA_PON_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_SAMPA_PON_v1_0_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm00_axi_error' of module 'top_block_SAMPA_PON_v1_0_0_0' is unconnected for instance 'SAMPA_PON_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:162]
 WARNING: [Synth 8-7071] port 'm00_axi_txn_done' of module 'top_block_SAMPA_PON_v1_0_0_0' is unconnected for instance 'SAMPA_PON_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:162]
 WARNING: [Synth 8-7023] instance 'SAMPA_PON_v1_0_0' of module 'top_block_SAMPA_PON_v1_0_0_0' has 29 connections declared, but only 27 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:162]
 INFO: [Synth 8-6155] done synthesizing module 'Config_wrapper_imp_O559AZ' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:12]
 INFO: [Synth 8-6157] synthesizing module 'GPIO_imp_10R5SBT' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:332]
-INFO: [Synth 8-6157] synthesizing module 'top_block_GPIO_Controller_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_GPIO_Controller_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_GPIO_Controller_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_GPIO_Controller_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_GPIO_Controller_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_GPIO_Controller_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_GPIO_Controller_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_GPIO_Controller_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'GPIO_IOBUF_imp_14Q06C' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:248]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_0_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_0_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_18' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_18_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_18' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_18_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_19' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_19_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_19' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_19_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_1_10' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_1_10_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_10' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_1_10_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_0_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_0_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_18' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_18_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_18' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_18_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_19' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_19_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_19' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_19_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_1_10' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_1_10_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_10' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_1_10_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconcat_0_8' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_8/synth/top_block_xlconcat_0_8.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -146,8 +146,8 @@ INFO: [Synth 8-6155] done synthesizing module 'top_block_xlslice_3_4' (0#1) [/ho
 INFO: [Synth 8-6155] done synthesizing module 'GPIO_IOBUF_imp_14Q06C' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:248]
 INFO: [Synth 8-6155] done synthesizing module 'GPIO_imp_10R5SBT' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:332]
 INFO: [Synth 8-6157] synthesizing module 'SAMPA_I2C_wrapper_imp_VOP84W' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:423]
-INFO: [Synth 8-6157] synthesizing module 'top_block_I2C_Controller_v1_0_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_I2C_Controller_v1_0_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_I2C_Controller_v1_0_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_I2C_Controller_v1_0_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_I2C_Controller_v1_0_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_I2C_Controller_v1_0_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_I2C_Controller_v1_0_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_I2C_Controller_v1_0_0_1_stub.v:5]
 WARNING: [Synth 8-7071] port 'i2c_busy' of module 'top_block_I2C_Controller_v1_0_0_1' is unconnected for instance 'I2C_Controller_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
 WARNING: [Synth 8-7071] port 'm00_axi_error' of module 'top_block_I2C_Controller_v1_0_0_1' is unconnected for instance 'I2C_Controller_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
 WARNING: [Synth 8-7071] port 'm00_axi_txn_done' of module 'top_block_I2C_Controller_v1_0_0_1' is unconnected for instance 'I2C_Controller_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
@@ -156,42 +156,42 @@ WARNING: [Synth 8-7071] port 'm01_axi_txn_done' of module 'top_block_I2C_Control
 WARNING: [Synth 8-7071] port 'm01_axi_awprot' of module 'top_block_I2C_Controller_v1_0_0_1' is unconnected for instance 'I2C_Controller_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
 WARNING: [Synth 8-7071] port 'm01_axi_arprot' of module 'top_block_I2C_Controller_v1_0_0_1' is unconnected for instance 'I2C_Controller_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
 WARNING: [Synth 8-7023] instance 'I2C_Controller_v1_0_0' of module 'top_block_I2C_Controller_v1_0_0_1' has 51 connections declared, but only 44 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:621]
-INFO: [Synth 8-6157] synthesizing module 'top_block_axi_iic_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_axi_iic_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_axi_iic_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_axi_iic_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_axi_iic_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_axi_iic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_axi_iic_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_axi_iic_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'top_block_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:666]
 WARNING: [Synth 8-7071] port 'gpo' of module 'top_block_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:666]
 WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'top_block_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:666]
-INFO: [Synth 8-6157] synthesizing module 'top_block_init_i2c_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_init_i2c_v1_0_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_init_i2c_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_init_i2c_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_init_i2c_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_init_i2c_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_init_i2c_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_init_i2c_v1_0_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm00_axi_error' of module 'top_block_init_i2c_v1_0_0_0' is unconnected for instance 'init_i2c_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:692]
 WARNING: [Synth 8-7071] port 'm00_axi_txn_done' of module 'top_block_init_i2c_v1_0_0_0' is unconnected for instance 'init_i2c_v1_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:692]
 WARNING: [Synth 8-7023] instance 'init_i2c_v1_0_0' of module 'top_block_init_i2c_v1_0_0_0' has 26 connections declared, but only 24 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:692]
-INFO: [Synth 8-6157] synthesizing module 'top_block_iobuf_vhdl_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_iobuf_vhdl_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_iobuf_vhdl_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_iobuf_vhdl_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_iobuf_vhdl_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_iobuf_vhdl_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_iobuf_vhdl_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_iobuf_vhdl_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_iobuf_vhdl_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_iobuf_vhdl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_iobuf_vhdl_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_iobuf_vhdl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_iobuf_vhdl_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_iobuf_vhdl_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_iobuf_vhdl_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_iobuf_vhdl_1_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'SAMPA_I2C_wrapper_imp_VOP84W' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:423]
 INFO: [Synth 8-6157] synthesizing module 'SOCLK_wrapper_imp_FLFIZ9' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:729]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_ds_buf_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_ds_buf_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_ds_buf_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_ds_buf_0_1_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconcat_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_0/synth/top_block_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlconcat_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_0/synth/top_block_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'SOCLK_wrapper_imp_FLFIZ9' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:729]
 INFO: [Synth 8-6157] synthesizing module 'SO_receiver_imp_J5HCEK' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:757]
-INFO: [Synth 8-6157] synthesizing module 'top_block_idelay_top_v2_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_idelay_top_v2_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_idelay_top_v2_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_idelay_top_v2_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_idelay_top_v2_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_idelay_top_v2_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_idelay_top_v2_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_idelay_top_v2_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'S_AXI_ARREADY' of module 'top_block_idelay_top_v2_0_0' is unconnected for instance 'idelay_top_v2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:827]
 WARNING: [Synth 8-7071] port 'S_AXI_RDATA' of module 'top_block_idelay_top_v2_0_0' is unconnected for instance 'idelay_top_v2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:827]
 WARNING: [Synth 8-7071] port 'S_AXI_RRESP' of module 'top_block_idelay_top_v2_0_0' is unconnected for instance 'idelay_top_v2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:827]
 WARNING: [Synth 8-7071] port 'S_AXI_RVALID' of module 'top_block_idelay_top_v2_0_0' is unconnected for instance 'idelay_top_v2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:827]
 WARNING: [Synth 8-7023] instance 'idelay_top_v2_0' of module 'top_block_idelay_top_v2_0_0' has 25 connections declared, but only 21 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:827]
-INFO: [Synth 8-6157] synthesizing module 'top_block_vio_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_vio_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_0_1_stub.v:5]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:852]
-INFO: [Synth 8-6157] synthesizing module 'top_block_vio_0_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_0_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_vio_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_2_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_vio_2_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_vio_0_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_0_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_vio_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_vio_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_vio_2_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'SO_receiver_imp_J5HCEK' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:757]
 INFO: [Synth 8-6157] synthesizing module 'appUnit_imp_1BHH9Z2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:861]
 INFO: [Synth 8-6157] synthesizing module 'async_fifos_imp_1HKIQFU' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1037]
@@ -214,14 +214,14 @@ INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameter
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlslice_0_3' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlslice_0_3/synth/top_block_xlslice_0_3.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'rd_en_slice_imp_4U4C2Z' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:3045]
 INFO: [Synth 8-6157] synthesizing module 'wr_en_gate_imp_6TUUSW' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:6226]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_3' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_3' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_7' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_7_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_7' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_7_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_8' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_8_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_8' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_8_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_9' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_9_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_9' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_9_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_3' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_3' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_7' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_7_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_7' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_7_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_8' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_8_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_8' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_8_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_util_vector_logic_0_9' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_9_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_9' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_9_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'wr_en_gate_imp_6TUUSW' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:6226]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconcat_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_1/synth/top_block_xlconcat_0_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlconcat_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_1/synth/top_block_xlconcat_0_1.v:53]
@@ -231,61 +231,61 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__paramet
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlconcat_1_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_1_2/synth/top_block_xlconcat_1_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'top_block_xlconcat_0_2' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_2/synth/top_block_xlconcat_0_2.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_xlconcat_0_2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_xlconcat_0_2/synth/top_block_xlconcat_0_2.v:53]
-INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_async_fifo_wrapp_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_async_fifo_wrapp_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_async_fifo_wrapp_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_async_fifo_wrapp_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_2_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_afifo_wrapper_2_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_async_fifo_wrapp_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_async_fifo_wrapp_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_async_fifo_wrapp_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_async_fifo_wrapp_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_afifo_wrapper_2_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_2_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_afifo_wrapper_2_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_afifo_wrapper_2_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'async_fifos_imp_1HKIQFU' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1037]
 WARNING: [Synth 8-7071] port 'empty' of module 'async_fifos_imp_1HKIQFU' is unconnected for instance 'async_fifos' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:949]
 WARNING: [Synth 8-7023] instance 'async_fifos' of module 'async_fifos_imp_1HKIQFU' has 16 connections declared, but only 15 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:949]
-INFO: [Synth 8-6157] synthesizing module 'top_block_das_rx_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_das_rx_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_das_rx_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_das_rx_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_data_processor_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_processor_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_data_processor_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_processor_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_das_rx_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_das_rx_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_das_rx_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_das_rx_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_data_processor_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_processor_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_data_processor_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_processor_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'valid' of module 'top_block_data_processor_0_0' is unconnected for instance 'data_processor_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:982]
 WARNING: [Synth 8-7023] instance 'data_processor_0' of module 'top_block_data_processor_0_0' has 14 connections declared, but only 13 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:982]
 INFO: [Synth 8-6157] synthesizing module 'data_sender_wrapper_imp_165VMFZ' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1244]
-INFO: [Synth 8-6157] synthesizing module 'top_block_axis_data_fifo_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_axis_data_fifo_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_axis_data_fifo_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_axis_data_fifo_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_data_sender_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_sender_v1_0_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_data_sender_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_sender_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_axis_data_fifo_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_axis_data_fifo_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_axis_data_fifo_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_axis_data_fifo_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_data_sender_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_sender_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_data_sender_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_sender_v1_0_0_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'data_sender_wrapper_imp_165VMFZ' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1244]
-INFO: [Synth 8-6157] synthesizing module 'top_block_event_builder_v0_1_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_event_builder_v0_1_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_event_builder_v0_1_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_event_builder_v0_1_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_trigger_manager_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_trigger_manager_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_trigger_manager_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_trigger_manager_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_cdc_gen_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_cdc_gen_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_cdc_gen_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_xpm_cdc_gen_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_event_builder_v0_1_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_event_builder_v0_1_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_event_builder_v0_1_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_event_builder_v0_1_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_trigger_manager_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_trigger_manager_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_trigger_manager_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_trigger_manager_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_xpm_cdc_gen_0_1' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_cdc_gen_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_xpm_cdc_gen_0_1' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_xpm_cdc_gen_0_1_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'appUnit_imp_1BHH9Z2' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:861]
 INFO: [Synth 8-6157] synthesizing module 'clock_wrapper_imp_153XBA' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1200]
-INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'clk_out2' of module 'top_block_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1231]
 WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'top_block_clk_wiz_0_0' has 6 connections declared, but only 5 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1231]
-INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_clk_wiz_1_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_clk_wiz_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_clk_wiz_1_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'clock_wrapper_imp_153XBA' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1200]
 INFO: [Synth 8-6157] synthesizing module 'fnet_wrapper_imp_RWCR3V' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1557]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
-INFO: [Synth 8-6157] synthesizing module 'top_block_data_gen_user_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_gen_user_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_data_gen_user_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_gen_user_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_data_gen_user_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_gen_user_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_data_gen_user_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_gen_user_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'event_word' of module 'top_block_data_gen_user_0_0' is unconnected for instance 'data_gen_user_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
 WARNING: [Synth 8-7071] port 'event_offset' of module 'top_block_data_gen_user_0_0' is unconnected for instance 'data_gen_user_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
 WARNING: [Synth 8-7071] port 'event_write' of module 'top_block_data_gen_user_0_0' is unconnected for instance 'data_gen_user_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
 WARNING: [Synth 8-7071] port 'event_commit_len' of module 'top_block_data_gen_user_0_0' is unconnected for instance 'data_gen_user_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
 WARNING: [Synth 8-7071] port 'event_commit' of module 'top_block_data_gen_user_0_0' is unconnected for instance 'data_gen_user_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
 WARNING: [Synth 8-7023] instance 'data_gen_user_0' of module 'top_block_data_gen_user_0_0' has 8 connections declared, but only 3 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1723]
-INFO: [Synth 8-6157] synthesizing module 'top_block_data_receiver_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_receiver_v1_0_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_data_receiver_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_data_receiver_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_data_receiver_v1_0_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_receiver_v1_0_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_data_receiver_v1_0_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_data_receiver_v1_0_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'fakernet_imp_1GNS2XO' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1318]
-INFO: [Synth 8-6157] synthesizing module 'top_block_RESET_INST_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_RESET_INST_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_block_RESET_INST_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_RESET_INST_0_0_stub.v:5]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'top_block_RESET_INST_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_RESET_INST_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_fakernet_top_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_fakernet_top_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_RESET_INST_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_RESET_INST_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_fakernet_top_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_fakernet_top_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'statedebug' of module 'top_block_fakernet_top_0_0' is unconnected for instance 'fakernet_top_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
 WARNING: [Synth 8-7071] port 'mdio_i_debug' of module 'top_block_fakernet_top_0_0' is unconnected for instance 'fakernet_top_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
 WARNING: [Synth 8-7071] port 'mdio_o_debug' of module 'top_block_fakernet_top_0_0' is unconnected for instance 'fakernet_top_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
@@ -302,15 +302,15 @@ WARNING: [Synth 8-7071] port 'jd1' of module 'top_block_fakernet_top_0_0' is unc
 WARNING: [Synth 8-7071] port 'jd3' of module 'top_block_fakernet_top_0_0' is unconnected for instance 'fakernet_top_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
 WARNING: [Synth 8-7071] port 'uart_tx' of module 'top_block_fakernet_top_0_0' is unconnected for instance 'fakernet_top_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
 WARNING: [Synth 8-7023] instance 'fakernet_top_0' of module 'top_block_fakernet_top_0_0' has 52 connections declared, but only 37 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1450]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_gig_ethernet_pcs_pma_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_gig_ethernet_pcs_pma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_gig_ethernet_pcs_pma_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_gig_ethernet_pcs_pma_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rxuserclk2' of module 'top_block_gig_ethernet_pcs_pma_0_0' is unconnected for instance 'gig_ethernet_pcs_pma_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
 WARNING: [Synth 8-7071] port 'gmii_rx_er' of module 'top_block_gig_ethernet_pcs_pma_0_0' is unconnected for instance 'gig_ethernet_pcs_pma_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
 WARNING: [Synth 8-7071] port 'mdio_t' of module 'top_block_gig_ethernet_pcs_pma_0_0' is unconnected for instance 'gig_ethernet_pcs_pma_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
 WARNING: [Synth 8-7071] port 'status_vector' of module 'top_block_gig_ethernet_pcs_pma_0_0' is unconnected for instance 'gig_ethernet_pcs_pma_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
 WARNING: [Synth 8-7071] port 'mmcm_locked_out' of module 'top_block_gig_ethernet_pcs_pma_0_0' is unconnected for instance 'gig_ethernet_pcs_pma_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
 WARNING: [Synth 8-7023] instance 'gig_ethernet_pcs_pma_0' of module 'top_block_gig_ethernet_pcs_pma_0_0' has 29 connections declared, but only 24 given [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1488]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-212157-e16fpga01/realtime/top_block_util_vector_logic_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_block_util_vector_logic_1_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/.Xil/Vivado-486939-e16fpga01/realtime/top_block_util_vector_logic_1_0_stub.v:5]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-7071] port 'start_i2c_write_o' of module 'top_block_reg_switch_0_0' is unconnected for instance 'reg_switch_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1530]
 WARNING: [Synth 8-7071] port 'start_i2c_write_all_o' of module 'top_block_reg_switch_0_0' is unconnected for instance 'reg_switch_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/synth/top_block.v:1530]
@@ -452,24 +452,24 @@ WARNING: [Synth 8-7129] Port S02_ARESETN in module top_block_axi_mem_intercon_3 
 WARNING: [Synth 8-7129] Port S03_ACLK in module top_block_axi_mem_intercon_3 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2301.617 ; gain = 137.160 ; free physical = 45790 ; free virtual = 61689
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.020; parent = 2301.621; children = 968.398
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2301.320 ; gain = 142.301 ; free physical = 44294 ; free virtual = 61041
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3269.727; parent = 2301.324; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2316.461 ; gain = 152.004 ; free physical = 45790 ; free virtual = 61688
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3284.863; parent = 2316.465; children = 968.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2316.164 ; gain = 157.145 ; free physical = 44293 ; free virtual = 61040
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3284.570; parent = 2316.168; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2316.461 ; gain = 152.004 ; free physical = 45790 ; free virtual = 61688
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3284.863; parent = 2316.465; children = 968.398
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2316.164 ; gain = 157.145 ; free physical = 44293 ; free virtual = 61040
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3284.570; parent = 2316.168; children = 968.402
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2316.461 ; gain = 0.000 ; free physical = 45783 ; free virtual = 61682
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2316.164 ; gain = 0.000 ; free physical = 44287 ; free virtual = 61034
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -633,18 +633,18 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_block_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.324 ; gain = 0.000 ; free physical = 45721 ; free virtual = 61620
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2369.059 ; gain = 0.000 ; free physical = 44227 ; free virtual = 60974
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2371.324 ; gain = 0.000 ; free physical = 45721 ; free virtual = 61620
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2369.059 ; gain = 0.000 ; free physical = 44227 ; free virtual = 60974
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2371.324 ; gain = 206.867 ; free physical = 45767 ; free virtual = 61666
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3307.711; parent = 2339.312; children = 968.398
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2369.059 ; gain = 210.039 ; free physical = 44274 ; free virtual = 61021
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3305.449; parent = 2337.047; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -652,9 +652,9 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-sbvb484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2371.324 ; gain = 206.867 ; free physical = 45767 ; free virtual = 61666
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3307.711; parent = 2339.312; children = 968.398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2369.059 ; gain = 210.039 ; free physical = 44274 ; free virtual = 61021
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3305.449; parent = 2337.047; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1043,14 +1043,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for top_block_i/intercon_wrapper/axi_
 Applied set_property KEEP_HIERARCHY = SOFT for top_block_i/intercon_wrapper/axi_mem_intercon/m00_couplers/m00_data_fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for top_block_i/intercon_wrapper/axi_mem_intercon. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.324 ; gain = 206.867 ; free physical = 45770 ; free virtual = 61669
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3307.711; parent = 2339.312; children = 968.398
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2369.059 ; gain = 210.039 ; free physical = 44277 ; free virtual = 61025
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3305.449; parent = 2337.047; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.324 ; gain = 206.867 ; free physical = 45771 ; free virtual = 61671
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3307.711; parent = 2339.312; children = 968.398
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2369.059 ; gain = 210.039 ; free physical = 44279 ; free virtual = 61027
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3305.449; parent = 2337.047; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1073,34 +1073,34 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2371.324 ; gain = 206.867 ; free physical = 45754 ; free virtual = 61660
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.760; parent = 1419.901; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3307.711; parent = 2339.312; children = 968.398
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2369.059 ; gain = 210.039 ; free physical = 44262 ; free virtual = 61016
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1629.768; parent = 1419.820; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3305.449; parent = 2337.047; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'BASECLK'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2453.941 ; gain = 289.484 ; free physical = 45530 ; free virtual = 61436
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1823.834; parent = 1614.433; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3422.344; parent = 2453.945; children = 968.398
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2453.676 ; gain = 294.656 ; free physical = 44035 ; free virtual = 60789
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1823.689; parent = 1614.210; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3422.082; parent = 2453.680; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2454.941 ; gain = 290.484 ; free physical = 45529 ; free virtual = 61435
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1825.174; parent = 1615.804; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.344; parent = 2454.945; children = 968.398
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2454.676 ; gain = 295.656 ; free physical = 44034 ; free virtual = 60788
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1825.053; parent = 1615.604; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3423.082; parent = 2454.680; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2474.980 ; gain = 310.523 ; free physical = 45527 ; free virtual = 61433
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1825.885; parent = 1616.515; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3443.383; parent = 2474.984; children = 968.398
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2474.715 ; gain = 315.695 ; free physical = 44032 ; free virtual = 60786
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1825.775; parent = 1616.327; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3443.121; parent = 2474.719; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1118,49 +1118,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.156; parent = 1616.788; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.062; parent = 1616.616; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.172; parent = 1616.804; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.062; parent = 1616.616; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1827.008; parent = 1617.640; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.898; parent = 1617.452; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1827.023; parent = 1617.655; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.914; parent = 1617.468; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1827.023; parent = 1617.655; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.914; parent = 1617.468; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1827.023; parent = 1617.655; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.914; parent = 1617.468; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1303,20 +1303,20 @@ Report Cell Usage:
 |72    |OBUF                             |    17|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2480.918 ; gain = 316.461 ; free physical = 45537 ; free virtual = 61442
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1827.039; parent = 1617.671; children = 209.858
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.320; parent = 2480.922; children = 968.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2480.652 ; gain = 321.633 ; free physical = 44030 ; free virtual = 60784
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1826.930; parent = 1617.483; children = 209.947
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3449.059; parent = 2480.656; children = 968.402
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 84 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2480.918 ; gain = 261.598 ; free physical = 45551 ; free virtual = 61457
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2480.926 ; gain = 316.461 ; free physical = 45551 ; free virtual = 61457
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2480.652 ; gain = 268.738 ; free physical = 44045 ; free virtual = 60799
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2480.660 ; gain = 321.633 ; free physical = 44045 ; free virtual = 60799
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2488.855 ; gain = 0.000 ; free physical = 45655 ; free virtual = 61561
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2489.559 ; gain = 0.000 ; free physical = 44149 ; free virtual = 60903
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2512.637 ; gain = 0.000 ; free physical = 45616 ; free virtual = 61521
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2513.340 ; gain = 0.000 ; free physical = 44110 ; free virtual = 60864
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
@@ -1325,7 +1325,7 @@ Synth Design complete, checksum: b627fae4
 INFO: [Common 17-83] Releasing license: Synthesis
 246 Infos, 203 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:01:04 . Memory (MB): peak = 2512.637 ; gain = 348.180 ; free physical = 45821 ; free virtual = 61727
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:01:07 . Memory (MB): peak = 2513.340 ; gain = 354.320 ; free physical = 44315 ; free virtual = 61069
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/synth_1/top_block_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 09:09:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 15:51:28 2025...

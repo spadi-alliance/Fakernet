@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Apr 11 09:22:49 2025
+| Date         : Fri Apr 11 16:04:22 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_methodology -file top_block_wrapper_methodology_drc_routed.rpt -pb top_block_wrapper_methodology_drc_routed.pb -rpx top_block_wrapper_methodology_drc_routed.rpx
 | Design       : top_block_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: checkpoint_top_block_wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 78
+             Violations found: 50
 +-----------+------------------+--------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                            | Violations |
 +-----------+------------------+--------------------------------------------------------+------------+
@@ -34,7 +34,7 @@ Table of Contents
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin              | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                           | 7          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                      | 1          |
-| TIMING-16 | Warning          | Large setup violation                                  | 32         |
+| TIMING-16 | Warning          | Large setup violation                                  | 4          |
 | TIMING-18 | Warning          | Missing input or output delay                          | 24         |
 | XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
@@ -153,162 +153,22 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.280 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.061 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[0]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.289 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.068 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/rcnt_reg[5]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.299 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.071 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[4]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.307 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[4]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -2.318 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -2.319 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rst_seq_reentered_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -2.363 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -2.386 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wr_rst_busy_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -2.390 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[3]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -2.407 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[2]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#11 Warning
-Large setup violation  
-There is a large setup violation of -2.439 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[3]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#12 Warning
-Large setup violation  
-There is a large setup violation of -2.458 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[2]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#13 Warning
-Large setup violation  
-There is a large setup violation of -2.472 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[4]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#14 Warning
-Large setup violation  
-There is a large setup violation of -2.510 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#15 Warning
-Large setup violation  
-There is a large setup violation of -2.523 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_3/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#16 Warning
-Large setup violation  
-There is a large setup violation of -2.560 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[4]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#17 Warning
-Large setup violation  
-There is a large setup violation of -2.576 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#18 Warning
-Large setup violation  
-There is a large setup violation of -2.611 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[3]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#19 Warning
-Large setup violation  
-There is a large setup violation of -2.612 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[3]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#20 Warning
-Large setup violation  
-There is a large setup violation of -2.625 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wr_rst_busy_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#21 Warning
-Large setup violation  
-There is a large setup violation of -2.630 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_2/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rst_seq_reentered_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#22 Warning
-Large setup violation  
-There is a large setup violation of -2.633 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[2]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#23 Warning
-Large setup violation  
-There is a large setup violation of -2.634 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[2]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#24 Warning
-Large setup violation  
-There is a large setup violation of -2.634 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[4]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#25 Warning
-Large setup violation  
-There is a large setup violation of -2.675 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wr_rst_busy_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#26 Warning
-Large setup violation  
-There is a large setup violation of -2.676 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#27 Warning
-Large setup violation  
-There is a large setup violation of -2.692 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rst_seq_reentered_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#28 Warning
-Large setup violation  
-There is a large setup violation of -2.711 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wr_rst_busy_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#29 Warning
-Large setup violation  
-There is a large setup violation of -2.715 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#30 Warning
-Large setup violation  
-There is a large setup violation of -2.718 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_0/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#31 Warning
-Large setup violation  
-There is a large setup violation of -2.722 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rst_seq_reentered_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#32 Warning
-Large setup violation  
-There is a large setup violation of -2.738 ns between top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/appUnit/async_fifos/xpm_afifo_wrapper_1/inst/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.105 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[2]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
