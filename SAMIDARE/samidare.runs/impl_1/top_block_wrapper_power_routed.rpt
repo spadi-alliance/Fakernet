@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Fri Apr 11 16:04:28 2025
+| Date             : Sun Apr 13 00:37:22 2025
 | Host             : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 | Command          : report_power -file top_block_wrapper_power_routed.rpt -pb top_block_wrapper_power_summary_routed.pb -rpx top_block_wrapper_power_routed.rpx
 | Design           : top_block_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.113        |
+| Total On-Chip Power (W)  | 1.049        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.847        |
+| Dynamic (W)              | 0.784        |
 | Device Static (W)        | 0.265        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 97.0         |
-| Junction Temperature (C) | 28.0         |
+| Max Ambient (C)          | 97.1         |
+| Junction Temperature (C) | 27.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.101 |       17 |       --- |             --- |
-| CLB Logic                |     0.037 |    32103 |       --- |             --- |
-|   LUT as Logic           |     0.028 |    10122 |     77760 |           13.02 |
-|   LUT as Shift Register  |     0.004 |      502 |     40320 |            1.25 |
-|   Register               |     0.003 |    16881 |    155520 |           10.85 |
+| Clocks                   |     0.060 |       17 |       --- |             --- |
+| CLB Logic                |     0.027 |    22391 |       --- |             --- |
+|   LUT as Logic           |     0.022 |     7525 |     77760 |            9.68 |
+|   Register               |     0.002 |    11758 |    155520 |            7.56 |
 |   LUT as Distributed RAM |     0.002 |       54 |     40320 |            0.13 |
-|   CARRY8                 |    <0.001 |      244 |      9720 |            2.51 |
-|   Others                 |     0.000 |     1159 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      176 |     77760 |            0.23 |
-| Signals                  |     0.025 |    23846 |       --- |             --- |
-| Block RAM                |     0.046 |       37 |       144 |           25.69 |
-| MMCM                     |     0.199 |        0 |       --- |             --- |
-| I/O                      |     0.292 |      154 |       204 |           75.49 |
+|   CARRY8                 |    <0.001 |      190 |      9720 |            1.95 |
+|   LUT as Shift Register  |    <0.001 |       52 |     40320 |            0.13 |
+|   Others                 |     0.000 |      579 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       86 |     77760 |            0.11 |
+| Signals                  |     0.020 |    16682 |       --- |             --- |
+| Block RAM                |     0.038 |       30 |       144 |           20.83 |
+| MMCM                     |     0.211 |        0 |       --- |             --- |
+| I/O                      |     0.280 |      138 |       204 |           67.65 |
 | GTH                      |     0.148 |        1 |        12 |            8.33 |
 | Static Power             |     0.265 |          |           |                 |
-| Total                    |     1.113 |          |           |                 |
+| Total                    |     1.049 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,11 +77,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.850 |     0.303 |       0.249 |      0.054 |       NA    | Unspecified | NA         |
-| Vccint_io |       0.850 |     0.050 |       0.023 |      0.027 |       NA    | Unspecified | NA         |
-| Vccbram   |       0.850 |     0.005 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.174 |       0.110 |      0.064 |       NA    | Unspecified | NA         |
-| Vccaux_io |       1.800 |     0.111 |       0.087 |      0.023 |       NA    | Unspecified | NA         |
+| Vccint    |       0.850 |     0.229 |       0.175 |      0.054 |       NA    | Unspecified | NA         |
+| Vccint_io |       0.850 |     0.053 |       0.026 |      0.027 |       NA    | Unspecified | NA         |
+| Vccbram   |       0.850 |     0.004 |       0.004 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.181 |       0.117 |      0.064 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.103 |       0.079 |      0.023 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.064 |       0.064 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,7 +142,7 @@ Table of Contents
 | clk_out1_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_0/inst/clk_out1_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                     |            25.0 |
 | clk_out1_top_block_clk_wiz_1_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_1/inst/clk_out1_top_block_clk_wiz_1_0                                                                                                                                                                                                                                                                                                     |             3.1 |
 | clk_out1_top_block_clk_wiz_2_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/Config_wrapper/Const_wrapper/clk_wiz_2/inst/clk_out1_top_block_clk_wiz_2_0                                                                                                                                                                                                                                                                                      |            10.0 |
-| clk_out2_top_block_clk_wiz_1_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_1/inst/clk_out2_top_block_clk_wiz_1_0                                                                                                                                                                                                                                                                                                     |             5.0 |
+| clk_out2_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_0/inst/clk_out2_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                     |             3.3 |
 | clk_out3_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_0/inst/clk_out3_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                     |            40.0 |
 | clk_out4_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_0/inst/clk_out4_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                     |            20.0 |
 | clk_out5_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                                                                             | top_block_i/clock_wrapper/clk_wiz_0/inst/clk_out5_top_block_clk_wiz_0_0                                                                                                                                                                                                                                                                                                     |             8.0 |
@@ -163,47 +163,37 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| top_block_wrapper           |     0.847 |
-|   dbg_hub                   |     0.006 |
-|     inst                    |     0.006 |
-|       BSCANID.u_xsdbm_id    |     0.006 |
-|   top_block_i               |     0.792 |
+| top_block_wrapper           |     0.784 |
+|   dbg_hub                   |     0.003 |
+|     inst                    |     0.003 |
+|       BSCANID.u_xsdbm_id    |     0.003 |
+|   top_block_i               |     0.780 |
 |     Config_wrapper          |     0.076 |
 |       Const_wrapper         |     0.076 |
-|     GPIO                    |     0.016 |
-|       GPIO_IOBUF            |     0.016 |
 |     SAMPA_I2C_wrapper       |     0.003 |
 |       I2C_Controller_v1_0_0 |     0.002 |
+|       axi_iic_0             |     0.001 |
 |     SOCLK_wrapper           |     0.080 |
 |       util_ds_buf_0         |     0.080 |
-|     SO_receiver             |     0.117 |
-|       idelay_top_v2_0       |     0.109 |
-|       vio_0                 |     0.002 |
-|       vio_1                 |     0.003 |
-|       vio_2                 |     0.003 |
-|     appUnit                 |     0.022 |
-|       das_rx_0              |     0.020 |
-|       data_sender_wrapper   |     0.002 |
-|     clock_wrapper           |     0.199 |
-|       clk_wiz_0             |     0.101 |
-|       clk_wiz_1             |     0.098 |
-|     fnet_wrapper            |     0.231 |
-|       fakernet              |     0.230 |
+|     SO_receiver             |     0.112 |
+|       idelay_top_v2_0       |     0.112 |
+|     appUnit                 |     0.017 |
+|       das_rx_0              |     0.015 |
+|       data_sender_wrapper   |     0.001 |
+|     clock_wrapper           |     0.212 |
+|       clk_wiz_0             |     0.114 |
+|       clk_wiz_1             |     0.097 |
+|     fnet_wrapper            |     0.234 |
+|       fakernet              |     0.233 |
 |     intercon_wrapper        |     0.001 |
 |       axi_mem_intercon      |     0.001 |
 |     led_module              |     0.001 |
 |     reg_bram                |     0.022 |
 |       blk_mem_gen_0         |     0.022 |
-|     reset                   |     0.003 |
-|       vio_0                 |     0.003 |
+|     reset                   |     0.002 |
+|       vio_0                 |     0.001 |
 |     trg_en                  |     0.020 |
 |       util_ds_buf_1         |     0.020 |
-|   u_ila_0                   |     0.015 |
-|     inst                    |     0.015 |
-|       ila_core_inst         |     0.015 |
-|   u_ila_1                   |     0.034 |
-|     inst                    |     0.034 |
-|       ila_core_inst         |     0.034 |
 +-----------------------------+-----------+
 
 

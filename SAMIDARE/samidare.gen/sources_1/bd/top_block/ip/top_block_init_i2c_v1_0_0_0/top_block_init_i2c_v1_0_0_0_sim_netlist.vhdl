@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Wed Apr  9 22:17:32 2025
 -- Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_init_i2c_v1_0_0_0/top_block_init_i2c_v1_0_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_block_init_i2c_v1_0_0_0 -prefix
+--               top_block_init_i2c_v1_0_0_0_ top_block_init_i2c_v1_0_0_0_sim_netlist.vhdl
 -- Design      : top_block_init_i2c_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -60,8 +60,6 @@ entity top_block_init_i2c_v1_0_0_0_SAMPA_REGREAD_v1_0_M00_AXI is
   attribute INIT_READ of top_block_init_i2c_v1_0_0_0_SAMPA_REGREAD_v1_0_M00_AXI : entity is "2'b10";
   attribute INIT_WRITE : string;
   attribute INIT_WRITE of top_block_init_i2c_v1_0_0_0_SAMPA_REGREAD_v1_0_M00_AXI : entity is "2'b01";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_init_i2c_v1_0_0_0_SAMPA_REGREAD_v1_0_M00_AXI : entity is "SAMPA_REGREAD_v1_0_M00_AXI";
   attribute TARGET_ADDRESS : integer;
   attribute TARGET_ADDRESS of top_block_init_i2c_v1_0_0_0_SAMPA_REGREAD_v1_0_M00_AXI : entity is 1024;
   attribute TRANS_NUM_BITS : integer;
@@ -765,8 +763,6 @@ entity top_block_init_i2c_v1_0_0_0_init_i2c_v1_0 is
   attribute C_M00_AXI_TARGET_SLAVE_BASE_ADDR of top_block_init_i2c_v1_0_0_0_init_i2c_v1_0 : entity is -1073741824;
   attribute C_M00_AXI_TRANSACTIONS_NUM : integer;
   attribute C_M00_AXI_TRANSACTIONS_NUM of top_block_init_i2c_v1_0_0_0_init_i2c_v1_0 : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_block_init_i2c_v1_0_0_0_init_i2c_v1_0 : entity is "init_i2c_v1_0";
   attribute TARGET_ADDRESS : integer;
   attribute TARGET_ADDRESS of top_block_init_i2c_v1_0_0_0_init_i2c_v1_0 : entity is 1024;
   attribute TXN_TIMING : string;

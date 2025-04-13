@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Mon Mar  3 16:43:17 2025
--- Host        : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+-- Date        : Sat Apr 12 23:37:19 2025
+-- Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/top_block_idelay_top_v2_0_0_stub.vhdl
 -- Design      : top_block_idelay_top_v2_0_0
@@ -17,7 +17,7 @@ entity top_block_idelay_top_v2_0_0 is
     clk : in STD_LOGIC;
     idelay_refclk : in STD_LOGIC;
     reset : in STD_LOGIC;
-    reg_change : in STD_LOGIC;
+    init : in STD_LOGIC;
     SO0_p : in STD_LOGIC_VECTOR ( 10 downto 0 );
     SO0_n : in STD_LOGIC_VECTOR ( 10 downto 0 );
     SO1_p : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -47,7 +47,7 @@ architecture stub of top_block_idelay_top_v2_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,idelay_refclk,reset,reg_change,SO0_p[10:0],SO0_n[10:0],SO1_p[10:0],SO1_n[10:0],SO2_p[10:0],SO2_n[10:0],SO3_p[10:0],SO3_n[10:0],SO0_out[10:0],SO1_out[10:0],SO2_out[10:0],SO3_out[10:0],overall_state[3:0],S_AXI_ARADDR[3:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY,trg";
+attribute black_box_pad_pin of stub : architecture is "clk,idelay_refclk,reset,init,SO0_p[10:0],SO0_n[10:0],SO1_p[10:0],SO1_n[10:0],SO2_p[10:0],SO2_n[10:0],SO3_p[10:0],SO3_n[10:0],SO0_out[10:0],SO1_out[10:0],SO2_out[10:0],SO3_out[10:0],overall_state[3:0],S_AXI_ARADDR[3:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY,trg";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "idelay_top_v2,Vivado 2022.2";
 begin

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Apr 11 15:51:28 2025
+| Date         : Sun Apr 13 00:22:04 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_utilization -file top_block_wrapper_utilization_synth.rpt -pb top_block_wrapper_utilization_synth.pb
 | Design       : top_block_wrapper
@@ -172,16 +172,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_xpm_afifo_wrapper_1_0    |    1 |
 | top_block_xpm_afifo_wrapper_0_0    |    1 |
 | top_block_xbar_1                   |    1 |
-| top_block_vio_2_0                  |    1 |
-| top_block_vio_0_2                  |    1 |
-| top_block_vio_0_1                  |    1 |
 | top_block_vio_0_0                  |    1 |
 | top_block_util_vector_logic_3_0    |    1 |
 | top_block_util_vector_logic_2_1    |    1 |
 | top_block_util_vector_logic_2_0    |    1 |
 | top_block_util_vector_logic_1_3    |    1 |
 | top_block_util_vector_logic_1_2    |    1 |
-| top_block_util_vector_logic_1_10   |    1 |
 | top_block_util_vector_logic_1_1    |    1 |
 | top_block_util_vector_logic_1_0    |    1 |
 | top_block_util_vector_logic_0_9    |    1 |
@@ -189,15 +185,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_util_vector_logic_0_7    |    1 |
 | top_block_util_vector_logic_0_3    |    1 |
 | top_block_util_vector_logic_0_2    |    1 |
-| top_block_util_vector_logic_0_19   |    1 |
-| top_block_util_vector_logic_0_18   |    1 |
 | top_block_util_vector_logic_0_1    |    1 |
 | top_block_util_vector_logic_0_0    |    1 |
 | top_block_util_ds_buf_4_1          |    1 |
 | top_block_util_ds_buf_3_2          |    1 |
 | top_block_util_ds_buf_2_0          |    1 |
 | top_block_util_ds_buf_1_1          |    1 |
-| top_block_util_ds_buf_0_2          |    1 |
 | top_block_util_ds_buf_0_1          |    1 |
 | top_block_u_led_inst_0_0           |    1 |
 | top_block_trigger_manager_0_0      |    1 |
@@ -214,6 +207,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_gig_ethernet_pcs_pma_0_0 |    1 |
 | top_block_fakernet_top_0_0         |    1 |
 | top_block_event_builder_v0_1_0_1   |    1 |
+| top_block_delay_adjust_init_v1_0_0 |    1 |
 | top_block_data_sender_v1_0_0_0     |    1 |
 | top_block_data_receiver_v1_0_0_0   |    1 |
 | top_block_data_processor_0_0       |    1 |
@@ -234,7 +228,6 @@ Warning! LUT value is adjusted to account for LUT combining.
 | top_block_LED_REG_READ_SEPARAT_1_0 |    1 |
 | top_block_LED_REG_READ_SEPARAT_0_0 |    1 |
 | top_block_I2C_Controller_v1_0_0_1  |    1 |
-| top_block_GPIO_Controller_0_0      |    1 |
 +------------------------------------+------+
 
 

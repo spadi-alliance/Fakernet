@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Fri Apr 11 15:48:46 2025
+//Date        : Sun Apr 13 00:19:19 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target top_block_wrapper.bd
 //Design      : top_block_wrapper
@@ -20,8 +20,6 @@ module top_block_wrapper
     CLK_CFG,
     CTS,
     DIP_SW,
-    GPION,
-    GPIOP,
     HBTRG_N,
     HBTRG_P,
     HRSTB_N,
@@ -59,8 +57,6 @@ module top_block_wrapper
   output [6:0]CLK_CFG;
   output [0:0]CTS;
   input [3:0]DIP_SW;
-  inout [7:0]GPION;
-  inout [7:0]GPIOP;
   output [0:0]HBTRG_N;
   output [0:0]HBTRG_P;
   output [3:0]HRSTB_N;
@@ -99,8 +95,6 @@ module top_block_wrapper
   wire [6:0]CLK_CFG;
   wire [0:0]CTS;
   wire [3:0]DIP_SW;
-  wire [7:0]GPION;
-  wire [7:0]GPIOP;
   wire [0:0]HBTRG_N;
   wire [0:0]HBTRG_P;
   wire [3:0]HRSTB_N;
@@ -140,8 +134,6 @@ module top_block_wrapper
         .CLK_CFG(CLK_CFG),
         .CTS(CTS),
         .DIP_SW(DIP_SW),
-        .GPION(GPION),
-        .GPIOP(GPIOP),
         .HBTRG_N(HBTRG_N),
         .HBTRG_P(HBTRG_P),
         .HRSTB_N(HRSTB_N),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Apr 11 16:04:22 2025
+| Date         : Sun Apr 13 00:37:17 2025
 | Host         : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_methodology -file top_block_wrapper_methodology_drc_routed.rpt -pb top_block_wrapper_methodology_drc_routed.pb -rpx top_block_wrapper_methodology_drc_routed.rpx
 | Design       : top_block_wrapper
@@ -20,10 +20,10 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_top_block_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 50
+             Violations found: 52
 +-----------+------------------+--------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                            | Violations |
 +-----------+------------------+--------------------------------------------------------+------------+
@@ -33,8 +33,7 @@ Table of Contents
 | TIMING-7  | Critical Warning | No common node between related clocks                  | 2          |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin              | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                           | 7          |
-| TIMING-9  | Warning          | Unknown CDC Logic                                      | 1          |
-| TIMING-16 | Warning          | Large setup violation                                  | 4          |
+| TIMING-16 | Warning          | Large setup violation                                  | 7          |
 | TIMING-18 | Warning          | Missing input or output delay                          | 24         |
 | XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
 | XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
@@ -146,29 +145,39 @@ top_block_i/fnet_wrapper/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig
 top_block_i/fnet_wrapper/fakernet/gig_ethernet_pcs_pma_0/inst/core_support_i/gig_ethernet_pcs_pma_0_gt_i/inst/gen_gtwizard_gthe4_top.gig_ethernet_pcs_pma_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-TIMING-9#1 Warning
-Unknown CDC Logic  
-One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
-Related violations: <none>
-
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.061 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[0]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.017 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/rcnt_reg[4]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.068 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/rcnt_reg[5]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.063 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[2]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.071 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[4]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.559 ns between top_block_i/SO_receiver/delay_adjust_init_v1_0/inst/init_adjust_rr_reg/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/common_init_reg/D (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.105 ns between top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/I2C_Controller_v1_0_M01_AXI_inst/write_done_reg/C (clocked by clk_out1_top_block_clk_wiz_0_0) and top_block_i/SAMPA_I2C_wrapper/I2C_Controller_v1_0_0/inst/state_w_r_reg[2]/D (clocked by clk_out5_top_block_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.586 ns between top_block_i/SO_receiver/delay_adjust_init_v1_0/inst/init_adjust_rr_reg/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/FSM_onehot_controller_state_reg[0]/CE (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.586 ns between top_block_i/SO_receiver/delay_adjust_init_v1_0/inst/init_adjust_rr_reg/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/FSM_onehot_controller_state_reg[1]/CE (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.586 ns between top_block_i/SO_receiver/delay_adjust_init_v1_0/inst/init_adjust_rr_reg/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/FSM_onehot_controller_state_reg[2]/CE (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.586 ns between top_block_i/SO_receiver/delay_adjust_init_v1_0/inst/init_adjust_rr_reg/C (clocked by clk_out5_top_block_clk_wiz_0_0) and top_block_i/SO_receiver/idelay_top_v2_0/inst/controller_inst/FSM_onehot_controller_state_reg[3]/CE (clocked by clk_out1_top_block_clk_wiz_1_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

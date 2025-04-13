@@ -59,7 +59,7 @@ module top_block_idelay_top_v2_0_0 (
   clk,
   idelay_refclk,
   reset,
-  reg_change,
+  init,
   SO0_p,
   SO0_n,
   SO1_p,
@@ -90,7 +90,7 @@ input wire idelay_refclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
-input wire reg_change;
+input wire init;
 input wire [10 : 0] SO0_p;
 input wire [10 : 0] SO0_n;
 input wire [10 : 0] SO1_p;
@@ -117,7 +117,7 @@ output wire trg;
     .clk(clk),
     .idelay_refclk(idelay_refclk),
     .reset(reset),
-    .reg_change(reg_change),
+    .init(init),
     .SO0_p(SO0_p),
     .SO0_n(SO0_n),
     .SO1_p(SO1_p),

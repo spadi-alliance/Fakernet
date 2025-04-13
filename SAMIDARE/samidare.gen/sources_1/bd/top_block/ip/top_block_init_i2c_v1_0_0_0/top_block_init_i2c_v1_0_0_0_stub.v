@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Wed Apr  9 22:17:32 2025
 // Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_init_i2c_v1_0_0_0/top_block_init_i2c_v1_0_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top top_block_init_i2c_v1_0_0_0 -prefix
+//               top_block_init_i2c_v1_0_0_0_ top_block_init_i2c_v1_0_0_0_stub.v
 // Design      : top_block_init_i2c_v1_0_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcau15p-sbvb484-1-i

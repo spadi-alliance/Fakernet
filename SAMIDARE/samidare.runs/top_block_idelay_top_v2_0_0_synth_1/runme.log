@@ -11,6 +11,10 @@
 source top_block_idelay_top_v2_0_0.tcl -notrace
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Timing 38-316}  -suppress '. The existing rule will be replaced.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/delay_adjust_init_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/INIT_I2C_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_PON_2_0'.
@@ -30,24 +34,28 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p
 INFO: [Device 21-403] Loading part xcau15p-sbvb484-1-i
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1379258
+INFO: [Synth 8-7075] Helper process launched with PID 1920651
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'buf_data', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:62]
-INFO: [Synth 8-11241] undeclared symbol 'raw_data_out', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:63]
-WARNING: [Synth 8-8895] 'buf_data' is already implicitly declared on line 62 [/home/nagafusa/idelay_impl_v2_normal.v:72]
-INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:44]
-INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-11241] undeclared symbol 'all_zero0', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-11241] undeclared symbol 'all_zero1', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-11241] undeclared symbol 'all_zero2', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-11241] undeclared symbol 'all_zero3', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:198]
+WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [/home/nagafusa/idelay_impl_v2.v:82]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'state' is not allowed [/home/nagafusa/idelay_impl_v2.v:233]
+INFO: [Synth 8-11241] undeclared symbol 'buf_data', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:63]
+INFO: [Synth 8-11241] undeclared symbol 'raw_data_out', assumed default net type 'wire' [/home/nagafusa/idelay_impl_v2_normal.v:64]
+WARNING: [Synth 8-8895] 'buf_data' is already implicitly declared on line 63 [/home/nagafusa/idelay_impl_v2_normal.v:73]
+INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy0', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy1_2', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:51]
+INFO: [Synth 8-11241] undeclared symbol 'idelay_rdy3', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:58]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-11241] undeclared symbol 'all_zero0', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-11241] undeclared symbol 'all_zero1', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-11241] undeclared symbol 'all_zero2', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-11241] undeclared symbol 'init_pattern', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-11241] undeclared symbol 'all_zero3', assumed default net type 'wire' [/home/nagafusa/idelay_top_v2.v:218]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2147.406 ; gain = 363.727 ; free physical = 18322 ; free virtual = 57730
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.855; parent = 2153.348; children = 968.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.430 ; gain = 365.688 ; free physical = 47239 ; free virtual = 64342
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3121.801; parent = 2153.402; children = 968.398
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_block_idelay_top_v2_0_0' [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/synth/top_block_idelay_top_v2_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'idelay_top_v2' [/home/nagafusa/idelay_top_v2.v:3]
@@ -57,282 +65,323 @@ INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3' (0#1) [/opt/Xilinx/Viva
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
 INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71342]
 INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2_normal' (0#1) [/home/nagafusa/idelay_impl_v2_normal.v:11]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
-INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:84]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+INFO: [Synth 8-556] previous implicit net 'all_zero0' [/home/nagafusa/idelay_top_v2.v:101]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2_normal__parameterized0' [/home/nagafusa/idelay_impl_v2_normal.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2_normal__parameterized0' (0#1) [/home/nagafusa/idelay_impl_v2_normal.v:11]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:138]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:140]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:177]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:179]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2_normal__parameterized1' [/home/nagafusa/idelay_impl_v2_normal.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2_normal__parameterized1' (0#1) [/home/nagafusa/idelay_impl_v2_normal.v:11]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:216]
+INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:218]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
 INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2' [/home/nagafusa/idelay_impl_v2.v:8]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYE3__parameterized0' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3__parameterized0' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
+INFO: [Synth 8-6157] synthesizing module 'ODELAYE3' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94424]
+INFO: [Synth 8-6155] done synthesizing module 'ODELAYE3' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94424]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYE3__parameterized1' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3__parameterized1' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73531]
 INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2' (0#1) [/home/nagafusa/idelay_impl_v2.v:8]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:120]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-INFO: [Synth 8-556] previous implicit net 'all_zero1' [/home/nagafusa/idelay_top_v2.v:122]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:158]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-INFO: [Synth 8-556] previous implicit net 'all_zero2' [/home/nagafusa/idelay_top_v2.v:160]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-WARNING: [Synth 8-605] same-named implicit nets 'init_pattern' [/home/nagafusa/idelay_top_v2.v:196]
-INFO: [Synth 8-556] previous implicit net 'init_pattern' [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-605] same-named implicit nets 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-556] previous implicit net 'all_zero3' [/home/nagafusa/idelay_top_v2.v:198]
-INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
-INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:73432]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2__parameterized0' [/home/nagafusa/idelay_impl_v2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2__parameterized0' (0#1) [/home/nagafusa/idelay_impl_v2.v:8]
+INFO: [Synth 8-6157] synthesizing module 'idelay_impl_v2__parameterized1' [/home/nagafusa/idelay_impl_v2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'idelay_impl_v2__parameterized1' (0#1) [/home/nagafusa/idelay_impl_v2.v:8]
 INFO: [Synth 8-6157] synthesizing module 'idelay_controller_v2' [/home/nagafusa/idelay_controller_v2.v:10]
 INFO: [Synth 8-226] default block is never used [/home/nagafusa/idelay_controller_v2.v:119]
 INFO: [Synth 8-6155] done synthesizing module 'idelay_controller_v2' (0#1) [/home/nagafusa/idelay_controller_v2.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'idelay_top_v2' (0#1) [/home/nagafusa/idelay_top_v2.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'top_block_idelay_top_v2_0_0' (0#1) [/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0/synth/top_block_idelay_top_v2_0_0.v:53]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[0].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[1].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[2].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[3].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[4].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[5].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[6].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[7].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[8].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[9].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:73]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[0].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[1].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[2].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[3].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[4].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[5].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[6].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[7].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[8].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[9].normal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[0].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[1].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[2].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[3].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[4].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[5].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[6].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[7].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[8].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[9].normal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:149]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[0].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[1].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[2].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[3].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[4].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[5].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[6].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[7].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[8].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[9].normal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:187]
-WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:238]
-WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:239]
-WARNING: [Synth 8-6014] Unused sequential element ld_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:240]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'idelay_inst'. This will prevent further optimization [/home/nagafusa/idelay_impl_v2.v:101]
-WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/nagafusa/idelay_impl_v2.v:142]
-WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:152]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[0].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[1].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[2].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[3].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[4].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[5].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[6].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[7].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[8].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO0[9].normal_inst.u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:90]
+WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:239]
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:240]
+WARNING: [Synth 8-6014] Unused sequential element ld_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:241]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[0].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[1].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[2].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[3].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[4].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[5].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[6].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[7].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[8].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO1[9].signal_inst.u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[0].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[1].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[2].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[3].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[4].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[5].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[6].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[7].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[8].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO2[9].signal_inst.u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:168]
+WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:239]
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:240]
+WARNING: [Synth 8-6014] Unused sequential element ld_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:241]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[0].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[1].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[2].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[3].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[4].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[5].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[6].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[7].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[8].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_SO3[9].signal_inst.u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:207]
+WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:239]
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:240]
+WARNING: [Synth 8-6014] Unused sequential element ld_reg was removed.  [/home/nagafusa/idelay_impl_v2_normal.v:241]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_idelay_impl_SO0'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:72]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'idelay_slave'. This will prevent further optimization [/home/nagafusa/idelay_impl_v2.v:168]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'odelay_slave_middle'. This will prevent further optimization [/home/nagafusa/idelay_impl_v2.v:140]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'idelay_master'. This will prevent further optimization [/home/nagafusa/idelay_impl_v2.v:112]
+WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/nagafusa/idelay_impl_v2.v:241]
+WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:251]
 WARNING: [Synth 8-6014] Unused sequential element trial_counter_history_reg was removed. 
-WARNING: [Synth 8-6014] Unused sequential element inc_ce_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:263]
-WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:264]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'controller_inst'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:262]
-WARNING: [Synth 8-3848] Net gen_SO0[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO0[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:82]
-WARNING: [Synth 8-3848] Net gen_SO1[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO1[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:120]
-WARNING: [Synth 8-3848] Net gen_SO2[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO2[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:158]
-WARNING: [Synth 8-3848] Net gen_SO3[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
-WARNING: [Synth 8-3848] Net gen_SO3[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:196]
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:355]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_idelay_impl_SO1'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:113]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_idelay_impl_SO2'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:152]
+WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/nagafusa/idelay_impl_v2.v:241]
+WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:251]
+WARNING: [Synth 8-6014] Unused sequential element trial_counter_history_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:355]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_idelay_impl_SO3'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:191]
+WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/nagafusa/idelay_impl_v2.v:241]
+WARNING: [Synth 8-6014] Unused sequential element edge_idelay_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:251]
+WARNING: [Synth 8-6014] Unused sequential element trial_counter_history_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element delay_inc_reg was removed.  [/home/nagafusa/idelay_impl_v2.v:355]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'controller_inst'. This will prevent further optimization [/home/nagafusa/idelay_top_v2.v:282]
+WARNING: [Synth 8-3848] Net gen_SO0[0].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[1].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[2].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[3].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[4].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[5].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[6].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[7].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[8].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO0[9].normal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:99]
+WARNING: [Synth 8-3848] Net gen_SO1[0].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[1].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[2].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[3].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[4].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[5].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[6].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[7].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[8].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO1[9].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:138]
+WARNING: [Synth 8-3848] Net gen_SO2[0].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[1].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[2].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[3].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[4].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[5].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[6].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[7].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[8].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO2[9].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:177]
+WARNING: [Synth 8-3848] Net gen_SO3[0].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[1].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[2].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[3].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[4].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[5].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[6].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[7].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[8].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-3848] Net gen_SO3[9].signal_inst.init_pattern in module/entity idelay_top_v2 does not have driver. [/home/nagafusa/idelay_top_v2.v:216]
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal is either unconnected or has no load
 WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2227.312 ; gain = 443.633 ; free physical = 18408 ; free virtual = 57816
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3195.824; parent = 2227.316; children = 968.508
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2232.367 ; gain = 448.625 ; free physical = 47317 ; free virtual = 64421
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3200.770; parent = 2232.371; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.125 ; gain = 461.445 ; free physical = 18407 ; free virtual = 57815
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.637; parent = 2245.129; children = 968.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2247.211 ; gain = 463.469 ; free physical = 47317 ; free virtual = 64421
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3215.613; parent = 2247.215; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2245.125 ; gain = 461.445 ; free physical = 18407 ; free virtual = 57815
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3213.637; parent = 2245.129; children = 968.508
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2247.211 ; gain = 463.469 ; free physical = 47317 ; free virtual = 64421
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3215.613; parent = 2247.215; children = 968.398
 ---------------------------------------------------------------------------------
-WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst' of module 'IDELAYCTRL'.
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst0' of module 'IDELAYCTRL'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2251.062 ; gain = 0.000 ; free physical = 18403 ; free virtual = 57811
-INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst1_2' of module 'IDELAYCTRL'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst3' of module 'IDELAYCTRL'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2253.148 ; gain = 0.000 ; free physical = 47312 ; free virtual = 64417
+INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -340,18 +389,18 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.062 ; gain = 0.000 ; free physical = 18372 ; free virtual = 57780
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2377.148 ; gain = 0.000 ; free physical = 47286 ; free virtual = 64390
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 44 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 44 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2393.875 ; gain = 22.812 ; free physical = 18369 ; free virtual = 57777
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2399.961 ; gain = 22.812 ; free physical = 47283 ; free virtual = 64387
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2393.875 ; gain = 610.195 ; free physical = 18398 ; free virtual = 57806
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.371; parent = 2361.863; children = 968.508
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2399.961 ; gain = 616.219 ; free physical = 47304 ; free virtual = 64409
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.348; parent = 2367.949; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -359,29 +408,51 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-sbvb484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2393.875 ; gain = 610.195 ; free physical = 18401 ; free virtual = 57809
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.371; parent = 2361.863; children = 968.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2399.961 ; gain = 616.219 ; free physical = 47306 ; free virtual = 64411
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.348; parent = 2367.949; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2393.875 ; gain = 610.195 ; free physical = 18401 ; free virtual = 57809
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.371; parent = 2361.863; children = 968.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2399.961 ; gain = 616.219 ; free physical = 47306 ; free virtual = 64411
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.348; parent = 2367.949; children = 968.398
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'normal_state_reg' in module 'idelay_impl_v2_normal'
+INFO: [Synth 8-802] inferred FSM for state register 'normal_state_reg' in module 'idelay_impl_v2_normal__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'normal_state_reg' in module 'idelay_impl_v2_normal__parameterized1'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
 *
-            SPECIAL_IDLE |                             0001 |                             0001
-     SPECIAL_DETECT_EDGE |                             0010 |                             0010
-      SPECIAL_CHECK_EDGE |                             0100 |                             0100
-            SPECIAL_DONE |                             1000 |                             1000
+                    IDLE |                             0001 |                             0001
+             DETECT_EDGE |                             0010 |                             0010
+              CHECK_EDGE |                             0100 |                             0100
+                    DONE |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'special_state_reg' in module 'idelay_impl_v2'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'idelay_impl_v2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+             DETECT_EDGE |                             0010 |                             0010
+              CHECK_EDGE |                             0100 |                             0100
+                    DONE |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'idelay_impl_v2__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+             DETECT_EDGE |                             0010 |                             0010
+              CHECK_EDGE |                             0100 |                             0100
+                    DONE |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'idelay_impl_v2__parameterized1'
 INFO: [Synth 8-802] inferred FSM for state register 'controller_state_reg' in module 'idelay_controller_v2'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -396,6 +467,26 @@ INFO: [Synth 8-3354] encoded FSM with state register 'normal_state_reg' using en
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+             NORMAL_IDLE |                            00001 |                              000
+        NORMAL_ADJUSTING |                            00010 |                              001
+     NORMAL_WAIT_PATTERN |                            00100 |                              010
+   NORMAL_DETECT_PATTERN |                            01000 |                              011
+        NORMAL_STEP_DONE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'normal_state_reg' using encoding 'one-hot' in module 'idelay_impl_v2_normal__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             NORMAL_IDLE |                            00001 |                              000
+        NORMAL_ADJUSTING |                            00010 |                              001
+     NORMAL_WAIT_PATTERN |                            00100 |                              010
+   NORMAL_DETECT_PATTERN |                            01000 |                              011
+        NORMAL_STEP_DONE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'normal_state_reg' using encoding 'one-hot' in module 'idelay_impl_v2_normal__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
               STATE_IDLE |                             0001 |                               00
         STATE_ADJUST_CLK |                             0010 |                               01
        STATE_ADJUST_DATA |                             0100 |                               10
@@ -403,9 +494,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'normal_state_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'controller_state_reg' using encoding 'one-hot' in module 'idelay_controller_v2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2393.875 ; gain = 610.195 ; free physical = 18392 ; free virtual = 57802
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.371; parent = 2361.863; children = 968.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2399.961 ; gain = 616.219 ; free physical = 47298 ; free virtual = 64404
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.348; parent = 2367.949; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -423,7 +514,7 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 133   
 	                7 Bit    Registers := 40    
 	                5 Bit    Registers := 4     
-	                4 Bit    Registers := 88    
+	                4 Bit    Registers := 84    
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 52    
 +---Muxes : 
@@ -431,19 +522,18 @@ Detailed RTL Component Info :
 	   2 Input    9 Bit        Muxes := 40    
 	   5 Input    9 Bit        Muxes := 40    
 	   6 Input    9 Bit        Muxes := 4     
-	   2 Input    8 Bit        Muxes := 100   
+	   2 Input    8 Bit        Muxes := 96    
 	   5 Input    8 Bit        Muxes := 92    
 	   2 Input    7 Bit        Muxes := 40    
 	   5 Input    5 Bit        Muxes := 44    
 	   2 Input    5 Bit        Muxes := 16    
-	   2 Input    4 Bit        Muxes := 222   
+	   2 Input    4 Bit        Muxes := 214   
 	   5 Input    4 Bit        Muxes := 80    
 	   3 Input    4 Bit        Muxes := 4     
 	   4 Input    4 Bit        Muxes := 6     
-	   2 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 465   
-	   5 Input    1 Bit        Muxes := 264   
+	   5 Input    1 Bit        Muxes := 260   
 	   4 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -461,37 +551,43 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port init in module idelay_impl_v2_normal is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clk_edge in module idelay_impl_v2_normal is either unconnected or has no load
 WARNING: [Synth 8-7129] Port init_pattern in module idelay_impl_v2_normal is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2393.875 ; gain = 610.195 ; free physical = 18364 ; free virtual = 57778
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1515.723; parent = 1326.732; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3330.371; parent = 2361.863; children = 968.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2399.961 ; gain = 616.219 ; free physical = 47283 ; free virtual = 64394
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1585.025; parent = 1374.241; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3336.348; parent = 2367.949; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2440.617 ; gain = 656.938 ; free physical = 18142 ; free virtual = 57556
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1725.361; parent = 1536.978; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3409.129; parent = 2440.621; children = 968.508
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2446.703 ; gain = 662.961 ; free physical = 47067 ; free virtual = 64178
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1803.929; parent = 1593.940; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3415.105; parent = 2446.707; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2440.617 ; gain = 656.938 ; free physical = 18140 ; free virtual = 57554
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1727.740; parent = 1539.356; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3409.129; parent = 2440.621; children = 968.508
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2446.703 ; gain = 662.961 ; free physical = 47064 ; free virtual = 64175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1806.331; parent = 1596.343; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3415.105; parent = 2446.707; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2448.625 ; gain = 664.945 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.061; parent = 1542.677; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3417.137; parent = 2448.629; children = 968.508
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2446.703 ; gain = 662.961 ; free physical = 47063 ; free virtual = 64174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1807.858; parent = 1597.870; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3415.105; parent = 2446.707; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -508,50 +604,86 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin check_delay_inferred:in0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.326; parent = 1542.942; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.038; parent = 1598.050; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.326; parent = 1542.942; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.054; parent = 1598.065; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.357; parent = 1542.974; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.069; parent = 1598.081; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.357; parent = 1542.974; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.085; parent = 1598.097; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.357; parent = 1542.974; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.085; parent = 1598.097; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.357; parent = 1542.974; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.085; parent = 1598.097; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -568,47 +700,52 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |CARRY8     |     4|
-|2     |IDELAYCTRL |     1|
-|3     |IDELAYE3   |    44|
-|5     |LUT1       |    69|
-|6     |LUT2       |   285|
-|7     |LUT3       |   214|
-|8     |LUT4       |   514|
-|9     |LUT5       |   603|
-|10    |LUT6       |   534|
-|11    |FDCE       |  1282|
-|12    |FDPE       |   129|
-|13    |IBUFDS     |    44|
+|2     |IDELAYCTRL |     3|
+|3     |IDELAYE3   |    48|
+|6     |LUT1       |   105|
+|7     |LUT2       |   271|
+|8     |LUT3       |   188|
+|9     |LUT4       |   542|
+|10    |LUT5       |   624|
+|11    |LUT6       |   537|
+|12    |ODELAYE3   |     4|
+|13    |FDCE       |  1270|
+|14    |FDPE       |   125|
+|15    |IBUFDS     |    44|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 667.914 ; free physical = 18132 ; free virtual = 57546
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1731.357; parent = 1542.974; children = 188.990
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3420.105; parent = 2451.598; children = 968.508
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2449.672 ; gain = 665.930 ; free physical = 47062 ; free virtual = 64173
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1808.085; parent = 1598.097; children = 210.784
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3418.074; parent = 2449.676; children = 968.398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.594 ; gain = 519.164 ; free physical = 18147 ; free virtual = 57561
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2451.602 ; gain = 667.914 ; free physical = 18147 ; free virtual = 57561
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2449.672 ; gain = 513.180 ; free physical = 47074 ; free virtual = 64185
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2449.680 ; gain = 665.930 ; free physical = 47074 ; free virtual = 64185
 INFO: [Project 1-571] Translating synthesized netlist
-WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst' of module 'IDELAYCTRL'.
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst0' of module 'IDELAYCTRL'.
 Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2451.602 ; gain = 0.000 ; free physical = 18257 ; free virtual = 57671
-INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst1_2' of module 'IDELAYCTRL'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+WARNING: [Synth 37-28] Duplicate attribute 'SIM_DEVICE' found for instance 'IDELAYCTRL_inst3' of module 'IDELAYCTRL'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2449.680 ; gain = 0.000 ; free physical = 47181 ; free virtual = 64292
+INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2503.355 ; gain = 0.000 ; free physical = 18219 ; free virtual = 57633
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2500.434 ; gain = 0.000 ; free physical = 47143 ; free virtual = 64254
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 44 instances were transformed.
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 44 instances
 
-Synth Design complete, checksum: e4e52b52
+Synth Design complete, checksum: e232e027
 INFO: [Common 17-83] Releasing license: Synthesis
-180 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
+246 Infos, 168 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:01:05 . Memory (MB): peak = 2503.355 ; gain = 1208.555 ; free physical = 18432 ; free virtual = 57846
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:01:03 . Memory (MB): peak = 2500.434 ; gain = 1206.969 ; free physical = 47356 ; free virtual = 64467
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_idelay_top_v2_0_0_synth_1/top_block_idelay_top_v2_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_idelay_top_v2_0_0, cache-ID = 728f4f6f6931c22e
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_block_idelay_top_v2_0_0, cache-ID = af019be2b53edbe1
 INFO: [Coretcl 2-1174] Renamed 46 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.runs/top_block_idelay_top_v2_0_0_synth_1/top_block_idelay_top_v2_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_block_idelay_top_v2_0_0_utilization_synth.rpt -pb top_block_idelay_top_v2_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 16:43:18 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 12 23:37:19 2025...

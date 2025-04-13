@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Jan 13 19:57:26 2025
-| Host         : e16fpga01 running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Fri Apr 11 20:54:41 2025
+| Host         : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_utilization -file top_block_axis_data_fifo_0_0_utilization_synth.rpt -pb top_block_axis_data_fifo_0_0_utilization_synth.pb
 | Design       : top_block_axis_data_fifo_0_0
 | Device       : xcau15p-sbvb484-1-i
@@ -72,11 +72,10 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------------+------+-------+------------+-----------+-------+
 |     Site Type     | Used | Fixed | Prohibited | Available | Util% |
 +-------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile    |  4.5 |     0 |          0 |       144 |  3.13 |
-|   RAMB36/FIFO*    |    4 |     0 |          0 |       144 |  2.78 |
-|     RAMB36E2 only |    4 |       |            |           |       |
-|   RAMB18          |    1 |     0 |          0 |       288 |  0.35 |
-|     RAMB18E2 only |    1 |       |            |           |       |
+| Block RAM Tile    |    1 |     0 |          0 |       144 |  0.69 |
+|   RAMB36/FIFO*    |    1 |     0 |          0 |       144 |  0.69 |
+|     RAMB36E2 only |    1 |       |            |           |       |
+|   RAMB18          |    0 |     0 |          0 |       288 |  0.00 |
 +-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
@@ -163,9 +162,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | FDSE     |   11 |            Register |
 | LUT3     |    9 |                 CLB |
 | CARRY8   |    6 |                 CLB |
-| RAMB36E2 |    4 |            BLOCKRAM |
 | LUT1     |    4 |                 CLB |
-| RAMB18E2 |    1 |            BLOCKRAM |
+| RAMB36E2 |    1 |            BLOCKRAM |
 +----------+------+---------------------+
 
 

@@ -94,6 +94,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  /home/nagafusa/work/spadi/Fakernet/ip_repo/delay_adjust_init_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/INIT_I2C_1_0
   /home/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0
@@ -139,14 +140,6 @@ set_property used_in_implementation false [get_files -all /home/nagafusa/work/sp
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_0_0/top_block_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_1/top_block_vio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_2/top_block_vio_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_0_2/top_block_vio_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_vio_2_0/top_block_vio_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2_board.xdc]
-set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_0_2/top_block_util_ds_buf_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_board.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.gen/sources_1/bd/top_block/ip/top_block_clk_wiz_2_0/top_block_clk_wiz_2_0_board.xdc]
@@ -189,6 +182,9 @@ set_property used_in_implementation false [get_files /home/nagafusa/work/spadi/F
 
 read_xdc /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc
 set_property used_in_implementation false [get_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/samidare_io.xdc]
+
+read_xdc /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/Pblock.xdc
+set_property used_in_implementation false [get_files /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/constrs_1/new/Pblock.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
