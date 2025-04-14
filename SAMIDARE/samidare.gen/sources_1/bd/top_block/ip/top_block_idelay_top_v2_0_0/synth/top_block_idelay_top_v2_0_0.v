@@ -52,13 +52,16 @@
 
 (* X_CORE_INFO = "idelay_top_v2,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_idelay_top_v2_0_0,idelay_top_v2,{}" *)
-(* CORE_GENERATION_INFO = "top_block_idelay_top_v2_0_0,idelay_top_v2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=idelay_top_v2,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "top_block_idelay_top_v2_0_0,idelay_top_v2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=idelay_top_v2,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,pol0=11100000010,pol1=00100011010,pol2=01000100001,pol3=10111110101}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_idelay_top_v2_0_0 (
   clk,
   idelay_refclk,
-  reset,
+  idelay_refclk2,
+  areset,
+  areset_ref,
+  areset_ref2,
   init,
   SO0_p,
   SO0_n,
@@ -80,16 +83,18 @@ module top_block_idelay_top_v2_0_0 (
   S_AXI_RRESP,
   S_AXI_RVALID,
   S_AXI_RREADY,
-  trg
+  ready,
+  trg_en
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 320000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 input wire idelay_refclk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
-input wire reset;
+input wire idelay_refclk2;
+input wire areset;
+input wire areset_ref;
+input wire areset_ref2;
 input wire init;
 input wire [10 : 0] SO0_p;
 input wire [10 : 0] SO0_n;
@@ -111,12 +116,21 @@ output wire [31 : 0] S_AXI_RDATA;
 output wire [1 : 0] S_AXI_RRESP;
 output wire S_AXI_RVALID;
 input wire S_AXI_RREADY;
-output wire trg;
+output wire ready;
+output wire trg_en;
 
-  idelay_top_v2 inst (
+  idelay_top_v2 #(
+    .pol0(11'B11100000010),
+    .pol1(11'B00100011010),
+    .pol2(11'B01000100001),
+    .pol3(11'B10111110101)
+  ) inst (
     .clk(clk),
     .idelay_refclk(idelay_refclk),
-    .reset(reset),
+    .idelay_refclk2(idelay_refclk2),
+    .areset(areset),
+    .areset_ref(areset_ref),
+    .areset_ref2(areset_ref2),
     .init(init),
     .SO0_p(SO0_p),
     .SO0_n(SO0_n),
@@ -138,6 +152,7 @@ output wire trg;
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
     .S_AXI_RREADY(S_AXI_RREADY),
-    .trg(trg)
+    .ready(ready),
+    .trg_en(trg_en)
   );
 endmodule

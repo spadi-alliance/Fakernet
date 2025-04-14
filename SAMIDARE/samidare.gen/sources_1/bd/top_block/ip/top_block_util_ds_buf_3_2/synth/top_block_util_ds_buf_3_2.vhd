@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -195,7 +195,7 @@ ARCHITECTURE top_block_util_ds_buf_3_2_arch OF top_block_util_ds_buf_3_2 IS
   ATTRIBUTE X_INTERFACE_INFO OF OBUF_DS_N: SIGNAL IS "xilinx.com:interface:diff_clock:1.0 CLK_OUT_D3 CLK_N";
   ATTRIBUTE X_INTERFACE_PARAMETER OF OBUF_DS_P: SIGNAL IS "XIL_INTERFACENAME CLK_OUT_D3, BOARD.ASSOCIATED_PARAM DIFF_CLK_IN_BOARD_INTERFACE, CAN_DEBUG false, FREQ_HZ 100000000";
   ATTRIBUTE X_INTERFACE_INFO OF OBUF_DS_P: SIGNAL IS "xilinx.com:interface:diff_clock:1.0 CLK_OUT_D3 CLK_P";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF OBUF_IN: SIGNAL IS "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_2_0_clk_out1, INSERT_VIP 0, PORTWIDTH 4";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF OBUF_IN: SIGNAL IS "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN top_block_clk_wiz_2_0_clk_out1, INSERT_VIP 0, PORTWIDTH 16";
   ATTRIBUTE X_INTERFACE_INFO OF OBUF_IN: SIGNAL IS "xilinx.com:signal:clock:1.0 OBUF_IN CLK";
 BEGIN
   U0 : util_ds_buf

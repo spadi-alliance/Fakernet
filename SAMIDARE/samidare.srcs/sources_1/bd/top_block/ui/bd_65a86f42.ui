@@ -1,11 +1,11 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-536,-432",
+   "Default View_TopLeft":"-501,-440",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port M_AXIS_data -pg 1 -lvl 7 -x 2100 -y 480 -defaultsOSRD
+preplace port M_AXIS_data -pg 1 -lvl 7 -x 2170 -y 480 -defaultsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x -20 -y 500 -defaultsOSRD
 preplace port port-id_user_clk -pg 1 -lvl 0 -x -20 -y 270 -defaultsOSRD
 preplace port port-id_event_reset -pg 1 -lvl 0 -x -20 -y 560 -defaultsOSRD
@@ -17,50 +17,50 @@ preplace portBus SO3 -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
 preplace portBus SO2 -pg 1 -lvl 0 -x -20 -y 210 -defaultsOSRD
 preplace portBus SO0 -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
 preplace inst xpm_cdc_gen_0 -pg 1 -lvl 2 -x 500 -y 430 -defaultsOSRD
-preplace inst das_rx_0 -pg 1 -lvl 2 -x 500 -y 210 -defaultsOSRD
+preplace inst data_processor_0 -pg 1 -lvl 4 -x 1230 -y 470 -defaultsOSRD
+preplace inst async_fifos -pg 1 -lvl 3 -x 870 -y 180 -defaultsOSRD
+preplace inst data_sender_wrapper -pg 1 -lvl 6 -x 2010 -y 490 -defaultsOSRD
 preplace inst trigger_manager_0 -pg 1 -lvl 1 -x 180 -y 430 -defaultsOSRD
 preplace inst event_builder_v0_1_0 -pg 1 -lvl 5 -x 1600 -y 470 -defaultsOSRD
-preplace inst data_processor_0 -pg 1 -lvl 4 -x 1230 -y 470 -defaultsOSRD
-preplace inst async_fifos -pg 1 -lvl 3 -x 860 -y 180 -defaultsOSRD
-preplace inst data_sender_wrapper -pg 1 -lvl 6 -x 1930 -y 490 -defaultsOSRD
-preplace netloc async_fifos_dout 1 3 1 1010 160n
-preplace netloc async_fifos_dout1 1 1 3 370 340 650J 350 990
-preplace netloc clk1_1 1 0 6 0J 540 NJ 540 670 370 1020 340 1410 610 1760J
+preplace inst das_rx_0 -pg 1 -lvl 2 -x 500 -y 210 -defaultsOSRD
+preplace netloc async_fifos_dout 1 3 1 1020 160n
+preplace netloc async_fifos_dout1 1 1 3 370 350 NJ 350 1000
+preplace netloc clk1_1 1 0 6 0J 540 NJ 540 670 410 1010 600 1410 610 1770J
 preplace netloc clk_1 1 0 3 10J 530 330 80 NJ
 preplace netloc das_rx_0_bus0 1 2 1 660 140n
-preplace netloc das_rx_0_bus1 1 2 1 650 120n
+preplace netloc das_rx_0_bus1 1 2 1 640 120n
 preplace netloc das_rx_0_bus2 1 2 1 630 100n
-preplace netloc das_rx_0_bus3 1 2 1 690 160n
-preplace netloc das_rx_0_wr_en0 1 2 1 640 140n
-preplace netloc das_rx_0_wr_en1 1 2 1 680 160n
-preplace netloc das_rx_0_wr_en2 1 2 1 700 180n
+preplace netloc das_rx_0_bus3 1 2 1 700 160n
+preplace netloc das_rx_0_wr_en0 1 2 1 650 140n
+preplace netloc das_rx_0_wr_en1 1 2 1 690 160n
+preplace netloc das_rx_0_wr_en2 1 2 1 680 180n
 preplace netloc das_rx_0_wr_en3 1 2 1 N 200
 preplace netloc data_processor_0_bus_sel 1 4 1 N 450
 preplace netloc data_processor_0_busy 1 0 5 20 580 NJ 580 NJ 580 1000J 590 1390
 preplace netloc data_processor_0_data_o 1 4 1 1400 430n
 preplace netloc data_processor_0_last_data 1 4 1 N 510
-preplace netloc data_processor_0_req 1 2 3 730 360 1000J 350 1390
+preplace netloc data_processor_0_req 1 2 3 730 360 1010J 350 1390
 preplace netloc data_processor_0_samples_o 1 4 1 1420 410n
-preplace netloc data_sender_wrapper_full 1 4 3 1420 640 NJ 640 2070
+preplace netloc data_sender_wrapper_full 1 4 3 1420 650 NJ 650 2150
 preplace netloc en_1 1 0 2 NJ 150 370J
-preplace netloc event_builder_v0_1_0_busy 1 3 3 1030 630 NJ 630 1750
-preplace netloc event_builder_v0_1_0_data_ack 1 3 3 1030 330 NJ 330 1750
+preplace netloc event_builder_v0_1_0_busy 1 3 3 1050 640 NJ 640 1750
+preplace netloc event_builder_v0_1_0_data_ack 1 3 3 1040 620 NJ 620 1760
 preplace netloc event_builder_v0_1_0_data_o 1 5 1 N 460
 preplace netloc event_builder_v0_1_0_data_wr_o 1 5 1 N 480
-preplace netloc event_reset_1 1 0 4 NJ 560 NJ 560 NJ 560 1020J
+preplace netloc event_reset_1 1 0 4 NJ 560 NJ 560 NJ 560 1030J
 preplace netloc probe_in0_1 1 0 2 10 200 NJ
 preplace netloc probe_in1_1 1 0 2 NJ 180 350J
 preplace netloc probe_in2_1 1 0 2 NJ 210 340J
 preplace netloc probe_in3_1 1 0 2 NJ 240 320J
-preplace netloc s_axis_aresetn_0_1 1 0 6 NJ 590 NJ 590 720 620 NJ 620 NJ 620 1770J
+preplace netloc s_axis_aresetn_0_1 1 0 6 NJ 590 NJ 590 720 630 NJ 630 NJ 630 1780J
 preplace netloc trigger_manager_0_busy 1 1 1 N 450
-preplace netloc trigger_manager_0_samples 1 1 3 340J 530 NJ 530 N
-preplace netloc trigger_manager_0_trg 1 1 3 320J 350 630J 450 N
+preplace netloc trigger_manager_0_samples 1 1 3 350J 530 NJ 530 N
+preplace netloc trigger_manager_0_trg 1 1 3 320J 510 NJ 510 1000
 preplace netloc user_clk_1 1 0 2 0 270 360
 preplace netloc xpm_cdc_gen_0_dest_out 1 2 1 710 180n
 preplace netloc data_sender_wrapper_M_AXIS_data 1 6 1 N 480
-levelinfo -pg 1 -20 180 500 860 1230 1600 1930 2100
-pagesize -pg 1 -db -bbox -sgen -180 0 2240 660
+levelinfo -pg 1 -20 180 500 870 1230 1600 2010 2170
+pagesize -pg 1 -db -bbox -sgen -180 0 2310 740
 "
 }
 0

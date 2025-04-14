@@ -1,7 +1,20 @@
-#get_cells -hierarchical -regexp {.*u_idelay_impl_SO0.*idelay_.*}
-#create pblock pblock_SO0_delay
-#add_cells_to_pblock [get_cells -hierarchical -rgexp {.*u_idelay_impl_SO0.*idelay_.*}]
-#set_property LOC "BITSLICE_RX_TX_X0Y15" [get_cells *u_idelay_impl_SO0.*idelay_.*]
-#release_pblock [get_pblocks pblock_SO0_delay]
-#resize_pblock [get_pblocks Stage1_cfgiob] -add {IOB_X0Y52:IOB_X0Y103}
-set_property ROUTE_NOREMOVE true [get_nets GLOBAL_LOGIC0]
+#set_property UNAVAILABLE_DURING_CALIBRATION TRUE [get_ports SO0P[2]]
+#set_property UNAVAILABLE_DURING_CALIBRATION TRUE [get_ports SO0P[8]]
+
+#set_property PRESERVE true [get_nets top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO1[*].signal_inst.u_idelay_impl_SO1/buf_data]
+#set_property PRESERVE true [get_nets top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO2[*].signal_inst.u_idelay_impl_SO2/buf_data]
+#set_property PRESERVE true [get_nets top_block_i/SO_receiver/idelay_top_v2_0/inst/gen_SO3[*].signal_inst.u_idelay_impl_SO3/buf_data]
+
+
+set_property IODELAY_GROUP SO0 [get_cells -hier *IDELAYCTRL_inst0*]
+set_property IODELAY_GROUP SO1_2 [get_cells -hier *IDELAYCTRL_inst1*]
+set_property IODELAY_GROUP SO3 [get_cells -hier *IDELAYCTRL_inst3*]
+set_property IODELAY_GROUP SO0 [get_cells -hier *idelay*SO0*]
+set_property IODELAY_GROUP SO1_2 [get_cells -hier *idelay*SO1*]
+set_property IODELAY_GROUP SO1_2 [get_cells -hier *idelay*SO2*]
+set_property IODELAY_GROUP SO3 [get_cells -hier *idelay*SO3*]
+
+
+
+
+

@@ -44,20 +44,18 @@ module trigger_manager (
 //        en <= 1'b1;
         // 1ms trigger generation
 //        if (reg_trg) begin
-        if(1'b1) begin
+//        if(1'b1) begin
             if (trg_counter >= TRG_PERIOD) begin
                 trg_counter <= 17'd0;
                 trg_internal <= 1'b1;  // Generate a trigger every 1ms
             end else if(trg_counter > 0)begin
                 trg_counter <= trg_counter + 1;
                 trg_internal <= 1'b0;
-            end else if(SO0[9:0]>10'd150)begin
-                trg_counter <= 1'b1;
-            end
-        end else begin
-            trg_counter <= 17'd0;
-            trg_internal <= 1'b0;
-        end
+            end 
+//        end else begin
+//            trg_counter <= 17'd0;
+//            trg_internal <= 1'b0;
+//        end
         // Generate trigger signal
         if (trg_internal || external_trg) begin
             trg <= 1'b1;  // Trigger signal active

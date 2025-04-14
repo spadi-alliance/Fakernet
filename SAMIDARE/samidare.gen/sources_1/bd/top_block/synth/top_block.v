@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sun Apr 13 00:19:18 2025
+//Date        : Mon Apr 14 23:00:59 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -22,7 +22,6 @@ module Config_wrapper_imp_O559AZ
     POL,
     SAMPA_EN_A,
     clk_in1,
-    clk_out1,
     m00_axi_aclk,
     m00_axi_araddr,
     m00_axi_aresetn,
@@ -56,7 +55,6 @@ module Config_wrapper_imp_O559AZ
   output [0:0]POL;
   output SAMPA_EN_A;
   input clk_in1;
-  output clk_out1;
   input m00_axi_aclk;
   output [31:0]m00_axi_araddr;
   input m00_axi_aresetn;
@@ -104,7 +102,6 @@ module Config_wrapper_imp_O559AZ
   wire [0:0]Const_wrapper_HBTRG_P;
   wire [3:0]Const_wrapper_HRSTB_N;
   wire [3:0]Const_wrapper_HRSTB_P;
-  wire Const_wrapper_clk_out1;
   wire SAMPA_PON_v1_0_0_cg0;
   wire SAMPA_PON_v1_0_0_cg1;
   wire SAMPA_PON_v1_0_0_cts;
@@ -134,7 +131,6 @@ module Config_wrapper_imp_O559AZ
   assign POL[0] = SAMPA_PON_v1_0_0_pol;
   assign SAMPA_EN_A = SAMPA_PON_v1_0_0_sampa_power_on;
   assign clk_in1_1 = clk_in1;
-  assign clk_out1 = Const_wrapper_clk_out1;
   assign m00_axi_aclk_1 = m00_axi_aclk;
   assign m00_axi_araddr[31:0] = Conn1_ARADDR;
   assign m00_axi_aresetn_1 = m00_axi_aresetn;
@@ -155,8 +151,7 @@ module Config_wrapper_imp_O559AZ
         .HBTRG_P(Const_wrapper_HBTRG_P),
         .HRSTB_N(Const_wrapper_HRSTB_N),
         .HRSTB_P(Const_wrapper_HRSTB_P),
-        .clk_in1(clk_in1_1),
-        .clk_out1(Const_wrapper_clk_out1));
+        .clk_in1(clk_in1_1));
   top_block_SAMPA_PON_v1_0_0_0 SAMPA_PON_v1_0_0
        (.cg0(SAMPA_PON_v1_0_0_cg0),
         .cg1(SAMPA_PON_v1_0_0_cg1),
@@ -194,8 +189,7 @@ module Const_wrapper_imp_V3PZLN
     HBTRG_P,
     HRSTB_N,
     HRSTB_P,
-    clk_in1,
-    clk_out1);
+    clk_in1);
   output [0:0]BX_SYNC_TRG_N;
   output [0:0]BX_SYNC_TRG_P;
   output [0:0]HBTRG_N;
@@ -203,7 +197,6 @@ module Const_wrapper_imp_V3PZLN
   output [3:0]HRSTB_N;
   output [3:0]HRSTB_P;
   input clk_in1;
-  output clk_out1;
 
   wire [3:0]HRSTB_wrapper_HRSTB_N;
   wire [3:0]HRSTB_wrapper_HRSTB_P;
@@ -222,7 +215,6 @@ module Const_wrapper_imp_V3PZLN
   assign HRSTB_N[3:0] = HRSTB_wrapper_HRSTB_N;
   assign HRSTB_P[3:0] = HRSTB_wrapper_HRSTB_P;
   assign clk_in1_1 = clk_in1;
-  assign clk_out1 = clk_wiz_2_clk_out1;
   HRSTB_wrapper_imp_YQOCHV HRSTB_wrapper
        (.HRSTB_N(HRSTB_wrapper_HRSTB_N),
         .HRSTB_P(HRSTB_wrapper_HRSTB_P),
@@ -622,8 +614,12 @@ module SO_receiver_imp_J5HCEK
     SO2P,
     SO3N,
     SO3P,
+    areset,
+    areset_ref,
+    areset_ref2,
     clk,
     idelay_refclk,
+    idelay_refclk2,
     m00_axi_aclk,
     m00_axi_araddr,
     m00_axi_aresetn,
@@ -645,7 +641,7 @@ module SO_receiver_imp_J5HCEK
     m00_axi_wready,
     m00_axi_wstrb,
     m00_axi_wvalid,
-    reset,
+    ready,
     trg);
   output [10:0]IBUF_OUT0;
   output [10:0]IBUF_OUT1;
@@ -659,8 +655,12 @@ module SO_receiver_imp_J5HCEK
   input [10:0]SO2P;
   input [10:0]SO3N;
   input [10:0]SO3P;
+  input areset;
+  input areset_ref;
+  input [0:0]areset_ref2;
   input clk;
   input idelay_refclk;
+  input idelay_refclk2;
   input m00_axi_aclk;
   output [31:0]m00_axi_araddr;
   input m00_axi_aresetn;
@@ -682,7 +682,7 @@ module SO_receiver_imp_J5HCEK
   input [0:0]m00_axi_wready;
   output [3:0]m00_axi_wstrb;
   output [0:0]m00_axi_wvalid;
-  input reset;
+  output ready;
   output trg;
 
   wire [10:0]SO0N_1;
@@ -693,6 +693,9 @@ module SO_receiver_imp_J5HCEK
   wire [10:0]SO2P_1;
   wire [10:0]SO3N_1;
   wire [10:0]SO3P_1;
+  wire areset_1;
+  wire [0:0]areset_ref2_1;
+  wire areset_ref_1;
   wire clk_1;
   wire delay_adjust_init_v1_0_init_adjust;
   wire [31:0]delay_adjust_init_v1_0_m00_axi_ARADDR;
@@ -714,11 +717,13 @@ module SO_receiver_imp_J5HCEK
   wire [0:0]delay_adjust_init_v1_0_m00_axi_WREADY;
   wire [3:0]delay_adjust_init_v1_0_m00_axi_WSTRB;
   wire delay_adjust_init_v1_0_m00_axi_WVALID;
+  wire idelay_refclk2_1;
   wire idelay_refclk_1;
   wire [10:0]idelay_top_v2_0_SO0_out;
   wire [10:0]idelay_top_v2_0_SO1_out;
   wire [10:0]idelay_top_v2_0_SO2_out;
   wire [10:0]idelay_top_v2_0_SO3_out;
+  wire idelay_top_v2_0_ready;
   wire idelay_top_v2_0_trg;
   wire m00_axi_aclk_1;
   wire m00_axi_aresetn_1;
@@ -735,6 +740,9 @@ module SO_receiver_imp_J5HCEK
   assign SO2P_1 = SO2P[10:0];
   assign SO3N_1 = SO3N[10:0];
   assign SO3P_1 = SO3P[10:0];
+  assign areset_1 = areset;
+  assign areset_ref2_1 = areset_ref2[0];
+  assign areset_ref_1 = areset_ref;
   assign clk_1 = clk;
   assign delay_adjust_init_v1_0_m00_axi_ARREADY = m00_axi_arready[0];
   assign delay_adjust_init_v1_0_m00_axi_AWREADY = m00_axi_awready[0];
@@ -744,6 +752,7 @@ module SO_receiver_imp_J5HCEK
   assign delay_adjust_init_v1_0_m00_axi_RRESP = m00_axi_rresp[1:0];
   assign delay_adjust_init_v1_0_m00_axi_RVALID = m00_axi_rvalid[0];
   assign delay_adjust_init_v1_0_m00_axi_WREADY = m00_axi_wready[0];
+  assign idelay_refclk2_1 = idelay_refclk2;
   assign idelay_refclk_1 = idelay_refclk;
   assign m00_axi_aclk_1 = m00_axi_aclk;
   assign m00_axi_araddr[31:0] = delay_adjust_init_v1_0_m00_axi_ARADDR;
@@ -758,6 +767,7 @@ module SO_receiver_imp_J5HCEK
   assign m00_axi_wdata[31:0] = delay_adjust_init_v1_0_m00_axi_WDATA;
   assign m00_axi_wstrb[3:0] = delay_adjust_init_v1_0_m00_axi_WSTRB;
   assign m00_axi_wvalid[0] = delay_adjust_init_v1_0_m00_axi_WVALID;
+  assign ready = idelay_top_v2_0_ready;
   assign trg = idelay_top_v2_0_trg;
   top_block_delay_adjust_init_v1_0_0 delay_adjust_init_v1_0
        (.init_adjust(delay_adjust_init_v1_0_init_adjust),
@@ -799,11 +809,15 @@ module SO_receiver_imp_J5HCEK
         .S_AXI_ARADDR({1'b0,1'b0,1'b0,1'b0}),
         .S_AXI_ARVALID(1'b0),
         .S_AXI_RREADY(1'b0),
+        .areset(areset_1),
+        .areset_ref(areset_ref_1),
+        .areset_ref2(areset_ref2_1),
         .clk(clk_1),
         .idelay_refclk(idelay_refclk_1),
+        .idelay_refclk2(idelay_refclk2_1),
         .init(delay_adjust_init_v1_0_init_adjust),
-        .reset(m00_axi_aresetn_1),
-        .trg(idelay_top_v2_0_trg));
+        .ready(idelay_top_v2_0_ready),
+        .trg_en(idelay_top_v2_0_trg));
 endmodule
 
 module appUnit_imp_1BHH9Z2
@@ -1152,7 +1166,8 @@ module clock_wrapper_imp_153XBA
     clk_out3,
     clk_out4,
     clk_out5,
-    clk_out6);
+    clk_out6,
+    clk_out7);
   input BASECLK;
   output clk_out1;
   output clk_out2;
@@ -1160,6 +1175,7 @@ module clock_wrapper_imp_153XBA
   output clk_out4;
   output clk_out5;
   output clk_out6;
+  output clk_out7;
 
   wire BASECLK_1;
   wire clk_wiz_0_clk_out1;
@@ -1168,14 +1184,16 @@ module clock_wrapper_imp_153XBA
   wire clk_wiz_0_clk_out4;
   wire clk_wiz_0_clk_out5;
   wire clk_wiz_1_clk_out1;
+  wire clk_wiz_1_clk_out2;
 
   assign BASECLK_1 = BASECLK;
   assign clk_out1 = clk_wiz_0_clk_out1;
   assign clk_out2 = clk_wiz_1_clk_out1;
-  assign clk_out3 = clk_wiz_0_clk_out3;
-  assign clk_out4 = clk_wiz_0_clk_out4;
-  assign clk_out5 = clk_wiz_0_clk_out5;
-  assign clk_out6 = clk_wiz_0_clk_out2;
+  assign clk_out3 = clk_wiz_0_clk_out2;
+  assign clk_out4 = clk_wiz_0_clk_out3;
+  assign clk_out5 = clk_wiz_0_clk_out4;
+  assign clk_out6 = clk_wiz_1_clk_out2;
+  assign clk_out7 = clk_wiz_0_clk_out5;
   top_block_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(BASECLK_1),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -1185,7 +1203,8 @@ module clock_wrapper_imp_153XBA
         .clk_out5(clk_wiz_0_clk_out5));
   top_block_clk_wiz_1_0 clk_wiz_1
        (.clk_in1(clk_wiz_0_clk_out1),
-        .clk_out1(clk_wiz_1_clk_out1));
+        .clk_out1(clk_wiz_1_clk_out1),
+        .clk_out2(clk_wiz_1_clk_out2));
 endmodule
 
 module data_sender_wrapper_imp_165VMFZ
@@ -3377,35 +3396,56 @@ endmodule
 
 module reset_imp_UQ2QSL
    (RST,
-    clk,
+    dest_clk,
+    dest_clk1,
     ext_reset_in,
     peripheral_aresetn,
     peripheral_aresetn1,
+    peripheral_aresetn2,
+    peripheral_aresetn3,
+    peripheral_aresetn4,
     probe_out0,
     slowest_sync_clk,
     slowest_sync_clk1);
   input RST;
-  input clk;
+  input dest_clk;
+  input dest_clk1;
   input ext_reset_in;
   output [0:0]peripheral_aresetn;
   output [0:0]peripheral_aresetn1;
+  output [0:0]peripheral_aresetn2;
+  output [0:0]peripheral_aresetn3;
+  output [0:0]peripheral_aresetn4;
   output [0:0]probe_out0;
   input slowest_sync_clk;
   input slowest_sync_clk1;
 
   wire RST_1;
+  wire dest_clk1_1;
+  wire dest_clk_1;
   wire ext_reset_in_1;
+  wire [0:0]rst_clk_wiz_0_125M1_peripheral_aresetn;
   wire [0:0]rst_clk_wiz_0_125M_peripheral_aresetn;
+  wire [0:0]rst_clk_wiz_0_300M2_peripheral_aresetn;
+  wire [0:0]rst_clk_wiz_1_320M1_peripheral_aresetn;
   wire [0:0]rst_clk_wiz_1_320M_peripheral_aresetn;
   wire slowest_sync_clk1_1;
   wire slowest_sync_clk_1;
   wire [0:0]vio_0_probe_out0;
   wire xpm_cdc_gen_0_dest_arst;
+  wire xpm_cdc_gen_1_dest_arst;
+  wire xpm_cdc_gen_2_dest_arst;
+  wire xpm_cdc_gen_3_dest_arst;
 
   assign RST_1 = RST;
+  assign dest_clk1_1 = dest_clk1;
+  assign dest_clk_1 = dest_clk;
   assign ext_reset_in_1 = ext_reset_in;
   assign peripheral_aresetn[0] = rst_clk_wiz_0_125M_peripheral_aresetn;
   assign peripheral_aresetn1[0] = rst_clk_wiz_1_320M_peripheral_aresetn;
+  assign peripheral_aresetn2[0] = rst_clk_wiz_1_320M1_peripheral_aresetn;
+  assign peripheral_aresetn3[0] = rst_clk_wiz_0_125M1_peripheral_aresetn;
+  assign peripheral_aresetn4[0] = rst_clk_wiz_0_300M2_peripheral_aresetn;
   assign probe_out0[0] = vio_0_probe_out0;
   assign slowest_sync_clk1_1 = slowest_sync_clk1;
   assign slowest_sync_clk_1 = slowest_sync_clk;
@@ -3416,6 +3456,20 @@ module reset_imp_UQ2QSL
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
         .slowest_sync_clk(slowest_sync_clk_1));
+  top_block_rst_clk_wiz_0_125M_1 rst_clk_wiz_0_300M1
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(xpm_cdc_gen_2_dest_arst),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_clk_wiz_0_125M1_peripheral_aresetn),
+        .slowest_sync_clk(dest_clk_1));
+  top_block_rst_clk_wiz_0_300M1_0 rst_clk_wiz_0_300M2
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(xpm_cdc_gen_3_dest_arst),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_clk_wiz_0_300M2_peripheral_aresetn),
+        .slowest_sync_clk(dest_clk1_1));
   top_block_rst_clk_wiz_1_320M_0 rst_clk_wiz_1_320M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -3423,12 +3477,31 @@ module reset_imp_UQ2QSL
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_clk_wiz_1_320M_peripheral_aresetn),
         .slowest_sync_clk(slowest_sync_clk1_1));
+  top_block_rst_clk_wiz_1_320M_1 rst_clk_wiz_1_320M1
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(xpm_cdc_gen_1_dest_arst),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_clk_wiz_1_320M1_peripheral_aresetn),
+        .slowest_sync_clk(slowest_sync_clk1_1));
   top_block_vio_0_0 vio_0
        (.clk(slowest_sync_clk_1),
         .probe_out0(vio_0_probe_out0));
   top_block_xpm_cdc_gen_0_0 xpm_cdc_gen_0
        (.dest_arst(xpm_cdc_gen_0_dest_arst),
         .dest_clk(slowest_sync_clk_1),
+        .src_arst(RST_1));
+  top_block_xpm_cdc_gen_0_2 xpm_cdc_gen_1
+       (.dest_arst(xpm_cdc_gen_1_dest_arst),
+        .dest_clk(slowest_sync_clk1_1),
+        .src_arst(RST_1));
+  top_block_xpm_cdc_gen_0_3 xpm_cdc_gen_2
+       (.dest_arst(xpm_cdc_gen_2_dest_arst),
+        .dest_clk(dest_clk_1),
+        .src_arst(RST_1));
+  top_block_xpm_cdc_gen_2_0 xpm_cdc_gen_3
+       (.dest_arst(xpm_cdc_gen_3_dest_arst),
+        .dest_clk(dest_clk1_1),
         .src_arst(RST_1));
 endmodule
 
@@ -4454,10 +4527,7 @@ module s06_couplers_imp_MYTDQK
   assign s06_couplers_to_s06_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-/* clk_out1: 40MHz
-
-
-POL 1:Neg, 0:Pos
+/* POL 1:Neg, 0:Pos
 
 Gain: Shaping Time: (CTS,CG0,CG1)
 30mV/fC : 160ns : (low,high,high)
@@ -4466,8 +4536,16 @@ Gain: Shaping Time: (CTS,CG0,CG1)
 
 other modes are unsuppprted
 some SO pins have inverse POL.
-proper not gate is added */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=109,numReposBlks=79,numNonXlnxBlks=0,numHierBlks=30,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=29,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"da_axi4_cnt\"\"\"\"=1,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+proper not gate is added
+clkwiz0: 
+1: 40MHz
+2: 300MHz
+3: 25MHz
+4: 50MHz
+5: 125MHz
+clkwiz1:
+1: 320MHz */
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=115,numReposBlks=85,numNonXlnxBlks=0,numHierBlks=30,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=29,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -4698,16 +4776,18 @@ module top_block
   wire appUnit_event_data_TREADY;
   wire [3:0]appUnit_event_data_TSTRB;
   wire appUnit_event_data_TVALID;
+  wire [0:0]areset_1;
   wire clk25_in_0_1;
-  wire clk_1;
   wire clk_in_0_1;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_1_clk_out1;
+  wire clock_wrapper_clk_out6;
+  wire dest_clk1_1;
+  wire en_1;
   wire event_reset_1;
   wire fnet_txn_1;
   wire fnet_wrapper_SFP0TXN;
   wire fnet_wrapper_SFP0TXP;
-  wire idelay_refclk_1;
   wire independent_clock_0_1;
   wire [3:0]led_module_LED;
   wire [31:0]led_module_m00_axi1_ARADDR;
@@ -4748,6 +4828,8 @@ module top_block
   wire [0:0]led_module_m00_axi_WREADY;
   wire [3:0]led_module_m00_axi_WSTRB;
   wire [0:0]led_module_m00_axi_WVALID;
+  wire [0:0]reset_peripheral_aresetn3;
+  wire [0:0]reset_peripheral_aresetn4;
   wire [0:0]rst_clk_wiz_0_125M_peripheral_aresetn;
   wire [3:0]trg_en_TRG_N;
   wire [3:0]trg_en_TRG_P;
@@ -4821,7 +4903,6 @@ module top_block
         .POL(Config_wrapper_POL),
         .SAMPA_EN_A(SAMPA_PON_v1_0_0_sampa_power_on),
         .clk_in1(clk_wiz_0_clk_out1),
-        .clk_out1(clk_1),
         .m00_axi_aclk(clk_in_0_1),
         .m00_axi_araddr(S03_AXI_1_ARADDR),
         .m00_axi_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
@@ -4904,8 +4985,12 @@ module top_block
         .SO2P(SO2P_1),
         .SO3N(SO3N_1),
         .SO3P(SO3P_1),
+        .areset(areset_1),
+        .areset_ref(reset_peripheral_aresetn3),
+        .areset_ref2(reset_peripheral_aresetn4),
         .clk(clk_wiz_1_clk_out1),
-        .idelay_refclk(idelay_refclk_1),
+        .idelay_refclk(clock_wrapper_clk_out6),
+        .idelay_refclk2(dest_clk1_1),
         .m00_axi_aclk(clk_in_0_1),
         .m00_axi_araddr(SO_receiver_m00_axi_ARADDR),
         .m00_axi_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
@@ -4927,7 +5012,7 @@ module top_block
         .m00_axi_wready(SO_receiver_m00_axi_WREADY),
         .m00_axi_wstrb(SO_receiver_m00_axi_WSTRB),
         .m00_axi_wvalid(SO_receiver_m00_axi_WVALID),
-        .reset(1'b0),
+        .ready(en_1),
         .trg(SO_receiver_trg));
   appUnit_imp_1BHH9Z2 appUnit
        (.M_AXIS_data_tdata(appUnit_event_data_TDATA),
@@ -4941,7 +5026,7 @@ module top_block
         .SO3(SO3_1),
         .clk(clk_wiz_1_clk_out1),
         .clk125MHz(clk_in_0_1),
-        .en(1'b0),
+        .en(en_1),
         .event_reset(event_reset_1),
         .s_axis_aresetn_0(rst_clk_wiz_0_125M_peripheral_aresetn),
         .user_clk(clk_wiz_0_clk_out1));
@@ -4952,7 +5037,8 @@ module top_block
         .clk_out3(clk25_in_0_1),
         .clk_out4(independent_clock_0_1),
         .clk_out5(clk_in_0_1),
-        .clk_out6(idelay_refclk_1));
+        .clk_out6(clock_wrapper_clk_out6),
+        .clk_out7(dest_clk1_1));
   fnet_wrapper_imp_RWCR3V fnet_wrapper
        (.SFP0RXN(SFP0RXN_1),
         .SFP0RXP(SFP0RXP_1),
@@ -5235,9 +5321,13 @@ module top_block
         .s_axi_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn));
   reset_imp_UQ2QSL reset
        (.RST(PUSH_SW_1),
-        .clk(clk_1),
+        .dest_clk(clock_wrapper_clk_out6),
+        .dest_clk1(dest_clk1_1),
         .ext_reset_in(event_reset_1),
         .peripheral_aresetn(rst_clk_wiz_0_125M_peripheral_aresetn),
+        .peripheral_aresetn2(areset_1),
+        .peripheral_aresetn3(reset_peripheral_aresetn3),
+        .peripheral_aresetn4(reset_peripheral_aresetn4),
         .probe_out0(vio_0_probe_out0),
         .slowest_sync_clk(clk_in_0_1),
         .slowest_sync_clk1(clk_wiz_1_clk_out1));

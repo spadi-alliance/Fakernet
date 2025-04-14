@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 13 00:19:20 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 14 23:01:02 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="kintexuplus" DEVICE="xcau15p" NAME="top_block" PACKAGE="sbvb484" SPEEDGRADE="-1"/>
 
@@ -122,6 +122,9 @@
     <PORT DIR="I" NAME="PUSH_SW" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_PUSH_SW">
       <CONNECTIONS>
         <CONNECTION INSTANCE="reset_xpm_cdc_gen_0" PORT="src_arst"/>
+        <CONNECTION INSTANCE="reset_xpm_cdc_gen_1" PORT="src_arst"/>
+        <CONNECTION INSTANCE="reset_xpm_cdc_gen_2" PORT="src_arst"/>
+        <CONNECTION INSTANCE="reset_xpm_cdc_gen_3" PORT="src_arst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="S_I2C_SDA" SIGIS="undef" SIGNAME="External_Ports_S_I2C_SDA">
@@ -1180,9 +1183,9 @@
         <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -1381,9 +1384,9 @@
         <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -1957,9 +1960,9 @@
         <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -2418,9 +2421,9 @@
         <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -2590,6 +2593,10 @@
     <MODULE COREREVISION="1" FULLNAME="/SO_receiver/idelay_top_v2_0" HWVERSION="1.0" INSTANCE="SO_receiver_idelay_top_v2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="idelay_top_v2" VLNV="xilinx.com:module_ref:idelay_top_v2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="pol0" VALUE="&quot;11100000010&quot;"/>
+        <PARAMETER NAME="pol1" VALUE="&quot;00100011010&quot;"/>
+        <PARAMETER NAME="pol2" VALUE="&quot;01000100001&quot;"/>
+        <PARAMETER NAME="pol3" VALUE="&quot;10111110101&quot;"/>
         <PARAMETER NAME="Component_Name" VALUE="top_block_idelay_top_v2_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -2599,14 +2606,29 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="idelay_refclk" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out2">
+        <PORT DIR="I" NAME="idelay_refclk" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_1_clk_out2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out2"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
+        <PORT DIR="I" NAME="idelay_refclk2" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="reset_rst_clk_wiz_1_320M1_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_1_320M1" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset_ref" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="reset_rst_clk_wiz_0_300M1_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M1" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset_ref2" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="reset_rst_clk_wiz_0_300M2_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M2" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="init" SIGIS="undef" SIGNAME="SO_receiver_delay_adjust_init_v1_0_init_adjust">
@@ -2656,8 +2678,8 @@
         </PORT>
         <PORT DIR="O" LEFT="10" NAME="SO0_out" RIGHT="0" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_SO0_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="SO0"/>
             <CONNECTION INSTANCE="appUnit_trigger_manager_0" PORT="SO0"/>
+            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="SO0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="10" NAME="SO1_out" RIGHT="0" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_SO1_out">
@@ -2683,7 +2705,12 @@
         <PORT DIR="O" LEFT="1" NAME="S_AXI_RRESP" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="S_AXI_RVALID" SIGIS="undef"/>
         <PORT DIR="I" NAME="S_AXI_RREADY" SIGIS="undef"/>
-        <PORT DIR="O" NAME="trg" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_trg">
+        <PORT DIR="O" NAME="ready" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trg_en" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_trg_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="trg_en_TRG_MODULE_0" PORT="init_trg"/>
           </CONNECTIONS>
@@ -3404,9 +3431,9 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -3461,9 +3488,9 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -3518,9 +3545,9 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -3575,9 +3602,9 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -3638,7 +3665,11 @@
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="en" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="ready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="10" NAME="SO0" RIGHT="0" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_SO0_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="SO0_out"/>
@@ -3714,9 +3745,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="event_reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="fnet_wrapper_fakernet_fakernet_top_0_user_data_reset">
@@ -3840,9 +3871,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="appUnit_data_sender_wrapper_axis_data_fifo_0_s_axis_tvalid">
@@ -3968,9 +3999,9 @@
             <CONNECTION INSTANCE="appUnit_event_builder_v0_1_0" PORT="full_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -4036,9 +4067,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
@@ -4264,17 +4295,17 @@
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1__40.00000______0.000______50.0______139.963____137.290"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2__300.00000______0.000______50.0______106.014____137.290"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="clk_out3__25.00000______0.000______50.0______149.805____137.290"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="clk_out4__50.00000______0.000______50.0______135.568____137.290"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="clk_out5__125.00000______0.000______50.0______119.250____137.290"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2__25.00000______0.000______50.0______149.805____137.290"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="clk_out3__50.00000______0.000______50.0______135.568____137.290"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="clk_out4__125.00000______0.000______50.0______119.250____137.290"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="clk_out5__300.00000______0.000______50.0______106.014____137.290"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
         <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="40.000"/>
-        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="300"/>
-        <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="25.000"/>
-        <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="50.000"/>
-        <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="125.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="50"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="125"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="300"/>
         <PARAMETER NAME="C_CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.0"/>
         <PARAMETER NAME="C_CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
@@ -4292,10 +4323,10 @@
         <PARAMETER NAME="C_CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="40.00000"/>
-        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="300.00000"/>
-        <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="25.00000"/>
-        <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="50.00000"/>
-        <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="125.00000"/>
+        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="25.00000"/>
+        <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="50.00000"/>
+        <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="125.00000"/>
+        <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="300.00000"/>
         <PARAMETER NAME="C_CLKOUT6_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT7_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT1_PHASE" VALUE="0.000"/>
@@ -4334,10 +4365,10 @@
         <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="37.500"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="5"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="60"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="30"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="12"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="60"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="30"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="12"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="5"/>
         <PARAMETER NAME="C_MMCM_CLKOUT5_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT6_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
@@ -4465,10 +4496,10 @@
         <PARAMETER NAME="C_FILTER_1" VALUE="0000"/>
         <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
         <PARAMETER NAME="C_DIVIDE1_AUTO" VALUE="1"/>
-        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="0.13333333333333333"/>
-        <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="1.6"/>
-        <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.8"/>
-        <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.32"/>
+        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="1.6"/>
+        <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="0.8"/>
+        <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.32"/>
+        <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.13333333333333333"/>
         <PARAMETER NAME="C_DIVIDE6_AUTO" VALUE="0.02666666666666667"/>
         <PARAMETER NAME="C_DIVIDE7_AUTO" VALUE="0.02666666666666667"/>
         <PARAMETER NAME="C_PLLBUFGCEDIV" VALUE="false"/>
@@ -4492,10 +4523,10 @@
         <PARAMETER NAME="C_CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT0_ACTUAL_FREQ" VALUE="40.00000"/>
-        <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="300.00000"/>
-        <PARAMETER NAME="C_CLKOUT2_ACTUAL_FREQ" VALUE="25.00000"/>
-        <PARAMETER NAME="C_CLKOUT3_ACTUAL_FREQ" VALUE="50.00000"/>
-        <PARAMETER NAME="C_CLKOUT4_ACTUAL_FREQ" VALUE="125.00000"/>
+        <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="25.00000"/>
+        <PARAMETER NAME="C_CLKOUT2_ACTUAL_FREQ" VALUE="50.00000"/>
+        <PARAMETER NAME="C_CLKOUT3_ACTUAL_FREQ" VALUE="125.00000"/>
+        <PARAMETER NAME="C_CLKOUT4_ACTUAL_FREQ" VALUE="300.00000"/>
         <PARAMETER NAME="C_CLKOUT5_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT6_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_M_MAX" VALUE="128.000"/>
@@ -4586,16 +4617,16 @@
         <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="40.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="300"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="25"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="25.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="50"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT4_REQUESTED_OUT_FREQ" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_OUT_FREQ" VALUE="125"/>
         <PARAMETER NAME="CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT4_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT5_REQUESTED_OUT_FREQ" VALUE="125.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_OUT_FREQ" VALUE="300"/>
         <PARAMETER NAME="CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.0"/>
@@ -4670,19 +4701,19 @@
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="5"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="60"/>
         <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT2_DIVIDE" VALUE="60"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_DIVIDE" VALUE="30"/>
         <PARAMETER NAME="MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT2_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT3_DIVIDE" VALUE="30"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_DIVIDE" VALUE="12"/>
         <PARAMETER NAME="MMCM_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT3_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT4_DIVIDE" VALUE="12"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_DIVIDE" VALUE="5"/>
         <PARAMETER NAME="MMCM_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT4_USE_FINE_PS" VALUE="false"/>
@@ -4746,13 +4777,13 @@
         <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
         <PARAMETER NAME="CLKOUT1_JITTER" VALUE="139.963"/>
         <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="137.290"/>
-        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="106.014"/>
+        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="149.805"/>
         <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="137.290"/>
-        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="149.805"/>
+        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="135.568"/>
         <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="137.290"/>
-        <PARAMETER NAME="CLKOUT4_JITTER" VALUE="135.568"/>
+        <PARAMETER NAME="CLKOUT4_JITTER" VALUE="119.250"/>
         <PARAMETER NAME="CLKOUT4_PHASE_ERROR" VALUE="137.290"/>
-        <PARAMETER NAME="CLKOUT5_JITTER" VALUE="119.250"/>
+        <PARAMETER NAME="CLKOUT5_JITTER" VALUE="106.014"/>
         <PARAMETER NAME="CLKOUT5_PHASE_ERROR" VALUE="137.290"/>
         <PARAMETER NAME="CLKOUT6_JITTER" VALUE="180.876"/>
         <PARAMETER NAME="CLKOUT6_PHASE_ERROR" VALUE="191.950"/>
@@ -4775,28 +4806,23 @@
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_axi_iic_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_I2C_Controller_v1_0_0" PORT="m01_axi_aclk"/>
             <CONNECTION INSTANCE="appUnit_xpm_cdc_gen_0" PORT="src_clk"/>
-            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="user_clk"/>
             <CONNECTION INSTANCE="appUnit_trigger_manager_0" PORT="clk"/>
+            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="user_clk"/>
             <CONNECTION INSTANCE="Config_wrapper_Const_wrapper_clk_wiz_2" PORT="clk_in1"/>
             <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_in1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="300000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="idelay_refclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out3">
+        <PORT CLKFREQUENCY="25000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_fakernet_top_0" PORT="clk25_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out4" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
+        <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_gig_ethernet_pcs_pma_0" PORT="independent_clock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="O" NAME="clk_out5" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="O" NAME="clk_out4" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
             <CONNECTION INSTANCE="led_module_LED_REG_READ_SEPARAT_0" PORT="m00_axi_aclk"/>
             <CONNECTION INSTANCE="led_module_LED_REG_READ_SEPARAT_1" PORT="m00_axi_aclk"/>
@@ -4808,21 +4834,21 @@
             <CONNECTION INSTANCE="reg_bram_axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_I2C_Controller_v1_0_0" PORT="m00_axi_aclk"/>
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_init_i2c_v1_0_0" PORT="m00_axi_aclk"/>
-            <CONNECTION INSTANCE="appUnit_event_builder_v0_1_0" PORT="clk"/>
             <CONNECTION INSTANCE="appUnit_data_processor_0" PORT="clk"/>
-            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="rd_clk"/>
+            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_1" PORT="rd_clk"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_2" PORT="rd_clk"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_3" PORT="rd_clk"/>
-            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_1" PORT="rd_clk"/>
+            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="rd_clk"/>
             <CONNECTION INSTANCE="appUnit_data_sender_wrapper_axis_data_fifo_0" PORT="s_axis_aclk"/>
             <CONNECTION INSTANCE="appUnit_data_sender_wrapper_data_sender_v1_0_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="appUnit_event_builder_v0_1_0" PORT="clk"/>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_mii_initializer_0" PORT="CLK"/>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_RESET_INST_0" PORT="clk125"/>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_fakernet_top_0" PORT="clk_in"/>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_reg_switch_0" PORT="axi_aclk"/>
-            <CONNECTION INSTANCE="fnet_wrapper_data_receiver_v1_0_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="fnet_wrapper_native_to_axi_lite_v_0" PORT="m00_axi_aclk"/>
             <CONNECTION INSTANCE="fnet_wrapper_data_gen_user_0" PORT="clk"/>
+            <CONNECTION INSTANCE="fnet_wrapper_data_receiver_v1_0_0" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="trg_en_TRG_MODULE_0" PORT="clk"/>
             <CONNECTION INSTANCE="trg_en_SAMPA_TRG_EN_v1_0_0" PORT="m00_axi_aclk"/>
             <CONNECTION INSTANCE="Config_wrapper_SAMPA_PON_v1_0_0" PORT="m00_axi_aclk"/>
@@ -4838,6 +4864,13 @@
             <CONNECTION INSTANCE="SO_receiver_delay_adjust_init_v1_0" PORT="m00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
+        <PORT CLKFREQUENCY="300000000" DIR="O" NAME="clk_out5" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_3" PORT="dest_clk"/>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M2" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="idelay_refclk2"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4846,7 +4879,7 @@
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="1"/>
         <PARAMETER NAME="C_USER_CLK_FREQ0" VALUE="100.0"/>
         <PARAMETER NAME="C_AUTO_PRIMITIVE" VALUE="MMCM"/>
         <PARAMETER NAME="C_USER_CLK_FREQ1" VALUE="100.0"/>
@@ -4906,7 +4939,7 @@
         <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
         <PARAMETER NAME="C_USE_STATUS" VALUE="0"/>
         <PARAMETER NAME="C_USE_FREEZE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="2"/>
         <PARAMETER NAME="C_CLKOUT1_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_CLKOUT2_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_CLKOUT3_DRIVES" VALUE="BUFG"/>
@@ -4920,14 +4953,14 @@
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1__320.00000______0.000______50.0______128.655____166.174"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="no_CLK_OUT2_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2__300.00000______0.000______50.0______129.867____166.174"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
         <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="320.000"/>
-        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="200.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="300"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -4948,7 +4981,7 @@
         <PARAMETER NAME="C_CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="320.00000"/>
-        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="200.00000"/>
+        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="300.00000"/>
         <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="100.000"/>
@@ -4990,7 +5023,7 @@
         <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="3.750"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="4"/>
         <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
@@ -5121,7 +5154,7 @@
         <PARAMETER NAME="C_FILTER_1" VALUE="0000"/>
         <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
         <PARAMETER NAME="C_DIVIDE1_AUTO" VALUE="1"/>
-        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="0.26666666666666666"/>
+        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="1.0666666666666667"/>
         <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="0.26666666666666666"/>
         <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.26666666666666666"/>
         <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.26666666666666666"/>
@@ -5148,7 +5181,7 @@
         <PARAMETER NAME="C_CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT0_ACTUAL_FREQ" VALUE="320.00000"/>
-        <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="200.00000"/>
+        <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="300.00000"/>
         <PARAMETER NAME="C_CLKOUT2_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT3_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_ACTUAL_FREQ" VALUE="100.000"/>
@@ -5206,13 +5239,13 @@
         <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="250.0"/>
         <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKOUT1_USED" VALUE="true"/>
-        <PARAMETER NAME="CLKOUT2_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT2_USED" VALUE="true"/>
         <PARAMETER NAME="CLKOUT3_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT4_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT5_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT6_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT7_USED" VALUE="false"/>
-        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="1"/>
+        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="2"/>
         <PARAMETER NAME="CLK_OUT1_USE_FINE_PS_GUI" VALUE="false"/>
         <PARAMETER NAME="CLK_OUT2_USE_FINE_PS_GUI" VALUE="false"/>
         <PARAMETER NAME="CLK_OUT3_USE_FINE_PS_GUI" VALUE="false"/>
@@ -5242,7 +5275,7 @@
         <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="320.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="200.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="300"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -5326,7 +5359,7 @@
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="4"/>
         <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
@@ -5402,10 +5435,10 @@
         <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
         <PARAMETER NAME="CLKOUT1_JITTER" VALUE="128.655"/>
         <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="166.174"/>
-        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="137.833"/>
+        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="129.867"/>
         <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="166.174"/>
-        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
-        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="121.907"/>
+        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="154.081"/>
         <PARAMETER NAME="CLKOUT4_JITTER" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT4_PHASE_ERROR" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT5_JITTER" VALUE="0.0"/>
@@ -5429,17 +5462,26 @@
         <PORT CLKFREQUENCY="320000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="appUnit_xpm_cdc_gen_0" PORT="dest_clk"/>
-            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="clk_SO"/>
-            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="wr_clk"/>
+            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_1" PORT="wr_clk"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_2" PORT="wr_clk"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_3" PORT="wr_clk"/>
-            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_1" PORT="wr_clk"/>
+            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="wr_clk"/>
+            <CONNECTION INSTANCE="appUnit_das_rx_0" PORT="clk_SO"/>
             <CONNECTION INSTANCE="SOCLK_wrapper_xlconcat_0" PORT="In1"/>
             <CONNECTION INSTANCE="SOCLK_wrapper_xlconcat_0" PORT="In2"/>
             <CONNECTION INSTANCE="SOCLK_wrapper_xlconcat_0" PORT="In3"/>
             <CONNECTION INSTANCE="SOCLK_wrapper_xlconcat_0" PORT="In0"/>
             <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="clk"/>
             <CONNECTION INSTANCE="reset_rst_clk_wiz_1_320M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_1" PORT="dest_clk"/>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_1_320M1" PORT="slowest_sync_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="300000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_2" PORT="dest_clk"/>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M1" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="idelay_refclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5452,9 +5494,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="event_word" RIGHT="0" SIGIS="undef"/>
@@ -5505,9 +5547,9 @@
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_fakernet_top_0" PORT="user_data_free"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -5573,9 +5615,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clk125" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="clk125" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset_vio" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_vio_0_probe_out0">
@@ -5608,14 +5650,14 @@
       </PARAMETERS>
       <PORTS>
         <PORT DIR="O" LEFT="19" NAME="statedebug" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clk25_in" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out3">
+        <PORT DIR="I" NAME="clk25_in" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out3"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="eth_intb" SIGIS="undef" SIGNAME="fnet_wrapper_fakernet_xlconstant_2_dout">
@@ -5782,9 +5824,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="independent_clock" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="independent_clock" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="io_refclk" SIGIS="undef"/>
@@ -6125,9 +6167,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="RST" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="fnet_wrapper_fakernet_RESET_INST_0_sfp_reset_pulse">
@@ -6173,9 +6215,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6378,9 +6420,9 @@
         </PORT>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6870,9 +6912,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6880,9 +6922,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S00_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S00_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6890,9 +6932,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="M00_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M00_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6900,9 +6942,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6910,9 +6952,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S02_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S02_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S02_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6920,9 +6962,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S03_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S03_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S03_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6930,9 +6972,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S04_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S04_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S04_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6940,9 +6982,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S05_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S05_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S05_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -6950,9 +6992,9 @@
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S06_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="S06_ACLK" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S06_ARESETN" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -7937,9 +7979,9 @@
             <CONNECTION INSTANCE="led_module_util_vector_logic_0" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -8135,9 +8177,9 @@
             <CONNECTION INSTANCE="led_module_util_vector_logic_0" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -8311,9 +8353,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="clk125MHz" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT DIR="I" NAME="clk125MHz" SIGIS="undef" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_vio_0_probe_out0">
@@ -8770,9 +8812,9 @@
         <PARAMETER NAME="C_S_AXI_HIGHADDR" VALUE="0xC000FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -11170,9 +11212,9 @@
         <PARAMETER NAME="C_S_AXI_HIGHADDR" VALUE="0xC000FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -11670,9 +11712,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_xpm_cdc_gen_0_dest_arst">
@@ -11697,15 +11739,15 @@
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_I2C_Controller_v1_0_0" PORT="m00_axi_aresetn"/>
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_I2C_Controller_v1_0_0" PORT="m01_axi_aresetn"/>
             <CONNECTION INSTANCE="SAMPA_I2C_wrapper_init_i2c_v1_0_0" PORT="m00_axi_aresetn"/>
-            <CONNECTION INSTANCE="fnet_wrapper_data_receiver_v1_0_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="fnet_wrapper_native_to_axi_lite_v_0" PORT="m00_axi_aresetn"/>
             <CONNECTION INSTANCE="fnet_wrapper_fakernet_reg_switch_0" PORT="axi_aresetn"/>
+            <CONNECTION INSTANCE="fnet_wrapper_data_receiver_v1_0_0" PORT="s00_axis_aresetn"/>
             <CONNECTION INSTANCE="appUnit_data_sender_wrapper_axis_data_fifo_0" PORT="s_axis_aresetn"/>
             <CONNECTION INSTANCE="appUnit_data_sender_wrapper_data_sender_v1_0_0" PORT="m00_axis_aresetn"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_1" PORT="rst"/>
-            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="rst"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_2" PORT="rst"/>
             <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_3" PORT="rst"/>
+            <CONNECTION INSTANCE="appUnit_async_fifos_xpm_afifo_wrapper_0" PORT="rst"/>
             <CONNECTION INSTANCE="trg_en_SAMPA_TRG_EN_v1_0_0" PORT="m00_axi_aresetn"/>
             <CONNECTION INSTANCE="Config_wrapper_SAMPA_PON_v1_0_0" PORT="m00_axi_aresetn"/>
             <CONNECTION INSTANCE="intercon_wrapper_axi_mem_intercon" PORT="M00_ARESETN"/>
@@ -11718,8 +11760,97 @@
             <CONNECTION INSTANCE="intercon_wrapper_axi_mem_intercon" PORT="S05_ARESETN"/>
             <CONNECTION INSTANCE="intercon_wrapper_axi_mem_intercon" PORT="S06_ARESETN"/>
             <CONNECTION INSTANCE="SO_receiver_delay_adjust_init_v1_0" PORT="m00_axi_aresetn"/>
-            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="reset"/>
             <CONNECTION INSTANCE="trg_en_TRG_MODULE_0" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="13" FULLNAME="/reset/rst_clk_wiz_0_300M1" HWVERSION="5.0" INSTANCE="reset_rst_clk_wiz_0_300M1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="kintexuplus"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_rst_clk_wiz_0_125M_1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="300000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_xpm_cdc_gen_2_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_2" PORT="dest_arst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_300M1_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="areset_ref"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="13" FULLNAME="/reset/rst_clk_wiz_0_300M2" HWVERSION="5.0" INSTANCE="reset_rst_clk_wiz_0_300M2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="kintexuplus"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_rst_clk_wiz_0_300M1_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="300000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_xpm_cdc_gen_3_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_3" PORT="dest_arst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_300M2_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="areset_ref2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -11763,6 +11894,51 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="13" FULLNAME="/reset/rst_clk_wiz_1_320M1" HWVERSION="5.0" INSTANCE="reset_rst_clk_wiz_1_320M1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="kintexuplus"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_rst_clk_wiz_1_320M_1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="320000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_xpm_cdc_gen_1_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_xpm_cdc_gen_1" PORT="dest_arst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_1_320M1_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="areset"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -12565,9 +12741,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="probe_out0" RIGHT="0" SIGIS="undef" SIGNAME="reset_vio_0_probe_out0">
@@ -12588,7 +12764,7 @@
         <PARAMETER NAME="SRC_CLK_PERIOD" VALUE="5000"/>
         <PARAMETER NAME="DEST_CLK_PERIOD" VALUE="2500"/>
         <PARAMETER NAME="SIM_ASSERT_CHK" VALUE="1"/>
-        <PARAMETER NAME="DEST_SYNC_FF" VALUE="4"/>
+        <PARAMETER NAME="DEST_SYNC_FF" VALUE="8"/>
         <PARAMETER NAME="INIT_SYNC_FF" VALUE="0"/>
         <PARAMETER NAME="SRC_INPUT_REG" VALUE="1"/>
         <PARAMETER NAME="WIDTH" VALUE="2"/>
@@ -12604,14 +12780,143 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="dest_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="dest_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dest_arst" SIGIS="undef" SIGNAME="reset_xpm_cdc_gen_0_dest_arst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="reset_rst_clk_wiz_0_125M" PORT="ext_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="src_arst" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_PUSH_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PUSH_SW"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/reset/xpm_cdc_gen_1" HWVERSION="1.0" INSTANCE="reset_xpm_cdc_gen_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xpm_cdc_gen" VLNV="xilinx.com:ip:xpm_cdc_gen:1.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xpm_cdc_gen;v=v1_0;d=pg382-xpm-cdc-generator.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_CDC_TYPE" VALUE="2"/>
+        <PARAMETER NAME="SRC_CLK_PERIOD" VALUE="5000"/>
+        <PARAMETER NAME="DEST_CLK_PERIOD" VALUE="2500"/>
+        <PARAMETER NAME="SIM_ASSERT_CHK" VALUE="1"/>
+        <PARAMETER NAME="DEST_SYNC_FF" VALUE="4"/>
+        <PARAMETER NAME="INIT_SYNC_FF" VALUE="0"/>
+        <PARAMETER NAME="SRC_INPUT_REG" VALUE="1"/>
+        <PARAMETER NAME="WIDTH" VALUE="2"/>
+        <PARAMETER NAME="REG_OUTPUT" VALUE="0"/>
+        <PARAMETER NAME="SIM_LOSSLESS_GRAY_CHK" VALUE="0"/>
+        <PARAMETER NAME="SRC_SYNC_FF" VALUE="4"/>
+        <PARAMETER NAME="DEST_EXT_HSK" VALUE="1"/>
+        <PARAMETER NAME="RST_USED" VALUE="1"/>
+        <PARAMETER NAME="INIT" VALUE="1"/>
+        <PARAMETER NAME="RST_ACTIVE_HIGH" VALUE="0"/>
+        <PARAMETER NAME="CDC_TYPE" VALUE="xpm_cdc_async_rst"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_xpm_cdc_gen_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="320000000" DIR="I" NAME="dest_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_arst" SIGIS="undef" SIGNAME="reset_xpm_cdc_gen_1_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_1_320M1" PORT="ext_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="src_arst" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_PUSH_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PUSH_SW"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/reset/xpm_cdc_gen_2" HWVERSION="1.0" INSTANCE="reset_xpm_cdc_gen_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xpm_cdc_gen" VLNV="xilinx.com:ip:xpm_cdc_gen:1.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xpm_cdc_gen;v=v1_0;d=pg382-xpm-cdc-generator.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_CDC_TYPE" VALUE="2"/>
+        <PARAMETER NAME="SRC_CLK_PERIOD" VALUE="5000"/>
+        <PARAMETER NAME="DEST_CLK_PERIOD" VALUE="2500"/>
+        <PARAMETER NAME="SIM_ASSERT_CHK" VALUE="1"/>
+        <PARAMETER NAME="DEST_SYNC_FF" VALUE="8"/>
+        <PARAMETER NAME="INIT_SYNC_FF" VALUE="0"/>
+        <PARAMETER NAME="SRC_INPUT_REG" VALUE="1"/>
+        <PARAMETER NAME="WIDTH" VALUE="2"/>
+        <PARAMETER NAME="REG_OUTPUT" VALUE="0"/>
+        <PARAMETER NAME="SIM_LOSSLESS_GRAY_CHK" VALUE="0"/>
+        <PARAMETER NAME="SRC_SYNC_FF" VALUE="4"/>
+        <PARAMETER NAME="DEST_EXT_HSK" VALUE="1"/>
+        <PARAMETER NAME="RST_USED" VALUE="1"/>
+        <PARAMETER NAME="INIT" VALUE="1"/>
+        <PARAMETER NAME="RST_ACTIVE_HIGH" VALUE="0"/>
+        <PARAMETER NAME="CDC_TYPE" VALUE="xpm_cdc_async_rst"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_xpm_cdc_gen_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="300000000" DIR="I" NAME="dest_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_1_clk_out2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_1" PORT="clk_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_arst" SIGIS="undef" SIGNAME="reset_xpm_cdc_gen_2_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M1" PORT="ext_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="src_arst" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_PUSH_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PUSH_SW"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/reset/xpm_cdc_gen_3" HWVERSION="1.0" INSTANCE="reset_xpm_cdc_gen_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xpm_cdc_gen" VLNV="xilinx.com:ip:xpm_cdc_gen:1.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xpm_cdc_gen;v=v1_0;d=pg382-xpm-cdc-generator.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_CDC_TYPE" VALUE="2"/>
+        <PARAMETER NAME="SRC_CLK_PERIOD" VALUE="5000"/>
+        <PARAMETER NAME="DEST_CLK_PERIOD" VALUE="2500"/>
+        <PARAMETER NAME="SIM_ASSERT_CHK" VALUE="1"/>
+        <PARAMETER NAME="DEST_SYNC_FF" VALUE="8"/>
+        <PARAMETER NAME="INIT_SYNC_FF" VALUE="0"/>
+        <PARAMETER NAME="SRC_INPUT_REG" VALUE="1"/>
+        <PARAMETER NAME="WIDTH" VALUE="2"/>
+        <PARAMETER NAME="REG_OUTPUT" VALUE="0"/>
+        <PARAMETER NAME="SIM_LOSSLESS_GRAY_CHK" VALUE="0"/>
+        <PARAMETER NAME="SRC_SYNC_FF" VALUE="4"/>
+        <PARAMETER NAME="DEST_EXT_HSK" VALUE="1"/>
+        <PARAMETER NAME="RST_USED" VALUE="1"/>
+        <PARAMETER NAME="INIT" VALUE="1"/>
+        <PARAMETER NAME="RST_ACTIVE_HIGH" VALUE="0"/>
+        <PARAMETER NAME="CDC_TYPE" VALUE="xpm_cdc_async_rst"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_block_xpm_cdc_gen_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="300000000" DIR="I" NAME="dest_clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dest_arst" SIGIS="undef" SIGNAME="reset_xpm_cdc_gen_3_dest_arst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_rst_clk_wiz_0_300M2" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="src_arst" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_PUSH_SW">
@@ -12644,9 +12949,9 @@
         <PORT DIR="I" NAME="m00_axi_init_axi_txn" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_error" SIGIS="undef"/>
         <PORT DIR="O" NAME="m00_axi_txn_done" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="m00_axi_aclk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -12820,9 +13125,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out5">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clock_wrapper_clk_wiz_0_clk_out4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out5"/>
+            <CONNECTION INSTANCE="clock_wrapper_clk_wiz_0" PORT="clk_out4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="reset_rst_clk_wiz_0_125M_peripheral_aresetn">
@@ -12835,9 +13140,9 @@
             <CONNECTION INSTANCE="trg_en_SAMPA_TRG_EN_v1_0_0" PORT="sampa_trg_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="init_trg" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_trg">
+        <PORT DIR="I" NAME="init_trg" SIGIS="undef" SIGNAME="SO_receiver_idelay_top_v2_0_trg_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="trg"/>
+            <CONNECTION INSTANCE="SO_receiver_idelay_top_v2_0" PORT="trg_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="trg" RIGHT="0" SIGIS="undef" SIGNAME="trg_en_TRG_MODULE_0_trg">

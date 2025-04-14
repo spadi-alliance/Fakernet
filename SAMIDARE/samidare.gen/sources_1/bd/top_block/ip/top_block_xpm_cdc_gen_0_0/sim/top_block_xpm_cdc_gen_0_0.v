@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -70,7 +70,7 @@ input wire src_arst;
     .SRC_CLK_PERIOD(5000),
     .DEST_CLK_PERIOD(2500),
     .SIM_ASSERT_CHK(1),
-    .DEST_SYNC_FF(4),
+    .DEST_SYNC_FF(8),
     .INIT_SYNC_FF(0),
     .SRC_INPUT_REG(1),
     .WIDTH(2),

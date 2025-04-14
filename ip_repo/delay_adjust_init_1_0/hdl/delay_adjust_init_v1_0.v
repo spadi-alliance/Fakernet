@@ -115,7 +115,8 @@
 	    init_adjust_r  <= regval[0];
 	    init_adjust_rr <= init_adjust_r;  
 	  end
-	assign init_adjust = init_adjust_r && !init_adjust_rr;
+//	assign init_adjust = init_adjust_r && !init_adjust_rr;
+	assign init_adjust = init_adjust_rr;
 	// User logic ends
 
 	endmodule

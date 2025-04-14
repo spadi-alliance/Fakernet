@@ -52,6 +52,7 @@
 		output wire  m00_axi_rready
 	);
 	wire [31:0] regval;
+	reg txn;
 	assign sampa_trg_en = regval[0];
 // Instantiation of Axi Bus Interface M00_AXI
 	SAMPA_REGREAD_v1_0_M00_AXI # ( 
@@ -93,7 +94,6 @@
 	// Add user logic here
 
 	reg [31:0] cnt;
-	reg txn;
 	always @(posedge m00_axi_aclk)                                                      
 	  begin
 	    cnt <= cnt+1;                                                                             

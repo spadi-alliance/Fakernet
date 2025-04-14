@@ -173,7 +173,9 @@
 
 	// Add user logic here
 	
-	parameter [1:0] SEND = 1'b1;        // This is the initial/idle state 
+	parameter [1:0] STATE_IDLE = 2'b00;        // This is the initial/idle state 
+	parameter [1:0] STATE_SEND = 2'b01;        // This is the initial/idle state 
+	parameter [1:0] STATE_REST = 2'b10;        // This is the initial/idle state 
 
     reg [1:0] bus_sel;                        // sel index of bus0 to bus3
     reg [10:0] data_length;                   // data length
@@ -200,7 +202,7 @@
     assign last_ack = last_ack_r;
     assign busy = busy_r;
     reg last_data_r;
-    (*mark_debug = "true"*)reg [9:0] rest_count;
+    (*mark_debug = "true"*)reg [9:0] rest_counter;
     assign rd_en = rd_en_r;
     // init
     initial begin
@@ -209,21 +211,23 @@
         rd_en_r = 1'b0;
             busy_r <= 1'b0;
     end
-    
+    reg [15:0]send_counter;
     wire clk = S_AXIS_ACLK;
     wire rstn = S_AXIS_ARESETN;
     always @(posedge clk) begin
         if (!rstn) begin
-            state <= IDLE;
+            state <= STATE_IDLE;
             data_length <= 11'd0;
         end else begin
 //            event_commit <= 1'b0;
             case (state)
-                IDLE: begin
+                STATE_IDLE: begin
 //                    if (event_free & bus_ready) begin
 //                    if (event_free & data_wr) begin
+                        send_counter <= 'b0;
+                        rest_counter <= 'b0;
                     if (wren) begin
-                        state <= SEND;
+                        state <= STATE_SEND;
                         data_length <= data_length + 11'd1;
                         event_offset_r <= data_length[9:0] + 10'd1;      // 
                         event_write_r <= 1'b1;
@@ -232,7 +236,7 @@
                         event_word_r <= S_AXIS_TDATA;
                         
                     end else begin
-                        state <= IDLE;
+                        state <= STATE_IDLE;
                         data_length <= 11'd0;
                         event_offset_r <= 11'd0;      // 
                         event_write_r <= 1'b0;
@@ -241,9 +245,11 @@
                         
                     end
                 end
-                SEND: begin
+                STATE_SEND: begin
+                        rest_counter <= 'b0;
                    if(writes_done)begin
-                        state <= IDLE;
+                        state <= STATE_REST;
+                        send_counter <= 'b0;
                         data_length <= data_length + 11'd1;
                         event_offset_r <= data_length[9:0] + 10'd1;      // 
                         event_write_r <= 1'b1;
@@ -251,16 +257,40 @@
                         event_commit_len_r <= data_length;
                         event_word_r <= S_AXIS_TDATA;
                     end else begin
-                        state <= SEND;
-                        data_length <= data_length + 11'd1;
-                        event_offset_r <= data_length[9:0] + 10'd1;      // 
-                        event_write_r <= 1'b1;
-                        event_commit_r <= 1'b0;
-                        event_commit_len_r <= 11'b0;
-                        event_word_r <= S_AXIS_TDATA;
-                    
+                        if(send_counter<31) begin
+                            state <= STATE_SEND;
+                            send_counter <= send_counter+1;
+                            data_length <= data_length + 11'd1;
+                            event_offset_r <= data_length[9:0] + 10'd1;      // 
+                            event_write_r <= 1'b1;
+                            event_commit_r <= 1'b0;
+                            event_commit_len_r <= 11'b0;
+                            event_word_r <= S_AXIS_TDATA;
+                        end else if(send_counter==31) begin
+                            state <= STATE_REST;
+                            send_counter <= 'b0;
+                            data_length <= data_length + 11'd1;
+                            event_offset_r <= data_length[9:0] + 10'd1;      // 
+                            event_write_r <= 1'b1;
+                            event_commit_r <= 1'b1;
+                            event_commit_len_r <= data_length;
+                            event_word_r <= S_AXIS_TDATA;
+                        end
                     end
                 end
+                STATE_REST: begin
+                        rest_counter <= rest_counter +1;
+                        send_counter <= 'b0;
+                        if(rest_counter>31)begin
+                            state <= STATE_IDLE;
+                            rest_counter <= 'b0;
+                            data_length <= 11'd0;
+                            event_offset_r <= 11'd0;      // 
+                            event_write_r <= 1'b0;
+                            event_commit_r <= 1'b0;
+                            event_commit_len_r <= 11'b0;
+                        end
+                    end
                 default: state <= IDLE;
             endcase
         end

@@ -57,10 +57,10 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out1__40.00000______0.000______50.0______139.963____137.290
-// clk_out2__300.00000______0.000______50.0______106.014____137.290
-// clk_out3__25.00000______0.000______50.0______149.805____137.290
-// clk_out4__50.00000______0.000______50.0______135.568____137.290
-// clk_out5__125.00000______0.000______50.0______119.250____137.290
+// clk_out2__25.00000______0.000______50.0______149.805____137.290
+// clk_out3__50.00000______0.000______50.0______135.568____137.290
+// clk_out4__125.00000______0.000______50.0______119.250____137.290
+// clk_out5__300.00000______0.000______50.0______106.014____137.290
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -141,19 +141,19 @@ wire clk_in2_top_block_clk_wiz_0_0;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (5),
+    .CLKOUT1_DIVIDE       (60),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (60),
+    .CLKOUT2_DIVIDE       (30),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
-    .CLKOUT3_DIVIDE       (30),
+    .CLKOUT3_DIVIDE       (12),
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
     .CLKOUT3_USE_FINE_PS  ("FALSE"),
-    .CLKOUT4_DIVIDE       (12),
+    .CLKOUT4_DIVIDE       (5),
     .CLKOUT4_PHASE        (0.000),
     .CLKOUT4_DUTY_CYCLE   (0.500),
     .CLKOUT4_USE_FINE_PS  ("FALSE"),

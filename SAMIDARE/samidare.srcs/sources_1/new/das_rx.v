@@ -55,11 +55,13 @@ module das_rx(
     reg [4:0] clk_cnt [3:0];
     reg [4:0] ch0_cnt [3:0];
     reg [3:0] wr_en;
+    (*mark_debug="true"*)reg [3:0] debug_SO10;
     assign wr_en0 = wr_en[0];
     assign wr_en1 = wr_en[1];
     assign wr_en2 = wr_en[2];
     assign wr_en3 = wr_en[3];
     // State Machine Logic and Counters
+    
     generate
         genvar i;
         for (i = 0; i < 4; i = i + 1) begin
@@ -67,6 +69,7 @@ module das_rx(
             //assign wr_en[i] = clk_10MHz_rr[i] && ~full[i];
             //assign wr_en[i] = (ch0_cnt[i]!=0 && clk_cnt[i] == ch0_cnt[i]-1)||(ch0_cnt[i]==0&&clk_cnt[i] == 5'd31);
             always @(posedge clk_SO) begin
+                debug_SO10[i] <= SO[i][10];
                 // Reset condition
                 if (en==1) begin
                     state[i] <= IDLE;

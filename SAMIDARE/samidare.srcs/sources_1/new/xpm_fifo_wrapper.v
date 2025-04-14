@@ -26,7 +26,7 @@ module xpm_async_fifo_wrapper #(
 )(
     input wire wr_clk,          // 
     input wire rd_clk,          // 
-    input wire rst,             // 
+    input wire rst,             // active low
     input wire [DATA_WIDTH-1:0] din,  // data input
     input wire wr_en,           // write enable
     input wire rd_en,           // read enable
@@ -46,7 +46,7 @@ module xpm_async_fifo_wrapper #(
     ) xpm_fifo_async_inst (
         .wr_clk(wr_clk),                 // 
         .rd_clk(rd_clk),                 // 
-        .rst(rst),                       // 
+        .rst(!rst),                       // 
         .din(din),                       // 
         .wr_en(wr_en),                   // 
         .rd_en(rd_en),                   // 

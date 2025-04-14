@@ -95,7 +95,7 @@ module event_builder_v0_1(
 //            rd_en_r <= 1'b0;
             sample_cnt <= 'b0;
         end else begin
-            data_wr_o <= 1'b0;
+//            data_wr_o <= 1'b0;
 //            event_commit <= 1'b0;
             case (state)
                 IDLE: begin
@@ -108,6 +108,7 @@ module event_builder_v0_1(
 //                        bus2_r <= bus2;
 //                        bus3_r <= bus3;
 //                        rd_en_r <= 1'b1;
+                        data_wr_o <= 1'b1;
                         sample_cnt <= 'b0;
                         bus_sel <= bus_sel_i;
                         busx_reg <= data_i;
@@ -121,6 +122,7 @@ module event_builder_v0_1(
                 WAIT: begin
                     if (!full_i & data_wr_i) begin
                         state <= SEND_HEADER;
+                        data_wr_o <= 1'b0;
                         bus_sel <= bus_sel_i;
                         data_ack_r <= 1'b1;
                         sample_cnt <= sample_cnt_i;
@@ -129,6 +131,7 @@ module event_builder_v0_1(
                     end
                 end
                 SEND_HEADER: begin
+                    data_wr_o <= 1'b1;
                     event_word <= {16'hafaf, 6'd0, bus_sel, 4'd0, sample_cnt[3:0]}; // header 0xafaf0i0i
 //                    event_offset <= 10'd0;
 //                    event_write <= 1'b1;
@@ -145,6 +148,7 @@ module event_builder_v0_1(
                     data_ack_r <= 1'b0;
                 end
                 SENDING_EVENT: begin
+                    data_wr_o <= 1'b1;
 //                    rd_en_r <= 1'b0;
                         data_ack_r <= 1'b0;
                     event_word <= busx_reg >> (288 - index * 32);  // every 32bit
@@ -162,6 +166,7 @@ module event_builder_v0_1(
                 SEND_FOOTER: begin
 //                    rd_en_r <= 1'b0;
                         data_ack_r <= 1'b0;
+                    data_wr_o <= 1'b1;
                     event_word <= {16'hfafa, 6'd0, bus_sel, 4'b0, sample_cnt[3:0]}; // footer 0xfafa0i0i
 //                    event_offset <= data_length[9:0] + 10'd1;
 //                    event_write <= 1'b1;
@@ -171,6 +176,7 @@ module event_builder_v0_1(
 //                    rd_en_r <= 1'b0;
 //                    event_commit_len <= data_length + 11'd2; // data length (data, header, footer)
 //                    event_commit <= 1'b1;
+                    data_wr_o <= 1'b0;
                     if(last_data_r == 1'b1)begin
                         state <= REST;
                         rest_count <= 'b0;

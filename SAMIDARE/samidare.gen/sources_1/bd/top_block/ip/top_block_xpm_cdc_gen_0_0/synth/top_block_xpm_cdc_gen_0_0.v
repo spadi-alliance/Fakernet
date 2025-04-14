@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xpm_cdc_gen_v1_0_2,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_2,{}" *)
-(* CORE_GENERATION_INFO = "top_block_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CDC_TYPE=2,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=1,DEST_SYNC_FF=4,INIT_SYNC_FF=0,SRC_INPUT_REG=1,WIDTH=2,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
+(* CORE_GENERATION_INFO = "top_block_xpm_cdc_gen_0_0,xpm_cdc_gen_v1_0_2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xpm_cdc_gen,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CDC_TYPE=2,SRC_CLK_PERIOD=5000,DEST_CLK_PERIOD=2500,SIM_ASSERT_CHK=1,DEST_SYNC_FF=8,INIT_SYNC_FF=0,SRC_INPUT_REG=1,WIDTH=2,REG_OUTPUT=0,SIM_LOSSLESS_GRAY_CHK=0,SRC_SYNC_FF=4,DEST_EXT_HSK=1,RST_USED=1,INIT=1,RST_ACTIVE_HIGH=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_xpm_cdc_gen_0_0 (
   dest_clk,
@@ -71,7 +71,7 @@ input wire src_arst;
     .SRC_CLK_PERIOD(5000),
     .DEST_CLK_PERIOD(2500),
     .SIM_ASSERT_CHK(1),
-    .DEST_SYNC_FF(4),
+    .DEST_SYNC_FF(8),
     .INIT_SYNC_FF(0),
     .SRC_INPUT_REG(1),
     .WIDTH(2),
