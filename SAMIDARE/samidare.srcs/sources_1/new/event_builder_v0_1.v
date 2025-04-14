@@ -64,7 +64,7 @@ module event_builder_v0_1(
     reg [31:0]event_word;
     assign data_ack = data_ack_r;
     assign last_ack = last_ack_r;
-    assign busy = busy_r;
+    assign busy = busy_r & full_i;
     reg last_data_r;
     (*mark_debug = "true"*)reg [9:0] rest_count;
     assign rd_en = rd_en_r;
@@ -101,7 +101,7 @@ module event_builder_v0_1(
                 IDLE: begin
 //                    if (event_free & bus_ready) begin
 //                    if (event_free & data_wr) begin
-                    if (!full_i & data_wr_i) begin
+                    if (data_wr_i) begin
                         state <= SEND_HEADER;
 //                        bus0_r <= bus0;
 //                        bus1_r <= bus1;
@@ -120,7 +120,7 @@ module event_builder_v0_1(
                     end
                 end
                 WAIT: begin
-                    if (!full_i & data_wr_i) begin
+                    if (data_wr_i) begin
                         state <= SEND_HEADER;
                         data_wr_o <= 1'b0;
                         bus_sel <= bus_sel_i;

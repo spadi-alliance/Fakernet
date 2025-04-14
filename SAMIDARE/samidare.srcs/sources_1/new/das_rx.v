@@ -71,7 +71,7 @@ module das_rx(
             always @(posedge clk_SO) begin
                 debug_SO10[i] <= SO[i][10];
                 // Reset condition
-                if (en==1) begin
+                if (en==1'b0) begin
                     state[i] <= IDLE;
                     clk_cnt[i] <= 0;
                     ch0_cnt[i] <= 0;

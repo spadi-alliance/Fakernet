@@ -131,7 +131,9 @@ module data_processor (
                             counter <= 8'd0;
                         end else begin
                             // Continue reading data from the current FIFO
+                            if(!busy_i)begin
                             state <= LOAD;
+                            end
                         end
                     end
                 end

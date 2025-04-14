@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB0D00225237D484F",
+      "boundary_crc": "0xB0D00225953A60E9",
       "device": "xcau15p-sbvb484-1-i",
       "gen_directory": "../../../../samidare.gen/sources_1/bd/top_block",
       "name": "top_block",
@@ -46,7 +46,6 @@
       "xlconstant_0": "",
       "appUnit": {
         "xpm_cdc_gen_0": "",
-        "data_processor_0": "",
         "async_fifos": {
           "xlconcat_1": "",
           "wr_en_gate": {
@@ -69,12 +68,13 @@
           "xpm_afifo_wrapper_0": ""
         },
         "data_sender_wrapper": {
-          "data_sender_v1_0_0": "",
-          "axis_data_fifo_0": ""
+          "axis_data_fifo_0": "",
+          "data_sender_v1_0_0": ""
         },
         "trigger_manager_0": "",
+        "das_rx_0": "",
         "event_builder_v0_1_0": "",
-        "das_rx_0": ""
+        "data_processor_0": ""
       },
       "fnet_wrapper": {
         "fakernet": {
@@ -104,10 +104,6 @@
         "data_gen_user_0": "",
         "data_receiver_v1_0_0": ""
       },
-      "SOCLK_wrapper": {
-        "xlconcat_0": "",
-        "util_ds_buf_0": ""
-      },
       "clock_wrapper": {
         "clk_wiz_1": "",
         "clk_wiz_0": ""
@@ -118,21 +114,21 @@
       },
       "trg_en": {
         "TRG_MODULE_0": "",
-        "util_ds_buf_1": "",
-        "SAMPA_TRG_EN_v1_0_0": ""
+        "SAMPA_TRG_EN_v1_0_0": "",
+        "OBUFDS_TRG_0": ""
       },
       "Config_wrapper": {
         "SAMPA_PON_v1_0_0": "",
         "Const_wrapper": {
           "clk_wiz_2": "",
           "xlconstant_1": "",
-          "util_ds_buf_4": "",
           "HRSTB_wrapper": {
-            "util_ds_buf_2": "",
             "xlconcat_2": "",
-            "util_vector_logic_1": ""
+            "util_vector_logic_1": "",
+            "OBUFDS_TRG_0": ""
           },
-          "util_ds_buf_3": ""
+          "OBUFDS_CONST_1": "",
+          "OBUFDS_CONST_0": ""
         }
       },
       "intercon_wrapper": {
@@ -149,7 +145,8 @@
             "m00_data_fifo": ""
           }
         }
-      }
+      },
+      "OBUFDS_CLKSOIN_0": ""
     },
     "ports": {
       "SFP0RXN": {
@@ -344,7 +341,7 @@
         "right": "0",
         "parameters": {
           "FREQ_HZ": {
-            "value": "320000000:320000000:320000000:320000000",
+            "value": "100000000",
             "value_src": "default"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -356,7 +353,7 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
+            "value": "0.0",
             "value_src": "default"
           }
         }
@@ -368,7 +365,7 @@
         "right": "0",
         "parameters": {
           "FREQ_HZ": {
-            "value": "320000000:320000000:320000000:320000000",
+            "value": "100000000",
             "value_src": "default"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -380,7 +377,7 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0:0.0:0.0:0.0",
+            "value": "0.0",
             "value_src": "default"
           }
         }
@@ -2855,81 +2852,6 @@
               }
             }
           },
-          "data_processor_0": {
-            "vlnv": "xilinx.com:module_ref:data_processor:1.0",
-            "xci_name": "top_block_data_processor_0_0",
-            "xci_path": "ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci",
-            "inst_hier_path": "appUnit/data_processor_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "data_processor",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "event_reset": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "trg": {
-                "direction": "I"
-              },
-              "ack": {
-                "direction": "I"
-              },
-              "busy_i": {
-                "direction": "I"
-              },
-              "fifo_data_i": {
-                "direction": "I",
-                "left": "1279",
-                "right": "0",
-                "parameters": {
-                  "PortWidth": {
-                    "value": "1280",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "samples_i": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "samples_o": {
-                "direction": "O",
-                "left": "3",
-                "right": "0"
-              },
-              "data_out": {
-                "direction": "O",
-                "left": "319",
-                "right": "0"
-              },
-              "bus_sel": {
-                "direction": "O",
-                "left": "1",
-                "right": "0"
-              },
-              "req": {
-                "direction": "O",
-                "left": "3",
-                "right": "0"
-              },
-              "busy": {
-                "direction": "O"
-              },
-              "last_data": {
-                "direction": "O"
-              },
-              "valid": {
-                "direction": "O"
-              }
-            }
-          },
           "async_fifos": {
             "ports": {
               "clk125MHz": {
@@ -3855,6 +3777,23 @@
               }
             },
             "components": {
+              "axis_data_fifo_0": {
+                "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+                "xci_name": "top_block_axis_data_fifo_0_0",
+                "xci_path": "ip/top_block_axis_data_fifo_0_0/top_block_axis_data_fifo_0_0.xci",
+                "inst_hier_path": "appUnit/data_sender_wrapper/axis_data_fifo_0",
+                "parameters": {
+                  "FIFO_DEPTH": {
+                    "value": "32"
+                  },
+                  "FIFO_MEMORY_TYPE": {
+                    "value": "block"
+                  },
+                  "FIFO_MODE": {
+                    "value": "2"
+                  }
+                }
+              },
               "data_sender_v1_0_0": {
                 "vlnv": "xilinx.com:module_ref:data_sender_v1_0:1.0",
                 "xci_name": "top_block_data_sender_v1_0_0_0",
@@ -3967,23 +3906,6 @@
                         "value_src": "constant"
                       }
                     }
-                  }
-                }
-              },
-              "axis_data_fifo_0": {
-                "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                "xci_name": "top_block_axis_data_fifo_0_0",
-                "xci_path": "ip/top_block_axis_data_fifo_0_0/top_block_axis_data_fifo_0_0.xci",
-                "inst_hier_path": "appUnit/data_sender_wrapper/axis_data_fifo_0",
-                "parameters": {
-                  "FIFO_DEPTH": {
-                    "value": "32"
-                  },
-                  "FIFO_MEMORY_TYPE": {
-                    "value": "block"
-                  },
-                  "FIFO_MODE": {
-                    "value": "2"
                   }
                 }
               }
@@ -4099,76 +4021,6 @@
                 "direction": "O"
               },
               "en": {
-                "direction": "O"
-              }
-            }
-          },
-          "event_builder_v0_1_0": {
-            "vlnv": "xilinx.com:module_ref:event_builder_v0_1:1.0",
-            "xci_name": "top_block_event_builder_v0_1_0_1",
-            "xci_path": "ip/top_block_event_builder_v0_1_0_1/top_block_event_builder_v0_1_0_1.xci",
-            "inst_hier_path": "appUnit/event_builder_v0_1_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "event_builder_v0_1",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "rst",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "rst": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "empty": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "bus_sel_i": {
-                "direction": "I",
-                "left": "1",
-                "right": "0"
-              },
-              "sample_cnt_i": {
-                "direction": "I",
-                "left": "3",
-                "right": "0"
-              },
-              "data_i": {
-                "direction": "I",
-                "left": "319",
-                "right": "0"
-              },
-              "last_data": {
-                "direction": "I"
-              },
-              "data_wr_i": {
-                "direction": "I"
-              },
-              "full_i": {
-                "direction": "I"
-              },
-              "data_ack": {
-                "direction": "O"
-              },
-              "data_o": {
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "data_wr_o": {
-                "direction": "O"
-              },
-              "busy": {
                 "direction": "O"
               }
             }
@@ -4336,6 +4188,151 @@
                 "right": "0"
               }
             }
+          },
+          "event_builder_v0_1_0": {
+            "vlnv": "xilinx.com:module_ref:event_builder_v0_1:1.0",
+            "xci_name": "top_block_event_builder_v0_1_0_1",
+            "xci_path": "ip/top_block_event_builder_v0_1_0_1/top_block_event_builder_v0_1_0_1.xci",
+            "inst_hier_path": "appUnit/event_builder_v0_1_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "event_builder_v0_1",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "rst",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "rst": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "empty": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "bus_sel_i": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "sample_cnt_i": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "data_i": {
+                "direction": "I",
+                "left": "319",
+                "right": "0"
+              },
+              "last_data": {
+                "direction": "I"
+              },
+              "data_wr_i": {
+                "direction": "I"
+              },
+              "full_i": {
+                "direction": "I"
+              },
+              "data_ack": {
+                "direction": "O"
+              },
+              "data_o": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "data_wr_o": {
+                "direction": "O"
+              },
+              "busy": {
+                "direction": "O"
+              }
+            }
+          },
+          "data_processor_0": {
+            "vlnv": "xilinx.com:module_ref:data_processor:1.0",
+            "xci_name": "top_block_data_processor_0_0",
+            "xci_path": "ip/top_block_data_processor_0_0/top_block_data_processor_0_0.xci",
+            "inst_hier_path": "appUnit/data_processor_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "data_processor",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "event_reset": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "trg": {
+                "direction": "I"
+              },
+              "ack": {
+                "direction": "I"
+              },
+              "busy_i": {
+                "direction": "I"
+              },
+              "fifo_data_i": {
+                "direction": "I",
+                "left": "1279",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "1280",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "samples_i": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "samples_o": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "data_out": {
+                "direction": "O",
+                "left": "319",
+                "right": "0"
+              },
+              "bus_sel": {
+                "direction": "O",
+                "left": "1",
+                "right": "0"
+              },
+              "req": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "busy": {
+                "direction": "O"
+              },
+              "last_data": {
+                "direction": "O"
+              },
+              "valid": {
+                "direction": "O"
+              }
+            }
           }
         },
         "interface_nets": {
@@ -4362,10 +4359,10 @@
           "clk1_1": {
             "ports": [
               "clk125MHz",
-              "data_processor_0/clk",
               "async_fifos/clk125MHz",
               "data_sender_wrapper/clk125MHz",
-              "event_builder_v0_1_0/clk"
+              "event_builder_v0_1_0/clk",
+              "data_processor_0/clk"
             ]
           },
           "clk_1": {
@@ -4458,6 +4455,12 @@
             "ports": [
               "data_processor_0/samples_o",
               "event_builder_v0_1_0/sample_cnt_i"
+            ]
+          },
+          "data_processor_0_valid": {
+            "ports": [
+              "data_processor_0/valid",
+              "event_builder_v0_1_0/data_wr_i"
             ]
           },
           "data_sender_wrapper_full": {
@@ -6600,83 +6603,6 @@
           }
         }
       },
-      "SOCLK_wrapper": {
-        "ports": {
-          "In1": {
-            "direction": "I",
-            "left": "0",
-            "right": "0"
-          },
-          "CLKSOIN_P": {
-            "type": "clk",
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "CLKSOIN_N": {
-            "type": "clk",
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        },
-        "components": {
-          "xlconcat_0": {
-            "vlnv": "xilinx.com:ip:xlconcat:2.1",
-            "xci_name": "top_block_xlconcat_0_0",
-            "xci_path": "ip/top_block_xlconcat_0_0/top_block_xlconcat_0_0.xci",
-            "inst_hier_path": "SOCLK_wrapper/xlconcat_0",
-            "parameters": {
-              "NUM_PORTS": {
-                "value": "4"
-              }
-            }
-          },
-          "util_ds_buf_0": {
-            "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-            "xci_name": "top_block_util_ds_buf_0_1",
-            "xci_path": "ip/top_block_util_ds_buf_0_1/top_block_util_ds_buf_0_1.xci",
-            "inst_hier_path": "SOCLK_wrapper/util_ds_buf_0",
-            "parameters": {
-              "C_BUF_TYPE": {
-                "value": "OBUFDS"
-              },
-              "C_SIZE": {
-                "value": "4"
-              }
-            }
-          }
-        },
-        "nets": {
-          "In1_1": {
-            "ports": [
-              "In1",
-              "xlconcat_0/In1",
-              "xlconcat_0/In2",
-              "xlconcat_0/In3",
-              "xlconcat_0/In0"
-            ]
-          },
-          "util_ds_buf_0_OBUF_DS_N": {
-            "ports": [
-              "util_ds_buf_0/OBUF_DS_N",
-              "CLKSOIN_N"
-            ]
-          },
-          "util_ds_buf_0_OBUF_DS_P": {
-            "ports": [
-              "util_ds_buf_0/OBUF_DS_P",
-              "CLKSOIN_P"
-            ]
-          },
-          "xlconcat_0_dout": {
-            "ports": [
-              "xlconcat_0/dout",
-              "util_ds_buf_0/OBUF_IN"
-            ]
-          }
-        }
-      },
       "clock_wrapper": {
         "ports": {
           "clk_out1": {
@@ -7925,20 +7851,6 @@
               }
             }
           },
-          "util_ds_buf_1": {
-            "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-            "xci_name": "top_block_util_ds_buf_1_1",
-            "xci_path": "ip/top_block_util_ds_buf_1_1/top_block_util_ds_buf_1_1.xci",
-            "inst_hier_path": "trg_en/util_ds_buf_1",
-            "parameters": {
-              "C_BUF_TYPE": {
-                "value": "OBUFDS"
-              },
-              "C_SIZE": {
-                "value": "4"
-              }
-            }
-          },
           "SAMPA_TRG_EN_v1_0_0": {
             "vlnv": "xilinx.com:module_ref:SAMPA_TRG_EN_v1_0:1.0",
             "xci_name": "top_block_SAMPA_TRG_EN_v1_0_0_0",
@@ -8209,6 +8121,40 @@
                 }
               }
             }
+          },
+          "OBUFDS_TRG_0": {
+            "vlnv": "xilinx.com:module_ref:OBUFDS_TRG:1.0",
+            "xci_name": "top_block_OBUFDS_TRG_0_0",
+            "xci_path": "ip/top_block_OBUFDS_TRG_0_0/top_block_OBUFDS_TRG_0_0.xci",
+            "inst_hier_path": "trg_en/OBUFDS_TRG_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "OBUFDS_TRG",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "I": {
+                "direction": "I",
+                "left": "3",
+                "right": "0",
+                "parameters": {
+                  "PortWidth": {
+                    "value": "4",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "O": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              },
+              "OB": {
+                "direction": "O",
+                "left": "3",
+                "right": "0"
+              }
+            }
           }
         },
         "interface_nets": {
@@ -8220,6 +8166,18 @@
           }
         },
         "nets": {
+          "OBUFDS_TRG_0_O": {
+            "ports": [
+              "OBUFDS_TRG_0/O",
+              "TRG_P"
+            ]
+          },
+          "OBUFDS_TRG_0_OB": {
+            "ports": [
+              "OBUFDS_TRG_0/OB",
+              "TRG_N"
+            ]
+          },
           "SAMPA_TRG_EN_v1_0_0_sampa_trg_en": {
             "ports": [
               "SAMPA_TRG_EN_v1_0_0/sampa_trg_en",
@@ -8229,7 +8187,7 @@
           "TRG_MODULE_0_trg": {
             "ports": [
               "TRG_MODULE_0/trg",
-              "util_ds_buf_1/OBUF_IN"
+              "OBUFDS_TRG_0/I"
             ]
           },
           "clk_1": {
@@ -8255,18 +8213,6 @@
             "ports": [
               "rst",
               "TRG_MODULE_0/rst"
-            ]
-          },
-          "util_ds_buf_1_OBUF_DS_N": {
-            "ports": [
-              "util_ds_buf_1/OBUF_DS_N",
-              "TRG_N"
-            ]
-          },
-          "util_ds_buf_1_OBUF_DS_P": {
-            "ports": [
-              "util_ds_buf_1/OBUF_DS_P",
-              "TRG_P"
             ]
           }
         }
@@ -8764,20 +8710,6 @@
                 "xci_path": "ip/top_block_xlconstant_1_4/top_block_xlconstant_1_4.xci",
                 "inst_hier_path": "Config_wrapper/Const_wrapper/xlconstant_1"
               },
-              "util_ds_buf_4": {
-                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-                "xci_name": "top_block_util_ds_buf_4_1",
-                "xci_path": "ip/top_block_util_ds_buf_4_1/top_block_util_ds_buf_4_1.xci",
-                "inst_hier_path": "Config_wrapper/Const_wrapper/util_ds_buf_4",
-                "parameters": {
-                  "C_BUF_TYPE": {
-                    "value": "OBUFDS"
-                  },
-                  "C_SIZE": {
-                    "value": "1"
-                  }
-                }
-              },
               "HRSTB_wrapper": {
                 "ports": {
                   "HRSTB_N": {
@@ -8799,20 +8731,6 @@
                   }
                 },
                 "components": {
-                  "util_ds_buf_2": {
-                    "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-                    "xci_name": "top_block_util_ds_buf_2_0",
-                    "xci_path": "ip/top_block_util_ds_buf_2_0/top_block_util_ds_buf_2_0.xci",
-                    "inst_hier_path": "Config_wrapper/Const_wrapper/HRSTB_wrapper/util_ds_buf_2",
-                    "parameters": {
-                      "C_BUF_TYPE": {
-                        "value": "OBUFDS"
-                      },
-                      "C_SIZE": {
-                        "value": "4"
-                      }
-                    }
-                  },
                   "xlconcat_2": {
                     "vlnv": "xilinx.com:ip:xlconcat:2.1",
                     "xci_name": "top_block_xlconcat_2_1",
@@ -8849,6 +8767,72 @@
                         "value": "1"
                       }
                     }
+                  },
+                  "OBUFDS_TRG_0": {
+                    "vlnv": "xilinx.com:module_ref:OBUFDS_TRG:1.0",
+                    "xci_name": "top_block_OBUFDS_TRG_0_1",
+                    "xci_path": "ip/top_block_OBUFDS_TRG_0_1/top_block_OBUFDS_TRG_0_1.xci",
+                    "inst_hier_path": "Config_wrapper/Const_wrapper/HRSTB_wrapper/OBUFDS_TRG_0",
+                    "reference_info": {
+                      "ref_type": "hdl",
+                      "ref_name": "OBUFDS_TRG",
+                      "boundary_crc": "0x0"
+                    },
+                    "ports": {
+                      "I": {
+                        "direction": "I",
+                        "left": "3",
+                        "right": "0",
+                        "parameters": {
+                          "FREQ_HZ": {
+                            "value": "100000000:100000000:100000000:NULL",
+                            "value_src": "ip_prop"
+                          },
+                          "PHASE": {
+                            "value": "0.0:0.0:0.0:NULL",
+                            "value_src": "ip_prop"
+                          },
+                          "PortWidth": {
+                            "value": "4",
+                            "value_src": "ip_prop"
+                          },
+                          "PortType": {
+                            "value": "clk",
+                            "value_src": "ip_prop"
+                          }
+                        }
+                      },
+                      "O": {
+                        "direction": "O",
+                        "left": "3",
+                        "right": "0",
+                        "parameters": {
+                          "FREQ_HZ": {
+                            "value": "100000000:100000000:100000000:NULL",
+                            "value_src": "ip_prop"
+                          },
+                          "PHASE": {
+                            "value": "0.0:0.0:0.0:NULL",
+                            "value_src": "ip_prop"
+                          }
+                        }
+                      },
+                      "OB": {
+                        "direction": "O",
+                        "left": "3",
+                        "right": "0",
+                        "parameters": {
+                          "FREQ_HZ": {
+                            "value": "100000000:100000000:100000000:NULL",
+                            "value_src": "ip_prop"
+                          },
+                          "PHASE": {
+                            "value": "0.0:0.0:0.0:NULL",
+                            "value_src": "ip_prop"
+                          }
+                        }
+                      }
+                    }
                   }
                 },
                 "nets": {
@@ -8861,16 +8845,16 @@
                       "util_vector_logic_1/Op1"
                     ]
                   },
-                  "util_ds_buf_2_OBUF_DS_N": {
+                  "OBUFDS_TRG_0_O": {
                     "ports": [
-                      "util_ds_buf_2/OBUF_DS_N",
-                      "HRSTB_N"
+                      "OBUFDS_TRG_0/O",
+                      "HRSTB_P"
                     ]
                   },
-                  "util_ds_buf_2_OBUF_DS_P": {
+                  "OBUFDS_TRG_0_OB": {
                     "ports": [
-                      "util_ds_buf_2/OBUF_DS_P",
-                      "HRSTB_P"
+                      "OBUFDS_TRG_0/OB",
+                      "HRSTB_N"
                     ]
                   },
                   "util_vector_logic_1_Res": {
@@ -8882,19 +8866,144 @@
                   "xlconcat_2_dout": {
                     "ports": [
                       "xlconcat_2/dout",
-                      "util_ds_buf_2/OBUF_IN"
+                      "OBUFDS_TRG_0/I"
                     ]
                   }
                 }
               },
-              "util_ds_buf_3": {
-                "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
-                "xci_name": "top_block_util_ds_buf_3_2",
-                "xci_path": "ip/top_block_util_ds_buf_3_2/top_block_util_ds_buf_3_2.xci",
-                "inst_hier_path": "Config_wrapper/Const_wrapper/util_ds_buf_3",
-                "parameters": {
-                  "C_BUF_TYPE": {
-                    "value": "OBUFDS"
+              "OBUFDS_CONST_1": {
+                "vlnv": "xilinx.com:module_ref:OBUFDS_CONST:1.0",
+                "xci_name": "top_block_OBUFDS_CONST_0_1",
+                "xci_path": "ip/top_block_OBUFDS_CONST_0_1/top_block_OBUFDS_CONST_0_1.xci",
+                "inst_hier_path": "Config_wrapper/Const_wrapper/OBUFDS_CONST_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "OBUFDS_CONST",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "I": {
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "default_prop"
+                      },
+                      "PortWidth": {
+                        "value": "16",
+                        "value_src": "default_prop"
+                      }
+                    }
+                  },
+                  "O": {
+                    "direction": "O",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "OB": {
+                    "direction": "O",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  }
+                }
+              },
+              "OBUFDS_CONST_0": {
+                "vlnv": "xilinx.com:module_ref:OBUFDS_CONST:1.0",
+                "xci_name": "top_block_OBUFDS_CONST_0_0",
+                "xci_path": "ip/top_block_OBUFDS_CONST_0_0/top_block_OBUFDS_CONST_0_0.xci",
+                "inst_hier_path": "Config_wrapper/Const_wrapper/OBUFDS_CONST_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "OBUFDS_CONST",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "I": {
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "default_prop"
+                      },
+                      "PortWidth": {
+                        "value": "16",
+                        "value_src": "default_prop"
+                      }
+                    }
+                  },
+                  "O": {
+                    "direction": "O",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "OB": {
+                    "direction": "O",
+                    "parameters": {
+                      "CLK_DOMAIN": {
+                        "value": "top_block_clk_wiz_2_0_clk_out1",
+                        "value_src": "ip_prop"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      }
+                    }
                   }
                 }
               }
@@ -8912,6 +9021,30 @@
                   "HRSTB_P"
                 ]
               },
+              "OBUFDS_CONST_0_O": {
+                "ports": [
+                  "OBUFDS_CONST_0/O",
+                  "BX_SYNC_TRG_P"
+                ]
+              },
+              "OBUFDS_CONST_0_OB": {
+                "ports": [
+                  "OBUFDS_CONST_0/OB",
+                  "BX_SYNC_TRG_N"
+                ]
+              },
+              "OBUFDS_CONST_1_O": {
+                "ports": [
+                  "OBUFDS_CONST_1/O",
+                  "HBTRG_P"
+                ]
+              },
+              "OBUFDS_CONST_1_OB": {
+                "ports": [
+                  "OBUFDS_CONST_1/OB",
+                  "HBTRG_N"
+                ]
+              },
               "clk_in1_1": {
                 "ports": [
                   "clk_in1",
@@ -8921,33 +9054,9 @@
               "clk_wiz_2_clk_out1": {
                 "ports": [
                   "clk_wiz_2/clk_out1",
-                  "util_ds_buf_3/OBUF_IN",
                   "HRSTB_wrapper/In2",
-                  "util_ds_buf_4/OBUF_IN"
-                ]
-              },
-              "util_ds_buf_3_OBUF_DS_N": {
-                "ports": [
-                  "util_ds_buf_3/OBUF_DS_N",
-                  "BX_SYNC_TRG_N"
-                ]
-              },
-              "util_ds_buf_3_OBUF_DS_P": {
-                "ports": [
-                  "util_ds_buf_3/OBUF_DS_P",
-                  "BX_SYNC_TRG_P"
-                ]
-              },
-              "util_ds_buf_4_OBUF_DS_N": {
-                "ports": [
-                  "util_ds_buf_4/OBUF_DS_N",
-                  "HBTRG_N"
-                ]
-              },
-              "util_ds_buf_4_OBUF_DS_P": {
-                "ports": [
-                  "util_ds_buf_4/OBUF_DS_P",
-                  "HBTRG_P"
+                  "OBUFDS_CONST_1/I",
+                  "OBUFDS_CONST_0/I"
                 ]
               },
               "xlconstant_1_dout": {
@@ -10114,6 +10223,46 @@
             ]
           }
         }
+      },
+      "OBUFDS_CLKSOIN_0": {
+        "vlnv": "xilinx.com:module_ref:OBUFDS_CLKSOIN:1.0",
+        "xci_name": "top_block_OBUFDS_CLKSOIN_0_0",
+        "xci_path": "ip/top_block_OBUFDS_CLKSOIN_0_0/top_block_OBUFDS_CLKSOIN_0_0.xci",
+        "inst_hier_path": "OBUFDS_CLKSOIN_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "OBUFDS_CLKSOIN",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "320000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_block_clk_wiz_1_0_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "O": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "OB": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -10263,6 +10412,18 @@
           "SAMPA_I2C_wrapper/S_I2C_SCL"
         ]
       },
+      "OBUFDS_CLKSOIN_0_ON": {
+        "ports": [
+          "OBUFDS_CLKSOIN_0/OB",
+          "CLKSOIN_N"
+        ]
+      },
+      "OBUFDS_CLKSOIN_0_OP": {
+        "ports": [
+          "OBUFDS_CLKSOIN_0/O",
+          "CLKSOIN_P"
+        ]
+      },
       "PUSH_SW_1": {
         "ports": [
           "PUSH_SW",
@@ -10373,18 +10534,6 @@
           "appUnit/SO3"
         ]
       },
-      "SOCLK_wrapper_CLKSOIN_N": {
-        "ports": [
-          "SOCLK_wrapper/CLKSOIN_N",
-          "CLKSOIN_N"
-        ]
-      },
-      "SOCLK_wrapper_CLKSOIN_P": {
-        "ports": [
-          "SOCLK_wrapper/CLKSOIN_P",
-          "CLKSOIN_P"
-        ]
-      },
       "SO_receiver_trg": {
         "ports": [
           "SO_receiver/trg",
@@ -10430,9 +10579,9 @@
         "ports": [
           "clock_wrapper/clk_out2",
           "appUnit/clk",
-          "SOCLK_wrapper/In1",
           "SO_receiver/clk",
-          "reset/slowest_sync_clk1"
+          "reset/slowest_sync_clk1",
+          "OBUFDS_CLKSOIN_0/I"
         ]
       },
       "clock_wrapper_clk_out6": {

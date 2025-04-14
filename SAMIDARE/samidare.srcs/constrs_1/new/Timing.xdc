@@ -8,3 +8,5 @@
 #set_multicycle_path -from [get_pins {top_block_i/reset/rst_clk_wiz_1_320M1/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C}] -to [get_pins top_block_i/SO_receiver/idelay_top_v2_0/inst/IDELAYCTRL_inst0/RST] 2
 #set_multicycle_path -from [get_pins {top_block_i/reset/rst_clk_wiz_1_320M1/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C}] -to [get_pins top_block_i/SO_receiver/idelay_top_v2_0/inst/IDELAYCTRL_inst1_2/RST] 2
 #set_multicycle_path -from [get_pins {top_block_i/reset/rst_clk_wiz_1_320M1/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C}] -to [get_pins top_block_i/SO_receiver/idelay_top_v2_0/inst/IDELAYCTRL_inst3/RST] 2
+
+set_false_path -from [get_pins {top_block_i/reset/rst_clk_wiz_0_125M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C}]

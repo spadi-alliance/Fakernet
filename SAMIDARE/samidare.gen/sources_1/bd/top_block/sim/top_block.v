@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Mon Apr 14 23:00:59 2025
+//Date        : Tue Apr 15 05:07:29 2025
 //Host        : e16fpga01 running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target top_block.bd
 //Design      : top_block
@@ -200,18 +200,18 @@ module Const_wrapper_imp_V3PZLN
 
   wire [3:0]HRSTB_wrapper_HRSTB_N;
   wire [3:0]HRSTB_wrapper_HRSTB_P;
+  wire OBUFDS_CONST_0_O;
+  wire OBUFDS_CONST_0_OB;
+  wire OBUFDS_CONST_1_O;
+  wire OBUFDS_CONST_1_OB;
   wire clk_in1_1;
   wire clk_wiz_2_clk_out1;
-  wire [0:0]util_ds_buf_3_OBUF_DS_N;
-  wire [0:0]util_ds_buf_3_OBUF_DS_P;
-  wire [0:0]util_ds_buf_4_OBUF_DS_N;
-  wire [0:0]util_ds_buf_4_OBUF_DS_P;
   wire [0:0]xlconstant_1_dout;
 
-  assign BX_SYNC_TRG_N[0] = util_ds_buf_3_OBUF_DS_N;
-  assign BX_SYNC_TRG_P[0] = util_ds_buf_3_OBUF_DS_P;
-  assign HBTRG_N[0] = util_ds_buf_4_OBUF_DS_N;
-  assign HBTRG_P[0] = util_ds_buf_4_OBUF_DS_P;
+  assign BX_SYNC_TRG_N[0] = OBUFDS_CONST_0_OB;
+  assign BX_SYNC_TRG_P[0] = OBUFDS_CONST_0_O;
+  assign HBTRG_N[0] = OBUFDS_CONST_1_OB;
+  assign HBTRG_P[0] = OBUFDS_CONST_1_O;
   assign HRSTB_N[3:0] = HRSTB_wrapper_HRSTB_N;
   assign HRSTB_P[3:0] = HRSTB_wrapper_HRSTB_P;
   assign clk_in1_1 = clk_in1;
@@ -219,18 +219,18 @@ module Const_wrapper_imp_V3PZLN
        (.HRSTB_N(HRSTB_wrapper_HRSTB_N),
         .HRSTB_P(HRSTB_wrapper_HRSTB_P),
         .In2(clk_wiz_2_clk_out1));
+  top_block_OBUFDS_CONST_0_0 OBUFDS_CONST_0
+       (.I(clk_wiz_2_clk_out1),
+        .O(OBUFDS_CONST_0_O),
+        .OB(OBUFDS_CONST_0_OB));
+  top_block_OBUFDS_CONST_0_1 OBUFDS_CONST_1
+       (.I(clk_wiz_2_clk_out1),
+        .O(OBUFDS_CONST_1_O),
+        .OB(OBUFDS_CONST_1_OB));
   top_block_clk_wiz_2_0 clk_wiz_2
        (.clk_in1(clk_in1_1),
         .clk_out1(clk_wiz_2_clk_out1),
         .power_down(xlconstant_1_dout));
-  top_block_util_ds_buf_3_2 util_ds_buf_3
-       (.OBUF_DS_N(util_ds_buf_3_OBUF_DS_N),
-        .OBUF_DS_P(util_ds_buf_3_OBUF_DS_P),
-        .OBUF_IN(clk_wiz_2_clk_out1));
-  top_block_util_ds_buf_4_1 util_ds_buf_4
-       (.OBUF_DS_N(util_ds_buf_4_OBUF_DS_N),
-        .OBUF_DS_P(util_ds_buf_4_OBUF_DS_P),
-        .OBUF_IN(clk_wiz_2_clk_out1));
   top_block_xlconstant_1_4 xlconstant_1
        (.dout(xlconstant_1_dout));
 endmodule
@@ -244,18 +244,18 @@ module HRSTB_wrapper_imp_YQOCHV
   input [0:0]In2;
 
   wire [0:0]In2_1;
-  wire [3:0]util_ds_buf_2_OBUF_DS_N;
-  wire [3:0]util_ds_buf_2_OBUF_DS_P;
+  wire [3:0]OBUFDS_TRG_0_O;
+  wire [3:0]OBUFDS_TRG_0_OB;
   wire [0:0]util_vector_logic_1_Res;
   wire [3:0]xlconcat_2_dout;
 
-  assign HRSTB_N[3:0] = util_ds_buf_2_OBUF_DS_N;
-  assign HRSTB_P[3:0] = util_ds_buf_2_OBUF_DS_P;
+  assign HRSTB_N[3:0] = OBUFDS_TRG_0_OB;
+  assign HRSTB_P[3:0] = OBUFDS_TRG_0_O;
   assign In2_1 = In2[0];
-  top_block_util_ds_buf_2_0 util_ds_buf_2
-       (.OBUF_DS_N(util_ds_buf_2_OBUF_DS_N),
-        .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
-        .OBUF_IN(xlconcat_2_dout));
+  top_block_OBUFDS_TRG_0_1 OBUFDS_TRG_0
+       (.I(xlconcat_2_dout),
+        .O(OBUFDS_TRG_0_O),
+        .OB(OBUFDS_TRG_0_OB));
   top_block_util_vector_logic_1_3 util_vector_logic_1
        (.Op1(In2_1),
         .Res(util_vector_logic_1_Res));
@@ -573,34 +573,6 @@ module SAMPA_I2C_wrapper_imp_VOP84W
         .t(axi_iic_0_sda_t));
 endmodule
 
-module SOCLK_wrapper_imp_FLFIZ9
-   (CLKSOIN_N,
-    CLKSOIN_P,
-    In1);
-  output [3:0]CLKSOIN_N;
-  output [3:0]CLKSOIN_P;
-  input [0:0]In1;
-
-  wire [0:0]In1_1;
-  wire [3:0]util_ds_buf_0_OBUF_DS_N;
-  wire [3:0]util_ds_buf_0_OBUF_DS_P;
-  wire [3:0]xlconcat_0_dout;
-
-  assign CLKSOIN_N[3:0] = util_ds_buf_0_OBUF_DS_N;
-  assign CLKSOIN_P[3:0] = util_ds_buf_0_OBUF_DS_P;
-  assign In1_1 = In1[0];
-  top_block_util_ds_buf_0_1 util_ds_buf_0
-       (.OBUF_DS_N(util_ds_buf_0_OBUF_DS_N),
-        .OBUF_DS_P(util_ds_buf_0_OBUF_DS_P),
-        .OBUF_IN(xlconcat_0_dout));
-  top_block_xlconcat_0_0 xlconcat_0
-       (.In0(In1_1),
-        .In1(In1_1),
-        .In2(In1_1),
-        .In3(In1_1),
-        .dout(xlconcat_0_dout));
-endmodule
-
 module SO_receiver_imp_J5HCEK
    (IBUF_OUT0,
     IBUF_OUT1,
@@ -870,6 +842,7 @@ module appUnit_imp_1BHH9Z2
   wire data_processor_0_last_data;
   wire [3:0]data_processor_0_req;
   wire [3:0]data_processor_0_samples_o;
+  wire data_processor_0_valid;
   wire [31:0]data_sender_wrapper_M_AXIS_data_TDATA;
   wire data_sender_wrapper_M_AXIS_data_TLAST;
   wire data_sender_wrapper_M_AXIS_data_TREADY;
@@ -954,7 +927,8 @@ module appUnit_imp_1BHH9Z2
         .req(data_processor_0_req),
         .samples_i(trigger_manager_0_samples),
         .samples_o(data_processor_0_samples_o),
-        .trg(trigger_manager_0_trg));
+        .trg(trigger_manager_0_trg),
+        .valid(data_processor_0_valid));
   data_sender_wrapper_imp_165VMFZ data_sender_wrapper
        (.M_AXIS_data_tdata(data_sender_wrapper_M_AXIS_data_TDATA),
         .M_AXIS_data_tlast(data_sender_wrapper_M_AXIS_data_TLAST),
@@ -973,7 +947,7 @@ module appUnit_imp_1BHH9Z2
         .data_ack(event_builder_v0_1_0_data_ack),
         .data_i(data_processor_0_data_o),
         .data_o(event_builder_v0_1_0_data_o),
-        .data_wr_i(1'b0),
+        .data_wr_i(data_processor_0_valid),
         .data_wr_o(event_builder_v0_1_0_data_wr_o),
         .empty({1'b0,1'b0,1'b0,1'b0}),
         .full_i(data_sender_wrapper_full),
@@ -4545,7 +4519,7 @@ clkwiz0:
 5: 125MHz
 clkwiz1:
 1: 320MHz */
-(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=115,numReposBlks=85,numNonXlnxBlks=0,numHierBlks=30,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=29,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=113,numReposBlks=84,numNonXlnxBlks=0,numHierBlks=29,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=34,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=24,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=4,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=20,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_board_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "top_block.hwdef" *) 
 module top_block
    (BASECLK,
     BX_SYNC_TRG_N,
@@ -4589,8 +4563,8 @@ module top_block
   output [0:0]BX_SYNC_TRG_P;
   output [0:0]CG0;
   output [0:0]CG1;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_N, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_N;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_P, FREQ_HZ 320000000:320000000:320000000:320000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0:0.0:0.0:0.0" *) output [3:0]CLKSOIN_P;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output [3:0]CLKSOIN_N;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLKSOIN_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLKSOIN_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output [3:0]CLKSOIN_P;
   output [6:0]CLK_CFG;
   output [0:0]CTS;
   input [3:0]DIP_SW;
@@ -4636,6 +4610,8 @@ module top_block
   wire [3:0]DIP_SW_1;
   wire Net;
   wire Net1;
+  wire [3:0]OBUFDS_CLKSOIN_0_ON;
+  wire [3:0]OBUFDS_CLKSOIN_0_OP;
   wire PUSH_SW_1;
   wire [31:0]S03_AXI_1_ARADDR;
   wire [2:0]S03_AXI_1_ARPROT;
@@ -4711,8 +4687,6 @@ module top_block
   wire [10:0]SO3N_1;
   wire [10:0]SO3P_1;
   wire [10:0]SO3_1;
-  wire [3:0]SOCLK_wrapper_CLKSOIN_N;
-  wire [3:0]SOCLK_wrapper_CLKSOIN_P;
   wire [31:0]SO_receiver_m00_axi_ARADDR;
   wire [2:0]SO_receiver_m00_axi_ARPROT;
   wire [0:0]SO_receiver_m00_axi_ARREADY;
@@ -4860,8 +4834,8 @@ module top_block
   assign BX_SYNC_TRG_P[0] = Config_wrapper_BX_SYNC_TRG_P;
   assign CG0[0] = Config_wrapper_CG0;
   assign CG1[0] = Config_wrapper_CG1;
-  assign CLKSOIN_N[3:0] = SOCLK_wrapper_CLKSOIN_N;
-  assign CLKSOIN_P[3:0] = SOCLK_wrapper_CLKSOIN_P;
+  assign CLKSOIN_N[3:0] = OBUFDS_CLKSOIN_0_ON;
+  assign CLKSOIN_P[3:0] = OBUFDS_CLKSOIN_0_OP;
   assign CLK_CFG[6:0] = xlconstant_0_dout;
   assign CTS[0] = Config_wrapper_CTS;
   assign DIP_SW_1 = DIP_SW[3:0];
@@ -4924,6 +4898,10 @@ module top_block
         .m00_axi_wready(S03_AXI_1_WREADY),
         .m00_axi_wstrb(S03_AXI_1_WSTRB),
         .m00_axi_wvalid(S03_AXI_1_WVALID));
+  top_block_OBUFDS_CLKSOIN_0_0 OBUFDS_CLKSOIN_0
+       (.I(clk_wiz_1_clk_out1),
+        .O(OBUFDS_CLKSOIN_0_OP),
+        .OB(OBUFDS_CLKSOIN_0_ON));
   SAMPA_I2C_wrapper_imp_VOP84W SAMPA_I2C_wrapper
        (.S_I2C_SCL(S_I2C_SCL),
         .S_I2C_SDA(S_I2C_SDA),
@@ -4968,10 +4946,6 @@ module top_block
         .m00_axi_wstrb(SAMPA_I2C_wrapper_m00_axi_WSTRB),
         .m00_axi_wvalid(SAMPA_I2C_wrapper_m00_axi_WVALID),
         .s_axi_aclk(clk_wiz_0_clk_out1));
-  SOCLK_wrapper_imp_FLFIZ9 SOCLK_wrapper
-       (.CLKSOIN_N(SOCLK_wrapper_CLKSOIN_N),
-        .CLKSOIN_P(SOCLK_wrapper_CLKSOIN_P),
-        .In1(clk_wiz_1_clk_out1));
   SO_receiver_imp_J5HCEK SO_receiver
        (.IBUF_OUT0(SO0_1),
         .IBUF_OUT1(SO1_1),
@@ -6603,6 +6577,8 @@ module trg_en_imp_1M4NTOV
   output [0:0]m00_axi_wvalid;
   input rst;
 
+  wire [3:0]OBUFDS_TRG_0_O;
+  wire [3:0]OBUFDS_TRG_0_OB;
   wire [31:0]SAMPA_TRG_EN_v1_0_0_m00_axi_ARADDR;
   wire [2:0]SAMPA_TRG_EN_v1_0_0_m00_axi_ARPROT;
   wire [0:0]SAMPA_TRG_EN_v1_0_0_m00_axi_ARREADY;
@@ -6628,8 +6604,6 @@ module trg_en_imp_1M4NTOV
   wire init_trg_1;
   wire m00_axi_aresetn_1;
   wire rst_1;
-  wire [3:0]util_ds_buf_1_OBUF_DS_N;
-  wire [3:0]util_ds_buf_1_OBUF_DS_P;
 
   assign SAMPA_TRG_EN_v1_0_0_m00_axi_ARREADY = m00_axi_arready[0];
   assign SAMPA_TRG_EN_v1_0_0_m00_axi_AWREADY = m00_axi_awready[0];
@@ -6639,8 +6613,8 @@ module trg_en_imp_1M4NTOV
   assign SAMPA_TRG_EN_v1_0_0_m00_axi_RRESP = m00_axi_rresp[1:0];
   assign SAMPA_TRG_EN_v1_0_0_m00_axi_RVALID = m00_axi_rvalid[0];
   assign SAMPA_TRG_EN_v1_0_0_m00_axi_WREADY = m00_axi_wready[0];
-  assign TRG_N[3:0] = util_ds_buf_1_OBUF_DS_N;
-  assign TRG_P[3:0] = util_ds_buf_1_OBUF_DS_P;
+  assign TRG_N[3:0] = OBUFDS_TRG_0_OB;
+  assign TRG_P[3:0] = OBUFDS_TRG_0_O;
   assign clk_1 = clk;
   assign init_trg_1 = init_trg;
   assign m00_axi_araddr[31:0] = SAMPA_TRG_EN_v1_0_0_m00_axi_ARADDR;
@@ -6656,6 +6630,10 @@ module trg_en_imp_1M4NTOV
   assign m00_axi_wstrb[3:0] = SAMPA_TRG_EN_v1_0_0_m00_axi_WSTRB;
   assign m00_axi_wvalid[0] = SAMPA_TRG_EN_v1_0_0_m00_axi_WVALID;
   assign rst_1 = rst;
+  top_block_OBUFDS_TRG_0_0 OBUFDS_TRG_0
+       (.I(TRG_MODULE_0_trg),
+        .O(OBUFDS_TRG_0_O),
+        .OB(OBUFDS_TRG_0_OB));
   top_block_SAMPA_TRG_EN_v1_0_0_0 SAMPA_TRG_EN_v1_0_0
        (.m00_axi_aclk(clk_1),
         .m00_axi_araddr(SAMPA_TRG_EN_v1_0_0_m00_axi_ARADDR),
@@ -6686,10 +6664,6 @@ module trg_en_imp_1M4NTOV
         .init_trg(init_trg_1),
         .rst(rst_1),
         .trg(TRG_MODULE_0_trg));
-  top_block_util_ds_buf_1_1 util_ds_buf_1
-       (.OBUF_DS_N(util_ds_buf_1_OBUF_DS_N),
-        .OBUF_DS_P(util_ds_buf_1_OBUF_DS_P),
-        .OBUF_IN(TRG_MODULE_0_trg));
 endmodule
 
 module wr_en_gate_imp_6TUUSW

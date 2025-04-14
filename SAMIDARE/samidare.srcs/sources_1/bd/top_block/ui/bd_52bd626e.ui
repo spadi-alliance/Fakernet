@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.45119",
-   "Default View_TopLeft":"-189,-94",
+   "Default View_ScaleFactor":"0.893312",
+   "Default View_TopLeft":"86,-1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -22,9 +22,9 @@ preplace port port-id_SFP_CLK_N -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
 preplace port port-id_SFP0TXN -pg 1 -lvl 4 -x 1580 -y 150 -defaultsOSRD
 preplace port port-id_SFP0RXP -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
 preplace inst fakernet -pg 1 -lvl 2 -x 850 -y 210 -defaultsOSRD
-preplace inst data_receiver_v1_0_0 -pg 1 -lvl 1 -x 220 -y 510 -defaultsOSRD
 preplace inst native_to_axi_lite_v_0 -pg 1 -lvl 3 -x 1354 -y 550 -defaultsOSRD
 preplace inst data_gen_user_0 -pg 1 -lvl 1 -x 220 -y 310 -defaultsOSRD
+preplace inst data_receiver_v1_0_0 -pg 1 -lvl 1 -x 220 -y 510 -defaultsOSRD
 preplace netloc clk25_in_0_1 1 0 2 20J 160 NJ
 preplace netloc clk_in_0_1 1 0 3 30 210 430 590 NJ
 preplace netloc data_receiver_v1_0_0_event_commit 1 1 1 400 220n
