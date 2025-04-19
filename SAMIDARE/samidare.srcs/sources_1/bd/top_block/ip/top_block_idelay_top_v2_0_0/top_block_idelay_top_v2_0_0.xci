@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "top_block_idelay_top_v2_0_0",
-    "cell_name": "SO_receiver/idelay_top_v2_0",
+    "cell_name": "idelay_top_v2_0",
     "component_reference": "xilinx.com:module_ref:idelay_top_v2:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../samidare.gen/sources_1/bd/top_block/ip/top_block_idelay_top_v2_0_0",
@@ -12,13 +12,23 @@
         "pol1": [ { "value": "\"00100011010\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "pol2": [ { "value": "\"01000100001\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "pol3": [ { "value": "\"10111110101\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "pol": [ { "value": "\"10111110101010001000010010001101011100000010\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "init_pol": [ { "value": "\"1010110101\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "init_pattern_p": [ { "value": "\"1010101011001100101010101100110\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "init_pattern_n": [ { "value": "\"1010101001100110101010100110011\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "IODELAY_GROUP_BUS": [ { "value": "\"00010110\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "top_block_idelay_top_v2_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "pol0": [ { "value": "\"11100000010\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "pol1": [ { "value": "\"00100011010\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "pol2": [ { "value": "\"01000100001\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
-        "pol3": [ { "value": "\"10111110101\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+        "pol3": [ { "value": "\"10111110101\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "pol": [ { "value": "\"10111110101010001000010010001101011100000010\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "init_pol": [ { "value": "\"1010110101\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "init_pattern_p": [ { "value": "\"1010101011001100101010101100110\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "init_pattern_n": [ { "value": "\"1010101001100110101010100110011\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "IODELAY_GROUP_BUS": [ { "value": "\"00010110\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "kintexuplus" } ],

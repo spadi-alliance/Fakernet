@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "idelay_top_v2,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "top_block_idelay_top_v2_0_0,idelay_top_v2,{}" *)
-(* CORE_GENERATION_INFO = "top_block_idelay_top_v2_0_0,idelay_top_v2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=idelay_top_v2,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,pol0=11100000010,pol1=00100011010,pol2=01000100001,pol3=10111110101}" *)
+(* CORE_GENERATION_INFO = "top_block_idelay_top_v2_0_0,idelay_top_v2,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=idelay_top_v2,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,pol0=11100000010,pol1=00100011010,pol2=01000100001,pol3=10111110101,pol=10111110101010001000010010001101011100000010,init_pol=1010110101,init_pattern_p=1010101011001100101010101100110,init_pattern_n=1010101001100110101010100110011,IODELAY_GROUP_BUS=00010110}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_block_idelay_top_v2_0_0 (
@@ -123,7 +123,12 @@ output wire trg_en;
     .pol0(11'B11100000010),
     .pol1(11'B00100011010),
     .pol2(11'B01000100001),
-    .pol3(11'B10111110101)
+    .pol3(11'B10111110101),
+    .pol(44'B10111110101010001000010010001101011100000010),
+    .init_pol(10'B1010110101),
+    .init_pattern_p(31'B1010101011001100101010101100110),
+    .init_pattern_n(31'B1010101001100110101010100110011),
+    .IODELAY_GROUP_BUS(8'B00010110)
   ) inst (
     .clk(clk),
     .idelay_refclk(idelay_refclk),

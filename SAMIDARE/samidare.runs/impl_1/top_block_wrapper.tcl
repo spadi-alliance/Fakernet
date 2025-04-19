@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Timing 38-316}  -suppress 
 set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 

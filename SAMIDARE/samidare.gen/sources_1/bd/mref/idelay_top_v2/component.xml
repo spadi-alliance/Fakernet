@@ -33,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>61967a91</spirit:value>
+            <spirit:value>00be85f3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>61967a91</spirit:value>
+            <spirit:value>00be85f3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -523,6 +523,31 @@
         <spirit:displayName>Pol3</spirit:displayName>
         <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pol3" spirit:bitStringLength="11">&quot;10111110101&quot;</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="std_logic_vector">
+        <spirit:name>pol</spirit:name>
+        <spirit:displayName>Pol</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pol" spirit:dependency="{spirit:decode(id(&apos;MODELPARAM_VALUE.pol3&apos;)),spirit:decode(id(&apos;MODELPARAM_VALUE.pol2&apos;)),spirit:decode(id(&apos;MODELPARAM_VALUE.pol1&apos;)),spirit:decode(id(&apos;MODELPARAM_VALUE.pol0&apos;))}" spirit:bitStringLength="44">&quot;10111110101010001000010010001101011100000010&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>init_pol</spirit:name>
+        <spirit:displayName>Init Pol</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.init_pol" spirit:bitStringLength="10">&quot;1010110101&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>init_pattern_p</spirit:name>
+        <spirit:displayName>Init Pattern P</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.init_pattern_p" spirit:bitStringLength="31">&quot;1010101011001100101010101100110&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>init_pattern_n</spirit:name>
+        <spirit:displayName>Init Pattern N</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.init_pattern_n" spirit:bitStringLength="31">&quot;1010101001100110101010100110011&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>IODELAY_GROUP_BUS</spirit:name>
+        <spirit:displayName>Iodelay Group Bus</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IODELAY_GROUP_BUS" spirit:dependency="{&quot;00&quot;,&quot;01&quot;,&quot;01&quot;,&quot;10&quot;}" spirit:bitStringLength="8">&quot;00010110&quot;</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
@@ -531,7 +556,7 @@
       <spirit:file>
         <spirit:name>xgui/idelay_top_v2_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_c0bbc043</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_9e6b51a4</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -559,6 +584,31 @@
       <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.pol3" spirit:bitStringLength="11">&quot;10111110101&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>pol</spirit:name>
+      <spirit:displayName>Pol</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.pol" spirit:bitStringLength="44">&quot;10111110101010001000010010001101011100000010&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>init_pol</spirit:name>
+      <spirit:displayName>Init Pol</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.init_pol" spirit:bitStringLength="10">&quot;1010110101&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>init_pattern_p</spirit:name>
+      <spirit:displayName>Init Pattern P</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.init_pattern_p" spirit:bitStringLength="31">&quot;1010101011001100101010101100110&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>init_pattern_n</spirit:name>
+      <spirit:displayName>Init Pattern N</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.init_pattern_n" spirit:bitStringLength="31">&quot;1010101001100110101010100110011&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>IODELAY_GROUP_BUS</spirit:name>
+      <spirit:displayName>Iodelay Group Bus</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.IODELAY_GROUP_BUS" spirit:bitStringLength="8">&quot;00010110&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">idelay_top_v2_v1_0</spirit:value>
     </spirit:parameter>
@@ -578,7 +628,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-04-14T16:48:36Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-04-19T06:01:31Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

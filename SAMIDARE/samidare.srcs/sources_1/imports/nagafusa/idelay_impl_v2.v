@@ -7,6 +7,7 @@
 // The SPECIAL parameter allows insertion of extra processing for a special bit (e.g. bit index 10).
 module idelay_impl_v2 #(
     parameter IODELAY_GROUP_NAME = "default_group",
+    parameter IODELAY_GROUP_ID = 2'b00,
     parameter DEFAULT_DELAY = 0,        // Default initial delay tap value
     // Parameters for the IDelay state machine
     parameter integer kNumTaps         = 512,
@@ -66,14 +67,14 @@ module idelay_impl_v2 #(
   wire cascade_wire_c;// end -> middle
   wire cascade_wire_d;// middle -> master
   
-  (*mark_debug = "true"*)reg [8:0] current_idelay;
-  (*mark_debug = "true"*)wire [8:0] check_delay;;
-  wire [8:0] current_idelay_master;
-  wire [8:0] current_idelay_slave_middle;
-  wire [8:0] current_idelay_slave_end;
-  wire [8:0] check_delay_master;
-  wire [8:0] check_delay_slave_middle;
-  wire [8:0] check_delay_slave_end;
+  (*mark_debug = "true"*) reg [8:0] current_idelay;
+  (*mark_debug = "true"*) wire [8:0] check_delay;;
+  (*mark_debug = "true"*) wire [8:0] current_idelay_master;
+  (*mark_debug = "true"*) wire [8:0] current_idelay_slave_middle;
+  (*mark_debug = "true"*) wire [8:0] current_idelay_slave_end;
+  (*mark_debug = "true"*) wire [8:0] check_delay_master;
+  (*mark_debug = "true"*) wire [8:0] check_delay_slave_middle;
+  (*mark_debug = "true"*) wire [8:0] check_delay_slave_end;
   
   
 //  assign current_idelay_master = (current_idelay[9]==1'b0) ? current_idelay[8:0]:
@@ -86,8 +87,14 @@ module idelay_impl_v2 #(
 //    assign check_delay =   
   
   // Instantiate the IBUFDS
-  (*DONT_TOUCH="TRUE"*) wire buf_data;
-  (* IODELAY_GROUP = IODELAY_GROUP_NAME, SIM_DEVICE = "ULTRASCALE_PLUS" *)
+  wire buf_data;
+  
+
+localparam IODELAY_GROUP_NAME_VAL = (IODELAY_GROUP_ID==2'b00)?"SO0":
+                                     (IODELAY_GROUP_ID==2'b01)?"SO1_2":
+                                     "SO3";
+//  (* IODELAY_GROUP = IODELAY_GROUP_NAME, SIM_DEVICE = "ULTRASCALE_PLUS" *)
+  (* IODELAY_GROUP = IODELAY_GROUP_NAME_VAL, SIM_DEVICE = "ULTRASCALE_PLUS" *)
   IBUFDS #(
     .IOSTANDARD("SLVS_400_18")
   ) u_ibufds(
@@ -95,12 +102,18 @@ module idelay_impl_v2 #(
     .I(data_in_p),
     .IB(data_in_n)
   );
+  wire buf_data_i;
+  // The output is optionally inverted by pol.
+  assign data_out = (pol)? ~raw_data_out:raw_data_out;
+  assign buf_data_i = (pol) ? ~buf_data:buf_data;
 //  assign raw_data_out = buf_data;
   IDELAYE3 #(
     .CASCADE("MASTER"),
 //    .CASCADE("NONE"),
     .DELAY_FORMAT("COUNT"),
     .DELAY_SRC("IDATAIN"),//IDATAIN is used to connect input pins
+//    .DELAY_TYPE("FIXED"),
+//    .DELAY_TYPE("VARIABLE"),
     .DELAY_TYPE("VAR_LOAD"),
     .DELAY_VALUE(DEFAULT_DELAY),
     .IS_CLK_INVERTED(1'b0),
@@ -118,9 +131,11 @@ module idelay_impl_v2 #(
 //    .CE(1'b0),
     .CLK(clk),
     .CNTVALUEIN(current_idelay),
+//    .CNTVALUEIN('b0),
     .CNTVALUEOUT(check_delay_master),       // Optionally monitor current tap value
-    .DATAIN(buf_data),        // Unused if using IDATAIN
-    .IDATAIN(1'b0),
+//    .DATAIN(buf_data_i),        // Unused if using IDATAIN
+    .DATAIN(1'b0),        // Unused if using IDATAIN
+    .IDATAIN(buf_data),
     .DATAOUT(raw_data_out),
     .EN_VTC(1'b0),
     .INC(1'b0),
@@ -130,6 +145,8 @@ module idelay_impl_v2 #(
   ODELAYE3 #(
     .CASCADE("SLAVE_MIDDLE"),
     .DELAY_FORMAT("COUNT"),
+//    .DELAY_TYPE("FIXED"),
+//    .DELAY_TYPE("VARIABLE"),
     .DELAY_TYPE("VAR_LOAD"),
     .DELAY_VALUE(DEFAULT_DELAY),
     .IS_CLK_INVERTED(1'b0),
@@ -145,6 +162,7 @@ module idelay_impl_v2 #(
 //    .CE(1'b0),
     .CLK(clk),
     .CNTVALUEIN(current_idelay),
+//    .CNTVALUEIN('b0),
     .CNTVALUEOUT(check_delay_slave_middle),       // Optionally monitor current tap value
     .ODATAIN(),       // Unused in slave
     .DATAOUT(cascade_wire_d),
@@ -157,8 +175,10 @@ module idelay_impl_v2 #(
   IDELAYE3 #(
     .CASCADE("SLAVE_END"),
     .DELAY_FORMAT("COUNT"),
-    .DELAY_SRC("DATAIN"),
-    .DELAY_TYPE("VAR_LOAD"),
+    .DELAY_SRC("IDATAIN"),
+//     .DELAY_TYPE("FIXED"),
+//    .DELAY_TYPE("VARIABLE"),
+   .DELAY_TYPE("VAR_LOAD"),
     .DELAY_VALUE(DEFAULT_DELAY),
     .IS_CLK_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),
@@ -173,6 +193,7 @@ module idelay_impl_v2 #(
 //    .CE(1'b0),
     .CLK(clk),
     .CNTVALUEIN(current_idelay),
+//    .CNTVALUEIN('b0),
 //    .CNTVALUEIN(),
     .CNTVALUEOUT(check_delay_slave_end),       // Optionally monitor current tap value
 //    .CNTVALUEOUT(),       // Optionally monitor current tap value
@@ -186,62 +207,25 @@ module idelay_impl_v2 #(
     .LOAD(ld),
     .RST(reset)
   );
-  
-  //signal to see: 
-  //current_idelay_master. current_idelay_slave, ld, 
-  
-//  IDELAYE3 #(//impl for not cascade mode
-//    .CASCADE("NONE"),
-//    .DELAY_FORMAT("COUNT"),
-//    .DELAY_SRC("IDATAIN"),
-//    .DELAY_TYPE("VAR_LOAD"),
-//    .DELAY_VALUE(DEFAULT_DELAY),
-//    .IS_CLK_INVERTED(1'b0),
-//    .IS_RST_INVERTED(1'b0),
-//    .REFCLK_FREQUENCY(200.0),
-//    .SIM_DEVICE("ULTRASCALE_PLUS"),
-//    .UPDATE_MODE("MANUAL")
-//  ) idelay_slave (
-//    .CASC_IN(1'b0),
-//    .CASC_OUT(),          // Not used if not cascading
-//    .CASC_RETURN(1'b0),
-////    .CE(inc_ce),
-//    .CE(1'b0),
-//    .CLK(clk),
-//    .CNTVALUEIN(current_idelay),
-//    .CNTVALUEOUT(check_delay),       // Optionally monitor current tap value
-//    .DATAIN(1'b0),        // Unused if using IDATAIN
-//    .IDATAIN(buf_data),
-//    .DATAOUT(raw_data_out),
-//    .EN_VTC(1'b0),
-////    .INC(delay_inc),
-//    .INC(1'b0),
-//    .LOAD(ld),
-//    .RST(reset)
-//  );
-  // The output is optionally inverted by pol.
-  assign data_out = (pol) ? ~raw_data_out : raw_data_out;
-  // ====================================================
-  // Special state machine for special adjustment (when SPECIAL==1)
-  // ====================================================
   // State encoding for special adjustment:
-  localparam IDLE        = 4'b0001;
-  localparam DETECT_EDGE = 4'b0010;
-  localparam CHECK_EDGE  = 4'b0100;
-  localparam DONE        = 4'b1000;
+  localparam IDLE        = 0;
+  localparam DETECT_EDGE = 1;
+  localparam CHECK_EDGE  = 2;
+  localparam INC_DELAY   = 3;
+  localparam DONE        = 4;
   
   assign adjust_done = (state==DONE)? 1'b1: 1'b0;
   // Registers for special state machine
   (*mark_debug="true", keep = "true"*)reg [3:0] state;
-  (*mark_debug = "true"*)reg [7:0] cycle_counter;
+  (*mark_debug = "true"*)reg [4:0] cycle_counter;
   (*mark_debug = "true"*)reg [7:0] trial_counter;
   reg [7:0] error_count;
   (*mark_debug = "true"*)reg [4:0] edge_idelay;     // idelay value at first rising edge
   (*mark_debug="true"*)reg [4:0] max_cnt;         // maximum error count observed
   reg prev_data;             // Previous value of data_out
   // Debug: store the trial_counter value for each idelay value.
-  (*mark_debug="true"*)reg [9:0] trial_counter_history [1023:0];
- 
+  (*mark_debug="true"*)reg [511:0] trial_counter_history;
+  (*mark_debug="true"*)reg [4:0] edge_pos;
   always @(posedge clk or posedge reset) begin
     if (reset) begin
       state   <= IDLE;
@@ -255,43 +239,44 @@ module idelay_impl_v2 #(
       state           <= IDLE;  // output state
     end else begin
       prev_data <= data_out;  // Use data_out for edge detection
+      cycle_counter <= cycle_counter + 1;
       case (state)
         IDLE: begin
-          state <= IDLE;
           if (init) begin
             state <= DETECT_EDGE;
-            cycle_counter <= 0;
+//            cycle_counter <= 0;
+            trial_counter_history <= 'b0;
             max_cnt       <= 0;
-            state         <= DETECT_EDGE;
           end
         end
         DETECT_EDGE: begin
-          cycle_counter <= cycle_counter + 1;
+//          cycle_counter <= cycle_counter + 1;
           // Detect the first rising edge (transition from 0 to 1) using data_out.
           if ((prev_data == 1'b0) && (data_out == 1'b1)) 
               begin
 //                edge_idelay <= current_idelay;
-                cycle_counter <= 0;
+//                cycle_counter <= 0;
                 trial_counter <= 0;
                 error_count   <= 0;
+                edge_pos <= cycle_counter;
                 state         <= CHECK_EDGE;
               end
         end
         CHECK_EDGE: begin
-          cycle_counter <= cycle_counter + 1;
-          if (cycle_counter == 31) begin
+          if (cycle_counter == edge_pos) begin
             // In a 2-cycle window, check if the pattern is 0->1.
             if (!((prev_data == 1'b0) && (data_out == 1'b1))) begin
               error_count <= error_count + 1;
             end
             trial_counter <= trial_counter + 1;
-            cycle_counter <= 0;
+//            cycle_counter <= 0;
             if (trial_counter == 100) begin
               // Save trial_counter for debugging.
-              trial_counter_history[current_idelay] <= error_count;
+              if(error_count > 0) begin
+                trial_counter_history[current_idelay] <= 1'b1;
+              end
               if (error_count > max_cnt) begin
                 max_cnt     <= error_count;
-//                edge_idelay <= current_idelay;
               end
               // The inc_ce and delay_inc pulses are generated in a separate always block.
               // Increment the delay value for next evaluation.
@@ -302,17 +287,23 @@ module idelay_impl_v2 #(
               if (current_idelay >= (kNumTaps - 1)) begin
                 state         <= DONE;
               end else begin        
-                state <= CHECK_EDGE;
+                state <= INC_DELAY;
               end 
-            end
+            end// trial_counter==100
+          end//cycle_counter==edge_pos
+        end
+        INC_DELAY: begin
+          if ((check_delay_master != current_idelay)||(check_delay_slave_middle != current_idelay)||(check_delay_slave_end != current_idelay)) begin
+          end else begin
+            state <= CHECK_EDGE;
           end
         end
         DONE: begin
           // If max_cnt is 0, set current_idelay to kNumTaps/2;
           // otherwise, set idelay to the value farthest from edge_idelay.
           if (max_cnt == 0)
-            current_idelay <= kNumTaps;
-          else if (edge_idelay < (kNumTaps))
+            current_idelay <= kNumTaps/2;
+          else if (edge_idelay < (kNumTaps/2))
             current_idelay <= kNumTaps - 1;
           else
             current_idelay <= 0;
@@ -323,31 +314,6 @@ module idelay_impl_v2 #(
       endcase
     end
   end
-  // -------------------------------------------------------------------
-  // Generate control pulses for IDELAYE3 based on special state machine.
-  // When trial_counter reaches 100, generate a one-cycle pulse (inc_ce and delay_inc high)
-  // to increment the delay value by one.
-  // -------------------------------------------------------------------
-//  always @(posedge clk or posedge reset) begin
-//    if (reset) begin
-//      inc_ce <= 1'b0;
-//      delay_inc <= 1'b0;
-//    end else begin
-//      if (SPECIAL) begin
-//        if (trial_counter == 100 && cycle_counter == 31) begin
-//          inc_ce <= 1'b1;
-//          delay_inc <= 1'b1; // '1' indicates increment.
-//        end else begin
-//          inc_ce <= 1'b0;
-//          delay_inc <= 1'b0;
-//        end
-//      end else begin
-//        // In non-special mode, control signals may be driven by another state machine.
-//        inc_ce <= 1'b0;
-//        delay_inc <= 1'b0;
-//      end
-//    end
-//  end
 //  reg [8:0] internal_delay; // Simulated current delay tap value.
   always @(posedge clk or posedge reset) begin
     if (reset) begin
@@ -360,7 +326,7 @@ module idelay_impl_v2 #(
 //        internal_delay <= 9'b0;
 //      end else 
       if ((check_delay_master != current_idelay)||(check_delay_slave_middle != current_idelay)||(check_delay_slave_end != current_idelay)) begin
-        inc_ce <= 1'b1;
+        inc_ce <= 1'b0;
 //        delay_inc <= 1'b1;
         ld <= 1'b1;
 //        internal_delay <= internal_delay + 1;

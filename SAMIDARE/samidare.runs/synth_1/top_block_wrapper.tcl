@@ -75,6 +75,7 @@ set_param power.enableCarry8RouteBelPower 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param chipscope.maxJobs 8
 set_param power.BramSDPPropagationFix 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Timing 38-316}  -suppress 
 set_msg_config  -id {Timing 38-316}  -string {{WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_FMP_Inst/u_RD_FIFO' at clock pin 'rd_clk' is different from the actual clock period '6.667', this can lead to different synthesis results.}}  -suppress 
@@ -117,15 +118,16 @@ read_verilog -library xil_defaultlib {
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/I2C_Controller_v1_0.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0_M00_AXI.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/init_i2c_1_0/hdl/init_i2c_v1_0.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/data_processor.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/xpm_fifo_wrapper.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0/hdl/data_sender_v1_0_M00_AXIS.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/data_sender_1_0/hdl/data_sender_v1_0.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/trigger_manager.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/event_builder_v0_1.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/das_rx.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/event_builder_v0_1.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/data_processor.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/RESET_INST.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/mii_init.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_clocking.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_reset_sync_ex.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_resets.v
@@ -133,19 +135,21 @@ read_verilog -library xil_defaultlib {
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_sync_block_ex.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_tx_elastic_buffer.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/gig_ethernet_pcs_pma_0_example_design.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/reg_switch.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/native_to_axi_lite_v1_0_M00_AXI.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/new/native_to_axi_lite_v1_0.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0/hdl/data_receiver_v1_0_S00_AXIS.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/data_receiver_1_0/hdl/data_receiver_v1_0.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/delay_adjust_init_1_0/hdl/delay_adjust_init_v1_0.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/idelay_controller_v2.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/idelay_impl_v2.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/idelay_impl_v2_normal.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/idelay_top_v2.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/TRG_MODULE.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/OBUFDS_TRG.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/ip_repo/SAMPA_TRG_EN_1_0/hdl/SAMPA_TRG_EN_v1_0.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/TRG_MODULE.v
+  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/OBUFDS_CONST.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0_M00_AXI.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/nagafusa/work/spadi/Fakernet/SAMIDARE/imports/SAMPA_PON_v1_0.v
-  /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/OBUFDS_CONST.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/new/OBUFDS_CLKSOIN.v
   /home/nagafusa/work/spadi/Fakernet/SAMIDARE/samidare.srcs/sources_1/imports/hdl/top_block_wrapper.v
 }

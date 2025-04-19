@@ -1,5 +1,45 @@
-
-
 {
-   "/comment_5":"comment_0"
+   "/comment_5":"comment_0",
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-918,-558",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port m00_axi -pg 1 -lvl 2 -x 430 -y 190 -defaultsOSRD
+preplace port port-id_m00_axi_aresetn -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_m00_axi_aclk -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_SAMPA_EN_A -pg 1 -lvl 2 -x 430 -y 220 -defaultsOSRD
+preplace port port-id_clk_in1 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus CG1 -pg 1 -lvl 2 -x 430 -y 280 -defaultsOSRD
+preplace portBus CG0 -pg 1 -lvl 2 -x 430 -y 250 -defaultsOSRD
+preplace portBus CTS -pg 1 -lvl 2 -x 430 -y 310 -defaultsOSRD
+preplace portBus POL -pg 1 -lvl 2 -x 430 -y 340 -defaultsOSRD
+preplace portBus BX_SYNC_TRG_P -pg 1 -lvl 2 -x 430 -y 0 -defaultsOSRD
+preplace portBus BX_SYNC_TRG_N -pg 1 -lvl 2 -x 430 -y 30 -defaultsOSRD
+preplace portBus HBTRG_P -pg 1 -lvl 2 -x 430 -y 60 -defaultsOSRD
+preplace portBus HBTRG_N -pg 1 -lvl 2 -x 430 -y 90 -defaultsOSRD
+preplace portBus HRSTB_N -pg 1 -lvl 2 -x 430 -y 120 -defaultsOSRD
+preplace portBus HRSTB_P -pg 1 -lvl 2 -x 430 -y 150 -defaultsOSRD
+preplace inst Const_wrapper -pg 1 -lvl 1 -x 200 -y 100 -defaultsOSRD
+preplace inst SAMPA_PON_v1_0_0 -pg 1 -lvl 1 -x 200 -y 310 -defaultsOSRD
+preplace netloc Const_wrapper_BX_SYNC_TRG_N 1 1 1 390J 30n
+preplace netloc Const_wrapper_BX_SYNC_TRG_P 1 1 1 380J 0n
+preplace netloc Const_wrapper_HBTRG_N 1 1 1 410J 90n
+preplace netloc Const_wrapper_HBTRG_P 1 1 1 400J 60n
+preplace netloc Const_wrapper_HRSTB_N 1 1 1 390J 120n
+preplace netloc Const_wrapper_HRSTB_P 1 1 1 NJ 150
+preplace netloc SAMPA_PON_v1_0_0_cg0 1 1 1 400J 250n
+preplace netloc SAMPA_PON_v1_0_0_cg1 1 1 1 410J 280n
+preplace netloc SAMPA_PON_v1_0_0_cts 1 1 1 390J 310n
+preplace netloc SAMPA_PON_v1_0_0_pol 1 1 1 NJ 340
+preplace netloc SAMPA_PON_v1_0_0_sampa_power_on 1 1 1 390J 220n
+preplace netloc clk_in1_1 1 0 1 NJ 100
+preplace netloc m00_axi_aclk_1 1 0 1 20J 300n
+preplace netloc m00_axi_aresetn_1 1 0 1 NJ 330
+preplace netloc Conn1 1 1 1 380J 190n
+levelinfo -pg 1 0 200 430
+pagesize -pg 1 -db -bbox -sgen -170 -20 620 440
+"
 }
+0

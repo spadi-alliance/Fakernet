@@ -28,12 +28,13 @@ module TRG_MODULE(
     output [3:0] trg
     );
     
-    wire [3:0]trg_i;
-    assign trg_i[0] = !(en || init_trg);
-    assign trg_i[1] = en || init_trg;
-    assign trg_i[2] = en || init_trg;
-    assign trg_i[3] = !(en || init_trg);
+   
+    wire trg_i;
+    assign trg_i = en || init_trg;
     
-    assign trg = trg_i;
+    assign trg[0] = trg_i;
+    assign trg[1] = !trg_i;
+    assign trg[2] = !trg_i;
+    assign trg[3] = trg_i;
     
 endmodule

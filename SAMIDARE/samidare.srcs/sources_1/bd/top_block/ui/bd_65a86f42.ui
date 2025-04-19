@@ -1,8 +1,8 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.07177",
-   "Default View_TopLeft":"1590,286",
-   "ExpandedHierarchyInLayout":"",
+   "Default View_TopLeft":"1706,286",
+   "ExpandedHierarchyInLayout":"/appUnit/data_sender_wrapper",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port M_AXIS_data -pg 1 -lvl 7 -x 2700 -y 480 -defaultsOSRD

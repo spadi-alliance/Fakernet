@@ -13,9 +13,9 @@ module idelay_controller_v2 #(
 )(  input        clk,               // clock
     input        reset,             // async reset（active High）
     input        init,              // start init signal
-    output reg      clock_adj_start,
+    output          clock_adj_start,
     input [3:0]  clock_adj_done,    // SOx[10] done signal
-    output reg      signal_adj_start,
+    output reg       signal_adj_start,
     output       trg_en,            // toggle trigger enable for initialize pattern
     input [39:0] signal_adj_done,   // SOx[9:0] done signal
     output reg   clock_done,        // done flag
@@ -30,13 +30,13 @@ module idelay_controller_v2 #(
   (*mark_debug = "true"*)reg [1:0] state, next_state;
   reg trg_en_r;
   reg [7:0] toggle_counter;
+  reg [63:0] clock_adj_r;
+  assign clock_adj_start = clock_adj_r[0];
   assign trg_en = trg_en_r;
-  // 状態レジスタ（非同期リセット）
   always @(posedge clk or posedge reset) begin
     if (reset)
-      state <= IDLE;
+      trg_en_r <= 1'b0;
     else begin
-        state <= next_state;
           
         if (state == STATE_SIGNAL_ADJUST) begin
             if (toggle_counter == 6'd63) begin
@@ -51,32 +51,39 @@ module idelay_controller_v2 #(
         end
     end
   end
-  // 次状態論理
   always @(posedge clk) begin
-    next_state = state;
+    if (reset) begin
+          state <= IDLE;
+  
+          clock_adj_r <= 'b0;
+          end
+    else begin
+    
     case (state)
       IDLE: begin
         if (init) begin
-          next_state = STATE_CLOCK_ADJUST;
-          clock_adj_start <= 1'b0;
+          state <= STATE_CLOCK_ADJUST;
+//          clock_adj_start <= 1'b0;
           signal_adj_start <= 1'b0;
+          clock_adj_r <= 'b0;
         end
       end
       STATE_CLOCK_ADJUST: begin
-        clock_adj_start <= 1'b1;
+        clock_adj_r <= {1'b1, clock_adj_r[63:1]};
         if (&clock_adj_done)
-          next_state = STATE_SIGNAL_ADJUST;
+          state <= STATE_SIGNAL_ADJUST;
       end
       STATE_SIGNAL_ADJUST: begin
         signal_adj_start <= 1'b1;
-        if (&signal_adj_done)
-          next_state = STATE_DONE;
+        if ((&signal_adj_done))
+          state <= STATE_DONE;
       end
       STATE_DONE: begin
-        next_state = STATE_DONE;  // 完了状態はそのまま維持
+        state <= STATE_DONE;  // 完了状態はそのまま維持
       end
-      default: next_state = IDLE;
+      default: state <= IDLE;
     endcase
+    end
   end
   // 出力 done の生成
   always @(posedge clk or posedge reset) begin
