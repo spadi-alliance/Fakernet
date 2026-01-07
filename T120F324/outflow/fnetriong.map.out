@@ -1,0 +1,493 @@
+[EFX-0000 INFO] Efinix FPGA Synthesis.
+[EFX-0000 INFO] Version: 2022.2.322
+[EFX-0000 INFO] Compiled: Dec 18 2022.
+[EFX-0000 INFO] 
+[EFX-0000 INFO] Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+INFO: Read project database "E:/Efinity/project/fnetriong/fnetriong.xml"
+INFO: ***** Beginning Analysis ... *****
+INFO: default VHDL library search path is now "E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_records.vhd' (VHDL-1481)
+-- Restoring VHDL unit 'ieee.std_logic_1164' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/ieee/std_logic_1164.vdb' (VHDL-1493)
+-- Restoring VHDL unit 'std.standard' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/std/standard.vdb' (VHDL-1493)
+-- Restoring VHDL unit 'std.textio' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/std/textio.vdb' (VHDL-1493)
+-- Restoring VHDL unit 'ieee.std_logic_arith' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/ieee/std_logic_arith.vdb' (VHDL-1493)
+-- Restoring VHDL unit 'ieee.std_logic_unsigned' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/ieee/std_logic_unsigned.vdb' (VHDL-1493)
+-- Restoring VHDL unit 'ieee.numeric_std' from file 'E:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008/ieee/numeric_std.vdb' (VHDL-1493)
+E:\Efinity\project\fnetriong\fnet_records.vhd(33): INFO: analyzing package 'fnet_records' (VHDL-1014)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_util_pkg.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_util_pkg.vhd(31): INFO: analyzing package 'fnet_util_pkg' (VHDL-1014)
+E:\Efinity\project\fnetriong\fnet_util_pkg.vhd(61): INFO: analyzing package body 'fnet_util_pkg' (VHDL-1013)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_async_fifo.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_async_fifo.vhd(42): INFO: analyzing entity 'fnet_async_fifo' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_async_fifo.vhd(78): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd(38): INFO: analyzing entity 'efnet_octet_to_word' (VHDL-1012)
+E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd(57): INFO: analyzing architecture 'behavioral' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_uart_trace_mem.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_uart_trace_mem.vhd(34): INFO: analyzing entity 'efb_uart_trace_mem' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_uart_trace_mem.vhd(52): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_uart_tx.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_uart_tx.vhd(33): INFO: analyzing entity 'efb_uart_tx' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_uart_tx.vhd(48): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd(32): INFO: analyzing entity 'efnet_word_to_octet' (VHDL-1012)
+E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd(49): INFO: analyzing architecture 'behavioral' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efnet_data_array_inject.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efnet_data_array_inject.vhd(65): INFO: analyzing entity 'efnet_data_array_inject' (VHDL-1012)
+E:\Efinity\project\fnetriong\efnet_data_array_inject.vhd(85): INFO: analyzing architecture 'behavioral' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_crc32.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_crc32.vhd(37): INFO: analyzing entity 'fnet_crc32' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_crc32.vhd(44): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_in_state.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(37): INFO: analyzing entity 'fnet_in_state' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(96): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_dyn_control.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_dyn_control.vhd(35): INFO: analyzing entity 'fnet_dyn_control' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_dyn_control.vhd(64): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_ntp_query_control.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_ntp_query_control.vhd(35): INFO: analyzing entity 'fnet_ntp_query_control' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_ntp_query_control.vhd(63): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_packet_gen.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(39): INFO: analyzing entity 'fnet_packet_gen' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(58): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_out_state.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_out_state.vhd(40): INFO: analyzing entity 'fnet_out_state' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_out_state.vhd(68): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_out_pipeline.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_out_pipeline.vhd(40): INFO: analyzing entity 'fnet_out_pipeline' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_out_pipeline.vhd(55): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_regaccess.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_regaccess.vhd(38): INFO: analyzing entity 'fnet_regaccess' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_regaccess.vhd(75): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd(36): INFO: analyzing entity 'ram_block_a11d16' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd(45): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_local_reg.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(39): INFO: analyzing entity 'fnet_local_reg' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(80): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_tcp_state.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_tcp_state.vhd(36): INFO: analyzing entity 'fnet_tcp_state' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_tcp_state.vhd(64): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_tcp_control.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_tcp_control.vhd(38): INFO: analyzing entity 'fnet_tcp_control' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_tcp_control.vhd(72): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_tcp_prepare.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_tcp_prepare.vhd(39): INFO: analyzing entity 'fnet_tcp_prepare' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_tcp_prepare.vhd(160): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_tcp_buffer.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_tcp_buffer.vhd(40): INFO: analyzing entity 'fnet_tcp_buffer' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_tcp_buffer.vhd(70): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_test_datagen.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_test_datagen.vhd(39): INFO: analyzing entity 'fnet_test_datagen' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_test_datagen.vhd(57): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd(46): INFO: analyzing entity 'fnet_ram_block_data' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd(63): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd(36): INFO: analyzing entity 'fnet_ram_block_stat' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd(45): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd(37): INFO: analyzing entity 'fnet_regacc_aux_stat' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd(44): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnet_mdio.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnet_mdio.vhd(37): INFO: analyzing entity 'fnet_mdio' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnet_mdio.vhd(71): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fakernet_module.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(37): INFO: analyzing entity 'fakernet_module' (VHDL-1012)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(130): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_common_top.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(39): INFO: analyzing entity 'efb_common_top' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(94): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\fnetriong.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\fnetriong.vhd(35): INFO: analyzing entity 'fnetriong' (VHDL-1012)
+E:\Efinity\project\fnetriong\fnetriong.vhd(75): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_nmea_parse.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_nmea_parse.vhd(56): INFO: analyzing entity 'efb_nmea_parse' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_nmea_parse.vhd(71): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_uart_rx.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_uart_rx.vhd(33): INFO: analyzing entity 'efb_uart_rx' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_uart_rx.vhd(47): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_count_low_bits.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_count_low_bits.vhd(38): INFO: analyzing entity 'efb_count_low_bits' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_count_low_bits.vhd(44): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing VHDL file 'E:\Efinity\project\fnetriong\efb_track_pps_ts.vhd' (VHDL-1481)
+E:\Efinity\project\fnetriong\efb_track_pps_ts.vhd(175): INFO: analyzing entity 'efb_track_pps_ts' (VHDL-1012)
+E:\Efinity\project\fnetriong\efb_track_pps_ts.vhd(213): INFO: analyzing architecture 'rtl' (VHDL-1010)
+-- Analyzing Verilog file 'E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v' (VERI-1482)
+-- Analyzing Verilog file 'E:/Efinity/2022.2/sim_models/maplib/efinix_peri_lib.v' (VERI-1482)
+INFO: Analysis took 0.084797 seconds.
+INFO: 	Analysis took 0.09375 seconds (approximately) in total CPU time.
+INFO: Analysis virtual memory usage: begin = 54.408 MB, end = 62.832 MB, delta = 8.424 MB
+INFO: 	Analysis peak virtual memory usage = 62.832 MB
+INFO: Analysis resident set memory usage: begin = 55.46 MB, end = 66.084 MB, delta = 10.624 MB
+INFO: 	Analysis peak resident set memory usage = 66.088 MB
+INFO: ***** Ending Analysis ... *****
+INFO: ***** Beginning Elaboration ... *****
+E:\Efinity\project\fnetriong\fnetriong.vhd(35): INFO: processing 'fnetriong(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnetriong.vhd(104): WARNING: using initial value 'U' for 'uart_rx' since it is never assigned (VHDL-1303)
+E:\Efinity\project\fnetriong\fnetriong.vhd(127): WARNING: using initial value for 'sampler_data_array' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\fnetriong.vhd(128): WARNING: using initial value for 'sampler_has_data' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd(38): INFO: processing 'efnet_octet_to_word(behavioral)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd(81): WARNING: using initial value '0' for 'packet_end2' since it is never assigned (VHDL-1303)
+E:\Efinity\project\fnetriong\fnet_async_fifo.vhd(42): INFO: processing 'fnet_async_fifo(width=17)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_async_fifo.vhd(91): INFO: extracting RAM for identifier 'ram' (VHDL-1754)
+E:\Efinity\project\fnetriong\efb_uart_trace_mem.vhd(34): INFO: processing 'efb_uart_trace_mem(width=32,samples=512)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efb_uart_trace_mem.vhd(84): INFO: extracting RAM for identifier 'ram' (VHDL-1754)
+E:\Efinity\project\fnetriong\efb_uart_tx.vhd(33): INFO: processing 'efb_uart_tx(15,0)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd(32): INFO: processing 'efnet_word_to_octet(behavioral)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(39): INFO: processing 'efb_common_top(clk_freq=125000000)(0,1)(31,0)(0,1)(0,1)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(118): WARNING: using initial value for 'macaddr' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(218): WARNING: using initial value for 'ntp_leap_0' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(219): WARNING: using initial value for 'ntp_prec_0' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(220): WARNING: using initial value for 'ntp_cur_ts_0' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(221): WARNING: using initial value for 'ntp_ref_ts_0' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\efnet_data_array_inject.vhd(65): INFO: processing 'efnet_data_array_inject(0,1)(31,0)(0,1)(0,1)(9,0)(7,0)(behavioral)' (VHDL-1067)
+E:\Efinity\project\fnetriong\efnet_data_array_inject.vhd(99): WARNING: net 'to_write[2]' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(37): INFO: processing 'fakernet_module(data_bufsize_addrbits=13,compiletime=1)(9,0)(7,0)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(37): INFO: processing 'fnet_in_state(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(850): WARNING: 'is_our_a_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(851): WARNING: 'is_our_b_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(852): WARNING: 'is_our_a_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(853): WARNING: 'is_our_b_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(968): WARNING: 'is_our_a_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(969): WARNING: 'is_our_b_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(970): WARNING: 'is_our_a_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(971): WARNING: 'is_our_b_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1114): WARNING: 'cfg_gen_dhcp' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1398): WARNING: 'cfg_gen_dhcp' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1414): WARNING: 'is_dyn_offer_ip01' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1418): WARNING: 'is_dyn_offer_ip23' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1527): WARNING: 'dhcp_option_remain_is_0' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1540): WARNING: 'dhcp_option_remain_is_1' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1541): WARNING: 'dhcp_option_remain_is_0' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1583): WARNING: 'dhcp_option_remain_is_1' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1585): WARNING: 'dhcp_option_remain_is_0' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1586): WARNING: 'is_prev_wlo_02' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1589): WARNING: 'dhcp_option_remain_is_1' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1591): WARNING: 'dhcp_option_remain_is_0' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1592): WARNING: 'is_prev_wlo_05' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1610): WARNING: 'is_ntp_ver_3or4_mode_3or4' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1613): WARNING: 'is_ntp_mode_4' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1717): WARNING: 'ntp_tx_future_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1723): WARNING: 'ntp_tx_future_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1729): WARNING: 'ntp_tx_future_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1735): WARNING: 'ntp_tx_future_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1745): WARNING: 'ntp_pkt_start_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1750): WARNING: 'ntp_pkt_start_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1755): WARNING: 'ntp_pkt_start_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1760): WARNING: 'ntp_pkt_start_ts' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(1791): WARNING: 'a' should be on the sensitivity list of the process (VHDL-1251)
+E:\Efinity\project\fnetriong\fnet_in_state.vhd(2002): WARNING: incomplete sensitivity list specified; assuming completeness (VHDL-1613)
+E:\Efinity\project\fnetriong\fnet_crc32.vhd(37): INFO: processing 'fnet_crc32(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_dyn_control.vhd(35): INFO: processing 'fnet_dyn_control(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_ntp_query_control.vhd(35): INFO: processing 'fnet_ntp_query_control(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(39): INFO: processing 'fnet_packet_gen(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(159): INFO: extracting RAM for identifier 'cmds' (VHDL-1754)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(159): WARNING: net 'cmds' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnet_packet_gen.vhd(457): WARNING: net 'mux[23][15]' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnet_out_state.vhd(40): INFO: processing 'fnet_out_state(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_out_state.vhd(246): WARNING: latch inferred for net 'got_one' (VHDL-1840)
+E:\Efinity\project\fnetriong\fnet_out_pipeline.vhd(40): INFO: processing 'fnet_out_pipeline(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_regaccess.vhd(38): INFO: processing 'fnet_regaccess(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(39): INFO: processing 'fnet_local_reg(test_regs=true,lcl_data_gen=true,limit_payload_window=true,debug_regs=true,debug_counters=true,compiletime=1)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd(36): INFO: processing 'ram_block_a11d16(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd(52): INFO: extracting RAM for identifier 'ram' (VHDL-1754)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(81): WARNING: net 'dp_ram_counts.port_b.o.wr' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(91): WARNING: net 'rawregs[0][31]' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnet_local_reg.vhd(97): WARNING: net 'verregs[1][31]' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnet_tcp_state.vhd(36): INFO: processing 'fnet_tcp_state(data_bufsize_addrbits=13)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_tcp_state.vhd(74): WARNING: using initial value for 'a_stat_initval' since it is never assigned (VHDL-1794)
+E:\Efinity\project\fnetriong\fnet_tcp_state.vhd(76): WARNING: ignoring non-constant initial value of 'a_stat' (VHDL-1731)
+E:\Efinity\project\fnetriong\fnet_tcp_control.vhd(38): INFO: processing 'fnet_tcp_control(data_bufsize_addrbits=13)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_tcp_prepare.vhd(39): INFO: processing 'fnet_tcp_prepare(data_bufsize_addrbits=13)(12,0)(31,0)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_tcp_buffer.vhd(40): INFO: processing 'fnet_tcp_buffer(data_bufsize_addrbits=13)(9,0)(7,0)(7,0)(5,0)(12,0)(31,0)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_test_datagen.vhd(39): INFO: processing 'fnet_test_datagen(data_bufsize_addrbits=13)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd(46): INFO: processing 'fnet_ram_block_data(addrbits=13)(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd(70): INFO: extracting RAM for identifier 'ram' (VHDL-1754)
+E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd(36): INFO: processing 'fnet_ram_block_stat(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd(37): INFO: processing 'fnet_regacc_aux_stat(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fnet_mdio.vhd(37): INFO: processing 'fnet_mdio(RTL)' (VHDL-1067)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(135): WARNING: net 'ram_udp_regidp.prod2.set_again' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(137): WARNING: net 'ram_tcp_template.prod2.set_again' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fakernet_module.vhd(138): WARNING: net 'ram_tcp_prep2[0].prod2.set_again' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\efb_common_top.vhd(184): WARNING: net 'trace_signals[31]' does not have a driver (VDB-1002)
+E:\Efinity\project\fnetriong\fnetriong.vhd(110): WARNING: net 'trace_signals[22]' does not have a driver (VDB-1002)
+INFO: Elaboration took 0.379199 seconds.
+INFO: 	Elaboration took 0.359375 seconds (approximately) in total CPU time.
+INFO: Elaboration virtual memory usage: begin = 62.832 MB, end = 115.336 MB, delta = 52.504 MB
+INFO: 	Elaboration peak virtual memory usage = 115.336 MB
+INFO: Elaboration resident set memory usage: begin = 66.1 MB, end = 118.12 MB, delta = 52.02 MB
+INFO: 	Elaboration peak resident set memory usage = 118.124 MB
+INFO: ***** Ending Elaboration ... *****
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+INFO: ***** Beginning Reading Mapping Library ... *****
+-- Analyzing Verilog file 'E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v' (VERI-1482)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(6): INFO: compiling module 'EFX_ADD' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(19): INFO: compiling module 'EFX_FF' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(36): INFO: compiling module 'EFX_COMB4' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(46): INFO: compiling module 'EFX_GBUFCE' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(55): INFO: compiling module 'EFX_IDDR' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(69): INFO: compiling module 'EFX_ODDR' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(85): INFO: compiling module 'EFX_IOBUF' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(97): INFO: compiling module 'EFX_LUT4' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(105): INFO: compiling module 'EFX_MULT' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(140): INFO: compiling module 'EFX_DSP48' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(196): INFO: compiling module 'EFX_DSP24' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(249): INFO: compiling module 'EFX_DSP12' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(302): INFO: compiling module 'EFX_RAM_4K' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(362): INFO: compiling module 'EFX_RAM_5K' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(434): INFO: compiling module 'EFX_DPRAM_5K' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(539): INFO: compiling module 'RAMB5' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(601): INFO: compiling module 'EFX_RAM_10K' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(693): INFO: compiling module 'EFX_RAM10' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(794): INFO: compiling module 'EFX_DPRAM10' (VERI-1018)
+E:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(924): INFO: compiling module 'EFX_SRL8' (VERI-1018)
+INFO: Reading Mapping Library took 0.0103548 seconds.
+INFO: 	Reading Mapping Library took 0.015625 seconds (approximately) in total CPU time.
+INFO: Reading Mapping Library virtual memory usage: begin = 117.98 MB, end = 117.98 MB, delta = 0 MB
+INFO: 	Reading Mapping Library peak virtual memory usage = 122.608 MB
+INFO: Reading Mapping Library resident set memory usage: begin = 120.412 MB, end = 121.012 MB, delta = 0.6 MB
+INFO: 	Reading Mapping Library peak resident set memory usage = 124.86 MB
+INFO: ***** Ending Reading Mapping Library ... *****
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0266 WARNING] Module Instance 'fifo' input pin tied to constant (out_want_b=1).
+[EFX-0200 WARNING] Removing redundant signal : start_found. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:60)
+[EFX-0200 WARNING] Removing redundant signal : packet_start. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:62)
+[EFX-0200 WARNING] Removing redundant signal : packet_end. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:63)
+[EFX-0200 WARNING] Removing redundant signal : word[15]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[14]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[13]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[12]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[11]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[10]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[9]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[8]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[7]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[6]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[5]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[4]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[3]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[2]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[1]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : word[0]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:65)
+[EFX-0200 WARNING] Removing redundant signal : octet_counter[0]. (E:\Efinity\project\fnetriong\efnet_octet_to_word.vhd:66)
+[EFX-0200 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][31]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][30]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][29]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][28]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][27]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][26]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][25]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][24]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][23]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][22]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][21]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][20]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][19]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][18]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][17]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][16]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][15]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][14]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][13]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][12]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][11]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][10]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][9]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][8]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][7]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][6]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][5]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][4]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][3]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][2]=1).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][1]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[0][0]=1).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][31]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][30]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][29]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][28]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][27]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][26]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][25]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][24]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][23]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][22]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][21]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][20]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][19]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][18]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][17]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][16]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][15]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][14]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][13]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][12]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][11]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][10]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][9]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][8]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][7]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][6]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][5]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][4]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][3]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][2]=1).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][1]=1).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_tcp_prep[1][0]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[31]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[30]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[29]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[28]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[27]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[26]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[25]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[24]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[23]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[22]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[21]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[20]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[19]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[18]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[17]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[16]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[15]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[14]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[13]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[12]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[11]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[10]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[9]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[8]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[7]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[6]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[5]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[4]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[3]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[2]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[1]=0).
+[EFX-0266 WARNING] Module Instance 'out_sm' input pin tied to constant (idx_gen[0]=1).
+[EFX-0266 WARNING] Module Instance 'mdio' input pin tied to constant (b_req_data[31]=0).
+[EFX-0266 WARNING] Module Instance 'mdio' input pin tied to constant (b_req_data[30]=0).
+[EFX-0266 WARNING] Module Instance 'mdio' input pin tied to constant (b_req_data[29]=0).
+[EFX-0266 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ram_udp_regidp.prod2.set_again'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:135)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ram_tcp_template.prod2.set_again'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:137)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ram_tcp_prep2[0].prod2.set_again'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:138)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ram_tcp_prep2[1].prod2.set_again'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:138)
+[EFX-0031 INFO] 'i4' instance is encountered with don't-care(1'bx) input, rewiring to GND. (E:\Efinity\project\fnetriong\fnetriong.vhd:104)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "fnetriong"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_async_fifo(width=17)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_async_fifo(width=17)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_octet_to_word" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_octet_to_word" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_uart_trace_mem(width=32,samples=512)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_uart_trace_mem(width=32,samples=512)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_uart_tx(15,0)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_uart_tx(15,0)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_word_to_octet" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_word_to_octet" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_data_array_inject(0,1)(31,0)(0,1)(0,1)(9,0)(7,0)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efnet_data_array_inject(0,1)(31,0)(0,1)(0,1)(9,0)(7,0)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_crc32" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_crc32" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_in_state" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_in_state" end (Real time : 1s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_dyn_control" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_dyn_control" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ntp_query_control" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ntp_query_control" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_packet_gen" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_packet_gen" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_out_state" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_out_state" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_out_pipeline" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_out_pipeline" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_regaccess" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_regaccess" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "ram_block_a11d16" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "ram_block_a11d16" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_local_reg(test_regs=true,lcl_data_gen=true,limit_payload_window=true,debug_regs=true,debug_counters=true,compiletime=1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_local_reg(test_regs=true,lcl_data_gen=true,limit_payload_window=true,debug_regs=true,debug_counters=true,compiletime=1)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_state(data_bufsize_addrbits=13)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_state(data_bufsize_addrbits=13)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_control(data_bufsize_addrbits=13)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_control(data_bufsize_addrbits=13)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_prepare(data_bufsize_addrbits=13)(12,0)(31,0)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_prepare(data_bufsize_addrbits=13)(12,0)(31,0)" end (Real time : 1s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_buffer(data_bufsize_addrbits=13)(9,0)(7,0)(7,0)(5,0)(12,0)(31,0)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_tcp_buffer(data_bufsize_addrbits=13)(9,0)(7,0)(7,0)(5,0)(12,0)(31,0)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_test_datagen(data_bufsize_addrbits=13)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_test_datagen(data_bufsize_addrbits=13)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ram_block_data(addrbits=13)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ram_block_data(addrbits=13)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ram_block_stat" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_ram_block_stat" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_regacc_aux_stat" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_regacc_aux_stat" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_mdio" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnet_mdio" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fakernet_module(data_bufsize_addrbits=13,compiletime=1)(9,0)(7,0)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fakernet_module(data_bufsize_addrbits=13,compiletime=1)(9,0)(7,0)" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_common_top(clk_freq=125000000)(0,1)(31,0)(0,1)(0,1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "efb_common_top(clk_freq=125000000)(0,1)(31,0)(0,1)(0,1)" end (Real time : 1s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnetriong" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 694 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fnetriong" end (Real time : 2s)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/dp_ram_tcp_prep2[0].port_a.o.rd'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:152)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/dp_ram_tcp_template.port_a.o.rd'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:151)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/osm_dp_ram_array_porto[6].wr'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:163)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/osm_dp_ram_array_porto[5].wr'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:163)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/osm_dp_ram_array_porto[4].wr'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:163)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 't/fakernet/osm_dp_ram_array_porto[3].wr'. (E:\Efinity\project\fnetriong\fakernet_module.vhd:163)
+[EFX-0201 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network clk with 3404 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Clock Network eth_rx_clk with 45 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 468 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 18s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 4601, ed: 14979, lv: 7, pw: 9604.46
+[EFX-0000 INFO] ... LUT mapping end (Real time : 15s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n3 with 3337 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Clock Network n13 with 45 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 3 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+INFO: ***** Beginning VDB Netlist Checker ... *****
+INFO: VDB Netlist Checker took 0.0954901 seconds.
+INFO: 	VDB Netlist Checker took 0.09375 seconds (approximately) in total CPU time.
+INFO: VDB Netlist Checker virtual memory usage: begin = 171.012 MB, end = 171.012 MB, delta = 0 MB
+INFO: 	VDB Netlist Checker peak virtual memory usage = 198.864 MB
+INFO: VDB Netlist Checker resident set memory usage: begin = 176.16 MB, end = 176.212 MB, delta = 0.052 MB
+INFO: 	VDB Netlist Checker peak resident set memory usage = 202.192 MB
+INFO: ***** Ending VDB Netlist Checker ... *****
+-- Writing netlist 'fnetriong' to Verilog file 'E:/Efinity/project/fnetriong/outflow/fnetriong.map.v' (VDB-1030)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	596
+[EFX-0000 INFO] EFX_LUT4        : 	4451
+[EFX-0000 INFO] EFX_FF          : 	3255
+[EFX-0000 INFO] EFX_RAM_5K      : 	103
+[EFX-0000 INFO] EFX_DPRAM_5K    : 	4
+[EFX-0000 INFO] EFX_GBUFCE      : 	2
+[EFX-0000 INFO] =============================== 

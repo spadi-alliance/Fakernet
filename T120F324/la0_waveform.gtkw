@@ -1,0 +1,18 @@
+[dumpfile] "E:\Efinity\project\fnetriong\la0_waveform.vcd"
+[dumpfile_mtime] "Mon Mar 13 09:03:16 2023"
+[dumpfile_size] 42547
+[savefile] "E:\Efinity\project\fnetriong\la0_waveform.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 c 512 1536 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[signals_width] 126
+[sst_expanded] 1
+@22
+top.out_ena
+top.out_taken
+top.out_word[15:0]
+top.eth_tx_en
+top.eth_txd_hi[3:0]
+top.eth_txd_lo[3:0]
+top.eth_txd_tmp[7:0]

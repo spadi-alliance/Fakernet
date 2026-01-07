@@ -26,6 +26,8 @@ File list
 
 `AMANEQ`: Example firmware of the AMANEQ. Using GTX with pcs/pma IPcore, 1000Base-X.
 
+`T120F324`: Example firmware of Efinix T120F324 kit. It is not using the source codes under `lib/` folder but is using the local versions under itself.
+
 For the file downloaded from the Fakernet's original webpage, there are also the exmaples of Arty A7-35 board and Alinx AX516 board.
 
 

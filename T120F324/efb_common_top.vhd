@@ -1,0 +1,583 @@
+-- Copyright (c) 2020, Anders Furufors
+-- Copyright (c) 2020, Haakan T. Johansson
+-- All rights reserved.
+
+-- Redistribution and use in source and binary forms, with or without
+-- modification, are permitted provided that the following conditions are met:
+--     * Redistributions of source code must retain the above copyright
+--       notice, this list of conditions and the following disclaimer.
+--     * Redistributions in binary form must reproduce the above copyright
+--       notice, this list of conditions and the following disclaimer in the
+--       documentation and/or other materials provided with the distribution.
+--     * Neither the name of the authors nor the
+--       names of its contributors may be used to endorse or promote products
+--       derived from this software without specific prior written permission.
+--
+-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+-- AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+-- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+-- ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+-- LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+-- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+-- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+-- INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+-- CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+-- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+-- POSSIBILITY OF SUCH DAMAGE.
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+library fnet_records;
+use fnet_records.fnet_records.all; -- For word32_array.
+
+library fnet_util_pkg;
+use fnet_util_pkg.fnet_util_pkg.all; -- For fnet_or_reduction.
+
+entity efb_common_top is
+  generic (compiletime : integer := 1;
+           clk_freq    : integer);
+  port (
+    -- On-board clock.
+    clk            : in  std_logic;
+
+    cfg_ipaddr     : in  std_logic_vector(31 downto 0);
+
+    -- Ethernet PHY:
+    -- Control channel.
+    eth_mdc        : out std_logic := '0';
+    eth_mdio_in    : in std_logic;
+    eth_mdio_out   : out std_logic := '0';
+    eth_mdio_oe    : out std_logic := '0';
+    eth_rstn       : out std_logic := '1';
+    -- TX channel.
+    -- eth_txd        : out std_logic_vector(3 downto 0) := (others => '0');
+    -- eth_tx_en      : out std_logic := '0';
+    -- eth_tx_clk     : in  std_logic;
+    out_word       : out std_logic_vector(15 downto 0);
+    out_ena        : out std_logic;
+    out_payload    : out std_logic;
+    out_taken      : in  std_logic;
+    -- RX channel.
+    -- eth_rxd        : in  std_logic_vector(3 downto 0);
+    -- eth_rx_clk     : in  std_logic;
+    -- eth_rx_dv      : in  std_logic;
+    -- eth_rxerr      : in  std_logic;
+    in_word        : in  std_logic_vector(15 downto 0);
+    in_got_word    : in  std_logic;
+    in_new_packet  : in  std_logic;
+    -- Ref clk.
+    eth_ref_clk    : out std_logic;
+
+    -- User input.
+    sw             : in  std_logic_vector(3 downto 0);
+    btn            : in  std_logic_vector(3 downto 0);
+
+    -- LEDs.
+    led            : out std_logic_vector(3 downto 0);
+
+    -- UART
+    uart_rx        : in  std_logic;
+    uart_tx        : out std_logic;
+
+    -- Sampler data stream.
+    sampler_data_array   : in  word32_array;
+    sampler_has_data     : in  std_logic_vector;
+    sampler_data_pending : out std_logic_vector
+
+    );
+
+end efb_common_top;
+
+architecture RTL of efb_common_top is
+
+  -------------------------
+  -- PHY control signals --
+  -------------------------
+
+  signal phy_reset_counter : unsigned(22 downto 0) := (others => '0');
+
+  --------------------------------
+  -- Input word builder signals --
+  --------------------------------
+
+  signal packet_counter  : std_logic_vector(3 downto 0) := (others => '0');
+
+  ----------------------
+  -- Fakernet signals --
+  ----------------------
+
+  -- MAC and IP set manually
+  -- 02:00:12:34:20:00
+  -- MAC note: low bits of high octet (bits 41..40) "10" is
+  -- 'locally administered' and 'unicast'
+  signal macaddr : std_logic_vector(47 downto 0) :=
+    "00000010" & "00000000" &
+    "00010010" & "00110100" & "00100000" & "00000000";
+  -- 02:00:12:34:20:00
+
+  -- Data from Fakernet to PHY?
+  signal debug_state_in  : std_logic_vector(7 downto 0);
+  signal debug_state_out : std_logic_vector(3 downto 0);
+
+  signal in_info  : incoming_info_counts;
+  signal out_info : outgoing_info_counts;
+
+  -- Data buffer signals.
+  signal data_word       : std_logic_vector(31 downto 0);
+  signal data_offset     : std_logic_vector(9 downto 0);
+  signal data_write      : std_logic;
+  signal data_commit_len : std_logic_vector(7 downto 0);
+  signal data_commit     : std_logic;
+  signal data_free       : std_logic;
+
+  -- Slow tick counter every 2^7 = 128 clock cycles = 1.28 us.
+  signal slow_counter : std_logic_vector(6 downto 0) := (others => '0');
+  signal slow_counter_tick : std_logic := '0';
+
+  -- Timeout tick every 2^26 = 67.1*10^6 clock cycles = 671 ms.
+  signal timeout_counter : std_logic_vector(26 downto 0) := (others => '0');
+  signal timeout_counter_tick : std_logic := '0';
+
+  -- Register access interface
+  signal regacc_addr    : std_logic_vector(24 downto 0);
+  signal regacc_data_wr : std_logic_vector(31 downto 0);
+  signal regacc_data_rd : std_logic_vector(31 downto 0);
+  signal regacc_write   : std_logic;
+  signal regacc_read    : std_logic;
+  signal regacc_done    : std_logic;
+  signal regacc_cnt     : std_logic_vector(3 downto 0);
+
+  -- MDIO interface
+  signal mdc_out    : std_logic;
+  signal mdc_ena    : std_logic;
+  signal mdio_in    : std_logic := '0';
+  signal mdio_out   : std_logic;
+  signal mdio_ena   : std_logic;
+
+  -----------------------------------------
+  -- User button, switch and LED signals --
+  -----------------------------------------
+
+  signal sw_latch       : std_logic_vector(3 downto 0);
+  signal btn_latch      : std_logic_vector(3 downto 0);
+
+
+  -----------------------------
+  -- UART packet info counts --
+  -----------------------------
+
+  signal infoc_out_udp : std_logic := '0';
+
+  signal infoc_pending : std_logic_vector(63 downto 0) := (others => '0');
+  signal infoc_cycle   : unsigned(5 downto 0) := (others => '0');
+
+  signal infoc_tx_data     : std_logic_vector(7 downto 0) := (others => '0');
+  signal infoc_tx_has_data : std_logic := '0';
+
+  ----------------
+  -- UART trace --
+  ----------------
+
+  signal trace_signals  : std_logic_vector(31 downto 0) := (others => '0');
+  signal trace_insert   : std_logic := '0';
+  signal trace_trigger  : std_logic := '0';
+
+  signal trace_tx_data     : std_logic_vector(7 downto 0) := (others => '0');
+  signal trace_tx_has_data : std_logic := '0';
+
+  ------------------
+  -- UART control --
+  ------------------
+
+  signal uart_tx_data      : std_logic_vector(7 downto 0) := (others => '0');
+  signal uart_tx_has_data  : std_logic := '0';
+  signal uart_tx_taken     : std_logic := '0';
+  signal uart_tx_temp      : std_logic := '0';
+
+  ----------------------------------------
+  -- NTP query generation and recording --
+  ----------------------------------------
+  constant num_pmod_gps : integer := 1;
+
+  type word2_array is
+    array (integer range <>) of std_logic_vector(1 downto 0);
+  type word8_array is
+    array (integer range <>) of std_logic_vector(7 downto 0);
+
+  signal ntp_leap       : word2_array(0 to num_pmod_gps-1) := (others => "11");
+  signal ntp_prec       : word8_array(0 to num_pmod_gps-1) :=
+    (others => (others => '1'));
+  signal ntp_cur_ts     : word64_array(0 to num_pmod_gps-1) :=
+    (others => (others => '0'));
+  signal ntp_ref_ts     : word64_array(0 to num_pmod_gps-1) :=
+    (others => (others => '0'));
+
+  signal ntp_leap_0     : std_logic_vector(1 downto 0) := "11";
+  signal ntp_prec_0     : std_logic_vector(7 downto 0) := (others => '1');
+  signal ntp_cur_ts_0   : std_logic_vector(63 downto 0) := (others => '0');
+  signal ntp_ref_ts_0   : std_logic_vector(63 downto 0) := (others => '0');
+  
+  signal ntpq_req : std_logic := '0';
+  signal ntpq_mac : std_logic_vector(47 downto 0) := (others => '0');
+  signal ntpq_ip  : std_logic_vector(31 downto 0) := (others => '0');
+  signal ntpq_tm_hi : std_logic_vector(31 downto 0) := (others => '0');
+  signal ntpq_tm_lo : std_logic_vector(31 downto 0) := (others => '0');
+  signal ntpq_sent : std_logic := '0';
+
+  signal ntpr_got     : std_logic;
+  signal ntpr_ip      : std_logic_vector(31 downto 0);
+  signal ntpr_recv_ts : std_logic_vector(63 downto 0);
+  signal ntpr_data    : word32_array(0 to 11);
+
+  ---------------------------
+  -- Streaming data output --
+  ---------------------------
+
+  constant num_sampler_data : integer := sampler_data_array'length;
+  --constant num_sampler_data : integer := 2;
+  constant off_sampler_data : integer := 0;
+  constant num_mon_data : integer := 2;
+  
+  signal mon_data_array   : word32_array(0 to num_mon_data-1) :=
+    (others => (others => '0'));
+  signal mon_has_data     : std_logic_vector(0 to num_mon_data-1) :=
+    (others => '0');
+  signal mon_data_pending : std_logic_vector(0 to num_mon_data-1) :=
+    (others => '0');
+
+begin
+
+  -------------------------------
+  -- Control resetting the PHY --
+  -------------------------------
+  process(clk)
+  begin
+    if (rising_edge(clk)) then
+      if (phy_reset_counter(phy_reset_counter'high) = '0') then
+        phy_reset_counter <= phy_reset_counter + 1;
+      end if;
+      eth_rstn <=
+        phy_reset_counter(phy_reset_counter'high) or
+        phy_reset_counter(phy_reset_counter'high-1);
+    end if;
+  end process;
+
+  ----------------------
+  -- MDIO to/from PHY --
+  ----------------------
+
+  eth_mdc  <= mdc_out;
+  eth_mdio_out <= mdio_out;
+  eth_mdio_oe <= mdio_ena;
+
+  mdio_in  <= eth_mdio_in;
+
+  mon_data_array(off_sampler_data to
+                 off_sampler_data+num_sampler_data-1) <= sampler_data_array;
+  mon_has_data  (off_sampler_data to
+                 off_sampler_data+num_sampler_data-1) <= sampler_has_data;
+  sampler_data_pending <=
+    mon_data_pending(off_sampler_data to
+                     off_sampler_data+num_sampler_data-1);
+
+  mon_data_write: entity work.efnet_data_array_inject
+    port map(
+      clk             => clk,
+
+      data_array      => mon_data_array,   
+      has_data        => mon_has_data,     
+      pending         => mon_data_pending, 
+
+      data_word       => data_word,
+      data_offset     => data_offset,
+      data_write      => data_write,
+      data_commit_len => data_commit_len,
+      data_commit     => data_commit,
+      data_free       => data_free
+      );
+
+  --------------------------------------
+  -- Fakernet control/helper signals. --
+  --------------------------------------
+
+  -- Counters for slow and timeout tick signals to Fakernet.
+  process (clk)
+  begin
+    if (rising_edge(clk)) then
+      slow_counter <= slow_counter + 1;
+      if (slow_counter = "1111111") then
+        slow_counter_tick <= '1';
+      else
+        slow_counter_tick <= '0';
+      end if;
+
+      timeout_counter <= timeout_counter + 1;
+      if (timeout_counter = (timeout_counter'range => '0')) then
+        timeout_counter_tick <= '1';
+      else
+        timeout_counter_tick <= '0';
+      end if;
+    end if;
+  end process;
+
+
+  --------------
+  -- Fakernet --
+  --------------
+
+  fakernet: entity work.fakernet_module
+    generic map(data_bufsize_addrbits => 13,
+                compiletime => compiletime)
+    port map(
+      clk             => clk,
+      -- config
+      cfg_macaddr     => macaddr,
+      cfg_ipaddr      => cfg_ipaddr,
+      cfg_fixed_ip    => '1',
+      cfg_dyn_ip      => '1',
+      cfg_gen_rarp    => '1',
+      cfg_gen_bootp   => '1',
+      cfg_gen_dhcp    => '0',
+      cfg_gen_ntpq    => '0',
+      -- Input network traffic
+      in_word         => in_word,
+      in_got_word     => in_got_word,
+      in_new_packet   => in_new_packet,
+      -- Output network traffic
+      out_word        => out_word,
+      out_taken       => out_taken,
+      out_ena         => out_ena,
+      out_payload     => out_payload,
+      -- MDIO interface
+      mdc_out         => mdc_out,
+      mdc_ena         => mdc_ena,
+      mdio_in         => mdio_in,
+      mdio_out        => mdio_out,
+      mdio_ena        => mdio_ena,
+      -- Register access interface
+      reg_addr        => regacc_addr,
+      reg_data_wr     => regacc_data_wr,
+      reg_data_rd     => regacc_data_rd,
+      reg_write       => regacc_write,
+      reg_read        => regacc_read,
+      reg_done        => regacc_done,
+      reg_cnt         => regacc_cnt,
+      -- Data input interface
+      data_word       => data_word,
+      data_offset     => data_offset,
+      data_write      => data_write,
+      data_commit_len => data_commit_len,
+      data_commit     => data_commit,
+      data_free       => data_free,
+      tcp_reset       => open,
+      -- NTP
+      ntp_leap        => ntp_leap_0,
+      ntp_prec        => ntp_prec_0,
+      ntp_cur_ts      => ntp_cur_ts_0,
+      ntp_ref_ts      => ntp_ref_ts_0,
+      -- NTP query report.
+      ntpq_req        => ntpq_req,
+      ntpq_mac        => ntpq_mac,
+      ntpq_ip         => ntpq_ip,
+      ntpq_tm_hi      => ntpq_tm_hi,
+      ntpq_tm_lo      => ntpq_tm_lo,
+      ntpq_sent       => ntpq_sent,
+      -- NTP response report.
+      ntpr_got        => ntpr_got,
+      ntpr_ip         => ntpr_ip,
+      ntpr_recv_ts    => ntpr_recv_ts,
+      ntpr_data       => ntpr_data,
+      -- Ticker, to be ~10 times per max length packet send period.
+      slow_clock_tick => slow_counter_tick,
+      timeout_tick    => timeout_counter_tick,
+      -- Debug
+      debug_in_info_counts  => in_info,
+      debug_out_info_counts => out_info,
+      debug_state_in  => debug_state_in,
+      debug_state_out => debug_state_out,
+      debug_state_regacc => open
+      );
+
+  ------------------
+  -- UART control --
+  ------------------
+
+  trace_signals(15 downto 0) <= in_word;
+  trace_signals(16) <= in_got_word;
+  trace_signals(17) <= in_new_packet;
+  trace_insert  <= in_got_word or in_new_packet;
+  trace_trigger <= in_new_packet;
+
+  uart_ctrl : entity work.efb_uart_trace_mem
+    generic map(
+      width => 32,
+      samples => 512)
+    port map(
+      clk             => clk,
+      i_signals       => trace_signals,
+      i_insert        => trace_insert,
+      i_trigger       => trace_trigger,
+      o_data          => trace_tx_data,
+      i_taken         => uart_tx_taken
+      );
+  trace_tx_has_data <= '1';
+
+  -- uart_tx_data     <= trace_tx_data;
+  -- uart_tx_has_data <= trace_tx_has_data;
+  uart_tx_data     <= infoc_tx_data;
+  uart_tx_has_data <= infoc_tx_has_data;
+
+  -- The serial-USB chip is on the board, so the UART speed is not
+  -- constrained by external serial cabling.
+  uart_tx_c : entity work.efb_uart_tx
+    port map(
+      clk             => clk,
+      --                 125000000/9600   = 13020 , 100000000/9600   = 10416
+      --                 125000000/115200 =  1085 , 100000000/115200 =   868
+      --                 125000000/230400 =   542 , 100000000/230400 =   434
+      --                 125000000/460800 =   271 , 100000000/460800 =   217
+      --                 125000000/921600 =   135 , 100000000/921600 =   108
+      i_bit_period    => std_logic_vector(to_unsigned(clk_freq / 921600, 16)),
+      i_data          => uart_tx_data,
+      i_has_data      => uart_tx_has_data,
+      o_taken         => uart_tx_taken,
+      o_tx            => uart_tx_temp
+      );
+
+  uart_tx <= not uart_tx_temp;
+
+  ----------------------------
+  -- Button and LED control --
+  ----------------------------
+
+  infoc_out_udp <= fnet_or_reduction(out_info.udp_idp & out_info.udp);
+
+  process (clk)
+  begin
+    if (rising_edge(clk)) then
+      -- Default read value.
+      regacc_data_rd <= (others => '0');
+      regacc_done <= '0';
+
+      -- Read which switches are selected and which buttons are pressed.
+      if (regacc_read = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00000001")
+      then
+        regacc_data_rd <= (31 downto 8 => '0') & sw_latch & btn_latch;
+        regacc_done <= '1';
+      end if;
+
+      -- Latch the button and switch values.
+      sw_latch <= sw;
+      btn_latch <= btn;
+
+      -- Write register, addr 16 : fire NTPQ request
+      --                      17 : NTPQ IP  31.. 0
+      --                      18 : NTPQ TM  63..32
+      --                      19 : --
+      --                      20 : NTPQ MAC 47..32
+      --                      21 : NTPQ MAC 31.. 0
+      ntpq_req <= '0';
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010000") then
+        ntpq_req <= '1';
+        regacc_done <= '1';
+      end if;
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010001") then
+        ntpq_ip <= regacc_data_wr;
+        regacc_done <= '1';
+      end if;
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010010") then
+        ntpq_tm_hi <= regacc_data_wr;
+        regacc_done <= '1';
+      end if;
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010011") then
+        regacc_done <= '1';
+      end if;
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010100") then
+        ntpq_mac(47 downto 32) <= regacc_data_wr(15 downto 0);
+        regacc_done <= '1';
+      end if;
+      if (regacc_write = '1' and
+          regacc_addr(11 downto 0) = "0000" & "00010101") then
+        ntpq_mac(31 downto  0) <= regacc_data_wr;
+        regacc_done <= '1';
+      end if;
+
+      -- UART packet info counts.
+
+      -- Send (if any) the current character.
+      infoc_tx_data <= "01" & std_logic_vector(infoc_cycle);
+      -- If the current output slot is pending, then request transmission.
+      infoc_tx_has_data <= infoc_pending(to_integer(infoc_cycle));
+
+      -- Move the search along if the current slot has no data.
+      -- Always move one step ahead if data was taken (to make sure
+      -- that we do not just emit one character even if there is a
+      -- high rate of those counts).
+      infoc_cycle <=
+        infoc_cycle + ("" & (uart_tx_taken or
+                             (not infoc_pending(to_integer(infoc_cycle)))));
+
+      -- If UART took the data, then clear the pending flag,
+      -- and continue the search.
+      if (uart_tx_taken = '1') then
+        for i in infoc_pending'range loop
+          if (i = to_integer(infoc_cycle)) then
+            infoc_pending(i) <= '0';
+          end if;
+        end loop;
+      end if;
+      -- The expensive part of infoc_pending is the cleaning above.
+      -- But unused entries (which never can be set to 1 below) ought
+      -- to be optimized away by synthesis, so are cheap.
+
+      -- 0         1         2         3          4         5         6
+      -- 01234567890123456789012345678901 23456789012345678901234567890123
+      -- -ABCDEFGHIJKLMNOPQRSTUVWXYZ----_ -abcdefghijklmnopqrstuvwxyz-----
+
+      -- in:  a arp r rarp i icmp u udp t tcp b bootp d dhcp n ntp
+      -- out: A arp+icmp+ntp P pktgen(rarp,bootp,dhcp,ntpq) U udp T tcp
+      --   (reserve INRBD for distinguishing sent packets)
+
+      if (in_info.timeout_tick = '1')   then infoc_pending(31) <= '1'; end if;
+      if (in_info.good_arp = '1')       then infoc_pending(33) <= '1'; end if;
+      if (in_info.good_rarp = '1')      then infoc_pending(50) <= '1'; end if;
+      if (in_info.good_icmp = '1')      then infoc_pending(41) <= '1'; end if;
+      if (in_info.good_udp = '1')       then infoc_pending(53) <= '1'; end if;
+      if (in_info.good_tcp = '1')       then infoc_pending(52) <= '1'; end if;
+      if (in_info.good_bootp = '1')     then infoc_pending(34) <= '1'; end if;
+      if (in_info.good_ntp = '1')       then infoc_pending(46) <= '1'; end if;
+
+      if (out_info.arp_icmp = '1')      then infoc_pending( 1) <= '1'; end if;
+      if (out_info.pkt_gen = '1')       then infoc_pending(16) <= '1'; end if;
+      if (infoc_out_udp = '1')          then infoc_pending(21) <= '1'; end if;
+      if (out_info.tcp = '1')           then infoc_pending(20) <= '1'; end if;
+
+
+    end if;
+  end process;
+
+-- Count the incoming packets, and show count with user LEDs.
+  process (clk)
+   begin
+    if (rising_edge(clk)) then
+      if (in_new_packet = '1') then
+        packet_counter <= packet_counter + 1;
+      end if;
+    end if;
+   end process;
+
+-- LED <= packet_counter;
+
+  led <= "0" & "0" & packet_counter(1 downto 0);
+   --led <= "1011";
+
+end RTL;

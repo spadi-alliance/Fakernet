@@ -1,0 +1,146 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2022.2.322 
+Date: Tue Mar 14 10:48:39 2023
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+ 
+Family: Trion 
+Device: T120F324
+Top-level Entity Name: fnetriong
+Elapsed time for packing: 0 hours 0 minutes 0 seconds
+
+---------- Resource Summary (begin) ----------
+Inputs: 17 / 1076 (1.58%)
+Outputs: 25 / 1263 (1.98%)
+Clocks: 3 / 16 (18.75%)
+Logic Elements: 6859 / 112128 (6.12%)
+	LE: LUTs/Adders: 5049 / 112128 (4.50%)
+	LE: Registers: 3255 / 107520 (3.03%)
+Memory Blocks: 107 / 1056 (10.13%)
+Multipliers: 0 / 320 (0.00%)
+---------- Resource Summary (end) ----------
+
+
+---------- Memory Block Information (begin) ----------
+
++--------------------------------------------------------------------+------+------------+-------------+--------------+------------+
+|                                NAME                                | MODE | READ_WIDTH | WRITE_WIDTH |  WRITE_MODE  | OUTPUT_REG |
++--------------------------------------------------------------------+------+------------+-------------+--------------+------------+
+|                            rx/fifo/ram                             | SDP  |     20     |     20      | READ_UNKNOWN |   false    |
+|                    t/fakernet/pkt_gen/cmds__D$2                    | SDP  |     16     |     16      | READ_UNKNOWN |   false    |
+|                    t/fakernet/pkt_gen/cmds__D$1                    | SDP  |     16     |     16      | READ_UNKNOWN |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$012                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0d12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3c12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$312                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                 t/fakernet/dpdp_ram_data/ram__D$02                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0b12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0e12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0f12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0g12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0h12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0i12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0j12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0k12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0l12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0m12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0n12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0o12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0p12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0q12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0r12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0s12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0t12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0u12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0v12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0w12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0x12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0y12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0z12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0A12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0B12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0C12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0D12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3d12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                 t/fakernet/dpdp_ram_data/ram__D$32                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3b12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0E1                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$0c12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3e12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3f12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3g12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3h12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3i12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3j12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3k12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3l12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3m12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3n12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3o12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3p12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3q12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3r12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3s12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3t12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3u12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3v12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3w12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3x12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3y12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3z12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3A12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3B12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3C12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3D12                | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_arp_icmp/ram__D$12               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_data/ram__D$3E1                 | SDP  |     1      |      1      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_arp_icmp/ram__D$c1               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_arp_icmp/ram__D$b12               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_pkt_gen/ram__D$12                | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_arp_icmp/ram__D$2                | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_pkt_gen/ram__D$c1                | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_pkt_gen/ram__D$b12               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regacc/ram__D$12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|                t/fakernet/dpdp_ram_pkt_gen/ram__D$2                | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regacc/ram__D$c1              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|             t/fakernet/dpdp_ram_udp_regacc/ram__D$b12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regidp/ram__D$12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regacc/ram__D$2               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regidp/ram__D$c1              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|             t/fakernet/dpdp_ram_udp_regidp/ram__D$b12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram__D$12  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_udp_regidp/ram__D$2               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram__D$c1  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram__D$b12 | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram__D$12  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|  t/fakernet/dpdp_ram_udp_regres[0].dpdp_ram_udp_regres_i/ram__D$2  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram__D$c1  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+| t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram__D$b12 | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|             t/fakernet/dpdp_ram_tcp_template/ram__D$12             | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|  t/fakernet/dpdp_ram_udp_regres[1].dpdp_ram_udp_regres_i/ram__D$2  | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|             t/fakernet/dpdp_ram_tcp_template/ram__D$c1             | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|            t/fakernet/dpdp_ram_tcp_template/ram__D$b12             | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep0/ram__D$12               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|             t/fakernet/dpdp_ram_tcp_template/ram__D$2              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep0/ram__D$c1               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep0/ram__D$b12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep1/ram__D$12               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_tcp_prep0/ram__D$2               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep1/ram__D$c1               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|              t/fakernet/dpdp_ram_tcp_prep1/ram__D$b12              | SDP  |     4      |      4      |  READ_FIRST  |   false    |
+|               t/fakernet/dpdp_ram_tcp_prep1/ram__D$2               | SDP  |     4      |      4      |  READ_FIRST  |   false    |
++--------------------------------------------------------------------+------+------------+-------------+--------------+------------+
+
++---------------------------------------------------------------------------+------+--------------+---------------+--------------+--------------+--------------+---------------+--------------+--------------+
+|                                   NAME                                    | MODE | READ_WIDTH_A | WRITE_WIDTH_A | WRITE_MODE_A | OUTPUT_REG_A | READ_WIDTH_B | WRITE_WIDTH_B | WRITE_MODE_B | OUTPUT_REG_B |
++---------------------------------------------------------------------------+------+--------------+---------------+--------------+--------------+--------------+---------------+--------------+--------------+
+| t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram__D$12  | TDP  |      4       |       4       |  READ_FIRST  |    false     |      4       |       4       |  READ_FIRST  |    false     |
+| t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram__D$c1  | TDP  |      4       |       4       |  READ_FIRST  |    false     |      4       |       4       |  READ_FIRST  |    false     |
+| t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram__D$b12 | TDP  |      4       |       4       |  READ_FIRST  |    false     |      4       |       4       |  READ_FIRST  |    false     |
+|  t/fakernet/lclreg/if_dpdp_ram_info_counts.dpdp_ram_info_counts/ram__D$2  | TDP  |      4       |       4       |  READ_FIRST  |    false     |      4       |       4       |  READ_FIRST  |    false     |
++---------------------------------------------------------------------------+------+--------------+---------------+--------------+--------------+--------------+---------------+--------------+--------------+
+
+----------- Memory Block Information (end) ----------
+
+Elapsed time for placement: 0 hours 0 minutes 36 seconds

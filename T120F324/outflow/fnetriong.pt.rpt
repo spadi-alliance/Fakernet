@@ -1,0 +1,409 @@
+
+Efinity Interface Designer Report
+Version: 2022.2.322
+Date: 2023-03-14 10:48
+
+Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
+
+Device: T120F324
+Project: fnetriong
+
+Package: 324-ball FBGA (final)
+Timing Model: I4 (final)
+Configuration Mode: active (x1)
+
+---------- Table of Contents (begin) ----------
+   1. Periphery Usage Summary
+   2. Generated Output Files
+   3. I/O Banks Summary
+   4. Global Connection Summary
+   5. Clock Region Usage Summary
+   6. Dual-Function Configuration Pin Usage
+   7. GPIO Usage Summary
+   8. PLL Usage Summary
+   9. LVDS Rx Usage Summary
+   10. LVDS Tx Usage Summary
+   11. MIPI Rx Usage Summary
+   12. MIPI Tx Usage Summary
+   13. Clock Mux Usage Summary
+   14. Configuration Control Usage Summary
+   15. JTAG Usage Summary
+   16. DDR Usage Summary
+---------- Table of Contents (end) ------------
+
+---------- 1. Periphery Usage Summary (begin) ----------
+clkmux: 2 / 2 (100.0%)
+control: 0 / 1 (0.0%)
+ddr: 0 / 1 (0.0%)
+gpio: 11 / 38 (28.95%)
+jtag: 0 / 4 (0.0%)
+lvds_bg: 0 / 2 (0.0%)
+lvds_rx: 9.5 / 26 (36.54%)
+	gpio: 19
+lvds_tx: 0 / 20 (0.0%)
+mipi_rx: 0 / 2 (0.0%)
+mipi_tx: 0 / 2 (0.0%)
+pll: 1 / 7 (14.29%)
+---------- Periphery Usage Summary (end) ----------
+
+---------- 2. Generated Output Files (begin) ----------
+Interface Configuration: fnetriong.interface.csv
+Peripheral Block Configuration: fnetriong.lpf
+Pinout Report: fnetriong.pinout.rpt
+Pinout CSV: fnetriong.pinout.csv
+Timing Report: fnetriong.pt_timing.rpt
+Timing SDC Template: fnetriong.pt.sdc
+Verilog Template: fnetriong_template.v
+Option Register File: fnetriong_or.ini
+---------- Generated Output Files (end) ----------
+
+---------- 3. I/O Banks Summary (begin) ----------
+
++-------------+-------------+
+|   I/O Bank  | I/O Voltage |
++-------------+-------------+
+|      1A     |    3.3 V    |
+|    1B_1C    |    3.3 V    |
+| 1D_1E_1F_1G |    3.3 V    |
+|      2D     |    3.3 V    |
+|      2E     |    3.3 V    |
+|      2F     |    3.3 V    |
+|      3A     |    1.2 V    |
+|      3B     |    1.2 V    |
+|   3D_TR_BR  |    3.3 V    |
+|      4E     |    3.3 V    |
+|      4F     |    3.3 V    |
+|      BL     |    1.2 V    |
+|      TL     |    1.2 V    |
++-------------+-------------+
+
+---------- I/O Banks Summary (end) ----------
+
+---------- 4. Global Connection Summary (begin) ----------
+
++---------------+-----------------+-------+
+|    Pin Name   |     Resource    |  Type |
++---------------+-----------------+-------+
+|      clk      | PLL_BR0.CLKOUT0 |  GCLK |
+|     clkex     | PLL_BR0.CLKOUT1 |  GCLK |
+|   eth_rx_clk  |   GPIOL_73.ALT  |  GCLK |
+| eth_rxd_hi[0] |   GPIOL_62.ALT  | GCTRL |
+| eth_rxd_hi[1] |   GPIOL_63.ALT  | GCTRL |
+| eth_rxd_hi[3] |   GPIOL_75.ALT  | GCTRL |
++---------------+-----------------+-------+
+
+---------- Global Connection Summary (end) ----------
+
+---------- 5. Clock Region Usage Summary (begin) ----------
+
++--------------+----------------+
+| Clock Region | Used/Available |
++--------------+----------------+
+|      B       |      1/16      |
+|      L0      |      0/4       |
+|      L1      |      1/4       |
+|      L3      |      2/4       |
+|      L7      |      0/4       |
+|      R0      |      0/4       |
+|      R2      |      0/4       |
+|      R3      |      0/4       |
+|      R4      |      1/4       |
+|      R6      |      0/4       |
+|      R7      |      0/4       |
+|      T       |      2/16      |
++--------------+----------------+
+
+---------- Clock Region Usage Summary (end) ----------
+
+---------- 6. Dual-Function Configuration Pin Usage (begin) ----------
+
+No instance using dual-function configuration pin.
+
+---------- Dual-Function Configuration Pin Usage (end) ----------
+
+---------- 7. GPIO Usage Summary (begin) ----------
+
+Global Unused Setting: input with weak pullup
+
++---------------+-------------+--------+----------+--------------+-------------+----------------------+--------------------+-------------+
+| Instance Name |   Resource  |  Mode  | Register | Clock Region |   I/O Bank  |     I/O Standard     |      Pad Name      | Package Pin |
++---------------+-------------+--------+----------+--------------+-------------+----------------------+--------------------+-------------+
+|     CLKIN     |  GPIOR_186  | input  |          |              |   3D_TR_BR  | 3.3 V LVTTL / LVCMOS |  GPIOR_186_PLLIN0  |      U8     |
+|  eth_gtx_clk  |   GPIOL_72  | output |   O(R)   |      L3      | 1D_1E_1F_1G | 3.3 V LVTTL / LVCMOS |   GPIOL_72_CLK6    |     H14     |
+|    eth_mdc    | GPIOT_RXN12 | output |          |              |      2E     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN12     |     H16     |
+|    eth_mdio   | GPIOT_RXP13 | inout  |          |              |      2E     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP13     |     G15     |
+|    eth_rstn   | GPIOT_RXN13 | output |          |              |      2E     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN13     |     H15     |
+|   eth_rx_clk  |   GPIOL_73  | input  |          |              | 1D_1E_1F_1G | 3.3 V LVTTL / LVCMOS |   GPIOL_73_CLK7    |     H13     |
+|   eth_rx_dv   | GPIOT_RXP12 | input  |   I(R)   |      T       |      2E     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP12     |     G16     |
+|   eth_rxd[0]  |   GPIOL_62  | input  |   I(R)   |      L3      |    1B_1C    | 3.3 V LVTTL / LVCMOS |   GPIOL_62_CTRL0   |     K16     |
+|   eth_rxd[1]  |   GPIOL_63  | input  |   I(R)   |      L3      |    1B_1C    | 3.3 V LVTTL / LVCMOS |   GPIOL_63_CTRL1   |     K15     |
+|   eth_rxd[2]  |   GPIOL_17  | input  |   I(R)   |      L1      |    1B_1C    | 3.3 V LVTTL / LVCMOS |  GPIOL_17_EXTFB0   |     L15     |
+|   eth_rxd[3]  |   GPIOL_75  | input  |   I(R)   |      L3      | 1D_1E_1F_1G | 3.3 V LVTTL / LVCMOS |   GPIOL_75_CTRL5   |     G13     |
+|   eth_tx_en   | GPIOT_RXP11 | output |   O(R)   |      T       |      2E     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP11     |     G17     |
+|   eth_txd[0]  |  GPIOR_173  | output |   O(R)   |      R4      |   3D_TR_BR  | 3.3 V LVTTL / LVCMOS |  GPIOR_173_CTRL12  |      G5     |
+|   eth_txd[1]  |  GPIOR_174  | output |   O(R)   |      R4      |   3D_TR_BR  | 3.3 V LVTTL / LVCMOS |  GPIOR_174_CLK15   |      G6     |
+|   eth_txd[2]  |  GPIOR_183  | output |   O(R)   |      R4      |   3D_TR_BR  | 3.3 V LVTTL / LVCMOS |  GPIOR_183_CTRL10  |      K6     |
+|   eth_txd[3]  |  GPIOR_178  | output |   O(R)   |      R4      |   3D_TR_BR  | 3.3 V LVTTL / LVCMOS |  GPIOR_178_CLK11   |      H6     |
+|     led[0]    | GPIOT_RXP24 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP24     |     A12     |
+|     led[1]    | GPIOT_RXN24 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN24     |     B12     |
+|     led[2]    | GPIOT_RXP27 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP27     |     A11     |
+|     led[3]    | GPIOT_RXN27 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN27     |     B11     |
+|   phymon[0]   | GPIOT_RXN20 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN20     |     A16     |
+|   phymon[1]   | GPIOT_RXN21 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN21     |     A15     |
+|   phymon[2]   | GPIOT_RXN22 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN22     |     A14     |
+|   phymon[3]   | GPIOT_RXN23 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXN23     |     A13     |
+|   phymon[4]   | GPIOT_RXP22 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP22     |     B14     |
+|   phymon[5]   | GPIOT_RXP23 | output |          |              |      2F     | 3.3 V LVTTL / LVCMOS |    GPIOT_RXP23     |     B13     |
+|     sw[0]     | GPIOT_RXP28 | input  |          |              |      2F     | 3.3 V LVTTL / LVCMOS | GPIOT_RXP28_EXTFB2 |     A10     |
+|     sw[1]     | GPIOT_RXN28 | input  |          |              |      2F     | 3.3 V LVTTL / LVCMOS | GPIOT_RXN28_EXTFB2 |     B10     |
+|     sw[2]     | GPIOT_RXP29 | input  |          |              |      2F     | 3.3 V LVTTL / LVCMOS | GPIOT_RXP29_CLKP2  |      B9     |
+|     sw[3]     | GPIOT_RXN29 | input  |          |              |      2F     | 3.3 V LVTTL / LVCMOS | GPIOT_RXN29_CLKN2  |      A9     |
++---------------+-------------+--------+----------+--------------+-------------+----------------------+--------------------+-------------+
+
+*NOTE
+R: Register Path
+
+
+Input GPIO Configuration:
+=========================
+
++---------------+-----------------------------+---------------------+-----------------+--------------+-----------------+--------+
+| Instance Name |          Input Pin          | Alternate Input Pin | Input Clock Pin | Pull Up/Down | Schmitt Trigger |  DDIO  |
++---------------+-----------------------------+---------------------+-----------------+--------------+-----------------+--------+
+|     CLKIN     |                             |        CLKIN        |                 |     none     |     Disable     |  none  |
+|   eth_rx_clk  |                             |      eth_rx_clk     |                 |     none     |     Disable     |  none  |
+|   eth_rx_dv   |          eth_rx_dv          |                     |    eth_rx_clk   |     none     |     Disable     |        |
+|   eth_rxd[0]  | eth_rxd_lo[0],eth_rxd_hi[0] |                     |    eth_rx_clk   |     none     |     Disable     | resync |
+|   eth_rxd[1]  | eth_rxd_lo[1],eth_rxd_hi[1] |                     |    eth_rx_clk   |     none     |     Disable     | resync |
+|   eth_rxd[2]  | eth_rxd_lo[2],eth_rxd_hi[2] |                     |    eth_rx_clk   |     none     |     Disable     | resync |
+|   eth_rxd[3]  | eth_rxd_lo[3],eth_rxd_hi[3] |                     |    eth_rx_clk   |     none     |     Disable     | resync |
+|     sw[0]     |            sw[0]            |                     |                 | weak pullup  |     Disable     |        |
+|     sw[1]     |            sw[1]            |                     |                 | weak pullup  |     Disable     |        |
+|     sw[2]     |            sw[2]            |                     |                 | weak pullup  |     Disable     |        |
+|     sw[3]     |            sw[3]            |                     |                 | weak pullup  |     Disable     |        |
++---------------+-----------------------------+---------------------+-----------------+--------------+-----------------+--------+
+
+Output GPIO Configuration:
+==========================
+
++---------------+-------------------------------+------------------+----------------+-----------+--------+
+| Instance Name |           Output Pin          | Output Clock Pin | Drive Strength | Slew Rate |  DDIO  |
++---------------+-------------------------------+------------------+----------------+-----------+--------+
+|  eth_gtx_clk  | eth_gtx_clk_lo,eth_gtx_clk_hi |      ~clkex      |       4        |  Disable  | resync |
+|    eth_mdc    |            eth_mdc            |                  |       4        |  Disable  |        |
+|    eth_rstn   |            eth_rstn           |                  |       1        |  Disable  |        |
+|   eth_tx_en   |           eth_tx_en           |       clk        |       4        |  Disable  |        |
+|   eth_txd[0]  |  eth_txd_lo[0],eth_txd_hi[0]  |       ~clk       |       4        |  Disable  | resync |
+|   eth_txd[1]  |  eth_txd_lo[1],eth_txd_hi[1]  |       ~clk       |       4        |  Disable  | resync |
+|   eth_txd[2]  |  eth_txd_lo[2],eth_txd_hi[2]  |       ~clk       |       4        |  Disable  | resync |
+|   eth_txd[3]  |  eth_txd_lo[3],eth_txd_hi[3]  |       ~clk       |       4        |  Disable  | resync |
+|     led[0]    |             led[0]            |                  |       1        |  Disable  |        |
+|     led[1]    |             led[1]            |                  |       1        |  Disable  |        |
+|     led[2]    |             led[2]            |                  |       1        |  Disable  |        |
+|     led[3]    |             led[3]            |                  |       1        |  Disable  |        |
+|   phymon[0]   |           phymon[0]           |                  |       2        |  Disable  |        |
+|   phymon[1]   |           phymon[1]           |                  |       2        |  Disable  |        |
+|   phymon[2]   |           phymon[2]           |                  |       2        |  Disable  |        |
+|   phymon[3]   |           phymon[3]           |                  |       2        |  Disable  |        |
+|   phymon[4]   |           phymon[4]           |                  |       2        |  Disable  |        |
+|   phymon[5]   |           phymon[5]           |                  |       2        |  Disable  |        |
++---------------+-------------------------------+------------------+----------------+-----------+--------+
+
+Inout GPIO Configuration:
+=========================
+
++---------------+-------------+---------------------+-----------------+--------------+-----------------+------------+--------------+-------------+------------------+----------------+-----------+-------------+
+| Instance Name |  Input Pin  | Alternate Input Pin | Input Clock Pin | Pull Up/Down | Schmitt Trigger | Input DDIO |  Output Pin  |    OE Pin   | Output Clock Pin | Drive Strength | Slew Rate | Output DDIO |
++---------------+-------------+---------------------+-----------------+--------------+-----------------+------------+--------------+-------------+------------------+----------------+-----------+-------------+
+|    eth_mdio   | eth_mdio_in |                     |                 |     none     |     Disable     |            | eth_mdio_out | eth_mdio_oe |                  |       4        |  Disable  |             |
++---------------+-------------+---------------------+-----------------+--------------+-----------------+------------+--------------+-------------+------------------+----------------+-----------+-------------+
+
+---------- GPIO Usage Summary (end) ----------
+
+---------- 8. PLL Usage Summary (begin) ----------
+
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+---------+---------+
+| Instance Name | Resource | Clock Region | Clock Source | Reference Clock | Feedback Mode | Feedback Clock | Clkout0 | Clkout1 | Clkout2 |
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+---------+---------+
+|     CLOCK     | PLL_BR0  |      B       |   external   |      CLKIN      |      core     |      clk       |   clk   |  clkex  |         |
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+---------+---------+
+
+Instance Name                 : CLOCK
+Resource                      : PLL_BR0
+Clock Source                  : external
+Reference Clock Resource      : GPIOR_186
+Reference Clock               : CLKIN
+Feedback Mode                 : core
+Feedback Clock                : clk
+
+Reference Clock Frequency     : 50.0000 MHz
+Reference Clock Period        : 20.0000 ns
+Multiplier (M)                : 5
+Pre-Divider (N)               : 2
+VCO Frequency                 : 3000.0000 MHz
+Post-Divider (O)              : 4
+PLL Frequency                 : 750.0000 MHz
+
+Output Clock 0
+Clock Pin Name                : clk
+Output Divider                : 6
+Output Phase Shift            : 0
+Output Frequency              : 125.0000 MHz
+Output Period                 : 8.0000 ns
+
+Output Clock 1
+Clock Pin Name                : clkex
+Output Divider                : 6
+Output Phase Shift            : 90
+Output Frequency              : 125.0000 MHz
+Output Period                 : 8.0000 ns
+
+Frequency calculations:
+	VCO = REFCLK * ((M * FBK) /N)
+	    = 50.0000 MHz * ((5*24) /2)
+	    = 3000.0000 MHz
+	PLL = VCO / O
+	    = 3000.0000 MHz / 4
+	    = 750.0000 MHz
+
+	CLKOUT0 = PLL / CLKOUT0_DIV
+	        = 750.0000 MHz / 6
+	        = 125.0000 MHz
+	CLKOUT1 = PLL / CLKOUT1_DIV
+	        = 750.0000 MHz / 6
+	        = 125.0000 MHz
+
+SDC Constraints:
+	create_clock -period 8.0000 clk
+	create_clock -waveform {2.0000 6.0000} -period 8.0000 clkex
+
+---------- PLL Usage Summary (end) ----------
+
+---------- 9. LVDS Rx Usage Summary (begin) ----------
+
+No LVDS Rx was configured
+
+---------- LVDS Rx Usage Summary (end) ----------
+
+---------- 10. LVDS Tx Usage Summary (begin) ----------
+
+No LVDS Tx was configured
+
+---------- LVDS Tx Usage Summary (end) ----------
+
+---------- 11. MIPI Rx Usage Summary (begin) ----------
+
+No MIPI Rx was configured
+
+---------- MIPI Rx Usage Summary (end) ----------
+
+---------- 12. MIPI Tx Usage Summary (begin) ----------
+
+No MIPI Tx was configured
+
+---------- MIPI Tx Usage Summary (end) ----------
+
+---------- 13. Clock Mux Usage Summary (begin) ----------
+
++----------+-----------------+
+| Resource | Output Assigned |
++----------+-----------------+
+| CLKMUX_L |        1        |
+| CLKMUX_R |        2        |
++----------+-----------------+
+
+***** CLOCKMUX 0 *****
+
+Resource: CLKMUX_L
+
+Clock mux assignment:
+
++-----------------+------------+----------+---------+---------+---------+------------+---------+---------+---------+---------+
+|  Input Resource | Clock Pin  |  Status  | LCLK[0] | LCLK[1] | LCLK[2] |  LCLK[3]   | LCLK[4] | LCLK[5] | LCLK[6] | LCLK[7] |
++-----------------+------------+----------+---------+---------+---------+------------+---------+---------+---------+---------+
+|                 |            | Selected |         |         |         | eth_rx_clk |         |         |         |         |
+|   GPIOL_66.IN   |            |          |    O    |         |         |            |    O    |         |         |         |
+|   GPIOL_67.IN   |            |          |         |    O    |         |            |         |    O    |         |         |
+|   GPIOL_68.IN   |            |          |         |         |    O    |            |         |         |    O    |         |
+|   GPIOL_69.IN   |            |          |         |         |         |     -      |         |         |         |    O    |
+|   GPIOL_70.IN   |            |          |    O    |         |         |            |    O    |         |         |         |
+|   GPIOL_71.IN   |            |          |         |    O    |         |            |         |    O    |         |         |
+|   GPIOL_72.IN   |            |          |         |         |    O    |            |         |         |    O    |         |
+|   GPIOL_73.IN   | eth_rx_clk |  Routed  |         |         |         |     ^      |         |         |         |    O    |
+| PLL_TL0.CLKOUT0 |            |          |    O    |         |         |            |         |    O    |    O    |         |
+| PLL_TL0.CLKOUT1 |            |          |         |    O    |         |     -      |         |         |         |    O    |
+| PLL_TL0.CLKOUT2 |            |          |         |         |    O    |            |    O    |         |         |         |
+| PLL_BL0.CLKOUT0 |            |          |    O    |         |         |     -      |         |         |         |    O    |
+| PLL_BL0.CLKOUT1 |            |          |         |    O    |         |            |    O    |         |    O    |         |
+| PLL_BL0.CLKOUT2 |            |          |         |         |    O    |            |         |    O    |         |         |
++-----------------+------------+----------+---------+---------+---------+------------+---------+---------+---------+---------+
+
+*NOTE
+ : No connection from input to mux output
+O: Available input to mux output connection
+^: Input assigned to mux output
+-: Unavailable (used) input to mux output connection
+
+***** CLOCKMUX 1 *****
+
+Resource: CLKMUX_R
+
+Clock mux assignment:
+
++-----------------+-----------+----------+---------+---------+---------+---------+---------+---------+---------+---------+
+|  Input Resource | Clock Pin |  Status  | RCLK[0] | RCLK[1] | RCLK[2] | RCLK[3] | RCLK[4] | RCLK[5] | RCLK[6] | RCLK[7] |
++-----------------+-----------+----------+---------+---------+---------+---------+---------+---------+---------+---------+
+|                 |           | Selected |         |         |         |   clk   |  clkex  |         |         |         |
+|   GPIOR_181.IN  |           |          |    O    |         |         |         |         |         |         |         |
+|   GPIOR_180.IN  |           |          |         |    O    |         |         |         |         |         |         |
+|   GPIOR_179.IN  |           |          |         |         |    O    |         |         |         |         |         |
+|   GPIOR_178.IN  |           |          |         |         |         |    -    |         |         |         |         |
+|   GPIOR_177.IN  |           |          |         |         |         |         |    -    |         |         |         |
+|   GPIOR_176.IN  |           |          |         |         |         |         |         |    O    |         |         |
+|   GPIOR_175.IN  |           |          |         |         |         |         |         |         |    O    |         |
+|   GPIOR_174.IN  |           |          |         |         |         |         |         |         |         |    O    |
+| PLL_TR0.CLKOUT0 |           |          |    O    |         |         |         |         |         |    O    |         |
+| PLL_TR0.CLKOUT1 |           |          |         |    O    |    O    |         |         |         |         |         |
+| PLL_TR0.CLKOUT2 |           |          |         |    O    |    O    |         |         |         |         |         |
+| PLL_TR1.CLKOUT0 |           |          |    O    |         |         |    -    |         |         |         |         |
+| PLL_TR1.CLKOUT1 |           |          |         |         |         |         |    -    |    O    |         |         |
+| PLL_TR1.CLKOUT2 |           |          |         |         |         |         |    -    |    O    |         |         |
+| PLL_TR2.CLKOUT0 |           |          |    O    |         |         |         |         |         |         |    O    |
+| PLL_TR2.CLKOUT1 |           |          |         |    O    |    O    |         |         |         |         |         |
+| PLL_TR2.CLKOUT2 |           |          |         |    O    |    O    |         |         |         |         |         |
+| PLL_BR0.CLKOUT0 |    clk    |  Routed  |         |         |         |    ^    |         |         |         |    O    |
+| PLL_BR0.CLKOUT1 |   clkex   |  Routed  |         |         |         |         |    ^    |    O    |         |         |
+| PLL_BR0.CLKOUT2 |           |          |         |         |         |         |    -    |    O    |         |         |
+| PLL_BR1.CLKOUT0 |           |          |         |         |    O    |         |         |         |    O    |         |
+| PLL_BR1.CLKOUT1 |           |          |         |         |         |    -    |    -    |         |         |         |
+| PLL_BR1.CLKOUT2 |           |          |         |         |         |    -    |    -    |         |         |         |
+| PLL_BR2.CLKOUT0 |           |          |         |         |         |         |         |    O    |         |         |
+| PLL_BR2.CLKOUT1 |           |          |         |    O    |         |         |         |         |    O    |         |
+| PLL_BR2.CLKOUT2 |           |          |         |         |         |         |         |         |         |    O    |
++-----------------+-----------+----------+---------+---------+---------+---------+---------+---------+---------+---------+
+
+*NOTE
+ : No connection from input to mux output
+O: Available input to mux output connection
+^: Input assigned to mux output
+-: Unavailable (used) input to mux output connection
+
+---------- Clock Mux Usage Summary (end) ----------
+
+---------- 14. Configuration Control Usage Summary (begin) ----------
+
+No Configuration Control was configured
+
+---------- Configuration Control Usage Summary (end) ----------
+
+---------- 15. JTAG Usage Summary (begin) ----------
+
+No JTAG was configured
+
+---------- JTAG Usage Summary (end) ----------
+
+---------- 16. DDR Usage Summary (begin) ----------
+
+No DDR was configured
+
+---------- DDR Usage Summary (end) ----------

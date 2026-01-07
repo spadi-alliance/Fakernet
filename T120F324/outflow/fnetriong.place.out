@@ -1,0 +1,244 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2022.2.322 
+Compiled: Dec 18 2022.
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T120F324" ...
+
+***** Beginning stage netlist pre-processing ... *****
+Successfully Read in Verific binary Netlist dump file "E:/Efinity/project/fnetriong/fnetriong.vdb".
+***** Beginning VDB Netlist Checker ... *****
+VDB Netlist Checker took 0.105598 seconds.
+	VDB Netlist Checker took 0.109375 seconds (approximately) in total CPU time.
+VDB Netlist Checker virtual memory usage: begin = 31.404 MB, end = 31.424 MB, delta = 0.02 MB
+	VDB Netlist Checker peak virtual memory usage = 52.14 MB
+VDB Netlist Checker resident set memory usage: begin = 41.588 MB, end = 41.788 MB, delta = 0.2 MB
+	VDB Netlist Checker peak resident set memory usage = 61.26 MB
+***** Ending VDB Netlist Checker ... *****
+Reading core interface constraints from 'E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv'.
+Successfully processed interface constraints file "E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv".
+Creating interface clock pin clkex.
+Creating interface clock buffer clkex~CLKBUF.
+Found 0 constant generator nets.
+Pass 0: Swept away 0 nets with no fanout.
+Pass 0: Swept away 0 blocks with no fanout.
+Swept away 0 nets and 0 blocks in total.
+Removed 0 LUT buffers.
+Successfully created VPR logical netlist from Verific binary DataBase file "E:/Efinity/project/fnetriong/fnetriong.vdb".
+Netlist pre-processing took 0.274101 seconds.
+	Netlist pre-processing took 0.234375 seconds (approximately) in total CPU time.
+Netlist pre-processing virtual memory usage: begin = 11.712 MB, end = 46.96 MB, delta = 35.248 MB
+	Netlist pre-processing peak virtual memory usage = 52.14 MB
+Netlist pre-processing resident set memory usage: begin = 22.36 MB, end = 57.184 MB, delta = 34.824 MB
+	Netlist pre-processing peak resident set memory usage = 61.26 MB
+***** Ending stage netlist pre-processing *****
+
+***** Beginning stage pre-packing ... *****
+***** Ending stage pre-packing *****
+
+***** Beginning stage packing ... *****
+Generate proto netlist for file "E:/Efinity/project/fnetriong/work_pnr\fnetriong.net_proto" took 0.008 seconds
+Creating IO constraints file 'E:/Efinity/project/fnetriong/work_pnr\fnetriong.io_place'
+Packing took 0.0502877 seconds.
+	Packing took 0.0625 seconds (approximately) in total CPU time.
+Packing virtual memory usage: begin = 45.512 MB, end = 51.92 MB, delta = 6.408 MB
+	Packing peak virtual memory usage = 52.14 MB
+Packing resident set memory usage: begin = 55.376 MB, end = 62.024 MB, delta = 6.648 MB
+	Packing peak resident set memory usage = 62.028 MB
+***** Ending stage packing *****
+
+***** Beginning stage packed netlist loading ... *****
+Read proto netlist file E:/Efinity/project/fnetriong/work_pnr\fnetriong.net_proto
+Read proto netlist for file "E:/Efinity/project/fnetriong/work_pnr\fnetriong.net_proto" took 0.034 seconds
+Setup net and block data structure took 0.202 seconds
+Packed netlist loading took 0.263556 seconds.
+	Packed netlist loading took 0.203125 seconds (approximately) in total CPU time.
+Packed netlist loading virtual memory usage: begin = 51.92 MB, end = 145.924 MB, delta = 94.004 MB
+	Packed netlist loading peak virtual memory usage = 185.068 MB
+Packed netlist loading resident set memory usage: begin = 62.032 MB, end = 152.304 MB, delta = 90.272 MB
+	Packed netlist loading peak resident set memory usage = 191.356 MB
+***** Ending stage packed netlist loading *****
+
+***** Beginning stage pre-placement ... *****
+
+***** Ending stage pre-placement *****
+
+
+SDC file 'E:/Efinity/project/fnetriong/fnetriong.sdc' parsed successfully.
+3 clocks (including virtual clocks), 16 inputs and 16 outputs were constrained.
+
+***** Beginning stage initial placement ... *****
+Reading core interface constraints from 'E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv'.
+Successfully processed interface constraints file "E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv".
+Writing IO placement constraints to 'E:/Efinity/project/fnetriong/outflow\fnetriong.interface.io'.
+
+Reading placement constraints from 'E:/Efinity/project/fnetriong/outflow\fnetriong.interface.io'.
+
+Reading placement constraints from 'E:/Efinity/project/fnetriong/work_pnr\fnetriong.io_place'.
+WARNING(1): Clock driver, eth_rx_clk, should not directly drive output pad, phymon[0], in the core. Use the 'clkout' mode in GPIO instead.
+WARNING(2): Clock input pad, eth_rx_clk, of net, phymon[0], drives both clock buffer and logic. Expect extra clock skew.
+***** Ending stage initial placement *****
+
+***** Beginning stage placement ... *****
+Create E:/Efinity/project/fnetriong/outflow\fnetriong_after_qp.qdelay
+QPLACER STATIC DB USAGE DISABLED
+NumRegions 1
+Starting Global Placer with 16 threads ...
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL Worst Slack (ps) Convergence
+ ----------     -------  --------------     -------
+          1     1172297            1349         1.2%
+          2      669799            1874         1.9%
+          3      552298            2577         3.0%
+          4      411299            2224         6.5%
+          5      241440             898        15.3%
+          6      164905            -189        31.9%
+          7      153443            -836        47.1%
+          8      174326           -1888        54.6%
+          9      186598           -1989        54.6%
+         10      215097           -1663        58.4%
+         11      232718            -757        59.3%
+         12      236869            -501        62.1%
+         13      246218           -1003        67.6%
+         14      251079            -507        69.8%
+         15      263823            -998        71.2%
+         16      268853            -317        72.9%
+         17      267870           -1121        74.3%
+         18      271328            -852        77.4%
+         19      289098           -1016        79.0%
+         20      155973           -1575        82.4%
+         21      156187           -1656        85.4%
+         22      158430           -1998        86.6%
+         23      156668           -1834        87.4%
+         24      158780           -1691        88.4%
+         25      158149           -2454        89.8%
+         26      157158           -2678        90.5%
+         27      156156           -2420        91.7%
+         28      156353           -2421        93.0%
+         29      155745           -2633        94.0%
+         30      154581           -2810        95.2%
+Starting Annealer
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL  Delay Max (ps)     R Limit
+ ----------     -------  --------------     -------
+          0      155973           11188        30.0
+          1      129054           11651        30.0
+          2       91216           10824        30.0
+          3       89660           10488        30.0
+          4       84815           10338        30.0
+          5       79854            9420        30.0
+          6       77581            9741        30.0
+          7       76378            8871        30.0
+          8       76646            8817        30.0
+          9       74946            8278        30.0
+         10       74811            8000        30.0
+         11       74421            8000        30.0
+         12       75366            7921        30.0
+         13       74957            7921        30.0
+         14       74612            7921        30.0
+         15       73955            7921        29.9
+         16       73581            7560        29.7
+         17       73315            7560        29.4
+         18       72513            7560        28.9
+         19       72560            7530        28.4
+         20       72272            7501        27.9
+         21       71580            7501        27.3
+         22       71685            7501        26.7
+         23       71015            7501        26.1
+         24       70696            7501        25.5
+         25       70830            7501        24.9
+         26       70660            7326        24.2
+         27       69929            7326        23.6
+         28       69434            7017        23.0
+         29       69670            6989        22.4
+         30       69532            6989        21.8
+         31       69740            6989        21.2
+         32       69850            7018        20.6
+         33       69335            6989        19.9
+         34       69121            6989        19.3
+         35       69111            7106        18.7
+         36       68921            6989        18.0
+         37       68516            6989        17.4
+         38       68206            7107        16.8
+         39       67834            7107        16.2
+         40       67417            6989        15.6
+         41       67046            6988        15.1
+         42       67174            7113        14.6
+         43       66563            6988        14.2
+         44       65976            6988        13.7
+         45       65709            6988        13.3
+         46       65499            6988        12.9
+         47       65105            6988        12.5
+         48       65050            6988        12.1
+         49       64674            6793        11.8
+         50       64249            6793        11.4
+         51       64330            6966        11.1
+         52       64044            6798        10.7
+         53       63878            6992        10.4
+         54       63622            6798        10.1
+         55       63526            6793         9.8
+         56       63281            6798         9.5
+         57       63236            6793         9.2
+         58       63069            6816         8.9
+         59       62843            6793         8.6
+         60       62767            6793         8.3
+         61       62583            6793         8.1
+         62       62298            6793         7.8
+         63       62082            6793         7.6
+         64       61771            6793         7.3
+         65       61531            6820         7.1
+         66       61187            6793         6.9
+         67       61034            6793         6.7
+         68       60895            6793         6.5
+         69       60722            6793         6.3
+         70       60376            6793         6.1
+         71       60286            6793         6.0
+         72       60345            6793         5.8
+         73       60245            6793         5.6
+         74       60119            6793         5.4
+         75       59765            6793         5.3
+         76       59624            6793         5.2
+         77       59321            6793         5.1
+         78       59189            6793         4.9
+         79       58935            6793         4.8
+         80       58990            6793         4.6
+         81       58894            6921         4.5
+         82       58793            6793         4.4
+         83       58637            6793         4.3
+         84       58451            6793         4.1
+         85       58200            6793         4.0
+         86       58023            6793         3.9
+         87       57877            6793         3.8
+         88       57722            6793         3.7
+         89       57602            6793         3.6
+         90       57606            6793         3.4
+         91       57534            6793         3.3
+         92       56933            6793         3.3
+         93       56492            6793         3.0
+Generate E:/Efinity/project/fnetriong/outflow\fnetriong_after_qp.qdelay
+Placement successful: 6966 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.100521 at 98,148
+Congestion-weighted HPWL per net: 5.62315
+
+Reading placement constraints from 'E:/Efinity/project/fnetriong/outflow/fnetriong.qplace'.
+Finished Realigning Types (1882 blocks needed type change)
+
+Completed placement consistency check successfully.
+Successfully created FPGA place file 'E:/Efinity/project/fnetriong/outflow/fnetriong.place'
+Placement took 36.9058 seconds.
+	Placement took 72.0156 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 145.924 MB, end = 189.892 MB, delta = 43.968 MB
+	Placement peak virtual memory usage = 1222.35 MB
+Placement resident set memory usage: begin = 152.312 MB, end = 191.424 MB, delta = 39.112 MB
+	Placement peak resident set memory usage = 1210.05 MB
+***** Ending stage placement *****
+

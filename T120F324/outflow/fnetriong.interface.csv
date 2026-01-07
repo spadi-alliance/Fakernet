@@ -1,0 +1,63 @@
+
+# Efinity Interface Configuration
+# Version: 2022.2.322
+# Date: 2023-03-14 10:48
+
+# Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
+
+# [required | optional] (input|output|clkout), x, y, z, __bypass__|[~|!]<clock>, [[~|!]<pin_name>] | __vcc__ | __gnd__
+clkout, 236, 0, -1, clk
+clkout, 242, 643, -1, clk
+clkout, 0, 109, -1, eth_rx_clk
+clkout, 0, 274, -1, eth_rx_clk
+clkout, 0, 276, -1, eth_rx_clk
+clkout, 0, 310, -1, eth_rx_clk
+clkout, 249, 643, -1, eth_rx_clk
+clkout, 338, 359, -1, ~clk
+clkout, 338, 369, -1, ~clk
+clkout, 338, 377, -1, ~clk
+clkout, 338, 379, -1, ~clk
+clkout, 0, 305, -1, ~clkex
+input, 338, 321, 1, __bypass__, clk
+input, 338, 322, 1, __bypass__, clkex
+optional input, 338, 9, 1, __bypass__, CLKIN
+output, 0, 304, 0, __bypass__, eth_gtx_clk_hi
+output, 0, 304, 2, __bypass__, eth_gtx_clk_lo
+output, 248, 643, 0, __bypass__, eth_mdc
+input, 252, 643, 3, __bypass__, eth_mdio_in
+output, 254, 643, 0, __bypass__, eth_mdio_oe
+output, 252, 643, 0, __bypass__, eth_mdio_out
+output, 253, 643, 0, __bypass__, eth_rstn
+input, 0, 321, 1, __bypass__, eth_rx_clk
+input, 247, 643, 3, __bypass__, eth_rx_dv
+input, 0, 274, 1, __bypass__, eth_rxd_hi[0]
+input, 0, 276, 1, __bypass__, eth_rxd_hi[1]
+input, 0, 109, 1, __bypass__, eth_rxd_hi[2]
+input, 0, 310, 1, __bypass__, eth_rxd_hi[3]
+input, 0, 274, 3, __bypass__, eth_rxd_lo[0]
+input, 0, 276, 3, __bypass__, eth_rxd_lo[1]
+input, 0, 109, 3, __bypass__, eth_rxd_lo[2]
+input, 0, 310, 3, __bypass__, eth_rxd_lo[3]
+output, 242, 643, 0, __bypass__, eth_tx_en
+output, 338, 380, 0, __bypass__, eth_txd_hi[0]
+output, 338, 378, 0, __bypass__, eth_txd_hi[1]
+output, 338, 360, 0, __bypass__, eth_txd_hi[2]
+output, 338, 370, 0, __bypass__, eth_txd_hi[3]
+output, 338, 380, 2, __bypass__, eth_txd_lo[0]
+output, 338, 378, 2, __bypass__, eth_txd_lo[1]
+output, 338, 360, 2, __bypass__, eth_txd_lo[2]
+output, 338, 370, 2, __bypass__, eth_txd_lo[3]
+output, 307, 643, 0, __bypass__, led[0]
+output, 308, 643, 0, __bypass__, led[1]
+output, 322, 643, 0, __bypass__, led[2]
+output, 323, 643, 0, __bypass__, led[3]
+output, 288, 643, 0, __bypass__, phymon[0]
+output, 293, 643, 0, __bypass__, phymon[1]
+output, 298, 643, 0, __bypass__, phymon[2]
+output, 303, 643, 0, __bypass__, phymon[3]
+output, 297, 643, 0, __bypass__, phymon[4]
+output, 302, 643, 0, __bypass__, phymon[5]
+input, 327, 643, 3, __bypass__, sw[0]
+input, 328, 643, 1, __bypass__, sw[1]
+input, 332, 643, 3, __bypass__, sw[2]
+input, 333, 643, 1, __bypass__, sw[3]

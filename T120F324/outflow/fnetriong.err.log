@@ -1,0 +1,839 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:16:58
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'fnet_records' is not compiled in library 'fnet_records' (VHDL-1240) (E:\Efinity\project\fnetriong\efb_common_top.vhd:34)
+[EFX-0010 VERI-ERROR] 'fnet_util_pkg' is not compiled in library 'fnet_util_pkg' (VHDL-1240) (E:\Efinity\project\fnetriong\efb_common_top.vhd:37)
+[EFX-0010 VERI-ERROR] 'word32_array' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:91)
+[EFX-0010 VERI-ERROR] unit 'efb_common_top' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:97)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:20:24
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'fnet_records' is not compiled in library 'fnet_records' (VHDL-1240) (E:\Efinity\project\fnetriong\efb_common_top.vhd:34)
+[EFX-0010 VERI-ERROR] 'fnet_util_pkg' is not compiled in library 'fnet_util_pkg' (VHDL-1240) (E:\Efinity\project\fnetriong\efb_common_top.vhd:37)
+[EFX-0010 VERI-ERROR] 'word32_array' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:91)
+[EFX-0010 VERI-ERROR] unit 'efb_common_top' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:97)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:25:50
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:228)
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:230)
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:232)
+[EFX-0010 VERI-ERROR] 'eth_mdio_out' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:257)
+[EFX-0010 VERI-ERROR] 'eth_mdio_oe' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:258)
+[EFX-0010 VERI-ERROR] 'eth_mdio_in' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:260)
+[EFX-0010 VERI-ERROR] 'cycle_count_next' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:266)
+[EFX-0010 VERI-ERROR] 'cycle_count_wrap' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:267)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:273)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:277)
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:291)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:378)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:379)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:393)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:398)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:399)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:482)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:28:15
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:230)
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:232)
+[EFX-0010 VERI-ERROR] 'num_mon_data' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:234)
+[EFX-0010 VERI-ERROR] 'eth_mdio_oe' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:260)
+[EFX-0010 VERI-ERROR] 'cycle_count_next' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:268)
+[EFX-0010 VERI-ERROR] 'cycle_count_wrap' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:269)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:275)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:279)
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:293)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:382)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:383)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:395)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:400)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:401)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:484)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:593)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:31:40
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'eth_mdio_oe' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:260)
+[EFX-0010 VERI-ERROR] 'cycle_count_next' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:268)
+[EFX-0010 VERI-ERROR] 'cycle_count_wrap' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:269)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:275)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:279)
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:293)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:382)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:383)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:395)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:400)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:401)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:484)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:593)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:32:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'cycle_count_next' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:268)
+[EFX-0010 VERI-ERROR] 'cycle_count_wrap' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:269)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:275)
+[EFX-0010 VERI-ERROR] 'cycle_count' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:279)
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:293)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:382)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:383)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:395)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:400)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:401)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:484)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:593)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:34:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:273)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:360)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:361)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:362)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:363)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:375)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:464)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:573)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:35:34
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:273)
+[EFX-0010 VERI-ERROR] 'ntp_leap_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:360)
+[EFX-0010 VERI-ERROR] 'ntp_prec_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:361)
+[EFX-0010 VERI-ERROR] 'ntp_cur_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:362)
+[EFX-0010 VERI-ERROR] 'ntp_ref_ts_0' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:363)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:375)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:380)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:381)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:464)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:573)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:38:51
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_stat'; expected type 'tcp_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:295)
+[EFX-0010 VERI-ERROR] type error near 'tcp_buf_stat'; expected type 'tcp_buffer_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:296)
+[EFX-0010 VERI-ERROR] type error near 'tcp_state_stat'; expected type 'tcp_state_async_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:297)
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_recv'; expected type 'tcp_control_recv' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:298)
+[EFX-0010 VERI-ERROR] type error near 'ntp_stat'; expected type 'ntp_state' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:300)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:305)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_in_stat'; expected type 'dync_in_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:307)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_stat'; expected type 'dync_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:308)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:310)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:311)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:312)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_stat_tmp'; expected type 'ram_stat_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:313)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:314)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:315)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:316)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_prod2_tmp'; expected type 'ram_prod2_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:317)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:318)
+[EFX-0010 VERI-ERROR] type error near 'i'; expected type 'ram_block_porti_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:319)
+[EFX-0010 VERI-ERROR] type error near 'o'; expected type 'ram_block_porto_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:320)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:48:31
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VHDL-1261) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:33)
+[EFX-0010 VERI-ERROR] 'fnet_records' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:34)
+[EFX-0010 VERI-ERROR] 'ram_block_porti_a11d16' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:38)
+[EFX-0010 VERI-ERROR] 'ram_block_porto_a11d16' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:39)
+[EFX-0010 VERI-ERROR] 'ram_block_porti_a11d16' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:40)
+[EFX-0010 VERI-ERROR] 'ram_block_porto_a11d16' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:41)
+[EFX-0010 VERI-ERROR] unit 'ram_block_a11d16' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnet_ram_block_a11d16.vhd:43)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:49:06
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VHDL-1261) (E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd:34)
+[EFX-0010 VERI-ERROR] 'fnet_records' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd:35)
+[EFX-0010 VERI-ERROR] unit 'fnet_ram_block_data' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnet_ram_block_data.vhd:62)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:49:41
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VHDL-1261) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:33)
+[EFX-0010 VERI-ERROR] 'fnet_records' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:34)
+[EFX-0010 VERI-ERROR] 'ram_stat_block' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:38)
+[EFX-0010 VERI-ERROR] 'ram_prod_block' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:39)
+[EFX-0010 VERI-ERROR] 'ram_prod2_block' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:40)
+[EFX-0010 VERI-ERROR] 'ram_cons_block' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:41)
+[EFX-0010 VERI-ERROR] unit 'fnet_ram_block_stat' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnet_ram_block_stat.vhd:43)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:50:05
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VHDL-1261) (E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd:33)
+[EFX-0010 VERI-ERROR] 'fnet_records' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd:34)
+[EFX-0010 VERI-ERROR] 'regacc_aux_stat' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd:38)
+[EFX-0010 VERI-ERROR] 'regacc_aux_prod' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd:39)
+[EFX-0010 VERI-ERROR] unit 'fnet_regacc_aux_stat' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnet_regacc_aux_stat.vhd:41)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:50:34
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VHDL-1261) (E:\Efinity\project\fnetriong\fnet_mdio.vhd:32)
+[EFX-0010 VERI-ERROR] 'fnet_records' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnet_mdio.vhd:33)
+[EFX-0010 VERI-ERROR] unit 'fnet_mdio' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnet_mdio.vhd:59)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:50:52
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:212)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:213)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:215)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:217)
+[EFX-0010 VERI-ERROR] type error near 'mon_data_array'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:291)
+[EFX-0010 VERI-ERROR] 'rgb_frac' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:482)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:591)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:57:12
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:213)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:214)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:216)
+[EFX-0010 VERI-ERROR] 'num_pmod_gps' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\efb_common_top.vhd:218)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:584)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:57:53
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'clk' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:72)
+[EFX-0010 VERI-ERROR] 'clk25' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:73)
+[EFX-0010 VERI-ERROR] formal port 'eth_col' has no actual or default value (VHDL-1768) (E:\Efinity\project\fnetriong\fnetriong.vhd:288)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:292)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 13:58:05
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'clk' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:72)
+[EFX-0010 VERI-ERROR] 'clk25' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:73)
+[EFX-0010 VERI-ERROR] formal port 'eth_col' has no actual or default value (VHDL-1768) (E:\Efinity\project\fnetriong\fnetriong.vhd:288)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:292)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 14:40:57
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] formal port 'eth_col' has no actual or default value (VHDL-1768) (E:\Efinity\project\fnetriong\fnetriong.vhd:284)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:288)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 14:43:38
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 15:00:38
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 17:53:48
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near 'process' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:123)
+[EFX-0010 VERI-ERROR] indexed name is not a ' void' (VHDL-1120) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:132)
+[EFX-0010 VERI-ERROR] syntax error near 'if' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:133)
+[EFX-0010 VERI-ERROR] syntax error near 'if' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:137)
+[EFX-0010 VERI-ERROR] syntax error near 'then' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:138)
+[EFX-0010 VERI-ERROR] syntax error near 'else' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:141)
+[EFX-0010 VERI-ERROR] syntax error near 'if' (VHDL-1261) (E:\Efinity\project\fnetriong\efnet_word_to_octet.vhd:143)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 17:54:09
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'eth_rxd' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:152)
+[EFX-0010 VERI-ERROR] 'eth_txd_lo' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:240)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:286)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 18:08:51
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'eth_tx_en_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:178)
+[EFX-0010 VERI-ERROR] 'eth_txd_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:179)
+[EFX-0010 VERI-ERROR] 'eth_tx_en_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:230)
+[EFX-0010 VERI-ERROR] actual of formal out port 'eth_tx_en' cannot be an expression (VHDL-1318) (E:\Efinity\project\fnetriong\fnetriong.vhd:230)
+[EFX-0010 VERI-ERROR] 'eth_txd_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:231)
+[EFX-0010 VERI-ERROR] actual of formal out port 'eth_txd' cannot be an expression (VHDL-1318) (E:\Efinity\project\fnetriong\fnetriong.vhd:231)
+[EFX-0010 VERI-ERROR] 'eth_tx_en_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:241)
+[EFX-0010 VERI-ERROR] 'eth_txd_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:242)
+[EFX-0010 VERI-ERROR] 'eth_txd_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:243)
+[EFX-0010 VERI-ERROR] 'eth_tx_en_tmp' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:247)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:289)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 18:10:46
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] expression has 4 elements; expected 8 (VHDL-1077) (E:\Efinity\project\fnetriong\fnetriong.vhd:156)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 18:11:31
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] statement is not synthesizable since eth_tx_en does not hold its value under NOT(clock-edge) condition (VHDL-1242) (E:\Efinity\project\fnetriong\fnetriong.vhd:251)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 18:12:33
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 26, 2023 18:16:48
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:05:37
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:16:16
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:23:03
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:34:45
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:38:25
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] net 'led[3]' is constantly driven from multiple places (VDB-1000) (E:\Efinity\project\fnetriong\efb_common_top.vhd:579)
+[EFX-0010 VERI-ERROR] found another driver here (VDB-1001) (E:\Efinity\project\fnetriong\efb_common_top.vhd:578)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Feb 27, 2023 14:46:40
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 09:44:48
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 13:47:09
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 14:02:39
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 14:15:02
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 14:20:29
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 14:43:25
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 15:16:16
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 15:16:32
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 16:04:20
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 07, 2023 16:41:14
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 10:17:13
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'eth_rx_clk' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:136)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:315)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 10:19:08
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 10:38:58
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 10:55:33
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 11:12:08
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 11:18:29
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 11:27:06
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 11:47:32
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 12:39:41
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 12:45:38
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 12:53:34
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 13:00:13
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 13:56:27
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 14:00:38
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 14:14:51
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 14:26:32
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'uart_rx' is not declared (VHDL-1241) (E:\Efinity\project\fnetriong\fnetriong.vhd:315)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:323)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 08, 2023 14:27:02
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 09:33:00
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 12:35:39
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 13:59:00
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 14:17:00
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 15:26:54
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 15:57:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 16:50:01
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:05:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:38:19
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:391)
+[EFX-0010 VERI-ERROR] type error near 'in_info'; expected type 'incoming_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:396)
+[EFX-0010 VERI-ERROR] type error near 'out_info'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\efb_common_top.vhd:397)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\efb_common_top.vhd:582)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:39:38
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_stat'; expected type 'tcp_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:296)
+[EFX-0010 VERI-ERROR] type error near 'tcp_buf_stat'; expected type 'tcp_buffer_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:297)
+[EFX-0010 VERI-ERROR] type error near 'tcp_state_stat'; expected type 'tcp_state_async_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:298)
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_recv'; expected type 'tcp_control_recv' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:299)
+[EFX-0010 VERI-ERROR] type error near 'ntp_stat'; expected type 'ntp_state' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:301)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:306)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_in_stat'; expected type 'dync_in_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:308)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_stat'; expected type 'dync_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:309)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:311)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:312)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:313)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_stat_tmp'; expected type 'ram_stat_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:314)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:315)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:316)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:317)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_prod2_tmp'; expected type 'ram_prod2_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:318)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:319)
+[EFX-0010 VERI-ERROR] type error near 'i'; expected type 'ram_block_porti_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:320)
+[EFX-0010 VERI-ERROR] type error near 'o'; expected type 'ram_block_porto_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:321)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:40:39
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_stat'; expected type 'tcp_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:296)
+[EFX-0010 VERI-ERROR] type error near 'tcp_buf_stat'; expected type 'tcp_buffer_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:297)
+[EFX-0010 VERI-ERROR] type error near 'tcp_state_stat'; expected type 'tcp_state_async_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:298)
+[EFX-0010 VERI-ERROR] type error near 'tcp_ctrl_recv'; expected type 'tcp_control_recv' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:299)
+[EFX-0010 VERI-ERROR] type error near 'ntp_stat'; expected type 'ntp_state' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:301)
+[EFX-0010 VERI-ERROR] type error near 'ntpr_data'; expected type 'word32_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:306)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_in_stat'; expected type 'dync_in_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:308)
+[EFX-0010 VERI-ERROR] type error near 'dyn_ctrl_stat'; expected type 'dync_control_stat' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:309)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:311)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:312)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:313)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_stat_tmp'; expected type 'ram_stat_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:314)
+[EFX-0010 VERI-ERROR] type error near 'stat'; expected type 'ram_stat_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:315)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:316)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:317)
+[EFX-0010 VERI-ERROR] type error near 'ram_udp_regres_prod2_tmp'; expected type 'ram_prod2_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:318)
+[EFX-0010 VERI-ERROR] type error near 'prod'; expected type 'ram_prod_block' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:319)
+[EFX-0010 VERI-ERROR] type error near 'i'; expected type 'ram_block_porti_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:320)
+[EFX-0010 VERI-ERROR] type error near 'o'; expected type 'ram_block_porto_a11d16' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:321)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:46:44
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type error near 'osm_ram_stat_array'; expected type 'ram_stat_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:438)
+[EFX-0010 VERI-ERROR] type error near 'osm_ram_cons_array'; expected type 'ram_cons_block_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:439)
+[EFX-0010 VERI-ERROR] type error near 'osm_dp_ram_array_porti'; expected type 'ram_block_porti_a11d16_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:440)
+[EFX-0010 VERI-ERROR] type error near 'osm_dp_ram_array_porto'; expected type 'ram_block_porto_a11d16_array' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:441)
+[EFX-0010 VERI-ERROR] type error near 'out_info_counts'; expected type 'outgoing_info_counts' (VHDL-1272) (E:\Efinity\project\fnetriong\fakernet_module.vhd:450)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fakernet_module.vhd:864)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:47:53
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 17:57:35
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 18:11:17
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 13, 2023 18:17:29
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:33:12
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with a string literal (VHDL-1276) (E:\Efinity\project\fnetriong\fnetriong.vhd:128)
+[EFX-0010 VERI-ERROR] character ''1'' is not in type 'std_logic_vector' (VHDL-1040) (E:\Efinity\project\fnetriong\fnetriong.vhd:130)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:309)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:35:04
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with a string literal (VHDL-1276) (E:\Efinity\project\fnetriong\fnetriong.vhd:128)
+[EFX-0010 VERI-ERROR] syntax error near ')' (VHDL-1261) (E:\Efinity\project\fnetriong\fnetriong.vhd:130)
+[EFX-0010 VERI-ERROR] 'eth_rx_clk' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:174)
+[EFX-0010 VERI-ERROR] 'eth_rx_dv' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:175)
+[EFX-0010 VERI-ERROR] 'eth_tx_en' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:243)
+[EFX-0010 VERI-ERROR] 'out_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:245)
+[EFX-0010 VERI-ERROR] 'out_taken' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:246)
+[EFX-0010 VERI-ERROR] 'out_ena' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:247)
+[EFX-0010 VERI-ERROR] 'eth_mdc' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:282)
+[EFX-0010 VERI-ERROR] 'eth_mdio_in' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:283)
+[EFX-0010 VERI-ERROR] 'eth_mdio_out' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:284)
+[EFX-0010 VERI-ERROR] 'eth_mdio_oe' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:285)
+[EFX-0010 VERI-ERROR] 'eth_rstn' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:286)
+[EFX-0010 VERI-ERROR] 'out_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:287)
+[EFX-0010 VERI-ERROR] 'out_ena' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:288)
+[EFX-0010 VERI-ERROR] 'out_taken' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:289)
+[EFX-0010 VERI-ERROR] 'in_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:290)
+[EFX-0010 VERI-ERROR] 'in_got_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:291)
+[EFX-0010 VERI-ERROR] 'in_new_packet' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:292)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:36:34
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with the integer literal (VHDL-1278) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] syntax error near ')' (VHDL-1261) (E:\Efinity\project\fnetriong\fnetriong.vhd:129)
+[EFX-0010 VERI-ERROR] 'eth_rx_clk' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:173)
+[EFX-0010 VERI-ERROR] 'eth_rx_dv' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:174)
+[EFX-0010 VERI-ERROR] 'eth_tx_en' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:242)
+[EFX-0010 VERI-ERROR] 'out_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:244)
+[EFX-0010 VERI-ERROR] 'out_taken' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:245)
+[EFX-0010 VERI-ERROR] 'out_ena' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:246)
+[EFX-0010 VERI-ERROR] 'eth_mdc' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:281)
+[EFX-0010 VERI-ERROR] 'eth_mdio_in' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:282)
+[EFX-0010 VERI-ERROR] 'eth_mdio_out' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:283)
+[EFX-0010 VERI-ERROR] 'eth_mdio_oe' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:284)
+[EFX-0010 VERI-ERROR] 'eth_rstn' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:285)
+[EFX-0010 VERI-ERROR] 'out_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:286)
+[EFX-0010 VERI-ERROR] 'out_ena' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:287)
+[EFX-0010 VERI-ERROR] 'out_taken' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:288)
+[EFX-0010 VERI-ERROR] 'in_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:289)
+[EFX-0010 VERI-ERROR] 'in_got_word' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:290)
+[EFX-0010 VERI-ERROR] 'in_new_packet' is already declared in this region (VHDL-1223) (E:\Efinity\project\fnetriong\fnetriong.vhd:291)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:38:18
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with the integer literal (VHDL-1278) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:306)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:38:35
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with the integer literal (VHDL-1278) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:306)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:39:02
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with a string literal (VHDL-1276) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:306)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:39:28
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with a string literal (VHDL-1276) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:306)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:40:23
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] right bound of slice is outside its index type range (VHDL-1210) (E:\Efinity\project\fnetriong\efb_common_top.vhd:278)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:43:42
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] right bound of slice is outside its index type range (VHDL-1210) (E:\Efinity\project\fnetriong\efb_common_top.vhd:278)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:44:27
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] right bound of slice is outside its index type range (VHDL-1210) (E:\Efinity\project\fnetriong\efb_common_top.vhd:279)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:45:59
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] type 'word32_array' does not match with a string literal (VHDL-1276) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0010 VERI-ERROR] unit 'rtl' is ignored due to previous errors (VHDL-1284) (E:\Efinity\project\fnetriong\fnetriong.vhd:306)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:47:21
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] expression has 2 elements; expected 1 (VHDL-1077) (E:\Efinity\project\fnetriong\fnetriong.vhd:127)
+[EFX-0021 ERROR] Verific elaboration of module 'fnetriong' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// Mar 14, 2023 10:47:43
+///////////////////////////////////
+

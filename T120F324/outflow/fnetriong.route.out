@@ -1,0 +1,127 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2022.2.322 
+Compiled: Dec 18 2022.
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T120F324" ...
+
+***** Beginning stage routing graph generation ... *****
+Read ipin pattern from E:/Efinity/2022.2/arch/./ipin_oph.xml
+Finished parsing ipin pattern file 'E:/Efinity/2022.2/arch/./ipin_oph.xdb'.
+Finished parsing switch_block file 'E:/Efinity/2022.2/arch/.\sb_connectivity_subset.xdb'.
+BuildGraph process took 23.6963 seconds.
+	BuildGraph process took 23.2969 seconds (approximately) in total CPU time.
+BuildGraph process virtual memory usage: begin = 191.284 MB, end = 2371.03 MB, delta = 2179.74 MB
+	BuildGraph process peak virtual memory usage = 2397.08 MB
+BuildGraph process resident set memory usage: begin = 192.464 MB, end = 2303.46 MB, delta = 2111 MB
+	BuildGraph process peak resident set memory usage = 2329.2 MB
+check rr_graph process took 0.483024 seconds.
+	check rr_graph process took 0.484375 seconds (approximately) in total CPU time.
+check rr_graph process virtual memory usage: begin = 2585.46 MB, end = 2585.46 MB, delta = 0 MB
+	check rr_graph process peak virtual memory usage = 2643.99 MB
+check rr_graph process resident set memory usage: begin = 2517.5 MB, end = 2517.56 MB, delta = 0.06 MB
+	check rr_graph process peak resident set memory usage = 2575.93 MB
+Generated 6640589 RR nodes and 25237160 RR edges
+This design has 0 global control net(s). See E:/Efinity/project/fnetriong/outflow\fnetriong.route.rpt for details.
+Routing graph took 24.5585 seconds.
+	Routing graph took 24.1094 seconds (approximately) in total CPU time.
+Routing graph virtual memory usage: begin = 189.892 MB, end = 2356.61 MB, delta = 2166.72 MB
+	Routing graph peak virtual memory usage = 2643.99 MB
+Routing graph resident set memory usage: begin = 191.424 MB, end = 2289.68 MB, delta = 2098.26 MB
+	Routing graph peak resident set memory usage = 2575.93 MB
+***** Ending stage routing graph generation *****
+
+***** Beginning stage routing ... *****
+
+SDC file 'E:/Efinity/project/fnetriong/fnetriong.sdc' parsed successfully.
+3 clocks (including virtual clocks), 16 inputs and 16 outputs were constrained.
+
+
+ ---------      -------     --------------      -------------
+ Iteration      Overuse     Crit Path (ns)      Calc Time (s)
+ ---------      -------     --------------      -------------
+         1        20469               7.17               2.88
+         2         2733              7.066               2.35
+         3          722              7.305               1.43
+         4           80              7.462              0.729
+         5            8              7.638              0.364
+         6            2              7.652              0.318
+         7            0              7.652              0.313
+
+Successfully routed netlist after 7 routing iterations and 36851011 heapops
+Completed net delay value cross check successfully.
+
+***** Beginning stage routing check ... *****
+***** Ending stage routing check *****
+
+
+Serial number (magic cookie) for the routing is: 77435896
+Netlist fully routed.
+
+Successfully created FPGA route file 'E:/Efinity/project/fnetriong/outflow/fnetriong.route'
+Routing took 9.71811 seconds.
+	Routing took 9.65625 seconds (approximately) in total CPU time.
+Routing virtual memory usage: begin = 2356.61 MB, end = 2371.76 MB, delta = 15.148 MB
+	Routing peak virtual memory usage = 2902.74 MB
+Routing resident set memory usage: begin = 2289.69 MB, end = 2311.56 MB, delta = 21.876 MB
+	Routing peak resident set memory usage = 2709.64 MB
+***** Ending stage routing *****
+
+***** Beginning stage final timing analysis ... *****
+
+Cross clock domain timing relationship was detected. Refer to the clocks section of the timing report for more details. You can use set_clock_groups to control how clocks are analyzed.
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+ clk            7.772        128.667         (R-R)
+ eth_rx_clk     5.077        196.967         (R-R)
+
+Geomean max period: 6.282
+
+Setup (Max) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   clk              clk                8.000            0.228            (R-R)
+   clk              eth_rx_clk         8.000            6.532            (R-R)
+   eth_rx_clk       clk                8.000            6.508            (R-R)
+   eth_rx_clk       eth_rx_clk         8.000            2.923            (R-R)
+
+Hold (Min) Clock Relationship
+  Launch Clock    Capture Clock   Constraint (ns)     Slack (ns)          Edge
+   clk              clk                0.000            0.086            (R-R)
+   clk              eth_rx_clk         0.000            0.330            (R-R)
+   eth_rx_clk       clk                0.000            0.329            (R-R)
+   eth_rx_clk       eth_rx_clk         0.000            0.221            (R-R)
+
+Write Timing Report to "E:/Efinity/project/fnetriong/outflow\fnetriong.timing.rpt" ...
+final timing analysis took 0.534721 seconds.
+	final timing analysis took 0.53125 seconds (approximately) in total CPU time.
+final timing analysis virtual memory usage: begin = 2344.34 MB, end = 2355.46 MB, delta = 11.128 MB
+	final timing analysis peak virtual memory usage = 2902.74 MB
+final timing analysis resident set memory usage: begin = 2284.29 MB, end = 2292.19 MB, delta = 7.896 MB
+	final timing analysis peak resident set memory usage = 2709.64 MB
+***** Ending stage final timing analysis *****
+
+***** Beginning stage bitstream generation ... *****
+Reading core interface constraints from 'E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv'.
+Successfully processed interface constraints file "E:/Efinity/project/fnetriong/outflow/fnetriong.interface.csv".
+Finished writing bitstream file E:/Efinity/project/fnetriong/work_pnr\fnetriong.lbf.
+Bitstream generation took 2.66953 seconds.
+	Bitstream generation took 2.5 seconds (approximately) in total CPU time.
+Bitstream generation virtual memory usage: begin = 2355.46 MB, end = 2484.88 MB, delta = 129.412 MB
+	Bitstream generation peak virtual memory usage = 2902.74 MB
+Bitstream generation resident set memory usage: begin = 2292.22 MB, end = 2419.61 MB, delta = 127.388 MB
+	Bitstream generation peak resident set memory usage = 2709.64 MB
+***** Ending stage bitstream generation *****
+
+The entire flow of EFX_PNR took 81.2272 seconds.
+	The entire flow of EFX_PNR took 113.828 seconds (approximately) in total CPU time.
+The entire flow of EFX_PNR virtual memory usage: begin = 5.44 MB, end = 290.12 MB, delta = 284.68 MB
+	The entire flow of EFX_PNR peak virtual memory usage = 2902.74 MB
+The entire flow of EFX_PNR resident set memory usage: begin = 11.772 MB, end = 281.704 MB, delta = 269.932 MB
+	The entire flow of EFX_PNR peak resident set memory usage = 2709.64 MB
