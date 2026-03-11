@@ -133,9 +133,6 @@ architecture RTL of fakernet_top is
   signal ipaddr  : std_logic_vector(31 downto 0) :=
     "11000000" & "10101000" & "00000001" & "11000000";
 
-  -- User switch.
-  signal sw_latch       : std_logic_vector(3 downto 0) := "0000";
-
   -- Buffered PHY RX clock.
   signal buf_eth_rx_clk  : std_logic;
 
@@ -252,9 +249,6 @@ begin
     clk <= clk_in;
     clk25 <= clk25_in;
     clk125 <= clk125_in;
-
-  -- Assign the two low bits of the IP address from user input switches.
-  ipaddr(1 downto 0) <= sw_latch(1 downto 0);
 
   -------------------
   -- Data from PHY --
